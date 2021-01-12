@@ -1,0 +1,249 @@
+DP-1-DATA# show ip interface brief vrf all
+IP Interface Status for VRF "default"(1)
+Interface            IP Address      Interface Status
+Vlan2                192.168.2.1     protocol-up/link-up/admin-up       
+Vlan700              10.8.5.17       protocol-up/link-up/admin-up
+Vlan704              10.64.251.113   protocol-down/link-down/admin-up       
+Lo0                  10.8.252.23     protocol-up/link-up/admin-up       
+Po5.10               10.8.1.197      protocol-up/link-up/admin-up       
+Eth4/4               10.8.13.65      protocol-up/link-up/admin-up       
+Eth4/5               10.8.1.190      protocol-up/link-up/admin-up       
+
+IP Interface Status for VRF "management"(2)
+Interface            IP Address      Interface Status
+
+IP Interface Status for VRF "MOEX"(23)
+Interface            IP Address      Interface Status
+
+IP Interface Status for VRF "GLOBAL"(18)
+Interface            IP Address      Interface Status
+Vlan701              10.8.5.17       protocol-up/link-up/admin-up
+Vlan705              10.64.255.218   protocol-down/link-down/admin-up   
+Vlan540              10.64.90.16     protocol-down/link-down/admin-up   
+Vlan541              10.64.91.16     protocol-down/link-down/admin-up   
+Vlan551              10.64.255.2     protocol-down/link-down/admin-up   
+Vlan600              10.64.0.2       protocol-down/link-down/admin-up   
+Vlan601              10.64.8.2       protocol-down/link-down/admin-up   
+Vlan602              10.64.16.2      protocol-down/link-down/admin-up   
+Vlan603              10.64.24.2      protocol-down/link-down/admin-up   
+Vlan604              10.64.32.2      protocol-down/link-down/admin-up   
+Vlan605              10.64.40.2      protocol-down/link-down/admin-up   
+Vlan606              10.64.48.2      protocol-down/link-down/admin-up   
+Vlan607              10.64.56.2      protocol-down/link-down/admin-up   
+Vlan608              10.64.64.2      protocol-down/link-down/admin-up   
+Vlan628              10.64.120.2     protocol-down/link-down/admin-up   
+Vlan632              10.64.240.2     protocol-down/link-down/admin-up   
+Vlan633              10.64.241.2     protocol-down/link-down/admin-up   
+Vlan634              10.64.128.2     protocol-down/link-down/admin-up   
+Vlan636              10.64.244.2     protocol-down/link-down/admin-up   
+Vlan637              10.64.245.2     protocol-down/link-down/admin-up   
+Vlan654              10.64.237.2     protocol-down/link-down/admin-up   
+Vlan668              10.194.136.2    protocol-down/link-down/admin-up   
+Vlan669              10.64.218.2     protocol-down/link-down/admin-up   
+Vlan677              10.64.167.2     protocol-down/link-down/admin-up   
+Vlan678              10.64.221.2     protocol-down/link-down/admin-up   
+Vlan681              10.70.16.2      protocol-down/link-down/admin-up   
+Vlan682              10.70.128.2     protocol-down/link-down/admin-up   
+Vlan683              10.70.32.2      protocol-down/link-down/admin-up   
+Vlan685              10.70.64.2      protocol-down/link-down/admin-up   
+Vlan697              10.90.10.2      protocol-down/link-down/admin-up   
+Vlan905              10.64.136.2     protocol-down/link-down/admin-up   
+Vlan907              10.64.136.18    protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "VTB-DSO"(39)
+Interface            IP Address      Interface Status
+Vlan550              10.64.95.98     protocol-down/link-down/admin-up   
+Vlan929              10.64.95.194    protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "DMZ-CPAP"(16)
+Interface            IP Address      Interface Status
+Vlan4                217.14.50.22    protocol-down/link-down/admin-up   
+Vlan693              10.15.50.2      protocol-down/link-down/admin-up   
+Vlan902              10.64.136.210   protocol-down/link-down/admin-up   
+Vlan906              10.64.136.226   protocol-down/link-down/admin-up   
+Vlan913              10.64.136.242   protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "TKB-CONSOLE"(33)
+Interface            IP Address      Interface Status
+Vlan510              10.64.255.210   protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "OTV"(25)
+Interface            IP Address      Interface Status
+Po40                 10.64.255.225   protocol-up/link-up/admin-up       
+
+IP Interface Status for VRF "TESTLISP"(32)
+Interface            IP Address      Interface Status
+Vlan694              10.64.94.66     protocol-up/link-up/admin-up       
+Vlan695              10.76.253.2     protocol-down/link-down/admin-down 
+Vlan914              10.64.136.114   protocol-up/link-up/admin-up       
+Vlan927              10.64.94.177    protocol-up/link-up/admin-up       
+Vlan951              10.64.94.114    protocol-up/link-up/admin-up       
+Vlan952              10.64.94.130    protocol-up/link-up/admin-up       
+Vlan966              10.64.95.66     protocol-up/link-up/admin-up       
+Vlan968              10.64.95.82     protocol-up/link-up/admin-up       
+Lo100                100.100.100.1   protocol-up/link-up/admin-up       
+Lo200                200.200.200.1   protocol-up/link-up/admin-up       
+
+IP Interface Status for VRF "vpc-keepalive"(47)
+Interface            IP Address      Interface Status
+Po5.20               192.168.1.1     protocol-up/link-up/admin-up       
+
+IP Interface Status for VRF "KT"(21)
+Interface            IP Address      Interface Status
+Vlan584              10.74.223.2     protocol-down/link-down/admin-up   
+Vlan585              10.76.122.2     protocol-down/link-down/admin-up   
+Vlan586              10.64.176.2     protocol-down/link-down/admin-up   
+Vlan587              10.64.166.2     protocol-down/link-down/admin-up   
+Vlan589              10.90.0.2       protocol-down/link-down/admin-up   
+Vlan590              10.90.9.2       protocol-down/link-down/admin-up   
+Vlan645              10.64.208.2     protocol-down/link-down/admin-up   
+Vlan919              10.64.136.194   protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "CONSOLE"(10)
+Interface            IP Address      Interface Status
+Vlan609              10.64.72.2      protocol-down/link-down/admin-up   
+Vlan610              10.64.88.2      protocol-down/link-down/admin-up   
+Vlan629              10.64.112.2     protocol-down/link-down/admin-up   
+Vlan911              10.64.136.82    protocol-down/link-down/admin-up   
+Vlan918              10.64.136.178   protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "EXTRANET"(17)
+Interface            IP Address      Interface Status
+Vlan652              10.64.233.2     protocol-down/link-down/admin-up   
+Vlan910              10.64.136.66    protocol-down/link-down/admin-up   
+Vlan912              10.64.136.98    protocol-down/link-down/admin-up   
+Vlan917              10.64.136.162   protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "PLC-OCTOPUS"(26)
+Interface            IP Address      Interface Status
+Vlan655              10.64.238.2     protocol-down/link-down/admin-up   
+Vlan909              10.64.136.50    protocol-down/link-down/admin-up   
+Vlan916              10.64.136.146   protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "CRONOS"(11)
+Interface            IP Address      Interface Status
+Vlan658              10.64.216.2     protocol-down/link-down/admin-up   
+Vlan908              10.64.136.34    protocol-down/link-down/admin-up   
+Vlan915              10.64.136.130   protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "INET-CAMPUS"(19)
+Interface            IP Address      Interface Status
+Vlan696              217.14.49.42    protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "DMZ-COLO"(14)
+Interface            IP Address      Interface Status
+Vlan692              217.14.54.2     protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "DMZ-COLO-BC"(15)
+Interface            IP Address      Interface Status
+Vlan690              10.15.64.2      protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "VTB-USERS"(43)
+Interface            IP Address      Interface Status
+Vlan674              10.133.188.2    protocol-down/link-down/admin-up   
+Vlan687              10.133.184.2    protocol-down/link-down/admin-up   
+Vlan688              10.133.176.2    protocol-down/link-down/admin-up   
+Vlan689              10.133.180.2    protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "VTB-DEV-USERS"(36)
+Interface            IP Address      Interface Status
+Vlan686              10.203.120.2    protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "ALIEN"(3)
+Interface            IP Address      Interface Status
+Vlan702              10.64.251.113   protocol-down/link-down/admin-up 
+Vlan684              10.70.80.2      protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "SUPPORT-INF"(30)
+Interface            IP Address      Interface Status
+Vlan680              10.70.192.2     protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "RTS-SPB"(28)
+Interface            IP Address      Interface Status
+Vlan679              10.36.30.98     protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "VTM"(44)
+Interface            IP Address      Interface Status
+Vlan667              10.64.219.34    protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "BPIPE"(8)
+Interface            IP Address      Interface Status
+Vlan666              10.64.232.2     protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "SWIFT"(31)
+Interface            IP Address      Interface Status
+Vlan657              10.64.229.2     protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "PLC-TEST"(27)
+Interface            IP Address      Interface Status
+Vlan656              10.64.239.2     protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "SECURITY"(29)
+Interface            IP Address      Interface Status
+Vlan653              10.64.228.2     protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "ZDEV"(46)
+Interface            IP Address      Interface Status
+Vlan651              10.64.227.2     protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "BIS-HB"(6)
+Interface            IP Address      Interface Status
+Vlan646              10.64.224.2     protocol-down/link-down/admin-down 
+Vlan647              10.64.225.2     protocol-down/link-down/admin-down 
+
+IP Interface Status for VRF "BIS-SANDBOX"(7)
+Interface            IP Address      Interface Status
+Vlan644              10.64.236.2     protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "BIS-DEVEL"(5)
+Interface            IP Address      Interface Status
+Vlan643              10.64.235.2     protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "WDS"(45)
+Interface            IP Address      Interface Status
+Vlan642              10.64.234.2     protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "VTB-CORE"(35)
+Interface            IP Address      Interface Status
+Vlan641              10.192.192.2    protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "VTB-EX"(40)
+Interface            IP Address      Interface Status
+Vlan640              10.193.125.210  protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "DDEI"(12)
+Interface            IP Address      Interface Status
+Vlan630              10.64.230.2     protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "VTB-NINET-SRV"(41)
+Interface            IP Address      Interface Status
+Vlan627              172.16.238.2    protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "CES-VPN"(9)
+Interface            IP Address      Interface Status
+Vlan626              10.64.94.2      protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "VTB-BM"(34)
+Interface            IP Address      Interface Status
+Vlan625              10.219.224.2    protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "KT-CRONOS"(22)
+Interface            IP Address      Interface Status
+Vlan582              10.64.219.2     protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "VTB-DOS-INT"(38)
+Interface            IP Address      Interface Status
+Vlan553              10.64.95.162    protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "VTB-DOS-CS"(37)
+Interface            IP Address      Interface Status
+Vlan703              10.64.251.113   protocol-down/link-down/admin-up 
+Vlan552              10.64.95.130    protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "DDEI-SANDBOX"(13)
+Interface            IP Address      Interface Status
+Vlan511              10.64.231.2     protocol-down/link-down/admin-up   
+
+IP Interface Status for VRF "NPB-GRE"(24)
+Interface            IP Address      Interface Status
+Vlan507              10.64.255.66    protocol-down/link-down/admin-up   
