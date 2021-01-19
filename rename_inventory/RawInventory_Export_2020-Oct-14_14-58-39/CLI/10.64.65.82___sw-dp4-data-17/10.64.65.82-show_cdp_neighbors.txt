@@ -1,0 +1,81 @@
+
+Capability Codes: R - Router, T - Trans-Bridge, B - Source-Route-Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater,
+                  V - VoIP-Phone, D - Remotely-Managed-Device,
+                  s - Supports-STP-Dispute
+
+Device-ID          Local Intrfce  Hldtme Capability  Platform      Port ID
+sw-dp4-data-15.vtb24.ru(SSI17210K06)
+                    mgmt0          134    R S I s   N5K-C5548UP   Eth123/1/17   
+view-ntnx-str-1     Eth3/1         114    S H       Linux         eth0          
+view-ntnx-str-2     Eth3/2         94     S H       Linux         eth0          
+view-ntnx-4.msk.vtb24.ru
+                    Eth3/3         134    S         VMware ESX    vmnic1        
+view-ntnx-5.msk.vtb24.ru
+                    Eth3/4         120    S         VMware ESX    vmnic1        
+view-ntnx-9.msk.vtb24.ru
+                    Eth3/5         179    S         VMware ESX    vmnic0        
+view-ntnx-10.msk.vtb24.ru
+                    Eth3/6         120    S         VMware ESX    vmnic0        
+view-ntnx-11.msk.vtb24.ru
+                    Eth3/7         174    S         VMware ESX    vmnic0        
+view-ntnx-12.msk.vtb24.ru
+                    Eth3/8         157    S         VMware ESX    vmnic0        
+view-ntnx-100.msk.vtb24.ru
+                    Eth3/10        150    S         VMware ESX    vmnic0        
+view-ntnx-13.msk.vtb24.ru
+                    Eth3/11        149    S         VMware ESX    vmnic0        
+view-ntnx-14.msk.vtb24.ru
+                    Eth3/12        153    S         VMware ESX    vmnic0        
+view-ntnx-15.msk.vtb24.ru
+                    Eth3/21        146    S         VMware ESX    vmnic0        
+view-ntnx-16.msk.vtb24.ru
+                    Eth3/22        130    S         VMware ESX    vmnic0        
+view-ntnx-29.msk.vtb24.ru
+                    Eth3/23        162    S         VMware ESX    vmnic0        
+view-ntnx-30.msk.vtb24.ru
+                    Eth3/24        174    S         VMware ESX    vmnic0        
+view-ntnx-31.msk.vtb24.ru
+                    Eth3/25        142    S         VMware ESX    vmnic0        
+view-ntnx-32.msk.vtb24.ru
+                    Eth3/26        141    S         VMware ESX    vmnic0        
+sw-dp4-data-11.vtb24.ru(JAF1745AJHC)
+                    Eth3/37        148    R S I s   N77-C7718     Eth8/3/1      
+sw-dp4-data-11.vtb24.ru(JAF1745AJHC)
+                    Eth3/38        127    R S I s   N77-C7718     Eth8/3/2      
+sw-dp4-data-18.vtb24.ru(JAF1707AHJK)
+                    Eth3/45        120    R S I s   N7K-C7009     Eth3/45       
+sw-dp4-data-18.vtb24.ru(JAF1707AHJK)
+                    Eth3/46        120    R S I s   N7K-C7009     Eth3/46       
+sw-dp4-data-18.vtb24.ru(JAF1707AHJK)
+                    Eth3/48        120    R S s     N7K-C7009     Eth3/48       
+view-ntnx-104       Eth4/1         114    S H       Linux         eth1          
+view-ntnx-105       Eth4/2         114    S H       Linux         eth1          
+view-ntnx-6.msk.vtb24.ru
+                    Eth4/3         173    S         VMware ESX    vmnic1        
+view-ntnx-102       Eth4/7         114    S H       Linux         eth3          
+view-ntnx-102       Eth4/8         114    S H       Linux         eth2          
+view-ntnx-103       Eth4/9         114    S H       Linux         eth2          
+view-ntnx-103       Eth4/10        114    S H       Linux         eth3          
+view-ntnx-104       Eth4/11        114    S H       Linux         eth3          
+view-ntnx-105       Eth4/12        114    S H       Linux         eth3          
+view-ntnx-106       Eth4/21        114    S H       Linux         eth1          
+view-ntnx-106       Eth4/22        114    S H       Linux         eth3          
+view-ntnx-1.msk.vtb24.ru
+                    Eth4/25        158    S         VMware ESX    vmnic1        
+view-ntnx-2.msk.vtb24.ru
+                    Eth4/26        127    S         VMware ESX    vmnic1        
+view-ntnx-3.msk.vtb24.ru
+                    Eth4/27        150    S         VMware ESX    vmnic1        
+sw-dp4-data-12.vtb24.ru(JAF1814ADMK)
+                    Eth4/37        164    R S I s   N77-C7718     Eth8/3/1      
+sw-dp4-data-12.vtb24.ru(JAF1814ADMK)
+                    Eth4/38        164    R S I s   N77-C7718     Eth8/3/2      
+sw-dp4-data-18.vtb24.ru(JAF1707AHJK)
+                    Eth4/45        120    R S I s   N7K-C7009     Eth4/45       
+sw-dp4-data-18.vtb24.ru(JAF1707AHJK)
+                    Eth4/46        120    R S I s   N7K-C7009     Eth4/46       
+sw-dp4-data-18.vtb24.ru(JAF1707AHJK)
+                    Eth4/48        120    R S s     N7K-C7009     Eth4/48       
+
+Total entries displayed: 42

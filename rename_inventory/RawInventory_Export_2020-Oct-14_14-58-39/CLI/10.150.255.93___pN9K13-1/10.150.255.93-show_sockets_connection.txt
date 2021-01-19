@@ -1,0 +1,642 @@
+
+
+Total number of netstack tcp sockets: 11
+Active connections (including servers)
+        Protocol State/       Recv-Q/   Local Address(port)/
+                 Context      Send-Q    Remote Address(port)
+[host]: tcp(4/6) LISTEN       0         *(22)
+                 Wildcard     0         *(*) 
+
+[host]: tcp(4/6) LISTEN       0         *(23)
+                 Wildcard     0         *(*) 
+
+[host]: tcp      LISTEN       0         *(161)
+                 Wildcard     0         *(*) 
+
+[host]: tcp(4/6) LISTEN       0         *(161)
+                 Wildcard     0         *(*) 
+
+[host]: tcp      ESTABLISHED  0         10.150.255.93(22)
+                 default      0         10.64.0.111(53564) 
+
+[host]: tcp      TIME_WAIT    0         10.150.255.93(58254)
+                 default      0         10.128.128.11(49) 
+
+[host]: tcp      TIME_WAIT    0         10.150.255.93(58356)
+                 default      0         10.128.128.11(49) 
+
+[host]: tcp      TIME_WAIT    0         10.150.255.93(58559)
+                 default      0         10.128.128.11(49) 
+
+[host]: tcp      TIME_WAIT    0         10.150.255.93(58753)
+                 default      0         10.128.128.11(49) 
+
+[host]: tcp      TIME_WAIT    0         10.150.255.93(60481)
+                 default      0         10.128.128.11(49) 
+
+[host]: tcp      LISTEN       0         127.0.0.1(9876)
+                 management   0         *(*) 
+
+
+Total number of netstack udp sockets: 13
+Active connections (including servers)
+        Protocol State/       Recv-Q/   Local Address(port)/
+                 Context      Send-Q    Remote Address(port)
+[host]: udp6                  0         *(123)
+                 Wildcard     0         *(*) 
+
+[host]: udp                   0         *(123)
+                 Wildcard     0         *(*) 
+
+[host]: udp6                  0         *(161)
+                 Wildcard     0         *(*) 
+
+[host]: udp                   0         *(161)
+                 Wildcard     0         *(*) 
+
+[host]: udp                   0         *(58210)
+                 Wildcard     0         *(*) 
+
+[host]: udp                   0         *(60341)
+                 Wildcard     0         *(*) 
+
+[host]: udp                   0         *(60431)
+                 Wildcard     0         *(*) 
+
+[host]: udp                   0         10.150.255.177(3200)
+                 Wildcard     0         *(*) 
+
+[host]: udp                   0         127.0.0.1(130)
+                 Wildcard     0         *(*) 
+
+
+Total number of netstack raw sockets: 0
+
+Kernel Socket Connection:
+Netid  State      Recv-Q Send-Q Local Address:Port               Peer Address:Port              
+
+nl     UNCONN     0      0         0:3618                   *                   
+
+nl     UNCONN     0      0         0:1174428551             *                   
+
+nl     UNCONN     0      0         0:-4099                  *                   
+
+nl     UNCONN     0      0         0:-1954539463            *                   
+
+nl     UNCONN     0      0         0:6210                   *                   
+
+nl     UNCONN     2304   0         0:0                      *                   
+
+nl     UNCONN     0      0         0:-654305223             *                   
+
+nl     UNCONN     0      0         0:3658                   *                   
+
+nl     UNCONN     0      0         0:-4098                  *                   
+
+nl     UNCONN     768    0         0:3209                   *                   
+
+nl     UNCONN     0      0         0:-4101                  *                   
+
+nl     UNCONN     0      0         0:3333                   *                   
+
+nl     UNCONN     0      0         0:-528476103             *                   
+
+nl     UNCONN     7680   0         0:3593                   *                   
+
+nl     UNCONN     0      0         0:1736445065             *                   
+
+nl     UNCONN     0      0         0:-1694492615            *                   
+
+nl     UNCONN     0      0         0:1174411321             *                   
+
+nl     UNCONN     768    0         0:6201                   *                   
+
+nl     UNCONN     0      0         4:0                      *                   
+
+nl     UNCONN     0      0         9:0                      *                   
+
+nl     UNCONN     0      0        10:0                      *                   
+
+nl     UNCONN     0      0        11:0                      *                   
+
+nl     UNCONN     0      0        15:3194                   *                   
+
+nl     UNCONN     0      0        15:0                      *                   
+
+nl     UNCONN     0      0        15:1757436807             *                   
+
+nl     UNCONN     0      0        16:3593                   *                   
+
+nl     UNCONN     0      0        16:1883248697             *                   
+
+nl     UNCONN     0      0        16:0                      *                   
+
+nl     UNCONN     0      0        16:3592                   *                   
+
+nl     UNCONN     0      0        16:457185337              *                   
+
+nl     UNCONN     0      0        16:-843048903             *                   
+
+nl     UNCONN     0      0        16:1019219081             *                   
+
+nl     UNCONN     0      0        16:3618                   *                   
+
+nl     UNCONN     0      0        16:1488984121             *                   
+
+nl     UNCONN     0      0        16:-1237313479            *                   
+
+nl     UNCONN     0      0        18:8652                   *                   
+
+nl     UNCONN     0      0        18:0                      *                   
+
+nl     UNCONN     0      0        28:0                      *                   
+
+nl     UNCONN     0      0        28:6210                   *                   
+
+nl     UNCONN     0      0        31:6210                   *                   
+
+nl     UNCONN     0      0        31:0                      *                   
+
+p_raw  UNCONN     0      0       [0]:*                      *                   
+
+p_raw  UNCONN     0      0      [61951]:*                      *                   
+
+p_raw  UNCONN     0      0      [64509]:ps-inb                 *                   
+
+p_raw  UNCONN     0      0      [14136]:ps-inb                 *                   
+
+p_raw  UNCONN     0      0      [14135]:ps-inb                 *                   
+
+p_raw  UNCONN     0      0      [34825]:kim-data               *                   
+
+p_raw  UNCONN     0      0      LLDP:kim-data               *                   
+
+p_raw  UNCONN     0      0      [61951]:*                      *                   
+
+p_raw  UNCONN     0      0      [61951]:*                      *                   
+
+p_raw  UNCONN     0      0      [61700]:kim-data               *                   
+
+p_raw  UNCONN     0      0      [61699]:kim-data               *                   
+
+p_raw  UNCONN     0      0      [61698]:kim-data               *                   
+
+p_raw  UNCONN     0      0       [0]:*                      *                   
+
+u_str  UNCONN     0      0         * 39424                 * 0                  
+
+u_str  LISTEN     0      0      /var/run/libvirt/libvirt-sock 39904                 * 0                  
+
+u_str  LISTEN     0      0      /var/run/libvirt/libvirt-sock-ro 39906                 * 0                  
+
+u_str  LISTEN     0      0      /var/run/libvirt/libvirt-admin-sock 39908                 * 0                  
+
+u_str  LISTEN     0      0      /var/run/mcelog-client 48501                 * 0                  
+
+u_str  LISTEN     0      0      /tmp/tams_client_listener_id 50994                 * 0                  
+
+u_str  LISTEN     0      0      /tmp/tams_mgmt_listener_id 50996                 * 0                  
+
+u_str  ESTAB      0      0      /tmp/tams_mgmt_listener_id 50999                 * 0                  
+
+u_str  LISTEN     0      0      @":3:0 55047                 * 0                  
+
+u_str  LISTEN     0      0      @":5:0 57046                 * 0                  
+
+u_str  LISTEN     0      0      @":4:0 57064                 * 0                  
+
+u_str  LISTEN     0      0      /tmp/nginx_local/nginx_1_be_dme.sock 63455                 * 0                  
+
+u_str  LISTEN     0      0      /tmp/tamd_listener_swtam1_id 66908                 * 0                  
+
+u_str  LISTEN     0      0      /tmp/nginx_local/nginx_1_be_nxapi.sock 69384                 * 0                  
+
+u_str  ESTAB      0      0         * 69394                 * 0                  
+
+u_str  ESTAB      0      0         * 69395                 * 0                  
+
+u_str  ESTAB      0      0         * 73705                 * 0                  
+
+u_str  ESTAB      0      0         * 73706                 * 0                  
+
+u_str  ESTAB      0      0         * 73719                 * 0                  
+
+u_str  ESTAB      0      0         * 73720                 * 0                  
+
+u_str  ESTAB      0      0         * 81954                 * 0                  
+
+u_str  ESTAB      0      0         * 81955                 * 0                  
+
+u_str  LISTEN     0      0      @ipc://sysinfo 92315                 * 0                  
+
+u_str  ESTAB      0      0         * 71834535              * 0                  
+
+u_str  ESTAB      0      0         * 71839745              * 0                  
+
+u_str  ESTAB      0      0         * 71839746              * 0                  
+
+u_dgr  ESTAB      0      0         * 50998                 * 0                  
+
+u_dgr  ESTAB      0      0         * 51033                 * 0                  
+
+u_dgr  ESTAB      0      0         * 51042                 * 0                  
+
+u_dgr  ESTAB      0      0         * 51077                 * 0                  
+
+u_dgr  ESTAB      0      0         * 51108                 * 0                  
+
+u_dgr  ESTAB      0      0         * 51987                 * 0                  
+
+u_dgr  ESTAB      0      0         * 52032                 * 0                  
+
+u_dgr  ESTAB      0      0         * 55059                 * 0                  
+
+u_dgr  ESTAB      0      0         * 55065                 * 0                  
+
+u_dgr  ESTAB      0      0         * 55068                 * 0                  
+
+u_dgr  ESTAB      0      0         * 57045                 * 0                  
+
+u_dgr  ESTAB      0      0         * 57062                 * 0                  
+
+u_dgr  ESTAB      0      0         * 57063                 * 0                  
+
+u_dgr  ESTAB      0      0         * 57084                 * 0                  
+
+u_dgr  ESTAB      0      0         * 57085                 * 0                  
+
+u_dgr  ESTAB      0      0         * 57087                 * 0                  
+
+u_dgr  ESTAB      0      0         * 57114                 * 0                  
+
+u_dgr  ESTAB      0      0         * 57118                 * 0                  
+
+u_dgr  ESTAB      0      0         * 57122                 * 0                  
+
+u_dgr  ESTAB      0      0         * 57250                 * 0                  
+
+u_dgr  ESTAB      0      0         * 57922                 * 0                  
+
+u_dgr  ESTAB      0      0         * 57929                 * 0                  
+
+u_dgr  ESTAB      0      0         * 57957                 * 0                  
+
+u_dgr  ESTAB      0      0         * 57962                 * 0                  
+
+u_dgr  ESTAB      0      0         * 57988                 * 0                  
+
+u_dgr  ESTAB      0      0         * 59107                 * 0                  
+
+u_dgr  ESTAB      0      0         * 59129                 * 0                  
+
+u_dgr  ESTAB      0      0         * 59151                 * 0                  
+
+u_dgr  ESTAB      0      0         * 59169                 * 0                  
+
+u_dgr  ESTAB      0      0         * 59170                 * 0                  
+
+u_dgr  ESTAB      0      0      /var/run/mgmt/syslog_socket 62446                 * 0                  
+
+u_dgr  ESTAB      0      0         * 63475                 * 0                  
+
+u_dgr  ESTAB      0      0         * 63575                 * 0                  
+
+u_dgr  ESTAB      0      0         * 63578                 * 0                  
+
+u_dgr  ESTAB      0      0         * 63579                 * 0                  
+
+u_dgr  ESTAB      0      0         * 63586                 * 0                  
+
+u_dgr  ESTAB      0      0         * 63625                 * 0                  
+
+u_dgr  ESTAB      0      0         * 63640                 * 0                  
+
+u_dgr  ESTAB      0      0         * 63867                 * 0                  
+
+u_dgr  ESTAB      0      0         * 63900                 * 0                  
+
+u_dgr  ESTAB      0      0         * 63901                 * 0                  
+
+u_dgr  ESTAB      0      0         * 63910                 * 0                  
+
+u_dgr  ESTAB      0      0         * 64365                 * 0                  
+
+u_dgr  ESTAB      0      0         * 64458                 * 0                  
+
+u_dgr  ESTAB      0      0      /dev/log 66874                 * 0                  
+
+u_dgr  ESTAB      0      0         * 66884                 * 0                  
+
+u_dgr  ESTAB      0      0         * 66886                 * 0                  
+
+u_dgr  ESTAB      0      0         * 66889                 * 0                  
+
+u_dgr  ESTAB      0      0         * 66892                 * 0                  
+
+u_dgr  ESTAB      0      0         * 66916                 * 0                  
+
+u_dgr  ESTAB      0      0         * 66923                 * 0                  
+
+u_dgr  ESTAB      0      0         * 66925                 * 0                  
+
+u_dgr  ESTAB      0      0         * 66926                 * 0                  
+
+u_dgr  ESTAB      0      0         * 66927                 * 0                  
+
+u_dgr  ESTAB      0      0         * 66931                 * 0                  
+
+u_dgr  ESTAB      0      0         * 66952                 * 0                  
+
+u_dgr  ESTAB      0      0         * 66966                 * 0                  
+
+u_dgr  ESTAB      0      0         * 66972                 * 0                  
+
+u_dgr  ESTAB      0      0         * 67050                 * 0                  
+
+u_dgr  ESTAB      0      0         * 67418                 * 0                  
+
+u_dgr  ESTAB      0      0         * 67433                 * 0                  
+
+u_dgr  ESTAB      0      0      /tmp/ntp_client_1 67434                 * 0                  
+
+u_dgr  ESTAB      0      0         * 67440                 * 0                  
+
+u_dgr  ESTAB      0      0         * 67452                 * 0                  
+
+u_dgr  ESTAB      0      0         * 67453                 * 0                  
+
+u_dgr  ESTAB      0      0         * 67515                 * 0                  
+
+u_dgr  ESTAB      0      0         * 67801                 * 0                  
+
+u_dgr  ESTAB      0      0         * 67802                 * 0                  
+
+u_dgr  ESTAB      0      0         * 67861                 * 0                  
+
+u_dgr  ESTAB      0      0         * 67968                 * 0                  
+
+u_dgr  ESTAB      0      0         * 67973                 * 0                  
+
+u_dgr  ESTAB      0      0         * 67979                 * 0                  
+
+u_dgr  ESTAB      0      0         * 67983                 * 0                  
+
+u_dgr  ESTAB      0      0         * 68039                 * 0                  
+
+u_dgr  ESTAB      0      0         * 68411                 * 0                  
+
+u_dgr  ESTAB      0      0         * 68423                 * 0                  
+
+u_dgr  ESTAB      0      0         * 68446                 * 0                  
+
+u_dgr  ESTAB      0      0         * 68448                 * 0                  
+
+u_dgr  ESTAB      0      0         * 68496                 * 0                  
+
+u_dgr  ESTAB      0      0         * 68501                 * 0                  
+
+u_dgr  ESTAB      0      0         * 68504                 * 0                  
+
+u_dgr  ESTAB      0      0         * 68508                 * 0                  
+
+u_dgr  ESTAB      0      0         * 68521                 * 0                  
+
+u_dgr  ESTAB      0      0         * 68855                 * 0                  
+
+u_dgr  ESTAB      0      0         * 68866                 * 0                  
+
+u_dgr  ESTAB      0      0         * 69083                 * 0                  
+
+u_dgr  ESTAB      0      0         * 69087                 * 0                  
+
+u_dgr  ESTAB      0      0         * 69428                 * 0                  
+
+u_dgr  ESTAB      0      0         * 69452                 * 0                  
+
+u_dgr  ESTAB      0      0         * 69457                 * 0                  
+
+u_dgr  ESTAB      0      0         * 69463                 * 0                  
+
+u_dgr  ESTAB      0      0         * 69618                 * 0                  
+
+u_dgr  ESTAB      0      0         * 69676                 * 0                  
+
+u_dgr  ESTAB      0      0         * 69793                 * 0                  
+
+u_dgr  ESTAB      0      0         * 69811                 * 0                  
+
+u_dgr  ESTAB      0      0         * 70189                 * 0                  
+
+u_dgr  ESTAB      0      0         * 70250                 * 0                  
+
+u_dgr  ESTAB      0      0         * 70641                 * 0                  
+
+u_dgr  ESTAB      0      0         * 70667                 * 0                  
+
+u_dgr  ESTAB      0      0         * 70676                 * 0                  
+
+u_dgr  ESTAB      0      0         * 70677                 * 0                  
+
+u_dgr  ESTAB      0      0         * 70699                 * 0                  
+
+u_dgr  ESTAB      0      0         * 70712                 * 0                  
+
+u_dgr  ESTAB      0      0         * 70725                 * 0                  
+
+u_dgr  ESTAB      0      0         * 70755                 * 0                  
+
+u_dgr  ESTAB      0      0         * 71459                 * 0                  
+
+u_dgr  ESTAB      0      0         * 71550                 * 0                  
+
+u_dgr  ESTAB      0      0         * 71555                 * 0                  
+
+u_dgr  ESTAB      0      0         * 73297                 * 0                  
+
+u_dgr  ESTAB      0      0         * 73302                 * 0                  
+
+u_dgr  ESTAB      0      0         * 73310                 * 0                  
+
+u_dgr  ESTAB      0      0         * 73711                 * 0                  
+
+u_dgr  ESTAB      0      0         * 73718                 * 0                  
+
+u_dgr  ESTAB      0      0         * 73721                 * 0                  
+
+u_dgr  ESTAB      0      0         * 75259                 * 0                  
+
+u_dgr  ESTAB      0      0         * 75286                 * 0                  
+
+u_dgr  ESTAB      0      0         * 77106                 * 0                  
+
+u_dgr  ESTAB      0      0         * 77108                 * 0                  
+
+u_dgr  ESTAB      0      0         * 77112                 * 0                  
+
+u_dgr  ESTAB      0      0         * 77268                 * 0                  
+
+u_dgr  ESTAB      0      0         * 77276                 * 0                  
+
+u_dgr  ESTAB      0      0         * 78146                 * 0                  
+
+u_dgr  ESTAB      0      0         * 78179                 * 0                  
+
+u_dgr  ESTAB      0      0         * 78285                 * 0                  
+
+u_dgr  ESTAB      0      0         * 78340                 * 0                  
+
+u_dgr  ESTAB      0      0         * 78344                 * 0                  
+
+u_dgr  ESTAB      0      0         * 78919                 * 0                  
+
+u_dgr  ESTAB      0      0      /tmp/ntpd_1 78925                 * 0                  
+
+u_dgr  ESTAB      0      0         * 78962                 * 0                  
+
+u_dgr  ESTAB      0      0         * 79082                 * 0                  
+
+u_dgr  ESTAB      0      0         * 79086                 * 0                  
+
+u_dgr  ESTAB      0      0         * 79132                 * 0                  
+
+u_dgr  ESTAB      0      0         * 79980                 * 0                  
+
+u_dgr  ESTAB      0      0         * 79988                 * 0                  
+
+u_dgr  ESTAB      0      0         * 79989                 * 0                  
+
+u_dgr  ESTAB      0      0         * 80001                 * 0                  
+
+u_dgr  ESTAB      0      0         * 80002                 * 0                  
+
+u_dgr  ESTAB      0      0         * 80008                 * 0                  
+
+u_dgr  ESTAB      0      0         * 80015                 * 0                  
+
+u_dgr  ESTAB      0      0         * 80049                 * 0                  
+
+u_dgr  ESTAB      0      0         * 80058                 * 0                  
+
+u_dgr  ESTAB      0      0         * 80248                 * 0                  
+
+u_dgr  ESTAB      0      0         * 80652                 * 0                  
+
+u_dgr  ESTAB      0      0         * 80653                 * 0                  
+
+u_dgr  ESTAB      0      0         * 80920                 * 0                  
+
+u_dgr  ESTAB      0      0         * 81004                 * 0                  
+
+u_dgr  ESTAB      0      0         * 81161                 * 0                  
+
+u_dgr  ESTAB      0      0         * 81645                 * 0                  
+
+u_dgr  ESTAB      0      0         * 81678                 * 0                  
+
+u_dgr  ESTAB      0      0         * 81928                 * 0                  
+
+u_dgr  ESTAB      0      0         * 81929                 * 0                  
+
+u_dgr  ESTAB      0      0         * 82061                 * 0                  
+
+u_dgr  ESTAB      0      0         * 82066                 * 0                  
+
+u_dgr  ESTAB      0      0         * 82857                 * 0                  
+
+u_dgr  ESTAB      0      0         * 82960                 * 0                  
+
+u_dgr  ESTAB      0      0         * 83133                 * 0                  
+
+u_dgr  ESTAB      0      0         * 84129                 * 0                  
+
+u_dgr  ESTAB      0      0         * 84955                 * 0                  
+
+u_dgr  ESTAB      0      0         * 84969                 * 0                  
+
+u_dgr  ESTAB      0      0         * 84983                 * 0                  
+
+u_dgr  ESTAB      0      0         * 86080                 * 0                  
+
+u_dgr  ESTAB      0      0         * 86089                 * 0                  
+
+u_dgr  ESTAB      0      0         * 86093                 * 0                  
+
+u_dgr  ESTAB      0      0         * 86106                 * 0                  
+
+u_dgr  ESTAB      0      0         * 86266                 * 0                  
+
+u_dgr  ESTAB      0      0         * 86272                 * 0                  
+
+u_dgr  ESTAB      0      0         * 86281                 * 0                  
+
+u_dgr  ESTAB      0      0         * 86308                 * 0                  
+
+u_dgr  ESTAB      0      0         * 90090                 * 0                  
+
+u_dgr  ESTAB      0      0         * 233872                * 0                  
+
+u_dgr  ESTAB      0      0         * 234533                * 0                  
+
+u_dgr  ESTAB      0      0         * 244857                * 0                  
+
+u_dgr  ESTAB      0      0         * 71834550              * 0                  
+
+u_dgr  ESTAB      0      0         * 71834551              * 0                  
+
+raw    UNCONN     0      0         *:1                     *:*                  
+
+raw    UNCONN     0      0         *:255                   *:*                  
+
+udp    UNCONN     0      0      127.1.2.1:6688                  *:*                  
+
+udp    UNCONN     0      0      127.0.0.1:15999                 *:*                  
+
+udp    UNCONN     0      0         *:32765                 *:*                  
+
+udp    UNCONN     0      0         *:32767                 *:*                  
+
+udp    UNCONN     0      0         *:32768                 *:*                  
+
+udp    UNCONN     0      0      *%veobc:69                    *:*                  
+
+udp    UNCONN     0      0         *:111                   *:*                  
+
+udp    UNCONN     0      0         *:514                   *:*                  
+
+udp    UNCONN     0      0      127.0.0.1:675                   *:*                  
+
+udp    UNCONN     0      0         *:2049                  *:*                  
+
+tcp    LISTEN     0      128       *:111                   *:*                  
+
+tcp    LISTEN     0      3      127.1.2.1:7891                  *:*                  
+
+tcp    LISTEN     0      32        *:9075                  *:*                  
+
+tcp    LISTEN     0      128       *:22                    *:*                  
+
+tcp    LISTEN     0      50        *:27000                 *:*                  
+
+tcp    LISTEN     0      128    127.0.0.1:7581                  *:*                  
+
+tcp    LISTEN     0      128       *:32765                 *:*                  
+
+tcp    LISTEN     0      128       *:32767                 *:*                  
+
+tcp    LISTEN     0      64        *:32768                 *:*                  
+
+tcp    LISTEN     0      50        *:25537                 *:*                  
+
+tcp    LISTEN     0      64        *:2049                  *:*                  
+
+tcp    LISTEN     0      7        :::21                   :::*                  
+
+tcp    LISTEN     0      128      :::22                   :::*                  
+
+tcp    LISTEN     0      7        :::512                  :::*                  
+
+tcp    LISTEN     0      7        :::513                  :::*                  
+
+tcp    LISTEN     0      7        :::514                  :::*                  
+
+

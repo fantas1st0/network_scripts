@@ -1,0 +1,687 @@
+
+
+!Command: show running-config
+!Time: Fri Oct  2 00:22:32 2020
+
+version 7.3(4)D1(1)
+feature-set fex
+hostname sw-dp4-data-17
+
+feature telnet
+feature tacacs+
+feature udld
+feature interface-vlan
+feature lacp
+feature vpc
+feature lldp
+
+username xxxxxxx password 5 xxxxxxx role vdc-admin
+username xxxxxxx password 5 xxxxxxx role vdc-operator
+username xxxxxxxx role vdc-admin
+username xxxxxxxx passphrase  lifetime 99999 warntime 7
+no password strength-check
+
+banner motd ^[TACACS]^
+
+no ip domain-lookup
+ip domain-name vtb24.ru
+tacacs-server timeout 1
+tacacs-server host 10.64.0.68 key 7  xxxxxxxx  
+tacacs-server host 10.64.0.69 key 7  xxxxxxxx  
+aaa group server tacacs+ TACACS+ 
+    server 10.64.0.68 
+    server 10.64.0.69 
+    source-interface Vlan608
+aaa group server tacacs+ TACACS+Mgt 
+    server 10.64.0.68 
+    server 10.64.0.69 
+    use-vrf management
+    source-interface mgmt0
+service unsupported-transceiver
+errdisable recovery interval 60
+errdisable recovery cause link-flap
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause loopback
+errdisable recovery cause security-violation
+errdisable recovery cause psecure-violation
+errdisable recovery cause vpc-peerlink
+errdisable recovery cause failed-port-state
+errdisable recovery cause miscabling
+ip access-list 1
+  20 permit ip 10.64.0.0/21 any 
+  30 permit ip 10.68.0.0/21 any 
+  40 permit ip 10.74.57.7/32 any 
+  50 permit ip 10.194.162.33/32 any 
+  60 permit ip 10.194.160.71/32 any 
+ip access-list 111
+  10 permit ip 10.64.0.111/32 any 
+snmp-server contact VTB24 NOC, noc@vtb24.ru
+snmp-server location HQ=ID:0000=MOW=DP4=DC4=103=B1
+snmp-server source-interface informs mgmt0
+snmp-server user xxxxxxxx vdc-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server user xxxxxxxx network-admin
+snmp-server user xxxxxxxx vdc-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server user xxxxxxxx network-admin
+snmp-server host 10.194.160.71 traps version 2c xxxxxxxx 
+snmp-server host 10.194.162.33 traps version 2c xxxxxxxx 
+rmon event 1 log description FATAL(1) owner PMON@FATAL
+rmon event 2 log description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 log description ERROR(3) owner PMON@ERROR
+rmon event 4 log description WARNING(4) owner PMON@WARNING
+rmon event 5 log description INFORMATION(5) owner PMON@INFO
+snmp-server enable traps callhome event-notify
+snmp-server enable traps callhome smtp-send-fail
+snmp-server enable traps cfs state-change-notif
+snmp-server enable traps lldp lldpRemTablesChange
+snmp-server enable traps cfs merge-failure
+snmp-server enable traps aaa server-state-change
+snmp-server enable traps feature-control FeatureOpStatusChange
+snmp-server enable traps sysmgr cseFailSwCoreNotifyExtended
+snmp-server enable traps config ccmCLIRunningConfigChanged
+snmp-server enable traps link cisco-xcvr-mon-status-chg
+snmp-server enable traps vtp notifs
+snmp-server enable traps vtp vlancreate
+snmp-server enable traps vtp vlandelete
+snmp-server enable traps bridge newroot
+snmp-server enable traps bridge topologychange
+snmp-server enable traps stpx inconsistency
+snmp-server enable traps stpx root-inconsistency
+snmp-server enable traps stpx loop-inconsistency
+snmp-server enable traps system Clock-change-notification
+snmp-server enable traps feature-control ciscoFeatOpStatusChange
+snmp-server enable traps vtp notifs
+snmp-server community xxxxxxxx group vdc-operator
+snmp-server community xxxxxxxx group vdc-operator
+snmp-server community xxxxxxxx group vdc-operator
+snmp-server community xxxxxxxx use-acl 1
+snmp-server community xxxxxxxx use-acl 1
+snmp-server community xxxxxxxx use-acl 111
+ntp server 10.9.0.3
+ntp server 10.9.0.4
+ntp authentication-key 1 md5 xxxxxxxx 7
+ntp trusted-key 1
+aaa authentication login default group TACACS+Mgt 
+aaa authorization config-commands default group TACACS+Mgt local 
+
+ip route 0.0.0.0/0 10.64.64.1
+vlan 1,604,609,629,654,680-686
+vlan 604
+  name DATA-SRV-INF
+vlan 609
+  name DATA-VMWARE
+vlan 629
+  name DATA-VMWARE2
+vlan 654
+  name DATA-BACKUP
+vlan 680
+  name ~DATA-VIEW-ADMIN
+vlan 681
+  name ~DATA-VIEW-CC
+vlan 682
+  name ~DATA-VIEW-MISC
+vlan 683
+  name ~DATA-VIEW-URM
+vlan 684
+  name ~DATA-VIEW-ALIEN
+vlan 685
+  name ~DATA-VIEW-MAIN
+vlan 686
+  name ~DATA-VIEW-DEV
+
+spanning-tree port type edge default
+spanning-tree port type edge bpduguard default
+spanning-tree loopguard default
+udld aggressive
+vrf context management
+  ip route 0.0.0.0/0 10.64.64.1
+vrf context vpc-keepalive
+vpc domain 12
+  role priority 1
+  system-priority 200
+  peer-keepalive destination 192.168.1.2 source 192.168.1.1 vrf vpc-keepalive
+port-profile type ethernet ETH-TRUNK-EDGEPORT
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  switchport
+  switchport mode trunk
+  state enabled
+port-profile type port-channel PC-TRUNK-EDGEPORT
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  switchport
+  switchport mode trunk
+  state enabled
+
+cfs eth distribute
+
+
+interface mgmt0
+  vrf member management
+  ip address 10.64.65.82/21
+
+interface Vlan1
+
+interface port-channel10
+  description [VPC][TRUNK] sw-dp4-data-11/12 Po90 C1028645/C1028653
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 604,609,629,654,680-686
+  spanning-tree port type network
+  mtu 9216
+  vpc 10
+
+interface port-channel4000
+  description [TRUNK] peer-link
+  switchport
+  switchport mode trunk
+  spanning-tree port type network
+  vpc peer-link
+
+interface port-channel4001
+  description [L3] peer-keepalive
+  vrf member vpc-keepalive
+  ip address 192.168.1.1/24
+
+interface Ethernet3/1
+  description [TRUNK] view-ntnx-str-1:pci4/a WO-0626639
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet3/2
+  description [TRUNK] view-ntnx-str-2:pci4/a WO-0626639
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet3/3
+  description [TRUNK] view-ntnx-4:eth1 RF-001362812
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet3/4
+  description [TRUNK] view-ntnx-5:eth1 RF-001362812
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet3/5
+  description [TRUNK] view-ntnx-9:eth1 WO-0719739
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet3/6
+  description [TRUNK] view-ntnx-10:eth1 WO-0719739
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet3/7
+  description [TRUNK] view-ntnx-11:eth1 WO-0719739
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet3/8
+  description [TRUNK] view-ntnx-12:eth1 WO-0719739
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet3/9
+  description [VTB24_CONSOLE] view-ntnx-101(J301ED8F):eth1 RF-001362833
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet3/10
+  description [VTB24_CONSOLE] view-ntnx-100(J301ED8K):eth1
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet3/11
+  description [TRUNK] view-ntnx-13:eth1 WO-0719739
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet3/12
+  description [TRUNK] view-ntnx-14:eth1 WO-0719739
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet3/21
+  description [TRUNK] view-ntnx-15:eth1 WO-0719739
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet3/22
+  description [TRUNK] view-ntnx-16:eth1 WO-0719739
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet3/23
+  description [DATA-VMWARE] view-ntnx-29 RF-000821539
+  switchport
+  switchport mode trunk
+  switchport access vlan 609
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  no shutdown
+
+interface Ethernet3/24
+  description [DATA-VMWARE] view-ntnx-30 RF-000821539
+  switchport
+  switchport mode trunk
+  switchport access vlan 609
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  no shutdown
+
+interface Ethernet3/25
+  description [DATA-VMWARE] view-ntnx-31 RF-000821539
+  switchport
+  switchport mode trunk
+  switchport access vlan 609
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  no shutdown
+
+interface Ethernet3/26
+  description [DATA-VMWARE] view-ntnx-32 RF-000821539
+  switchport
+  switchport mode trunk
+  switchport access vlan 609
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  no shutdown
+
+interface Ethernet3/27
+  description [RESERVED] Freed C1028553
+
+interface Ethernet3/28
+  description [RESERVED] Freed C1028553
+
+interface Ethernet3/37
+  description [PC] sw-dp4-data-11 Eth8/3/1 C1028564
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 604,609,629,654,680-686
+  mtu 9216
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet3/38
+  description [PC] sw-dp4-data-11 Eth8/3/2 C1028564
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 604,609,629,654,680-686
+  mtu 9216
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet3/39
+  description [RESERVED] Freed C1028713 $notm
+  mtu 9216
+
+interface Ethernet3/40
+  description [RESERVED] Freed C1028713 $notm
+  mtu 9216
+
+interface Ethernet3/45
+  description [PC] peer-link
+  switchport
+  switchport mode trunk
+  channel-group 4000 mode active
+  no shutdown
+
+interface Ethernet3/46
+  description [PC] peer-link
+  switchport
+  switchport mode trunk
+  channel-group 4000 mode active
+  no shutdown
+
+interface Ethernet3/47
+  description [RESERVED] Freed C1028713 $notm
+
+interface Ethernet3/48
+  description [PC] peer-keepalive
+  channel-group 4001 mode active
+  no shutdown
+
+interface Ethernet4/1
+  description vtb-core TRUNK view-ntnx-104(J301E6CE):1 RF-001590367
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet4/2
+  description vtb-core TRUNK view-ntnx-105(J301E6CF):1 RF-001590367
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet4/3
+  description [TRUNK] view-ntnx-6:eth1 RF-001362812
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet4/4
+  description [TRUNK] view-ntnx-8:eth1 RF-001362812
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet4/5
+  description [TRUNK] view-ntnx-100:eth3 RF-001597327
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet4/6
+  description [TRUNK] view-ntnx-101:eth3 RF-001597327
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet4/7
+  description [TRUNK] view-ntnx-102:eth3 RF-001597327
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet4/8
+  description [VTB24_CONSOLE] view-ntnx-102(J301ED8G):eth1 RF-001362833
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet4/9
+  description [VTB24_CONSOLE] view-ntnx-103(J301ED8H):eth1 RF-001362833
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet4/10
+  description [TRUNK] view-ntnx-103:eth3 RF-001597327
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet4/11
+  description [TRUNK] view-ntnx-104:eth3 RF-001597327
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet4/12
+  description [TRUNK] view-ntnx-105:eth3 RF-001597327
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet4/21
+  description [TRUNK] view-ntnx-106:eth1 RF-001597327
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet4/22
+  description [TRUNK] view-ntnx-106:eth3 RF-001597327
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet4/23
+
+interface Ethernet4/24
+
+interface Ethernet4/25
+  description None view-ntnx-1_j333wg0:port1 RF-001430835
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet4/26
+  description None view-ntnx-2_j333wg2:port1 RF-001430835
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet4/27
+  description None view-ntnx-3_j333wg3:port1 RF-001430835
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet4/28
+  description None view-ntnx-7_j333wg1:port1 RF-001430835
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 604,609,654,680-686
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet4/37
+  description [PC] sw-dp4-data-12 Eth8/3/1 C1028564
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 604,609,629,654,680-686
+  mtu 9216
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet4/38
+  description [PC] sw-dp4-data-12 Eth8/3/2 C1028564
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 604,609,629,654,680-686
+  mtu 9216
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet4/39
+  description [RESERVED] Freed C1028713 $notm
+  mtu 9216
+
+interface Ethernet4/40
+  description [RESERVED] Freed C1028713 $notm
+  mtu 9216
+
+interface Ethernet4/45
+  description [PC] peer-link
+  switchport
+  switchport mode trunk
+  channel-group 4000 mode active
+  no shutdown
+
+interface Ethernet4/46
+  description [PC] peer-link
+  switchport
+  switchport mode trunk
+  channel-group 4000 mode active
+  no shutdown
+
+interface Ethernet4/47
+  description [RESERVED] Freed C1028713 $notm
+
+interface Ethernet4/48
+  description [PC] peer-keepalive
+  channel-group 4001 mode active
+  no shutdown
+cli alias name wr copy runn start
+line vty
+
+

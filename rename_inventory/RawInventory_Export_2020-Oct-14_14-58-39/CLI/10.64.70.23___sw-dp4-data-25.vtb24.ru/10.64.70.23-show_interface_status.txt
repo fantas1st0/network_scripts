@@ -1,0 +1,182 @@
+
+
+--------------------------------------------------------------------------------
+Port          Name               Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------
+Eth1/1        [DATA-KT] P980-1-N connected trunk     full    10G     10Gbase-SR 
+Eth1/2        [DATA-KT] P980-1-N connected 645       full    10G     10Gbase-SR 
+Eth1/3        [DATA-BIS-HQ] P980 connected 601       full    10G     10Gbase-SR 
+Eth1/4        [DATA-BIS-HQ] P980 connected 601       full    10G     10Gbase-SR 
+Eth1/5        [DATA-BIS-HQ] P980 connected 601       full    10G     10Gbase-SR 
+Eth1/6        [DATA-BIS-HQ] P980 connected 601       full    10G     10Gbase-SR 
+Eth1/7        [DATA-BIS-HQ] P980 connected 601       full    10G     10Gbase-SR 
+Eth1/8        [DATA-BIS-HB1] P98 connected 646       full    10G     10Gbase-SR 
+Eth1/9        [DATA-BIS-HQ] P980 connected 601       full    10G     10Gbase-SR 
+Eth1/10       [DATA-BIS-HQ] P980 connected 601       full    10G     10Gbase-SR 
+Eth1/11       [DATA-BIS-HB2] P98 connected 647       full    10G     10Gbase-SR 
+Eth1/12       [DATA-BIS-HQ] P980 connected 601       full    10G     10Gbase-SR 
+Eth1/13       [DATA-BIS-HQ] P980 connected 601       full    10G     10Gbase-SR 
+Eth1/14       [DATA-BIS-HQ] P980 notconnec 601       full    10G     10Gbase-SR 
+Eth1/15       [DATA-BIS-HQ] P980 connected 601       full    10G     10Gbase-SR 
+Eth1/16       [DATA-BIS-HQ] P980 notconnec 601       full    10G     10Gbase-SR 
+Eth1/17       [DATA-BIS-HQ] P980 notconnec 601       full    10G     10Gbase-SR 
+Eth1/18       [DATA-BIS-HQ] P980 notconnec 601       full    10G     10Gbase-SR 
+Eth1/19       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth1/20       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth1/21       TRUNK vsphere-789. connected trunk     full    10G     10Gbase-SR 
+Eth1/22       TRUNK vsphere-791. connected trunk     full    10G     10Gbase-SR 
+Eth1/23       TRUNK vm-test-1311 connected trunk     full    10G     10Gbase-SR 
+Eth1/24       TRUNK vm-test-1313 connected trunk     full    10G     10Gbase-SR 
+Eth1/25       TRUNK vm-test-1315 connected trunk     full    10G     10Gbase-SR 
+Eth1/26       TRUNK vsphere-3007 connected trunk     full    10G     10Gbase-SR 
+Eth1/27       TRUNK vm-test-417. connected trunk     full    10G     10Gbase-SR 
+Eth1/28       TRUNK vm-test-419. connected trunk     full    10G     10Gbase-SR 
+Eth1/29       TRUNK vm-test-1301 connected trunk     full    10G     10Gbase-SR 
+Eth1/30       TRUNK vm-test-1303 connected trunk     full    10G     10Gbase-SR 
+Eth1/31       TRUNK vm-test-1305 connected trunk     full    10G     10Gbase-SR 
+Eth1/32       TRUNK vm-test-1307 connected trunk     full    10G     10Gbase-SR 
+Eth1/33       TRUNK vm-test-1309 connected trunk     full    10G     10Gbase-SR 
+Eth1/34       TRUNK vsphere-788. connected trunk     full    10G     10Gbase-SR 
+Eth1/35       TRUNK vsphere-790. connected trunk     full    10G     10Gbase-SR 
+Eth1/36       TRUNK vm-test-1312 connected trunk     full    10G     10Gbase-SR 
+Eth1/37       TRUNK vm-test-1314 connected trunk     full    10G     10Gbase-SR 
+Eth1/38       TRUNK vsphere-3008 connected trunk     full    10G     10Gbase-SR 
+Eth1/39       TRUNK vm-test-418. connected trunk     full    10G     10Gbase-SR 
+Eth1/40       TRUNK vm-test-1302 connected trunk     full    10G     10Gbase-SR 
+Eth1/41       TRUNK vm-test-1304 connected trunk     full    10G     10Gbase-SR 
+Eth1/42       TRUNK vm-test-1306 connected trunk     full    10G     10Gbase-SR 
+Eth1/43       TRUNK vm-test-1308 connected trunk     full    10G     10Gbase-SR 
+Eth1/44       TRUNK vm-test-1310 connected trunk     full    10G     10Gbase-SR 
+Eth1/45       [DATA-BIS-HQ] P980 connected 601       full    10G     10Gbase-SR 
+Eth1/46       [FEX] fex-101      connected 1         full    10G     10Gbase-SR 
+Eth1/47       [PC] peer-keepaliv connected trunk     full    10G     10Gbase-SR 
+Eth1/48       [PC] peer-keepaliv connected trunk     full    10G     10Gbase-SR 
+Eth2/1        [FEX] fex-151      connected 1         full    40G     QSFP-40G-SR
+Eth2/2        [FEX] fex-151      connected 1         full    40G     QSFP-40G-SR
+Eth2/3        [PC] peer-link     connected trunk     full    40G     QSFP-40G-SR
+Eth2/4        [PC] peer-link     connected trunk     full    40G     QSFP-40G-SR
+Eth2/5        [PC] sw-dp4-data-1 connected trunk     full    40G     QSFP-40G-SR
+Eth2/6        [PC] sw-dp4-data-1 connected trunk     full    40G     QSFP-40G-SR
+Po10          [VPC][TRUNK] sw-dp connected trunk     full    a-40G   --         
+Po101         [FEX] fex-101      connected 1         full    a-10G   --         
+Po151         [FEX] fex-151      connected 1         full    a-40G   --         
+Po301         [DATA-BIS-HQ] P980 connected 601       full    10G     --         
+Po302         [DATA-BIS-HQ] P980 noOperMem 601       auto    10G     --         
+Po303         [DATA-BIS-HQ] P980 connected 601       full    10G     --         
+Po304         [DATA-BIS-HQ] P980 noOperMem 601       auto    10G     --         
+Po305         [DATA-BIS-HQ] P980 noOperMem 601       auto    10G     --         
+Po306         [DATA-BIS-HQ] P980 noOperMem 601       auto    10G     --         
+Po307         [DATA-KT] P980-1-N connected 645       full    10G     --         
+Po308         [DATA-BIS-HQ] P980 connected 601       full    10G     --         
+Po309         [DATA-BIS-HQ] P980 connected 601       full    10G     --         
+Po311         DATA-BIS-HQ dp4-hc connected trunk     full    10G     --         
+Po312         DATA-BIS-HQ dp4-hc connected trunk     full    10G     --         
+Po313         DATA-BIS-HQ dp4-hc connected trunk     full    10G     --         
+Po314         DATA-BIS-HQ dp4-hc connected trunk     full    10G     --         
+Po315         [DATA-BIS-HQ] dp4- connected trunk     full    10G     --         
+Po316         [DATA-BIS-HQ] spo5 connected 601       full    a-10G   --         
+Po317         [DATA-BIS-HQ] spo5 connected 601       full    a-10G   --         
+Po318         [DATA-PLC] ZFSAPP0 connected 603       full    10G     --         
+Po319         [DATA-PLC] ZFSAPP0 connected 603       full    10G     --         
+Po4000        [TRUNK] peer-link  connected trunk     full    a-40G   --         
+Po4001        [TRUNK] peer-keepa connected trunk     full    a-10G   --         
+mgmt0         --                 connected routed    full    a-1000  --         
+Vlan1         --                 down      routed    auto    auto    --
+Vlan608       mgmt               connected routed    auto    auto    --
+Vlan4093      [L3] peer-keepaliv connected routed    auto    auto    --
+Eth101/1/1    DATA-MGMT dp4-hcp- connected 600       full    a-1000             
+Eth101/1/2    DATA-CONSOLE dp4-h connected 608       full    a-1000             
+Eth101/1/3    DATA-MGMT dp4-hcp- connected 600       full    a-1000             
+Eth101/1/4    DATA-CONSOLE dp4-h connected 608       full    a-1000             
+Eth101/1/5    DATA-CONSOLE dp4-h connected 608       full    a-1000             
+Eth101/1/6    DATA-CONSOLE dp4-h connected 608       full    a-1000             
+Eth101/1/7    DATA-CONSOLE ms-ss connected 608       full    a-1000             
+Eth101/1/8    DATA-CONSOLE ms-ss connected 608       full    a-1000             
+Eth101/1/9    [RESERVED] Nutanix disabled  1         auto    auto               
+Eth101/1/10   [RESERVED] Nutanix disabled  1         auto    auto               
+Eth101/1/11   [RESERVED] Nutanix disabled  1         auto    auto               
+Eth101/1/12   [RESERVED] Nutanix disabled  1         auto    auto               
+Eth101/1/13   [DATA-CONSOLE] k10 connected 608       full    a-1000             
+Eth101/1/14   [DATA-CONSOLE] RF- connected 608       full    a-1000             
+Eth101/1/15   [RESERVED] Nutanix disabled  1         auto    auto               
+Eth101/1/16   [RESERVED] Nutanix disabled  1         auto    auto               
+Eth101/1/17   [RESERVED] Nutanix disabled  1         auto    auto               
+Eth101/1/18   [RESERVED] Nutanix disabled  1         auto    auto               
+Eth101/1/19   DATA-HB-ANY OLB-MO connected 531       full    a-1000             
+Eth101/1/20   [RESERVED] Nutanix disabled  1         auto    auto               
+Eth101/1/21   vsphere-789 S4BRK8 connected 608       full    a-1000             
+Eth101/1/22   vsphere-791 S4BRL2 connected 608       full    a-1000             
+Eth101/1/23   vm-test-1311 S4BRL connected 608       full    a-1000             
+Eth101/1/24   vm-test-1313 S4BRK connected 608       full    a-1000             
+Eth101/1/25   vm-test-1315 S4BRK connected 608       full    a-1000             
+Eth101/1/26   N/A vsphere-3007 S connected 608       full    a-1000             
+Eth101/1/27   vm-test-417 S4BRL2 connected 608       full    a-1000             
+Eth101/1/28   vm-test-419 S4BRL3 connected 608       full    a-1000             
+Eth101/1/29   [DATA-CONSOLE] vm- connected 608       full    a-1000             
+Eth101/1/30   [DATA-CONSOLE] vm- connected 608       full    a-1000             
+Eth101/1/31   [DATA-CONSOLE] vm- connected 608       full    a-1000             
+Eth101/1/32   [DATA-CONSOLE] vm- connected 608       full    a-1000             
+Eth101/1/33   [DATA-CONSOLE] vm- connected 608       full    a-1000             
+Eth101/1/34   [RESERVED] Nutanix disabled  1         auto    auto               
+Eth101/1/35   [RESERVED] Nutanix disabled  1         auto    auto               
+Eth101/1/36   [RESERVED] Nutanix disabled  1         auto    auto               
+Eth101/1/37   [RESERVED] Nutanix disabled  1         auto    auto               
+Eth101/1/38   [RESERVED] Nutanix disabled  1         auto    auto               
+Eth101/1/39   [RESERVED] Nutanix disabled  1         auto    auto               
+Eth101/1/40   [RESERVED] Nutanix disabled  1         auto    auto               
+Eth101/1/41   [RESERVED] Nutanix disabled  1         auto    auto               
+Eth101/1/42   [RESERVED] Nutanix disabled  1         auto    auto               
+Eth101/1/43   [RESERVED] Nutanix disabled  1         auto    auto               
+Eth101/1/44   [RESERVED] Nutanix disabled  1         auto    auto               
+Eth101/1/45   [RESERVED] Nutanix disabled  1         auto    auto               
+Eth101/1/46   [RESERVED] Nutanix disabled  1         auto    auto               
+Eth101/1/47   [RESERVED] Nutanix disabled  1         auto    auto               
+Eth101/1/48   [RESERVED] Nutanix disabled  1         auto    auto               
+Eth151/1/1    DATA-BIS-HQ dp4-hc connected trunk     full    10G     10Gbase-SR 
+Eth151/1/2    DATA-BIS-HQ dp4-hc connected trunk     full    10G     10Gbase-SR 
+Eth151/1/3    DATA-BIS-HQ dp4-hc connected trunk     full    10G     10Gbase-SR 
+Eth151/1/4    DATA-BIS-HQ dp4-hc connected trunk     full    10G     10Gbase-SR 
+Eth151/1/5    [DATA-BIS-HQ] dp4- connected trunk     full    10G     10Gbase-SR 
+Eth151/1/6    [DATA-BIS-HQ] dp4- connected trunk     full    10G     10Gbase-SR 
+Eth151/1/7    [DATA-BIS-HQ] dp4- connected trunk     full    10G     10Gbase-SR 
+Eth151/1/8    [DATA-BIS-HQ] dp4- connected trunk     full    10G     10Gbase-SR 
+Eth151/1/9    645 InfiniBand-1 S connected 645       full    10G     10Gbase-SR 
+Eth151/1/10   [RESERVED] bda9    sfpAbsent 1         full    10G     --         
+Eth151/1/11   DATA-SRV-APP2 ms-s connected 628       full    10G     10Gbase-SR 
+Eth151/1/12   DATA-SRV-APP2 ms-s connected 628       full    10G     10Gbase-SR 
+Eth151/1/13   [DATA-KT] k10-rkk- connected 645       full    10G     10Gbase-SR 
+Eth151/1/14   [DATA-KT] k10-rkk- connected 645       full    10G     10Gbase-SR 
+Eth151/1/15   [DATA-KT] k10-rkk- connected 645       full    10G     10Gbase-SR 
+Eth151/1/16   [RESERVED] Nutanix notconnec 645       full    10G     10Gbase-SR 
+Eth151/1/17   [DATA-KT] k10-rkk- connected 645       full    10G     10Gbase-SR 
+Eth151/1/18   DATA-SRV-APP2 ms-s connected 628       full    10G     10Gbase-SR 
+Eth151/1/19   DATA-SRV-APP2 OLB- connected 628       full    10G     10Gbase-SR 
+Eth151/1/20   [RESERVED] RF-0020 sfpAbsent 1         full    10G     --         
+Eth151/1/21   TRUNK vsphere-789. connected trunk     full    10G     10Gbase-SR 
+Eth151/1/22   TRUNK vsphere-791. connected trunk     full    10G     10Gbase-SR 
+Eth151/1/23   TRUNK vm-test-1311 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/24   TRUNK vm-test-1313 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/25   TRUNK vm-test-1315 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/26   TRUNK vsphere-3007 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/27   TRUNK vm-test-417. connected trunk     full    10G     10Gbase-SR 
+Eth151/1/28   TRUNK vm-test-419. connected trunk     full    10G     10Gbase-SR 
+Eth151/1/29   TRUNK vm-test-1301 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/30   TRUNK vm-test-1303 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/31   TRUNK vm-test-1305 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/32   TRUNK vm-test-1307 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/33   TRUNK vm-test-1309 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/34   TRUNK vsphere-788. connected trunk     full    10G     10Gbase-SR 
+Eth151/1/35   TRUNK vsphere-790. connected trunk     full    10G     10Gbase-SR 
+Eth151/1/36   TRUNK vm-test-1312 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/37   TRUNK vm-test-1314 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/38   TRUNK vsphere-3008 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/39   TRUNK vm-test-418. connected trunk     full    10G     10Gbase-SR 
+Eth151/1/40   TRUNK vm-test-1302 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/41   TRUNK vm-test-1304 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/42   TRUNK vm-test-1306 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/43   TRUNK vm-test-1308 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/44   TRUNK vm-test-1310 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/45   [DATA-PLC] ZFSAPP0 connected 603       full    10G     10Gbase-SR 
+Eth151/1/46   [DATA-PLC] ZFSAPP0 connected 603       full    10G     10Gbase-SR 
+Eth151/1/47   [DATA-BIS-HQ] spo5 connected 601       full    10G     10Gbase-SR 
+Eth151/1/48   [DATA-BIS-HQ] spo5 connected 601       full    10G     10Gbase-SR 

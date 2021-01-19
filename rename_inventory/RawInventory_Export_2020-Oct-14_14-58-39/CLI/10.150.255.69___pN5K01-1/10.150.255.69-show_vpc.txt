@@ -1,0 +1,71 @@
+
+Legend:
+                (*) - local vPC is down, forwarding via vPC peer-link
+
+vPC domain id                     : 51  
+Peer status                       : peer adjacency formed ok      
+vPC keep-alive status             : peer is alive                 
+Configuration consistency status  : success 
+Per-vlan consistency status       : success                       
+Type-2 consistency status         : success 
+vPC role                          : primary                       
+Number of vPCs configured         : 29  
+Peer Gateway                      : Disabled
+Dual-active excluded VLANs        : -
+Graceful Consistency Check        : Enabled
+Operational Layer3 Peer-router    : Disabled
+Auto-recovery status              : Enabled (timeout = 240 seconds)
+
+vPC Peer-link status
+---------------------------------------------------------------------
+id   Port   Status Active vlans    
+--   ----   ------ --------------------------------------------------
+1    Po1000 up     1,2901,2903-2907,2951,2954,3061,3104-3105,3155,328        
+                   3,3285,3292-3293,3347,3519,3521,3523,3529-3530,354        
+                   2-3544,3557-3558,3573,3597,3656,3773-3774,3777,379        
+                   1,3799,3805-3808,3824,3829-3830,3854,3868,3926            
+
+vPC status
+----------------------------------------------------------------------------
+id     Port        Status Consistency Reason                     Active vlans
+------ ----------- ------ ----------- -------------------------- -----------
+7      Po7         up     success     success                    1,2901,2903 
+                                                                 -2907,2951, 
+                                                                 2954,3061,3 
+                                                                 104-3105,31 
+                                                                 55,3283,....
+99     Po99        up     success     success                    2951        
+201    Po201       up     success     success                    3529-3530,3 
+                                                                 777         
+202    Po202       up     success     success                    3529-3530,3 
+                                                                 777         
+301    Po301       down*  success     success                    -           
+302    Po302       down*  success     success                    -           
+305    Po305       down*  success     success                    -           
+306    Po306       down*  success     success                    -           
+307    Po307       up     success     success                    3808        
+308    Po308       up     success     success                    3808        
+309    Po309       up     success     success                    3808        
+310    Po310       up     success     success                    3808        
+311    Po311       up     success     success                    3808        
+312    Po312       up     success     success                    3519,3523,3 
+                                                                 542-3544    
+313    Po313       up     success     success                    3830        
+314    Po314       up     success     success                    3830        
+315    Po315       up     success     success                    2954,3573   
+316    Po316       up     success     success                    3656,3774,3 
+                                                                 777,3799    
+317    Po317       up     success     success                    3656,3774,3 
+                                                                 777,3799    
+318    Po318       up     success     success                    3656,3774,3 
+                                                                 777,3799    
+319    Po319       up     success     success                    3656,3774,3 
+                                                                 777,3799    
+320    Po320       down*  success     success                    -           
+321    Po321       down*  success     success                    -           
+322    Po322       up     success     success                    3806        
+323    Po323       down*  success     success                    -           
+324    Po324       up     success     success                    3806        
+325    Po325       up     success     success                    3806        
+421    Po421       up     success     success                    3155,3347   
+422    Po422       up     success     success                    3155,3347   

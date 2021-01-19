@@ -31,9 +31,8 @@ import os
 import sys
 sys.path.append('../device_inventory')
 sys.path.append('../define_software_type')
-from device_list import get_devices
+from device_list import get_data
 from define_soft_type import find_ver
-import pandas as pd
 from xlsxwriter import Workbook
 
 def find_mac_by_ip_nxos(devicename, ip):
@@ -42,7 +41,6 @@ def find_mac_by_ip_nxos(devicename, ip):
 		for line in f:
 			if ip in line:
 				arp_dict = {}
-#				pprint(line.strip().split())
 				ip, age, mac, intf = line.strip().split()
 				arp_dict["IP"] = ip
 				arp_dict["MAC"] = mac
@@ -83,16 +81,15 @@ def find_vrf(ip_mac, ip_int_device):
 
 # входные данные
 device_file = "/Users/alexguse/Documents/Python/Scripts/network_scripts/device_inventory/device_list.xlsx"
-device_list = get_devices(device_file)
+device_list = get_data(device_file)
 soft = find_ver(device_list)
-#'/Users/alexguse/Documents/Python/Scripts/network_scripts/resolve_mac_by_ip'
-#'/Users/alexguse/Documents/Python/Scripts/network_scripts/define_software_type'
-#pprint(soft)
-#pprint(device_list)
+
 os.chdir("../resolve_mac_by_ip")
 show_arp_list = []
 ip_int_br_list = []
-ip_list = ["10.8.5.18", "10.8.5.19", "10.8.5.20"]
+
+ip_file = "/Users/alexguse/Documents/Python/Scripts/network_scripts/device_inventory/ip_find_list.xlsx"
+ip_list = get_data(ip_file)
 
 for device in device_list:
 	arp = device + "_show_ip_arp" + ".txt"
@@ -152,17 +149,3 @@ for element in dict_list:
         ws.write(row,col,v)
     row = row + 1 #enter the next row
 wb.close()
-#pprint(dict_list)
-#df = pd.DataFrame(data=dict_list)
-#df = (df.T)
-#pprint (df)
-#df.to_excel('dict1.xlsx')
-
-#result_file = "RESULT/results_ips.csv"
-#if not os.path.exists(os.path.dirname(result_file)):
-#	os.makedirs(os.path.dirname(result_file))
-#with open(result_file, 'w') as f:
-#	writer = csv.DictWriter(f, fieldnames=list(dict_list[0].keys()), quoting=csv.QUOTE_NONNUMERIC)
-#	writer.writeheader()
-#	for data in dict_list:
-#		writer.writerow(data)

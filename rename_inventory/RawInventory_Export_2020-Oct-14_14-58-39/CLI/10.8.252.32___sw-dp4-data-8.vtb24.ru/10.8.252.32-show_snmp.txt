@@ -1,0 +1,25 @@
+Chassis: SMC1540007S
+Contact: VTB24 NOC, noc@vtb24.ru
+Location: HQ=ID:0000=MOW=DP4=DC3=109=F1
+2580013947 SNMP packets input
+    0 Bad SNMP version errors
+    26510 Unknown community name
+    255 Illegal operation for community name supplied
+    0 Encoding errors
+    717058987 Number of requested variables
+    11215 Number of altered variables
+    2484941760 Get-request PDUs
+    10174575 Get-next PDUs
+    3713 Set-request PDUs
+    0 Input queue packet drops (Maximum queue size 1000)
+2580313820 SNMP packets output
+    694562 Too big errors (Maximum packet size 1500)
+    79209 No such name errors
+    0 Bad values errors
+    0 General errors
+    2579983389 Response PDUs
+    330402 Trap PDUs
+
+SNMP logging: enabled
+    Logging to 10.194.160.71.162, 0/10, 8436 sent, 7612 dropped.
+    Logging to 10.194.162.33.162, 0/10, 8435 sent, 7613 dropped.

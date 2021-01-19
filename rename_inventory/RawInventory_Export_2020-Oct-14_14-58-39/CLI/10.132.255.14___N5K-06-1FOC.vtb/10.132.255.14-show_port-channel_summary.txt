@@ -1,0 +1,74 @@
+
+Flags:  D - Down        P - Up in port-channel (members)
+        I - Individual  H - Hot-standby (LACP only)
+        s - Suspended   r - Module-removed
+        S - Switched    R - Routed
+        U - Up (port-channel)
+        M - Not in use. Min-links not met
+--------------------------------------------------------------------------------
+Group Port-       Type     Protocol  Member Ports
+      Channel
+--------------------------------------------------------------------------------
+7     Po7(SU)     Eth      LACP      Eth1/31(P)   Eth1/32(P)   Eth2/1(P)
+                                     Eth2/2(P)    
+101   Po101(SU)   Eth      NONE      Eth1/1(P)    Eth1/2(P)    
+103   Po103(SU)   Eth      NONE      Eth1/3(P)    Eth1/4(P)    
+105   Po105(SU)   Eth      NONE      Eth1/5(P)    Eth1/6(P)    
+107   Po107(SU)   Eth      NONE      Eth1/7(P)    Eth1/8(P)    
+109   Po109(SU)   Eth      NONE      Eth1/9(P)    Eth1/10(P)   
+111   Po111(SU)   Eth      NONE      Eth1/11(P)   Eth1/12(P)   
+113   Po113(SU)   Eth      NONE      Eth1/13(P)   Eth1/14(P)   
+115   Po115(SU)   Eth      NONE      Eth1/15(P)   Eth1/16(P)   
+117   Po117(SU)   Eth      NONE      Eth1/17(P)   Eth1/18(P)   
+201   Po201(SU)   Eth      LACP      Eth1/19(P)   Eth1/20(P)   
+202   Po202(SU)   Eth      NONE      Eth103/1/29(P)  Eth103/1/30(P)  
+203   Po203(SU)   Eth      NONE      Eth103/1/31(P)  Eth103/1/32(P)  
+205   Po205(SU)   Eth      LACP      Eth2/10(P)   
+206   Po206(SU)   Eth      LACP      Eth2/11(P)   
+207   Po207(SU)   Eth      LACP      Eth101/1/14(P)  
+208   Po208(SU)   Eth      LACP      Eth103/1/9(P)  
+209   Po209(SD)   Eth      NONE      --
+210   Po210(SD)   Eth      NONE      --
+211   Po211(SD)   Eth      NONE      --
+212   Po212(SU)   Eth      LACP      Eth111/1/15(P)  
+213   Po213(SD)   Eth      LACP      Eth117/1/13(D)  
+214   Po214(SU)   Eth      LACP      Eth103/1/2(P)  
+215   Po215(SU)   Eth      LACP      Eth115/1/12(P)  
+216   Po216(SU)   Eth      LACP      Eth115/1/13(P)  
+217   Po217(SU)   Eth      LACP      Eth101/1/3(P)  
+218   Po218(SD)   Eth      NONE      --
+219   Po219(SU)   Eth      LACP      Eth105/1/18(P)  
+220   Po220(SU)   Eth      LACP      Eth111/1/14(P)  
+221   Po221(SU)   Eth      LACP      Eth103/1/3(P)  
+222   Po222(SU)   Eth      LACP      Eth115/1/18(P)  
+223   Po223(SU)   Eth      LACP      Eth111/1/13(P)  
+224   Po224(SD)   Eth      NONE      --
+225   Po225(SD)   Eth      NONE      --
+228   Po228(SD)   Eth      LACP      Eth117/1/5(D)  
+229   Po229(SD)   Eth      NONE      --
+230   Po230(SD)   Eth      LACP      Eth109/1/12(I)  
+231   Po231(SU)   Eth      LACP      Eth111/1/2(P)  
+232   Po232(SU)   Eth      LACP      Eth111/1/11(P)  
+233   Po233(SU)   Eth      LACP      Eth111/1/5(P)  
+234   Po234(SU)   Eth      LACP      Eth111/1/23(P)  
+235   Po235(SU)   Eth      LACP      Eth115/1/1(P)  
+301   Po301(SD)   Eth      LACP      Eth111/1/16(D)  Eth111/1/18(D)  
+302   Po302(SD)   Eth      LACP      Eth111/1/17(D)  Eth111/1/19(D)  
+303   Po303(SD)   Eth      NONE      --
+304   Po304(SD)   Eth      NONE      --
+305   Po305(SD)   Eth      NONE      --
+306   Po306(SD)   Eth      NONE      --
+307   Po307(SD)   Eth      NONE      --
+308   Po308(SD)   Eth      NONE      --
+309   Po309(SD)   Eth      NONE      --
+310   Po310(SD)   Eth      NONE      --
+311   Po311(SD)   Eth      NONE      --
+312   Po312(SD)   Eth      NONE      --
+313   Po313(SD)   Eth      NONE      --
+314   Po314(SD)   Eth      NONE      --
+315   Po315(SD)   Eth      NONE      --
+316   Po316(SD)   Eth      NONE      --
+317   Po317(SD)   Eth      NONE      --
+318   Po318(SD)   Eth      NONE      --
+1000  Po1000(SU)  Eth      LACP      Eth1/30(P)   Eth2/3(P)    
+1001  Po1001(SU)  Eth      LACP      Eth1/29(P)   Eth2/4(P)    

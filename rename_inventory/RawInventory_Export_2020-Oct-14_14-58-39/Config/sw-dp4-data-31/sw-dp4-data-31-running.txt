@@ -1,0 +1,483 @@
+
+
+!Command: show running-config
+!Running configuration last done at: Tue Sep 29 21:06:59 2020
+!Time: Fri Oct  2 00:22:34 2020
+
+version 9.3(5) Bios:version 05.42 
+hostname sw-dp4-data-31
+vdc sw-dp4-data-31 id 1
+  limit-resource vlan minimum 16 maximum 4094
+  limit-resource vrf minimum 2 maximum 4096
+  limit-resource port-channel minimum 0 maximum 511
+  limit-resource u4route-mem minimum 248 maximum 248
+  limit-resource u6route-mem minimum 96 maximum 96
+  limit-resource m4route-mem minimum 58 maximum 58
+  limit-resource m6route-mem minimum 8 maximum 8
+  limit-resource vni_bd minimum 4096 maximum 4096
+
+feature telnet
+feature tacacs+
+cfs eth distribute
+feature udld
+feature interface-vlan
+feature lacp
+feature vpc
+feature lldp
+clock timezone MSK 3 0
+
+no password strength-check
+username xxxxxxx password 5 xxxxxxx role network-admin
+username xxxxxxx password 5 xxxxxxx role network-admin
+username xxxxxxxx passphrase  lifetime 99999 warntime 14 gracetime 3
+
+banner motd ^[TACACS]^
+
+no ip domain-lookup
+ip domain-name vtb24.ru
+tacacs-server timeout 10
+tacacs-server host 10.64.0.68 key 7  xxxxxxxx  
+tacacs-server host 10.64.0.69 key 7  xxxxxxxx  
+aaa group server tacacs+ TACACS+ 
+    server 10.64.0.68 
+    server 10.64.0.69 
+    source-interface mgmt0
+errdisable recovery interval 60
+errdisable recovery cause link-flap
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause loopback
+errdisable recovery cause security-violation
+errdisable recovery cause psecure-violation
+ip access-list 1
+  20 permit ip 10.64.0.0/21 any 
+  30 permit ip 10.68.0.0/21 any 
+  40 permit ip 10.74.57.7/32 any 
+  50 permit ip 10.194.162.33/32 any 
+  60 permit ip 10.194.160.71/32 any 
+ip access-list 111
+  10 permit ip 10.64.0.111/32 any 
+copp profile strict
+ip ftp source-interface mgmt0
+snmp-server contact VTB24 NOC, noc@vtb24.ru
+snmp-server location MSK, Dnepropetrovsky drive, 4 room DC2, rack D5
+snmp-server source-interface traps mgmt0
+snmp-server source-interface informs mgmt0
+snmp-server user xxxxxxxx network-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server user xxxxxxxx network-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server host 10.194.160.71 traps version 2c xxxxxxxx 
+snmp-server host 10.194.160.71 use-vrf management
+snmp-server host 10.194.162.33 traps version 2c xxxxxxxx 
+snmp-server host 10.194.162.33 use-vrf management
+snmp-server host 10.64.1.75 traps version 2c xxxxxxxx 
+snmp-server host 10.64.1.75 use-vrf management
+rmon event 1 log description FATAL(1) owner PMON@FATAL
+rmon event 2 log description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 log description ERROR(3) owner PMON@ERROR
+rmon event 4 log description WARNING(4) owner PMON@WARNING
+rmon event 5 log description INFORMATION(5) owner PMON@INFO
+snmp-server enable traps callhome event-notify
+snmp-server enable traps callhome smtp-send-fail
+snmp-server enable traps cfs state-change-notif
+snmp-server enable traps lldp lldpRemTablesChange
+snmp-server enable traps cfs merge-failure
+snmp-server enable traps aaa server-state-change
+snmp-server enable traps feature-control FeatureOpStatusChange
+snmp-server enable traps sysmgr cseFailSwCoreNotifyExtended
+snmp-server enable traps config ccmCLIRunningConfigChanged
+snmp-server enable traps snmp authentication
+snmp-server enable traps link cisco-xcvr-mon-status-chg
+snmp-server enable traps vtp notifs
+snmp-server enable traps vtp vlancreate
+snmp-server enable traps vtp vlandelete
+snmp-server enable traps bridge newroot
+snmp-server enable traps bridge topologychange
+snmp-server enable traps stpx inconsistency
+snmp-server enable traps stpx root-inconsistency
+snmp-server enable traps stpx loop-inconsistency
+snmp-server enable traps system Clock-change-notification
+snmp-server enable traps feature-control ciscoFeatOpStatusChange
+snmp-server enable traps syslog message-generated
+snmp-server context management vrf management
+snmp-server community xxxxxxxx group network-operator
+snmp-server community xxxxxxxx group vdc-operator
+snmp-server community xxxxxxxx group vdc-operator
+snmp-server community xxxxxxxx use-acl 1
+snmp-server community xxxxxxxx use-acl 1
+snmp-server community xxxxxxxx use-ipv4acl 111
+ntp server 10.9.0.3 use-vrf default
+ntp server 10.9.0.4 use-vrf default
+ntp source-interface mgmt0
+ntp authentication-key 1 md5 xxxxxxxx 7
+ntp trusted-key 1
+aaa authentication login default group TACACS+ local 
+aaa authentication login console local 
+aaa authorization config-commands default group TACACS+ local 
+
+ip route 0.0.0.0/0 10.64.128.1
+vlan 1,531,582,585-586,600-609,625-626,628-629,632-634,637,640,642-645,651-652,654-658,666-668,677-679,685
+vlan 531
+  name DATA-HB-ANY
+vlan 582
+  name DATA-KT-CRONOS
+vlan 585
+  name ~DATA-DOS-OPENSHIFT
+vlan 586
+  name DATA-KT-176
+vlan 600
+  name DATA-MGMT
+vlan 601
+  name DATA-BIS-HQ
+vlan 602
+  name DATA-BIS-BRANCH
+vlan 603
+  name DATA-PLC
+vlan 604
+  name DATA-SRV-INF
+vlan 605
+  name DATA-SRV-INET
+vlan 606
+  name DATA-SRV-APP
+vlan 607
+  name DATA-SRV-DEV
+vlan 608
+  name ~DATA-CONSOLE
+vlan 609
+  name DATA-VMWARE
+vlan 625
+  name DATA-BM
+vlan 626
+  name DATA-CES-INF
+vlan 628
+  name DATA-SRV-APP2
+vlan 629
+  name DATA-VMWARE2
+vlan 632
+  name DATA-PBX-VOIP
+vlan 633
+  name DATA-PBX-APP
+vlan 634
+  name DATA-CONSOLE2
+vlan 637
+  name DATA-CC-APP
+vlan 640
+  name DATA-VC-VCS-VTB
+vlan 642
+  name DATA-SRV-WDS
+vlan 643
+  name DATA-BIS-DEVEL
+vlan 644
+  name DATA-BIS-SANDBOX
+vlan 645
+  name DATA-KT
+vlan 651
+  name DATA-SRV-ZDEV
+vlan 652
+  name DATA-SRV-EXTRANET
+vlan 654
+  name DATA-BACKUP
+vlan 655
+  name DATA-PLC-OCTOPUS
+vlan 656
+  name DATA-PLC-TEST
+vlan 657
+  name DATA-SWIFT
+vlan 658
+  name DATA-CRONOS
+vlan 666
+  name DATA-BPIPE
+vlan 667
+  name DATA-VTM
+vlan 668
+  name DATA-VTB-RF
+vlan 677
+  name ~DATA-DRP-OPENSHIFT
+vlan 678
+  name ~DATA-GLOBAL-OPENSHIFT
+vlan 679
+  name DATA-RTS-SPB
+vlan 685
+  name ~DATA-VIEW-MAIN
+
+spanning-tree port type edge default
+spanning-tree port type edge bpduguard default
+spanning-tree loopguard default
+spanning-tree vlan 1-3967 priority 40960
+vrf context management
+  ip route 0.0.0.0/0 10.64.128.1
+vpc domain 18
+  role priority 1
+  peer-keepalive destination 10.64.129.135 source 10.64.129.134
+
+
+interface Vlan1
+
+interface Vlan634
+  description inbound_managment
+  no shutdown
+  ip address 10.64.129.136/21
+
+interface port-channel10
+  description [VPC][TRUNK] sw-dp4-data-11/12
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 531,582,585-586,600-609,625-626,628-629,632-634,637,640,642-645,651-652,654-658,666-668,677-679,685
+  mtu 9216
+  vpc 10
+
+interface port-channel31
+  description [VPC][TRUNK]sw-dp4-data-11 eth8/2
+
+interface port-channel51
+  description [VPC] [TRUNK] sw-dp4-lpa-data-3/4
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 634
+  spanning-tree guard root
+  vpc 51
+
+interface port-channel300
+  description TRUNK SY-CZ2023034Y:ae Q1 RF-002077808
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 531,582,585-586,600-609,625-626,628-629,632-634,637,640,642-645,651-652,654-658,666-668,677-679,685
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  vpc 300
+
+interface port-channel301
+  description TRUNK SY-CZ2023034Z:ae Q1 RF-002077808
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 531,582,585-586,600-609,625-626,628-629,632-634,637,640,642-645,651-652,654-658,666-668,677-679,685
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  vpc 301
+
+interface port-channel302
+  description TRUNK SY-CZ2023035D:ae Q1 RF-002077808
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 531,582,585-586,600-609,625-626,628-629,632-634,637,640,642-645,651-652,654-658,666-668,677-679,685
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  vpc 302
+
+interface port-channel303
+  description [TRUNK] SPO-SW-402 (PAK_SKALA)
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 601
+  spanning-tree guard root
+  storm-control broadcast level 0.10
+  storm-control multicast level 0.10
+  no lacp graceful-convergence
+  lacp vpc-convergence
+  vpc 303
+
+interface port-channel4000
+  description [TRUNK] peer-link
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1-4092
+  spanning-tree port type network
+  vpc peer-link
+
+interface Ethernet1/1
+  description [PC][TRUNK]sw-dp4-data-11 eth8/2
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 531,582,585-586,600-609,625-626,628-629,632-634,637,640,642-645,651-652,654-658,666-668,677-679,685
+  mtu 9216
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet1/2
+  description [VPC][TRUNK]sw-dp4-data-12 eth8/2
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 531,582,585-586,600-609,625-626,628-629,632-634,637,640,642-645,651-652,654-658,666-668,677-679,685
+  mtu 9216
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet1/3
+  description [PC][PEER-LINK]sw-dp4-data-32
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1-4092
+  channel-group 4000 mode active
+  no shutdown
+
+interface Ethernet1/4
+  description [PC][PEER-LINK]sw-dp4-data-32
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1-4092
+  channel-group 4000 mode active
+  no shutdown
+
+interface Ethernet1/5
+  description Reserved
+
+interface Ethernet1/6
+  description TRUNK SY-CZ2023034Y:VC-1 Q1 RF-002077808
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 531,582,585-586,600-609,625-626,628-629,632-634,637,640,642-645,651-652,654-658,666-668,677-679,685
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 300 mode active
+  no shutdown
+
+interface Ethernet1/7
+  description TRUNK SY-CZ2023034Y:VC-2 Q1 RF-002077808
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 531,582,585-586,600-609,625-626,628-629,632-634,637,640,642-645,651-652,654-658,666-668,677-679,685
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 300 mode active
+  no shutdown
+
+interface Ethernet1/8
+  description TRUNK SY-CZ2023034Z:VC-1 Q1 RF-002077808
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 531,582,585-586,600-609,625-626,628-629,632-634,637,640,642-645,651-652,654-658,666-668,677-679,685
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 301 mode active
+  no shutdown
+
+interface Ethernet1/9
+  description TRUNK SY-CZ2023034Z:VC-2 Q1 RF-002077808
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 531,582,585-586,600-609,625-626,628-629,632-634,637,640,642-645,651-652,654-658,666-668,677-679,685
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 301 mode active
+  no shutdown
+
+interface Ethernet1/10
+  description TRUNK SY-CZ2023035D:VC-1 Q1 RF-002077808
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 531,582,585-586,600-609,625-626,628-629,632-634,637,640,642-645,651-652,654-658,666-668,677-679,685
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 302 mode active
+  no shutdown
+
+interface Ethernet1/11
+  description TRUNK SY-CZ2023035D:VC-2 Q1 RF-002077808
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 531,582,585-586,600-609,625-626,628-629,632-634,637,640,642-645,651-652,654-658,666-668,677-679,685
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 302 mode active
+  no shutdown
+
+interface Ethernet1/12
+  description [VPC] [TRUNK] SPO-SW-402 (PAK_SKALA)
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 601
+  storm-control broadcast level 0.10
+  storm-control multicast level 0.10
+  channel-group 303 mode active
+  no shutdown
+
+interface Ethernet1/13
+  description [VPC] [TRUNK] SPO-SW-403 (PAK_SKALA)
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 601
+  storm-control broadcast level 0.10
+  storm-control multicast level 0.10
+  channel-group 303 mode active
+  no shutdown
+
+interface Ethernet1/14
+  description [PC] sw-dp4-lpa-data-3
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 634
+  channel-group 51 mode active
+  no shutdown
+
+interface Ethernet1/15
+  description [PC] sw-dp4-lpa-data-4
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 634
+  channel-group 51 mode active
+  no shutdown
+
+interface Ethernet1/16
+
+interface Ethernet1/17
+
+interface Ethernet1/18
+
+interface Ethernet1/19
+
+interface Ethernet1/20
+
+interface Ethernet1/21
+
+interface Ethernet1/22
+
+interface Ethernet1/23
+
+interface Ethernet1/24
+
+interface Ethernet1/25
+
+interface Ethernet1/26
+
+interface Ethernet1/27
+
+interface Ethernet1/28
+
+interface Ethernet1/29
+
+interface Ethernet1/30
+
+interface Ethernet1/31
+
+interface Ethernet1/32
+
+interface Ethernet1/33
+
+interface Ethernet1/34
+
+interface Ethernet1/35
+
+interface Ethernet1/36
+
+interface mgmt0
+  vrf member management
+  ip address 10.64.129.134/21
+cli alias name wr copy running-config startup-config
+line console
+line vty
+boot nxos bootflash:/nxos.9.3.5.bin 
+
+logging server 10.64.0.93 5 use-vrf management
+logging source-interface mgmt0
+logging timestamp milliseconds
+logging origin-id hostname
+
+

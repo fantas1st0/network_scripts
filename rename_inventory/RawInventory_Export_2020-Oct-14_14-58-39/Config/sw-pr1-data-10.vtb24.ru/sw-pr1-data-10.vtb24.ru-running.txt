@@ -1,0 +1,448 @@
+
+
+!Command: show running-config
+!Running configuration last done at: Mon Sep 28 14:08:02 2020
+!Time: Fri Oct  2 00:22:34 2020
+
+version 9.3(5) Bios:version 05.42 
+hostname sw-pr1-data-10
+vdc sw-pr1-data-10 id 1
+  limit-resource vlan minimum 16 maximum 4094
+  limit-resource vrf minimum 2 maximum 4096
+  limit-resource port-channel minimum 0 maximum 511
+  limit-resource u4route-mem minimum 248 maximum 248
+  limit-resource u6route-mem minimum 96 maximum 96
+  limit-resource m4route-mem minimum 58 maximum 58
+  limit-resource m6route-mem minimum 8 maximum 8
+  limit-resource vni_bd minimum 4096 maximum 4096
+
+feature telnet
+feature tacacs+
+cfs eth distribute
+feature udld
+feature interface-vlan
+feature lacp
+feature vpc
+feature lldp
+clock timezone MSK 3 0
+
+no password strength-check
+username xxxxxxx password 5 xxxxxxx role network-admin
+username xxxxxxx password 5 xxxxxxx role network-admin
+username xxxxxxxx passphrase  lifetime 99999 warntime 14 gracetime 3
+
+banner motd ^[TACACS]^
+
+no ip domain-lookup
+ip domain-name vtb24.ru
+tacacs-server timeout 10
+tacacs-server host 10.64.0.68 key 7  xxxxxxxx  
+tacacs-server host 10.64.0.69 key 7  xxxxxxxx  
+aaa group server tacacs+ TACACS+ 
+    server 10.64.0.68 
+    server 10.64.0.69 
+    source-interface mgmt0
+errdisable recovery interval 60
+errdisable recovery cause link-flap
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause loopback
+errdisable recovery cause security-violation
+errdisable recovery cause psecure-violation
+interface breakout module 1 port 49-50 map 10g-4x
+ip access-list 1
+  20 permit ip 10.64.0.0/21 any 
+  30 permit ip 10.68.0.0/21 any 
+  40 permit ip 10.74.57.7/32 any 
+  50 permit ip 10.194.162.33/32 any 
+  60 permit ip 10.194.160.71/32 any 
+ip access-list 111
+  10 permit ip 10.64.0.111/32 any 
+copp profile strict
+snmp-server contact VTB24 NOC, noc@vtb24.ru
+snmp-server location MSK, Perovskoe highway 1, building 1, ER3-3/08
+snmp-server source-interface traps mgmt0
+snmp-server source-interface informs mgmt0
+snmp-server user xxxxxxxx network-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server user xxxxxxxx network-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server host 10.194.160.71 traps version 2c xxxxxxxx 
+snmp-server host 10.194.160.71 use-vrf management
+snmp-server host 10.194.162.33 traps version 2c xxxxxxxx 
+snmp-server host 10.194.162.33 use-vrf management
+snmp-server host 10.64.1.75 traps version 2c xxxxxxxx 
+snmp-server host 10.64.1.75 use-vrf management
+rmon event 1 log description FATAL(1) owner PMON@FATAL
+rmon event 2 log description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 log description ERROR(3) owner PMON@ERROR
+rmon event 4 log description WARNING(4) owner PMON@WARNING
+rmon event 5 log description INFORMATION(5) owner PMON@INFO
+snmp-server enable traps callhome event-notify
+snmp-server enable traps callhome smtp-send-fail
+snmp-server enable traps cfs state-change-notif
+snmp-server enable traps lldp lldpRemTablesChange
+snmp-server enable traps cfs merge-failure
+snmp-server enable traps aaa server-state-change
+snmp-server enable traps feature-control FeatureOpStatusChange
+snmp-server enable traps sysmgr cseFailSwCoreNotifyExtended
+snmp-server enable traps config ccmCLIRunningConfigChanged
+snmp-server enable traps snmp authentication
+snmp-server enable traps link cisco-xcvr-mon-status-chg
+snmp-server enable traps vtp notifs
+snmp-server enable traps vtp vlancreate
+snmp-server enable traps vtp vlandelete
+snmp-server enable traps bridge newroot
+snmp-server enable traps bridge topologychange
+snmp-server enable traps stpx inconsistency
+snmp-server enable traps stpx root-inconsistency
+snmp-server enable traps stpx loop-inconsistency
+snmp-server enable traps system Clock-change-notification
+snmp-server enable traps feature-control ciscoFeatOpStatusChange
+snmp-server enable traps syslog message-generated
+snmp-server context management vrf management
+snmp-server community xxxxxxxx group network-operator
+snmp-server community xxxxxxxx group network-operator
+snmp-server community xxxxxxxx group network-operator
+snmp-server community xxxxxxxx use-acl 1
+snmp-server community xxxxxxxx use-acl 111
+snmp-server community xxxxxxxx use-acl 1
+ntp server 10.9.0.3 use-vrf default
+ntp server 10.9.0.4 use-vrf default
+ntp source-interface mgmt0
+ntp authentication-key 1 md5 xxxxxxxx 7
+ntp trusted-key 1
+aaa authentication login default group TACACS+ local 
+aaa authentication login console local 
+aaa authorization config-commands default group TACACS+ local 
+
+ip route 0.0.0.0/0 10.76.64.1
+vlan 1,531,540,557,560,564,566,576-578,600-606,608-609,625-626,628-629,632-633,637,640,652,654-655,657-658,667-668,678
+vlan 531
+  name DATA-HB-ANY
+vlan 540
+  name SERVERS-MGMT-MONITORING-NET-INF
+vlan 557
+  name ~DATA-DOS-ENV-AGENTS
+vlan 560
+  name ~DATA-DSO-DEB
+vlan 564
+  name ~DATA-DSO-ENV
+vlan 566
+  name ~DATA-DSO-NTNX-MGMT
+vlan 576
+  name ~DATA-DOS-CS
+vlan 577
+  name ~DATA-DOS-INT
+vlan 578
+  name ~DATA-DOS-MON
+vlan 600
+  name DATA-MGMT
+vlan 601
+  name DATA-BIS-HQ
+vlan 602
+  name DATA-BIS-BRANCH
+vlan 603
+  name DATA-PLC
+vlan 604
+  name DATA-SRV-INF
+vlan 605
+  name DATA-SRV-INET
+vlan 606
+  name DATA-SRV-APP
+vlan 608
+  name data-console
+vlan 609
+  name DATA-VMWARE
+vlan 625
+  name DATA-BM
+vlan 626
+  name DATA-CES-INF
+vlan 628
+  name DATA-SRV-APP2
+vlan 629
+  name DATA-VMWARE2
+vlan 632
+  name DATA-PBX-VOIP
+vlan 633
+  name DATA-PBX-APP
+vlan 637
+  name DATA-CC-APP
+vlan 640
+  name DATA-VC-VCS-VTB
+vlan 652
+  name DATA-SRV-EXTRANET
+vlan 654
+  name DATA-BACKUP
+vlan 655
+  name DATA-PLC-OCTOPUS
+vlan 657
+  name DATA-SWIFT
+vlan 658
+  name DATA-CRONOS
+vlan 667
+  name DATA-VTM
+vlan 668
+  name DATA-VTB-RF
+vlan 678
+  name ~DATA-GLOBAL-OPENSHIFT
+
+spanning-tree port type edge default
+spanning-tree port type edge bpduguard default
+spanning-tree loopguard default
+vrf context management
+  ip route 0.0.0.0/0 10.76.64.1
+vpc domain 24
+  role priority 2
+  peer-keepalive destination 10.76.66.193 source 10.76.66.195
+
+
+interface Vlan1
+
+interface Vlan608
+  no shutdown
+  ip address 10.76.66.194/21
+
+interface port-channel10
+  description [VPC][TRUNK] sw-pr1-data-1/2
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 531,540,557,560,564,566,576-578,600-606,608-609,625-626,628-629,632-634,637,640,652,654-655,657-658,666-668,678-679
+  mtu 9216
+  vpc 10
+
+interface port-channel700
+  description TRUNK SY-CZ20230355:ae RF-002095550
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 531,540,554-555,557,560,564,566,576-578,600-606,608-609,625-626,628-629,632-634,637,640,652,654-655,657-658,666-668,678-679
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  vpc 700
+
+interface port-channel4000
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1-4092
+  spanning-tree port type network
+  vpc peer-link
+
+interface Ethernet1/1
+
+interface Ethernet1/2
+
+interface Ethernet1/3
+
+interface Ethernet1/4
+
+interface Ethernet1/5
+
+interface Ethernet1/6
+
+interface Ethernet1/7
+
+interface Ethernet1/8
+
+interface Ethernet1/9
+
+interface Ethernet1/10
+
+interface Ethernet1/11
+
+interface Ethernet1/12
+
+interface Ethernet1/13
+
+interface Ethernet1/14
+
+interface Ethernet1/15
+
+interface Ethernet1/16
+
+interface Ethernet1/17
+
+interface Ethernet1/18
+
+interface Ethernet1/19
+
+interface Ethernet1/20
+
+interface Ethernet1/21
+
+interface Ethernet1/22
+
+interface Ethernet1/23
+
+interface Ethernet1/24
+
+interface Ethernet1/25
+
+interface Ethernet1/26
+
+interface Ethernet1/27
+
+interface Ethernet1/28
+
+interface Ethernet1/29
+
+interface Ethernet1/30
+
+interface Ethernet1/31
+
+interface Ethernet1/32
+
+interface Ethernet1/33
+
+interface Ethernet1/34
+
+interface Ethernet1/35
+
+interface Ethernet1/36
+
+interface Ethernet1/37
+
+interface Ethernet1/38
+
+interface Ethernet1/39
+
+interface Ethernet1/40
+
+interface Ethernet1/41
+
+interface Ethernet1/42
+
+interface Ethernet1/43
+
+interface Ethernet1/44
+
+interface Ethernet1/45
+
+interface Ethernet1/46
+
+interface Ethernet1/47
+
+interface Ethernet1/48
+
+interface Ethernet1/49/1
+  description [PC][TRUNK]sw-pr1-data-1
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 531,540,557,560,564,566,576-578,600-606,608-609,625-626,628-629,632-634,637,640,652,654-655,657-658,666-668,678-679
+  mtu 9216
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet1/49/2
+  description [PC][TRUNK]sw-pr1-data-1
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 531,540,557,560,564,566,576-578,600-606,608-609,625-626,628-629,632-634,637,640,652,654-655,657-658,666-668,678-679
+  mtu 9216
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet1/49/3
+  description [PC][TRUNK]sw-pr1-data-1
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 531,540,557,560,564,566,576-578,600-606,608-609,625-626,628-629,632-634,637,640,652,654-655,657-658,666-668,678-679
+  mtu 9216
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet1/49/4
+  description [PC][TRUNK]sw-pr1-data-1
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 531,540,557,560,564,566,576-578,600-606,608-609,625-626,628-629,632-634,637,640,652,654-655,657-658,666-668,678-679
+  mtu 9216
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet1/50/1
+  description [PC][TRUNK]sw-pr1-data-2
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 531,540,557,560,564,566,576-578,600-606,608-609,625-626,628-629,632-634,637,640,652,654-655,657-658,666-668,678-679
+  mtu 9216
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet1/50/2
+  description [PC][TRUNK]sw-pr1-data-2
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 531,540,557,560,564,566,576-578,600-606,608-609,625-626,628-629,632-634,637,640,652,654-655,657-658,666-668,678-679
+  mtu 9216
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet1/50/3
+  description [PC][TRUNK]sw-pr1-data-2
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 531,540,557,560,564,566,576-578,600-606,608-609,625-626,628-629,632-634,637,640,652,654-655,657-658,666-668,678-679
+  mtu 9216
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet1/50/4
+  description [PC][TRUNK]sw-pr1-data-2
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 531,540,557,560,564,566,576-578,600-606,608-609,625-626,628-629,632-634,637,640,652,654-655,657-658,666-668,678-679
+  mtu 9216
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet1/51
+  description [TRUNK] SY-CZ20230355:VC-2 Q2 RF-002095550
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 531,540,554-555,557,560,564,566,576-578,600-606,608-609,625-626,628-629,632-634,637,640,652,654-655,657-658,666-668,678-679
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 700 mode active
+  no shutdown
+
+interface Ethernet1/52
+  description [TRUNK] SY-CZ20230355:VC-2 Q2 RF-002019071
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 531,540,554-555,557,560,564,566,576-578,600-606,608-609,625-626,628-629,632-634,637,640,652,654-655,657-658,666-668,678-679
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 700 mode active
+  no shutdown
+
+interface Ethernet1/53
+  description [PC]sw-pr1-data-9 eth1/53 (peer link)
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1-4092
+  channel-group 4000 mode active
+  no shutdown
+
+interface Ethernet1/54
+  description [PC]sw-pr1-data-9 eth1/54 (peer link)
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1-4092
+  channel-group 4000 mode active
+  no shutdown
+
+interface mgmt0
+  vrf member management
+  ip address 10.76.66.195/21
+cli alias name wr copy run start
+line console
+line vty
+boot nxos bootflash:/nxos.9.3.5.bin 
+
+logging server 10.64.0.93 5 use-vrf management
+logging source-interface mgmt0
+logging timestamp milliseconds
+logging origin-id hostname
+
+

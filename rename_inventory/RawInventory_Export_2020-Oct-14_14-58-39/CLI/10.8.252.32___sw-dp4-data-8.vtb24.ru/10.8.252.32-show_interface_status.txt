@@ -1,0 +1,360 @@
+
+Port         Name               Status       Vlan       Duplex  Speed Type
+Te1/1        DEBUG              connected    trunk        full    10G 10Gbase-SR
+Te1/2                           disabled     routed       full    10G 10Gbase-SR
+Te1/3                           disabled     routed       full    10G 10Gbase-SR
+Te1/4                           disabled     642          full    10G No Connector
+Te1/5        [DATA-BIS-BRANCH]  notconnect   602          full    10G 10Gbase-SR
+Te1/6        [DATA-BIS-BRANCH]  notconnect   602          full    10G 10Gbase-SR
+Te1/7        [DATA-BIS-BRANCH]  notconnect   602          full    10G 10Gbase-SR
+Te1/8                           disabled     routed       full    10G No Connector
+Te1/9                           disabled     routed       full    10G 10Gbase-SR
+Te1/10                          disabled     routed       full    10G 10Gbase-SR
+Te1/11                          disabled     routed       full    10G 10Gbase-SR
+Te1/12                          disabled     routed       full    10G 10Gbase-SR
+Te1/13                          disabled     routed       full    10G 10Gbase-SR
+Te1/14                          disabled     routed       full    10G 10Gbase-SR
+Te1/15                          disabled     routed       full    10G No Connector
+Te1/16                          disabled     routed       full    10G 10Gbase-SR
+Gi2/1                           disabled     1            full   auto 10/100/1000BaseT
+Gi2/2        [DATA-BIS-HQ] td01 notconnect   601          full   auto 10/100/1000BaseT
+Gi2/3        [DATA-BIS-HQ] td01 connected    601        a-full a-1000 10/100/1000BaseT
+Gi2/4        [DATA-BIS-HQ] td01 connected    601        a-full a-1000 10/100/1000BaseT
+Gi2/5        [DATA-BIS-HQ] td01 connected    601        a-full a-1000 10/100/1000BaseT
+Gi2/6        [DATA-BIS-HQ] td01 notconnect   601          full   auto 10/100/1000BaseT
+Gi2/7        [DATA-PLC] exa2-nb disabled     603          full   auto 10/100/1000BaseT
+Gi2/8                           notconnect   642          full   auto 10/100/1000BaseT
+Gi2/9        [DATA-BIS-HQ] td01 notconnect   601          full   auto 10/100/1000BaseT
+Gi2/10       [DATA-BIS-HQ] td01 notconnect   601          full   auto 10/100/1000BaseT
+Gi2/11                          notconnect   642          full   auto 10/100/1000BaseT
+Gi2/12       [DATA-MGMT] cascad notconnect   600          full   auto 10/100/1000BaseT
+Gi2/13       [DATA-BIS-HQ] td01 connected    601        a-full a-1000 10/100/1000BaseT
+Gi2/14       [DATA-BIS-HQ] adwh notconnect   601          full   auto 10/100/1000BaseT
+Gi2/15       [DATA-BIS-HQ] adwh notconnect   601          full   auto 10/100/1000BaseT
+Gi2/16                          notconnect   645          full   auto 10/100/1000BaseT
+Gi2/17                          disabled     642          full   auto 10/100/1000BaseT
+Gi2/18       [DATA-SRV-APP] clt notconnect   606          full   auto 10/100/1000BaseT
+Gi2/19                          notconnect   642          auto   auto 10/100/1000BaseT
+Gi2/20                          notconnect   642          auto   auto 10/100/1000BaseT
+Gi2/21                          notconnect   642          auto   auto 10/100/1000BaseT
+Gi2/22       [DATA-SRV-APP] (BL notconnect   606          auto   auto 10/100/1000BaseT
+Gi2/23       [DATA-BIS-HQ] m900 notconnect   601          auto   auto 10/100/1000BaseT
+Gi2/24       [DATA-BIS-HQ] m900 notconnect   601          auto   auto 10/100/1000BaseT
+Gi2/25       [DATA-BIS-HQ] msk- notconnect   601          full   auto 10/100/1000BaseT
+Gi2/26       [DATA-BIS-HB2] msk notconnect   647          full   auto 10/100/1000BaseT
+Gi2/27       [DATA-BIS-BRANCH]  notconnect   602          full   auto 10/100/1000BaseT
+Gi2/28       [DATA-BIS-HB2] msk notconnect   647          full   auto 10/100/1000BaseT
+Gi2/29                          disabled     642          full   auto 10/100/1000BaseT
+Gi2/30                          disabled     642          full   auto 10/100/1000BaseT
+Gi2/31                          disabled     642          full   auto 10/100/1000BaseT
+Gi2/32                          disabled     642          full   auto 10/100/1000BaseT
+Gi2/33       [DATA-BIS-HQ] 9SS0 notconnect   601          full   auto 10/100/1000BaseT
+Gi2/34       [DATA-BIS-HB2] 9SS notconnect   647          full   auto 10/100/1000BaseT
+Gi2/35       [DATA-BIS-BRANCH]  notconnect   602          full   auto 10/100/1000BaseT
+Gi2/36       [DATA-BIS-HB2] 9SS notconnect   647          full   auto 10/100/1000BaseT
+Gi2/37       [DATA-KT] ac-hsm-5 notconnect   606          full   auto 10/100/1000BaseT
+Gi2/38                          disabled     642          auto   auto 10/100/1000BaseT
+Gi2/39                          disabled     642          auto   auto 10/100/1000BaseT
+Gi2/40                          notconnect   645          full   auto 10/100/1000BaseT
+Gi2/41                          disabled     642          full   auto 10/100/1000BaseT
+Gi2/42       [DATA-SRV-INET] mw notconnect   605          full   auto 10/100/1000BaseT
+Gi2/43       [DATA-BIS-HQ] stor connected    601        a-full a-1000 10/100/1000BaseT
+Gi2/44       [DATA-BIS-HQ] stor connected    601        a-full a-1000 10/100/1000BaseT
+Gi2/45       [DATA-BIS-HQ] stor connected    601        a-full a-1000 10/100/1000BaseT
+Gi2/46       [DATA-BIS-HQ] stor connected    601        a-full a-1000 10/100/1000BaseT
+Gi2/47       [DATA-CONSOLE] NAS connected    608        a-full a-1000 10/100/1000BaseT
+Gi2/48       [DATA-SRV-APP] sas notconnect   606          full   auto 10/100/1000BaseT
+Gi3/1        [TRUNK] sw-dp4-e27 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi3/2        [TRUNK] sw-dp4-e69 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi3/3        [TRUNK] sw-dp4-e32 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi3/4        [TRUNK] sw-dp4-e71 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi3/5        [DATA-BIS-HQ] td01 notconnect   601          full   auto 10/100/1000BaseT
+Gi3/6        [DATA-BIS-HQ] td01 notconnect   601          full   auto 10/100/1000BaseT
+Gi3/7        [DATA-BIS-HQ] td01 connected    601        a-full a-1000 10/100/1000BaseT
+Gi3/8        [DATA-MGMT] cascad notconnect   600          full   auto 10/100/1000BaseT
+Gi3/9        [TRUNK] sw-dp4-con notconnect   1            full   auto 10/100/1000BaseT
+Gi3/10       [DATA-MGMT] cascad connected    600        a-full a-1000 10/100/1000BaseT
+Gi3/11       [DATA-MGMT] cascad connected    600        a-full a-1000 10/100/1000BaseT
+Gi3/12                          notconnect   642          full   auto 10/100/1000BaseT
+Gi3/13       [TRUNK] sw-dp4-e68 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi3/14       [TRUNK] sw-dp4-e70 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi3/15       [TRUNK] [VC] sw-dp notconnect   unassigned   full   1000 10/100/1000BaseT
+Gi3/16       [TRUNK] [VC] sw-dp notconnect   unassigned   full   1000 10/100/1000BaseT
+Gi3/17       [TRUNK] sw-dp4-e72 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi3/18       [TRUNK] sw-dp4-e30 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi3/19       [TRUNK] sw-dp4-e24 notconnect   1            full   auto 10/100/1000BaseT
+Gi3/20       [TRUNK] sw-dp4-e73 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi3/21       [TRUNK] sw-dp4-e65 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi3/22       [TRUNK] sw-dp4-e25 notconnect   1            full   auto 10/100/1000BaseT
+Gi3/23       [TRUNK] sw-dp4-con disabled     1            full   auto 10/100/1000BaseT
+Gi3/24                          notconnect   642          auto   auto 10/100/1000BaseT
+Gi3/25       [TRUNK] sw-dp4-e27 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi3/26       [TRUNK] sw-dp4-e69 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi3/27       [TRUNK] sw-dp4-e32 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi3/28       [TRUNK] sw-dp4-e71 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi3/29       [TRADE_DMZ] olbdem connected    4          a-full a-1000 10/100/1000BaseT
+Gi3/30       [DATA-SRV-APP] olb connected    606        a-full a-1000 10/100/1000BaseT
+Gi3/31       [DATA-SRV-APP] omn connected    606        a-full a-1000 10/100/1000BaseT
+Gi3/32       [TRUNK] sw-dp4-con disabled     1            full   auto 10/100/1000BaseT
+Gi3/33       [DATA-SRV-APP] omn connected    606        a-full a-1000 10/100/1000BaseT
+Gi3/34       [DATA-SRV-APP] omn connected    606        a-full a-1000 10/100/1000BaseT
+Gi3/35                          notconnect   642          full   auto 10/100/1000BaseT
+Gi3/36                          notconnect   642          full   auto 10/100/1000BaseT
+Gi3/37       [TRUNK] sw-dp4-e68 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi3/38       [TRUNK] sw-dp4-e70 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi3/39       [TRUNK] [VC] sw-dp notconnect   unassigned   full   1000 10/100/1000BaseT
+Gi3/40       [TRUNK] [VC] sw-dp notconnect   unassigned   full   1000 10/100/1000BaseT
+Gi3/41       [TRUNK] sw-dp4-e72 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi3/42       [TRUNK] sw-dp4-e30 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi3/43       [TRUNK] sw-dp4-e24 notconnect   1            full   auto 10/100/1000BaseT
+Gi3/44       [TRUNK] sw-dp4-e73 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi3/45       [TRUNK] sw-dp4-e65 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi3/46       [TRUNK] sw-dp4-e25 notconnect   1            full   auto 10/100/1000BaseT
+Gi3/47       [DATA-MGMT] acs5-1 notconnect   600          full   auto 10/100/1000BaseT
+Gi3/48                          notconnect   642          auto   auto 10/100/1000BaseT
+Gi4/1                           disabled     642          full   auto 10/100/1000BaseT
+Gi4/2                           disabled     642          full   auto 10/100/1000BaseT
+Gi4/3        [TRUNK] [VC] blade notconnect   unassigned   full   auto 10/100/1000BaseT
+Gi4/4        [TRUNK] [VC] sw-dp notconnect   unassigned   full   1000 10/100/1000BaseT
+Gi4/5        [TRUNK] [VC] sw-dp notconnect   unassigned   full   1000 10/100/1000BaseT
+Gi4/6        [DATA-PBX-VOIP] vc notconnect   632          full   auto 10/100/1000BaseT
+Gi4/7        [DATA-PBX-VOIP] vc connected    632        a-full  a-100 10/100/1000BaseT
+Gi4/8        [DATA-PBX-VOIP] vc connected    632        a-full a-1000 10/100/1000BaseT
+Gi4/9        [TRUNK] sw-dp4-e66 notconnect   1            full   auto 10/100/1000BaseT
+Gi4/10       [DATA-MGMT] sla-pr notconnect   600          full   auto 10/100/1000BaseT
+Gi4/11       [TRUNK] sw-dp4-e67 notconnect   1            full   auto 10/100/1000BaseT
+Gi4/12       [TRUNK] sw-dp4-con connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi4/13       [TRUNK] sw-dp4-e45 disabled     1            full   auto 10/100/1000BaseT
+Gi4/14                          disabled     routed       auto   auto 10/100/1000BaseT
+Gi4/15                          disabled     routed       auto   auto 10/100/1000BaseT
+Gi4/16       [TRUNK] sw-dp4-e16 notconnect   1            full   auto 10/100/1000BaseT
+Gi4/17                          disabled     routed       auto   auto 10/100/1000BaseT
+Gi4/18                          disabled     routed       auto   auto 10/100/1000BaseT
+Gi4/19                          disabled     642          auto   auto 10/100/1000BaseT
+Gi4/20                          disabled     642          auto   auto 10/100/1000BaseT
+Gi4/21                          disabled     routed       auto   auto 10/100/1000BaseT
+Gi4/22       [TRUNK] [VC] blade notconnect   unassigned   full   auto 10/100/1000BaseT
+Gi4/23       [TRUNK] sw-dp4-hmc connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi4/24       [TRUNK] sw-dp4-hmc connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi4/25                          disabled     642          full   auto 10/100/1000BaseT
+Gi4/26                          disabled     642          full   auto 10/100/1000BaseT
+Gi4/27       [TRUNK] [VC] blade notconnect   unassigned   full   auto 10/100/1000BaseT
+Gi4/28       [TRUNK] sw-dp4-con connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi4/29       [TRUNK] sw-dp4-con connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi4/30       [DATA-BIS-HQ] td01 connected    601        a-full a-1000 10/100/1000BaseT
+Gi4/31       [DATA-PBX-VOIP] vc connected    632        a-full  a-100 10/100/1000BaseT
+Gi4/32       [DATA-PBX-VOIP] vc notconnect   632          full   auto 10/100/1000BaseT
+Gi4/33       [TRUNK] sw-dp4-e66 notconnect   1            full   auto 10/100/1000BaseT
+Gi4/34       [DATA-MGMT] sla-pr notconnect   600          full   auto 10/100/1000BaseT
+Gi4/35       [TRUNK] sw-dp4-e67 notconnect   1            full   auto 10/100/1000BaseT
+Gi4/36       [TRUNK] sw-dp4-con connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi4/37       [TRUNK] sw-dp4-e45 disabled     1            full   auto 10/100/1000BaseT
+Gi4/38                          disabled     routed       auto   auto 10/100/1000BaseT
+Gi4/39                          disabled     routed       auto   auto 10/100/1000BaseT
+Gi4/40       [TRUNK] sw-dp4-e16 notconnect   1            full   auto 10/100/1000BaseT
+Gi4/41                          disabled     routed       auto   auto 10/100/1000BaseT
+Gi4/42                          disabled     routed       auto   auto 10/100/1000BaseT
+Gi4/43                          disabled     642          auto   auto 10/100/1000BaseT
+Gi4/44                          disabled     642          auto   auto 10/100/1000BaseT
+Gi4/45       [TRUNK] sw-dp4-con connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi4/46                          disabled     642          full   auto 10/100/1000BaseT
+Gi4/47       [DATA-BIS-HB2] P79 notconnect   647          full   auto 10/100/1000BaseT
+Gi4/48       [DATA-SRV-INF] INF connected    604        a-full a-1000 10/100/1000BaseT
+Gi5/1                           disabled     routed       auto   auto No Transceiver
+Gi5/2                           disabled     routed       auto   auto No Transceiver
+Gi5/3                           disabled     routed       auto   auto 10/100/1000BaseT
+Te5/4        [VPC] sw-dp4-data- connected    trunk        full    10G 10Gbase-SR
+Te5/5        [VPC] sw-dp4-data- connected    trunk        full    10G 10Gbase-SR
+Gi6/1        [TRUNK] sw-dp4-e59 disabled     1            full   auto 10/100/1000BaseT
+Gi6/2        [TRUNK] sw-dp4-e48 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi6/3        [TRUNK] sw-dp4-e52 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi6/4        [TRUNK] sw-dp4-e54 disabled     1          a-full a-1000 10/100/1000BaseT
+Gi6/5        [TRUNK] sw-dp4-e2- connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi6/6        [TRUNK] sw-dp4-e55 notconnect   1            full   auto 10/100/1000BaseT
+Gi6/7        [TRUNK] sw-dp4-e9- notconnect   1            full   auto 10/100/1000BaseT
+Gi6/8        [TRUNK] sw-dp4-e37 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi6/9        [TRUNK] sw-dp4-e51 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi6/10       [TRUNK] sw-dp4-e18 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi6/11       [TRUNK] sw-dp4-e50 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi6/12       [TRUNK] sw-dp4-e36 disabled     1            full   auto 10/100/1000BaseT
+Gi6/13       [TRUNK] sw-dp4-e58 disabled     1            full   auto 10/100/1000BaseT
+Gi6/14                          disabled     routed       auto   auto 10/100/1000BaseT
+Gi6/15                          disabled     routed       auto   auto 10/100/1000BaseT
+Gi6/16       [TRUNK] sw-dp4-e64 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi6/17       [TRUNK] sw-dp4-e63 disabled     1            full   auto 10/100/1000BaseT
+Gi6/18       [TRUNK] sw-dp4-e61 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi6/19       [TRUNK] sw-dp4-e62 disabled     1            full   auto 10/100/1000BaseT
+Gi6/20       [TRUNK] sw-dp4-e60 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi6/21       [TRUNK] sw-dp4-con connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi6/22       [TRUNK] sw-dp4-con connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi6/23       [TRUNK] sw-dp4-con notconnect   1            full   auto 10/100/1000BaseT
+Gi6/24                          disabled     routed       auto   auto 10/100/1000BaseT
+Gi6/25       [TRUNK] sw-dp4-e59 disabled     1            full   auto 10/100/1000BaseT
+Gi6/26       [TRUNK] sw-dp4-e48 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi6/27       [TRUNK] sw-dp4-e52 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi6/28       [TRUNK] sw-dp4-e54 notconnect   1            full   auto 10/100/1000BaseT
+Gi6/29       [TRUNK] sw-dp4-e2- connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi6/30       [TRUNK] sw-dp4-e55 notconnect   1            full   auto 10/100/1000BaseT
+Gi6/31       [TRUNK] sw-dp4-e9- notconnect   1            full   auto 10/100/1000BaseT
+Gi6/32       [TRUNK] sw-dp4-e37 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi6/33       [TRUNK] sw-dp4-e51 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi6/34       [TRUNK] sw-dp4-e18 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi6/35       [TRUNK] sw-dp4-e50 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi6/36       [TRUNK] sw-dp4-e36 disabled     1            full   auto 10/100/1000BaseT
+Gi6/37       [TRUNK] sw-dp4-e58 disabled     1            full   auto 10/100/1000BaseT
+Gi6/38                          disabled     routed       auto   auto 10/100/1000BaseT
+Gi6/39                          disabled     routed       auto   auto 10/100/1000BaseT
+Gi6/40       [TRUNK] sw-dp4-e64 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi6/41       [TRUNK] sw-dp4-e63 notconnect   1            full   auto 10/100/1000BaseT
+Gi6/42       [TRUNK] sw-dp4-e61 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi6/43       [TRUNK] sw-dp4-e62 disabled     1            full   auto 10/100/1000BaseT
+Gi6/44       [TRUNK] sw-dp4-e60 connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi6/45       [TRUNK] sw-dp4-con connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi6/46       [TRUNK] sw-dp4-con connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi6/47                          disabled     routed       auto   auto 10/100/1000BaseT
+Gi6/48       [TRUNK] sw-dp4-cam connected    trunk      a-full a-1000 10/100/1000BaseT
+Gi7/1                           disabled     642          full   auto 10/100/1000BaseT
+Gi7/2                           disabled     1            full   auto 10/100/1000BaseT
+Gi7/3        [DATA-BIS-HQ] td04 connected    601        a-full a-1000 10/100/1000BaseT
+Gi7/4        [DATA-BIS-HQ] td04 notconnect   601          full   auto 10/100/1000BaseT
+Gi7/5        [DATA-BIS-HQ] td04 notconnect   601          full   auto 10/100/1000BaseT
+Gi7/6        [DATA-BIS-HQ] td04 notconnect   601          full   auto 10/100/1000BaseT
+Gi7/7        [DATA-BIS-HQ] td04 connected    601        a-full a-1000 10/100/1000BaseT
+Gi7/8        [DATA-MOEX-DMZ] mg connected    665        a-full a-1000 10/100/1000BaseT
+Gi7/9        [DATA-MOEX-DMZ] mg connected    665        a-full a-1000 10/100/1000BaseT
+Gi7/10       [DATA-MGMT] msk-db connected    600        a-full a-1000 10/100/1000BaseT
+Gi7/11       [DATA-MGMT] sla-pr notconnect   600          full   auto 10/100/1000BaseT
+Gi7/12       [TRADE_DMZ] tgr-01 notconnect   4            full   auto 10/100/1000BaseT
+Gi7/13       [DATA-SRV-DEV] tes notconnect   607          full   auto 10/100/1000BaseT
+Gi7/14       [DATA-BIS-HQ] fico notconnect   601          full   auto 10/100/1000BaseT
+Gi7/15       [DATA-CONSOLE] xtr connected    608        a-full a-1000 10/100/1000BaseT
+Gi7/16                          disabled     routed       auto   auto 10/100/1000BaseT
+Gi7/17                          disabled     routed       auto   auto 10/100/1000BaseT
+Gi7/18                          disabled     routed       auto   auto 10/100/1000BaseT
+Gi7/19                          disabled     routed       auto   auto 10/100/1000BaseT
+Gi7/20       [DATA-BIS-HQ] mdmp notconnect   601          full   auto 10/100/1000BaseT
+Gi7/21                          notconnect   642          full   auto 10/100/1000BaseT
+Gi7/22                          notconnect   642          full   auto 10/100/1000BaseT
+Gi7/23                          notconnect   642          auto   auto 10/100/1000BaseT
+Gi7/24                          notconnect   642          auto   auto 10/100/1000BaseT
+Gi7/25       [DATA-PLC] plc-4   notconnect   603          full   auto 10/100/1000BaseT
+Gi7/26                          disabled     1            full   auto 10/100/1000BaseT
+Gi7/27       [DATA-BIS-HQ] td04 connected    601        a-full a-1000 10/100/1000BaseT
+Gi7/28       [DATA-BIS-HQ] td04 notconnect   601          full   auto 10/100/1000BaseT
+Gi7/29       [DATA-BIS-HQ] td04 notconnect   601          full   auto 10/100/1000BaseT
+Gi7/30       [DATA-BIS-HQ] td04 notconnect   601          full   auto 10/100/1000BaseT
+Gi7/31       [DATA-MOEX-DMZ] mg connected    665        a-full a-1000 10/100/1000BaseT
+Gi7/32       [DATA-MOEX-DMZ] mg connected    665        a-full a-1000 10/100/1000BaseT
+Gi7/33       [DATA-PLC] plc-hsm notconnect   603          full   auto 10/100/1000BaseT
+Gi7/34       [TRADE_DMZ] tgr-02 notconnect   4            full   auto 10/100/1000BaseT
+Gi7/35       [TRADE_DMZ] tgr-03 notconnect   4            full   auto 10/100/1000BaseT
+Gi7/36                          disabled     1            full   auto 10/100/1000BaseT
+Gi7/37       [DATA-BIS-HQ] fico notconnect   601          full   auto 10/100/1000BaseT
+Gi7/38       [DATA-BIS-HQ] 9SS0 notconnect   601          full   auto 10/100/1000BaseT
+Gi7/39       [DATA-SRV-APP] hsm notconnect   606          full   auto 10/100/1000BaseT
+Gi7/40       [DATA-CONSOLE] xtr connected    608        a-full a-1000 10/100/1000BaseT
+Gi7/41                          disabled     routed       auto   auto 10/100/1000BaseT
+Gi7/42       [DATA-BIS-HQ] usbs connected    601        a-full a-1000 10/100/1000BaseT
+Gi7/43       [DATA-BIS-HQ] usbs connected    601        a-full a-1000 10/100/1000BaseT
+Gi7/44       [DATA-BIS-HQ] mdmp notconnect   601          full   auto 10/100/1000BaseT
+Gi7/45                          disabled     642          full   auto 10/100/1000BaseT
+Gi7/46       [DATA-PLC] hsm03 W connected    657        a-full a-1000 10/100/1000BaseT
+Gi7/47                          notconnect   642          full   auto 10/100/1000BaseT
+Gi7/48                          disabled     1            full   auto 10/100/1000BaseT
+Gi8/1        [DATA-BIS-HQ] 9SS0 notconnect   601          full   auto 10/100/1000BaseT
+Gi8/2        [DATA-BIS-HB2] 9SS notconnect   647          full   auto 10/100/1000BaseT
+Gi8/3        [DATA-SRV-APP] sap notconnect   606          full   auto 10/100/1000BaseT
+Gi8/4        [DATA-BIS-HQ] olaf notconnect   601          full   auto 10/100/1000BaseT
+Gi8/5        [DATA-BIS-HQ] olaf notconnect   601          full   auto 10/100/1000BaseT
+Gi8/6        [DATA-BIS-HQ] fico notconnect   601          full   auto 10/100/1000BaseT
+Gi8/7                           notconnect   642          full   auto 10/100/1000BaseT
+Gi8/8                           notconnect   642          full   auto 10/100/1000BaseT
+Gi8/9                           notconnect   642          full   auto 10/100/1000BaseT
+Gi8/10                          notconnect   642          full   auto 10/100/1000BaseT
+Gi8/11       [DATA-PBX-VOIP] vc notconnect   632          auto   auto 10/100/1000BaseT
+Gi8/12       [DATA-SRV-APP] gb- notconnect   606          full   auto 10/100/1000BaseT
+Gi8/13                          notconnect   642          full   auto 10/100/1000BaseT
+Gi8/14                          disabled     655          auto   auto 10/100/1000BaseT
+Gi8/15       [DATA-SRV-WDS] sur notconnect   642          auto   auto 10/100/1000BaseT
+Gi8/16                          notconnect   642          full   auto 10/100/1000BaseT
+Gi8/17       [DATA-BIS-HQ] msk- notconnect   601          full   auto 10/100/1000BaseT
+Gi8/18                          disabled     642          full   auto 10/100/1000BaseT
+Gi8/19                          disabled     642          full   auto 10/100/1000BaseT
+Gi8/20                          disabled     642          full   auto 10/100/1000BaseT
+Gi8/21       [DATA-BIS-HQ] efrg notconnect   601          full   auto 10/100/1000BaseT
+Gi8/22       [DATA-BIS-HQ] efrg notconnect   601          full   auto 10/100/1000BaseT
+Gi8/23                          disabled     routed       auto   auto 10/100/1000BaseT
+Gi8/24                          disabled     routed       auto   auto 10/100/1000BaseT
+Gi8/25       [DATA-PBX-VOIP] vc notconnect   632          auto   auto 10/100/1000BaseT
+Gi8/26       [DATA-SRV-APP] sap notconnect   606          full   auto 10/100/1000BaseT
+Gi8/27       [DATA-SRV-APP] sap notconnect   606          full   auto 10/100/1000BaseT
+Gi8/28       [DATA-SRV-APP] sap notconnect   606          full   auto 10/100/1000BaseT
+Gi8/29                          disabled     655          auto   auto 10/100/1000BaseT
+Gi8/30                          notconnect   642          full   auto 10/100/1000BaseT
+Gi8/31                          notconnect   642          full   auto 10/100/1000BaseT
+Gi8/32                          notconnect   642          auto   auto 10/100/1000BaseT
+Gi8/33       [DATA-MGMT] hemul  notconnect   600          full   auto 10/100/1000BaseT
+Gi8/34                          notconnect   642          full   auto 10/100/1000BaseT
+Gi8/35       [DATA-SRV-APP] gb- notconnect   606          full   auto 10/100/1000BaseT
+Gi8/36       [DATA-KT] superdom notconnect   645          full   auto 10/100/1000BaseT
+Gi8/37                          notconnect   642          auto   auto 10/100/1000BaseT
+Gi8/38                          disabled     655          auto   auto 10/100/1000BaseT
+Gi8/39                          disabled     642          full   auto 10/100/1000BaseT
+Gi8/40                          disabled     642          full   auto 10/100/1000BaseT
+Gi8/41                          disabled     642          full   auto 10/100/1000BaseT
+Gi8/42                          disabled     642          full   auto 10/100/1000BaseT
+Gi8/43                          disabled     642          full   auto 10/100/1000BaseT
+Gi8/44                          disabled     642          full   auto 10/100/1000BaseT
+Gi8/45                          disabled     642          full   auto 10/100/1000BaseT
+Gi8/46                          disabled     642          auto   auto 10/100/1000BaseT
+Gi8/47                          disabled     routed       auto   auto 10/100/1000BaseT
+Gi8/48                          disabled     routed       auto   auto 10/100/1000BaseT
+Gi9/1                           notconnect   642          full   auto 10/100/1000BaseT
+Gi9/2        [DATA-BIS-HB2] p79 notconnect   647          full   auto 10/100/1000BaseT
+Gi9/3                           disabled     routed       auto   auto 10/100/1000BaseT
+Gi9/4                           disabled     routed       auto   auto 10/100/1000BaseT
+Gi9/5        [DATA-BIS-HQ] ibm- notconnect   601          full   auto 10/100/1000BaseT
+Gi9/6        [DATA-BIS-HQ] ibm- notconnect   601          full   auto 10/100/1000BaseT
+Gi9/7        [DATA-BIS-HQ] ibm- notconnect   601          full   auto 10/100/1000BaseT
+Gi9/8                           notconnect   642          full   auto 10/100/1000BaseT
+Gi9/9                           disabled     642          full   auto 10/100/1000BaseT
+Gi9/10       [DATA-BIS-HQ] New  notconnect   646          full   auto 10/100/1000BaseT
+Gi9/11                          disabled     642          full   auto 10/100/1000BaseT
+Gi9/12       [DATA-BIS-HQ] New  notconnect   646          full   auto 10/100/1000BaseT
+Gi9/13       [DATA-BIS-HQ] cre- notconnect   601          full   auto 10/100/1000BaseT
+Gi9/14       [DATA-PLC] pls-ns- notconnect   603          full   auto 10/100/1000BaseT
+Gi9/15       [DATA-BIS-HQ] msk- notconnect   601          full   auto 10/100/1000BaseT
+Gi9/16       [DATA-BIS-HQ] msk- notconnect   601          full   auto 10/100/1000BaseT
+Gi9/17       [DATA-BIS-HQ] msk- notconnect   601          full   auto 10/100/1000BaseT
+Gi9/18       [DATA-BIS-HQ] 9SS0 notconnect   601          full   auto 10/100/1000BaseT
+Gi9/19       [DATA-BIS-HQ] New  notconnect   601          full   auto 10/100/1000BaseT
+Gi9/20       [DATA-BIS-HQ] spm- notconnect   601          full   auto 10/100/1000BaseT
+Gi9/21                          disabled     642          full   auto 10/100/1000BaseT
+Gi9/22       [DATA-MGMT] cascad notconnect   600          full   auto 10/100/1000BaseT
+Gi9/23       [DATA-BIS-HB2] efr notconnect   647          auto   auto 10/100/1000BaseT
+Gi9/24       [DATA-BIS-HB2] efr notconnect   647          auto   auto 10/100/1000BaseT
+Gi9/25       [DATA-BIS-HQ] msk- notconnect   601          full   auto 10/100/1000BaseT
+Gi9/26       [DATA-BIS-HB2] fic notconnect   647          full   auto 10/100/1000BaseT
+Gi9/27                          disabled     642          full   auto 10/100/1000BaseT
+Gi9/28                          disabled     642          full   auto 10/100/1000BaseT
+Gi9/29                          notconnect   642          full   auto 10/100/1000BaseT
+Gi9/30                          notconnect   642          full   auto 10/100/1000BaseT
+Gi9/31                          notconnect   642          full   auto 10/100/1000BaseT
+Gi9/32       [DATA-SRV-INF] mox notconnect   604          auto   auto 10/100/1000BaseT
+Gi9/33       [DATA-SRV-INF] mox notconnect   604          full   auto 10/100/1000BaseT
+Gi9/34       [DATA-BIS-HQ] 9SS0 notconnect   601          full   auto 10/100/1000BaseT
+Gi9/35       [DATA-BIS-HB2] 9SS notconnect   647          full   auto 10/100/1000BaseT
+Gi9/36       [DATA-BIS-HQ] 9SS0 notconnect   601          full   auto 10/100/1000BaseT
+Gi9/37       [DATA-BIS-HQ] cre- notconnect   601          full   auto 10/100/1000BaseT
+Gi9/38       [DATA-BIS-HQ] ibm- notconnect   601          full   auto 10/100/1000BaseT
+Gi9/39       [DATA-BIS-HB2] msk notconnect   647          full   auto 10/100/1000BaseT
+Gi9/40       [DATA-BIS-HB2] msk notconnect   647          full   auto 10/100/1000BaseT
+Gi9/41       [DATA-BIS-HB2] msk notconnect   647          full   auto 10/100/1000BaseT
+Gi9/42       [DATA-BIS-HB2] 9SS notconnect   647          full   auto 10/100/1000BaseT
+Gi9/43       [DATA-BIS-HQ] New  notconnect   646          full   auto 10/100/1000BaseT
+Gi9/44       [DATA-BIS-HB1] 9SS notconnect   646          full   auto 10/100/1000BaseT
+Gi9/45       [DATA-BIS-HB2]     notconnect   647          full   auto 10/100/1000BaseT
+Gi9/46       [DATA-BIS-HB2]   u notconnect   647          full   auto 10/100/1000BaseT
+Gi9/47       [SPAN][DST] sw-dp4 disabled     1            full   auto 10/100/1000BaseT
+Gi9/48       [SPAN]             disabled     1            full   auto 10/100/1000BaseT
+Po5          [TRUNK] data-11/12 connected    trunk      a-full    10G 

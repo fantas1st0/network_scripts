@@ -1,0 +1,3845 @@
+
+
+
+Global statistics status :   enabled
+
+ NOTE: Type qos policy-map configured on VLAN will take precedence 
+       over system-qos policy-map for traffic on the VLAN 
+
+
+port-channel10
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+port-channel77
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+port-channel122
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+port-channel151
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+port-channel301
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+port-channel302
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+port-channel4000
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+port-channel4001
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet1/1
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 89  queue received pkts : 2035869334
+      bandwidth percent 100 
+
+Ethernet1/2
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 283  queue received pkts : 1852640320
+      bandwidth percent 100 
+
+Ethernet1/3
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 10379  queue received pkts : 1802822230
+      bandwidth percent 100 
+
+Ethernet1/4
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 2149452374
+      bandwidth percent 100 
+
+Ethernet1/5
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 1261  queue received pkts : 3810270143
+      bandwidth percent 100 
+
+Ethernet1/6
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 2758  queue received pkts : 1393694751
+      bandwidth percent 100 
+
+Ethernet1/7
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 17991
+      bandwidth percent 100 
+
+Ethernet1/8
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet1/9
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet1/10
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet1/11
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet1/12
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet1/13
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet1/14
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 3193014608
+      bandwidth percent 100 
+
+Ethernet1/15
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 176720154
+      bandwidth percent 100 
+
+Ethernet1/16
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet1/17
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet1/18
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet1/19
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet1/20
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet1/21
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet1/22
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet1/23
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet1/24
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet1/25
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet1/26
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet1/27
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet1/28
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet1/29
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet1/30
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet1/31
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet1/32
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet2/1
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 141  queue received pkts : 920832959
+      bandwidth percent 100 
+
+Ethernet2/2
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 11  queue received pkts : 610339365
+      bandwidth percent 100 
+
+Ethernet2/3
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 729103922
+      bandwidth percent 100 
+
+Ethernet2/4
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 417  queue received pkts : 658121880
+      bandwidth percent 100 
+
+Ethernet2/5
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 8842  queue received pkts : 4206859489
+      bandwidth percent 100 
+
+Ethernet2/6
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 1904  queue received pkts : 3213268438
+      bandwidth percent 100 
+
+Ethernet2/7
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 117
+      bandwidth percent 100 
+
+Ethernet2/8
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet2/9
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet2/10
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet2/11
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet2/12
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet2/13
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet2/14
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 3718460294
+      bandwidth percent 100 
+
+Ethernet2/15
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 196102430
+      bandwidth percent 100 
+
+Ethernet2/16
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/1
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/2
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/3
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/4
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/5
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/6
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/7
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/8
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/9
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/10
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/11
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/12
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/13
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/14
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/15
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/16
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/17
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/18
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/19
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/20
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/21
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/22
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/23
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/24
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/25
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/26
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/27
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/28
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/29
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/30
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/31
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/32
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/33
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/34
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/35
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/36
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/37
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/38
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/39
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/40
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/41
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/42
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/43
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/44
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/45
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/46
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/47
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet122/1/48
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/1
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/2
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/3
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/4
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/5
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/6
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/7
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/8
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/9
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/10
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/11
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/12
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/13
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/14
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/15
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/16
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/17
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/18
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/19
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/20
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/21
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/22
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/23
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/24
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/25
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/26
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/27
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/28
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/29
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/30
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/31
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/32
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/33
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/34
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/35
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/36
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/37
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/38
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/39
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/40
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/41
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/42
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/43
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/44
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/45
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/46
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/47
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Ethernet151/1/48
+
+  Service-policy (qos) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (qos):   class-default (match-any)
+      Match: any 
+      set qos-group 0
+
+  Service-policy (queuing) input:   default-in-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      bandwidth percent 100 
+
+  Service-policy (queuing) output:   default-out-policy 
+    policy statistics status:   enabled
+
+    Class-map (queuing):   class-default (match-any)
+      Match: qos-group 0 
+      queue dropped pkts : 0  queue received pkts : 0
+      bandwidth percent 100 
+
+Control Plane
+
+  service-policy  input: copp-system-policy-default
+
+    class-map copp-system-class-igmp (match-any)
+      match protocol igmp
+      police cir 1024 kbps , bc 65535 bytes 
+        conformed 70779168 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-pim-hello (match-any)
+      match protocol pim
+      police cir 1024 kbps , bc 4800000 bytes 
+        conformed 796690840 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-bridging (match-any)
+      match protocol bridging
+      police cir 20000 kbps , bc 4800000 bytes 
+        conformed 15242605940 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-arp (match-any)
+      match protocol arp
+      match protocol nd
+      police cir 1024 kbps , bc 3600000 bytes 
+        conformed 34957740738 bytes; action: transmit 
+        violated 111032686 bytes;
+    class-map copp-system-class-dhcp (match-any)
+      match protocol dhcp
+      police cir 1024 kbps , bc 4800000 bytes 
+        conformed 2244834 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-wccp (match-any)
+      match protocol wccp
+      police cir 1060 kbps , bc 4800000 bytes 
+        conformed 0 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-mgmt (match-any)
+      match protocol mgmt
+      police cir 12000 kbps , bc 4800000 bytes 
+        conformed 34375650099 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-ecp (match-any)
+      match protocol ecp
+      police cir 6400 kbps , bc 3200000 bytes 
+        conformed 0 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-lacp (match-any)
+      match protocol lacp
+      police cir 1024 kbps , bc 4800000 bytes 
+        conformed 1355870032 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-lldp (match-any)
+      match protocol lldp_dcx
+      police cir 2048 kbps , bc 4800000 bytes 
+        conformed 5498748027 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-udld (match-any)
+      match protocol udld
+      police cir 2048 kbps , bc 4800000 bytes 
+        conformed 2930883746 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-isis (match-any)
+      match protocol isis_dce
+      police cir 1024 kbps , bc 4800000 bytes 
+        conformed 0 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-msdp (match-any)
+      match protocol msdp
+      police cir 9600 kbps , bc 4800000 bytes 
+        conformed 0 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-cdp (match-any)
+      match protocol cdp
+      police cir 1024 kbps , bc 4800000 bytes 
+        conformed 1550083669 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-fip (match-any)
+      match protocol fip
+      police cir 1024 kbps , bc 4800000 bytes 
+        conformed 0 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-bgp (match-any)
+      match protocol bgp
+      police cir 9600 kbps , bc 4800000 bytes 
+        conformed 0 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-eigrp (match-any)
+      match protocol eigrp
+      match protocol eigrp6
+      police cir 9600 kbps , bc 4800000 bytes 
+        conformed 0 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-exception (match-any)
+      match protocol exception
+      police cir 64 kbps , bc 4800000 bytes 
+        conformed 0 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-glean (match-any)
+      match protocol glean
+      police cir 1024 kbps , bc 4800000 bytes 
+        conformed 0 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-hsrp-vrrp (match-any)
+      match protocol hsrp_vrrp
+      match protocol hsrp6
+      police cir 1024 kbps , bc 256000 bytes 
+        conformed 0 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-icmp-echo (match-any)
+      match protocol icmp_echo
+      police cir 64 kbps , bc 3600000 bytes 
+        conformed 0 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-ospf (match-any)
+      match protocol ospf
+      match protocol ospf3
+      police cir 9600 kbps , bc 4800000 bytes 
+        conformed 0 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-bfd (match-any)
+      match protocol bfd
+      police cir 9600 kbps , bc 4800000 bytes 
+        conformed 0 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-vxlan (match-any)
+      match protocol vxlan
+      police cir 1024 kbps , bc 4800000 bytes 
+        conformed 0 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-pim-register (match-any)
+      match protocol reg
+      police cir 9600 kbps , bc 4800000 bytes 
+        conformed 0 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-rip (match-any)
+      match protocol rip
+      police cir 9600 kbps , bc 4800000 bytes 
+        conformed 0 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-l3dest-miss (match-any)
+      match protocol unicast
+      police cir 64 kbps , bc 16000 bytes 
+        conformed 0 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-mcast-miss (match-any)
+      match protocol multicast
+      police cir 256 kbps , bc 3200000 bytes 
+        conformed 0 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-excp-ip-frag (match-any)
+      match protocol ip_frag
+      police cir 64 kbps , bc 3200000 bytes 
+        conformed 0 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-excp-same-if (match-any)
+      match protocol same-if
+      police cir 64 kbps , bc 3200000 bytes 
+        conformed 0 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-excp-ttl (match-any)
+      match protocol ttl
+      police cir 64 kbps , bc 3200000 bytes 
+        conformed 0 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-default (match-any)
+      match protocol default
+      police cir 512 kbps , bc 6400000 bytes 
+        conformed 1599119368 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-rpf-fail (match-any)
+      match protocol rpf
+      police cir 512 kbps , bc 3200000 bytes 
+        conformed 0 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-mcast-last-hop (match-any)
+      match protocol mcast last hop
+      police cir 512 kbps , bc 3200000 bytes 
+        conformed 0 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-onep-dpss (match-any)
+      match protocol dpss
+      police cir 625 kbps , bc 3200000 bytes 
+        conformed 0 bytes; action: transmit 
+        violated 0 bytes;
+    class-map copp-system-class-l3-isis (match-any)
+      match protocol isis
+      police cir 1024 kbps , bc 4800000 bytes 
+        conformed 0 bytes; action: transmit 
+        violated 0 bytes;

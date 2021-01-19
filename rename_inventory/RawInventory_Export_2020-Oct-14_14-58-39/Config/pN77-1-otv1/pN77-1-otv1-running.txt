@@ -1,0 +1,294 @@
+
+
+!Command: show running-config
+!Time: Fri Oct  2 00:22:28 2020
+
+version 7.2(2)D1(2)
+switchname otv1
+
+feature telnet
+feature tacacs+
+feature eigrp
+feature otv
+feature lacp
+feature lldp
+
+username xxxxxxx password 5 xxxxxxx role vdc-admin
+ssh key  xxxxxxxx  2048 
+no ip domain-lookup
+tacacs-server host 10.128.128.11 key 7  xxxxxxxx  
+tacacs-server host 10.164.140.150 key 7  xxxxxxxx  
+aaa group server tacacs+ MSK-TAC 
+    server 10.128.128.11 
+    server 10.164.140.150 
+    use-vrf management
+    source-interface mgmt0
+interface breakout module 3 port 21 map 10g-4x
+ip access-list 111
+  10 permit ip 10.64.0.111/32 any 
+ip access-list ALL_IP
+  10 permit ip any any 
+mac access-list ALL_MAC
+  100 permit any any 
+ip access-list FHRP_IP
+  10 permit udp any 224.0.0.2/32 eq 1985 
+  20 permit udp any 224.0.0.102/32 eq 1985 
+  50 permit ip any 224.0.0.18/32 
+mac access-list FHRP_vMAC
+  10 permit 0000.0c07.ac00 0000.0000.00ff any 
+  20 permit 0000.0c9f.f000 0000.0000.0fff any 
+  50 permit 0000.5e00.0100 0000.0000.00ff any 
+vlan access-map FHRP_LOCALIZATION 10
+        match mac address FHRP_vMAC
+        match ip address FHRP_IP
+        action drop
+vlan access-map FHRP_LOCALIZATION 20
+        match mac address ALL_MAC
+        match ip address ALL_IP
+        action forward
+vlan filter FHRP_LOCALIZATION vlan-list 3000-3967
+snmp-server user xxxxxxxx vdc-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server host 10.164.147.100 traps version 2c xxxxxxxx 
+snmp-server host 10.164.147.100 use-vrf management
+snmp-server host 10.132.128.21 traps version 2c xxxxxxxx 
+snmp-server host 10.132.128.21 use-vrf management
+snmp-server host 10.150.128.100 traps version 2c xxxxxxxx 
+snmp-server host 10.150.128.100 use-vrf management
+rmon event 1 log description FATAL(1) owner PMON@FATAL
+rmon event 2 log description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 log description ERROR(3) owner PMON@ERROR
+rmon event 4 log description WARNING(4) owner PMON@WARNING
+rmon event 5 log description INFORMATION(5) owner PMON@INFO
+snmp-server enable traps switchfabric fabric-crc
+snmp-server enable traps config ccmCLIRunningConfigChanged
+snmp-server enable traps bridge newroot
+snmp-server enable traps bridge topologychange
+snmp-server enable traps system Clock-change-notification
+snmp-server community xxxxxxxx group network-operator
+snmp-server community xxxxxxxx group vdc-admin
+snmp-server community xxxxxxxx use-acl 111
+ntp distribute
+ntp server 10.128.128.50 use-vrf management
+ntp source-interface  mgmt0
+ntp commit 
+aaa authentication login default group MSK-TAC 
+aaa authorization config-commands default group MSK-TAC local 
+aaa accounting default group MSK-TAC 
+
+ip route 10.151.254.0/26 Null0 2
+ip route 10.151.254.0/26 10.151.254.33 name Transport_for_Cloud_over_DWDM
+vlan 1,2291-2292,2801,3155,3157,3163,3187,3191-3192,3314-3315,3329-3332,3341-3344,3428-3430,3453,3519,3521,3523,3542-3544,3769,3772,3785-3786,3797,3801,3804,3812,3815,3817,3825-3826,3837-3838,3842,3845,3848,3850,3865,3867,3901,3904,3912,3915,3917,3923,3926,3945,3948,3950,3965
+vlan 2291
+  name BM_CLD_F5-stretched
+vlan 2292
+  name BM_CLD_F5-HB-stretched
+vlan 2801
+  name new_Mail_PROD
+vlan 3155
+  name VDI-SRV2
+vlan 3157
+  name VDI-SRV3
+vlan 3163
+  name Cloud_OLD-PSeriees
+vlan 3187
+  name Stretched_DBO_PROM
+vlan 3191
+  name EFX_3191
+vlan 3192
+  name Stretched_nInet-Proxy
+vlan 3314
+  name nInet-stretched
+vlan 3315
+  name VipInet-FARM2-stretched
+vlan 3329
+  name VDI-14
+vlan 3330
+  name VDI-15
+vlan 3331
+  name VDI-16
+vlan 3332
+  name VDI-17
+vlan 3341
+  name VDI-26
+vlan 3342
+  name VDI-27
+vlan 3343
+  name VDI-28
+vlan 3344
+  name VDI-29
+vlan 3428
+  name vdi_vipinet_vmk0
+vlan 3429
+  name vdi_vipinet_vmk1
+vlan 3430
+  name vdi_vipinet_arm
+vlan 3453
+  name VDI-ADMIN
+vlan 3519
+  name WIFI-VTB-AIR2
+vlan 3521
+  name EURAZIA_WLC_HB
+vlan 3523
+  name WIFI-VTB-AIR
+vlan 3542
+  name WIFI-PROVIDER
+vlan 3543
+  name EURAZIA_WLC_NINET
+vlan 3544
+  name Stretched_EURAZIA_RF-001717606
+vlan 3769
+  name Stretched_DBO_TEST
+vlan 3772
+  name Stretched_nInet-BE
+vlan 3785
+  name stretched_FIN
+vlan 3786
+  name stretched_KBR
+vlan 3797
+  name OTV_site_vlan(keepalive)
+vlan 3801
+  name Cloud_3801
+vlan 3804
+  name Cloud_3804
+vlan 3812
+  name Cloud_3812
+vlan 3815
+  name Cloud_3815
+vlan 3817
+  name Cloud_3817
+vlan 3825
+  name cloud_3825
+vlan 3826
+  name Cloud_3826
+vlan 3837
+  name Cloud_3837_M-BANK-DC
+vlan 3838
+  name Cloud_3838_M-BANK-DC
+vlan 3842
+  name cloud_3842
+vlan 3845
+  name Cloud_3845
+vlan 3848
+  name Cloud_3848
+vlan 3850
+  name Cloud_3865
+vlan 3867
+  name Cloud_3867_M-BANK-DC
+vlan 3901
+  name Cloud_3901
+vlan 3904
+  name Cloud_3904
+vlan 3912
+  name Cloud_3912
+vlan 3915
+  name Cloud_3915
+vlan 3917
+  name Cloud_3917
+vlan 3923
+  name cloud_3923_VTB-DEV_stretched
+vlan 3926
+  name Cloud_3926
+vlan 3945
+  name Cloud_3945
+vlan 3948
+  name Cloud_3948
+vlan 3950
+  name Cloud_3950
+vlan 3965
+  name Cloud_3965
+
+otv site-vlan 3797
+vrf context management
+  ip route 10.0.0.0/8 10.150.255.1
+
+
+interface mgmt0
+  vrf member management
+  ip address 10.150.255.9/26
+
+interface port-channel1
+  description joint if otv 
+  mtu 9216
+
+interface port-channel1.3798
+  mtu 9216
+  encapsulation dot1q 3798
+  ip address 10.255.247.18/30
+  ip router eigrp DC-OTV
+  no shutdown
+
+interface port-channel2
+  description OTV local site
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 2291-2292,2801,3155,3157,3163,3187
+  switchport trunk allowed vlan add 3191-3192,3314-3315,3329-3332,3341-3344
+  switchport trunk allowed vlan add 3428-3430,3453,3519,3521,3523,3542-3544
+  switchport trunk allowed vlan add 3769,3772,3785-3786,3797,3801,3804
+  switchport trunk allowed vlan add 3812,3815,3817,3825-3826,3837-3838
+  switchport trunk allowed vlan add 3842,3845,3848,3850,3865,3867,3901
+  switchport trunk allowed vlan add 3904,3912,3915,3917,3923,3926,3945
+  switchport trunk allowed vlan add 3948,3950,3965
+  mtu 9216
+
+interface Overlay1
+  description -- OTV over MPLS Core --
+  otv join-interface port-channel1.3798
+  otv extend-vlan 3155, 3157, 3315, 3329-3332, 3341-3344, 3428-3430, 3453, 3519, 3521, 3523, 3542-3544, 3850, 3865, 3950, 3965
+  otv adjacency-server unicast-only
+  no otv suppress-arp-nd
+  no shutdown
+
+interface Overlay2
+  description -- CLOUD overlay over DWDM --
+  otv join-interface Ethernet3/20
+  otv extend-vlan 2291-2292, 2801, 3163, 3187, 3191-3192, 3314, 3769, 3772, 3785-3786, 3801, 3804, 3812, 3815, 3817, 3825-3826, 3837-3838, 3842, 3845, 3848, 3867, 3901, 3904, 3912, 3915, 3917, 3923, 3926, 3945, 3948
+  otv adjacency-server unicast-only
+  no otv suppress-arp-nd
+  no shutdown
+
+interface Ethernet3/19
+
+interface Ethernet3/20
+  description Join-if Cloud over DWDM
+  mtu 9216
+  no ip redirects
+  ip address 10.151.254.34/29
+  no shutdown
+
+interface Ethernet3/21/1
+  description part of joint if otv (uplink to transport core)
+  mtu 9216
+  channel-group 1 mode active
+  no shutdown
+
+interface Ethernet3/21/2
+
+interface Ethernet3/21/3
+
+interface Ethernet3/21/4
+
+interface Ethernet3/22
+  description downstream otv
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 2291-2292,2801,3155,3157,3163,3187
+  switchport trunk allowed vlan add 3191-3192,3314-3315,3329-3332,3341-3344
+  switchport trunk allowed vlan add 3428-3430,3453,3519,3521,3523,3542-3544
+  switchport trunk allowed vlan add 3769,3772,3785-3786,3797,3801,3804
+  switchport trunk allowed vlan add 3812,3815,3817,3825-3826,3837-3838
+  switchport trunk allowed vlan add 3842,3845,3848,3850,3865,3867,3901
+  switchport trunk allowed vlan add 3904,3912,3915,3917,3923,3926,3945
+  switchport trunk allowed vlan add 3948,3950,3965
+  mtu 9216
+  channel-group 2 mode active
+  no shutdown
+cli alias name wr copy running-config startup-config
+line vty
+router eigrp DC-OTV
+  address-family ipv4 unicast
+    autonomous-system 65535
+    maximum-paths 2
+otv site-identifier 0x3
+
+

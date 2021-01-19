@@ -1,0 +1,83 @@
+
+Capability Codes: R - Router, T - Trans-Bridge, B - Source-Route-Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater,
+                  V - VoIP-Phone, D - Remotely-Managed-Device,
+                  s - Supports-STP-Dispute
+
+Device-ID          Local Intrfce  Hldtme Capability  Platform        Port ID
+sw-edge-1.vtb24.ru(JPG1924001T)
+                    mgmt0          142    R S I s   N7K-C7009        Eth102/1/47   
+sw-dp4-core-2.vtb24.ru(JAF1638BGAE)
+                    Eth1/1         150    R S s     N7K-C7010        Eth1/1        
+sw-m35-core-1.vtb24.ru(JAF1638BFMK)
+                    Eth1/2         122    R S s     N7K-C7010        Eth1/2        
+sw-dp4-lan-1.vtb24.ru
+                    Eth1/4         145    R S I     C6880-X-LE       Ten5/1        
+sw-v43-core-1.vtb24.ru(JAF1721AEET)
+                    Eth1/7         154    R S s     N7K-C7009        Eth3/2        
+r-dp4-rr-1.vtb24.ru
+                    Eth1/8         155    R I       ASR1001-X        Ten0/0/0      
+sw-nb37-lan-1.vtb24.ru
+                    Eth1/10        144    R S I     WS-C6506-E       Ten2/13       
+sw-arg3-core-1.vtb24.ru(JPG1924007A)
+                    Eth1/11        169    R S s     N7K-C7009        Eth4/1        
+sw-edge-1.vtb24.ru(JPG1924001T)
+                    Eth1/12        179    R S s     N7K-C7009        Eth3/1        
+sw-pr1-core-1.vtb24.ru(JAF1648AMEE)
+                    Eth1/13        155    R S s     N7K-C7010        Eth3/11       
+sw-pr1-core-1.vtb24.ru(JAF1648AMEE)
+                    Eth1/14        155    R S s     N7K-C7010        Eth3/12       
+sw-pr1-core-2.vtb24.ru(JAF1648AMJB)
+                    Eth1/17        135    R S s     N7K-C7010        Eth3/15       
+sw-pr1-core-2.vtb24.ru(JAF1648AMJB)
+                    Eth1/18        135    R S s     N7K-C7010        Eth3/16       
+sw-dp4-data-11.vtb24.ru(JAF1745AJHC)
+                    Eth1/21        149    R S s     N77-C7718        Eth17/1/1     
+sw-dp4-data-11.vtb24.ru(JAF1745AJHC)
+                    Eth1/22        149    R S s     N77-C7718        Eth17/1/2     
+sw-dp4-data-11.vtb24.ru(JAF1745AJHC)
+                    Eth1/23        149    R S s     N77-C7718        Eth17/1/3     
+sw-dp4-data-11.vtb24.ru(JAF1745AJHC)
+                    Eth1/24        149    R S s     N77-C7718        Eth17/1/4     
+sw-dp4-core-2.vtb24.ru(JAF1638BGAE)
+                    Eth2/1         150    R S s     N7K-C7010        Eth2/1        
+sw-m35-core-2.vtb24.ru(JAF1648ANND)
+                    Eth2/2         162    R S s     N7K-C7010        Eth1/2        
+sw-dp4-lan-2.vtb24.ru
+                    Eth2/4         175    R S I     C6880-X-LE       Ten5/1        
+r-dp4-edge-3.vtb24.ru
+                    Eth2/6         162    R I       ASR1013          Ten0/0/0      
+sw-v43-core-2.vtb24.ru(JAF1721AFFN)
+                    Eth2/7         164    R S s     N7K-C7009        Eth3/2        
+sw-edge-1.vtb24.ru(JPG1924001T)
+                    Eth2/12        179    R S s     N7K-C7009        Eth4/1        
+sw-pr1-core-1.vtb24.ru(JAF1648AMEE)
+                    Eth2/13        155    R S s     N7K-C7010        Eth4/11       
+sw-pr1-core-1.vtb24.ru(JAF1648AMEE)
+                    Eth2/14        155    R S s     N7K-C7010        Eth4/12       
+sw-pr1-core-2.vtb24.ru(JAF1648AMJB)
+                    Eth2/17        135    R S s     N7K-C7010        Eth4/15       
+sw-pr1-core-2.vtb24.ru(JAF1648AMJB)
+                    Eth2/18        135    R S s     N7K-C7010        Eth4/16       
+sw-dp4-data-12.vtb24.ru(JAF1814ADMK)
+                    Eth2/21        152    R S s     N77-C7718        Eth17/1/1     
+sw-dp4-data-12.vtb24.ru(JAF1814ADMK)
+                    Eth2/22        152    R S s     N77-C7718        Eth17/1/2     
+sw-dp4-data-12.vtb24.ru(JAF1814ADMK)
+                    Eth2/23        152    R S s     N77-C7718        Eth17/1/3     
+sw-dp4-data-12.vtb24.ru(JAF1814ADMK)
+                    Eth2/24        152    R S s     N77-C7718        Eth17/1/4     
+sw-dp4-core-2.vtb24.ru(JAF1638BGAE)
+                    Eth7/1         131    R S s     N7K-C7010        Eth7/1        
+sw-pr1-core-1.vtb24.ru(JAF1648AMEE)
+                    Eth7/2         131    R S s     N7K-C7010        Eth7/2        
+sw-dp4-data-11.vtb24.ru(JAF1745AJHC)
+                    Eth7/3         155    R S s     N77-C7718        Eth8/20       
+sw-dp4-core-2.vtb24.ru(JAF1638BGAE)
+                    Eth8/1         164    R S s     N7K-C7010        Eth8/1        
+sw-pr1-core-2.vtb24.ru(JAF1648AMJB)
+                    Eth8/2         128    R S s     N7K-C7010        Eth8/2        
+sw-dp4-data-12.vtb24.ru(JAF1814ADMK)
+                    Eth8/3         152    R S s     N77-C7718        Eth8/20       
+
+Total entries displayed: 37

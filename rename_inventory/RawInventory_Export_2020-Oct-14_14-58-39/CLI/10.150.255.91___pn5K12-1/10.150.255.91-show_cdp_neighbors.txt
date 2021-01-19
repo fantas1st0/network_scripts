@@ -1,0 +1,58 @@
+
+Capability Codes: R - Router, T - Trans-Bridge, B - Source-Route-Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater,
+                  V - VoIP-Phone, D - Remotely-Managed-Device,
+                  s - Supports-STP-Dispute
+
+
+Device-ID             Local Intrfce Hldtme Capability  Platform         Port ID
+ntnx-ahv-14         Eth1/1         96     S H       Linux              eth3          
+ntnx-ahv-14         Eth1/2         96     S H       Linux              eth4          
+ntnx-ahv-16         Eth1/3         113    S H       Linux              eth3          
+ntnx-ahv-16         Eth1/4         113    S H       Linux              eth4          
+ntnx-ahv-22         Eth1/5         113    S H       Linux              eth3          
+ntnx-ahv-22         Eth1/6         113    S H       Linux              eth4          
+ntnx-ahv-24         Eth1/7         119    S H       Linux              eth3          
+ntnx-ahv-24         Eth1/8         119    S H       Linux              eth4          
+ntnx-ahv-26         Eth1/9         109    S H       Linux              eth3          
+ntnx-ahv-26         Eth1/10        109    S H       Linux              eth4          
+ntnx-ahv-34         Eth1/11        91     S H       Linux              eth3          
+ntnx-ahv-34         Eth1/12        91     S H       Linux              eth4          
+ntnx-ahv-36         Eth1/13        91     S H       Linux              eth3          
+ntnx-ahv-36         Eth1/14        91     S H       Linux              eth4          
+ntnx-ahv-38         Eth1/15        93     S H       Linux              eth3          
+ntnx-ahv-38         Eth1/16        93     S H       Linux              eth4          
+ntnx-ahv-13         Eth1/17        106    S H       Linux              eth3          
+ntnx-ahv-13         Eth1/18        106    S H       Linux              eth4          
+ntnx-ahv-15         Eth1/19        106    S H       Linux              eth3          
+ntnx-ahv-15         Eth1/20        106    S H       Linux              eth4          
+ntnx-ahv-23         Eth1/21        115    S H       Linux              eth3          
+ntnx-ahv-23         Eth1/22        115    S H       Linux              eth4          
+ntnx-ahv-25         Eth1/23        100    S H       Linux              eth3          
+ntnx-ahv-25         Eth1/24        100    S H       Linux              eth4          
+ntnx-ahv-33         Eth1/25        106    S H       Linux              eth3          
+ntnx-ahv-33         Eth1/26        106    S H       Linux              eth4          
+ntnx-ahv-42         Eth1/27        99     S H       Linux              eth3          
+ntnx-ahv-42         Eth1/28        99     S H       Linux              eth4          
+ntnx-ahv-35         Eth1/29        111    S H       Linux              eth3          
+ntnx-ahv-35         Eth1/30        111    S H       Linux              eth4          
+ntnx-ahv-37         Eth1/31        111    S H       Linux              eth4          
+ntnx-ahv-37         Eth1/32        111    S H       Linux              eth3          
+ntnx-ahv-41         Eth1/33        105    S H       Linux              eth3          
+ntnx-ahv-41         Eth1/34        105    S H       Linux              eth4          
+ntnx-ahv-40         Eth1/35        104    S H       Linux              eth3          
+ntnx-ahv-40         Eth1/36        104    S H       Linux              eth4          
+ntnx-ahv-39         Eth1/37        91     S H       Linux              eth3          
+ntnx-ahv-39         Eth1/38        91     S H       Linux              eth4          
+pn5K12-2(FOC2411R0P6)
+                    Eth1/47        125    R S I s   N5K-C56128P        Eth1/47       
+pn5K12-2(FOC2411R0P6)
+                    Eth1/48        125    R S I s   N5K-C56128P        Eth1/48       
+pN77-1-switch1(JPG203100LV)
+                    Eth1/49        126    R S I s   N77-C7710          Eth1/5        
+pN77-2-switch2(JPG203100NQ)
+                    Eth1/50        153    R S I s   N77-C7710          Eth1/5        
+pn5K12-2(FOC2411R0P6)
+                    Eth1/51        125    R S I s   N5K-C56128P        Eth1/51       
+pn5K12-2(FOC2411R0P6)
+                    Eth1/52        125    R S s     N5K-C56128P        Eth1/52       

@@ -1,0 +1,1405 @@
+
+
+!Command: show running-config
+!Time: Fri Oct  2 00:23:43 2020
+
+version 7.3(6)N1(1)
+hostname sw-dp4-data-16
+
+feature telnet
+feature tacacs+
+cfs eth distribute
+feature udld
+feature interface-vlan
+feature lacp
+feature vpc
+feature lldp
+feature fex
+
+username xxxxxxx password 5 xxxxxxx role network-admin
+username xxxxxxx password 5 xxxxxxx role network-admin
+username xxxxxxxx passphrase  lifetime 99999 warntime 14 gracetime 3
+
+banner motd ^[TACACS]^
+
+no ip domain-lookup
+ip domain-name vtb24.ru
+tacacs-server timeout 10
+tacacs-server host 10.64.0.68 key 7  xxxxxxxx  
+tacacs-server host 10.64.0.69 key 7  xxxxxxxx  
+aaa group server tacacs+ TACACS+ 
+    server 10.64.0.68 
+    server 10.64.0.69 
+    source-interface Vlan608
+system default switchport shutdown
+logging event link-status default
+service unsupported-transceiver
+errdisable recovery interval 60
+errdisable recovery cause link-flap
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause loopback
+errdisable recovery cause security-violation
+errdisable recovery cause psecure-violation
+errdisable recovery cause pause-rate-limit
+errdisable recovery cause miscabling
+ip access-list 1
+  20 permit ip 10.64.0.0/21 any
+  30 permit ip 10.68.0.0/21 any
+  40 permit ip 10.74.57.7/32 any
+  50 permit ip 10.194.162.33/32 any
+  60 permit ip 10.194.160.71/32 any
+ip access-list 111
+  10 permit ip 10.64.0.111/32 any
+fex 102
+  pinning max-links 1
+  description "FEX0102"
+fex 105
+  pinning max-links 1
+  description "FEX0105"
+fex 106
+  pinning max-links 1
+  description "FEX0106"
+fex 123
+  pinning max-links 1
+  description "FEX0123"
+snmp-server contact VTB24 NOC, noc@vtb24.ru
+snmp-server location HQ=ID:0000=MOW=DP4=DC4=103=C1
+snmp-server source-interface informs mgmt0
+snmp-server user xxxxxxxx network-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server user xxxxxxxx network-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server host 10.194.160.71 traps version 2c xxxxxxxx 
+snmp-server host 10.194.162.33 traps version 2c xxxxxxxx 
+snmp-server host 10.64.1.75 traps version 2c xxxxxxxx 
+snmp-server host 10.64.1.75 use-vrf default
+rmon event 1 log description FATAL(1) owner PMON@FATAL
+rmon event 2 log description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 log description ERROR(3) owner PMON@ERROR
+rmon event 4 log description WARNING(4) owner PMON@WARNING
+rmon event 5 log description INFORMATION(5) owner PMON@INFO
+snmp-server enable traps callhome event-notify
+snmp-server enable traps callhome smtp-send-fail
+snmp-server enable traps cfs state-change-notif
+snmp-server enable traps lldp lldpRemTablesChange
+snmp-server enable traps cfs merge-failure
+snmp-server enable traps aaa server-state-change
+snmp-server enable traps feature-control FeatureOpStatusChange
+snmp-server enable traps sysmgr cseFailSwCoreNotifyExtended
+snmp-server enable traps config ccmCLIRunningConfigChanged
+snmp-server enable traps snmp authentication
+snmp-server enable traps link cisco-xcvr-mon-status-chg
+snmp-server enable traps vtp notifs
+snmp-server enable traps vtp vlancreate
+snmp-server enable traps vtp vlandelete
+snmp-server enable traps bridge newroot
+snmp-server enable traps bridge topologychange
+snmp-server enable traps stpx inconsistency
+snmp-server enable traps stpx root-inconsistency
+snmp-server enable traps stpx loop-inconsistency
+snmp-server enable traps system Clock-change-notification
+snmp-server enable traps feature-control ciscoFeatOpStatusChange
+snmp-server enable traps syslog message-generated
+snmp-server community xxxxxxxx group vdc-operator
+snmp-server community xxxxxxxx group vdc-operator
+snmp-server community xxxxxxxx group network-operator
+snmp-server community xxxxxxxx use-acl 1
+snmp-server community xxxxxxxx use-acl 1
+snmp-server community xxxxxxxx use-ipv4acl 111
+ntp server 10.9.0.3
+ntp server 10.9.0.4
+ntp source-interface  Vlan608
+ntp authentication-key 1 md5 xxxxxxxx 7
+ntp trusted-key 1
+aaa authentication login default group TACACS+ local 
+aaa authentication login console local 
+aaa authorization config-commands default group TACACS+ local 
+policy-map type network-qos jumbo
+  class type network-qos class-default
+    mtu 9216
+    multicast-optimize
+system qos
+  service-policy type network-qos jumbo
+
+ip route 0.0.0.0/0 10.64.64.1
+vlan 1
+vlan 511
+  name DATA-DDEI-SANDBOX
+vlan 531
+  name DATA-HB-ANY
+vlan 600
+  name DATA-MGMT
+vlan 601
+  name DATA-BIS-HQ
+vlan 603
+  name DATA-PLC
+vlan 608
+  name ~DATA-CONSOLE
+vlan 634
+  name DATA-CONSOLE2
+vlan 645
+  name DATA-KT
+vlan 648
+  name DATA-IBM-HMC1
+vlan 649
+  name DATA-IBM-HMC2
+vlan 693
+  name DATA-DMZ-LOCAL
+vlan 4093
+  name VPC-PEER-KEEPALIVE
+
+spanning-tree port type edge default
+spanning-tree port type edge bpduguard default
+spanning-tree loopguard default
+udld aggressive
+vrf context management
+  ip route 0.0.0.0/0 10.64.64.1
+  ip route 0.0.0.0/0 10.128.254.1
+vrf context vpc-keepalive
+vpc domain 12
+  role priority 2
+  peer-keepalive destination 192.168.1.1 source 192.168.1.2 vrf vpc-keepalive
+port-profile type ethernet ETH-TRUNK-EDGEPORT
+  switchport mode trunk
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  state enabled
+port-profile type port-channel PC-TRUNK-EDGEPORT
+  switchport mode trunk
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  state enabled
+
+
+interface Vlan1
+
+interface Vlan608
+  description mgmt
+  no shutdown
+  no ip redirects
+  ip address 10.64.71.56/21
+
+interface Vlan4093
+  description [L3] peer-keepalive
+  no shutdown
+  vrf member vpc-keepalive
+  ip address 192.168.1.2/24
+
+interface port-channel10
+  description [VPC][TRUNK] sw-dp4-data-11/12
+  switchport mode trunk
+  switchport trunk allowed vlan 511,531,600-601,603,608,634,645,648-649,693
+  vpc 10
+
+interface port-channel69
+  description [VPC] sw-dp4-con-dc4-i2 WO-0391391
+  switchport mode trunk
+  switchport trunk allowed vlan 608
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  vpc 69
+
+interface port-channel70
+  description [VPC] sw-dp4-con-ssc01 WO-0638635
+  switchport mode trunk
+  switchport trunk allowed vlan 608
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  vpc 70
+
+interface port-channel71
+  description [VPC] sw-dp4-con-exa2 WO-0651724
+  switchport mode trunk
+  switchport trunk allowed vlan 608
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  vpc 71
+
+interface port-channel72
+  description [VPC] sw-dp4-con-dc4-i5 WO-0391391
+  switchport mode trunk
+  switchport trunk allowed vlan 608
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  vpc 72
+
+interface port-channel73
+  description [VPC] sw-dp4-con-dc4-i6 WO-0391391
+  switchport mode trunk
+  switchport trunk allowed vlan 608
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  vpc 73
+
+interface port-channel74
+  description [VPC] sw-dp4-con-dc4-i7 WO-0391391
+  switchport mode trunk
+  switchport trunk allowed vlan 608
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  vpc 74
+
+interface port-channel75
+  description [VPC] sw-dp4-con-dc4-i8 WO-0391391
+  switchport mode trunk
+  switchport trunk allowed vlan 608
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  vpc 75
+
+interface port-channel76
+  description [VPC] sw-dp4-con-dc4-i9 WO-0391391
+  switchport mode trunk
+  switchport trunk allowed vlan 608
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  vpc 76
+
+interface port-channel77
+  description [TRUNK] sw-dp4-con-spo5
+  switchport mode trunk
+  switchport trunk allowed vlan 608,634
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  vpc 77
+
+interface port-channel78
+  description [VPC][TRUNK] sw-dp4-lpa-con-2
+  switchport mode trunk
+  switchport trunk allowed vlan 634
+  spanning-tree guard root
+  vpc 78
+
+interface port-channel79
+  description [VPC][TRUNK] sw-dp4-lpa-con-3
+  switchport mode trunk
+  switchport trunk allowed vlan 634
+  spanning-tree guard root
+  vpc 79
+
+interface port-channel102
+  description [FEX] fex-102
+  switchport mode fex-fabric
+  fex associate 102
+
+interface port-channel105
+  description [FEX] fex-105
+  switchport mode fex-fabric
+  fex associate 105
+
+interface port-channel106
+  description [FEX] fex-106
+  switchport mode fex-fabric
+  fex associate 106
+
+interface port-channel123
+  description [FEX] fex-123
+  switchport mode fex-fabric
+  fex associate 123
+
+interface port-channel301
+  description [PC] sw-dp4-con-ssc05 WO-0688796
+  switchport mode trunk
+  switchport trunk allowed vlan 608,634
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  vpc 301
+
+interface port-channel302
+  description [PC] sw-dp4-con-bda6
+  switchport mode trunk
+  switchport trunk allowed vlan 608,634
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  vpc 302
+
+interface port-channel303
+  description [PC] sw-dp4-con-dc4-h8 WO-0533110 WO-0531719
+  switchport mode trunk
+  switchport access vlan 608
+  switchport trunk allowed vlan 608,634
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  vpc 303
+
+interface port-channel304
+  description [PC] sw-dp4-con-dc4-h7
+  switchport mode trunk
+  switchport trunk allowed vlan 608,634
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  vpc 304
+
+interface port-channel305
+  description [PC] sw-dp4-con-dc4-h6 WO-0442722
+  switchport mode trunk
+  switchport trunk allowed vlan 608,634
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  vpc 305
+
+interface port-channel306
+  description [PC] sw-dp4-con-dc4-h1 WO-0391390
+  switchport mode trunk
+  switchport trunk allowed vlan 608,634
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  vpc 306
+
+interface port-channel307
+  description [PC] sw-dp4-con-dc4-h2 WO-0391390
+  switchport mode trunk
+  switchport trunk allowed vlan 608,634
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  vpc 307
+
+interface port-channel308
+  description [PC] sw-dp4-con-dc4-h3 WO-0391390
+  switchport mode trunk
+  switchport trunk allowed vlan 608,634
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  vpc 308
+
+interface port-channel309
+  description [PC] sw-dp4-con-dc4-h4 WO-0391390
+  switchport mode trunk
+  switchport trunk allowed vlan 608,634
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  vpc 309
+
+interface port-channel310
+  description [PC] sw-dp4-con-dc4-h5 WO-0372465
+  switchport mode trunk
+  switchport trunk allowed vlan 603,608,634
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  vpc 310
+
+interface port-channel311
+  description [PC] sw-dp4-con-exa11
+  switchport mode trunk
+  switchport trunk allowed vlan 608
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  vpc 311
+
+interface port-channel312
+  description [PC] sw-dp4-con-exa13
+  switchport mode trunk
+  switchport trunk allowed vlan 608
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  vpc 312
+
+interface port-channel313
+  switchport mode trunk
+  switchport trunk allowed vlan 634
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  vpc 313
+
+interface port-channel314
+  description [DATA-BIS-HQ] ZFS ZS5-ES 1850NM1816:ae RF-001597455
+  switchport access vlan 601
+  vpc 314
+
+interface port-channel315
+  description [DATA-BIS-HQ] ZFS ZS5-ES 1901NM180V:ae RF-001597455
+  switchport access vlan 601
+  vpc 315
+
+interface port-channel4000
+  description [TRUNK] peer-link
+  switchport mode trunk
+  switchport trunk allowed vlan 1-4092
+  spanning-tree port type network
+  speed 10000
+  vpc peer-link
+
+interface port-channel4001
+  description [TRUNK] peer-keepalive
+  switchport mode trunk
+  switchport trunk allowed vlan 4093
+  speed 10000
+
+interface Ethernet1/1
+  description [PC] sw-dp4-data-11
+  switchport mode trunk
+  switchport trunk allowed vlan 511,531,600-601,603,608,634,645,648-649,693
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet1/2
+  description [PC] sw-dp4-data-11
+  switchport mode trunk
+  switchport trunk allowed vlan 511,531,600-601,603,608,634,645,648-649,693
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet1/3
+  description [PC] peer-link
+  switchport mode trunk
+  switchport trunk allowed vlan 1-4092
+  channel-group 4000 mode active
+  no shutdown
+
+interface Ethernet1/4
+  description [PC] peer-keepalive
+  switchport mode trunk
+  switchport trunk allowed vlan 4093
+  channel-group 4001 mode active
+  no shutdown
+
+interface Ethernet1/5
+  description [FEX] fex-106
+  switchport mode fex-fabric
+  fex associate 106
+  channel-group 106
+  no shutdown
+
+interface Ethernet1/6
+  description [FEX] fex-105
+  switchport mode fex-fabric
+  fex associate 105
+  channel-group 105
+  no shutdown
+
+interface Ethernet1/7
+  description [FEX] fex-123
+  switchport mode fex-fabric
+  fex associate 123
+  channel-group 123
+  no shutdown
+
+interface Ethernet1/8
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet1/9
+  description [FEX] fex-102
+  switchport mode fex-fabric
+  fex associate 102
+  channel-group 102
+  no shutdown
+
+interface Ethernet1/10
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet1/11
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet1/12
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet1/13
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet1/14
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet1/15
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet1/16
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet1/17
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet1/18
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet1/19
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet1/20
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet1/21
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet1/22
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet1/23
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet1/24
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet1/25
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet1/26
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet1/27
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet1/28
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet1/29
+  description [PC] sw-dp4-lpa-con-3
+  switchport mode trunk
+  switchport trunk allowed vlan 634
+  channel-group 79 mode active
+  no shutdown
+
+interface Ethernet1/30
+  description [PC] sw-dp4-lpa-con-2
+  switchport mode trunk
+  switchport trunk allowed vlan 634
+  channel-group 78 mode active
+  no shutdown
+
+interface Ethernet1/31
+  description [PC] sw-dp4-con-exa11
+  switchport mode trunk
+  switchport trunk allowed vlan 608
+  channel-group 311 mode active
+  no shutdown
+
+interface Ethernet1/32
+  description [PC] sw-dp4-con-exa13
+  switchport mode trunk
+  switchport trunk allowed vlan 608
+  channel-group 312 mode active
+  no shutdown
+
+interface Ethernet2/1
+  description [PC] sw-dp4-data-12
+  switchport mode trunk
+  switchport trunk allowed vlan 511,531,600-601,603,608,634,645,648-649,693
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet2/2
+  description [PC] sw-dp4-data-12
+  switchport mode trunk
+  switchport trunk allowed vlan 511,531,600-601,603,608,634,645,648-649,693
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet2/3
+  description [PC] peer-link
+  switchport mode trunk
+  switchport trunk allowed vlan 1-4092
+  channel-group 4000 mode active
+  no shutdown
+
+interface Ethernet2/4
+  description [PC] peer-keepalive
+  switchport mode trunk
+  switchport trunk allowed vlan 4093
+  channel-group 4001 mode active
+  no shutdown
+
+interface Ethernet2/5
+  description [FEX] fex-106
+  switchport mode fex-fabric
+  fex associate 106
+  channel-group 106
+  no shutdown
+
+interface Ethernet2/6
+  description [FEX] fex-105
+  switchport mode fex-fabric
+  fex associate 105
+  channel-group 105
+  no shutdown
+
+interface Ethernet2/7
+  description [FEX] fex-123
+  switchport mode fex-fabric
+  fex associate 123
+  channel-group 123
+  no shutdown
+
+interface Ethernet2/8
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet2/9
+  description [FEX] fex-102
+  switchport mode fex-fabric
+  fex associate 102
+  channel-group 102
+  no shutdown
+
+interface Ethernet2/10
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet2/11
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet2/12
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet2/13
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet2/14
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet2/15
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet2/16
+  description [RESERVED] Nutanix 150620
+
+interface mgmt0
+  vrf member management
+  ip address 10.64.71.16/21
+
+interface Ethernet102/1/1
+  description [VPC] bda9sw-ip; RF-001894126
+  switchport mode trunk
+  switchport trunk allowed vlan 634
+  channel-group 313 mode active
+  no shutdown
+
+interface Ethernet102/1/2
+  description [DATA-BIS-HQ] ZFS ZS5-ES 1850NM1816:net2 RF-001597455
+  switchport access vlan 601
+  channel-group 314 mode active
+  no shutdown
+
+interface Ethernet102/1/3
+  description [DATA-BIS-HQ] ZFS ZS5-ES 1901NM180V:net2 RF-001597455
+  switchport access vlan 601
+  channel-group 315 mode active
+  no shutdown
+
+interface Ethernet102/1/4
+  description [VPC] sw-dp4-con-spo5
+  switchport mode trunk
+  switchport trunk allowed vlan 608,634
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  channel-group 77 mode active
+  no shutdown
+
+interface Ethernet102/1/5
+
+interface Ethernet102/1/6
+
+interface Ethernet102/1/7
+
+interface Ethernet102/1/8
+
+interface Ethernet102/1/9
+
+interface Ethernet102/1/10
+
+interface Ethernet102/1/11
+
+interface Ethernet102/1/12
+
+interface Ethernet102/1/13
+
+interface Ethernet102/1/14
+
+interface Ethernet102/1/15
+
+interface Ethernet102/1/16
+
+interface Ethernet102/1/17
+
+interface Ethernet102/1/18
+
+interface Ethernet102/1/19
+
+interface Ethernet102/1/20
+
+interface Ethernet102/1/21
+  description [DATA-PLC] exa2-nb WO-0651724
+  switchport access vlan 603
+  no shutdown
+
+interface Ethernet102/1/22
+  description [VPC] sw-dp4-con-exa2 WO-0651724
+  switchport mode trunk
+  switchport trunk allowed vlan 608
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  channel-group 71 mode active
+  no shutdown
+
+interface Ethernet102/1/23
+  description [DATA-BIS-HQ] cft1d WO-0506420
+  switchport access vlan 601
+
+interface Ethernet102/1/24
+  description [VPC] sw-dp4-con-ssc01 WO-0638635
+  switchport mode trunk
+  switchport trunk allowed vlan 608
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  channel-group 70 mode active
+  no shutdown
+
+interface Ethernet102/1/25
+  description [DATA-KT] cft4ddb04 WO-0449585
+  switchport access vlan 645
+
+interface Ethernet102/1/26
+  description [DATA-KT] cft4ddb05 WO-0449585
+  switchport access vlan 645
+
+interface Ethernet102/1/27
+  description [DATA-KT] cft4ddbadm03 WO-0499851
+  switchport access vlan 645
+  no shutdown
+
+interface Ethernet102/1/28
+  description [DATA-KT] cft4ddbadm05 WO-0444003
+  switchport access vlan 645
+
+interface Ethernet102/1/29
+  description [DATA-KT] cft4ddbadm04 WO-0444003
+  switchport access vlan 645
+
+interface Ethernet102/1/30
+  description [DATA-KT] cft4ddbadm03 WO-0444003
+  switchport access vlan 645
+
+interface Ethernet102/1/31
+  description [DATA-PLC] exa5 WO-0424663
+  switchport access vlan 603
+  no shutdown
+
+interface Ethernet102/1/32
+  description [VPC] sw-dp4-con-dc4-i9 WO-0391391
+  switchport mode trunk
+  switchport trunk allowed vlan 608
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  channel-group 76 mode active
+  no shutdown
+
+interface Ethernet102/1/33
+  description [VPC] sw-dp4-con-dc4-i8 WO-0391391
+  switchport mode trunk
+  switchport trunk allowed vlan 608
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  channel-group 75 mode active
+  no shutdown
+
+interface Ethernet102/1/34
+  description [VPC] sw-dp4-con-dc4-i7 WO-0391391
+  switchport mode trunk
+  switchport trunk allowed vlan 608
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  channel-group 74 mode active
+  no shutdown
+
+interface Ethernet102/1/35
+  description [VPC] sw-dp4-con-dc4-i6 WO-0391391
+  switchport mode trunk
+  switchport trunk allowed vlan 608
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  channel-group 73 mode active
+  no shutdown
+
+interface Ethernet102/1/36
+  description [VPC] sw-dp4-con-dc4-i5 WO-0391391
+  switchport mode trunk
+  switchport trunk allowed vlan 608
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  channel-group 72 mode active
+  no shutdown
+
+interface Ethernet102/1/37
+
+interface Ethernet102/1/38
+
+interface Ethernet102/1/39
+  description [VPC] sw-dp4-con-dc4-i2 WO-0391391
+  switchport mode trunk
+  switchport trunk allowed vlan 608
+  spanning-tree guard root
+  spanning-tree bpdufilter disable
+  channel-group 69 mode active
+  no shutdown
+
+interface Ethernet102/1/40
+
+interface Ethernet102/1/41
+  description [DATA-BIS-HQ] cft1d rack-I1 Exadata WO-0387079
+  switchport access vlan 601
+  no shutdown
+
+interface Ethernet102/1/42
+  description [DATA-BIS-HQ] cft1d rack-I1 Exadata WO-0387079
+  switchport access vlan 601
+  no shutdown
+
+interface Ethernet102/1/43
+
+interface Ethernet102/1/44
+
+interface Ethernet102/1/45
+  description [DATA-KT] cft3d rack-I5 Exadata WO-0387079
+  switchport access vlan 645
+
+interface Ethernet102/1/46
+  description [DATA-KT] cft3d rack-I5 Exadata WO-0387079
+  switchport access vlan 645
+
+interface Ethernet102/1/47
+  description [DATA-KT] cft4d rack-I9 Exadata WO-0387079
+  switchport access vlan 645
+  no shutdown
+
+interface Ethernet102/1/48
+  description [DATA-KT] cft4d rack-I9 Exadata WO-0387079
+  switchport access vlan 645
+  no shutdown
+
+interface Ethernet105/1/1
+
+interface Ethernet105/1/2
+  description [DATA-PLC] exa01 WO-0664544
+  switchport access vlan 603
+  no shutdown
+
+interface Ethernet105/1/3
+  description [DATA-PLC] exa01 WO-0664544
+  switchport access vlan 603
+  no shutdown
+
+interface Ethernet105/1/4
+  description [DATA-PLC] exa01 WO-0664544
+  switchport access vlan 603
+  no shutdown
+
+interface Ethernet105/1/5
+  description [DATA-PLC] exa01 WO-0664544
+  switchport access vlan 603
+  no shutdown
+
+interface Ethernet105/1/6
+
+interface Ethernet105/1/7
+  description [PC] sw-dp4-con-ssc05 WO-0688796
+  switchport mode trunk
+  switchport trunk allowed vlan 608,634
+  channel-group 301 mode active
+  no shutdown
+
+interface Ethernet105/1/8
+  description [PC] sw-dp4-con-bda6
+  switchport mode trunk
+  switchport trunk allowed vlan 608,634
+  channel-group 302 mode active
+  no shutdown
+
+interface Ethernet105/1/9
+
+interface Ethernet105/1/10
+
+interface Ethernet105/1/11
+
+interface Ethernet105/1/12
+
+interface Ethernet105/1/13
+
+interface Ethernet105/1/14
+
+interface Ethernet105/1/15
+
+interface Ethernet105/1/16
+
+interface Ethernet105/1/17
+
+interface Ethernet105/1/18
+
+interface Ethernet105/1/19
+
+interface Ethernet105/1/20
+
+interface Ethernet105/1/21
+
+interface Ethernet105/1/22
+
+interface Ethernet105/1/23
+
+interface Ethernet105/1/24
+
+interface Ethernet105/1/25
+
+interface Ethernet105/1/26
+
+interface Ethernet105/1/27
+
+interface Ethernet105/1/28
+
+interface Ethernet105/1/29
+
+interface Ethernet105/1/30
+
+interface Ethernet105/1/31
+
+interface Ethernet105/1/32
+
+interface Ethernet105/1/33
+  description [PC] sw-dp4-con-dc4-h8 WO-0533110 WO-0531719
+  switchport mode trunk
+  switchport access vlan 608
+  switchport trunk allowed vlan 608,634
+  channel-group 303 mode active
+  no shutdown
+
+interface Ethernet105/1/34
+
+interface Ethernet105/1/35
+
+interface Ethernet105/1/36
+  description [PC] sw-dp4-con-dc4-h7
+  switchport mode trunk
+  switchport trunk allowed vlan 608,634
+  channel-group 304 mode active
+  no shutdown
+
+interface Ethernet105/1/37
+
+interface Ethernet105/1/38
+
+interface Ethernet105/1/39
+
+interface Ethernet105/1/40
+
+interface Ethernet105/1/41
+
+interface Ethernet105/1/42
+
+interface Ethernet105/1/43
+  description [PC] sw-dp4-con-dc4-h6 WO-0442722
+  switchport mode trunk
+  switchport trunk allowed vlan 608,634
+  channel-group 305 mode active
+  no shutdown
+
+interface Ethernet105/1/44
+  description [PC] sw-dp4-con-dc4-h1 WO-0391390
+  switchport mode trunk
+  switchport trunk allowed vlan 608,634
+  channel-group 306 mode active
+  no shutdown
+
+interface Ethernet105/1/45
+  description [PC] sw-dp4-con-dc4-h2 WO-0391390
+  switchport mode trunk
+  switchport trunk allowed vlan 608,634
+  channel-group 307 mode active
+  no shutdown
+
+interface Ethernet105/1/46
+  description [PC] sw-dp4-con-dc4-h3 WO-0391390
+  switchport mode trunk
+  switchport trunk allowed vlan 608,634
+  channel-group 308 mode active
+  no shutdown
+
+interface Ethernet105/1/47
+  description [PC] sw-dp4-con-dc4-h4 WO-0391390
+  switchport mode trunk
+  switchport trunk allowed vlan 608,634
+  channel-group 309 mode active
+  no shutdown
+
+interface Ethernet105/1/48
+  description [PC] sw-dp4-con-dc4-h5 WO-0372465
+  switchport mode trunk
+  switchport trunk allowed vlan 603,608,634
+  channel-group 310 mode active
+  no shutdown
+
+interface Ethernet106/1/1
+  description [~DATA-CONSOLE2] MSKDSSAPP301V:idrac RF-001993670
+  switchport access vlan 634
+  no shutdown
+
+interface Ethernet106/1/2
+  description [~DATA-CONSOLE] sobbsapp403lx:idrac RF-001963670
+  switchport access vlan 608
+  no shutdown
+
+interface Ethernet106/1/3
+  description [~DATA-CONSOLE] sobbsapp405lx:idrac RF-001963670
+  switchport access vlan 608
+  no shutdown
+
+interface Ethernet106/1/4
+  description [~DATA-CONSOLE] sobbsapp407lx:idrac RF-001963670
+  switchport access vlan 608
+  no shutdown
+
+interface Ethernet106/1/5
+  description [~DATA-CONSOLE] sobbsapp409lx:idrac RF-001963670
+  switchport access vlan 608
+  no shutdown
+
+interface Ethernet106/1/6
+  description [~DATA-CONSOLE] sobbsapp411lx:idrac RF-001963670
+  switchport access vlan 608
+  no shutdown
+
+interface Ethernet106/1/7
+  description [~DATA-CONSOLE] sobbsapp413lx:idrac RF-001963670
+  switchport access vlan 608
+  no shutdown
+
+interface Ethernet106/1/8
+  description [~DATA-CONSOLE2] sw-dp4-lpa-data-4_mgmt0
+  switchport access vlan 634
+  no shutdown
+
+interface Ethernet106/1/9
+  description [~DATA-CONSOLE2] sw-dp4-lpa-data-4_mgmt
+  switchport access vlan 634
+  no shutdown
+
+interface Ethernet106/1/10
+
+interface Ethernet106/1/11
+
+interface Ethernet106/1/12
+
+interface Ethernet106/1/13
+
+interface Ethernet106/1/14
+
+interface Ethernet106/1/15
+
+interface Ethernet106/1/16
+
+interface Ethernet106/1/17
+
+interface Ethernet106/1/18
+
+interface Ethernet106/1/19
+
+interface Ethernet106/1/20
+
+interface Ethernet106/1/21
+
+interface Ethernet106/1/22
+
+interface Ethernet106/1/23
+
+interface Ethernet106/1/24
+
+interface Ethernet106/1/25
+  description [DATA-MGMT] MSKDSSAPP301V:eth0 RF-001963670
+  switchport access vlan 600
+  no shutdown
+
+interface Ethernet106/1/26
+
+interface Ethernet106/1/27
+  description [DATA-DMZ-LOCAL] sobbsapp403lx:eth0 RF-001963670
+  switchport access vlan 693
+  no shutdown
+
+interface Ethernet106/1/28
+  description [DATA-DDEI-SANDBOX] sobbsapp403lx:eth1 RF-001963670
+  switchport access vlan 511
+  no shutdown
+
+interface Ethernet106/1/29
+  description [DATA-DMZ-LOCAL] sobbsapp405lx:eth0 RF-001963670
+  switchport access vlan 693
+  no shutdown
+
+interface Ethernet106/1/30
+  description [DATA-DDEI-SANDBOX] sobbsapp405lx:eth1 RF-001963670
+  switchport access vlan 511
+  no shutdown
+
+interface Ethernet106/1/31
+  description [DATA-DMZ-LOCAL] sobbsapp407lx:eth0 RF-001963670
+  switchport access vlan 693
+  no shutdown
+
+interface Ethernet106/1/32
+  description [DATA-DDEI-SANDBOX] sobbsapp407lx:eth1 RF-001963670
+  switchport access vlan 511
+  no shutdown
+
+interface Ethernet106/1/33
+  description [DATA-DMZ-LOCAL] sobbsapp409lx:eth0 RF-001963670
+  switchport access vlan 693
+  no shutdown
+
+interface Ethernet106/1/34
+  description [DATA-DDEI-SANDBOX] sobbsapp409lx:eth1 RF-001963670
+  switchport access vlan 511
+  no shutdown
+
+interface Ethernet106/1/35
+  description [DATA-DMZ-LOCAL] sobbsapp411lx:eth0 RF-001963670
+  switchport access vlan 693
+  no shutdown
+
+interface Ethernet106/1/36
+  description [DATA-DDEI-SANDBOX] sobbsapp411lx:eth1 RF-001963670
+  switchport access vlan 511
+  no shutdown
+
+interface Ethernet106/1/37
+  description [DATA-DMZ-LOCAL] sobbsapp413lx:eth0 RF-001963670
+  switchport access vlan 693
+  no shutdown
+
+interface Ethernet106/1/38
+  description [DATA-DDEI-SANDBOX] sobbsapp413lx:eth1 RF-001963670
+  switchport access vlan 511
+  no shutdown
+
+interface Ethernet106/1/39
+
+interface Ethernet106/1/40
+
+interface Ethernet106/1/41
+
+interface Ethernet106/1/42
+
+interface Ethernet106/1/43
+
+interface Ethernet106/1/44
+
+interface Ethernet106/1/45
+
+interface Ethernet106/1/46
+
+interface Ethernet106/1/47
+
+interface Ethernet106/1/48
+
+interface Ethernet123/1/1
+  description [DATA-CONSOLE] dko-app402l
+  switchport access vlan 608
+  no shutdown
+
+interface Ethernet123/1/2
+  description [DATA-CONSOLE] spm-aaa-404l RF-001034768
+  switchport access vlan 608
+  no shutdown
+
+interface Ethernet123/1/3
+  description [DATA-CONSOLE] spm-aaa-406l RF-001034768
+  switchport access vlan 608
+  no shutdown
+
+interface Ethernet123/1/4
+  description [DATA-CONSOLE] spm-aaa-408l RF-001034768
+  switchport access vlan 608
+  no shutdown
+
+interface Ethernet123/1/5
+  description [DATA-CONSOLE] spm-aaa-410l RF-001034768
+  switchport access vlan 608
+  no shutdown
+
+interface Ethernet123/1/6
+  description [DATA-CONSOLE] spm-aaa-412l RF-001034768
+  switchport access vlan 608
+  no shutdown
+
+interface Ethernet123/1/7
+  description [DATA-CONSOLE] spm-aaa-414l RF-001034768
+  switchport access vlan 608
+  no shutdown
+
+interface Ethernet123/1/8
+  description [DATA-CONSOLE] spm-scd-402l RF-001034768
+  switchport access vlan 608
+  no shutdown
+
+interface Ethernet123/1/9
+
+interface Ethernet123/1/10
+
+interface Ethernet123/1/11
+
+interface Ethernet123/1/12
+  description [DATA-HB-ANY] hermes-sql-1(2102311XDB6TKA000090):port4 RF-001624723
+  switchport access vlan 531
+  no shutdown
+
+interface Ethernet123/1/13
+  description [DATA-CONSOLE] 2102311XDB6TK9000058 RF-001034768
+  switchport access vlan 608
+  no shutdown
+
+interface Ethernet123/1/14
+  description [DATA-CONSOLE] dp4-f900-03-svp RF-001558401
+  switchport access vlan 608
+  no shutdown
+
+interface Ethernet123/1/15
+  description [~DATA-CONSOLE]  2102311XDB6TKA000099 MGT RF-001340369
+  switchport access vlan 608
+  no shutdown
+
+interface Ethernet123/1/16
+  description [DATA-CONSOLE] dp4-f900-03 RF-001558401
+  switchport access vlan 608
+  no shutdown
+
+interface Ethernet123/1/17
+  description [DATA-CONSOLE] sw-dp4-data-18_mgmt_sup1
+  switchport access vlan 608
+  no shutdown
+
+interface Ethernet123/1/18
+  description [DATA-CONSOLE] sw-dp4-data-18_mgmt_sup2
+  switchport access vlan 608
+  no shutdown
+
+interface Ethernet123/1/19
+  description data-console dp4-vsp5500-04 s/n:30656:mgmt RF-001380975
+  switchport access vlan 608
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet123/1/20
+  description data-console dp4-vspf1500-07 s/n:23091:mgmt RF-001380975
+  switchport access vlan 608
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet123/1/21
+  description data-console hermes-sql-1 mgmt RF-001569792
+  switchport access vlan 608
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet123/1/22
+  description [DATA-CONSOLE] dp4-g370-01-VSP_mgmt RF-001575296
+  switchport access vlan 608
+  no shutdown
+
+interface Ethernet123/1/23
+  description [DATA-CONSOLE] dp4-f900-05_mgmt_2 RF-001575296
+  switchport access vlan 608
+  no shutdown
+
+interface Ethernet123/1/24
+  description [DATA-CONSOLE] dp4-g370-01_mgmt_2 RF-001575296
+  switchport access vlan 608
+  no shutdown
+
+interface Ethernet123/1/25
+
+interface Ethernet123/1/26
+
+interface Ethernet123/1/27
+
+interface Ethernet123/1/28
+
+interface Ethernet123/1/29
+
+interface Ethernet123/1/30
+
+interface Ethernet123/1/31
+
+interface Ethernet123/1/32
+
+interface Ethernet123/1/33
+
+interface Ethernet123/1/34
+
+interface Ethernet123/1/35
+  description [DATA-HB-ANY] tbsql-9:e2 RF-001811299
+  switchport access vlan 531
+  no shutdown
+
+interface Ethernet123/1/36
+  description sw-dp4-data-26
+  switchport access vlan 608
+  no shutdown
+
+interface Ethernet123/1/37
+  description [DATA-IBM-HMC2] p980-1-NT:HMC2 RF-001318309
+  switchport access vlan 649
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet123/1/38
+  description [DATA-IBM-HMC2] p980-1-NT:HMC2 RF-001318309
+  switchport access vlan 649
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet123/1/39
+  description [DATA-IBM-HMC2] p980-5:HMC2 RF-001318309
+  switchport access vlan 649
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet123/1/40
+  description [DATA-IBM-HMC2] p980-5:HMC2 RF-001318309
+  switchport access vlan 649
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet123/1/41
+  description [DATA-IBM-HMC2] p980-3:HMC2 RF-001318309
+  switchport access vlan 649
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet123/1/42
+  description [DATA-IBM-HMC2] p980-3:HMC2 RF-001318309
+  switchport access vlan 649
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet123/1/43
+  description [DATA-IBM-HMC2] p980-1 RF-001313447
+  switchport access vlan 649
+  no shutdown
+
+interface Ethernet123/1/44
+  description [DATA-IBM-HMC2] p980-1 RF-001313447
+  switchport access vlan 649
+  no shutdown
+
+interface Ethernet123/1/45
+  description [DATA-CONSOLE2]
+  switchport access vlan 634
+  no shutdown
+
+interface Ethernet123/1/46
+  description [DATA-CONSOLE] FC-34-DCX RF-001116287
+  switchport access vlan 608
+  no shutdown
+
+interface Ethernet123/1/47
+  description [DATA-IBM-HMC2] P-880-11
+  switchport access vlan 649
+  no shutdown
+
+interface Ethernet123/1/48
+  description [DATA-IBM-HMC2] P-880-11
+  switchport access vlan 649
+  no shutdown
+clock timezone MSK 3 0
+cli alias name wr copy running-config startup-config
+line console
+line vty
+boot kickstart bootflash:/n5000-uk9-kickstart.7.3.6.N1.1.bin
+boot system bootflash:/n5000-uk9.7.3.6.N1.1.bin 
+logging logfile device.log 7 size 1000000
+logging server 10.64.0.93 5 use-vrf management
+logging timestamp milliseconds
+logging monitor 7
+
+

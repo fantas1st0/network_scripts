@@ -1,0 +1,346 @@
+
+Legend:
+                (*) - local vPC is down, forwarding via vPC peer-link
+
+vPC domain id                          : 73  
+Peer status                            : peer adjacency formed ok      
+vPC keep-alive status                  : peer is alive                 
+Configuration consistency status       : success 
+Per-vlan consistency status            : success                       
+Type-2 consistency status              : success 
+vPC role                               : primary                       
+Number of vPCs configured              : 48  
+Peer Gateway                           : Enabled
+Peer gateway excluded VLANs            : -
+Peer gateway excluded bridge-domains   : -
+Dual-active excluded VLANs and BDs     : -
+Graceful Consistency Check             : Enabled
+Auto-recovery status                   : Enabled (timeout = 240 seconds)
+Operational Layer3 Peer-router         : Disabled
+Self-isolation                         : Disabled
+
+vPC Peer-link status
+--------------------------------------------------------------------------------
+id   Port   Status Active vlans                   Active BDs
+--   ----   ------ -------------------------------------------------------------
+1    Po1000 up     1,1010,1020,2291-2292,2625,280 -                            
+                   1,2901,2911-2918,2951,2954,303                              
+                   5-3036,3061,3068,3074,3087,309                              
+                   5,3104-3105,3108,3115,3126,315                              
+                   5,3157,3163,3187,3191-3192,322                          ....
+
+vPC status
+Id               : 31   
+  Port           : Po31       
+  Status         : up
+  Consistency    : success   
+  Reason         : success       
+  Active Vlans   : 2291-2292,2801,3155,3157,3163,3187,3191-3192,3314-3315,3329-
+                   3332,3341-3344,3428-3430,3453,3519,3521,3523,3542-3544,3769,
+                   3772,3785-3786,3797,3801,3804,3812,3815,3817,3825-3826,3837-
+                   3838,3842,3845,3848,3850,3865,3867,3901,3904,3912,3915,3917,
+                   3923,3926,3945,3948,3950,3965                               
+Id               : 32   
+  Port           : Po32       
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 33   
+  Port           : Po33       
+  Status         : up
+  Consistency    : success   
+  Reason         : success       
+  Active Vlans   : 3108,3534,3674,3775-3776,3787,3809,3830,3868                
+Id               : 34   
+  Port           : Po34       
+  Status         : up
+  Consistency    : success   
+  Reason         : success       
+  Active Vlans   : 3108,3534,3674,3775-3776,3787,3809,3830,3868                
+Id               : 35   
+  Port           : Po35       
+  Status         : up
+  Consistency    : success   
+  Reason         : success       
+  Active Vlans   : 1,1010,1020,2291-2292,2625,2801,2901,2911-2918,2951,2954,303
+                   5-3036,3061,3068,3074,3087,3095,3104-3105,3108,3115,3126,315
+                   5,3157,3163,3187,3191-3192,3228-3229,3238,3245,3272,3283,328
+                   5-3286,3292,3294,3299,3314-3315,3329-3344,3347,3428-3430,345
+                   3,3491,3519,3521,3523,3527,3529-3530,3532-3535,3542-3544....
+Id               : 51   
+  Port           : Po51       
+  Status         : up
+  Consistency    : success   
+  Reason         : success       
+  Active Vlans   : 2901,2951,2954,3061,3104-3105,3155,3283,3285,3292,3347,3519,
+                   3521,3523,3529-3530,3542-3544,3557-3558,3573,3597,3656,3773-
+                   3774,3777,3791,3799,3805-3808,3824,3829-3830,3854,3868,3926 
+Id               : 52   
+  Port           : Po52       
+  Status         : down* 
+  Consistency    : success   
+  Reason         : success       
+  Active Vlans   : -                                                           
+Id               : 53   
+  Port           : Po53       
+  Status         : down* 
+  Consistency    : success   
+  Reason         : success       
+  Active Vlans   : -                                                           
+Id               : 54   
+  Port           : Po54       
+  Status         : up
+  Consistency    : success   
+  Reason         : success       
+  Active Vlans   : 2911-2915,3095,3155,3157,3299,3329-3344,3347,3428,3453,3491,
+                   3778,3792,3799                                              
+Id               : 55   
+  Port           : Po55       
+  Status         : down* 
+  Consistency    : success   
+  Reason         : success       
+  Active Vlans   : -                                                           
+Id               : 56   
+  Port           : Po56       
+  Status         : down* 
+  Consistency    : success   
+  Reason         : success       
+  Active Vlans   : -                                                           
+Id               : 57   
+  Port           : Po57       
+  Status         : up
+  Consistency    : success   
+  Reason         : success       
+  Active Vlans   : 3163,3187,3192,3314,3656,3662,3668,3674,3768-3769,3771,3776,
+                   3782,3784-3786,3799,3801-3869,3901,3904,3912,3915,3917,3923,
+                   3926,3945,3948,3950,3965                                    
+Id               : 58   
+  Port           : Po58       
+  Status         : up
+  Consistency    : success   
+  Reason         : success       
+  Active Vlans   : 1,1010,1020,2291-2292,2625,2801,2901,2911-2918,2951,2954,303
+                   5-3036,3061,3068,3074,3087,3095,3104-3105,3108,3115,3126,315
+                   5,3157,3163,3187,3191-3192,3228-3229,3238,3245,3272,3283,328
+                   5-3286,3292,3294,3299,3314-3315,3329-3344,3347,3428-3430,345
+                   3,3491,3519,3521,3523,3527,3529-3530,3532-3535,3542-3544....
+Id               : 59   
+  Port           : Po59       
+  Status         : up
+  Consistency    : success   
+  Reason         : success       
+  Active Vlans   : 2901,2911-2918,2951,3095,3155,3157,3329-3344,3347,3453,3491,
+                   3532-3533,3546,3552,3778,3783,3792,3799,3805,3807,3829-3830,
+                   3852,3854-3855,3923                                         
+Id               : 60   
+  Port           : Po60       
+  Status         : up
+  Consistency    : success   
+  Reason         : success       
+  Active Vlans   : 2911-2915,2951,3095,3155,3157,3329-3344,3347,3453,3491,3532,
+                   3778,3792,3799                                              
+Id               : 61   
+  Port           : Po61       
+  Status         : up
+  Consistency    : success   
+  Reason         : success       
+  Active Vlans   : 2951,3035-3036,3105,3155,3187,3192,3428,3535,3565-3567,3573,
+                   3597,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3799,
+                   3801-3812,3815-3816,3821,3824-3826,3828-3830,3835-3837,3839-
+                   3847,3850,3852-3855,3857-3862,3865-3868,3901,3904,3915,3926,
+                   3950,3965                                                   
+Id               : 62   
+  Port           : Po62       
+  Status         : up
+  Consistency    : success   
+  Reason         : success       
+  Active Vlans   : 2911-2914,3095,3115,3155,3157,3187,3299,3315,3329-3344,3347,
+                   3428,3430,3453,3778,3792,3799                               
+Id               : 63   
+  Port           : Po63       
+  Status         : up
+  Consistency    : success   
+  Reason         : success       
+  Active Vlans   : 2901,2951,3126,3155,3779,3781,3792,3799,3801,3807-3808,3852-
+                   3854,3926                                                   
+Id               : 64   
+  Port           : Po64       
+  Status         : down* 
+  Consistency    : success   
+  Reason         : success       
+  Active Vlans   : -                                                           
+Id               : 65   
+  Port           : Po65       
+  Status         : up
+  Consistency    : success   
+  Reason         : success       
+  Active Vlans   : 2913-2914,3533,3799                                         
+Id               : 301  
+  Port           : Po301      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 313  
+  Port           : Po313      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 314  
+  Port           : Po314      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 315  
+  Port           : Po315      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 316  
+  Port           : Po316      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 317  
+  Port           : Po317      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 318  
+  Port           : Po318      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 319  
+  Port           : Po319      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 320  
+  Port           : Po320      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 321  
+  Port           : Po321      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 322  
+  Port           : Po322      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 323  
+  Port           : Po323      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 324  
+  Port           : Po324      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 403  
+  Port           : Po403      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 404  
+  Port           : Po404      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 409  
+  Port           : Po409      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 410  
+  Port           : Po410      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 411  
+  Port           : Po411      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 412  
+  Port           : Po412      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 413  
+  Port           : Po413      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 414  
+  Port           : Po414      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 415  
+  Port           : Po415      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 416  
+  Port           : Po416      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 417  
+  Port           : Po417      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 418  
+  Port           : Po418      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 419  
+  Port           : Po419      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 421  
+  Port           : Po421      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           
+Id               : 422  
+  Port           : Po422      
+  Status         : down* 
+  Consistency    : Not Applicable
+  Reason         : Consistency Check Not Performed
+  Active Vlans   : -                                                           

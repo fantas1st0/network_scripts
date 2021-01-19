@@ -1,0 +1,64 @@
+
+
+
+Fan:
+------------------------------------------------------
+Fan             Model                Hw         Status
+------------------------------------------------------
+Chassis-1       N5596UP-FAN          --         ok
+Chassis-2       N5596UP-FAN          --         ok
+Chassis-3       N5596UP-FAN          --         ok
+Chassis-4       N5596UP-FAN          --         ok
+PS-1            N55-PAC-1100W        --         ok
+PS-2            N55-PAC-1100W        --         ok
+
+
+Temperature
+-----------------------------------------------------------------
+Module   Sensor     MajorThresh   MinorThres   CurTemp     Status
+                    (Celsius)     (Celsius)    (Celsius)         
+-----------------------------------------------------------------
+1        Carmel-1   125           110          45          ok             
+1        Carmel-2   125           110          56          ok             
+1        Carmel-3   125           110          48          ok             
+1        Carmel-4   125           110          56          ok             
+1        Carmel-5   125           110          52          ok             
+1        Carmel-6   125           110          41          ok             
+1        Control    68            61           30          ok             
+1        Fan side s 100           90           22          ok             
+1        Port side  100           90           38          ok             
+
+
+Power Supply:
+Voltage: 12 Volts
+-----------------------------------------------------------
+PS  Model                Input Power       Current   Status
+                         Type  (Watts)     (Amps)          
+-----------------------------------------------------------
+1   N55-PAC-1100W        AC    1050.00     87.50     ok                  
+2   N55-PAC-1100W        AC    1050.00     87.50     ok                  
+
+
+Mod Model                   Power     Current     Power     Current     Status
+                            Requested Requested   Allocated Allocated         
+                            (Watts)   (Amps)      (Watts)   (Amps)              
+--- ----------------------  -------   ----------  --------- ----------  ----------
+1    N5K-C5596UP-SUP        648.00    54.00       648.00    54.00       powered-up
+2    N55-M16P               110.40    9.20        110.40    9.20        powered-up
+3    N55-M16P               110.40    9.20        110.40    9.20        powered-up
+4    N55-M16P               110.40    9.20        110.40    9.20        powered-up
+
+
+Power Usage Summary:
+--------------------
+Power Supply redundancy mode:                 Redundant
+Power Supply redundancy operational mode:     Redundant
+
+Total Power Capacity                             2100.00 W
+
+Power reserved for Supervisor(s)                  648.00 W
+Power currently used by Modules                   331.20 W
+
+                                                -------------
+Total Power Available                            1120.80 W
+                                                -------------

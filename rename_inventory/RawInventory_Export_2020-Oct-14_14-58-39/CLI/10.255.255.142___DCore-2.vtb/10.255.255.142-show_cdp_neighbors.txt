@@ -1,0 +1,19 @@
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+vDCRoot.vtb      Gig 5/1           157             R S I  WS-C4500X Ten 2/1/31
+vN77-2-vN7K2(JPG205200BG)
+                 Ten 4/3           150             R S C  N77-C7710 Eth 2/20/1
+DCore-1.vtb      Ten 2/1           166             R S I  CISCO7606 Ten 2/1
+DCore-1.vtb      Ten 4/1           139             R S I  CISCO7606 Ten 4/1
+vN77-1-vN7K1(JPG205200FQ)
+                 Ten 4/4           176             R S C  N77-C7710 Eth 2/20/1
+vN77-2-vOTV-2.vtb(JPG205200BG)
+                 Ten 2/2           126             R S C  N77-C7710 Eth 3/24/1
+V43-MPLS-2-P-2(JPG220400KE)
+                 Ten 4/2           132             R S C  N77-C7710 Eth 2/2
+pDCASR02.vtb     Ten 2/6           150               R    ASR9K Ser TenGigE0/0/0/0
+
+Total cdp entries displayed : 8

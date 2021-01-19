@@ -1,0 +1,116 @@
+
+
+--------------------------------------------------------------------------------
+Port          Native  Status        Port
+              Vlan                  Channel
+--------------------------------------------------------------------------------
+Eth3/21       1       trnk-bndl     Po63
+Eth3/22       1       trnk-bndl     Po63
+Eth3/23       1       trnk-bndl     Po63
+Eth3/24       1       trnk-bndl     Po63
+Eth4/21       1       trnk-bndl     Po64
+Eth4/22       1       trnk-bndl     Po64
+Eth4/23       1       trnk-bndl     Po64
+Eth4/24       1       trnk-bndl     Po64
+Eth5/43       1       trnk-bndl     Po4000
+Eth5/44       1       trnk-bndl     Po4000
+Eth6/43       1       trnk-bndl     Po4000
+Eth6/44       1       trnk-bndl     Po4000
+Po63          1       trunking      --
+Po64          1       trunking      --
+Po4000        1       trunking      --
+
+--------------------------------------------------------------------------------
+Port          Vlans Allowed on Trunk
+--------------------------------------------------------------------------------
+Eth3/21       512-515
+Eth3/22       512-515
+Eth3/23       512-515
+Eth3/24       512-515
+Eth4/21       512-515
+Eth4/22       512-515
+Eth4/23       512-515
+Eth4/24       512-515
+Eth5/43       1-4094
+Eth5/44       1-4094
+Eth6/43       1-4094
+Eth6/44       1-4094
+Po63          512-515
+Po64          512-515
+Po4000        1-4094
+
+--------------------------------------------------------------------------------
+Port          Vlans Err-disabled on Trunk
+--------------------------------------------------------------------------------
+Eth3/21       none
+Eth3/22       none
+Eth3/23       none
+Eth3/24       none
+Eth4/21       none
+Eth4/22       none
+Eth4/23       none
+Eth4/24       none
+Eth5/43       none
+Eth5/44       none
+Eth6/43       none
+Eth6/44       none
+Po63          none
+Po64          none
+Po4000        none
+
+--------------------------------------------------------------------------------
+Port          STP Forwarding
+--------------------------------------------------------------------------------
+Eth3/21       none
+Eth3/22       none
+Eth3/23       none
+Eth3/24       none
+Eth4/21       none
+Eth4/22       none
+Eth4/23       none
+Eth4/24       none
+Eth5/43       none
+Eth5/44       none
+Eth6/43       none
+Eth6/44       none
+Po63          512-515
+Po64          512-515
+Po4000        1,512-515
+
+--------------------------------------------------------------------------------
+Port          Vlans in spanning tree forwarding state and not pruned
+--------------------------------------------------------------------------------
+Eth3/21       none
+Eth3/22       none
+Eth3/23       none
+Eth3/24       none
+Eth4/21       none
+Eth4/22       none
+Eth4/23       none
+Eth4/24       none
+Eth5/43       none
+Eth5/44       none
+Eth6/43       none
+Eth6/44       none
+Po63          512-515
+Po64          512-515
+Po4000        1,512-515
+
+--------------------------------------------------------------------------------
+Port          Vlans Forwarding on FabricPath
+--------------------------------------------------------------------------------
+Eth3/21       none
+Eth3/22       none
+Eth3/23       none
+Eth3/24       none
+Eth4/21       none
+Eth4/22       none
+Eth4/23       none
+Eth4/24       none
+Eth5/43       none
+Eth5/44       none
+Eth6/43       none
+Eth6/44       none
+Po63          none
+Po64          none
+Po4000        none

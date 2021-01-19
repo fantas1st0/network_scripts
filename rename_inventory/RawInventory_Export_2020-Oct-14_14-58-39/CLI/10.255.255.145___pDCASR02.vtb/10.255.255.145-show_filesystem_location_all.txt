@@ -1,0 +1,44 @@
+
+Fri Oct  2 00:22:17.109 MSK
+
+ node:	node0_RSP0_CPU0
+------------------------------------------------------------------
+File Systems:
+
+     Size(b)     Free(b)        Type  Flags  Prefixes
+           -           -     network     rw  qsm/dev/fs/tftp:
+           -           -     network     rw  qsm/dev/fs/rcp:
+           -           -     network     rw  qsm/dev/fs/ftp:
+  2562719744  2561630208  dumper-lnk     rw  qsm/dumper_disk0a:
+  6576652288  3188576256  dumper-lnk     rw  qsm/dumper_harddisk:
+   786972672   786964480  dumper-lnk     rw  qsm/dumper_harddiskb:
+   822083584   820083200  dumper-lnk     rw  qsm/dumper_harddiska:
+ 12810436608 11044921344  dumper-lnk     rw  qsm/dumper_disk0:
+ 12810436608 11044921344  flash-disk     rw  disk0:
+  6576652288  3188576256    harddisk     rw  harddisk:
+   822083584   820083200    harddisk     rw  harddiska:
+   786972672   786964480    harddisk     rw  harddiskb:
+  2562719744  2561630208  flash-disk     rw  disk0a:
+      515072      485376       nvram     rw  nvram:
+
+ node:	node0_0_CPU0
+------------------------------------------------------------------
+File Systems:
+
+     Size(b)     Free(b)        Type  Flags  Prefixes
+           -           -     network     rw  qsm/dev/fs/tftp:
+           -           -     network     rw  qsm/dev/fs/rcp:
+           -           -     network     rw  qsm/dev/fs/ftp:
+   786972672   786964480                 rw  qsm/harddiskb:
+   822083584   820083200                 rw  qsm/harddiska:
+  6576652288  3188576256                 rw  qsm/harddisk:
+  2562719744  2561630208                 rw  qsm/disk0a:
+ 12810436608 11044921344                 rw  qsm/disk0:
+    58327040    53233300       flash     rw  bootflash:
+ 12810436608 11044921344  dumper-lnk     rw  qsm/dumper_disk0:
+  6576652288  3188576256  dumper-lnk     rw  qsm/dumper_harddisk:
+   786972672   786964480  dumper-lnk     rw  qsm/dumper_harddiskb:
+   822083584   820083200  dumper-lnk     rw  qsm/dumper_harddiska:
+  2562719744  2561630208  dumper-lnk     rw  qsm/dumper_disk0a:
+ 12508446720 12505367040                 rw  lcdisk0:
+  3127902208  3127112704                 rw  lcdisk0a:

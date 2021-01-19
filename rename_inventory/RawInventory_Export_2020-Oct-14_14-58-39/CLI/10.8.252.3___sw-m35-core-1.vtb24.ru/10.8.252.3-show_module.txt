@@ -1,0 +1,58 @@
+
+Mod  Ports  Module-Type                         Model              Status
+---  -----  ----------------------------------- ------------------ ----------
+1    24     10 Gbps Ethernet Module             N7K-M224XP-23L     ok
+2    24     10 Gbps Ethernet Module             N7K-M224XP-23L     ok
+5    0      Supervisor Module-2                 N7K-SUP2           active *
+6    0      Supervisor Module-2                 N7K-SUP2           ha-standby
+
+Mod  Sw               Hw
+---  ---------------  ------
+1    7.3(3)D1(1)      1.1     
+2    7.3(3)D1(1)      1.1     
+5    7.3(3)D1(1)      1.0     
+6    7.3(3)D1(1)      1.0     
+
+
+
+Mod  MAC-Address(es)                         Serial-Num
+---  --------------------------------------  ----------
+1    84-78-ac-58-15-a8 to 84-78-ac-58-15-c3  JAF1652ANCH
+2    84-78-ac-0b-9f-5c to 84-78-ac-0b-9f-77  JAF1651AHMK
+5    84-78-ac-57-b8-ee to 84-78-ac-57-b9-00  JAF1652AEFK
+6    84-78-ac-57-b9-27 to 84-78-ac-57-b9-39  JAF1652AEJN
+
+Mod  Online Diag Status
+---  ------------------
+1    Pass
+2    Pass
+5    Pass
+6    Pass
+
+Xbar Ports  Module-Type                         Model              Status
+---  -----  ----------------------------------- ------------------ ----------
+1    0      Fabric Module 2                     N7K-C7010-FAB-2    ok
+2    0      Fabric Module 2                     N7K-C7010-FAB-2    ok
+3    0      Fabric Module 2                     N7K-C7010-FAB-2    ok
+4    0      Fabric Module 2                     N7K-C7010-FAB-2    ok
+5    0      Fabric Module 2                     N7K-C7010-FAB-2    ok
+
+Xbar Sw               Hw
+---  ---------------  ------
+1    NA               1.2     
+2    NA               1.6     
+3    NA               1.2     
+4    NA               1.5     
+5    NA               1.2     
+
+
+
+Xbar MAC-Address(es)                         Serial-Num
+---  --------------------------------------  ----------
+1    NA                                      JAF1651ABRM
+2    NA                                      JAF1723BEDQ
+3    NA                                      JAF1651AHRS
+4    NA                                      JAF1629BNKP
+5    NA                                      JAF1651ABQC
+
+* this terminal session 

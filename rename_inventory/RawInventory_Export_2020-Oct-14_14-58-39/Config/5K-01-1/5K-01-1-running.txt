@@ -1,0 +1,2845 @@
+
+
+!Command: show running-config
+!Time: Tue Oct  6 20:17:45 2020
+
+version 5.0(3)N2(2a)
+feature adapter-fex
+
+feature telnet
+feature tacacs+
+cfs ipv4 distribute
+cfs region 51
+syslogd
+ntp
+vpc
+exit
+cfs eth distribute
+feature udld
+feature interface-vlan
+feature lacp
+feature vpc
+feature lldp
+feature fex
+
+logging level vpc 7
+username admin password 5 $1$zIWywJrT$EDNZ2HAOcE8mOLm8z9g57.  role network-admin
+no password strength-check
+no ip domain-lookup
+ip domain-name vtb
+tacacs-server host 10.128.128.11 key 7 "QAB-KUN" 
+tacacs-server host 10.164.140.150 key 7 "QAB-KUN" 
+aaa group server tacacs+ MSK-TAC 
+    server 10.128.128.11 
+    server 10.164.140.150 
+    source-interface Vlan3000
+hostname 5K-01-1
+ip access-list 111
+  10 permit ip 10.64.0.111/32 any
+class-map type qos class-fcoe
+class-map type queuing class-fcoe
+  match qos-group 1
+class-map type queuing class-all-flood
+  match qos-group 2
+class-map type queuing class-ip-multicast
+  match qos-group 2
+class-map type network-qos class-fcoe
+  match qos-group 1
+class-map type network-qos class-all-flood
+  match qos-group 2
+class-map type network-qos class-ip-multicast
+  match qos-group 2
+fex 101
+  pinning max-links 1
+  description "2k1-101"
+  serial JAF1528CCRN
+fex 102
+  pinning max-links 1
+  description "2k1-102"
+  serial JAF1528AJQH
+fex 103
+  pinning max-links 1
+  description "2k1-103"
+  serial JAF1528CDEH
+fex 104
+  pinning max-links 1
+  description "2k1-104"
+  serial JAF1528CCQB
+fex 105
+  pinning max-links 1
+  description "2k1-105"
+  serial JAF1528CCRB
+fex 106
+  pinning max-links 1
+  description "2k1-106"
+  serial JAF1528BTNE
+fex 107
+  pinning max-links 1
+  description "2k1-107"
+  serial JAF1528BDDH
+fex 108
+  pinning max-links 1
+  description "2k1-108"
+  serial JAF1528CDCS
+fex 109
+  pinning max-links 1
+  description "Blade2k1-109"
+  serial FOC1607193Q
+fex 110
+  pinning max-links 1
+  description "Blade2k1-110"
+  serial FOC16071922
+fex 111
+  pinning max-links 1
+  description "Blade2k1-111"
+  serial FOC16070AFM
+fex 112
+  pinning max-links 1
+  description "Blade2k1-112"
+  serial FOC1607194T
+fex 115
+  pinning max-links 1
+  description "Blade2k1-115"
+fex 116
+  pinning max-links 1
+  description "Blade2k1-116"
+fex 119
+  pinning max-links 1
+  description "Blade2k1-119"
+  serial FOC16152P2C
+fex 120
+  pinning max-links 1
+  description "Blade2k1-120"
+  serial FOC16152P3Z
+snmp-server user admin network-admin auth md5 0xb390230ef86c18d3540be72ac7d19328 priv 0xb390230ef86c18d3540be72ac7d19328 localizedkey
+snmp-server host 10.150.128.100 traps version 2c covex 
+snmp-server host 10.150.128.100 use-vrf default
+snmp-server host 10.132.128.21 traps version 2c covex 
+snmp-server host 10.132.128.21 use-vrf default
+snmp-server host 10.164.147.100 traps version 2c covex 
+snmp-server host 10.164.147.100 use-vrf default
+snmp-server enable traps bridge topologychange
+snmp-server enable traps bridge newroot
+snmp-server enable traps entity fru
+snmp-server enable traps cfs state-change-notif
+snmp-server enable traps cfs merge-failure
+snmp-server enable traps upgrade UpgradeOpNotifyOnCompletion
+snmp-server enable traps upgrade UpgradeJobStatusNotify
+snmp-server enable traps feature-control FeatureOpStatusChange
+snmp-server enable traps sysmgr cseFailSwCoreNotifyExtended
+snmp-server enable traps config ccmCLIRunningConfigChanged
+snmp-server community CiscoAudit2020 group network-operator
+snmp-server community covex group network-operator
+snmp-server community CiscoAudit2020 use-acl 111
+ntp server 10.130.255.100
+ntp server 10.164.0.200
+ntp source-interface  Vlan3000
+aaa authentication login default group MSK-TAC 
+aaa accounting default group MSK-TAC 
+
+vrf context management
+  ip route 10.128.0.0/9 10.132.116.1
+vlan 1
+vlan 10
+  name v-VPNServers
+vlan 107
+  name v-nInet-Srv
+vlan 110
+  name v-vrnNetDevices
+vlan 129
+  name DirectInet
+vlan 139
+  name v-VRN-VTB-MM
+vlan 145
+  name Swift_DMZ
+vlan 167
+  name HB-502-610
+vlan 168
+  name SLB_VTB_Servers
+vlan 169
+  name VTBServers_2
+vlan 171
+  name VTBServers3
+vlan 172
+  name vVipInet
+vlan 174
+  name vVRN-nInet-SRV
+vlan 175
+  name Local_HB
+vlan 176
+  name vContactSRV
+vlan 177
+  name vVrnInetServers
+vlan 178
+  name vRServers
+vlan 179
+  name Somib_Servers
+vlan 180
+  name vForeign-Branch-Servers
+vlan 183
+  name HB_Transit_Temp
+vlan 184
+  name vVRN-PSB-VTB
+vlan 187
+  name v-vrn-VTB-MM-CC
+vlan 188
+  name VTB-SERVERS-ROOM502
+vlan 189
+  name ZOOServers
+vlan 190
+  name SERVER_VORON2
+vlan 191
+  name v-VTB-CC-LOCAL-VLAN
+vlan 193
+  name RSRV
+vlan 194
+  name vVRN-VTB-DEV-Servers2
+vlan 199
+  name v-VTB-CORE-NET-SRV
+vlan 293
+  name Plu_RSRV_Servers
+vlan 294
+  name vnInet_Servers
+vlan 295
+  name Plu-Backup_Net
+vlan 701
+  name Cluster_HB
+vlan 702
+  name CrazyCluster
+vlan 3000
+  name MNG
+vlan 3006
+  name peer-keepalive
+vlan 3111
+  name Local_Gigamon_SPAN_esxivs14
+vlan 3116
+  name Local_Gigamon_SPAN_esxivs16
+vlan 3119
+  name Local_Gigamon_SPAN_esxivs20
+vlan 3123
+  name Test_Gigamon
+vlan 3127
+  name InfraMon
+vlan 3128
+  name NetAdmins-Servers
+vlan 3130
+  name SRV_VTB-Core
+vlan 3131
+  name mng_SRV_VTB-Core
+vlan 3136
+  name Ilo_2
+vlan 3137
+  name Core_AppCommon
+vlan 3138
+  name VTBCore-VirtServers
+vlan 3139
+  name Core-VirtServers2
+vlan 3140
+  name LB_VTB_spec_ClearWay
+vlan 3141
+  name cons-2
+vlan 3143
+  name Virt
+vlan 3144
+  name VirtBalance
+vlan 3145
+  name esx_l2
+vlan 3147
+  name TMG_Balance
+vlan 3148
+  name ESX_VDI_L2
+vlan 3149
+  name VTB-DEV-144
+vlan 3150
+  name NFS
+vlan 3151
+  name RSRV-252.64/26
+vlan 3152
+  name RSRV-249.0/25
+vlan 3153
+  name CitrixProxyFarm
+vlan 3154
+  name VTB-RSRV-3
+vlan 3155
+  name VDI-SRV2
+vlan 3161
+  name VDI-AGW
+vlan 3162
+  name Reuters_SRV
+vlan 3166
+  name IBM-HMC-HB2
+vlan 3167
+  name ILO
+vlan 3169
+  name Inet-DNLD-LNK-NO-IP
+vlan 3170
+  name VipInet
+vlan 3177
+  name nInet-SRV-NS-LB
+vlan 3180
+  name Cloud-Provision
+vlan 3181
+  name HP_Cloud_Test_Prod
+vlan 3183
+  name VTB_Console_4
+vlan 3184
+  name Inet-LB-RealServers
+vlan 3198
+  name LB_Inet_spec_ClearWay
+vlan 3199
+  name Local_HCP
+vlan 3200
+  name VTB-Core_Cloud_SRV
+vlan 3201
+  name VTB-Core__MGMT_Cloud
+vlan 3202
+  name VTB-Core-Cloud_Service
+vlan 3203
+  name VTB-Core_Cloud_Provision
+vlan 3204
+  name VTB-Core_Cloud_IBM_Provision
+vlan 3205
+  name VTB-DEV_Cloud_SRV
+vlan 3206
+  name VTB-RSRV_Cloud_SRV
+vlan 3207
+  name VTB-Core_cloud_l2_HA
+vlan 3300
+  name VTB-VDI-TEST
+vlan 3308
+  name VTB-DEV_VDI
+vlan 3313
+  name VDI-30
+vlan 3316
+  name HPCloud-TEST
+vlan 3318
+  name VTB-FIN-SRV
+vlan 3428
+  name VipInet_VdiSRV
+vlan 3434
+  name v-VTB-KBR-SRV-01
+vlan 3446-3449
+vlan 3450
+  name vdi-32
+vlan 3451
+  name vdi-33
+vlan 3452
+  name vdi-34
+vlan 3467
+  name vdi_3467
+vlan 3488
+  name nInet-BE_SRV
+vlan 3628
+  name VTB-RF-SERVERS-VRN01
+vlan 3630
+  name VTB-RF-BM-SRV1
+vlan 3636
+  name VTB-RF-CAP-SRV1
+vlan 3642
+  name VTB-RF-24-SRV1
+vlan 3850
+  name pSeries_HMC1
+vlan 3929
+  name cloud_3929
+vlan 3950
+  name pSeries_HMC2
+vlan 3954
+  name Cloud_MGMT
+spanning-tree vlan 1-3967,4048-4093 priority 53248
+vpc domain 51
+  role priority 100
+  peer-keepalive destination 10.132.253.202 source 10.132.253.201 vrf default
+port-profile type ethernet SingleHost
+  no cdp enable
+  state enabled
+port-profile type port-channel BrocadeNetApp_Access
+  state enabled
+port-profile type port-channel BladeSwitch
+  switchport mode trunk
+  state enabled
+port-profile type port-channel EsxHost
+  switchport mode trunk
+  spanning-tree port type edge
+  state enabled
+
+
+interface Vlan1
+
+interface Vlan309
+
+interface Vlan3000
+  no shutdown
+  ip address 10.132.255.4/25
+
+interface Vlan3006
+  no shutdown
+  ip address 10.132.253.201/29
+
+interface port-channel1
+
+interface port-channel7
+  switchport mode trunk
+  vpc 7
+
+interface port-channel101
+  description --- 2K1-101 ---
+  switchport mode fex-fabric
+  vpc 101
+  fex associate 101
+
+interface port-channel102
+  description --- 2K1-102 ---
+  switchport mode fex-fabric
+  vpc 102
+  fex associate 102
+
+interface port-channel103
+  description --- 2K1-103 ---
+  switchport mode fex-fabric
+  vpc 103
+  fex associate 103
+
+interface port-channel104
+  description --- 2K1-104 ---
+  switchport mode fex-fabric
+  vpc 104
+  fex associate 104
+
+interface port-channel105
+  description --- 2K1-105 ---
+  switchport mode fex-fabric
+  vpc 105
+  fex associate 105
+
+interface port-channel106
+  description --- 2K1-106 ---
+  switchport mode fex-fabric
+  vpc 106
+  fex associate 106
+
+interface port-channel107
+  description --- 2K1-107 ---
+  switchport mode fex-fabric
+  vpc 107
+  fex associate 107
+
+interface port-channel108
+  description --- 2K1-108 ---
+  switchport mode fex-fabric
+  vpc 108
+  fex associate 108
+
+interface port-channel109
+  description --- Blade2k1-109 ---
+  switchport mode fex-fabric
+  vpc 109
+  fex associate 109
+
+interface port-channel110
+  description --- Blade2k1-110 ---
+  switchport mode fex-fabric
+  vpc 110
+  fex associate 110
+
+interface port-channel111
+  description --- Blade2k1-111 ---
+  switchport mode fex-fabric
+  vpc 111
+  fex associate 111
+
+interface port-channel112
+  description --- Blade2k1-112 ---
+  switchport mode fex-fabric
+  vpc 112
+  fex associate 112
+
+interface port-channel301
+  switchport access vlan 3150
+  spanning-tree port type edge
+
+interface port-channel302
+  switchport access vlan 3150
+  spanning-tree port type edge
+
+interface port-channel305
+  inherit port-profile EsxHost
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800, 3100-3600
+
+interface port-channel306
+  inherit port-profile EsxHost
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800, 3100-3600, 3628, 3630, 3636, 3642
+
+interface port-channel307
+  inherit port-profile EsxHost
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800, 3100-3600, 3628, 3630, 3636, 3642
+
+interface port-channel308
+  inherit port-profile EsxHost
+  description --- VMWare for NS1 10.132.128.101 ---
+  switchport mode trunk
+  switchport trunk allowed vlan 3128, 3144, 3147, 3149, 3152, 3169, 3177
+
+interface port-channel309
+  inherit port-profile EsxHost
+  description --- VMWare for NS1 10.132.128.102  ---
+  switchport mode trunk
+  switchport trunk allowed vlan 3128, 3144, 3147, 3149, 3152, 3177
+
+interface port-channel310
+  inherit port-profile EsxHost
+  description == ESXIVS 18 ==
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800, 3100-3600, 3628, 3630, 3636, 3642
+
+interface port-channel311
+  description == ESXIVS 18 NFS ==
+  switchport access vlan 3150
+  spanning-tree port type edge
+
+interface port-channel312
+  inherit port-profile EsxHost
+  description == ESXIVS 20 ==
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800, 3100-3600, 3628, 3630, 3636, 3642
+
+interface port-channel313
+  description == ESXIVS 20 NFS ==
+  switchport access vlan 3150
+  spanning-tree port type edge
+
+interface port-channel314
+  inherit port-profile EsxHost
+  description == ESXIVS 14 ==
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800, 3100-3600, 3628, 3630, 3636, 3642
+
+interface port-channel315
+  description == ESXIVS 14 NFS ==
+  switchport access vlan 3150
+  spanning-tree port type edge
+
+interface port-channel316
+  inherit port-profile EsxHost
+  description == ESXIVS 16 ==
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800, 3100-3600, 3628, 3630, 3636, 3642
+
+interface port-channel317
+  description == ESXIVS 16 NFS ==
+  switchport access vlan 3150
+  spanning-tree port type edge
+
+interface port-channel318
+  switchport mode trunk
+  switchport trunk allowed vlan 3138-3139,3183
+
+interface port-channel319
+  switchport mode trunk
+  switchport trunk allowed vlan 3138-3139,3183
+
+interface port-channel320
+  switchport mode trunk
+  switchport trunk allowed vlan 3138-3139,3183
+
+interface port-channel321
+  switchport mode trunk
+  switchport trunk allowed vlan 3138-3139,3183
+
+interface port-channel322
+  switchport access vlan 3130
+
+interface port-channel323
+  description UCRA01Q
+  switchport access vlan 3448
+
+interface port-channel324
+  description UCCA01Q
+  switchport access vlan 3449
+
+interface port-channel325
+  description // CA-STORAGE-02 //
+  switchport access vlan 3128
+
+interface port-channel400
+  description //ca-storage-01//
+  switchport access vlan 3128
+
+interface port-channel601
+  description [VDI-SRV2] vdic-hv101h:ae RF-001526578
+  switchport mode trunk
+  vpc 601
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155
+
+interface port-channel602
+  description [VDI-SRV2] vdic-hv102h:ae RF-001526578
+  switchport mode trunk
+  vpc 602
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155
+
+interface port-channel603
+  description [VDI-SRV2] vdic-hv103h:ae RF-001526578
+  switchport mode trunk
+  vpc 603
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155
+
+interface port-channel604
+  description [VDI-SRV2] vdic-hv104h:ae RF-001526578
+  switchport mode trunk
+  vpc 604
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155
+
+interface port-channel605
+  description [VDI-SRV2] vdic-hv105h:ae RF-001526578
+  switchport mode trunk
+  vpc 605
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155
+
+interface port-channel606
+  description [VDI-SRV2] vdic-hv106h:ae RF-001526578
+  switchport mode trunk
+  vpc 606
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155
+
+interface port-channel607
+  description [VDI-SRV2] vdic-hv107h:ae RF-001526578
+  switchport mode trunk
+  vpc 607
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155
+
+interface port-channel608
+  description [VDI-SRV2] vdic-hv108h:ae RF-001526578
+  switchport mode trunk
+  vpc 608
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155
+
+interface port-channel609
+  description [VDI-SRV2] vdic-hv109h:ae RF-001526578
+  switchport mode trunk
+  vpc 609
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155
+
+interface port-channel610
+  description [VDI-SRV2] vdic-hv110h:ae RF-001526578
+  switchport mode trunk
+  vpc 610
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155
+
+interface port-channel701
+  description TRUNK vdic-hv101h:ae RF-001526578
+  switchport mode trunk
+  vpc 701
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155,3313,3450-3452,3467
+
+interface port-channel702
+  description TRUNK vdic-hv102h:ae RF-001526578
+  switchport mode trunk
+  vpc 702
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155,3313,3450-3452,3467
+
+interface port-channel703
+  description TRUNK vdic-hv103h:ae RF-001526578
+  switchport mode trunk
+  vpc 703
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155,3313,3450-3452,3467
+
+interface port-channel704
+  description TRUNK vdic-hv104h:ae RF-001526578
+  switchport mode trunk
+  vpc 704
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155,3313,3450-3452,3467
+
+interface port-channel705
+  description TRUNK vdic-hv105h:ae RF-001526578
+  switchport mode trunk
+  vpc 705
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155,3313,3450-3452,3467
+
+interface port-channel706
+  description TRUNK vdic-hv106h:ae RF-001526578
+  switchport mode trunk
+  vpc 706
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155,3313,3450-3452,3467
+
+interface port-channel707
+  description TRUNK vdic-hv107h:ae RF-001526578
+  switchport mode trunk
+  vpc 707
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155,3313,3450-3452,3467
+
+interface port-channel708
+  description TRUNK vdic-hv108h:ae RF-001526578
+  switchport mode trunk
+  vpc 708
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155,3313,3450-3452,3467
+
+interface port-channel709
+  description TRUNK vdic-hv109h:ae RF-001526578
+  switchport mode trunk
+  vpc 709
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155,3313,3450-3452,3467
+
+interface port-channel710
+  description TRUNK vdic-hv110h:ae RF-001526578
+  switchport mode trunk
+  vpc 710
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155,3313,3450-3452,3467
+
+interface port-channel1000
+  description --- 5K1 peer-link ---
+  switchport mode trunk
+  vpc peer-link
+  switchport trunk allowed vlan 1-3005,3007-3967,4048-4093
+  spanning-tree port type network
+
+interface port-channel1001
+  description --- 5K1 peer-keepalive ---
+  switchport mode trunk
+  switchport trunk allowed vlan 3006
+
+interface Ethernet1/1
+  description --- 2K1-101 ---
+  switchport mode fex-fabric
+  fex associate 101
+  channel-group 101
+
+interface Ethernet1/2
+  description --- 2K1-101 ---
+  switchport mode fex-fabric
+  fex associate 101
+  channel-group 101
+
+interface Ethernet1/3
+  description --- 2K1-102 ---
+  switchport mode fex-fabric
+  fex associate 102
+  channel-group 102
+
+interface Ethernet1/4
+  description --- 2K1-102 ---
+  switchport mode fex-fabric
+  fex associate 102
+  channel-group 102
+
+interface Ethernet1/5
+  description --- 2K1-103 ---
+  switchport mode fex-fabric
+  fex associate 103
+  channel-group 103
+
+interface Ethernet1/6
+  description --- 2K1-103 ---
+  switchport mode fex-fabric
+  fex associate 103
+  channel-group 103
+
+interface Ethernet1/7
+  description --- 2K1-104 ---
+  switchport mode fex-fabric
+  fex associate 104
+  channel-group 104
+
+interface Ethernet1/8
+  description --- 2K1-104 ---
+  switchport mode fex-fabric
+  fex associate 104
+  channel-group 104
+
+interface Ethernet1/9
+  description --- 2K1-105 ---
+  switchport mode fex-fabric
+  fex associate 105
+  channel-group 105
+
+interface Ethernet1/10
+  description --- 2K1-105 ---
+  switchport mode fex-fabric
+  fex associate 105
+  channel-group 105
+
+interface Ethernet1/11
+  description --- 2K1-106 ---
+  switchport mode fex-fabric
+  fex associate 106
+  channel-group 106
+
+interface Ethernet1/12
+  description --- 2K1-106 ---
+  switchport mode fex-fabric
+  fex associate 106
+  channel-group 106
+
+interface Ethernet1/13
+  description --- 2K1-107 ---
+  switchport mode fex-fabric
+  fex associate 107
+  channel-group 107
+
+interface Ethernet1/14
+  description --- 2K1-107 ---
+  switchport mode fex-fabric
+  fex associate 107
+  channel-group 107
+
+interface Ethernet1/15
+  description --- 2K1-108 ---
+  switchport mode fex-fabric
+  fex associate 108
+  channel-group 108
+
+interface Ethernet1/16
+  description --- 2K1-108 ---
+  switchport mode fex-fabric
+  fex associate 108
+  channel-group 108
+
+interface Ethernet1/17
+  description [VDI-SRV2] vdic-hv101h:Int Port 1 RF-001526578
+  switchport mode trunk
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155
+  channel-group 601 mode active
+
+interface Ethernet1/18
+  description TRUNK vdic-hv101h:Int Port 2 RF-001526578
+  switchport mode trunk
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155,3313,3450-3452,3467
+  channel-group 701 mode active
+
+interface Ethernet1/19
+  description --- Blade2k1-109 ---
+  switchport mode fex-fabric
+  fex associate 109
+  channel-group 109
+
+interface Ethernet1/20
+  description --- Blade2k1-110 ---
+  switchport mode fex-fabric
+  fex associate 110
+  channel-group 110
+
+interface Ethernet1/21
+  description --- Blade2k1-111 ---
+  switchport mode fex-fabric
+  fex associate 111
+  channel-group 111
+
+interface Ethernet1/22
+  description --- Blade2k1-112 ---
+  switchport mode fex-fabric
+  fex associate 112
+  channel-group 112
+
+interface Ethernet1/23
+  description [VDI-SRV2] vdic-hv102h:Int Port 1 RF-001526578
+  switchport mode trunk
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155
+  channel-group 602 mode active
+
+interface Ethernet1/24
+  description TRUNK vdic-hv102h:Int Port 2 RF-001526578
+  switchport mode trunk
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155,3313,3450-3452,3467
+  channel-group 702 mode active
+
+interface Ethernet1/25
+  description [VDI-SRV2] vdic-hv103h:Int Port 1 RF-001526578
+  switchport mode trunk
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155
+  channel-group 603 mode active
+
+interface Ethernet1/26
+  description TRUNK vdic-hv103h:Int Port 2 RF-001526578
+  switchport mode trunk
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155,3313,3450-3452,3467
+  channel-group 703 mode active
+
+interface Ethernet1/27
+  description [VDI-SRV2] vdic-hv104h:Int Port 1 RF-001526578
+  switchport mode trunk
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155
+  channel-group 604 mode active
+
+interface Ethernet1/28
+  description TRUNK vdic-hv104h:Int Port 2 RF-001526578
+  switchport mode trunk
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155,3313,3450-3452,3467
+  channel-group 704 mode active
+
+interface Ethernet1/29
+  description keepalive channel
+  switchport mode trunk
+  switchport trunk allowed vlan 3006
+  udld aggressive
+  channel-group 1001 mode active
+
+interface Ethernet1/30
+  switchport mode trunk
+  switchport trunk allowed vlan 1-3005,3007-3967,4048-4093
+  udld aggressive
+  channel-group 1000 mode active
+
+interface Ethernet1/31
+  switchport mode trunk
+  udld aggressive
+  channel-group 7 mode active
+
+interface Ethernet1/32
+  switchport mode trunk
+  udld aggressive
+  channel-group 7 mode active
+
+interface Ethernet2/1
+  switchport mode trunk
+  udld aggressive
+  channel-group 7 mode active
+
+interface Ethernet2/2
+  switchport mode trunk
+  udld aggressive
+  channel-group 7 mode active
+
+interface Ethernet2/3
+  switchport mode trunk
+  switchport trunk allowed vlan 1-3005,3007-3967,4048-4093
+  udld aggressive
+  channel-group 1000 mode active
+
+interface Ethernet2/4
+  description keepalive channel
+  switchport mode trunk
+  switchport trunk allowed vlan 3006
+  udld aggressive
+  channel-group 1001 mode active
+
+interface Ethernet2/5
+  description [VDI-SRV2] vdic-hv105h:Int Port 1 RF-001526578
+  switchport mode trunk
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155
+  channel-group 605 mode active
+
+interface Ethernet2/6
+  description TRUNK vdic-hv105h:Int Port 2 RF-001526578
+  switchport mode trunk
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155,3313,3450-3452,3467
+  channel-group 705 mode active
+
+interface Ethernet2/7
+  description [VDI-SRV2] vdic-hv106h:Int Port 1 RF-001526578
+  switchport mode trunk
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155
+  channel-group 606 mode active
+
+interface Ethernet2/8
+  description TRUNK vdic-hv106h:Int Port 2 RF-001526578
+  switchport mode trunk
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155,3313,3450-3452,3467
+  channel-group 706 mode active
+
+interface Ethernet2/9
+  description [VDI-SRV2] vdic-hv107h:Int Port 1 RF-001526578
+  switchport mode trunk
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155
+  channel-group 607 mode active
+
+interface Ethernet2/10
+  description TRUNK vdic-hv107h:Int Port 2 RF-001526578
+  switchport mode trunk
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155,3313,3450-3452,3467
+  channel-group 707 mode active
+
+interface Ethernet2/11
+  description [VDI-SRV2] vdic-hv108h:Int Port 1 RF-001526578
+  switchport mode trunk
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155
+  channel-group 608 mode active
+
+interface Ethernet2/12
+  description TRUNK vdic-hv108h:Int Port 2 RF-001526578
+  switchport mode trunk
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155,3313,3450-3452,3467
+  channel-group 708 mode active
+
+interface Ethernet2/13
+  description [VDI-SRV2] vdic-hv109h:Int Port 1 RF-001526578
+  switchport mode trunk
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155
+  channel-group 609 mode active
+
+interface Ethernet2/14
+  description TRUNK vdic-hv109h:Int Port 2 RF-001526578
+  switchport mode trunk
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155,3313,3450-3452,3467
+  channel-group 709 mode active
+
+interface Ethernet2/15
+  description [VDI-SRV2] vdic-hv110h:Int Port 1 RF-001526578
+  switchport mode trunk
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155
+  channel-group 610 mode active
+
+interface Ethernet2/16
+  description TRUNK vdic-hv110h:Int Port 2 RF-001526578
+  switchport mode trunk
+  switchport trunk native vlan 3155
+  switchport trunk allowed vlan 3155,3313,3450-3452,3467
+  channel-group 710 mode active
+
+interface mgmt0
+  vrf member management
+  ip address 10.132.116.20/24
+
+interface Ethernet101/1/1
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet101/1/2
+  inherit port-profile SingleHost
+  description reserved RF-000768031
+  switchport access vlan 295
+  shutdown
+
+interface Ethernet101/1/3
+  inherit port-profile SingleHost
+  description reserved RF-000768031
+  switchport access vlan 190
+  shutdown
+
+interface Ethernet101/1/4
+  inherit port-profile SingleHost
+  description reserved RF-000768031
+  switchport access vlan 190
+  shutdown
+
+interface Ethernet101/1/5
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet101/1/6
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet101/1/7
+  inherit port-profile SingleHost
+  switchport access vlan 3144
+
+interface Ethernet101/1/8
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet101/1/9
+  inherit port-profile SingleHost
+  switchport access vlan 3144
+
+interface Ethernet101/1/10
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet101/1/11
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet101/1/12
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet101/1/13
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet101/1/14
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet101/1/15
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet101/1/16
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet101/1/17
+  description pSeries HMC 1.1
+  switchport access vlan 3850
+
+interface Ethernet101/1/18
+  description pSeries HMC 2.2
+  switchport access vlan 3950
+
+interface Ethernet101/1/19
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet101/1/20
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet101/1/21
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet101/1/22
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet101/1/23
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet101/1/24
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet101/1/25
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet101/1/26
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet101/1/27
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet101/1/28
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet101/1/29
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet101/1/30
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet101/1/31
+  inherit port-profile SingleHost
+  switchport access vlan 3446
+
+interface Ethernet101/1/32
+  inherit port-profile SingleHost
+  switchport access vlan 3447
+
+interface Ethernet101/1/33
+  inherit port-profile SingleHost
+  switchport access vlan 3448
+
+interface Ethernet101/1/34
+  inherit port-profile SingleHost
+  switchport access vlan 3448
+
+interface Ethernet101/1/35
+  inherit port-profile SingleHost
+  switchport access vlan 3449
+
+interface Ethernet101/1/36
+  inherit port-profile SingleHost
+  description UCCA05
+  switchport access vlan 3130
+  no snmp trap link-status
+
+interface Ethernet101/1/37
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+  no snmp trap link-status
+
+interface Ethernet101/1/38
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+  no snmp trap link-status
+
+interface Ethernet101/1/39
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+  no snmp trap link-status
+
+interface Ethernet101/1/40
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+  no snmp trap link-status
+
+interface Ethernet101/1/41
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+  no snmp trap link-status
+
+interface Ethernet101/1/42
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+  no snmp trap link-status
+
+interface Ethernet101/1/43
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet101/1/44
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet101/1/45
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet101/1/46
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet101/1/47
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet101/1/48
+
+interface Ethernet102/1/1
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet102/1/2
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet102/1/3
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet102/1/4
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet102/1/5
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet102/1/6
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet102/1/7
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet102/1/8
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet102/1/9
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet102/1/10
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet102/1/11
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet102/1/12
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet102/1/13
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet102/1/14
+  inherit port-profile SingleHost
+  no cdp enable
+  switchport access vlan 3128
+  channel-group 400 mode active
+
+interface Ethernet102/1/15
+  inherit port-profile SingleHost
+  switchport access vlan 3141
+
+interface Ethernet102/1/16
+  inherit port-profile SingleHost
+  switchport access vlan 3144
+
+interface Ethernet102/1/17
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet102/1/18
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet102/1/19
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet102/1/20
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet102/1/21
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet102/1/22
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet102/1/23
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet102/1/24
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet102/1/25
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet102/1/26
+  inherit port-profile SingleHost
+  switchport access vlan 10
+
+interface Ethernet102/1/27
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet102/1/28
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet102/1/29
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet102/1/30
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet102/1/31
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet102/1/32
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet102/1/33
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet102/1/34
+  inherit port-profile SingleHost
+  switchport access vlan 702
+
+interface Ethernet102/1/35
+  inherit port-profile SingleHost
+  switchport access vlan 701
+
+interface Ethernet102/1/36
+  inherit port-profile SingleHost
+  switchport access vlan 702
+
+interface Ethernet102/1/37
+  inherit port-profile SingleHost
+  switchport access vlan 701
+
+interface Ethernet102/1/38
+  shutdown
+
+interface Ethernet102/1/39
+  description pSeries HMC 2.2
+  switchport access vlan 3950
+
+interface Ethernet102/1/40
+  description pSeries HMC 2.1
+  switchport access vlan 3850
+
+interface Ethernet102/1/41
+  inherit port-profile SingleHost
+  no cdp enable
+  switchport access vlan 3128
+  channel-group 400 mode active
+
+interface Ethernet102/1/42
+
+interface Ethernet102/1/43
+  inherit port-profile SingleHost
+  switchport access vlan 3447
+
+interface Ethernet102/1/44
+  inherit port-profile SingleHost
+  switchport access vlan 3448
+
+interface Ethernet102/1/45
+  inherit port-profile SingleHost
+  no cdp enable
+  switchport access vlan 3448
+  channel-group 323 mode active
+
+interface Ethernet102/1/46
+  inherit port-profile SingleHost
+  no cdp enable
+  switchport access vlan 3449
+  channel-group 324 mode active
+
+interface Ethernet102/1/47
+  inherit port-profile SingleHost
+  switchport mode trunk
+  switchport access vlan 3448
+  switchport trunk allowed vlan 110, 190, 194
+
+interface Ethernet102/1/48
+  inherit port-profile SingleHost
+  switchport mode trunk
+  switchport access vlan 3449
+  switchport trunk allowed vlan 110, 190, 194
+
+interface Ethernet103/1/1
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet103/1/2
+  switchport mode trunk
+  switchport trunk allowed vlan 3128,3183
+
+interface Ethernet103/1/3
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet103/1/4
+  inherit port-profile SingleHost
+  switchport access vlan 199
+
+interface Ethernet103/1/5
+
+interface Ethernet103/1/6
+  inherit port-profile SingleHost
+  switchport access vlan 199
+
+interface Ethernet103/1/7
+
+interface Ethernet103/1/8
+  inherit port-profile SingleHost
+  switchport access vlan 199
+
+interface Ethernet103/1/9
+
+interface Ethernet103/1/10
+  inherit port-profile SingleHost
+  switchport access vlan 139
+
+interface Ethernet103/1/11
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet103/1/12
+  inherit port-profile SingleHost
+  switchport access vlan 171
+
+interface Ethernet103/1/13
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet103/1/14
+  inherit port-profile SingleHost
+  switchport access vlan 171
+
+interface Ethernet103/1/15
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet103/1/16
+
+interface Ethernet103/1/17
+  description --- VMWare NS 10.132.128.101 --- 
+  switchport mode trunk
+  switchport trunk allowed vlan 3128,3144,3147,3149,3152,3169,3177
+  channel-group 308
+
+interface Ethernet103/1/18
+  description --- VMWare NS 10.132.128.101 --- 
+  switchport mode trunk
+  switchport trunk allowed vlan 3128,3144,3147,3149,3152,3169,3177
+  channel-group 308
+
+interface Ethernet103/1/19
+  description --- VMWare NS 10.132.128.101 --- 
+  switchport mode trunk
+  switchport trunk allowed vlan 3128,3144,3147,3149,3152,3169,3177
+  channel-group 308
+
+interface Ethernet103/1/20
+  description --- VMWare NS 10.132.128.101 --- 
+  switchport mode trunk
+  switchport trunk allowed vlan 3128,3144,3147,3149,3152,3169,3177
+  channel-group 308
+
+interface Ethernet103/1/21
+  description --- VMWare NS 10.132.128.101 --- 
+  switchport mode trunk
+  switchport trunk allowed vlan 3128,3144,3147,3149,3152,3169,3177
+  channel-group 308
+
+interface Ethernet103/1/22
+  description --- VMWare NS 10.132.128.101 --- 
+  switchport mode trunk
+  switchport trunk allowed vlan 3128,3144,3147,3149,3152,3169,3177
+  channel-group 308
+
+interface Ethernet103/1/23
+  description --- VMWare NS 10.132.128.101 --- 
+  switchport mode trunk
+  switchport trunk allowed vlan 3128,3144,3147,3149,3152,3169,3177
+  channel-group 308
+
+interface Ethernet103/1/24
+  description --- VMWare NS 10.132.128.101 --- 
+  switchport mode trunk
+  switchport trunk allowed vlan 3128,3144,3147,3149,3152,3169,3177
+  channel-group 308
+
+interface Ethernet103/1/25
+  inherit port-profile SingleHost
+  switchport access vlan 3127
+
+interface Ethernet103/1/26
+  inherit port-profile SingleHost
+  switchport access vlan 3166
+
+interface Ethernet103/1/27
+  inherit port-profile SingleHost
+  switchport access vlan 3136
+
+interface Ethernet103/1/28
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet103/1/29
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet103/1/30
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet103/1/31
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet103/1/32
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet103/1/33
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet103/1/34
+
+interface Ethernet103/1/35
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet103/1/36
+  switchport access vlan 3128
+  channel-group 325 mode active
+
+interface Ethernet103/1/37
+  switchport access vlan 3128
+  channel-group 325 mode active
+
+interface Ethernet103/1/38
+  inherit port-profile SingleHost
+  switchport access vlan 3929
+
+interface Ethernet103/1/39
+  inherit port-profile SingleHost
+  switchport access vlan 179
+
+interface Ethernet103/1/40
+
+interface Ethernet103/1/41
+
+interface Ethernet103/1/42
+
+interface Ethernet103/1/43
+
+interface Ethernet103/1/44
+
+interface Ethernet103/1/45
+
+interface Ethernet103/1/46
+
+interface Ethernet103/1/47
+
+interface Ethernet103/1/48
+
+interface Ethernet104/1/1
+  inherit port-profile SingleHost
+  switchport access vlan 188
+
+interface Ethernet104/1/2
+  inherit port-profile SingleHost
+  switchport access vlan 188
+
+interface Ethernet104/1/3
+  inherit port-profile SingleHost
+  switchport access vlan 188
+
+interface Ethernet104/1/4
+
+interface Ethernet104/1/5
+  inherit port-profile SingleHost
+  switchport access vlan 188
+
+interface Ethernet104/1/6
+  inherit port-profile SingleHost
+  switchport access vlan 188
+
+interface Ethernet104/1/7
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet104/1/8
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet104/1/9
+  inherit port-profile SingleHost
+  switchport access vlan 3136
+
+interface Ethernet104/1/10
+  inherit port-profile SingleHost
+  switchport access vlan 3136
+
+interface Ethernet104/1/11
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet104/1/12
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet104/1/13
+
+interface Ethernet104/1/14
+
+interface Ethernet104/1/15
+
+interface Ethernet104/1/16
+
+interface Ethernet104/1/17
+  description --- VMWare for NS 10.132.128.102  ---
+  switchport mode trunk
+  switchport trunk allowed vlan 3128,3144,3147,3149,3152,3177
+  channel-group 309
+
+interface Ethernet104/1/18
+  description --- VMWare for NS 10.132.128.102  ---
+  switchport mode trunk
+  switchport trunk allowed vlan 3128,3144,3147,3149,3152,3177
+  channel-group 309
+
+interface Ethernet104/1/19
+  description --- VMWare for NS 10.132.128.102  ---
+  switchport mode trunk
+  switchport trunk allowed vlan 3128,3144,3147,3149,3152,3177
+  channel-group 309
+
+interface Ethernet104/1/20
+  description --- VMWare for NS 10.132.128.102  ---
+  switchport mode trunk
+  switchport trunk allowed vlan 3128,3144,3147,3149,3152,3177
+  channel-group 309
+
+interface Ethernet104/1/21
+  description --- VMWare for NS 10.132.128.102  ---
+  switchport mode trunk
+  switchport trunk allowed vlan 3128,3144,3147,3149,3152,3177
+  channel-group 309
+
+interface Ethernet104/1/22
+  description --- VMWare for NS 10.132.128.102  ---
+  switchport mode trunk
+  switchport trunk allowed vlan 3128,3144,3147,3149,3152,3177
+  channel-group 309
+
+interface Ethernet104/1/23
+  description --- VMWare for NS 10.132.128.102  ---
+  switchport mode trunk
+  switchport trunk allowed vlan 3128,3144,3147,3149,3152,3177
+  channel-group 309
+
+interface Ethernet104/1/24
+  description --- VMWare for NS 10.132.128.102  ---
+  switchport mode trunk
+
+interface Ethernet104/1/25
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet104/1/26
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet104/1/27
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet104/1/28
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet104/1/29
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet104/1/30
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet104/1/31
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet104/1/32
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet104/1/33
+
+interface Ethernet104/1/34
+
+interface Ethernet104/1/35
+
+interface Ethernet104/1/36
+  shutdown
+
+interface Ethernet104/1/37
+
+interface Ethernet104/1/38
+
+interface Ethernet104/1/39
+
+interface Ethernet104/1/40
+
+interface Ethernet104/1/41
+
+interface Ethernet104/1/42
+
+interface Ethernet104/1/43
+
+interface Ethernet104/1/44
+
+interface Ethernet104/1/45
+
+interface Ethernet104/1/46
+
+interface Ethernet104/1/47
+
+interface Ethernet104/1/48
+
+interface Ethernet105/1/1
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet105/1/2
+  inherit port-profile SingleHost
+  description [SRV_VTB-Core] BSSTSTW01:ae RF-001404436
+  switchport access vlan 3130
+
+interface Ethernet105/1/3
+  inherit port-profile SingleHost
+  switchport access vlan 175
+
+interface Ethernet105/1/4
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet105/1/5
+  inherit port-profile SingleHost
+  switchport access vlan 175
+
+interface Ethernet105/1/6
+  inherit port-profile SingleHost
+  description [SRV_VTB-Core] BSSTSTW02:ae RF-001404436
+  switchport access vlan 3130
+
+interface Ethernet105/1/7
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet105/1/8
+  inherit port-profile SingleHost
+  description [SRV_VTB-Core] BSSTSTW03:ae RF-001404436
+  switchport access vlan 3130
+
+interface Ethernet105/1/9
+  inherit port-profile SingleHost
+  switchport access vlan 188
+
+interface Ethernet105/1/10
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet105/1/11
+  inherit port-profile SingleHost
+  switchport access vlan 188
+
+interface Ethernet105/1/12
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet105/1/13
+  inherit port-profile SingleHost
+  switchport access vlan 177
+
+interface Ethernet105/1/14
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet105/1/15
+  inherit port-profile SingleHost
+  switchport access vlan 193
+
+interface Ethernet105/1/16
+  inherit port-profile SingleHost
+  description [ILO] vdic-hv101h 88R1813:iDRAC RF-001516027
+  switchport access vlan 3167
+
+interface Ethernet105/1/17
+  inherit port-profile SingleHost
+  description [ILO] vdic-hv103h D8R1813:iDRAC RF-001516027
+  switchport access vlan 3167
+
+interface Ethernet105/1/18
+  inherit port-profile SingleHost
+  description [ILO] vdic-hv105h F8R1813:iDRAC RF-001516027
+  switchport access vlan 3167
+
+interface Ethernet105/1/19
+  inherit port-profile SingleHost
+  description [ILO] vdic-hv107h 98R1813:iDRAC RF-001516027
+  switchport access vlan 3167
+
+interface Ethernet105/1/20
+  inherit port-profile SingleHost
+  description [ILO] vdic-hv109h 18R1813:iDRAC RF-001516027
+  switchport access vlan 3167
+
+interface Ethernet105/1/21
+  inherit port-profile SingleHost
+  description [mng_SRV_VTB-Core] pc167e(2102311XDBP0KC000557):mgmt RF-001675381
+  switchport access vlan 3131
+  duplex auto
+  speed auto
+
+interface Ethernet105/1/22
+  inherit port-profile SingleHost
+  description [mng_SRV_VTB-Core] pc166e(2102311XDBP0KC000556):mgmt RF-001675381
+  switchport access vlan 3131
+  speed auto
+
+interface Ethernet105/1/23
+  inherit port-profile SingleHost
+  description [mng_SRV_VTB-Core] pc165e(2102311XDBP0KC000554):mgmt RF-001675381
+  switchport access vlan 3131
+  speed auto
+
+interface Ethernet105/1/24
+  inherit port-profile SingleHost
+  description [mng_SRV_VTB-Core] pc164e(2102311XDBP0KC000552):mgmt RF-001675381
+  switchport access vlan 3131
+  speed auto
+
+interface Ethernet105/1/25
+  inherit port-profile SingleHost
+  description [mng_SRV_VTB-Core] pc162e(2102311XDB6TKC000088):mgmt RF-001675381
+  switchport access vlan 3131
+  speed auto
+
+interface Ethernet105/1/26
+  inherit port-profile SingleHost
+  description [mng_SRV_VTB-Core] pc161e(2102311XDB6TKC000095):mgmt RF-001675381
+  switchport access vlan 3131
+  speed auto
+
+interface Ethernet105/1/27
+  inherit port-profile SingleHost
+  description [mng_SRV_VTB-Core] pc160e(2102311XDB6TKC000092):mgmt RF-001675381
+  switchport access vlan 3131
+  speed auto
+
+interface Ethernet105/1/28
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet105/1/29
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet105/1/30
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet105/1/31
+  inherit port-profile SingleHost
+  switchport access vlan 3151
+
+interface Ethernet105/1/32
+  inherit port-profile SingleHost
+  switchport access vlan 3151
+
+interface Ethernet105/1/33
+  inherit port-profile SingleHost
+  switchport access vlan 3136
+
+interface Ethernet105/1/34
+
+interface Ethernet105/1/35
+  inherit port-profile SingleHost
+  switchport access vlan 3151
+
+interface Ethernet105/1/36
+  inherit port-profile SingleHost
+  switchport access vlan 3151
+
+interface Ethernet105/1/37
+  inherit port-profile SingleHost
+  description digi-inet102u
+  switchport access vlan 3929
+
+interface Ethernet105/1/38
+  description reserved RF-000768031
+  shutdown
+
+interface Ethernet105/1/39
+
+interface Ethernet105/1/40
+
+interface Ethernet105/1/41
+
+interface Ethernet105/1/42
+
+interface Ethernet105/1/43
+
+interface Ethernet105/1/44
+
+interface Ethernet105/1/45
+
+interface Ethernet105/1/46
+
+interface Ethernet105/1/47
+
+interface Ethernet105/1/48
+
+interface Ethernet106/1/1
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet106/1/2
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet106/1/3
+  inherit port-profile SingleHost
+  switchport access vlan 3136
+
+interface Ethernet106/1/4
+  inherit port-profile SingleHost
+  description [SRV_VTB-Core] BSSTSTW01:2 RF-001404436
+  switchport access vlan 3130
+
+interface Ethernet106/1/5
+  inherit port-profile SingleHost
+  description [SRV_VTB-Core] BSSTSTW02:2 RF-001404436
+  switchport access vlan 3130
+
+interface Ethernet106/1/6
+  inherit port-profile SingleHost
+  description [SRV_VTB-Core] BSSTSTW03:2 RF-001404436
+  switchport access vlan 3130
+
+interface Ethernet106/1/7
+  inherit port-profile SingleHost
+  switchport access vlan 167
+
+interface Ethernet106/1/8
+  inherit port-profile SingleHost
+  switchport access vlan 169
+
+interface Ethernet106/1/9
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet106/1/10
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet106/1/11
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet106/1/12
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet106/1/13
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet106/1/14
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet106/1/15
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet106/1/16
+  inherit port-profile SingleHost
+  description [ILO] vdic-hv102h 28R1813:iDRAC RF-001516027
+  switchport access vlan 3167
+
+interface Ethernet106/1/17
+  inherit port-profile SingleHost
+  description [ILO] vdic-hv104h 38R1813:iDRAC RF-001516027
+  switchport access vlan 3167
+
+interface Ethernet106/1/18
+  inherit port-profile SingleHost
+  description [ILO] vdic-hv106h 78R1813:iDRAC RF-001516027
+  switchport access vlan 3167
+
+interface Ethernet106/1/19
+  inherit port-profile SingleHost
+  description [ILO] vdic-hv108h B8R1813:iDRAC RF-001516027
+  switchport access vlan 3167
+
+interface Ethernet106/1/20
+  inherit port-profile SingleHost
+  description [ILO] vdic-hv110h 4R5R013:iDRAC RF-001516027
+  switchport access vlan 3167
+
+interface Ethernet106/1/21
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet106/1/22
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet106/1/23
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet106/1/24
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet106/1/25
+  inherit port-profile SingleHost
+  switchport access vlan 175
+
+interface Ethernet106/1/26
+  inherit port-profile SingleHost
+  switchport access vlan 175
+
+interface Ethernet106/1/27
+  inherit port-profile SingleHost
+  switchport access vlan 175
+
+interface Ethernet106/1/28
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet106/1/29
+  inherit port-profile SingleHost
+  description //NM-VC-ESXI-02 vnic0 //
+  switchport access vlan 3128
+
+interface Ethernet106/1/30
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600
+  channel-group 305
+
+interface Ethernet106/1/31
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600
+  channel-group 305
+
+interface Ethernet106/1/32
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600
+  channel-group 305
+
+interface Ethernet106/1/33
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600
+  channel-group 305
+
+interface Ethernet106/1/34
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet106/1/35
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet106/1/36
+
+interface Ethernet106/1/37
+  inherit port-profile SingleHost
+  description digi-inet102u_int2
+  switchport access vlan 3929
+
+interface Ethernet106/1/38
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet106/1/39
+  inherit port-profile SingleHost
+  switchport access vlan 3141
+
+interface Ethernet106/1/40
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet106/1/41
+  inherit port-profile SingleHost
+  switchport access vlan 3141
+
+interface Ethernet106/1/42
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet106/1/43
+  inherit port-profile SingleHost
+  switchport access vlan 3141
+
+interface Ethernet106/1/44
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet106/1/45
+  inherit port-profile SingleHost
+  switchport access vlan 3141
+
+interface Ethernet106/1/46
+  inherit port-profile SingleHost
+  description UC_Kontinent RF-000917167
+  switchport access vlan 3446
+
+interface Ethernet106/1/47
+  inherit port-profile SingleHost
+  description UC_Kontinent RF-000917167
+  switchport access vlan 3447
+
+interface Ethernet106/1/48
+  description UC_Kontinent RF-000917167
+  switchport access vlan 3447
+
+interface Ethernet107/1/1
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet107/1/2
+  inherit port-profile SingleHost
+  description [mng_SRV_VTB-Core] svpc101e.region.vtb.ru:ipmi RF-002062315
+  switchport access vlan 3131
+
+interface Ethernet107/1/3
+  inherit port-profile SingleHost
+  description [mng_SRV_VTB-Core] svpc102e.region.vtb.ru:ipmi RF-002062315
+  switchport access vlan 3131
+
+interface Ethernet107/1/4
+  inherit port-profile SingleHost
+  description [mng_SRV_VTB-Core] svpc103e.region.vtb.ru:ipmi RF-002062315
+  switchport access vlan 3131
+
+interface Ethernet107/1/5
+  description Heartbeat 107/1/22
+
+interface Ethernet107/1/6
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+
+interface Ethernet107/1/7
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+
+interface Ethernet107/1/8
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+
+interface Ethernet107/1/9
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+  channel-group 306 mode active
+
+interface Ethernet107/1/10
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+  channel-group 306 mode active
+
+interface Ethernet107/1/11
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+  channel-group 306 mode active
+
+interface Ethernet107/1/12
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+  channel-group 306 mode active
+
+interface Ethernet107/1/13
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+
+interface Ethernet107/1/14
+  switchport access vlan 3150
+  channel-group 301
+
+interface Ethernet107/1/15
+  switchport access vlan 3150
+  channel-group 301
+
+interface Ethernet107/1/16
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet107/1/17
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet107/1/18
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet107/1/19
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet107/1/20
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet107/1/21
+  inherit port-profile SingleHost
+  switchport access vlan 171
+
+interface Ethernet107/1/22
+  description Heartbeat 107/1/5
+
+interface Ethernet107/1/23
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+
+interface Ethernet107/1/24
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+
+interface Ethernet107/1/25
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+
+interface Ethernet107/1/26
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+  channel-group 307 mode active
+
+interface Ethernet107/1/27
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+  channel-group 307 mode active
+
+interface Ethernet107/1/28
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+  channel-group 307 mode active
+
+interface Ethernet107/1/29
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+  channel-group 307 mode active
+
+interface Ethernet107/1/30
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+
+interface Ethernet107/1/31
+  switchport access vlan 3150
+  channel-group 302
+
+interface Ethernet107/1/32
+  switchport access vlan 3150
+  channel-group 302
+
+interface Ethernet107/1/33
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet107/1/34
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet107/1/35
+  inherit port-profile SingleHost
+  description pSeries HMC 1
+  switchport access vlan 3131
+
+interface Ethernet107/1/36
+  inherit port-profile SingleHost
+  description INKSASS
+  switchport access vlan 169
+
+interface Ethernet107/1/37
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet107/1/38
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet107/1/39
+  inherit port-profile SingleHost
+  switchport access vlan 171
+
+interface Ethernet107/1/40
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet107/1/41
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet107/1/42
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet107/1/43
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet107/1/44
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet107/1/45
+
+interface Ethernet107/1/46
+
+interface Ethernet107/1/47
+
+interface Ethernet107/1/48
+
+interface Ethernet108/1/1
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet108/1/2
+  inherit port-profile SingleHost
+  switchport access vlan 178
+
+interface Ethernet108/1/3
+  inherit port-profile SingleHost
+  switchport access vlan 178
+
+interface Ethernet108/1/4
+
+interface Ethernet108/1/5
+
+interface Ethernet108/1/6
+  inherit port-profile SingleHost
+  switchport access vlan 178
+
+interface Ethernet108/1/7
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet108/1/8
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet108/1/9
+  inherit port-profile SingleHost
+  switchport access vlan 190
+
+interface Ethernet108/1/10
+
+interface Ethernet108/1/11
+  inherit port-profile SingleHost
+  switchport access vlan 193
+
+interface Ethernet108/1/12
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet108/1/13
+  inherit port-profile SingleHost
+  switchport access vlan 179
+
+interface Ethernet108/1/14
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet108/1/15
+  inherit port-profile SingleHost
+  switchport access vlan 179
+
+interface Ethernet108/1/16
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet108/1/17
+  inherit port-profile SingleHost
+  switchport access vlan 179
+
+interface Ethernet108/1/18
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet108/1/19
+  inherit port-profile SingleHost
+  switchport access vlan 178
+
+interface Ethernet108/1/20
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet108/1/21
+  inherit port-profile SingleHost
+  switchport access vlan 179
+
+interface Ethernet108/1/22
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet108/1/23
+  inherit port-profile SingleHost
+  switchport access vlan 179
+
+interface Ethernet108/1/24
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+
+interface Ethernet108/1/25
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet108/1/26
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet108/1/27
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet108/1/28
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet108/1/29
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet108/1/30
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet108/1/31
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet108/1/32
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet108/1/33
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet108/1/34
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet108/1/35
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet108/1/36
+  inherit port-profile SingleHost
+  switchport access vlan 3130
+
+interface Ethernet108/1/37
+  inherit port-profile SingleHost
+  switchport access vlan 3183
+
+interface Ethernet108/1/38
+  description [mng_SRV_VTB-Core] pc169e(2102311XDB6TKC000136):iBMC RF-001693489
+  switchport access vlan 3131
+
+interface Ethernet108/1/39
+  description [mng_SRV_VTB-Core] pc168e(2102311XDB6TKC000132):iBMC RF-001693489
+  switchport access vlan 3131
+
+interface Ethernet108/1/40
+
+interface Ethernet108/1/41
+
+interface Ethernet108/1/42
+
+interface Ethernet108/1/43
+
+interface Ethernet108/1/44
+
+interface Ethernet108/1/45
+
+interface Ethernet108/1/46
+
+interface Ethernet108/1/47
+
+interface Ethernet108/1/48
+
+interface Ethernet109/1/1
+  inherit port-profile SingleHost
+  switchport access vlan 295
+  no snmp trap link-status
+
+interface Ethernet109/1/2
+  switchport access vlan 3150
+  no snmp trap link-status
+  channel-group 311 mode active
+
+interface Ethernet109/1/3
+  inherit port-profile SingleHost
+  switchport access vlan 295
+  no snmp trap link-status
+
+interface Ethernet109/1/4
+  switchport access vlan 3150
+  no snmp trap link-status
+  channel-group 313 mode active
+
+interface Ethernet109/1/5
+  inherit port-profile SingleHost
+  switchport access vlan 295
+  no snmp trap link-status
+
+interface Ethernet109/1/6
+  switchport access vlan 3150
+  no snmp trap link-status
+  channel-group 315 mode active
+
+interface Ethernet109/1/7
+  inherit port-profile SingleHost
+  switchport access vlan 295
+  no snmp trap link-status
+
+interface Ethernet109/1/8
+  switchport access vlan 3150
+  no snmp trap link-status
+  channel-group 317 mode active
+
+interface Ethernet109/1/9
+  switchport access vlan 3150
+  no snmp trap link-status
+  channel-group 311 mode active
+
+interface Ethernet109/1/10
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+  no snmp trap link-status
+
+interface Ethernet109/1/11
+  switchport access vlan 3150
+  no snmp trap link-status
+  channel-group 313 mode active
+
+interface Ethernet109/1/12
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+  no snmp trap link-status
+
+interface Ethernet109/1/13
+  switchport access vlan 3150
+  no snmp trap link-status
+  channel-group 315 mode active
+
+interface Ethernet109/1/14
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+  no snmp trap link-status
+
+interface Ethernet109/1/15
+  switchport access vlan 3150
+  no snmp trap link-status
+  channel-group 317 mode active
+
+interface Ethernet109/1/16
+  inherit port-profile SingleHost
+  switchport access vlan 3131
+  no snmp trap link-status
+
+interface Ethernet110/1/1
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+  no snmp trap link-status
+  channel-group 310 mode active
+
+interface Ethernet110/1/2
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+  no snmp trap link-status
+  channel-group 310 mode active
+
+interface Ethernet110/1/3
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+  no snmp trap link-status
+  channel-group 312 mode active
+
+interface Ethernet110/1/4
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+  no snmp trap link-status
+  channel-group 312 mode active
+
+interface Ethernet110/1/5
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+  no snmp trap link-status
+  channel-group 314 mode active
+
+interface Ethernet110/1/6
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+  no snmp trap link-status
+  channel-group 314 mode active
+
+interface Ethernet110/1/7
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+  no snmp trap link-status
+  channel-group 316 mode active
+
+interface Ethernet110/1/8
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+  no snmp trap link-status
+  channel-group 316 mode active
+
+interface Ethernet110/1/9
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+  no snmp trap link-status
+  channel-group 310 mode active
+
+interface Ethernet110/1/10
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+  no snmp trap link-status
+  channel-group 310 mode active
+
+interface Ethernet110/1/11
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+  no snmp trap link-status
+  channel-group 312 mode active
+
+interface Ethernet110/1/12
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+  no snmp trap link-status
+  channel-group 312 mode active
+
+interface Ethernet110/1/13
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+  no snmp trap link-status
+  channel-group 314 mode active
+
+interface Ethernet110/1/14
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+  no snmp trap link-status
+  channel-group 314 mode active
+
+interface Ethernet110/1/15
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+  no snmp trap link-status
+  channel-group 316 mode active
+
+interface Ethernet110/1/16
+  switchport mode trunk
+  switchport trunk allowed vlan 110-800,3100-3600,3628,3630,3636,3642
+  no snmp trap link-status
+  channel-group 316 mode active
+
+interface Ethernet111/1/1
+  no snmp trap link-status
+
+interface Ethernet111/1/2
+  inherit port-profile SingleHost
+  switchport access vlan 175
+  no snmp trap link-status
+
+interface Ethernet111/1/3
+  no snmp trap link-status
+
+interface Ethernet111/1/4
+  inherit port-profile SingleHost
+  switchport access vlan 175
+  no snmp trap link-status
+
+interface Ethernet111/1/5
+  no snmp trap link-status
+
+interface Ethernet111/1/6
+  inherit port-profile SingleHost
+  switchport access vlan 175
+  no snmp trap link-status
+
+interface Ethernet111/1/7
+  no snmp trap link-status
+
+interface Ethernet111/1/8
+  inherit port-profile SingleHost
+  switchport access vlan 175
+  no snmp trap link-status
+
+interface Ethernet111/1/9
+  no snmp trap link-status
+
+interface Ethernet111/1/10
+  no snmp trap link-status
+
+interface Ethernet111/1/11
+  no snmp trap link-status
+
+interface Ethernet111/1/12
+  no snmp trap link-status
+
+interface Ethernet111/1/13
+  no snmp trap link-status
+
+interface Ethernet111/1/14
+  no snmp trap link-status
+
+interface Ethernet111/1/15
+  no snmp trap link-status
+
+interface Ethernet111/1/16
+  no snmp trap link-status
+
+interface Ethernet112/1/1
+  no snmp trap link-status
+
+interface Ethernet112/1/2
+  inherit port-profile SingleHost
+  switchport access vlan 169
+  no snmp trap link-status
+
+interface Ethernet112/1/3
+  no snmp trap link-status
+
+interface Ethernet112/1/4
+  inherit port-profile SingleHost
+  switchport access vlan 169
+  no snmp trap link-status
+
+interface Ethernet112/1/5
+  no snmp trap link-status
+
+interface Ethernet112/1/6
+  inherit port-profile SingleHost
+  switchport access vlan 169
+  no snmp trap link-status
+
+interface Ethernet112/1/7
+  no snmp trap link-status
+
+interface Ethernet112/1/8
+  inherit port-profile SingleHost
+  switchport access vlan 169
+  no snmp trap link-status
+
+interface Ethernet112/1/9
+  no snmp trap link-status
+
+interface Ethernet112/1/10
+  no snmp trap link-status
+
+interface Ethernet112/1/11
+  no snmp trap link-status
+
+interface Ethernet112/1/12
+  no snmp trap link-status
+
+interface Ethernet112/1/13
+  no snmp trap link-status
+
+interface Ethernet112/1/14
+  no snmp trap link-status
+
+interface Ethernet112/1/15
+  no snmp trap link-status
+
+interface Ethernet112/1/16
+  no snmp trap link-status
+clock timezone MSK 3 0
+cli alias name wr copy run start
+line console
+line vty
+  exec-timeout 60
+boot kickstart bootflash:/n5000-uk9-kickstart.5.0.3.N2.2a.bin
+boot system bootflash:/n5000-uk9.5.0.3.N2.2a.bin 
+ip route 0.0.0.0/0 10.132.255.1
+ip igmp any-query-destination
+logging server 10.128.128.100
+logging monitor 7
+logging monitor 7
+
+

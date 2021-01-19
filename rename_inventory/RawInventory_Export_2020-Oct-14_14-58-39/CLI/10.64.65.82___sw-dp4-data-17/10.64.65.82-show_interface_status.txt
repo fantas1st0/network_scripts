@@ -1,0 +1,66 @@
+
+
+--------------------------------------------------------------------------------
+Port             Name            Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------
+mgmt0            --              connected routed    full    a-1000  --         
+Eth3/1           [TRUNK] view-nt connected trunk     full    a-10G   10Gbase-SR 
+Eth3/2           [TRUNK] view-nt connected trunk     full    a-10G   10Gbase-SR 
+Eth3/3           [TRUNK] view-nt connected trunk     full    a-10G   10Gbase-SR 
+Eth3/4           [TRUNK] view-nt connected trunk     full    a-10G   10Gbase-SR 
+Eth3/5           [TRUNK] view-nt connected trunk     full    a-10G   10Gbase-SR 
+Eth3/6           [TRUNK] view-nt connected trunk     full    a-10G   10Gbase-SR 
+Eth3/7           [TRUNK] view-nt connected trunk     full    a-10G   10Gbase-SR 
+Eth3/8           [TRUNK] view-nt connected trunk     full    a-10G   10Gbase-SR 
+Eth3/9           [VTB24_CONSOLE] notconnec trunk     auto    auto    10Gbase-SR 
+Eth3/10          [VTB24_CONSOLE] connected trunk     full    a-10G   10Gbase-SR 
+Eth3/11          [TRUNK] view-nt connected trunk     full    a-10G   10Gbase-SR 
+Eth3/12          [TRUNK] view-nt connected trunk     full    a-10G   10Gbase-SR 
+Eth3/21          [TRUNK] view-nt connected trunk     full    a-10G   10Gbase-SR 
+Eth3/22          [TRUNK] view-nt connected trunk     full    a-10G   10Gbase-SR 
+Eth3/23          [DATA-VMWARE] v connected trunk     full    a-10G   10Gbase-SR 
+Eth3/24          [DATA-VMWARE] v connected trunk     full    a-10G   10Gbase-SR 
+Eth3/25          [DATA-VMWARE] v connected trunk     full    a-10G   10Gbase-SR 
+Eth3/26          [DATA-VMWARE] v connected trunk     full    a-10G   10Gbase-SR 
+Eth3/27          [RESERVED] Free sfpAbsent routed    auto    auto    --         
+Eth3/28          [RESERVED] Free sfpAbsent routed    auto    auto    --         
+Eth3/37          [PC] sw-dp4-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth3/38          [PC] sw-dp4-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth3/39          [RESERVED] Free disabled  routed    auto    auto    10Gbase-SR 
+Eth3/40          [RESERVED] Free disabled  routed    auto    auto    10Gbase-SR 
+Eth3/45          [PC] peer-link  connected trunk     full    a-10G   10Gbase-SR 
+Eth3/46          [PC] peer-link  connected trunk     full    a-10G   10Gbase-SR 
+Eth3/47          [RESERVED] Free disabled  routed    auto    auto    10Gbase-SR 
+Eth3/48          [PC] peer-keepa connected routed    full    a-10G   10Gbase-SR 
+Eth4/1           vtb-core TRUNK  connected trunk     full    a-10G   10Gbase-SR 
+Eth4/2           vtb-core TRUNK  connected trunk     full    a-10G   10Gbase-SR 
+Eth4/3           [TRUNK] view-nt connected trunk     full    a-10G   10Gbase-SR 
+Eth4/4           [TRUNK] view-nt connected trunk     full    a-10G   10Gbase-SR 
+Eth4/5           [TRUNK] view-nt connected trunk     full    a-10G   10Gbase-SR 
+Eth4/6           [TRUNK] view-nt notconnec trunk     auto    auto    10Gbase-SR 
+Eth4/7           [TRUNK] view-nt connected trunk     full    a-10G   10Gbase-SR 
+Eth4/8           [VTB24_CONSOLE] connected trunk     full    a-10G   10Gbase-SR 
+Eth4/9           [VTB24_CONSOLE] connected trunk     full    a-10G   10Gbase-SR 
+Eth4/10          [TRUNK] view-nt connected trunk     full    a-10G   10Gbase-SR 
+Eth4/11          [TRUNK] view-nt connected trunk     full    a-10G   10Gbase-SR 
+Eth4/12          [TRUNK] view-nt connected trunk     full    a-10G   10Gbase-SR 
+Eth4/21          [TRUNK] view-nt connected trunk     full    a-10G   10Gbase-SR 
+Eth4/22          [TRUNK] view-nt connected trunk     full    a-10G   10Gbase-SR 
+Eth4/23          --              sfpAbsent routed    auto    auto    --         
+Eth4/24          --              sfpAbsent routed    auto    auto    --         
+Eth4/25          None view-ntnx- connected trunk     full    a-10G   10Gbase-SR 
+Eth4/26          None view-ntnx- connected trunk     full    a-10G   10Gbase-SR 
+Eth4/27          None view-ntnx- connected trunk     full    a-10G   10Gbase-SR 
+Eth4/28          None view-ntnx- connected trunk     full    a-10G   10Gbase-SR 
+Eth4/37          [PC] sw-dp4-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth4/38          [PC] sw-dp4-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth4/39          [RESERVED] Free disabled  routed    auto    auto    10Gbase-SR 
+Eth4/40          [RESERVED] Free disabled  routed    auto    auto    10Gbase-SR 
+Eth4/45          [PC] peer-link  connected trunk     full    a-10G   10Gbase-SR 
+Eth4/46          [PC] peer-link  connected trunk     full    a-10G   10Gbase-SR 
+Eth4/47          [RESERVED] Free disabled  routed    auto    auto    10Gbase-SR 
+Eth4/48          [PC] peer-keepa connected routed    full    a-10G   10Gbase-SR 
+Po10             [VPC][TRUNK] sw connected trunk     full    a-10G   --         
+Po4000           [TRUNK] peer-li connected trunk     full    a-10G   --         
+Po4001           [L3] peer-keepa connected routed    full    a-10G   --         
+Vlan1         --                 down      routed    auto    auto    --

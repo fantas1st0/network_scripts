@@ -1,0 +1,118 @@
+
+Legend:
+                (*) - local vPC is down, forwarding via vPC peer-link
+
+vPC domain id                     : 58  
+Peer status                       : peer adjacency formed ok      
+vPC keep-alive status             : peer is alive                 
+Configuration consistency status  : success 
+Per-vlan consistency status       : success                       
+Type-2 consistency status         : success 
+vPC role                          : secondary                     
+Number of vPCs configured         : 29  
+Peer Gateway                      : Disabled
+Dual-active excluded VLANs        : -
+Graceful Consistency Check        : Enabled
+Operational Layer3 Peer-router    : Disabled
+Auto-recovery status              : Enabled (timeout = 240 seconds)
+
+vPC Peer-link status
+---------------------------------------------------------------------
+id   Port   Status Active vlans    
+--   ----   ------ --------------------------------------------------
+1    Po1000 up     1,2911-2915,3095,3115,3155,3157,3187,3299,3315,332        
+                   9-3344,3347,3428,3430,3453,3491,3778,3792,3799            
+
+vPC status
+----------------------------------------------------------------------------
+id     Port        Status Consistency Reason                     Active vlans
+------ ----------- ------ ----------- -------------------------- -----------
+7      Po7         up     success     success                    1,2911-2915 
+                                                                 ,3095,3115, 
+                                                                 3155,3157,3 
+                                                                 187,3299,33 
+                                                                 15,3329-....
+201    Po201       up     success     success                    3491,3792   
+202    Po202       up     success     success                    2911-2915,3 
+                                                                 095,3155,31 
+                                                                 57,3299,332 
+                                                                 9-3344,3347 
+                                                                 ,3428,34....
+203    Po203       up     success     success                    3491,3792   
+204    Po204       up     success     success                    2911-2915,3 
+                                                                 095,3155,31 
+                                                                 57,3299,332 
+                                                                 9-3344,3347 
+                                                                 ,3428,34....
+205    Po205       up     success     success                    3491,3792   
+206    Po206       up     success     success                    2911-2915,3 
+                                                                 095,3155,31 
+                                                                 57,3299,332 
+                                                                 9-3344,3347 
+                                                                 ,3428,34....
+207    Po207       up     success     success                    3491,3792   
+208    Po208       up     success     success                    2911-2915,3 
+                                                                 095,3155,31 
+                                                                 57,3299,332 
+                                                                 9-3344,3347 
+                                                                 ,3428,34....
+209    Po209       up     success     success                    3491,3792   
+210    Po210       up     success     success                    2911-2915,3 
+                                                                 095,3155,31 
+                                                                 57,3299,332 
+                                                                 9-3344,3347 
+                                                                 ,3428,34....
+211    Po211       up     success     success                    3491,3792   
+212    Po212       up     success     success                    2911-2915,3 
+                                                                 095,3155,31 
+                                                                 57,3299,332 
+                                                                 9-3344,3347 
+                                                                 ,3428,34....
+213    Po213       up     success     success                    3491,3792   
+214    Po214       up     success     success                    2911-2915,3 
+                                                                 095,3155,31 
+                                                                 57,3299,332 
+                                                                 9-3344,3347 
+                                                                 ,3428,34....
+215    Po215       up     success     success                    3491,3792   
+216    Po216       up     success     success                    2911-2915,3 
+                                                                 095,3155,31 
+                                                                 57,3299,332 
+                                                                 9-3344,3347 
+                                                                 ,3428,34....
+217    Po217       up     success     success                    3491,3792   
+218    Po218       up     success     success                    2911-2915,3 
+                                                                 095,3155,31 
+                                                                 57,3299,332 
+                                                                 9-3344,3347 
+                                                                 ,3428,34....
+219    Po219       up     success     success                    3491        
+220    Po220       up     success     success                    2911-2915,3 
+                                                                 095,3155,31 
+                                                                 57,3329-334 
+                                                                 4,3347,3453 
+                                                                 ,3491,37....
+221    Po221       up     success     success                    3491        
+222    Po222       up     success     success                    2911-2915,3 
+                                                                 095,3155,31 
+                                                                 57,3329-334 
+                                                                 4,3347,3453 
+                                                                 ,3491,37....
+223    Po223       up     success     success                    3491        
+224    Po224       up     success     success                    2911-2915,3 
+                                                                 095,3155,31 
+                                                                 57,3329-334 
+                                                                 4,3347,3453 
+                                                                 ,3491,37....
+225    Po225       up     success     success                    3491        
+226    Po226       up     success     success                    2911-2915,3 
+                                                                 095,3155,31 
+                                                                 57,3329-334 
+                                                                 4,3347,3453 
+                                                                 ,3491,37....
+227    Po227       up     success     success                    3491        
+228    Po228       up     success     success                    2911-2915,3 
+                                                                 095,3155,31 
+                                                                 57,3329-334 
+                                                                 4,3347,3453 
+                                                                 ,3491,37....

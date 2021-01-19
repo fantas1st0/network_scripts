@@ -1,0 +1,360 @@
+
+
+--------------------------------------------------------------------------------
+Port          Name               Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------
+Eth1/1        sw-pr1-data-22-fex connected 1         full    40G     QSFP-40G-SR
+Eth1/2        sw-pr1-data-22-fex connected 1         full    40G     QSFP-40G-SR
+Eth1/3        sw-pr1-data-22-fex connected 1         full    40G     QSFP-40G-SR
+Eth1/4        sw-pr1-data-22-fex connected 1         full    40G     QSFP-40G-SR
+Eth1/5        sw-pr1-data-22-fex connected 1         full    40G     QSFP-40G-SR
+Eth1/6        sw-pr1-data-22-fex connected 1         full    40G     QSFP-40G-SR
+Eth1/7        [PC] peer-keepaliv connected trunk     full    40G     QSFP-40G-SR
+Eth1/8        [PC] peer-link     connected trunk     full    40G     QSFP-40G-SR
+Eth1/9        [PC] peer-link     connected trunk     full    40G     QSFP-40G-SR
+Eth1/10/1     --                 disabled  1         full    10G     QSFP-40G-CS
+Eth1/10/2     --                 disabled  1         full    10G     QSFP-40G-CS
+Eth1/10/3     $notm[TRUNK]sw-pr1 connected trunk     full    10G     QSFP-40G-CS
+Eth1/10/4     --                 disabled  1         full    10G     QSFP-40G-CS
+Eth1/11/1     [PC] sw-pr1-data-1 connected trunk     full    10G     QSFP-40G-CS
+Eth1/11/2     [PC] sw-pr1-data-1 connected trunk     full    10G     QSFP-40G-CS
+Eth1/11/3     [PC] sw-pr1-data-1 connected trunk     full    10G     QSFP-40G-CS
+Eth1/11/4     [PC] sw-pr1-data-1 connected trunk     full    10G     QSFP-40G-CS
+Eth1/12/1     [PC] sw-pr1-data-1 connected trunk     full    10G     QSFP-40G-CS
+Eth1/12/2     [PC] sw-pr1-data-1 connected trunk     full    10G     QSFP-40G-CS
+Eth1/12/3     [PC] sw-pr1-data-1 connected trunk     full    10G     QSFP-40G-CS
+Eth1/12/4     [PC] sw-pr1-data-1 connected trunk     full    10G     QSFP-40G-CS
+Eth2/1        sw-pr1-data-22-fex connected 1         full    40G     QSFP-40G-SR
+Eth2/2        sw-pr1-data-22-fex connected 1         full    40G     QSFP-40G-SR
+Eth2/3        sw-pr1-data-22-fex connected 1         full    40G     QSFP-40G-SR
+Eth2/4        sw-pr1-data-22-fex connected 1         full    40G     QSFP-40G-SR
+Eth2/5        sw-pr1-data-22-fex connected 1         full    40G     QSFP-40G-SR
+Eth2/6        sw-pr1-data-22-fex connected 1         full    40G     QSFP-40G-SR
+Eth2/7        [PC] peer-keepaliv connected trunk     full    40G     QSFP-40G-SR
+Eth2/8        [PC] peer-link     connected trunk     full    40G     QSFP-40G-SR
+Eth2/9        [PC] peer-link     connected trunk     full    40G     QSFP-40G-SR
+Eth2/10/1     --                 sfpAbsent 1         full    10G     --         
+Eth2/10/2     --                 sfpAbsent 1         full    10G     --         
+Eth2/10/3     --                 sfpAbsent 1         full    10G     --         
+Eth2/10/4     --                 sfpAbsent 1         full    10G     --         
+Eth2/11/1     [PC] sw-pr1-data-2 connected trunk     full    10G     QSFP-40G-CS
+Eth2/11/2     [PC] sw-pr1-data-2 connected trunk     full    10G     QSFP-40G-CS
+Eth2/11/3     [PC] sw-pr1-data-2 connected trunk     full    10G     QSFP-40G-CS
+Eth2/11/4     [PC] sw-pr1-data-2 connected trunk     full    10G     QSFP-40G-CS
+Eth2/12/1     [PC] sw-pr1-data-2 connected trunk     full    10G     QSFP-40G-CS
+Eth2/12/2     [PC] sw-pr1-data-2 connected trunk     full    10G     QSFP-40G-CS
+Eth2/12/3     [PC] sw-pr1-data-2 connected trunk     full    10G     QSFP-40G-CS
+Eth2/12/4     [PC] sw-pr1-data-2 connected trunk     full    10G     QSFP-40G-CS
+Eth3/1        [FEX] sw-pr1-data- connected 1         full    40G     QSFP-40G-SR
+Eth3/2        [FEX] sw-pr1-data- connected 1         full    40G     QSFP-40G-SR
+Eth3/3        [FEX] sw-pr1-data- connected 1         full    40G     QSFP-40G-SR
+Eth3/4        [FEX] sw-pr1-data- connected 1         full    40G     QSFP-40G-SR
+Eth3/5        --                 sfpAbsent 1         half    40G     --         
+Eth3/6        --                 sfpAbsent 1         half    40G     --         
+Eth3/7        --                 sfpAbsent 1         half    40G     --         
+Eth3/8        --                 sfpAbsent 1         half    40G     --         
+Eth3/9        --                 sfpAbsent 1         half    40G     --         
+Eth3/10       --                 sfpAbsent 1         half    40G     --         
+Eth3/11       [RESERVED] L2_link sfpAbsent 1         half    40G     --         
+Eth3/12       --                 sfpAbsent 1         half    40G     --         
+Eth4/1        [FEX] sw-pr1-data- connected 1         full    40G     QSFP-40G-SR
+Eth4/2        [FEX] sw-pr1-data- connected 1         full    40G     QSFP-40G-SR
+Eth4/3        [FEX] sw-pr1-data- connected 1         full    40G     QSFP-40G-SR
+Eth4/4        [FEX] sw-pr1-data- connected 1         full    40G     QSFP-40G-SR
+Eth4/5        --                 sfpAbsent 1         half    40G     --         
+Eth4/6        --                 sfpAbsent 1         half    40G     --         
+Eth4/7        --                 sfpAbsent 1         half    40G     --         
+Eth4/8        --                 sfpAbsent 1         half    40G     --         
+Eth4/9        --                 sfpAbsent 1         half    40G     --         
+Eth4/10       --                 sfpAbsent 1         half    40G     --         
+Eth4/11       [RESERVED] L2_link sfpAbsent 1         half    40G     --         
+Eth4/12       $NOTM              notconnec routed    half    40G     QSFP-40G-SR
+Po10          [VPC][TRUNK] sw-pr connected trunk     full    a-10G   --         
+Po151         [FEX] sw-pr1-data- connected 1         full    a-40G   --         
+Po152         [FEX] sw-pr1-data- connected 1         full    a-40G   --         
+Po153         [FEX] sw-pr1-data- connected 1         full    a-40G   --         
+Po154         [FEX] sw-pr1-data- connected 1         full    a-40G   --         
+Po155         [FEX] sw-pr1-data- connected 1         full    a-40G   --         
+Po200         $notm[TRUNK]sw-pr1 connected trunk     full    10G     --         
+Po301         [PC] sparc-t7-2-p1 connected 603       full    a-10G   --         
+Po302         [DATA-BIS-HQ] FZHY connected trunk     full    10G     --         
+Po305         [DATA-BIS-HQ] FZHX connected 601       full    10G     --         
+Po306         [DATA-BIS-HQ] FZHX noOperMem 601       auto    10G     --         
+Po307         [DATA-BIS-HQ] FZHX connected 601       full    10G     --         
+Po308         [DATA-BIS-HQ] FZHX noOperMem 601       auto    10G     --         
+Po309         [DATA-BIS-HQ] FZHX noOperMem 601       auto    10G     --         
+Po310         [DATA-BIS-HQ] FZHX noOperMem 601       auto    10G     --         
+Po311         TRUNK vsphere-3109 noOperMem trunk     full    10G     --         
+Po312         TRUNK vsphere-3109 noOperMem trunk     full    10G     --         
+Po313         TRUNK vsphere-3110 noOperMem trunk     full    10G     --         
+Po314         TRUNK vsphere-3110 noOperMem trunk     full    10G     --         
+Po315         [DATA-BIS-HQ] arcs connected 601       full    10G     --         
+Po316         [DATA-BIS-HQ] arcs connected 601       full    10G     --         
+Po317         [DATA-BIS-HQ] arcs connected 601       full    10G     --         
+Po318         [DATA-BIS-HQ] arcs connected 601       full    10G     --         
+Po321         [DATA-BIS-HQ] pr1- connected trunk     full    10G     --         
+Po322         [DATA-BIS-HQ] pr1- connected trunk     full    10G     --         
+Po323         [DATA-BIS-HQ] pr1- connected trunk     full    10G     --         
+Po324         [DATA-BIS-HQ] pr1- connected trunk     full    10G     --         
+Po325         [DATA-BIS-HQ] pr1- connected trunk     full    10G     --         
+Po326         [DATA-PLC] exa12db connected 603       full    10G     --         
+Po327         [DATA-PLC] exa12db connected 603       full    10G     --         
+Po328         [DATA-PLC] exa12db connected 603       full    10G     --         
+Po329         [DATA-PLC] exa12db connected 603       full    10G     --         
+Po330         [DATA-PLC] ZFSAPP0 connected 603       full    10G     --         
+Po331         [DATA-PLC] ZFSAPP0 connected 603       full    10G     --         
+Po332         TRUNK vsphere-3113 noOperMem trunk     auto    10G     --         
+Po336         TRUNK vsphere-3113 noOperMem trunk     auto    10G     --         
+Po337         TRUNK vsphere-3114 noOperMem trunk     auto    10G     --         
+Po338         TRUNK vsphere-3114 noOperMem trunk     auto    10G     --         
+Po339         TRUNK vsphere-3115 noOperMem trunk     auto    10G     --         
+Po340         TRUNK vsphere-3115 noOperMem trunk     auto    10G     --         
+Po341         TRUNK vsphere-3116 noOperMem trunk     auto    10G     --         
+Po342         TRUNK vsphere-3116 noOperMem trunk     auto    10G     --         
+Po343         [PC] nbunode201l R connected 654       full    a-10G   --         
+Po4000        [TRUNK] peer-link  connected trunk     full    a-40G   --         
+Po4001        [TRUNK] peer-keepa connected trunk     full    a-40G   --         
+mgmt0         --                 connected routed    full    a-1000  --         
+Vlan1         --                 down      routed    auto    auto    --
+Vlan608       mgmt               connected routed    auto    auto    --
+Vlan4093      [L3] peer-keepaliv connected routed    auto    auto    --
+Eth151/1/1    [DATA-BIS-HQ] spm- connected 601       full    10G     10Gbase-SR 
+Eth151/1/2    [DATA-BIS-HQ] spm- connected 601       full    10G     10Gbase-SR 
+Eth151/1/3    [DATA-BIS-HQ] spm- connected 601       full    10G     10Gbase-SR 
+Eth151/1/4    [DATA-BIS-HQ] spm- connected 601       full    10G     10Gbase-SR 
+Eth151/1/5    [DATA-SRV-APP] OPE connected 606       full    10G     10Gbase-SR 
+Eth151/1/6    TRUNK vsphere-3105 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/7    TRUNK vsphere-3105 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/8    TRUNK vsphere-3106 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/9    TRUNK vsphere-3106 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/10   TRUNK vsphere-3107 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/11   TRUNK vsphere-3107 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/12   TRUNK vsphere-3108 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/13   TRUNK vsphere-3108 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/14   [DATA-BIS-BRANCH]  connected 602       full    10G     10Gbase-SR 
+Eth151/1/15   [DATA-BIS-BRANCH]  connected 602       full    10G     10Gbase-SR 
+Eth151/1/16   --                 disabled  1         full    10G     10Gbase-SR 
+Eth151/1/17   [DATA-SRV-APP2] OL connected 628       full    10G     10Gbase-SR 
+Eth151/1/18   [DATA-BIS-HQ] arcs connected 601       full    10G     10Gbase-SR 
+Eth151/1/19   [DATA-BIS-HQ] arcs connected 601       full    10G     10Gbase-SR 
+Eth151/1/20   [DATA-BIS-HQ] arcs connected 601       full    10G     10Gbase-SR 
+Eth151/1/21   [DATA-BIS-HQ] arcs connected 601       full    10G     10Gbase-SR 
+Eth151/1/22   [DATA-SRV-APP2] cd connected 628       full    10G     10Gbase-SR 
+Eth151/1/23   [DATA-SRV-APP2] cd connected 628       full    10G     10Gbase-SR 
+Eth151/1/24   TRUNK vsphere-3113 notconnec trunk     full    10G     10Gbase-SR 
+Eth151/1/25   TRUNK vsphere-3113 notconnec trunk     full    10G     10Gbase-SR 
+Eth151/1/26   TRUNK vsphere-3114 notconnec trunk     full    10G     10Gbase-SR 
+Eth151/1/27   TRUNK vsphere-3114 notconnec trunk     full    10G     10Gbase-SR 
+Eth151/1/28   TRUNK vsphere-dr-4 notconnec trunk     full    10G     10Gbase-SR 
+Eth151/1/29   TRUNK vsphere-dr-4 notconnec trunk     full    10G     10Gbase-SR 
+Eth151/1/30   TRUNK vsphere-dr-4 notconnec trunk     full    10G     10Gbase-SR 
+Eth151/1/31   TRUNK vsphere-dr-4 notconnec trunk     full    10G     10Gbase-SR 
+Eth151/1/32   --                 sfpAbsent 1         full    10G     --         
+Eth151/1/33   --                 sfpAbsent 1         full    10G     --         
+Eth151/1/34   --                 sfpAbsent 1         full    10G     --         
+Eth151/1/35   --                 sfpAbsent 1         full    10G     --         
+Eth151/1/36   --                 sfpAbsent 1         full    10G     --         
+Eth151/1/37   --                 sfpAbsent 1         full    10G     --         
+Eth151/1/38   --                 sfpAbsent 1         full    10G     --         
+Eth151/1/39   --                 sfpAbsent 1         full    10G     --         
+Eth151/1/40   --                 sfpAbsent 1         full    10G     --         
+Eth151/1/41   --                 sfpAbsent 1         full    10G     --         
+Eth151/1/42   --                 sfpAbsent 1         full    10G     --         
+Eth151/1/43   --                 sfpAbsent 1         full    10G     --         
+Eth151/1/44   --                 sfpAbsent 1         full    10G     --         
+Eth151/1/45   --                 sfpAbsent 1         full    10G     --         
+Eth151/1/46   --                 sfpAbsent 1         full    10G     --         
+Eth151/1/47   --                 sfpAbsent 1         full    10G     --         
+Eth151/1/48   --                 sfpAbsent 1         full    10G     --         
+Eth152/1/1    [DATA-BIS-HQ] spm- connected 601       full    10G     10Gbase-SR 
+Eth152/1/2    [DATA-BIS-HQ] spm- connected 601       full    10G     10Gbase-SR 
+Eth152/1/3    [DATA-BIS-HQ] spm- connected 601       full    10G     10Gbase-SR 
+Eth152/1/4    [DATA-BIS-HQ] spm- connected 601       full    10G     10Gbase-SR 
+Eth152/1/5    --                 disabled  1         full    10G     10Gbase-SR 
+Eth152/1/6    [DATA-BIS-HQ] soni connected 601       full    10G     10Gbase-SR 
+Eth152/1/7    TRUNK vsphere-3101 connected trunk     full    10G     10Gbase-SR 
+Eth152/1/8    TRUNK vsphere-3101 connected trunk     full    10G     10Gbase-SR 
+Eth152/1/9    TRUNK vsphere-3102 connected trunk     full    10G     10Gbase-SR 
+Eth152/1/10   TRUNK vsphere-3102 connected trunk     full    10G     10Gbase-SR 
+Eth152/1/11   TRUNK vsphere-3103 connected trunk     full    10G     10Gbase-SR 
+Eth152/1/12   TRUNK vsphere-3103 connected trunk     full    10G     10Gbase-SR 
+Eth152/1/13   TRUNK vsphere-3104 connected trunk     full    10G     10Gbase-SR 
+Eth152/1/14   TRUNK vsphere-3104 connected trunk     full    10G     10Gbase-SR 
+Eth152/1/15   TRUNK vsphere-dr-2 connected trunk     full    10G     10Gbase-SR 
+Eth152/1/16   TRUNK vsphere-dr-2 connected trunk     full    10G     10Gbase-SR 
+Eth152/1/17   TRUNK vsphere-dr-2 connected trunk     full    10G     10Gbase-SR 
+Eth152/1/18   TRUNK vsphere-dr-2 connected trunk     full    10G     10Gbase-SR 
+Eth152/1/19   TRUNK vsphere-dr-2 connected trunk     full    10G     10Gbase-SR 
+Eth152/1/20   TRUNK vsphere-dr-2 connected trunk     full    10G     10Gbase-SR 
+Eth152/1/21   TRUNK vsphere-dr-2 connected trunk     full    10G     10Gbase-SR 
+Eth152/1/22   TRUNK vsphere-dr-2 connected trunk     full    10G     10Gbase-SR 
+Eth152/1/23   TRUNK vsphere-3111 connected trunk     full    10G     10Gbase-SR 
+Eth152/1/24   TRUNK vsphere-3111 connected trunk     full    10G     10Gbase-SR 
+Eth152/1/25   [DATA-BIS-BRANCH]  connected 602       full    10G     10Gbase-SR 
+Eth152/1/26   TRUNK vsphere-3109 unknown e trunk     full    10G     10Gbase-SR 
+Eth152/1/27   TRUNK vsphere-3109 unknown e trunk     full    10G     10Gbase-SR 
+Eth152/1/28   TRUNK vsphere-3110 unknown e trunk     full    10G     10Gbase-SR 
+Eth152/1/29   TRUNK vsphere-3110 unknown e trunk     full    10G     10Gbase-SR 
+Eth152/1/30   [DATA-BIS-BRANCH]  connected 602       full    10G     10Gbase-SR 
+Eth152/1/31   --                 disabled  1         full    10G     10Gbase-SR 
+Eth152/1/32   --                 disabled  1         full    10G     10Gbase-SR 
+Eth152/1/33   --                 sfpAbsent 1         full    10G     --         
+Eth152/1/34   TRUNK vsphere-3115 notconnec trunk     full    10G     10Gbase-SR 
+Eth152/1/35   TRUNK vsphere-3115 notconnec trunk     full    10G     10Gbase-SR 
+Eth152/1/36   TRUNK vsphere-3116 notconnec trunk     full    10G     10Gbase-SR 
+Eth152/1/37   TRUNK vsphere-3116 notconnec trunk     full    10G     10Gbase-SR 
+Eth152/1/38   --                 sfpAbsent 1         full    10G     --         
+Eth152/1/39   TRUNK vpshere-dr-2 connected trunk     full    10G     10Gbase-SR 
+Eth152/1/40   TRUNK vpshere-dr-2 connected trunk     full    10G     10Gbase-SR 
+Eth152/1/41   --                 sfpAbsent 1         full    10G     --         
+Eth152/1/42   --                 sfpAbsent 1         full    10G     --         
+Eth152/1/43   --                 sfpAbsent 1         full    10G     --         
+Eth152/1/44   --                 sfpAbsent 1         full    10G     --         
+Eth152/1/45   --                 sfpAbsent 1         full    10G     --         
+Eth152/1/46   --                 sfpAbsent 1         full    10G     --         
+Eth152/1/47   --                 sfpAbsent 1         full    10G     --         
+Eth152/1/48   --                 sfpAbsent 1         full    10G     --         
+Eth153/1/1    [DATA-BIS-HQ] spm- connected 601       full    10G     10Gbase-SR 
+Eth153/1/2    [DATA-BIS-HQ] spm- connected 601       full    10G     10Gbase-SR 
+Eth153/1/3    [DATA-BIS-HQ] spm- connected 601       full    10G     10Gbase-SR 
+Eth153/1/4    [DATA-BIS-HQ] spm- connected 601       full    10G     10Gbase-SR 
+Eth153/1/5    [DATA-PLC] sparc-t connected 603       full    10G     10Gbase-SR 
+Eth153/1/6    [DATA-BIS-HQ] soni connected 601       full    10G     10Gbase-SR 
+Eth153/1/7    TRUNK vsphere-dr-1 connected trunk     full    10G     10Gbase-SR 
+Eth153/1/8    TRUNK vsphere-dr-1 connected trunk     full    10G     10Gbase-SR 
+Eth153/1/9    TRUNK vsphere-dr-1 connected trunk     full    10G     10Gbase-SR 
+Eth153/1/10   TRUNK vsphere-dr-1 connected trunk     full    10G     10Gbase-SR 
+Eth153/1/11   TRUNK vsphere-dr-1 connected trunk     full    10G     10Gbase-SR 
+Eth153/1/12   TRUNK vsphere-dr-1 connected trunk     full    10G     10Gbase-SR 
+Eth153/1/13   TRUNK vsphere-dr-1 connected trunk     full    10G     10Gbase-SR 
+Eth153/1/14   TRUNK vsphere-dr-1 connected trunk     full    10G     10Gbase-SR 
+Eth153/1/15   TRUNK vsphere-dr-1 connected trunk     full    10G     10Gbase-SR 
+Eth153/1/16   TRUNK vsphere-dr-1 connected trunk     full    10G     10Gbase-SR 
+Eth153/1/17   TRUNK vsphere-dr-1 connected trunk     full    10G     10Gbase-SR 
+Eth153/1/18   TRUNK vsphere-dr-1 connected trunk     full    10G     10Gbase-SR 
+Eth153/1/19   TRUNK vsphere-dr-1 connected trunk     full    10G     10Gbase-SR 
+Eth153/1/20   TRUNK vsphere-dr-1 connected trunk     full    10G     10Gbase-SR 
+Eth153/1/21   TRUNK vsphere-dr-1 connected trunk     full    10G     10Gbase-SR 
+Eth153/1/22   TRUNK vsphere-dr-1 connected trunk     full    10G     10Gbase-SR 
+Eth153/1/23   [DATA-SRV-APP] her connected 606       full    10G     10Gbase-SR 
+Eth153/1/24   TRUNK vsphere-3112 connected trunk     full    10G     10Gbase-SR 
+Eth153/1/25   TRUNK vsphere-3112 connected trunk     full    10G     10Gbase-SR 
+Eth153/1/26   TRUNK vsphere-3109 connected trunk     full    10G     10Gbase-SR 
+Eth153/1/27   TRUNK vsphere-3109 connected trunk     full    10G     10Gbase-SR 
+Eth153/1/28   TRUNK vsphere-3110 connected trunk     full    10G     10Gbase-SR 
+Eth153/1/29   TRUNK vsphere-3110 connected trunk     full    10G     10Gbase-SR 
+Eth153/1/30   --                 disabled  1         full    10G     10Gbase-SR 
+Eth153/1/31   [DATA-BIS-BRANCH]  connected 602       full    10G     10Gbase-SR 
+Eth153/1/32   --                 disabled  1         full    10G     10Gbase-SR 
+Eth153/1/33   --                 disabled  1         full    10G     10Gbase-SR 
+Eth153/1/34   [DATA-SRV-APP2]  t connected 628       full    10G     10Gbase-SR 
+Eth153/1/35   [DATA-BIS-BRANCH]  connected 602       full    10G     10Gbase-SR 
+Eth153/1/36   [DATA-BIS-BRANCH]  connected 602       full    10G     10Gbase-SR 
+Eth153/1/37   [DATA-BIS-BRANCH]  connected 602       full    10G     10Gbase-SR 
+Eth153/1/38   [DATA-BIS-BRANCH]  connected 602       full    10G     10Gbase-SR 
+Eth153/1/39   --                 disabled  1         full    10G     10Gbase-SR 
+Eth153/1/40   [PC] nbunode201l:  connected 654       full    10G     10Gbase-SR 
+Eth153/1/41   --                 disabled  1         full    10G     10Gbase-SR 
+Eth153/1/42   --                 disabled  1         full    10G     10Gbase-SR 
+Eth153/1/43   [DATA-SRV-APP2] S4 connected 606       full    10G     10Gbase-SR 
+Eth153/1/44   --                 sfpAbsent 1         full    10G     --         
+Eth153/1/45   [DATA-SRV-APP2] S4 connected 606       full    10G     10Gbase-SR 
+Eth153/1/46   [DATA-SRV-INET] 99 notconnec 605       full    10G     1000base-T 
+Eth153/1/47   [DATA-SRV-APP2] S4 connected 606       full    10G     10Gbase-SR 
+Eth153/1/48   [TRUNK][VC] BLADE8 connected trunk     full    10G     10Gbase-SR 
+Eth154/1/1    --                 disabled  1         full    10G     10Gbase-SR 
+Eth154/1/2    --                 disabled  1         full    10G     10Gbase-SR 
+Eth154/1/3    --                 sfpAbsent 1         full    10G     --         
+Eth154/1/4    --                 sfpAbsent 1         full    10G     --         
+Eth154/1/5    [DATA-BIS-HQ] FZHY connected trunk     full    10G     10Gbase-SR 
+Eth154/1/6    [DATA-BIS-HQ] FZHY connected trunk     full    10G     10Gbase-SR 
+Eth154/1/7    [DATA-BIS-HQ] FZHX connected 601       full    10G     10Gbase-SR 
+Eth154/1/8    [DATA-BIS-HB1] FZH connected 646       full    10G     10Gbase-SR 
+Eth154/1/9    [DATA-BIS-HQ] FZHX connected 601       full    10G     10Gbase-SR 
+Eth154/1/10   [DATA-BIS-HQ] FZHX connected 601       full    10G     10Gbase-SR 
+Eth154/1/11   [DATA-BIS-HB2] FZH connected 647       full    10G     10Gbase-SR 
+Eth154/1/12   [DATA-BIS-HQ] FZHX connected 601       full    10G     10Gbase-SR 
+Eth154/1/13   [DATA-BIS-HQ] FZHX connected 601       full    10G     10Gbase-SR 
+Eth154/1/14   [DATA-BIS-HQ] FZHX notconnec 601       full    10G     10Gbase-SR 
+Eth154/1/15   [DATA-BIS-HQ] FZHX connected 601       full    10G     10Gbase-SR 
+Eth154/1/16   [DATA-BIS-HQ] FZHX notconnec 601       full    10G     10Gbase-SR 
+Eth154/1/17   [DATA-BIS-HQ] FZHX notconnec 601       full    10G     10Gbase-SR 
+Eth154/1/18   [DATA-BIS-HQ] FZHX notconnec 601       full    10G     10Gbase-SR 
+Eth154/1/19   [DATA-BIS-HQ] FZHX connected 601       full    10G     10Gbase-SR 
+Eth154/1/20   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/21   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/22   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/23   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/24   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/25   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/26   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/27   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/28   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/29   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/30   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/31   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/32   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/33   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/34   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/35   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/36   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/37   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/38   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/39   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/40   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/41   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/42   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/43   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/44   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/45   --                 sfpAbsent 1         full    10G     --         
+Eth154/1/46   [DATA-CONSOL] dd20 connected 608       full    1000    1000base-T 
+Eth154/1/47   [DATA-CONSOL] dd20 connected 608       full    1000    1000base-T 
+Eth154/1/48   --                 disabled  1         full    10G     1000base-T 
+Eth155/1/1    [DATA-BIS-HQ] pr1- connected trunk     full    10G     10Gbase-SR 
+Eth155/1/2    [DATA-BIS-HQ] pr1- connected trunk     full    10G     10Gbase-SR 
+Eth155/1/3    [DATA-BIS-HQ] pr1- connected trunk     full    10G     10Gbase-SR 
+Eth155/1/4    [DATA-BIS-HQ] pr1- connected trunk     full    10G     10Gbase-SR 
+Eth155/1/5    [DATA-BIS-HQ] pr1- connected trunk     full    10G     10Gbase-SR 
+Eth155/1/6    [DATA-BIS-HQ] pr1- connected trunk     full    10G     10Gbase-SR 
+Eth155/1/7    [DATA-BIS-HQ] pr1- connected trunk     full    10G     10Gbase-SR 
+Eth155/1/8    [DATA-BIS-HQ] pr1- connected trunk     full    10G     10Gbase-SR 
+Eth155/1/9    [DATA-PLC] exa12db connected 603       full    10G     10Gbase-SR 
+Eth155/1/10   [DATA-PLC] exa12db connected 603       full    10G     10Gbase-SR 
+Eth155/1/11   [DATA-PLC] exa12db connected 603       full    10G     10Gbase-SR 
+Eth155/1/12   [DATA-PLC] exa12db connected 603       full    10G     10Gbase-SR 
+Eth155/1/13   [DATA-PLC] ZFSAPP0 connected 603       full    10G     10Gbase-SR 
+Eth155/1/14   --                 connected 603       full    10G     10Gbase-SR 
+Eth155/1/15   [DATA-PLC] bda2sw- connected 603       full    10G     10Gbase-SR 
+Eth155/1/16   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/17   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/18   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/19   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/20   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/21   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/22   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/23   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/24   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/25   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/26   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/27   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/28   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/29   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/30   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/31   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/32   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/33   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/34   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/35   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/36   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/37   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/38   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/39   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/40   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/41   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/42   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/43   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/44   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/45   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/46   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/47   --                 sfpAbsent 1         full    10G     --         
+Eth155/1/48   --                 sfpAbsent 1         full    10G     --         

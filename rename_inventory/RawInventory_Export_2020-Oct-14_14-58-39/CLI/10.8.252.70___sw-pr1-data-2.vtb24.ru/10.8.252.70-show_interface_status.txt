@@ -1,0 +1,785 @@
+
+
+--------------------------------------------------------------------------------
+Port             Name            Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------
+mgmt0            --              notconnec routed    auto    auto    --         
+Eth1/1           [DATA-SRV-APP]  connected 606       full    a-10G   10Gbase-SR 
+Eth1/2           [DATA-HB-HANA]  connected 530       full    a-10G   10Gbase-SR 
+Eth1/3           [DATA-SRV-APP]  connected 606       full    a-10G   10Gbase-SR 
+Eth1/4           [DATA-HB-HANA]  connected 530       full    a-10G   10Gbase-SR 
+Eth1/5           TRUNK vsphere-d connected trunk     full    a-10G   10Gbase-SR 
+Eth1/6           TRUNK vsphere-d connected trunk     full    a-10G   10Gbase-SR 
+Eth1/7           TRUNK vsphere-d connected trunk     full    a-10G   10Gbase-SR 
+Eth1/8           TRUNK vsphere-d connected trunk     full    a-10G   10Gbase-SR 
+Eth1/9           TRUNK vsphere-d connected trunk     full    a-10G   10Gbase-SR 
+Eth1/10          TRUNK vsphere-d connected trunk     full    a-10G   10Gbase-SR 
+Eth1/11          TRUNK vsphere-d connected trunk     full    a-10G   10Gbase-SR 
+Eth1/12          TRUNK vsphere-d connected trunk     full    a-10G   10Gbase-SR 
+Eth1/13          TRUNK vsphere-d connected trunk     full    a-10G   10Gbase-SR 
+Eth1/14          TRUNK vsphere-d connected trunk     full    a-10G   10Gbase-SR 
+Eth1/15          [TRUNK][VC] bla connected trunk     full    a-10G   10Gbase-SR 
+Eth1/16          [PC] sw-pr1-con connected trunk     full    a-1000  1000base-SX
+Eth1/17          [PC] sw-pr1-con connected trunk     full    a-1000  1000base-SX
+Eth1/18          [PC] sw-pr1-con connected trunk     full    a-10G   10Gbase-SR 
+Eth1/19          [DATA-BIS-HQ] c connected 601       full    a-10G   10Gbase-SR 
+Eth1/20          [DATA-BIS-HQ] c connected 601       full    a-10G   10Gbase-SR 
+Eth1/21          [DATA-DSO-PHYS] connected 565       full    a-10G   10Gbase-SR 
+Eth1/22          [DATA-DSO-PHYS] connected 565       full    a-10G   10Gbase-SR 
+Eth1/23          TRUNK F5-PR1-VC connected trunk     full    a-10G   10Gbase-SR 
+Eth1/24          TRUNK F5-PR1-VC connected trunk     full    a-10G   10Gbase-SR 
+Eth1/25          [PC] sw-pr1-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth1/26          [PC] sw-pr1-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth1/27          [RESERVED] f5 i disabled  1         auto    auto    10Gbase-SR 
+Eth1/28          [DATA-BIS-HQ] H connected trunk     full    a-10G   10Gbase-SR 
+Eth1/29          [PC] sw-pr1-dat notconnec trunk     auto    auto    10Gbase-SR 
+Eth1/30          [PC] sw-pr1-dat notconnec trunk     auto    auto    10Gbase-SR 
+Eth1/31          [VPC] bda2sw-ip connected trunk     full    a-10G   10Gbase-SR 
+Eth1/32          [RESERVED] for  sfpAbsent 1         auto    auto    --         
+Eth1/33          [vPC][TRUNK] sw connected trunk     full    a-10G   10Gbase-SR 
+Eth1/34          [vPC][TRUNK] sw connected trunk     full    a-10G   10Gbase-SR 
+Eth1/35          [vPC][TRUNK] sw connected trunk     full    a-10G   10Gbase-SR 
+Eth1/36          [vPC][TRUNK] sw connected trunk     full    a-10G   10Gbase-SR 
+Eth1/37          [PC]sw-pr1-data connected trunk     full    a-10G   10Gbase-SR 
+Eth1/38          [PC]sw-pr1-data connected trunk     full    a-10G   10Gbase-SR 
+Eth1/39          [PC]sw-pr1-data connected trunk     full    a-10G   10Gbase-SR 
+Eth1/40          [PC]sw-pr1-data connected trunk     full    a-10G   10Gbase-SR 
+Eth1/41          [PC] sw-pr1-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth1/42          [PC] sw-pr1-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth1/43          [PC] sw-pr1-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth1/44          [PC] sw-pr1-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth1/45          [PC] sw-pr1-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth1/46          [PC] sw-pr1-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth1/47          [PC] sw-pr1-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth1/48          [PC] sw-pr1-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth2/1           [DATA-SRV-APP]  connected 606       full    a-10G   10Gbase-SR 
+Eth2/2           [DATA-SRV-APP]  connected 606       full    a-10G   10Gbase-SR 
+Eth2/3           [DATA-BIS-HQ] s connected 601       full    a-10G   10Gbase-SR 
+Eth2/4           [DATA-BIS-HQ] s connected 601       full    a-10G   10Gbase-SR 
+Eth2/5           [DATA-BIS-HQ] X notconnec 601       auto    auto    10Gbase-SR 
+Eth2/6           [TRUNK][VC] bla connected trunk     full    a-10G   10Gbase-SR 
+Eth2/7           [RESERVED] use_ disabled  1         auto    auto    10Gbase-SR 
+Eth2/8           [PC] [TRUNK] PR connected trunk     full    a-1000  1000base-T 
+Eth2/13          Gigamon-HC1-4 x connected trunk     full    a-10G   10Gbase-SR 
+Eth2/14          [VPC] cisco exa connected trunk     full    a-10G   10Gbase-SR 
+Eth2/15          [DATA-BIS-HQ] P connected 601       full    a-10G   10Gbase-SR 
+Eth2/16          [DATA-BIS-HQ] P notconnec 601       auto    auto    10Gbase-SR 
+Eth2/17          [DATA-BIS-HQ] P notconnec 601       auto    auto    10Gbase-SR 
+Eth2/18          [DATA-BIS-HQ] P connected 601       full    a-10G   10Gbase-SR 
+Eth2/19          [DATA-BIS-HQ]   notconnec 601       auto    auto    10Gbase-SR 
+Eth2/20          [DATA-BIS-HQ]   connected 601       full    a-10G   10Gbase-SR 
+Eth2/21          [DATA-BIS-HQ]   connected 601       full    a-10G   10Gbase-SR 
+Eth2/22          [DATA-BIS-HQ] R connected 601       full    a-10G   10Gbase-SR 
+Eth2/23          [DATA-BIS-HQ] R connected 601       full    a-10G   10Gbase-SR 
+Eth2/24          [DATA-BIS-HB2]  connected 647       full    a-10G   10Gbase-SR 
+Eth2/25          [PC] sw-pr1-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth2/26          [PC] sw-pr1-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth2/27          [RESERVED] f5 i disabled  1         auto    auto    10Gbase-SR 
+Eth2/28          [DATA-HNAS-IC6] notconnec 533       auto    auto    10Gbase-SR 
+Eth2/29          [PC] sw-pr1-dat notconnec trunk     auto    auto    10Gbase-SR 
+Eth2/30          [PC] sw-pr1-dat notconnec trunk     auto    auto    10Gbase-SR 
+Eth2/31          [RESERVED] for  sfpAbsent 1         auto    auto    --         
+Eth2/32          [RESERVED] for  sfpAbsent 1         auto    auto    --         
+Eth2/33          [vPC][TRUNK] sw connected trunk     full    a-10G   10Gbase-SR 
+Eth2/34          [vPC][TRUNK] sw connected trunk     full    a-10G   10Gbase-SR 
+Eth2/35          [vPC][TRUNK] sw connected trunk     full    a-10G   10Gbase-SR 
+Eth2/36          [vPC][TRUNK] sw connected trunk     full    a-10G   10Gbase-SR 
+Eth2/37          [PC]sw-pr1-data connected trunk     full    a-10G   10Gbase-SR 
+Eth2/38          [PC]sw-pr1-data connected trunk     full    a-10G   10Gbase-SR 
+Eth2/39          [PC]sw-pr1-data connected trunk     full    a-10G   10Gbase-SR 
+Eth2/40          [PC]sw-pr1-data connected trunk     full    a-10G   10Gbase-SR 
+Eth2/41          [PC] sw-pr1-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth2/42          [PC] sw-pr1-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth2/43          [PC] sw-pr1-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth2/44          [PC] sw-pr1-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth2/45          [PC] sw-pr1-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth2/46          [PC] sw-pr1-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth2/47          [PC] sw-pr1-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth2/48          [PC] sw-pr1-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth3/11          [L3] sw-pr1-lpa connected routed    full    10G     10Gbase-SR 
+Eth3/11.996      [L3] sw-pr1-lpa connected routed    full    10G     10Gbase-SR 
+Eth3/14          [PC][JOIN] otv- connected routed    full    10G     10Gbase-SR 
+Eth3/15          [PC][JOIN] otv- connected routed    full    10G     10Gbase-SR 
+Eth3/16          [PC] join link  connected routed    full    10G     10Gbase-SR 
+Eth3/17          [TRUNK] inter-s connected routed    full    10G     10Gbase-SR 
+Eth3/18          [TRUNK] inter-s connected routed    full    10G     10Gbase-SR 
+Eth3/20          [PC] join link  connected routed    full    10G     10Gbase-SR 
+Eth3/21          [PC] core-1     connected routed    full    10G     10Gbase-SR 
+Eth3/22          [PC] core-1     connected routed    full    10G     10Gbase-SR 
+Eth3/23          [PC] core-2     connected routed    full    10G     10Gbase-SR 
+Eth3/24          [PC] core-2     connected routed    full    10G     10Gbase-SR 
+Eth4/11          [L3] sw-pr1-lpa connected routed    full    10G     10Gbase-SR 
+Eth4/11.998      [L3] sw-pr1-lpa connected routed    full    10G     10Gbase-SR 
+Eth4/14          [PC][JOIN] otv- connected routed    full    10G     10Gbase-SR 
+Eth4/15          [PC][JOIN] otv- connected routed    full    10G     10Gbase-SR 
+Eth4/16          [PC] join link  connected routed    full    10G     10Gbase-SR 
+Eth4/17          [TRUNK] inter-s connected routed    full    10G     10Gbase-SR 
+Eth4/18          [TRUNK] inter-s connected routed    full    10G     10Gbase-SR 
+Eth4/20          [PC] join link  connected routed    full    10G     10Gbase-SR 
+Eth4/21          [PC] core-1     connected routed    full    10G     10Gbase-SR 
+Eth4/22          [PC] core-1     connected routed    full    10G     10Gbase-SR 
+Eth4/23          [PC] core-2     connected routed    full    10G     10Gbase-SR 
+Eth4/24          [PC] core-2     connected routed    full    10G     10Gbase-SR 
+Eth7/5           TRUNK [PROD] p8 connected trunk     full    a-10G   10Gbase-SR 
+Eth7/6           TRUNK [PROD] p8 connected trunk     full    a-10G   10Gbase-SR 
+Eth7/7           [DATA-BIS-BRANC connected 602       full    a-10G   10Gbase-SR 
+Eth7/8           [DATA-BIS-BRANC connected 602       full    a-10G   10Gbase-SR 
+Eth7/9           [DATA-BIS-BRANC connected 601       full    a-10G   10Gbase-SR 
+Eth7/10          [DATA-BIS-BRANC connected 602       full    a-10G   10Gbase-SR 
+Eth7/11          [DATA-BIS-BRANC connected 602       full    a-10G   10Gbase-SR 
+Eth7/12          [DATA-BIS-BRANC connected 602       full    a-10G   10Gbase-SR 
+Eth7/13          [DATA-BIS-BRANC connected 602       full    a-10G   10Gbase-SR 
+Eth7/14          [DATA-BIS-BRANC connected 602       full    a-10G   10Gbase-SR 
+Eth7/15          [DATA-BIS-BRANC connected 602       full    a-10G   10Gbase-SR 
+Eth7/16          [DATA-BIS-HQ] f connected 601       full    a-10G   10Gbase-SR 
+Eth7/17          [DATA-BIS-HQ] m connected 601       full    a-10G   10Gbase-SR 
+Eth7/18          [DATA-BIS-HQ] u connected 601       full    a-10G   10Gbase-SR 
+Eth7/19          [DATA-BIS-HQ] u connected 601       full    a-10G   10Gbase-SR 
+Eth7/20          [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth7/21          [TRUNK][VC] bla connected trunk     full    a-10G   10Gbase-SR 
+Eth7/22          [FEX] fex-106   connected 1         full    a-10G   Fabric Exte
+Eth7/23          [FEX] fex-106   connected 1         full    a-10G   Fabric Exte
+Eth7/24          [FEX] fex-105   connected 1         full    a-10G   Fabric Exte
+Eth7/25          [FEX] fex-105   connected 1         full    a-10G   Fabric Exte
+Eth7/26          [FEX] fex-104   connected 1         full    a-10G   Fabric Exte
+Eth7/27          [FEX] fex-104 [ connected 1         full    a-10G   Fabric Exte
+Eth7/28          [FEX] fex-103   connected 1         full    a-10G   Fabric Exte
+Eth7/29          [FEX] fex-103   connected 1         full    a-10G   Fabric Exte
+Eth7/30          [FEX] fex-102   connected 1         full    a-10G   Fabric Exte
+Eth7/31          [FEX] fex-102   connected 1         full    a-10G   Fabric Exte
+Eth7/32          [FEX] fex-101   connected 1         full    a-10G   Fabric Exte
+Eth7/33          [PC][TAP] f5-pr connected trunk     full    a-10G   10Gbase-SR 
+Eth7/34          [DATA-MGMT] cp- connected 600       full    a-10G   10Gbase-SR 
+Eth7/35          [FEX] fex-107   connected 1         full    a-10G   Fabric Exte
+Eth7/36          [FEX] fex-107   connected 1         full    a-10G   Fabric Exte
+Eth7/37          [VPC] otv-1     connected trunk     full    a-10G   10Gbase-SR 
+Eth7/38          [VPC] otv-1     connected trunk     full    a-10G   10Gbase-SR 
+Eth7/39          [VPC] otv-1     connected trunk     full    a-10G   10Gbase-SR 
+Eth7/40          [VPC] otv-1     connected trunk     full    a-10G   10Gbase-SR 
+Eth7/41          [DATA-KT] vcs-t connected 645       full    a-10G   10Gbase-SR 
+Eth7/42          [PC] sw-pr1-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth7/43          [PC] sw-pr1-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth7/44          [DATA-BIS-HQ] e notconnec 601       auto    auto    10Gbase-SR 
+Eth8/5           TRUNK [TEST] p8 connected trunk     full    a-10G   10Gbase-SR 
+Eth8/6           TRUNK [TEST] p8 connected trunk     full    a-10G   10Gbase-SR 
+Eth8/7           [DATA-BIS-BRANC connected 602       full    a-10G   10Gbase-SR 
+Eth8/8           [DATA-BIS-BRANC connected 602       full    a-10G   10Gbase-SR 
+Eth8/9           [DATA-BIS-BRANC connected 601       full    a-10G   10Gbase-SR 
+Eth8/10          [DATA-BIS-BRANC connected 602       full    a-10G   10Gbase-SR 
+Eth8/11          [DATA-BIS-BRANC connected 602       full    a-10G   10Gbase-SR 
+Eth8/12          [DATA-BIS-BRANC connected 602       full    a-10G   10Gbase-SR 
+Eth8/13          [DATA-BIS-BRANC connected 602       full    a-10G   10Gbase-SR 
+Eth8/14          [DATA-BIS-BRANC notconnec 602       auto    auto    10Gbase-SR 
+Eth8/15          [DATA-BIS-BRANC connected 602       full    a-10G   10Gbase-SR 
+Eth8/16          [DATA-BIS-HQ] f connected 601       full    a-10G   10Gbase-SR 
+Eth8/17          [DATA-BIS-HQ] s connected 601       full    a-10G   10Gbase-SR 
+Eth8/18          [DATA-BIS-HQ] u connected 601       full    a-10G   10Gbase-SR 
+Eth8/19          [DATA-PLC] plc- connected 603       full    a-10G   10Gbase-SR 
+Eth8/20          [DATA-BIS-HQ] u connected 601       full    a-10G   10Gbase-SR 
+Eth8/21          [VPC][PILOT] $n notconnec trunk     auto    auto    10Gbase-SR 
+Eth8/22          [FEX] fex-106   connected 1         full    a-10G   Fabric Exte
+Eth8/23          [FEX] fex-106   connected 1         full    a-10G   Fabric Exte
+Eth8/24          [FEX] fex-105   connected 1         full    a-10G   Fabric Exte
+Eth8/25          [FEX] fex-105   connected 1         full    a-10G   Fabric Exte
+Eth8/26          [FEX] fex-104   connected 1         full    a-10G   Fabric Exte
+Eth8/27          [FEX] fex-104 [ connected 1         full    a-10G   Fabric Exte
+Eth8/28          [FEX] fex-103   connected 1         full    a-10G   Fabric Exte
+Eth8/29          [FEX] fex-103   notconnec 1         auto    auto    Fabric Exte
+Eth8/30          [FEX] fex-102   connected 1         full    a-10G   Fabric Exte
+Eth8/31          [FEX] fex-102   connected 1         full    a-10G   Fabric Exte
+Eth8/32          [FEX] fex-101   connected 1         full    a-10G   Fabric Exte
+Eth8/33          [PC][TAP] f5-pr connected trunk     full    a-10G   10Gbase-SR 
+Eth8/34          [DATA-MGMT] fw- connected 600       full    a-10G   10Gbase-SR 
+Eth8/35          [FEX] fex-107   connected 1         full    a-10G   Fabric Exte
+Eth8/36          [FEX] fex-107   connected 1         full    a-10G   Fabric Exte
+Eth8/37          [VPC] otv-2     connected trunk     full    a-10G   10Gbase-SR 
+Eth8/38          [VPC] otv-2     connected trunk     full    a-10G   10Gbase-SR 
+Eth8/39          [VPC] otv-2     connected trunk     full    a-10G   10Gbase-SR 
+Eth8/40          [VPC] otv-2     connected trunk     full    a-10G   10Gbase-SR 
+Eth8/41          [DATA-BIS-HQ] u notconnec 601       auto    auto    10Gbase-SR 
+Eth8/42          [PC] sw-pr1-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth8/43          [PC] sw-pr1-dat connected trunk     full    a-10G   10Gbase-SR 
+Eth8/44          [DATA-BIS-HQ] e notconnec 601       auto    auto    10Gbase-SR 
+Eth9/1           [DATA-BIS-HQ] r notconnec 601       auto    auto    10Gbase-SR 
+Eth9/2           [DATA-BIS-HQ] b connected 601       full    a-10G   10Gbase-SR 
+Eth9/3           [DATA-BIS-BRANC connected 602       full    a-10G   10Gbase-SR 
+Eth9/4           [DATA-BIS-HQ] p connected 601       full    a-10G   10Gbase-SR 
+Eth9/5           [DATA-BIS-HQ] f notconnec 601       auto    auto    10Gbase-SR 
+Eth9/6           [DATA-BIS-HQ] t notconnec 601       auto    auto    10Gbase-SR 
+Eth9/7           [DATA-BIS-HQ][T connected 601       full    a-10G   10Gbase-SR 
+Eth9/8           [TRUNK][VC] bla connected trunk     full    a-10G   10Gbase-SR 
+Eth9/9           [TRUNK][VC] bla connected trunk     full    a-10G   10Gbase-SR 
+Eth9/10          [TRUNK][VC] bla connected trunk     full    a-10G   10Gbase-SR 
+Eth9/11          [DATA-BIS-HQ] c connected 601       full    a-10G   10Gbase-SR 
+Eth9/12          [DATA-PLC] exa3 connected 603       full    a-10G   10Gbase-SR 
+Eth9/13          [DATA-PLC] exa3 connected 603       full    a-10G   10Gbase-SR 
+Eth9/14          [DATA-BACKUP] n connected 654       full    a-10G   10Gbase-SR 
+Eth9/15          [DATA-BACKUP] n connected 654       full    a-10G   10Gbase-SR 
+Eth9/16          [DATA-BACKUP] n connected 654       full    a-10G   10Gbase-SR 
+Eth9/17          [TRUNK][VC] bla connected trunk     full    a-10G   10Gbase-SR 
+Eth9/18          [TRUNK][VC] bla connected trunk     full    a-10G   10Gbase-SR 
+Eth9/19          [TRUNK][VC] bla connected trunk     full    a-10G   10Gbase-SR 
+Eth9/20          [TRUNK][VC] bla connected trunk     full    a-10G   10Gbase-SR 
+Eth9/21          [TRUNK][VC] bla connected trunk     full    a-10G   10Gbase-SR 
+Eth9/22          [TRUNK][VC] bla connected trunk     full    a-10G   10Gbase-SR 
+Eth9/23          [TRUNK][VC] bla connected trunk     full    a-10G   10Gbase-SR 
+Eth9/24          [TRUNK][VC] bla notconnec trunk     auto    auto    10Gbase-SR 
+Eth9/25          [TRUNK][VC] bla connected trunk     full    a-10G   10Gbase-SR 
+Eth9/26          [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth9/27          [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth9/28          [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth9/29          [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth9/30          [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth9/31          [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth9/32          [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth9/33          [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth9/34          [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth9/35          [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth9/36          [DATA-SRV-APP]  connected 606       full    a-10G   10Gbase-SR 
+Eth9/37          [DATA-HNAS-IC2] disabled  664       auto    auto    10Gbase-SR 
+Eth9/38          TRUNK [PROD] hn connected trunk     full    a-10G   10Gbase-SR 
+Eth9/39          [DATA-SRV-APP]  connected 606       full    a-10G   10Gbase-SR 
+Eth9/40          [DATA-SRV-APP]  connected 606       full    a-10G   10Gbase-SR 
+Eth9/41          [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth9/42          [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth9/43          [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth9/44          [DATA-BIS-HQ] e notconnec 601       auto    auto    10Gbase-SR 
+Eth9/45          [DATA-BIS-HQ] s connected 601       full    a-10G   10Gbase-SR 
+Eth9/46          [DATA-BIS-HQ] a connected 601       full    a-10G   10Gbase-SR 
+Eth9/47          [PC] peer-link  connected trunk     full    a-10G   10Gbase-SR 
+Eth9/48          [PC] peer-link  connected trunk     full    a-10G   10Gbase-SR 
+Eth10/1          [DATA-BIS-HQ] s notconnec 601       auto    auto    10Gbase-SR 
+Eth10/2          [DATA-BIS-BRANC connected 602       full    a-10G   10Gbase-SR 
+Eth10/3          [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth10/4          [DATA-BIS-HQ] e connected 601       full    a-10G   10Gbase-SR 
+Eth10/5          [DATA-KT] plc-i connected 603       full    a-10G   10Gbase-SR 
+Eth10/6          [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth10/7          [DATA-PLC] BigD connected 603       full    a-10G   10Gbase-SR 
+Eth10/8          [DATA-PLC] BigD connected 603       full    a-10G   10Gbase-SR 
+Eth10/9          [TRUNK][VC] bla connected trunk     full    a-10G   10Gbase-SR 
+Eth10/10         [TRUNK][VC] bla connected trunk     full    a-10G   10Gbase-SR 
+Eth10/11         [TRUNK][VC] bla connected trunk     full    a-10G   10Gbase-SR 
+Eth10/12         [DATA-PLC] exa3 notconnec 603       auto    auto    10Gbase-SR 
+Eth10/13         [DATA-PLC] exa3 connected 603       full    a-10G   10Gbase-SR 
+Eth10/14         [DATA-BACKUP] n connected 654       full    a-10G   10Gbase-SR 
+Eth10/15         [DATA-BACKUP] n notconnec 654       auto    auto    10Gbase-SR 
+Eth10/16         [DATA-BACKUP] n connected 654       full    a-10G   10Gbase-SR 
+Eth10/17         [TRUNK][VC] bla connected trunk     full    a-10G   10Gbase-SR 
+Eth10/18         [TRUNK][VC] bla connected trunk     full    a-10G   10Gbase-SR 
+Eth10/19         [TRUNK][VC] bla connected trunk     full    a-10G   10Gbase-SR 
+Eth10/20         [TRUNK][VC] bla connected trunk     full    a-10G   10Gbase-SR 
+Eth10/21         [TRUNK][VC] bla connected trunk     full    a-10G   10Gbase-SR 
+Eth10/22         [TRUNK][VC] bla connected trunk     full    a-10G   10Gbase-SR 
+Eth10/23         [TRUNK][VC] bla connected trunk     full    a-10G   10Gbase-SR 
+Eth10/24         [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth10/25         [TRUNK][VC] bla connected trunk     full    a-10G   10Gbase-SR 
+Eth10/26         [DATA-BIS-HQ] s connected 601       full    a-10G   10Gbase-SR 
+Eth10/27         [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth10/28         [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth10/29         [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth10/30         [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth10/31         [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth10/32         [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth10/33         [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth10/34         [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth10/35         [DATA-BIS-HQ] t connected 601       full    a-10G   10Gbase-SR 
+Eth10/36         [DATA-SRV-APP]  connected 606       full    a-10G   10Gbase-SR 
+Eth10/37         [DATA-HNAS-IC4] disabled  671       auto    auto    10Gbase-SR 
+Eth10/38         TRUNK [PROD] hn connected trunk     full    a-10G   10Gbase-SR 
+Eth10/39         [DATA-BIS-HQ] s connected 601       full    a-10G   10Gbase-SR 
+Eth10/40         [DATA-BIS-HQ] s connected 601       full    a-10G   10Gbase-SR 
+Eth10/41         [DATA-PLC] bda6 connected 603       full    a-10G   10Gbase-SR 
+Eth10/42         [DATA-NPB-GRE]  connected 507       full    a-10G   10Gbase-SR 
+Eth10/43         [DATA-BIS-HQ] P notconnec 601       auto    auto    10Gbase-SR 
+Eth10/44         [DATA-BIS-HQ] P notconnec 601       auto    auto    10Gbase-SR 
+Eth10/45         [DATA-BIS-HQ] H connected trunk     full    a-10G   10Gbase-SR 
+Eth10/46         [DATA-BIS-HQ] P connected 601       full    a-10G   10Gbase-SR 
+Eth10/47         [PC] peer-link  connected trunk     full    a-10G   10Gbase-SR 
+Eth10/48         [PC] peer-link  connected trunk     full    a-10G   10Gbase-SR 
+Po1              [L3] core-1     connected routed    full    10G     --         
+Po2              [L3] core-2     connected routed    full    10G     --         
+Po5              [TRUNK] inter-s connected routed    full    10G     --         
+Po5.10           [L3] data-1     connected routed    full    10G     --         
+Po5.20           [L3] peer-keepa connected routed    full    10G     --         
+Po40             [L3][JOIN] otv- connected routed    full    10G     --         
+Po41             [TRUNK] otv-1   connected trunk     full    a-10G   --         
+Po42             [TRUNK] otv-2   connected trunk     full    a-10G   --         
+Po51             [TRUNK] sw-pr1- connected trunk     full    a-1000  --         
+Po52             [TRUNK] sw-pr1- connected trunk     full    a-1000  --         
+Po53             [TRUNK] sw-pr1- connected trunk     full    a-1000  --         
+Po55             [TRUNK] sw-pr1- connected trunk     full    a-1000  --         
+Po56             [TRUNK] sw-pr1- connected trunk     full    a-1000  --         
+Po57             [TRUNK] sw-pr1- connected trunk     full    a-1000  --         
+Po58             [TRUNK] sw-pr1- connected trunk     full    a-1000  --         
+Po59             [TRUNK] cisco e connected trunk     full    a-10G   --         
+Po61             [TRUNK] f5-pr1- connected trunk     full    a-10G   --         
+Po62             [TRUNK] f5-pr1- connected trunk     full    a-10G   --         
+Po71             [TRUNK] sw-pr1- connected trunk     full    a-10G   --         
+Po72             [TRUNK] sw-pr1- connected trunk     full    a-10G   --         
+Po73             [TRUNK] sw-pr1- connected trunk     full    a-1000  --         
+Po74             [TRUNK] sw-pr1- connected trunk     full    a-1000  --         
+Po75             [TRUNK] sw-pr1- connected trunk     full    a-10G   --         
+Po76             [TRUNK] sw-pr1- connected trunk     full    a-10G   --         
+Po77             [TRUNK] PR1-DC- connected trunk     full    a-1000  --         
+Po78             [TRUNK] sw-pr1- noOperMem trunk     auto    auto    --         
+Po79             [TRUNK] sw-pr1- connected trunk     full    a-10G   --         
+Po99             --              connected trunk     full    a-10G   --         
+Po101            [FEX] fex-101   connected 1         full    a-10G   --         
+Po102            [FEX] fex-102   connected 1         full    a-10G   --         
+Po103            [FEX] fex-103   connected 1         full    a-10G   --         
+Po104            [FEX] fex-104   connected 1         full    a-10G   --         
+Po105            [FEX] fex-105   connected 1         full    a-10G   --         
+Po106            [FEX] fex-106   connected 1         full    a-10G   --         
+Po107            [FEX] fex-107   connected 1         full    a-10G   --         
+Po112            [VPC][TRUNK]sw- connected trunk     full    a-10G   --         
+Po310            [DATA-BIS-BRANC connected 602       full    a-10G   --         
+Po320            [DATA-BIS-BRANC connected 602       full    a-10G   --         
+Po321            [DATA-BIS-BRANC connected 602       full    a-10G   --         
+Po322            [DATA-BIS-BRANC connected 602       full    a-10G   --         
+Po323            [DATA-BIS-BRANC connected 602       full    a-10G   --         
+Po324            [DATA-BIS-BRANC connected 602       full    a-10G   --         
+Po326            [DATA-BIS-BRANC connected 602       full    a-10G   --         
+Po327            [DATA-BIS-BRANC connected 602       full    a-10G   --         
+Po328            [DATA-BIS-BRANC connected 602       full    a-10G   --         
+Po360            [DATA-BIS-HQ] Z connected 601       full    a-1000  --         
+Po361            [DATA-BIS-HQ] Z connected 601       full    a-1000  --         
+Po362            TRUNK F5-PR1-VC connected trunk     full    a-10G   --         
+Po363            TRUNK F5-PR1-VC connected trunk     full    a-10G   --         
+Po401            [DATA-KT] ibm-7 noOperMem 645       auto    auto    --         
+Po438            TRUNK HNAS-60-1 connected trunk     full    a-10G   --         
+Po501            [TRUNK][PILOT]  noOperMem 1         auto    auto    --         
+Po611            [DATA-DSO-PHYS] connected 565       full    a-10G   --         
+Po612            [DATA-DSO-PHYS] connected 565       full    a-10G   --         
+Po4000           [TRUNK] peer-li connected trunk     full    a-10G   --         
+Lo0              [L3] router-id  connected routed    auto    auto    --         
+Vlan1         --                 down      routed    auto    auto    --
+Vlan4         [L3] DMZ           connected routed    auto    auto    --
+Vlan505       [DATA-OTV-MGMT]    connected routed    auto    auto    --
+Vlan507       [L3] DATA-NPB-GRE  connected routed    auto    auto    --
+Vlan551       [L3] DATA-LTM-FO   connected routed    auto    auto    --
+Vlan554       [L3] DATA-DOS-INT- connected routed    auto    auto    --
+Vlan555       [L3] DATA-DOS-INT- connected routed    auto    auto    --
+Vlan556       [L3] DATA-DOS-CLOU connected routed    auto    auto    --
+Vlan557       [L3] DATA-DOS-ENV- connected routed    auto    auto    --
+Vlan558       [L3] DATA-DOS-AS1  connected routed    auto    auto    --
+Vlan559       [L3] DATA-DOS-NTNX connected routed    auto    auto    --
+Vlan560       [L3] DATA-DSO-DEB  connected routed    auto    auto    --
+Vlan561       [L3] DATA-DSO-DEC  connected routed    auto    auto    --
+Vlan562       [L3] DATA-DSO-DEF  connected routed    auto    auto    --
+Vlan563       [L3] DATA-DSO-DEH  connected routed    auto    auto    --
+Vlan564       [L3] DATA-DSO-ENV  connected routed    auto    auto    --
+Vlan565       [L3] DATA-DSO-PHYS connected routed    auto    auto    --
+Vlan566       [L3] DATA-DSO-NTNX connected routed    auto    auto    --
+Vlan568       [L3] DATA-DSO-CONS connected routed    auto    auto    --
+Vlan575       [L3] DATA-DOS-DEV  connected routed    auto    auto    --
+Vlan576       [L3] DATA-DOS-CS   connected routed    auto    auto    --
+Vlan577       [L3] DATA-DOS-INT  connected routed    auto    auto    --
+Vlan578       [L3] DATA-DOS-MON  connected routed    auto    auto    --
+Vlan579       [L3] DATA-DOS-OPEN connected routed    auto    auto    --
+Vlan580       [L3] ~DATA-KT-VIRI connected routed    auto    auto    --
+Vlan581       [L3] ~DATA-KT-CONS connected routed    auto    auto    --
+Vlan583       [L3] DATA-KT-VTM   connected routed    auto    auto    --
+Vlan585       [L3] DATA-KT-K10-O down      routed    auto    auto    --
+Vlan588       [L3] DATA-KT-LABVI connected routed    auto    auto    --
+Vlan600       [L3] DATA-MGMT     connected routed    auto    auto    --
+Vlan601       [L3] DATA-BIS-HQ   connected routed    auto    auto    --
+Vlan602       [L3] DATA-BIS-BRAN connected routed    auto    auto    --
+Vlan603       [L3] DATA-PLC      connected routed    auto    auto    --
+Vlan604       [L3] DATA-SRV-INF  connected routed    auto    auto    --
+Vlan605       [L3] DATA-SRV-INET connected routed    auto    auto    --
+Vlan606       [L3] DATA-SRV-APP  connected routed    auto    auto    --
+Vlan607       [L3] DATA-SRV-DEV  connected routed    auto    auto    --
+Vlan608       [L3] DATA-CONSOLE  connected routed    auto    auto    --
+Vlan609       [L3] DATA-VMWARE   connected routed    auto    auto    --
+Vlan610       [L3] DATA-OVM      connected routed    auto    auto    --
+Vlan625       [L3] DATA-BM       connected routed    auto    auto    --
+Vlan626       [L3] DATA-CES-INF  connected routed    auto    auto    --
+Vlan628       [L3] DATA-SRV-APP2 connected routed    auto    auto    --
+Vlan629       [L3] DATA-VMWARE2  connected routed    auto    auto    --
+Vlan630       --                 down      routed    auto    auto    --
+Vlan632       [L3] DATA-PBX-VOIP connected routed    auto    auto    --
+Vlan633       [L3] DATA-PBX-APP  connected routed    auto    auto    --
+Vlan635       [L3] DATA-SRV-APP3 connected routed    auto    auto    --
+Vlan636       [L3] DATA-CC-VOIP  connected routed    auto    auto    --
+Vlan637       [L3] DATA-CC-APP   connected routed    auto    auto    --
+Vlan642       [L3] DATA-WDS      connected routed    auto    auto    --
+Vlan643       [L3] DATA-BIS-DEVE connected routed    auto    auto    --
+Vlan644       [L3] DATA-BIS-SAND connected routed    auto    auto    --
+Vlan645       [L3] DATA-KT       connected routed    auto    auto    --
+Vlan651       [L3] DATA-SRV-ZDEV connected routed    auto    auto    --
+Vlan652       [L3] DATA-SRV-EXTR connected routed    auto    auto    --
+Vlan653       [L3] DATA-SECURITY connected routed    auto    auto    --
+Vlan654       [L3] DATA-BACKUP   connected routed    auto    auto    --
+Vlan655       [L3] DATA-PLC-OCTO connected routed    auto    auto    --
+Vlan656       [L3] DATA-PLC-TEST connected routed    auto    auto    --
+Vlan657       [L3] DATA-SWIFT    connected routed    auto    auto    --
+Vlan658       [L3] DATA-CRONOS   connected routed    auto    auto    --
+Vlan668       [L3] DATA-VTB-RF   connected routed    auto    auto    --
+Vlan669       [L3] DATA-HNAS-CON connected routed    auto    auto    --
+Vlan678       [L3] DATA-GLOBAL-O connected routed    auto    auto    --
+Vlan680       [L3] DATA-VIEW-ADM connected routed    auto    auto    --
+Vlan681       [L3] DATA-VIEW-CC  connected routed    auto    auto    --
+Vlan682       [L3] DATA-VIEW-MIS connected routed    auto    auto    --
+Vlan683       [L3] DATA-VIEW-URM connected routed    auto    auto    --
+Vlan684       IP NET 10.84.0.0/2 down      routed    auto    auto    --
+Vlan685       [L3] DATA-VIEW-MAI connected routed    auto    auto    --
+Vlan690       [L3] DATA-DMZ-COLO connected routed    auto    auto    --
+Vlan691       [L3] DATA-DMZ C-00 connected routed    auto    auto    --
+Vlan692       [L3] DATA-DMZ-COLO connected routed    auto    auto    --
+Vlan693       [L3] DATA-DMZ-LOCA connected routed    auto    auto    --
+Vlan694       [L3] DATA-TESTLISP connected routed    auto    auto    --
+Vlan902       [L3] DATA-F5-DMZ-S connected routed    auto    auto    --
+Vlan905       [L3] DATA-F5-SERVI connected routed    auto    auto    --
+Vlan906       [L3] DATA-F5-GSLB- connected routed    auto    auto    --
+Vlan907       [L3] DATA-F5-GSLB- connected routed    auto    auto    --
+Vlan908       [L3] DATA-F5-GSLB- connected routed    auto    auto    --
+Vlan909       [L3] DATA-F5-GSLB- connected routed    auto    auto    --
+Vlan910       [L3] DATA-F5-GSLB- connected routed    auto    auto    --
+Vlan911       [L3] DATA-F5-GSLB- connected routed    auto    auto    --
+Vlan912       [L3] DATA-F5-GSLB- connected routed    auto    auto    --
+Vlan913       [L3] DATA-F5-RHI-D connected routed    auto    auto    --
+Vlan914       [L3] DATA-F5-RHI-G connected routed    auto    auto    --
+Vlan915       [L3] DATA-F5-RHI-C connected routed    auto    auto    --
+Vlan916       [L3] DATA-F5-RHI-P connected routed    auto    auto    --
+Vlan917       [L3] DATA-F5-RHI-E connected routed    auto    auto    --
+Vlan918       [L3] DATA-F5-RHI-C connected routed    auto    auto    --
+Vlan919       [L3] DATA-F5-RHI-K connected routed    auto    auto    --
+Vlan950       [L3] DATA-F5-RHI-T connected routed    auto    auto    --
+Vlan951       [L3] DATA-TESTLISP connected routed    auto    auto    --
+Vlan952       [L3] DATA-TESTLISP connected routed    auto    auto    --
+Eth101/1/1       [DATA-BIS-HQ] P disabled  601       auto    auto               
+Eth101/1/2       [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth101/1/3       [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth101/1/4       [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth101/1/5       [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth101/1/6       [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth101/1/7       [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth101/1/8       [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth101/1/9       [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth101/1/10      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth101/1/11      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth101/1/12      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth101/1/13      [TRUNK] r-pr1-s connected trunk     full    a-1000             
+Eth101/1/14      [VPC] sw-pr1-co connected trunk     full    a-1000             
+Eth101/1/15      [DATA-PLC] exa3 connected 603       full    a-1000             
+Eth101/1/16      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth101/1/17      [DATA-BACKUP] n connected 654       full    a-1000             
+Eth101/1/18      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth101/1/19      [VPC] sw-pr1-co connected trunk     full    a-1000             
+Eth101/1/20      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth101/1/21      [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth101/1/22      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth101/1/23      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth101/1/24      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth101/1/25      [DATA-PLC] plc- connected 603       full    a-1000             
+Eth101/1/26      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth101/1/27      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth101/1/28      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth101/1/29      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth101/1/30      [VPC] sw-pr1-co connected trunk     full    a-1000             
+Eth101/1/31      [DATA-BIS-HB2]  notconnec 647       auto    auto               
+Eth101/1/32      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth101/1/33      [DATA-NPB-GRE]  connected 507       full    a-1000             
+Eth101/1/34      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth101/1/35      [DATA-IBM-HMC2] connected 649       full    a-1000             
+Eth101/1/36      [DATA-IBM-HMC2] connected 649       full    a-1000             
+Eth101/1/37      [DATA-SRV-APP]  connected 606       full    a-1000             
+Eth101/1/38      [DATA-PBX-VOIP] connected 632       full    a-1000             
+Eth101/1/39      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth101/1/40      [DATA-CONSOLE2] connected 608       full    a-1000             
+Eth101/1/41      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth101/1/42      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth101/1/43      sw-pr1-data-22_ connected 608       full    a-1000             
+Eth101/1/44      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth101/1/45      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth101/1/46      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth101/1/47      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth101/1/48      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth102/1/1       [DATA-IBM-HMC2] connected 649       full    a-1000             
+Eth102/1/2       [DATA-IBM-HMC2] connected 649       full    a-1000             
+Eth102/1/3       [DATA-IBM-HMC2] connected 649       full    a-1000             
+Eth102/1/4       [DATA-IBM-HMC2] connected 649       full    a-1000             
+Eth102/1/5       [DATA-IBM-HMC2] connected 649       full    a-1000             
+Eth102/1/6       [DATA-IBM-HMC2] connected 649       full    a-1000             
+Eth102/1/7       [DATA-IBM-HMC2] connected 649       full    a-1000             
+Eth102/1/8       [DATA-IBM-HMC2] connected 649       full    a-1000             
+Eth102/1/9       [DATA-IBM-HMC2] connected 649       full    a-1000             
+Eth102/1/10      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth102/1/11      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth102/1/12      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth102/1/13      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth102/1/14      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth102/1/15      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth102/1/16      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth102/1/17      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth102/1/18      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth102/1/19      [DATA-BIS-HB2]  notconnec 647       auto    auto               
+Eth102/1/20      [DATA-BIS-HB2]  notconnec 647       auto    auto               
+Eth102/1/21      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth102/1/22      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth102/1/23      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth102/1/24      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth102/1/25      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth102/1/26      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth102/1/27      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth102/1/28      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth102/1/29      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth102/1/30      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth102/1/31      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth102/1/32      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth102/1/33      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth102/1/34      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth102/1/35      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth102/1/36      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth102/1/37      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth102/1/38      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth102/1/39      [DATA-BIS-HB2]  notconnec 647       auto    auto               
+Eth102/1/40      [DATA-BIS-HB2]  notconnec 647       auto    auto               
+Eth102/1/41      [DATA-BIS-HB2]  notconnec 647       auto    auto               
+Eth102/1/42      [DATA-HNAS-CONS connected 669       full    a-1000             
+Eth102/1/43      [DATA-HNAS-CONS connected 669       full    a-1000             
+Eth102/1/44      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth102/1/45      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth102/1/46      [DATA-BIS-HB2]  notconnec 647       auto    auto               
+Eth102/1/47      [DATA-BIS-HB2]  notconnec 647       auto    auto               
+Eth102/1/48      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth103/1/1       [VPC] sw-pr1-co connected trunk     full    a-1000             
+Eth103/1/2       [VPC] sw-pr1-co connected trunk     full    a-1000             
+Eth103/1/3       [VPC] sw-pr1-co connected trunk     full    a-1000             
+Eth103/1/4       [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth103/1/5       [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth103/1/6       [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth103/1/7       [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth103/1/8       [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth103/1/9       [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth103/1/10      [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth103/1/11      [DATA-IBM-HMC5- notconnec 639       auto    auto               
+Eth103/1/12      [DATA-IBM-HMC5- notconnec 639       auto    auto               
+Eth103/1/13      [DATA-IBM-HMC5- notconnec 639       auto    auto               
+Eth103/1/14      --              disabled  1         auto    auto               
+Eth103/1/15      [DATA-KT]PC ibm notconnec 645       auto    auto               
+Eth103/1/16      [DATA-KT]PC ibm notconnec 645       auto    auto               
+Eth103/1/17      [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth103/1/18      [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth103/1/19      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth103/1/20      [DATA-DSO-PHYS] connected 565       full    a-1000             
+Eth103/1/21      [DATA-DSO-PHYS] connected 565       full    a-1000             
+Eth103/1/22      --              disabled  1         auto    auto               
+Eth103/1/23      [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth103/1/24      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth103/1/25      [DATA-BIS-HQ] Z connected 601       full    a-1000             
+Eth103/1/26      [DATA-BIS-HQ] Z connected 601       full    a-1000             
+Eth103/1/27      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth103/1/28      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth103/1/29      [DATA-CONSOLE]  disabled  608       auto    auto               
+Eth103/1/30      --              disabled  1         auto    auto               
+Eth103/1/31      --              disabled  1         auto    auto               
+Eth103/1/32      --              disabled  1         auto    auto               
+Eth103/1/33      --              disabled  1         auto    auto               
+Eth103/1/34      --              disabled  1         auto    auto               
+Eth103/1/35      --              disabled  1         auto    auto               
+Eth103/1/36      --              disabled  1         auto    auto               
+Eth103/1/37      --              disabled  1         auto    auto               
+Eth103/1/38      --              disabled  1         auto    auto               
+Eth103/1/39      --              disabled  1         auto    auto               
+Eth103/1/40      --              disabled  1         auto    auto               
+Eth103/1/41      --              disabled  1         auto    auto               
+Eth103/1/42      --              disabled  1         auto    auto               
+Eth103/1/43      --              disabled  1         auto    auto               
+Eth103/1/44      --              disabled  1         auto    auto               
+Eth103/1/45      --              disabled  1         auto    auto               
+Eth103/1/46      --              disabled  1         auto    auto               
+Eth103/1/47      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth103/1/48      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth104/1/1       [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth104/1/2       [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth104/1/3       [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth104/1/4       [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth104/1/5       [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth104/1/6       [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth104/1/7       [DATA-HB-ANY] H connected 531       full    a-1000             
+Eth104/1/8       [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth104/1/9       [DATA-HB-ANY] t connected 531       full    a-1000             
+Eth104/1/10      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth104/1/11      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth104/1/12      [DATA-HB-ANY] O connected 531       full    a-1000             
+Eth104/1/13      [DATA-HB-ANY] O connected 531       full    a-1000             
+Eth104/1/14      --              disabled  1         auto    auto               
+Eth104/1/15      --              disabled  1         auto    auto               
+Eth104/1/16      --              disabled  1         auto    auto               
+Eth104/1/17      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth104/1/18      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth104/1/19      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth104/1/20      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth104/1/21      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth104/1/22      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth104/1/23      [DATA-BIS-HQ] s connected 601       full    a-1000             
+Eth104/1/24      [DATA-BIS-HQ] s connected 601       full    a-1000             
+Eth104/1/25      [DATA-BIS-HQ] u connected 601       full    a-1000             
+Eth104/1/26      [DATA-BIS-HQ] u connected 601       full    a-1000             
+Eth104/1/27      [DATA-BIS-HQ] u connected 601       full    a-1000             
+Eth104/1/28      [DATA-BIS-HQ] u connected 601       full    a-1000             
+Eth104/1/29      [DATA-BIS-HQ] s connected 601       full    a-1000             
+Eth104/1/30      [DATA-BIS-HQ] s connected 601       full    a-1000             
+Eth104/1/31      [DATA-BIS-HQ] u connected 601       full    a-1000             
+Eth104/1/32      [DATA-BIS-HQ] u connected 601       full    a-1000             
+Eth104/1/33      [DATA-BIS-HQ] u connected 601       full    a-1000             
+Eth104/1/34      [DATA-BIS-HQ] u connected 601       full    a-1000             
+Eth104/1/35      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth104/1/36      [DATA-BIS-HQ] u connected 601       full    a-1000             
+Eth104/1/37      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth104/1/38      [DATA-BIS-HQ] u connected 601       full    a-1000             
+Eth104/1/39      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth104/1/40      [DATA-BIS-HQ] u connected 601       full    a-1000             
+Eth104/1/41      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth104/1/42      [DATA-BIS-HQ] u connected 601       full    a-1000             
+Eth104/1/43      [DATA-BIS-HQ] u connected 601       full    a-1000             
+Eth104/1/44      [DATA-BIS-HQ] u connected 601       full    a-1000             
+Eth104/1/45      [DATA-BIS-HQ] u connected 601       full    a-1000             
+Eth104/1/46      [DATA-BIS-HQ] u connected 601       full    a-1000             
+Eth104/1/47      [DATA-MGMT] esi connected 600       full    a-1000             
+Eth104/1/48      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth105/1/1       [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth105/1/2       [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth105/1/3       [DATA-CONSOLE]  connected 608       full    a-100              
+Eth105/1/4       [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth105/1/5       [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth105/1/6       [DATA-CONSOLE]  connected 608       full    a-100              
+Eth105/1/7       [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth105/1/8       [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth105/1/9       [DATA-MGMT] sha connected 600       full    a-1000             
+Eth105/1/10      [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth105/1/11      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth105/1/12      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth105/1/13      [DATA-BIS-HQ] a connected 601       full    a-1000             
+Eth105/1/14      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth105/1/15      [DATA-CONSOL] d notconnec 608       auto    auto               
+Eth105/1/16      [DATA-CONSOL] d connected 608       full    a-1000             
+Eth105/1/17      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth105/1/18      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth105/1/19      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth105/1/20      [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth105/1/21      [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth105/1/22      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth105/1/23      [DATA-CONSOLE]  connected 608       full    a-100              
+Eth105/1/24      [DATA-CONSOLE]  connected 608       full    a-100              
+Eth105/1/25      [DATA-CONSOLE]  connected 608       full    a-100              
+Eth105/1/26      [DATA-CONSOLE]  connected 608       full    a-100              
+Eth105/1/27      [DATA-CONSOLE]  connected 608       full    a-100              
+Eth105/1/28      [DATA-CONSOLE]  connected 608       full    a-100              
+Eth105/1/29      [DATA-CONSOLE]  connected 608       full    a-100              
+Eth105/1/30      [DATA-CONSOLE]  connected 608       full    a-100              
+Eth105/1/31      [DATA-CONSOLE]  connected 608       full    a-100              
+Eth105/1/32      [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth105/1/33      [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth105/1/34      [DATA-CONSOLE]  connected 608       full    a-100              
+Eth105/1/35      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth105/1/36      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth105/1/37      [DATA-CONSOLE]  connected 608       full    a-100              
+Eth105/1/38      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth105/1/39      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth105/1/40      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth105/1/41      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth105/1/42      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth105/1/43      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth105/1/44      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth105/1/45      RF-001068631    connected 608       full    a-1000             
+Eth105/1/46      RF-001068631    notconnec 608       auto    auto               
+Eth105/1/47      [DATA-KT] HIGHA connected 645       full    a-1000             
+Eth105/1/48      --              disabled  1         auto    auto               
+Eth106/1/1       [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/2       [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/3       [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/4       [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/5       [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/6       [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/7       [DATA-CONSOLE]  connected 608       full    a-100              
+Eth106/1/8       [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/9       [DATA-CONSOLE]  connected 608       full    a-100              
+Eth106/1/10      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/11      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/12      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/13      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/14      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/15      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/16      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/17      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/18      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/19      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/20      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/21      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/22      [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth106/1/23      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/24      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/25      [DATA-BIS-HB2]  connected 647       full    a-1000             
+Eth106/1/26      [DATA-PLC] plc- notconnec 603       auto    auto               
+Eth106/1/27      --              disabled  1         auto    auto               
+Eth106/1/28      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/29      [DATA-SRV-APP]  connected 606       full    a-1000             
+Eth106/1/30      [DATA-SRV-APP]  connected 606       full    a-1000             
+Eth106/1/31      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/32      [DATA-SRV-APP]  notconnec 606       auto    auto               
+Eth106/1/33      [DATA-HNAS-CONS connected 669       full    a-1000             
+Eth106/1/34      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/35      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/36      [DATA-OVM] ovm- connected 610       full    a-1000             
+Eth106/1/37      [DATA-SRV-INF ] connected 604       full    a-1000             
+Eth106/1/38      [DATA-SRV-INF ] connected 604       full    a-1000             
+Eth106/1/39      [DATA-SRV-INF ] connected 604       full    a-1000             
+Eth106/1/40      [DATA-CONSOL]   connected 608       full    a-100              
+Eth106/1/41      --              disabled  1         auto    auto               
+Eth106/1/42      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/43      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/44      --              disabled  1         auto    auto               
+Eth106/1/45      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth106/1/46      --              disabled  1         auto    auto               
+Eth106/1/47      --              disabled  1         auto    auto               
+Eth106/1/48      --              disabled  1         auto    auto               
+Eth107/1/1       [DATA-BIS-HQ] c connected 601       full    a-1000             
+Eth107/1/2       [DATA-BIS-HQ] c connected 601       full    a-1000             
+Eth107/1/3       [DATA-BIS-HQ] c notconnec 601       auto    auto               
+Eth107/1/4       [DATA-BIS-HQ] t connected 601       full    a-1000             
+Eth107/1/5       [DATA-BIS-HQ] t connected 601       full    a-1000             
+Eth107/1/6       [DATA-BIS-HQ] t connected 601       full    a-1000             
+Eth107/1/7       [DATA-BIS-HQ] t connected 601       full    a-1000             
+Eth107/1/8       [DATA-BIS-HQ] t connected 601       full    a-1000             
+Eth107/1/9       [DATA-BIS-HQ] t connected 601       full    a-1000             
+Eth107/1/10      [DATA-BIS-HQ] t connected 601       full    a-1000             
+Eth107/1/11      [DATA-BIS-HQ] t connected 601       full    a-1000             
+Eth107/1/12      [DATA-BIS-HQ] t connected 601       full    a-1000             
+Eth107/1/13      [DATA-BIS-HQ] t connected 601       full    a-1000             
+Eth107/1/14      [DATA-BIS-HQ] t connected 601       full    a-1000             
+Eth107/1/15      [HMC2] P980-2-1 connected 649       full    a-1000             
+Eth107/1/16      [HMC2] P980-2-1 connected 649       full    a-1000             
+Eth107/1/17      [HMC2] P980-4-1 connected 649       full    a-1000             
+Eth107/1/18      [HMC2] P980-4-1 connected 649       full    a-1000             
+Eth107/1/19      [DATA-CONSOLE]  connected 608       full    a-1000             
+Eth107/1/20      --              disabled  1         auto    auto               
+Eth107/1/21      --              disabled  1         auto    auto               
+Eth107/1/22      --              disabled  1         auto    auto               
+Eth107/1/23      --              disabled  1         auto    auto               
+Eth107/1/24      --              disabled  1         auto    auto               
+Eth107/1/25      --              disabled  1         auto    auto               
+Eth107/1/26      --              disabled  1         auto    auto               
+Eth107/1/27      --              disabled  1         auto    auto               
+Eth107/1/28      --              disabled  1         auto    auto               
+Eth107/1/29      --              disabled  1         auto    auto               
+Eth107/1/30      --              disabled  1         auto    auto               
+Eth107/1/31      --              disabled  1         auto    auto               
+Eth107/1/32      --              disabled  1         auto    auto               
+Eth107/1/33      --              disabled  1         auto    auto               
+Eth107/1/34      --              disabled  1         auto    auto               
+Eth107/1/35      --              disabled  1         auto    auto               
+Eth107/1/36      --              disabled  1         auto    auto               
+Eth107/1/37      --              disabled  1         auto    auto               
+Eth107/1/38      --              disabled  1         auto    auto               
+Eth107/1/39      --              disabled  1         auto    auto               
+Eth107/1/40      --              disabled  1         auto    auto               
+Eth107/1/41      --              disabled  1         auto    auto               
+Eth107/1/42      --              disabled  1         auto    auto               
+Eth107/1/43      [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth107/1/44      [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth107/1/45      [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth107/1/46      [DATA-CONSOLE]  notconnec 608       auto    auto               
+Eth107/1/47      --              disabled  1         auto    auto               
+Eth107/1/48      [VPC] sw-pr1-co connected trunk     full    a-1000             

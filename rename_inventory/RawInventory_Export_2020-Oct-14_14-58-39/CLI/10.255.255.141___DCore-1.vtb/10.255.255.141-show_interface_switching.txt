@@ -1,0 +1,1611 @@
+TenGigabitEthernet2/1 To DCore-2 (TE2/1)
+
+    Protocol  CDP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process    1996153  842185334    1996205  916257024
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  DTP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process    3592765  172452720          0          0
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  LACP                
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process    3883731  481582644    3883810  621409600
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  Other               
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          0          0    3592796  344908416
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+TenGigabitEthernet2/2 OTV vN7K2-vOTV-2 3/24/1
+
+    Protocol  CDP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process    1799619  437307417    1999466  905758098
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  LACP                
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process    3598709  446239916    3889940  622390400
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  Other               
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process        453     166704          0          0
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+TenGigabitEthernet2/3 To ASA-5585 (TE0/9)
+          Throttle count          0
+                   Drops         RP       1539         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs          0      Drops          0
+
+    Protocol  Spanning Tree       
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          0          0       8222     822200
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  CDP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          0          0    1999439  917740519
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  LACP                
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process    3889649  482316476    3890128  622420480
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  Other               
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          0          0    3598574  345463104
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+TenGigabitEthernet2/4 pDCASR01.vtb Te0/0/0/0
+          Throttle count          0
+                   Drops         RP          1         SP          0
+             SPD Flushes       Fast          1        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs   50586538      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process   50741583 4984652621   45411136 5612993507
+            Cache misses          0          -          -          -
+                    Fast          2        321          0          0
+               Auton/SSE 40094614081768 35812225511716101 1027922924 168369495484
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          0          0     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process       7893     473580       7894     757824
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  CDP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process    1799065  404789625    1999413  905734089
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  MPLS                
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process   56466959 6024628603  668913700 139070755889
+            Cache misses          0          -          -          -
+                    Fast  753426153 72207192645      54171   11774311
+               Auton/SSE          0          0 39608358714827 34178072789820519
+
+    NOTE: all counts are cumulative and reset only after a reload.
+TenGigabitEthernet4/1 
+          Throttle count          2
+                   Drops         RP         28         SP          0
+             SPD Flushes       Fast          1        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs   44152797      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process   44634530 3880585917   45710124 5659917941
+            Cache misses          0          -          -          -
+                    Fast         20       1444          0          0
+               Auton/SSE 25369580448535 21829843499406273 1958096732 312433853614
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179449   13817573     179491   20282483
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process       7254     435240       7257     696672
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  CDP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process    1998330  833303610    1998447  905296491
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  MPLS                
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process   58684544 5851075196   21465407 3908993978
+            Cache misses          0          -          -          -
+                    Fast   75160177 7292375540     129929   23712576
+               Auton/SSE          0          0 4076684773137 1985814529104233
+
+    NOTE: all counts are cumulative and reset only after a reload.
+TenGigabitEthernet4/2 V43-MPLS-1-P-1 ETH 2/1
+          Throttle count         18
+                   Drops         RP        335         SP          0
+             SPD Flushes       Fast         19        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs   54448859      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process 2485909668 393786448029   62615526 9824196730
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE 23997808441701 18535230955460875    8452632 1908750101
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     160079   12326083     179550   20289150
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process       8162     489720       8149     782304
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  CDP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process    1838991  743176194    1999173  905625369
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  MPLS                
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process  203881746 14425088955 2669159060 582597040265
+            Cache misses          0          -          -          -
+                    Fast  984964062 93789634349     162144   30883735
+               Auton/SSE          0          0 13895113212006 7432909860500366
+
+    Protocol  Other               
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process        454     157538          0          0
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+TenGigabitEthernet4/3 N77K-01 1/20/1 (old 1/47)
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs  694776911      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process  743777227 56387404266  760419442 83376596372
+            Cache misses          0          -          -          -
+                    Fast   50727414 5171023430      12180   11806235
+               Auton/SSE 14786890908957 11605231796859157 27622854865245 22725475837743433
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          0          0     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process    2841564  170493840    2847612  273370752
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  CDP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process    1799642  440912290    1999639  905836116
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  MPLS                
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          0          0          0          0
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0 2172440219 1066091684650
+
+    Protocol  Other               
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process        454     162532          0          0
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+TenGigabitEthernet4/4 N77K-02 1/20/1 (old 1/47)
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs  694891779      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process  757471367 57448601422  739509006 81154804486
+            Cache misses          0          -          -          -
+                    Fast   66115708 6903876043      39436   34107087
+               Auton/SSE 17711243621054 14583266871858694 39396266664065 36259957878191388
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          0          0     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process    2841558  170493480    2847490  273359040
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  CDP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process    1799591  440884019    1999607  905821620
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  MPLS                
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          0          0          0          0
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0  574517304 506251113783
+
+    Protocol  Other               
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process        453     162174          0          0
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+GigabitEthernet5/1 vDCRoot
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs   11421681      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process   11418316  853158782   11416725 1264244667
+            Cache misses          0          -          -          -
+                    Fast          8       3648          0          0
+               Auton/SSE 2274030955 996639904066 1298742845 440536182981
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          0          0      85430    9653590
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  Spanning Tree       
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process   25678261 1643408704          0          0
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process       3456     207360       3461     332256
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  CDP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     951344  493747536     951346  423348970
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  Other               
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process    1712021   82177008          0          0
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Interface GigabitEthernet5/2 is disabled
+
+Loopback0 
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          8        224          8        224
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Port-channel2 vN77-1-vOTV-1 Po1 (OTV)
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs   23438206      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process   23342228 1727325056   23335327 2566886009
+            Cache misses          0          -          -          -
+                    Fast         94      59095         10       1744
+               Auton/SSE 2545660547769 1805845134026230 2713082661381 2161355260952129
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          0          0     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      95978    5758680      95977    9213792
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Port-channel10 to DCore-2
+
+    Protocol  Spanning Tree       
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process        729      41833 2233993153 223399315300
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Port-channel30 to DC-MPLS-ASA 
+          Throttle count          0
+                   Drops         RP       1539         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs          0      Drops          0
+
+    Protocol  Spanning Tree       
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          0          0 2237648430 223764843000
+            Cache misses          0          -          -          -
+                    Fast          0          0       4060     406000
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Interface Vlan1 is disabled
+
+Vlan414 
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs   23334479      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process   23319388 1865552826   23335188 2566877399
+            Cache misses          0          -          -          -
+                    Fast          0          0          5        570
+               Auton/SSE  139965234 36290001953  286564497 54221207958
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      69397    4163820      22337    2144352
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan917 Link-to-GISGMP
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs   95366701      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process   95343613 5720617518   24353759 2337960864
+            Cache misses          0          -          -          -
+                    Fast        216      12960         10       6727
+               Auton/SSE 1632834605 771455746024 3636921739 2152972011894
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      46599    2795940      32459    3116064
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan2501 --- Link DC-MPLS-ASA # nInet
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs   23334109      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process   23336635 1866800191  119703093 11491553354
+            Cache misses          0          -          -          -
+                    Fast       7927     768252        126       9467
+               Auton/SSE 816992643351 564139114934366 413242121241 41721300428008
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      42387    2543220      47273    4538208
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  MPLS                
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          0          0          0          0
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0 11813457036 1122030107842
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan2505 --- Link DC-MPLS-ASA # VTB-GROUP
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs      14507      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      28841    2112858  119717918 11493157042
+            Cache misses          0          -          -          -
+                    Fast    1084700  519533546     920307  503588109
+               Auton/SSE 526577326702 69613955086133 239786047558 41880585394076
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      42073    2524380      46550    4468800
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  MPLS                
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          0          0          0          0
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0         51       4452
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan2506 
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs         40      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process         69       6486  119697115 11490923700
+            Cache misses          0          -          -          -
+                    Fast       2347     247400       2419     253990
+               Auton/SSE 32203171236 28630496888233 35192164491 20015704824049
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      23841    1430460      15887    1525152
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan2507 
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs         46      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      17572    1397445  119701357 11491363912
+            Cache misses          0          -          -          -
+                    Fast       3492     346465          0          0
+               Auton/SSE 576339793610 113824732609819 391781920040 117529837533694
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      24359    1461540      15818    1518528
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan2508 vDcMPLS-ASA(context VTB-GROUP)
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs        640      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process       1121     113948  119697656 11490994997
+            Cache misses          0          -          -          -
+                    Fast      36197    2881867      36147    2859723
+               Auton/SSE 684768142041 147848838827816 809075758826 134130982061690
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      24907    1494420      16562    1589952
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan2509 
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs       6970      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process         27       3779  119697068 11490918738
+            Cache misses          0          -          -          -
+                    Fast      24713    2477473          2        182
+               Auton/SSE 7139609256 4528329078938 6665076425 4301605104349
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      30783    1846980      23573    2263008
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan2601 link vrf nInet to context nInet
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs   46631691      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process   46617292 3589611979   23343891 2567730710
+            Cache misses          0          -          -          -
+                    Fast          0          0         29       5278
+               Auton/SSE 115493593821 34752434180981 282784480348 304817437637607
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      34318    2059080      22150    2126400
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan2607 Connect vrf DEMO to context nInet-SRV
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs   51750579      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process   51747621 3104858282     130762   12554174
+            Cache misses          0          -          -          -
+                    Fast          1       1147          0          0
+               Auton/SSE     284174  269620145   51770128 16002795317
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      77654    5979358      77807    8792191
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      14232     853920       6274     602304
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3213 --- Link DC-MPLS-ASA # nInet-BE
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs       7186      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process         38       3930   88753296 8520317856
+            Cache misses          0          -          -          -
+                    Fast          0          0          5        570
+               Auton/SSE 57494283473 35590402160880 67719641411 68452650471460
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     132938   10236226     133160   15047080
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      26867    1612020      18896    1814016
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3234 --- Link DC-MPLS-ASA # DBO_PROM
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs       8170      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process         15       1662   83079557 7975638564
+            Cache misses          0          -          -          -
+                    Fast        766      58289        757      56018
+               Auton/SSE 17543977216 4356257985968 53494236878 66008965151395
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     124438    9581726     124635   14083755
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      24224    1453440      18954    1819584
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3235 --- Link vpn DBO_TEST to Context nInet-SRV DC-MPLS-ASA 
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs      11441      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process         18       2004   82719623 7941084516
+            Cache misses          0          -          -          -
+                    Fast          2        226          0          0
+               Auton/SSE 7391164317 2133024984566 5032371127 704062133804
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     123899    9540223     124097   14022961
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      27388    1643280      22157    2127072
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3345 link GROUPVTB to context nInet-SRV
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs       6966      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          3        180  119696849 11490897504
+            Cache misses          0          -          -          -
+                    Fast          0          0          2        112
+               Auton/SSE 12269858265 9606575064322 17985114288 20937804498063
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      34592    2075520      22598    2169408
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  MPLS                
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          0          0          0          0
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0 2107693658 1795595884610
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3346 VTB-Core -dcASA- iSRV
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs      14132      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      11894     927521  119699012 11491127512
+            Cache misses          0          -          -          -
+                    Fast      21864    4442356         58       5852
+               Auton/SSE 849009970852 535464550953369 325358874392 131229928930091
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      41704    2502240      46589    4472544
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3348 iSRV-dcASA-VTB-Core
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs       8359      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process        412      40072  119698919 11491100126
+            Cache misses          0          -          -          -
+                    Fast        309      51284         30       3804
+               Auton/SSE 507190129486 219375401484793 463390951345 299639815697837
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      36006    2160360      24007    2304672
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3349 Link to ASA
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs  119510554      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process  119503922 7170235320     193841   18774386
+            Cache misses          0          -          -          -
+                    Fast        582      56884        596      59284
+               Auton/SSE   72123158 33966239335 720872913325 435111280857821
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      34200    2052000      14379    1380384
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3352 link to ASA ctx VTB-SEC
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs   18309011      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process   18328776 1794307340  128885401 12722317524
+            Cache misses          0          -          -          -
+                    Fast      37572    7965737         17       1406
+               Auton/SSE 2375338901 2371710094173  929504910 63900888276
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      37702    2262120      46325    4447200
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3353 
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs       6565      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          9        768  119697905 11490998880
+            Cache misses          0          -          -          -
+                    Fast        692      84556          0          0
+               Auton/SSE  914139235 62887214401 2393419279 2362487403775
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      29735    1784100      22132    2124672
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3354 VTB-Core link for ASA ctx VTB-DEV
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs      88036      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     542634   37405541  120230024 11547404960
+            Cache misses          0          -          -          -
+                    Fast     131964   10600230      32746    1768505
+               Auton/SSE 605121513388 609668465231461 277617543656 97881343840520
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      41959    2517540      46470    4461120
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3355 VTB-DEV link for ASA ctx VTB-DEV
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs   15846347      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process   15972548 1560207822  127781695 12571721109
+            Cache misses          0          -          -          -
+                    Fast  101516756 8561516396  101516564 8561372033
+               Auton/SSE 331330820570 127901022088326 583129789123 597727288582174
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      41843    2510580      27306    2621376
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3356 VTB-Core link for ASA ctx VTB-MON
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs      13865      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      19384    1543517  119704686 11491719356
+            Cache misses          0          -          -          -
+                    Fast       1073     105185          6        678
+               Auton/SSE 1940512537 832684999673 1488133354 198624285904
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      41441    2486460      45918    4408128
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  MPLS                
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          0          0          0          0
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0    3255641 1129152116
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3357 VTB-MON link for ASA ctx VTB-MON
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs       6780      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process        212      14028  119697300 11490942880
+            Cache misses          0          -          -          -
+                    Fast       9165    1374026       8686    1249199
+               Auton/SSE 2209874592 264613264034 2115643766 837078876727
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      34392    2063520      22678    2177088
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3358 VTB-GW link for ASA ctx RZD-TR
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs   95339393      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process   95332738 5719967527   24363171 2338864766
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE  699377626 237762966070 5809218877 5655509505196
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      34261    2055660      16334    1568064
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  MPLS                
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          0          0          0          0
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0 1367915027 1706804231536
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3359 VTB-GW-RW link for ASA ctx RZD-TR
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs  119511297      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process  119504550 7170273000     192320   18462720
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE      41306   49849582 5218160896 1604652564626
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      34349    2060940      14499    1391904
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3372 --- Link DC-MPLS-ASA # VTB-Finance Transport
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs   46632232      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process   46618272 3589736525   23336411 2567071619
+            Cache misses          0          -          -          -
+                    Fast         18       1684          4        728
+               Auton/SSE 2947064700 1897756458243 5142650168 2137658990045
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      35226    2113560      21525    2066400
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3373 --- Link DC-MPLS-ASA # VTB-Finance 
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs   23312235      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process   23298108 1724072731   49641244 5092268218
+            Cache misses          0          -          -          -
+                    Fast     652107   75948169     652116   75947939
+               Auton/SSE 4828771863 2471632128688 5370962352 3924593241526
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      46734    2804040      23436    2249856
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3374 --- Link DC-MPLS-ASA # VTB-Finance 
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs      15293      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      10164     656229  119708056 11492073876
+            Cache misses          0          -          -          -
+                    Fast        295      60150         25       2936
+               Auton/SSE 6319059535 3321391928546 3778465291 1789610408185
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      42939    2576340      46584    4472064
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3426 --- link to DC-MPLS-ASA(VTB-BM) inside ----
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs   19179221      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process   56468746 5822754308  164192208 16476890754
+            Cache misses          0          -          -          -
+                    Fast   32006137 3396320832       1467      82947
+               Auton/SSE 1387946261224 376390849876804 1531663971392 331639866412838
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      42967    2578020      59603    5721888
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3427 
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs       9325      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process    1765123  105979589  121461076 11677904240
+            Cache misses          0          -          -          -
+                    Fast       4674     438815       1328     100228
+               Auton/SSE 2059555199307 452702578402548 1358550971258 364927842158022
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      36964    2217840      25894    2485824
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3435 VTB-KBR/CTX-FIN
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs   46624983      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process   46617556 3589643775   23335322 2566909612
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE  676871906 341927115870  691318682 94643892152
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      23725    1423500      15306    1469376
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3648 VTB-RF(-24)-ASA-ctx-VTB-RF-24
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs       8787      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process       7988     714578  119706070 11491863930
+            Cache misses          0          -          -          -
+                    Fast       1276     147880        989      70762
+               Auton/SSE 2755282997202 846906755023842 1806047134144 521988697181184
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179256   13802712     179583   20292879
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      36197    2171820      39060    3749760
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3649 
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs      10811      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process        759      68064  119697783 11490990878
+            Cache misses          0          -          -          -
+                    Fast       1352     142537        968      95416
+               Auton/SSE 2587602029711 756921003595507 2755493722393 839047575282397
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      38401    2304060      26407    2535072
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3650 
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs       5872      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process        152      12880  113548763 10900682518
+            Cache misses          0          -          -          -
+                    Fast         56       5888         56       5908
+               Auton/SSE 4388994431 1409913781597 3618370578 753942727062
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     170038   13092926     170356   19250228
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      32116    1926960      36179    3473184
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3651 
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs       6030      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process         51       4014  113546312 10900446612
+            Cache misses          0          -          -          -
+                    Fast          3        328          0          0
+               Auton/SSE 6461308830 1347084797606 4326895781 1391766390677
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     170037   13092849     170355   19250115
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      32417    1945020      21088    2024448
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3652 VTB-RF(-BM)-ASA-ctx-VTB-RF-BM
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs      14426      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process       6554     610410  119704126 11491814966
+            Cache misses          0          -          -          -
+                    Fast         79       9407         21       7897
+               Auton/SSE 1569895197825 353465562495719 1161031894048 370672673127544
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      35366    2121960      39853    3825888
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3653 
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs       6796      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process       1997     149262  119698302 11491058218
+            Cache misses          0          -          -          -
+                    Fast      90439    6533018         45       7876
+               Auton/SSE 1712885336056 554796397173880 1582985352045 347925669204628
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      34255    2055300      22730    2182080
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3654 
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs   19139349      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process   19140064 1874869690  129289366 12776701798
+            Cache misses          0          -          -          -
+                    Fast     632584   48203097     632041   47397884
+               Auton/SSE 1289890962280 663647824767587 865292111298 351172413815750
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      40853    2451180      28373    2723808
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Vlan3655 Link VTB-Core to context VTB-RF
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs      14591      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process    3065297  258487129  122753952 11814937948
+            Cache misses          0          -          -          -
+                    Fast    3074835  269736986     436483   42776174
+               Auton/SSE 1233885495891 492222622788556 1040738622368 493466884125864
+
+    Protocol  DEC MOP             
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     179257   13802789     179584   20292992
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      42123    2527380      46690    4482240
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    NOTE: all counts are cumulative and reset only after a reload.

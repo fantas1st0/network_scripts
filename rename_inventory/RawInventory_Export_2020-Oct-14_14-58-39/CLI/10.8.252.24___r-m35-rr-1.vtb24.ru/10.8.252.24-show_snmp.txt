@@ -1,0 +1,26 @@
+Chassis: FXS1916Q46P
+Contact: uts_noc@vtb.ru, tel. 411-111, ols_uts@vtb.ru
+Location: M35, room 510, rack 15
+157563576 SNMP packets input
+    0 Bad SNMP version errors
+    24 Unknown community name
+    0 Illegal operation for community name supplied
+    0 Encoding errors
+    1161965110 Number of requested variables
+    2748 Number of altered variables
+    145747673 Get-request PDUs
+    5750632 Get-next PDUs
+    1038 Set-request PDUs
+    0 Input queue packet drops (Maximum queue size 1000)
+157596290 SNMP packets output
+    579 Too big errors (Maximum packet size 1500)
+    0 No such name errors
+    0 Bad values errors
+    0 General errors
+    157563552 Response PDUs
+    32738 Trap PDUs
+
+SNMP logging: enabled
+    Logging to 10.194.160.71.162, 1/10, 11389 sent, 190 dropped.
+    Logging to 10.194.162.33.162, 1/10, 11389 sent, 190 dropped.
+    Logging to 10.64.1.75.162, 1/10, 9440 sent, 137 dropped.

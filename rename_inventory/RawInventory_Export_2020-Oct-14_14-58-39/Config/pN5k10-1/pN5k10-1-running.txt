@@ -1,0 +1,1168 @@
+
+
+!Command: show running-config
+!Time: Tue Oct  6 20:16:02 2020
+
+version 7.3(5)N1(1)
+hostname pN5k10-1
+
+feature privilege
+feature telnet
+feature tacacs+
+cfs eth distribute
+feature udld
+feature interface-vlan
+feature lacp
+feature vpc
+feature lldp
+feature fex
+
+username admin password 5 $5$F..HuAQB$5WZNjerXglr3wSd4vIs.PGXdLjaKV7wa0hrCAY5JxC3  role network-admin
+username noc password 5 $5$kTOM7A4U$/7Jjty19izGh0lsx/NVQBsGW2v7cbfF3jy4lpC2Q4IC  role network-admin
+username noc passphrase  lifetime 99999 warntime 14 gracetime 3
+
+banner motd ^
+
+Perovo DC.
+Nexus 56128P.
+
+VPC Pair 10, unit 1.
+access:
+VTB authorized staff only
+
+^
+
+no ip domain-lookup
+tacacs-server host 10.128.128.11 key 7 "QAB-KUN"
+tacacs-server host 10.164.140.150 key 7 "QAB-KUN"
+aaa group server tacacs+ MSK-TAC
+  server 10.128.128.11
+  server 10.164.140.150
+  source-interface Vlan3799
+logging event link-status default
+service unsupported-transceiver
+ip access-list 111
+  10 permit ip 10.64.0.111/32 any
+ip access-list Snmp-Enable
+  10 permit ip 10.132.128.0/24 any
+  20 permit ip 10.150.128.0/24 any
+  50 permit ip 10.164.147.0/24 any
+fex 101
+  pinning max-links 1
+  description "FEX0101"
+fex 102
+  pinning max-links 1
+  description "FEX0102"
+snmp-server location MSK, Perovskoe highway 1, building 1, room ER3, rack _____
+snmp-server user noc network-admin auth md5 0x39fec0573afa9827afeecc8b578a0872 priv 0x39fec0573afa9827afeecc8b578a0872 localizedkey
+snmp-server user admin network-admin auth md5 0x23061696b1bb122db6ec0d60fefc3cc7 priv 0x23061696b1bb122db6ec0d60fefc3cc7 localizedkey
+snmp-server host 10.132.128.21 traps version 2c covex
+snmp-server host 10.132.128.21 use-vrf default
+snmp-server host 10.164.147.100 traps version 2c covex
+snmp-server host 10.164.147.100 use-vrf default
+snmp-server host 10.150.128.100 traps version 2c covex
+snmp-server host 10.150.128.100 use-vrf default
+snmp-server enable traps cfs state-change-notif
+snmp-server enable traps cfs merge-failure
+snmp-server enable traps feature-control FeatureOpStatusChange
+snmp-server enable traps sysmgr cseFailSwCoreNotifyExtended
+snmp-server enable traps config ccmCLIRunningConfigChanged
+snmp-server enable traps bridge newroot
+snmp-server enable traps bridge topologychange
+snmp-server enable traps feature-control ciscoFeatOpStatusChange
+snmp-server community covex group network-admin
+snmp-server community CiscoAudit2020 group network-operator
+snmp-server community covex use-acl Snmp-Enable
+snmp-server community CiscoAudit2020 use-acl 111
+ntp server 10.130.255.100
+ntp server 10.164.0.200
+ntp source-interface Vlan3799
+aaa authentication login default group MSK-TAC local
+aaa authentication login console group MSK-TAC local
+aaa accounting default group MSK-TAC
+
+ip route 10.0.0.0/8 10.150.255.65
+vlan 1
+vlan 2806
+  name vpc-keepalive
+vlan 2911
+  name VDI_133.192/22
+vlan 2912
+  name VDI_133.196/22
+vlan 2913
+  name VDI_133.200/22
+vlan 2914
+  name VDI_133.204/22
+vlan 2915
+  name VDI_133.208/22
+vlan 2951
+  name new_Mail_mgmt
+vlan 3095
+  name VDI3095
+vlan 3155
+  name VDI-SRV2
+vlan 3157
+  name VDI-SRV3
+vlan 3329
+  name VDI-14
+vlan 3330
+  name VDI-15
+vlan 3331
+  name VDI-16
+vlan 3332
+  name VDI-17
+vlan 3333
+  name VDI-18
+vlan 3334
+  name VDI-19
+vlan 3335
+  name VDI-20
+vlan 3336
+  name VDI-21
+vlan 3337
+  name VDI-22
+vlan 3338
+  name VDI-23
+vlan 3339
+  name VDI-24
+vlan 3340
+  name VDI-25
+vlan 3341
+  name VDI-26
+vlan 3342
+  name VDI-27
+vlan 3343
+  name VDI-28
+vlan 3344
+  name VDI-29
+vlan 3347
+  name vdi_3347
+vlan 3453
+  name VDI-ADMIN
+vlan 3491
+  name VIRT-MNG-2
+vlan 3532
+vlan 3778
+  name VDI-TEST
+vlan 3792
+  name ilo_vdi
+vlan 3799
+  name Management
+
+spanning-tree vlan 1-3967 priority 36864
+vrf context management
+  ip route 0.0.0.0/0 10.76.64.1
+vrf context vpc-keepalive
+  description vPC KeepAlive Only (Vlan 2806)
+vpc domain 60
+  role priority 100
+  peer-keepalive destination 10.150.255.166 source 10.150.255.165 vrf vpc-keepalive
+  delay restore 150
+
+
+interface Vlan1
+
+interface Vlan2806
+  description vPC KeepAlive Net
+  no shutdown
+  vrf member vpc-keepalive
+  ip address 10.150.255.165/30
+
+interface Vlan3799
+  description Management
+  no shutdown
+  mtu 2000
+  ip address 10.150.255.87/26
+
+interface port-channel7
+  description pN77K
+  switchport mode trunk
+  switchport trunk allowed vlan 2911-2915,2951,3095,3155,3157,3329-3344,3347,3453,3491,3532,3778,3792,3799
+  vpc 7
+
+interface port-channel99
+  switchport mode trunk
+  switchport trunk allowed vlan 2951
+  spanning-tree guard root
+  vpc 99
+
+interface port-channel101
+  description [FEX] fex-101
+  switchport mode fex-fabric
+  fex associate 101
+
+interface port-channel102
+  description [FEX] fex-102
+  switchport mode fex-fabric
+  fex associate 102
+
+interface port-channel601
+  description TRUNK vdic-hv2053h:ae RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  speed 10000
+  vpc 601
+
+interface port-channel602
+  description TRUNK vdic-hv2054h:ae RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  speed 10000
+  vpc 602
+
+interface port-channel603
+  description TRUNK vdic-hv2055h:ae RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  speed 10000
+  vpc 603
+
+interface port-channel604
+  description TRUNK vdic-hv2056h:ae RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  speed 10000
+  vpc 604
+
+interface port-channel605
+  description TRUNK vdic-hv2057h:ae RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  speed 10000
+  vpc 605
+
+interface port-channel606
+  description TRUNK vdic-hv2058h:ae RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  speed 10000
+  vpc 606
+
+interface port-channel607
+  description TRUNK vdic-hv2059h:ae RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  speed 10000
+  vpc 607
+
+interface port-channel608
+  description TRUNK vdic-hv2060h:ae RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  speed 10000
+  vpc 608
+
+interface port-channel609
+  description TRUNK vdic-hv2061h:ae RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  speed 10000
+  vpc 609
+
+interface port-channel610
+  description TRUNK vdic-hv2062h:ae RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  speed 10000
+  vpc 610
+
+interface port-channel611
+  description TRUNK vdic-hv2063h:ae RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  speed 10000
+  vpc 611
+
+interface port-channel612
+  description TRUNK vdic-hv2064h:ae RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  speed 10000
+  vpc 612
+
+interface port-channel613
+  description TRUNK vdic-hv2065h:ae RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  speed 10000
+  vpc 613
+
+interface port-channel614
+  description TRUNK vdic-hv2066h:ae RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  speed 10000
+  vpc 614
+
+interface port-channel615
+  description TRUNK vdic-hv2067h:ae RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  speed 10000
+  vpc 615
+
+interface port-channel616
+  description TRUNK vdic-hv2068h:ae RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  speed 10000
+  vpc 616
+
+interface port-channel617
+  description TRUNK vdic-hv2069h:ae RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  speed 10000
+  vpc 617
+
+interface port-channel618
+  description TRUNK vdic-hv2070h:ae RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  speed 10000
+  vpc 618
+
+interface port-channel619
+  description TRUNK vdic-hv2071h:ae RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  speed 10000
+  vpc 619
+
+interface port-channel620
+  description TRUNK vdic-hv2072h:ae RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  speed 10000
+  vpc 620
+
+interface port-channel701
+  description TRUNK vdic-hv2053h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  speed 10000
+  vpc 701
+
+interface port-channel702
+  description TRUNK vdic-hv2054h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  speed 10000
+  vpc 702
+
+interface port-channel703
+  description TRUNK vdic-hv2055h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  speed 10000
+  vpc 703
+
+interface port-channel704
+  description TRUNK vdic-hv2056h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  speed 10000
+  vpc 704
+
+interface port-channel705
+  description TRUNK vdic-hv2057h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  speed 10000
+  vpc 705
+
+interface port-channel706
+  description TRUNK vdic-hv2058h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  speed 10000
+  vpc 706
+
+interface port-channel707
+  description TRUNK vdic-hv2059h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  speed 10000
+  vpc 707
+
+interface port-channel708
+  description TRUNK vdic-hv2060h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  speed 10000
+  vpc 708
+
+interface port-channel709
+  description TRUNK vdic-hv2061h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  speed 10000
+  vpc 709
+
+interface port-channel710
+  description TRUNK vdic-hv2062h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  speed 10000
+  vpc 710
+
+interface port-channel711
+  description TRUNK vdic-hv2063h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  speed 10000
+  vpc 711
+
+interface port-channel712
+  description TRUNK vdic-hv2064h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  speed 10000
+  vpc 712
+
+interface port-channel713
+  description TRUNK vdic-hv2065h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  speed 10000
+  vpc 713
+
+interface port-channel714
+  description TRUNK vdic-hv2066h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  speed 10000
+  vpc 714
+
+interface port-channel715
+  description TRUNK vdic-hv2067h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  speed 10000
+  vpc 715
+
+interface port-channel716
+  description TRUNK vdic-hv2068h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  speed 10000
+  vpc 716
+
+interface port-channel717
+  description TRUNK vdic-hv2069h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  speed 10000
+  vpc 717
+
+interface port-channel718
+  description TRUNK vdic-hv2070h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  speed 10000
+  vpc 718
+
+interface port-channel719
+  description TRUNK vdic-hv2071h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  speed 10000
+  vpc 719
+
+interface port-channel720
+  description TRUNK vdic-hv2072h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  speed 10000
+  vpc 720
+
+interface port-channel1000
+  description peer-link !!! DO NOT ALLOW VLAN ID 2806 !!!
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk allowed vlan 1-2805,2807-3967
+  spanning-tree port type network
+  vpc peer-link
+
+interface port-channel1001
+  description [TRUNK] peer-keepalive
+  switchport mode trunk
+  switchport trunk allowed vlan 2806
+
+interface Ethernet1/1
+  description TRUNK vdic-hv2053h:int_eth1 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  channel-group 601 mode active
+
+interface Ethernet1/2
+  description TRUNK vdic-hv2053h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  channel-group 701 mode active
+
+interface Ethernet1/3
+  description TRUNK vdic-hv2054h:int_eth1 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  channel-group 602 mode active
+
+interface Ethernet1/4
+  description TRUNK vdic-hv2054h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  channel-group 702 mode active
+
+interface Ethernet1/5
+  description TRUNK vdic-hv2055h:int_eth1 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  channel-group 603 mode active
+
+interface Ethernet1/6
+  description TRUNK vdic-hv2055h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  channel-group 703 mode active
+
+interface Ethernet1/7
+  description TRUNK vdic-hv2056h:int_eth1 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  channel-group 604 mode active
+
+interface Ethernet1/8
+  description TRUNK vdic-hv2056h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  channel-group 704 mode active
+
+interface Ethernet1/9
+  description TRUNK vdic-hv2057h:int_eth1 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  channel-group 605 mode active
+
+interface Ethernet1/10
+  description TRUNK vdic-hv2057h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  channel-group 705 mode active
+
+interface Ethernet1/11
+  description TRUNK vdic-hv2058h:int_eth1 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  channel-group 606 mode active
+
+interface Ethernet1/12
+  description TRUNK vdic-hv2058h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  channel-group 706 mode active
+
+interface Ethernet1/13
+  description TRUNK vdic-hv2059h:int_eth1 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  channel-group 607 mode active
+
+interface Ethernet1/14
+  description TRUNK vdic-hv2059h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  channel-group 707 mode active
+
+interface Ethernet1/15
+  description TRUNK vdic-hv2060h:int_eth1 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  channel-group 608 mode active
+
+interface Ethernet1/16
+  description TRUNK vdic-hv2060h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  channel-group 708 mode active
+
+interface Ethernet1/17
+  description TRUNK vdic-hv2061h:int_eth1 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  channel-group 609 mode active
+
+interface Ethernet1/18
+  description TRUNK vdic-hv2061h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  channel-group 709 mode active
+
+interface Ethernet1/19
+  description TRUNK vdic-hv2062h:int_eth1 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  channel-group 610 mode active
+
+interface Ethernet1/20
+  description TRUNK vdic-hv2062h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  channel-group 710 mode active
+
+interface Ethernet1/21
+  description TRUNK vdic-hv2063h:int_eth1 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  channel-group 611 mode active
+
+interface Ethernet1/22
+  description TRUNK vdic-hv2063h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  channel-group 711 mode active
+
+interface Ethernet1/23
+  description TRUNK vdic-hv2064h:int_eth1 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  channel-group 612 mode active
+
+interface Ethernet1/24
+  description TRUNK vdic-hv2064h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  channel-group 712 mode active
+
+interface Ethernet1/25
+  description TRUNK vdic-hv2065h:int_eth1 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  channel-group 613 mode active
+
+interface Ethernet1/26
+  description TRUNK vdic-hv2065h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  channel-group 713 mode active
+
+interface Ethernet1/27
+  description TRUNK vdic-hv2066h:int_eth1 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  channel-group 614 mode active
+
+interface Ethernet1/28
+  description TRUNK vdic-hv2066h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  channel-group 714 mode active
+
+interface Ethernet1/29
+  description TRUNK vdic-hv2067h:int_eth1 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  channel-group 615 mode active
+
+interface Ethernet1/30
+  description TRUNK vdic-hv2067h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  channel-group 715 mode active
+
+interface Ethernet1/31
+  description TRUNK vdic-hv2068h:int_eth1 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  channel-group 616 mode active
+
+interface Ethernet1/32
+  description TRUNK vdic-hv2068h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  channel-group 716 mode active
+
+interface Ethernet1/33
+  description TRUNK vdic-hv2069h:int_eth1 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  channel-group 617 mode active
+
+interface Ethernet1/34
+  description TRUNK vdic-hv2069h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  channel-group 717 mode active
+
+interface Ethernet1/35
+  description TRUNK vdic-hv2070h:int_eth1 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  channel-group 618 mode active
+
+interface Ethernet1/36
+  description TRUNK vdic-hv2070h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  channel-group 718 mode active
+
+interface Ethernet1/37
+  description TRUNK vdic-hv2071h:int_eth1 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  channel-group 619 mode active
+
+interface Ethernet1/38
+  description TRUNK vdic-hv2071h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  channel-group 719 mode active
+
+interface Ethernet1/39
+  description TRUNK vdic-hv2072h:int_eth1 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 3491
+  channel-group 620 mode active
+
+interface Ethernet1/40
+  description TRUNK vdic-hv2072h:int_eth2 RF-001879779
+  switchport mode trunk
+  switchport trunk native vlan 3491
+  switchport trunk allowed vlan 2911-2915,3095,3155,3157,3329-3344,3347,3453,3491,3778,3792
+  channel-group 720 mode active
+
+interface Ethernet1/41
+  shutdown
+
+interface Ethernet1/42
+  description [FEX] fex-102
+  switchport mode fex-fabric
+  fex associate 102
+  channel-group 102
+
+interface Ethernet1/43
+  description [FEX] fex-102
+  switchport mode fex-fabric
+  fex associate 102
+  channel-group 102
+
+interface Ethernet1/44
+  description pN9K-con-exa8
+  switchport mode trunk
+  switchport trunk allowed vlan 2951
+  channel-group 99 mode active
+
+interface Ethernet1/45
+  description [FEX] fex-101
+  switchport mode fex-fabric
+  fex associate 101
+  channel-group 101
+
+interface Ethernet1/46
+  description [FEX] fex-101
+  switchport mode fex-fabric
+  fex associate 101
+  channel-group 101
+
+interface Ethernet1/47
+  description peer-keepalive
+  switchport mode trunk
+  switchport trunk allowed vlan 2806
+  udld aggressive
+  channel-group 1001 mode active
+
+interface Ethernet1/48
+  description peer-keepalive
+  switchport mode trunk
+  switchport trunk allowed vlan 2806
+  udld aggressive
+  channel-group 1001 mode active
+
+interface Ethernet1/49
+  description pN77-1-switch1 Eth2/13
+  switchport mode trunk
+  switchport trunk allowed vlan 2911-2915,2951,3095,3155,3157,3329-3344,3347,3453,3491,3532,3778,3792,3799
+  channel-group 7 mode active
+
+interface Ethernet1/50
+  description pN77-1-switch2 Eth2/13
+  switchport mode trunk
+  switchport trunk allowed vlan 2911-2915,2951,3095,3155,3157,3329-3344,3347,3453,3491,3532,3778,3792,3799
+  channel-group 7 mode active
+
+interface Ethernet1/51
+  description peer-link
+  switchport mode trunk
+  switchport trunk allowed vlan 1-2805,2807-3967
+  udld aggressive
+  channel-group 1000 mode active
+
+interface Ethernet1/52
+  description peer-link
+  switchport mode trunk
+  switchport trunk allowed vlan 1-2805,2807-3967
+  udld aggressive
+  channel-group 1000 mode active
+
+interface mgmt0
+  vrf member management
+  ip address 10.76.68.78/21
+
+interface Ethernet101/1/1
+  description [VLAN3532] vdic-hv2053h:mgmt RF-001790699
+  switchport access vlan 3532
+
+interface Ethernet101/1/2
+  description [VLAN3532] vdic-hv2054h:mgmt RF-001790699
+  switchport access vlan 3532
+
+interface Ethernet101/1/3
+  description [VLAN3532] vdic-hv2055h:mgmt RF-001790699
+  switchport access vlan 3532
+
+interface Ethernet101/1/4
+  description [VLAN3532] vdic-hv2056h:mgmt RF-001790699
+  switchport access vlan 3532
+
+interface Ethernet101/1/5
+
+interface Ethernet101/1/6
+  description [VLAN3532] vdic-hv2057h:mgmt RF-001790699
+  switchport access vlan 3532
+
+interface Ethernet101/1/7
+  description [VLAN3532] vdic-hv2058h:mgmt RF-001790699
+  switchport access vlan 3532
+
+interface Ethernet101/1/8
+  description [VLAN3532] vdic-hv2059h:mgmt RF-001790699
+  switchport access vlan 3532
+
+interface Ethernet101/1/9
+  description [VLAN3532] vdic-hv2060h:mgmt RF-001790699
+  switchport access vlan 3532
+
+interface Ethernet101/1/10
+
+interface Ethernet101/1/11
+  description [VLAN3532] vdic-hv2061h:mgmt RF-001790699
+  switchport access vlan 3532
+
+interface Ethernet101/1/12
+  description [VLAN3532] vdic-hv2062h:mgmt RF-001790699
+  switchport access vlan 3532
+
+interface Ethernet101/1/13
+  description [VLAN3532] vdic-hv2063h:mgmt RF-001790699
+  switchport access vlan 3532
+
+interface Ethernet101/1/14
+  description [VLAN3532] vdic-hv2064h:mgmt RF-001790699
+  switchport access vlan 3532
+
+interface Ethernet101/1/15
+
+interface Ethernet101/1/16
+  description [VLAN3532] vdic-hv2065h:mgmt RF-001790699
+  switchport access vlan 3532
+
+interface Ethernet101/1/17
+  description [VLAN3532] vdic-hv2066h:mgmt RF-001790699
+  switchport access vlan 3532
+
+interface Ethernet101/1/18
+  description [VLAN3532] vdic-hv2067h:mgmt RF-001790699
+  switchport access vlan 3532
+
+interface Ethernet101/1/19
+  description [VLAN3532] vdic-hv2068h:mgmt RF-001790699
+  switchport access vlan 3532
+
+interface Ethernet101/1/20
+
+interface Ethernet101/1/21
+  description [VLAN3532] vdic-hv2069h:mgmt RF-001790699
+  switchport access vlan 3532
+
+interface Ethernet101/1/22
+  description [VLAN3532] vdic-hv2070h:mgmt RF-001790699
+  switchport access vlan 3532
+
+interface Ethernet101/1/23
+  description [VLAN3532] vdic-hv2071h:mgmt RF-001790699
+  switchport access vlan 3532
+
+interface Ethernet101/1/24
+  description [VLAN3532] vdic-hv2072h:mgmt RF-001790699
+  switchport access vlan 3532
+
+interface Ethernet101/1/25
+
+interface Ethernet101/1/26
+
+interface Ethernet101/1/27
+
+interface Ethernet101/1/28
+
+interface Ethernet101/1/29
+
+interface Ethernet101/1/30
+
+interface Ethernet101/1/31
+
+interface Ethernet101/1/32
+
+interface Ethernet101/1/33
+
+interface Ethernet101/1/34
+
+interface Ethernet101/1/35
+
+interface Ethernet101/1/36
+
+interface Ethernet101/1/37
+
+interface Ethernet101/1/38
+
+interface Ethernet101/1/39
+
+interface Ethernet101/1/40
+
+interface Ethernet101/1/41
+
+interface Ethernet101/1/42
+
+interface Ethernet101/1/43
+
+interface Ethernet101/1/44
+
+interface Ethernet101/1/45
+
+interface Ethernet101/1/46
+
+interface Ethernet101/1/47
+
+interface Ethernet101/1/48
+
+interface Ethernet102/1/1
+  description [VLAN3532] vdic-hv2168h:mgmt RF-002010738
+  switchport access vlan 3532
+
+interface Ethernet102/1/2
+  description [VLAN3532] vdic-hv2167h:mgmt RF-002010738
+  switchport access vlan 3532
+
+interface Ethernet102/1/3
+  description [VLAN3532] vdic-hv2166h:mgmt RF-002010738
+  switchport access vlan 3532
+
+interface Ethernet102/1/4
+  description [VLAN3532] vdic-hv2165h:mgmt RF-002010738
+  switchport access vlan 3532
+
+interface Ethernet102/1/5
+
+interface Ethernet102/1/6
+  description [VLAN3532] vdic-hv2164h:mgmt RF-002010738
+  switchport access vlan 3532
+
+interface Ethernet102/1/7
+  description [VLAN3532] vdic-hv2163h:mgmt RF-002010738
+  switchport access vlan 3532
+
+interface Ethernet102/1/8
+  description [VLAN3532] vdic-hv2162h:mgmt RF-002010738
+  switchport access vlan 3532
+
+interface Ethernet102/1/9
+  description [VLAN3532] vdic-hv2161h:mgmt RF-002010738
+  switchport access vlan 3532
+
+interface Ethernet102/1/10
+
+interface Ethernet102/1/11
+  description [VLAN3532] vdic-hv2160h:mgmt RF-002010738
+  switchport access vlan 3532
+
+interface Ethernet102/1/12
+  description [VLAN3532] vdic-hv2159h:mgmt RF-002010738
+  switchport access vlan 3532
+
+interface Ethernet102/1/13
+  description [VLAN3532] vdic-hv2158h:mgmt RF-002010738
+  switchport access vlan 3532
+
+interface Ethernet102/1/14
+  description [VLAN3532] vdic-hv2157h:mgmt RF-002010738
+  switchport access vlan 3532
+
+interface Ethernet102/1/15
+
+interface Ethernet102/1/16
+  description [VLAN3532] vdic-hv2156h:mgmt RF-002010738
+  switchport access vlan 3532
+
+interface Ethernet102/1/17
+  description [VLAN3532] vdic-hv2155h:mgmt RF-002010738
+  switchport access vlan 3532
+
+interface Ethernet102/1/18
+  description [VLAN3532] vdic-hv2154h:mgmt RF-002010738
+  switchport access vlan 3532
+
+interface Ethernet102/1/19
+  description [VLAN3532] vdic-hv2153h:mgmt RF-002010738
+  switchport access vlan 3532
+
+interface Ethernet102/1/20
+
+interface Ethernet102/1/21
+  description [VLAN3532] vdic-hv2152h:mgmt RF-002010738
+  switchport access vlan 3532
+
+interface Ethernet102/1/22
+  description [VLAN3532] vdic-hv2151h:mgmt RF-002010738
+  switchport access vlan 3532
+
+interface Ethernet102/1/23
+  description [VLAN3532] vdic-hv2150h:mgmt RF-002010738
+  switchport access vlan 3532
+
+interface Ethernet102/1/24
+  description [VLAN3532] vdic-hv2149h:mgmt RF-002010738
+  switchport access vlan 3532
+
+interface Ethernet102/1/25
+
+interface Ethernet102/1/26
+
+interface Ethernet102/1/27
+
+interface Ethernet102/1/28
+
+interface Ethernet102/1/29
+
+interface Ethernet102/1/30
+
+interface Ethernet102/1/31
+
+interface Ethernet102/1/32
+
+interface Ethernet102/1/33
+
+interface Ethernet102/1/34
+
+interface Ethernet102/1/35
+
+interface Ethernet102/1/36
+
+interface Ethernet102/1/37
+
+interface Ethernet102/1/38
+
+interface Ethernet102/1/39
+
+interface Ethernet102/1/40
+
+interface Ethernet102/1/41
+
+interface Ethernet102/1/42
+
+interface Ethernet102/1/43
+
+interface Ethernet102/1/44
+
+interface Ethernet102/1/45
+
+interface Ethernet102/1/46
+
+interface Ethernet102/1/47
+
+interface Ethernet102/1/48
+clock timezone MSK 3 0
+cli alias name wr copy running-config startup-config
+line console
+line vty
+boot kickstart bootflash:/n6000-uk9-kickstart.7.3.5.N1.1.bin
+boot system bootflash:/n6000-uk9.7.3.5.N1.1.bin
+poap transit
+
+

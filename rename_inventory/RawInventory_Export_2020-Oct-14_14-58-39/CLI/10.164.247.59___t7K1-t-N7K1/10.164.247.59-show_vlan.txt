@@ -1,0 +1,507 @@
+
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Po1000, Eth1/48, Eth2/48
+1171 10.164.152.0_22                  active    Po1000, Eth1/48, Eth2/48
+1172 10.164.156.0_24                  active    Po1000, Eth1/48, Eth2/48
+1173 10.164.157.0_24                  active    Po1000, Eth1/48, Eth2/48
+1174 10.164.158.0_25                  active    Po1000, Eth1/48, Eth2/48
+1175 10.164.158.128_25                active    Po1000, Eth1/48, Eth2/48
+1176 10.144.146.0_24                  active    Po1000, Eth1/48, Eth2/48
+1178 10.164.161.0_24                  active    Po4, Po33, Po34, Po53, Po1000
+                                                Eth1/25, Eth1/26, Eth1/27
+                                                Eth1/28, Eth1/48, Eth2/25
+                                                Eth2/26, Eth2/27, Eth2/28
+                                                Eth2/31, Eth2/48, Eth101/1/3
+                                                Eth101/1/4, Eth101/1/5
+                                                Eth101/1/6, Eth101/1/7
+                                                Eth101/1/8, Eth101/1/9
+                                                Eth101/1/10, Eth101/1/11
+                                                Eth101/1/12, Eth101/1/13
+                                                Eth101/1/14, Eth101/1/15
+                                                Eth101/1/16, Eth101/1/17
+                                                Eth101/1/18, Eth101/1/19
+                                                Eth101/1/20, Eth101/1/21
+                                                Eth101/1/22, Eth101/1/23
+                                                Eth101/1/24, Eth101/1/25
+                                                Eth101/1/26, Eth101/1/27
+                                                Eth101/1/28, Eth101/1/29
+                                                Eth101/1/30, Eth101/1/31
+                                                Eth103/1/1, Eth103/1/2
+                                                Eth103/1/3, Eth103/1/4
+                                                Eth103/1/5, Eth103/1/6
+                                                Eth103/1/7, Eth103/1/8
+                                                Eth107/1/1, Eth107/1/2
+                                                Eth107/1/3, Eth107/1/4
+                                                Eth107/1/5, Eth107/1/6
+                                                Eth107/1/7, Eth107/1/8
+                                                Eth107/1/9, Eth107/1/10
+                                                Eth107/1/11, Eth107/1/12
+                                                Eth107/1/13, Eth107/1/14
+                                                Eth107/1/15, Eth107/1/16
+                                                Eth107/1/17, Eth107/1/18
+                                                Eth107/1/19, Eth107/1/20
+                                                Eth107/1/21, Eth107/1/22
+                                                Eth107/1/23, Eth107/1/24
+                                                Eth107/1/25, Eth107/1/26
+                                                Eth107/1/27
+1179 10.164.162.0_24                  active    Po201, Po202, Po203, Po204
+                                                Po205, Po206, Po207, Po208
+                                                Po209, Po210, Po211, Po212
+                                                Po213, Po214, Po215, Po216
+                                                Po217, Po218, Po219, Po220
+                                                Po221, Po222, Po223, Po224
+                                                Po225, Po226, Po227, Po228
+                                                Po229, Po230, Po231, Po232
+                                                Po233, Po234, Po235, Po236
+                                                Po237, Po238, Po239, Po240
+                                                Po241, Po242, Po243, Po244
+                                                Po245, Po246, Po247, Po248
+                                                Po249, Po250, Po251, Po252
+                                                Po253, Po254, Po255, Po256
+                                                Po257, Po258, Po259, Po260
+                                                Po261, Po262, Po263, Po264
+                                                Po265, Po266, Po267, Po268
+                                                Po269, Po270, Po271, Po272
+                                                Po273, Po274, Po275, Po276
+                                                Po277, Po278, Po279, Po280
+                                                Po281, Po282, Po283, Po284
+                                                Po285, Po286, Po287, Po288
+                                                Po289, Po290, Po291, Po292
+                                                Po293, Po294, Po295, Po296
+                                                Po297, Po1000, Eth1/48, Eth2/48
+                                                Eth105/1/3, Eth105/1/4
+                                                Eth105/1/5, Eth105/1/6
+                                                Eth105/1/7, Eth105/1/8
+                                                Eth105/1/9, Eth105/1/10
+                                                Eth105/1/11, Eth105/1/12
+                                                Eth105/1/13, Eth105/1/14
+                                                Eth105/1/15, Eth105/1/16
+                                                Eth105/1/17, Eth105/1/18
+                                                Eth105/1/19, Eth105/1/20
+                                                Eth105/1/21, Eth105/1/22
+                                                Eth105/1/23, Eth105/1/24
+                                                Eth105/1/25, Eth105/1/26
+                                                Eth105/1/27, Eth105/1/28
+                                                Eth105/1/29, Eth105/1/30
+                                                Eth105/1/31, Eth105/1/32
+                                                Eth109/1/1, Eth109/1/2
+                                                Eth109/1/3, Eth109/1/4
+                                                Eth109/1/5, Eth109/1/6
+                                                Eth109/1/7, Eth109/1/8
+                                                Eth109/1/9, Eth109/1/10
+                                                Eth109/1/11, Eth109/1/12
+                                                Eth109/1/13, Eth109/1/14
+                                                Eth109/1/15, Eth109/1/16
+                                                Eth109/1/17, Eth109/1/18
+                                                Eth109/1/19, Eth109/1/20
+                                                Eth109/1/21, Eth109/1/22
+                                                Eth109/1/23, Eth109/1/24
+                                                Eth109/1/25, Eth109/1/26
+                                                Eth109/1/27, Eth109/1/28
+                                                Eth109/1/29, Eth109/1/30
+                                                Eth109/1/31, Eth109/1/32
+                                                Eth111/1/1, Eth111/1/2
+                                                Eth111/1/3, Eth111/1/4
+                                                Eth111/1/5, Eth111/1/6
+                                                Eth111/1/7, Eth111/1/8
+                                                Eth111/1/9, Eth111/1/10
+                                                Eth111/1/11, Eth111/1/12
+                                                Eth111/1/13, Eth111/1/14
+                                                Eth111/1/15, Eth111/1/16
+                                                Eth111/1/17, Eth111/1/18
+                                                Eth111/1/19, Eth111/1/20
+                                                Eth111/1/21, Eth111/1/22
+                                                Eth111/1/23, Eth111/1/24
+                                                Eth111/1/25, Eth111/1/26
+                                                Eth111/1/27, Eth111/1/28
+                                                Eth111/1/29, Eth111/1/30
+                                                Eth111/1/31, Eth111/1/32
+                                                Eth113/1/1, Eth113/1/2
+                                                Eth113/1/3
+1180 10.164.163.0_24                  active    Po201, Po202, Po203, Po204
+                                                Po205, Po206, Po207, Po208
+                                                Po209, Po210, Po211, Po212
+                                                Po213, Po214, Po215, Po216
+                                                Po217, Po218, Po219, Po220
+                                                Po221, Po222, Po223, Po224
+                                                Po225, Po226, Po227, Po228
+                                                Po229, Po230, Po231, Po232
+                                                Po233, Po234, Po235, Po236
+                                                Po237, Po238, Po239, Po240
+                                                Po241, Po242, Po243, Po244
+                                                Po245, Po246, Po247, Po248
+                                                Po249, Po250, Po251, Po252
+                                                Po253, Po254, Po255, Po256
+                                                Po257, Po258, Po259, Po260
+                                                Po261, Po262, Po263, Po264
+                                                Po265, Po266, Po267, Po268
+                                                Po269, Po270, Po271, Po272
+                                                Po273, Po274, Po275, Po276
+                                                Po277, Po278, Po279, Po280
+                                                Po281, Po282, Po283, Po284
+                                                Po285, Po286, Po287, Po288
+                                                Po289, Po290, Po291, Po292
+                                                Po293, Po294, Po295, Po296
+                                                Po297, Po1000, Eth1/48, Eth2/48
+                                                Eth105/1/3, Eth105/1/4
+                                                Eth105/1/5, Eth105/1/6
+                                                Eth105/1/7, Eth105/1/8
+                                                Eth105/1/9, Eth105/1/10
+                                                Eth105/1/11, Eth105/1/12
+                                                Eth105/1/13, Eth105/1/14
+                                                Eth105/1/15, Eth105/1/16
+                                                Eth105/1/17, Eth105/1/18
+                                                Eth105/1/19, Eth105/1/20
+                                                Eth105/1/21, Eth105/1/22
+                                                Eth105/1/23, Eth105/1/24
+                                                Eth105/1/25, Eth105/1/26
+                                                Eth105/1/27, Eth105/1/28
+                                                Eth105/1/29, Eth105/1/30
+                                                Eth105/1/31, Eth105/1/32
+                                                Eth109/1/1, Eth109/1/2
+                                                Eth109/1/3, Eth109/1/4
+                                                Eth109/1/5, Eth109/1/6
+                                                Eth109/1/7, Eth109/1/8
+                                                Eth109/1/9, Eth109/1/10
+                                                Eth109/1/11, Eth109/1/12
+                                                Eth109/1/13, Eth109/1/14
+                                                Eth109/1/15, Eth109/1/16
+                                                Eth109/1/17, Eth109/1/18
+                                                Eth109/1/19, Eth109/1/20
+                                                Eth109/1/21, Eth109/1/22
+                                                Eth109/1/23, Eth109/1/24
+                                                Eth109/1/25, Eth109/1/26
+                                                Eth109/1/27, Eth109/1/28
+                                                Eth109/1/29, Eth109/1/30
+                                                Eth109/1/31, Eth109/1/32
+                                                Eth111/1/1, Eth111/1/2
+                                                Eth111/1/3, Eth111/1/4
+                                                Eth111/1/5, Eth111/1/6
+                                                Eth111/1/7, Eth111/1/8
+                                                Eth111/1/9, Eth111/1/10
+                                                Eth111/1/11, Eth111/1/12
+                                                Eth111/1/13, Eth111/1/14
+                                                Eth111/1/15, Eth111/1/16
+                                                Eth111/1/17, Eth111/1/18
+                                                Eth111/1/19, Eth111/1/20
+                                                Eth111/1/21, Eth111/1/22
+                                                Eth111/1/23, Eth111/1/24
+                                                Eth111/1/25, Eth111/1/26
+                                                Eth111/1/27, Eth111/1/28
+                                                Eth111/1/29, Eth111/1/30
+                                                Eth111/1/31, Eth111/1/32
+                                                Eth113/1/1, Eth113/1/2
+                                                Eth113/1/3
+1440 Net_MNG_10.164.160.X             active    Po53, Po1000, Eth1/48, Eth2/48
+2099 10.164.144.0                     active    Po4, Po33, Po34, Po1000
+                                                Eth1/25, Eth1/26, Eth1/27
+                                                Eth1/28, Eth1/48, Eth2/25
+                                                Eth2/26, Eth2/27, Eth2/28
+                                                Eth2/31, Eth2/48
+2352 VipInet_N7K1-N7K2                active    Po1000, Eth1/48, Eth2/48
+2630 VTB-USERS_N7K1-N7K2              active    Po1000, Eth1/48, Eth2/48
+3157 VDI-SRV3                         active    Po31, Po201, Po202, Po203
+                                                Po204, Po205, Po206, Po207
+                                                Po208, Po209, Po210, Po211
+                                                Po212, Po213, Po214, Po287
+                                                Po288, Po289, Po290, Po291
+                                                Po292, Po293, Po294, Po295
+                                                Po296, Po297, Po1000, Eth1/48
+                                                Eth2/48, Eth3/16, Eth105/1/3
+                                                Eth105/1/4, Eth105/1/6
+                                                Eth105/1/7, Eth105/1/8
+                                                Eth105/1/9, Eth105/1/10
+                                                Eth105/1/11, Eth105/1/12
+                                                Eth105/1/13, Eth105/1/14
+                                                Eth105/1/15, Eth105/1/16
+                                                Eth105/1/17, Eth111/1/25
+                                                Eth111/1/26, Eth111/1/27
+                                                Eth111/1/28, Eth111/1/29
+                                                Eth111/1/30, Eth111/1/31
+                                                Eth111/1/32, Eth113/1/1
+                                                Eth113/1/2, Eth113/1/3
+3207 L2_10.132.207.0_24               active    Po1000, Eth1/48, Eth2/48
+3329 VDI-14                           active    Po215, Po216, Po217, Po218
+                                                Po219, Po220, Po221, Po222
+                                                Po223, Po224, Po225, Po226
+                                                Po1000, Eth1/48, Eth2/48
+                                                Eth109/1/1, Eth109/1/2
+                                                Eth109/1/3, Eth109/1/4
+                                                Eth109/1/5, Eth109/1/6
+                                                Eth109/1/7, Eth109/1/8
+                                                Eth109/1/9, Eth109/1/10
+                                                Eth109/1/11, Eth109/1/12
+3330 VDI-15                           active    Po215, Po216, Po217, Po218
+                                                Po219, Po220, Po221, Po222
+                                                Po223, Po224, Po225, Po226
+                                                Po1000, Eth1/48, Eth2/48
+                                                Eth109/1/1, Eth109/1/2
+                                                Eth109/1/3, Eth109/1/4
+                                                Eth109/1/5, Eth109/1/6
+                                                Eth109/1/7, Eth109/1/8
+                                                Eth109/1/9, Eth109/1/10
+                                                Eth109/1/11, Eth109/1/12
+3331 VDI-16                           active    Po251, Po252, Po253, Po254
+                                                Po255, Po256, Po257, Po258
+                                                Po259, Po260, Po261, Po262
+                                                Po1000, Eth1/48, Eth2/48
+                                                Eth105/1/5, Eth105/1/30
+                                                Eth105/1/31, Eth105/1/32
+                                                Eth109/1/25, Eth109/1/26
+                                                Eth109/1/27, Eth109/1/28
+                                                Eth109/1/29, Eth109/1/30
+                                                Eth109/1/31, Eth109/1/32
+3332 VDI-17                           active    Po251, Po252, Po253, Po254
+                                                Po255, Po256, Po257, Po258
+                                                Po259, Po260, Po261, Po262
+                                                Po1000, Eth1/48, Eth2/48
+                                                Eth105/1/5, Eth105/1/30
+                                                Eth105/1/31, Eth105/1/32
+                                                Eth109/1/25, Eth109/1/26
+                                                Eth109/1/27, Eth109/1/28
+                                                Eth109/1/29, Eth109/1/30
+                                                Eth109/1/31, Eth109/1/32
+3333 VDI-18                           active    Po227, Po228, Po229, Po230
+                                                Po231, Po232, Po233, Po234
+                                                Po235, Po236, Po237, Po238
+                                                Po1000, Eth1/48, Eth2/48
+                                                Eth105/1/18, Eth105/1/19
+                                                Eth105/1/20, Eth105/1/21
+                                                Eth105/1/22, Eth105/1/23
+                                                Eth105/1/24, Eth105/1/25
+                                                Eth105/1/26, Eth105/1/27
+                                                Eth105/1/28, Eth105/1/29
+3334 VDI-19                           active    Po227, Po228, Po229, Po230
+                                                Po231, Po232, Po233, Po234
+                                                Po235, Po236, Po237, Po238
+                                                Po1000, Eth1/48, Eth2/48
+                                                Eth105/1/18, Eth105/1/19
+                                                Eth105/1/20, Eth105/1/21
+                                                Eth105/1/22, Eth105/1/23
+                                                Eth105/1/24, Eth105/1/25
+                                                Eth105/1/26, Eth105/1/27
+                                                Eth105/1/28, Eth105/1/29
+3335 VDI-20                           active    Po263, Po264, Po265, Po266
+                                                Po267, Po268, Po269, Po270
+                                                Po271, Po272, Po273, Po274
+                                                Po1000, Eth1/48, Eth2/48
+                                                Eth111/1/1, Eth111/1/2
+                                                Eth111/1/3, Eth111/1/4
+                                                Eth111/1/5, Eth111/1/6
+                                                Eth111/1/7, Eth111/1/8
+                                                Eth111/1/9, Eth111/1/10
+                                                Eth111/1/11, Eth111/1/12
+3336 VDI-21                           active    Po263, Po264, Po265, Po266
+                                                Po267, Po268, Po269, Po270
+                                                Po271, Po272, Po273, Po274
+                                                Po1000, Eth1/48, Eth2/48
+                                                Eth111/1/1, Eth111/1/2
+                                                Eth111/1/3, Eth111/1/4
+                                                Eth111/1/5, Eth111/1/6
+                                                Eth111/1/7, Eth111/1/8
+                                                Eth111/1/9, Eth111/1/10
+                                                Eth111/1/11, Eth111/1/12
+3337 VDI-22                           active    Po239, Po240, Po241, Po242
+                                                Po243, Po244, Po245, Po246
+                                                Po247, Po248, Po249, Po250
+                                                Po1000, Eth1/48, Eth2/48
+                                                Eth109/1/13, Eth109/1/14
+                                                Eth109/1/15, Eth109/1/16
+                                                Eth109/1/17, Eth109/1/18
+                                                Eth109/1/19, Eth109/1/20
+                                                Eth109/1/21, Eth109/1/22
+                                                Eth109/1/23, Eth109/1/24
+3338 VDI-23                           active    Po239, Po240, Po241, Po242
+                                                Po243, Po244, Po245, Po246
+                                                Po247, Po248, Po249, Po250
+                                                Po1000, Eth1/48, Eth2/48
+                                                Eth109/1/13, Eth109/1/14
+                                                Eth109/1/15, Eth109/1/16
+                                                Eth109/1/17, Eth109/1/18
+                                                Eth109/1/19, Eth109/1/20
+                                                Eth109/1/21, Eth109/1/22
+                                                Eth109/1/23, Eth109/1/24
+3339 VDI-24                           active    Po275, Po276, Po277, Po278
+                                                Po279, Po280, Po281, Po282
+                                                Po283, Po284, Po285, Po286
+                                                Po1000, Eth1/48, Eth2/48
+                                                Eth111/1/13, Eth111/1/14
+                                                Eth111/1/15, Eth111/1/16
+                                                Eth111/1/17, Eth111/1/18
+                                                Eth111/1/19, Eth111/1/20
+                                                Eth111/1/21, Eth111/1/22
+                                                Eth111/1/23, Eth111/1/24
+3340 VDI-25                           active    Po275, Po276, Po277, Po278
+                                                Po279, Po280, Po281, Po282
+                                                Po283, Po284, Po285, Po286
+                                                Po1000, Eth1/48, Eth2/48
+                                                Eth111/1/13, Eth111/1/14
+                                                Eth111/1/15, Eth111/1/16
+                                                Eth111/1/17, Eth111/1/18
+                                                Eth111/1/19, Eth111/1/20
+                                                Eth111/1/21, Eth111/1/22
+                                                Eth111/1/23, Eth111/1/24
+3341 VDI-26                           active    Po31, Po201, Po202, Po203
+                                                Po204, Po205, Po206, Po207
+                                                Po208, Po209, Po210, Po211
+                                                Po212, Po213, Po214, Po1000
+                                                Eth1/48, Eth2/48, Eth3/16
+                                                Eth105/1/3, Eth105/1/4
+                                                Eth105/1/6, Eth105/1/7
+                                                Eth105/1/8, Eth105/1/9
+                                                Eth105/1/10, Eth105/1/11
+                                                Eth105/1/12, Eth105/1/13
+                                                Eth105/1/14, Eth105/1/15
+                                                Eth105/1/16, Eth105/1/17
+3342 VDI-27                           active    Po31, Po201, Po202, Po203
+                                                Po204, Po205, Po206, Po207
+                                                Po208, Po209, Po210, Po211
+                                                Po212, Po213, Po214, Po1000
+                                                Eth1/48, Eth2/48, Eth3/16
+                                                Eth105/1/3, Eth105/1/4
+                                                Eth105/1/6, Eth105/1/7
+                                                Eth105/1/8, Eth105/1/9
+                                                Eth105/1/10, Eth105/1/11
+                                                Eth105/1/12, Eth105/1/13
+                                                Eth105/1/14, Eth105/1/15
+                                                Eth105/1/16, Eth105/1/17
+3343 VDI-28                           active    Po31, Po201, Po202, Po203
+                                                Po204, Po205, Po206, Po207
+                                                Po208, Po209, Po210, Po211
+                                                Po212, Po213, Po214, Po287
+                                                Po288, Po289, Po290, Po291
+                                                Po292, Po293, Po294, Po295
+                                                Po296, Po297, Po1000, Eth1/48
+                                                Eth2/48, Eth3/16, Eth105/1/3
+                                                Eth105/1/4, Eth105/1/6
+                                                Eth105/1/7, Eth105/1/8
+                                                Eth105/1/9, Eth105/1/10
+                                                Eth105/1/11, Eth105/1/12
+                                                Eth105/1/13, Eth105/1/14
+                                                Eth105/1/15, Eth105/1/16
+                                                Eth105/1/17, Eth111/1/25
+                                                Eth111/1/26, Eth111/1/27
+                                                Eth111/1/28, Eth111/1/29
+                                                Eth111/1/30, Eth111/1/31
+                                                Eth111/1/32, Eth113/1/1
+                                                Eth113/1/2, Eth113/1/3
+3344 VDI-29                           active    Po31, Po201, Po202, Po203
+                                                Po204, Po205, Po206, Po207
+                                                Po208, Po209, Po210, Po211
+                                                Po212, Po213, Po214, Po287
+                                                Po288, Po289, Po290, Po291
+                                                Po292, Po293, Po294, Po295
+                                                Po296, Po297, Po1000, Eth1/48
+                                                Eth2/48, Eth3/16, Eth105/1/3
+                                                Eth105/1/4, Eth105/1/6
+                                                Eth105/1/7, Eth105/1/8
+                                                Eth105/1/9, Eth105/1/10
+                                                Eth105/1/11, Eth105/1/12
+                                                Eth105/1/13, Eth105/1/14
+                                                Eth105/1/15, Eth105/1/16
+                                                Eth105/1/17, Eth111/1/25
+                                                Eth111/1/26, Eth111/1/27
+                                                Eth111/1/28, Eth111/1/29
+                                                Eth111/1/30, Eth111/1/31
+                                                Eth111/1/32, Eth113/1/1
+                                                Eth113/1/2, Eth113/1/3
+3428 VDI_VipInet                      active    Po31, Po298, Po299, Po300
+                                                Po1000, Eth1/48, Eth2/48
+                                                Eth3/16, Eth113/1/4, Eth113/1/5
+                                                Eth113/1/6
+3429 vdi_vipinet_vmk1                 active    Po31, Po298, Po299, Po300
+                                                Po1000, Eth1/48, Eth2/48
+                                                Eth3/16, Eth113/1/4, Eth113/1/5
+                                                Eth113/1/6
+3430 vdi_vipinet_arm                  active    Po31, Po298, Po299, Po300
+                                                Po1000, Eth1/48, Eth2/48
+                                                Eth3/16, Eth113/1/4, Eth113/1/5
+                                                Eth113/1/6
+3500 lnk-7k-7k-VTB-Core               active    Po1000, Eth1/48, Eth2/48
+3505 link_7k-7k-rsrv                  active    Po1000, Eth1/48, Eth2/48
+3510 link_7k-7k-nInet-SRV             active    Po1000, Eth1/48, Eth2/48
+3515 VLAN3515                         active    Po1000, Eth1/48, Eth2/48
+3520 link_7k-7k-GROUPVTB              active    Po1000, Eth1/48, Eth2/48
+3564 10.164.164.0_LB                  active    Po33, Po34, Po1000, Eth1/25
+                                                Eth1/26, Eth1/27, Eth1/28
+                                                Eth1/48, Eth2/25, Eth2/26
+                                                Eth2/27, Eth2/28, Eth2/48
+3565 nInet-SRV-LB                     active    Po33, Po34, Po1000, Eth1/25
+                                                Eth1/26, Eth1/27, Eth1/28
+                                                Eth1/48, Eth2/25, Eth2/26
+                                                Eth2/27, Eth2/28, Eth2/48
+3579 OTV_Site_vlan                    active    Po31, Po1000, Eth1/48, Eth2/48
+                                                Eth3/16
+3580 inbound-MNG-5k                   active    Po53, Po1000, Eth1/48, Eth2/48
+3599 test_vlan                        active    Po1000, Eth1/48, Eth2/48
+3850 cloud_3850                       active    Po4, Po31, Po1000, Eth1/48
+                                                Eth2/31, Eth2/48, Eth3/16
+3865 Cloud_3865                       active    Po31, Po1000, Eth1/48, Eth2/48
+                                                Eth3/16
+3950 cloud_3950                       active    Po4, Po31, Po1000, Eth1/48
+                                                Eth2/31, Eth2/48, Eth3/16
+3965 Cloud_3965                       active    Po31, Po1000, Eth1/48, Eth2/48
+                                                Eth3/16
+
+VLAN Type         Vlan-mode
+---- -----        ----------
+1    enet         CE     
+1171 enet         CE     
+1172 enet         CE     
+1173 enet         CE     
+1174 enet         CE     
+1175 enet         CE     
+1176 enet         CE     
+1178 enet         CE     
+1179 enet         CE     
+1180 enet         CE     
+1440 enet         CE     
+2099 enet         CE     
+2352 enet         CE     
+2630 enet         CE     
+3157 enet         CE     
+3207 enet         CE     
+3329 enet         CE     
+3330 enet         CE     
+3331 enet         CE     
+3332 enet         CE     
+3333 enet         CE     
+3334 enet         CE     
+3335 enet         CE     
+3336 enet         CE     
+3337 enet         CE     
+3338 enet         CE     
+3339 enet         CE     
+3340 enet         CE     
+3341 enet         CE     
+3342 enet         CE     
+3343 enet         CE     
+3344 enet         CE     
+3428 enet         CE     
+3429 enet         CE     
+3430 enet         CE     
+3500 enet         CE     
+3505 enet         CE     
+3510 enet         CE     
+3515 enet         CE     
+3520 enet         CE     
+3564 enet         CE     
+3565 enet         CE     
+3579 enet         CE     
+3580 enet         CE     
+3599 enet         CE     
+3850 enet         CE     
+3865 enet         CE     
+3950 enet         CE     
+3965 enet         CE     
+
+Remote SPAN VLANs
+-------------------------------------------------------------------------------
+
+Primary  Secondary  Type             Ports
+-------  ---------  ---------------  -------------------------------------------
+
+
+

@@ -1,0 +1,282 @@
+
+
+--------------------------------------------------------------------------------
+Port          Name               Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------
+Eth1/1        [PC] sw-dp4-data-1 connected trunk     full    10G     10Gbase-SR 
+Eth1/2        [PC] sw-dp4-data-1 connected trunk     full    10G     10Gbase-SR 
+Eth1/3        [PC] peer-link     connected trunk     full    10G     10Gbase-SR 
+Eth1/4        [PC] peer-keepaliv connected trunk     full    10G     10Gbase-SR 
+Eth1/5        [FEX] fex-106      connected 1         full    10G     Fabric Exte
+Eth1/6        [FEX] fex-105      connected 1         full    10G     Fabric Exte
+Eth1/7        [FEX] fex-123      connected 1         full    10G     Fabric Exte
+Eth1/8        [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth1/9        [FEX] fex-102      connected 1         full    10G     Fabric Exte
+Eth1/10       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth1/11       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth1/12       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth1/13       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth1/14       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth1/15       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth1/16       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth1/17       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth1/18       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth1/19       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth1/20       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth1/21       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth1/22       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth1/23       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth1/24       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth1/25       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth1/26       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth1/27       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth1/28       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth1/29       [PC] sw-dp4-lpa-co connected trunk     full    10G     10Gbase-SR 
+Eth1/30       [PC] sw-dp4-lpa-co connected trunk     full    10G     10Gbase-SR 
+Eth1/31       [PC] sw-dp4-con-ex connected trunk     full    10G     10Gbase-SR 
+Eth1/32       [PC] sw-dp4-con-ex connected trunk     full    10G     10Gbase-SR 
+Eth2/1        [PC] sw-dp4-data-1 connected trunk     full    10G     10Gbase-SR 
+Eth2/2        [PC] sw-dp4-data-1 connected trunk     full    10G     10Gbase-SR 
+Eth2/3        [PC] peer-link     connected trunk     full    10G     10Gbase-SR 
+Eth2/4        [PC] peer-keepaliv connected trunk     full    10G     10Gbase-SR 
+Eth2/5        [FEX] fex-106      connected 1         full    10G     Fabric Exte
+Eth2/6        [FEX] fex-105      connected 1         full    10G     Fabric Exte
+Eth2/7        [FEX] fex-123      connected 1         full    10G     Fabric Exte
+Eth2/8        [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth2/9        [FEX] fex-102      connected 1         full    10G     Fabric Exte
+Eth2/10       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth2/11       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth2/12       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth2/13       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth2/14       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth2/15       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Eth2/16       [RESERVED] Nutanix sfpAbsent 1         full    10G     --         
+Po10          [VPC][TRUNK] sw-dp connected trunk     full    a-10G   --         
+Po69          [VPC] sw-dp4-con-d connected trunk     full    a-1000  --         
+Po70          [VPC] sw-dp4-con-s connected trunk     full    a-1000  --         
+Po71          [VPC] sw-dp4-con-e connected trunk     full    a-1000  --         
+Po72          [VPC] sw-dp4-con-d connected trunk     full    a-1000  --         
+Po73          [VPC] sw-dp4-con-d connected trunk     full    a-1000  --         
+Po74          [VPC] sw-dp4-con-d connected trunk     full    a-1000  --         
+Po75          [VPC] sw-dp4-con-d connected trunk     full    a-1000  --         
+Po76          [VPC] sw-dp4-con-d connected trunk     full    a-1000  --         
+Po77          [TRUNK] sw-dp4-con connected trunk     full    a-1000  --         
+Po78          [VPC][TRUNK] sw-dp connected trunk     full    a-10G   --         
+Po79          [VPC][TRUNK] sw-dp connected trunk     full    a-10G   --         
+Po102         [FEX] fex-102      connected 1         full    a-10G   --         
+Po105         [FEX] fex-105      connected 1         full    a-10G   --         
+Po106         [FEX] fex-106      connected 1         full    10G     --         
+Po123         [FEX] fex-123      connected 1         full    a-10G   --         
+Po301         [PC] sw-dp4-con-ss connected trunk     full    a-1000  --         
+Po302         [PC] sw-dp4-con-bd connected trunk     full    a-1000  --         
+Po303         [PC] sw-dp4-con-dc connected trunk     full    a-1000  --         
+Po304         [PC] sw-dp4-con-dc connected trunk     full    a-1000  --         
+Po305         [PC] sw-dp4-con-dc connected trunk     full    a-1000  --         
+Po306         [PC] sw-dp4-con-dc connected trunk     full    a-1000  --         
+Po307         [PC] sw-dp4-con-dc connected trunk     full    a-1000  --         
+Po308         [PC] sw-dp4-con-dc connected trunk     full    a-1000  --         
+Po309         [PC] sw-dp4-con-dc connected trunk     full    a-1000  --         
+Po310         [PC] sw-dp4-con-dc connected trunk     full    a-1000  --         
+Po311         [PC] sw-dp4-con-ex connected trunk     full    a-10G   --         
+Po312         [PC] sw-dp4-con-ex connected trunk     full    a-10G   --         
+Po313         --                 connected trunk     full    a-1000  --         
+Po314         [DATA-BIS-HQ] ZFS  connected 601       full    a-100   --         
+Po315         [DATA-BIS-HQ] ZFS  connected 601       full    a-1000  --         
+Po4000        [TRUNK] peer-link  connected trunk     full    10G     --         
+Po4001        [TRUNK] peer-keepa connected trunk     full    10G     --         
+mgmt0         --                 connected routed    full    a-1000  --         
+Vlan1         --                 down      routed    auto    auto    --
+Vlan608       mgmt               connected routed    auto    auto    --
+Vlan4093      [L3] peer-keepaliv connected routed    auto    auto    --
+Eth102/1/1    [VPC] bda9sw-ip; R connected trunk     full    a-1000             
+Eth102/1/2    [DATA-BIS-HQ] ZFS  connected 601       full    a-100              
+Eth102/1/3    [DATA-BIS-HQ] ZFS  connected 601       full    a-1000             
+Eth102/1/4    [VPC] sw-dp4-con-s connected trunk     full    a-1000             
+Eth102/1/5    --                 disabled  1         auto    auto               
+Eth102/1/6    --                 disabled  1         auto    auto               
+Eth102/1/7    --                 disabled  1         auto    auto               
+Eth102/1/8    --                 disabled  1         auto    auto               
+Eth102/1/9    --                 disabled  1         auto    auto               
+Eth102/1/10   --                 disabled  1         auto    auto               
+Eth102/1/11   --                 disabled  1         auto    auto               
+Eth102/1/12   --                 disabled  1         auto    auto               
+Eth102/1/13   --                 disabled  1         auto    auto               
+Eth102/1/14   --                 disabled  1         auto    auto               
+Eth102/1/15   --                 disabled  1         auto    auto               
+Eth102/1/16   --                 disabled  1         auto    auto               
+Eth102/1/17   --                 disabled  1         auto    auto               
+Eth102/1/18   --                 disabled  1         auto    auto               
+Eth102/1/19   --                 disabled  1         auto    auto               
+Eth102/1/20   --                 disabled  1         auto    auto               
+Eth102/1/21   [DATA-PLC] exa2-nb connected 603       full    a-1000             
+Eth102/1/22   [VPC] sw-dp4-con-e connected trunk     full    a-1000             
+Eth102/1/23   [DATA-BIS-HQ] cft1 disabled  601       auto    auto               
+Eth102/1/24   [VPC] sw-dp4-con-s connected trunk     full    a-1000             
+Eth102/1/25   [DATA-KT] cft4ddb0 disabled  645       auto    auto               
+Eth102/1/26   [DATA-KT] cft4ddb0 disabled  645       auto    auto               
+Eth102/1/27   [DATA-KT] cft4ddba connected 645       full    a-1000             
+Eth102/1/28   [DATA-KT] cft4ddba disabled  645       auto    auto               
+Eth102/1/29   [DATA-KT] cft4ddba disabled  645       auto    auto               
+Eth102/1/30   [DATA-KT] cft4ddba disabled  645       auto    auto               
+Eth102/1/31   [DATA-PLC] exa5 WO connected 603       full    a-1000             
+Eth102/1/32   [VPC] sw-dp4-con-d connected trunk     full    a-1000             
+Eth102/1/33   [VPC] sw-dp4-con-d connected trunk     full    a-1000             
+Eth102/1/34   [VPC] sw-dp4-con-d connected trunk     full    a-1000             
+Eth102/1/35   [VPC] sw-dp4-con-d connected trunk     full    a-1000             
+Eth102/1/36   [VPC] sw-dp4-con-d connected trunk     full    a-1000             
+Eth102/1/37   --                 disabled  1         auto    auto               
+Eth102/1/38   --                 disabled  1         auto    auto               
+Eth102/1/39   [VPC] sw-dp4-con-d connected trunk     full    a-1000             
+Eth102/1/40   --                 disabled  1         auto    auto               
+Eth102/1/41   [DATA-BIS-HQ] cft1 connected 601       full    a-1000             
+Eth102/1/42   [DATA-BIS-HQ] cft1 connected 601       full    a-1000             
+Eth102/1/43   --                 disabled  1         auto    auto               
+Eth102/1/44   --                 disabled  1         auto    auto               
+Eth102/1/45   [DATA-KT] cft3d ra disabled  645       auto    auto               
+Eth102/1/46   [DATA-KT] cft3d ra disabled  645       auto    auto               
+Eth102/1/47   [DATA-KT] cft4d ra connected 645       full    a-1000             
+Eth102/1/48   [DATA-KT] cft4d ra connected 645       full    a-1000             
+Eth105/1/1    --                 disabled  1         auto    auto               
+Eth105/1/2    [DATA-PLC] exa01 W connected 603       full    a-1000             
+Eth105/1/3    [DATA-PLC] exa01 W connected 603       full    a-1000             
+Eth105/1/4    [DATA-PLC] exa01 W connected 603       full    a-1000             
+Eth105/1/5    [DATA-PLC] exa01 W connected 603       full    a-1000             
+Eth105/1/6    --                 disabled  1         auto    auto               
+Eth105/1/7    [PC] sw-dp4-con-ss connected trunk     full    a-1000             
+Eth105/1/8    [PC] sw-dp4-con-bd connected trunk     full    a-1000             
+Eth105/1/9    --                 disabled  1         auto    auto               
+Eth105/1/10   --                 disabled  1         auto    auto               
+Eth105/1/11   --                 disabled  1         auto    auto               
+Eth105/1/12   --                 disabled  1         auto    auto               
+Eth105/1/13   --                 disabled  1         auto    auto               
+Eth105/1/14   --                 disabled  1         auto    auto               
+Eth105/1/15   --                 disabled  1         auto    auto               
+Eth105/1/16   --                 disabled  1         auto    auto               
+Eth105/1/17   --                 disabled  1         auto    auto               
+Eth105/1/18   --                 disabled  1         auto    auto               
+Eth105/1/19   --                 disabled  1         auto    auto               
+Eth105/1/20   --                 disabled  1         auto    auto               
+Eth105/1/21   --                 disabled  1         auto    auto               
+Eth105/1/22   --                 disabled  1         auto    auto               
+Eth105/1/23   --                 disabled  1         auto    auto               
+Eth105/1/24   --                 disabled  1         auto    auto               
+Eth105/1/25   --                 disabled  1         auto    auto               
+Eth105/1/26   --                 disabled  1         auto    auto               
+Eth105/1/27   --                 disabled  1         auto    auto               
+Eth105/1/28   --                 disabled  1         auto    auto               
+Eth105/1/29   --                 disabled  1         auto    auto               
+Eth105/1/30   --                 disabled  1         auto    auto               
+Eth105/1/31   --                 disabled  1         auto    auto               
+Eth105/1/32   --                 disabled  1         auto    auto               
+Eth105/1/33   [PC] sw-dp4-con-dc connected trunk     full    a-1000             
+Eth105/1/34   --                 disabled  1         auto    auto               
+Eth105/1/35   --                 disabled  1         auto    auto               
+Eth105/1/36   [PC] sw-dp4-con-dc connected trunk     full    a-1000             
+Eth105/1/37   --                 disabled  1         auto    auto               
+Eth105/1/38   --                 disabled  1         auto    auto               
+Eth105/1/39   --                 disabled  1         auto    auto               
+Eth105/1/40   --                 disabled  1         auto    auto               
+Eth105/1/41   --                 disabled  1         auto    auto               
+Eth105/1/42   --                 disabled  1         auto    auto               
+Eth105/1/43   [PC] sw-dp4-con-dc connected trunk     full    a-1000             
+Eth105/1/44   [PC] sw-dp4-con-dc connected trunk     full    a-1000             
+Eth105/1/45   [PC] sw-dp4-con-dc connected trunk     full    a-1000             
+Eth105/1/46   [PC] sw-dp4-con-dc connected trunk     full    a-1000             
+Eth105/1/47   [PC] sw-dp4-con-dc connected trunk     full    a-1000             
+Eth105/1/48   [PC] sw-dp4-con-dc connected trunk     full    a-1000             
+Eth106/1/1    [~DATA-CONSOLE2] M connected 634       full    a-1000             
+Eth106/1/2    [~DATA-CONSOLE] so connected 608       full    a-1000             
+Eth106/1/3    [~DATA-CONSOLE] so connected 608       full    a-1000             
+Eth106/1/4    [~DATA-CONSOLE] so connected 608       full    a-1000             
+Eth106/1/5    [~DATA-CONSOLE] so connected 608       full    a-1000             
+Eth106/1/6    [~DATA-CONSOLE] so connected 608       full    a-1000             
+Eth106/1/7    [~DATA-CONSOLE] so connected 608       full    a-1000             
+Eth106/1/8    [~DATA-CONSOLE2] s connected 634       full    a-1000             
+Eth106/1/9    [~DATA-CONSOLE2] s connected 634       full    a-1000             
+Eth106/1/10   --                 disabled  1         auto    auto               
+Eth106/1/11   --                 disabled  1         auto    auto               
+Eth106/1/12   --                 disabled  1         auto    auto               
+Eth106/1/13   --                 disabled  1         auto    auto               
+Eth106/1/14   --                 disabled  1         auto    auto               
+Eth106/1/15   --                 disabled  1         auto    auto               
+Eth106/1/16   --                 disabled  1         auto    auto               
+Eth106/1/17   --                 disabled  1         auto    auto               
+Eth106/1/18   --                 disabled  1         auto    auto               
+Eth106/1/19   --                 disabled  1         auto    auto               
+Eth106/1/20   --                 disabled  1         auto    auto               
+Eth106/1/21   --                 disabled  1         auto    auto               
+Eth106/1/22   --                 disabled  1         auto    auto               
+Eth106/1/23   --                 disabled  1         auto    auto               
+Eth106/1/24   --                 disabled  1         auto    auto               
+Eth106/1/25   [DATA-MGMT] MSKDSS connected 600       full    a-1000             
+Eth106/1/26   --                 disabled  1         auto    auto               
+Eth106/1/27   [DATA-DMZ-LOCAL] s connected 693       full    a-1000             
+Eth106/1/28   [DATA-DDEI-SANDBOX connected 511       full    a-1000             
+Eth106/1/29   [DATA-DMZ-LOCAL] s connected 693       full    a-1000             
+Eth106/1/30   [DATA-DDEI-SANDBOX connected 511       full    a-1000             
+Eth106/1/31   [DATA-DMZ-LOCAL] s connected 693       full    a-1000             
+Eth106/1/32   [DATA-DDEI-SANDBOX connected 511       full    a-1000             
+Eth106/1/33   [DATA-DMZ-LOCAL] s connected 693       full    a-1000             
+Eth106/1/34   [DATA-DDEI-SANDBOX connected 511       full    a-1000             
+Eth106/1/35   [DATA-DMZ-LOCAL] s connected 693       full    a-1000             
+Eth106/1/36   [DATA-DDEI-SANDBOX connected 511       full    a-1000             
+Eth106/1/37   [DATA-DMZ-LOCAL] s connected 693       full    a-1000             
+Eth106/1/38   [DATA-DDEI-SANDBOX connected 511       full    a-1000             
+Eth106/1/39   --                 disabled  1         auto    auto               
+Eth106/1/40   --                 disabled  1         auto    auto               
+Eth106/1/41   --                 disabled  1         auto    auto               
+Eth106/1/42   --                 disabled  1         auto    auto               
+Eth106/1/43   --                 disabled  1         auto    auto               
+Eth106/1/44   --                 disabled  1         auto    auto               
+Eth106/1/45   --                 disabled  1         auto    auto               
+Eth106/1/46   --                 disabled  1         auto    auto               
+Eth106/1/47   --                 disabled  1         auto    auto               
+Eth106/1/48   --                 disabled  1         auto    auto               
+Eth123/1/1    [DATA-CONSOLE] dko connected 608       full    a-1000             
+Eth123/1/2    [DATA-CONSOLE] spm notconnec 608       auto    auto               
+Eth123/1/3    [DATA-CONSOLE] spm connected 608       full    a-1000             
+Eth123/1/4    [DATA-CONSOLE] spm connected 608       full    a-1000             
+Eth123/1/5    [DATA-CONSOLE] spm connected 608       full    a-1000             
+Eth123/1/6    [DATA-CONSOLE] spm connected 608       full    a-1000             
+Eth123/1/7    [DATA-CONSOLE] spm connected 608       full    a-1000             
+Eth123/1/8    [DATA-CONSOLE] spm connected 608       full    a-1000             
+Eth123/1/9    --                 disabled  1         auto    auto               
+Eth123/1/10   --                 disabled  1         auto    auto               
+Eth123/1/11   --                 disabled  1         auto    auto               
+Eth123/1/12   [DATA-HB-ANY] herm connected 531       full    a-1000             
+Eth123/1/13   [DATA-CONSOLE] 210 connected 608       full    a-1000             
+Eth123/1/14   [DATA-CONSOLE] dp4 connected 608       full    a-1000             
+Eth123/1/15   [~DATA-CONSOLE]  2 connected 608       full    a-1000             
+Eth123/1/16   [DATA-CONSOLE] dp4 connected 608       full    a-1000             
+Eth123/1/17   [DATA-CONSOLE] sw- connected 608       full    a-1000             
+Eth123/1/18   [DATA-CONSOLE] sw- notconnec 608       auto    auto               
+Eth123/1/19   data-console dp4-v connected 608       full    a-1000             
+Eth123/1/20   data-console dp4-v connected 608       full    a-1000             
+Eth123/1/21   data-console herme connected 608       full    a-1000             
+Eth123/1/22   [DATA-CONSOLE] dp4 notconnec 608       auto    auto               
+Eth123/1/23   [DATA-CONSOLE] dp4 connected 608       full    a-1000             
+Eth123/1/24   [DATA-CONSOLE] dp4 connected 608       full    a-1000             
+Eth123/1/25   --                 disabled  1         auto    auto               
+Eth123/1/26   --                 disabled  1         auto    auto               
+Eth123/1/27   --                 disabled  1         auto    auto               
+Eth123/1/28   --                 disabled  1         auto    auto               
+Eth123/1/29   --                 disabled  1         auto    auto               
+Eth123/1/30   --                 disabled  1         auto    auto               
+Eth123/1/31   --                 disabled  1         auto    auto               
+Eth123/1/32   --                 disabled  1         auto    auto               
+Eth123/1/33   --                 disabled  1         auto    auto               
+Eth123/1/34   --                 disabled  1         auto    auto               
+Eth123/1/35   [DATA-HB-ANY] tbsq connected 531       full    a-1000             
+Eth123/1/36   sw-dp4-data-26     connected 608       full    a-1000             
+Eth123/1/37   [DATA-IBM-HMC2] p9 connected 649       full    a-1000             
+Eth123/1/38   [DATA-IBM-HMC2] p9 connected 649       full    a-1000             
+Eth123/1/39   [DATA-IBM-HMC2] p9 connected 649       full    a-1000             
+Eth123/1/40   [DATA-IBM-HMC2] p9 connected 649       full    a-1000             
+Eth123/1/41   [DATA-IBM-HMC2] p9 connected 649       full    a-1000             
+Eth123/1/42   [DATA-IBM-HMC2] p9 connected 649       full    a-1000             
+Eth123/1/43   [DATA-IBM-HMC2] p9 connected 649       full    a-1000             
+Eth123/1/44   [DATA-IBM-HMC2] p9 connected 649       full    a-1000             
+Eth123/1/45   [DATA-CONSOLE2]    connected 634       full    a-1000             
+Eth123/1/46   [DATA-CONSOLE] FC- notconnec 608       auto    auto               
+Eth123/1/47   [DATA-IBM-HMC2] P- connected 649       full    a-1000             
+Eth123/1/48   [DATA-IBM-HMC2] P- connected 649       full    a-1000             

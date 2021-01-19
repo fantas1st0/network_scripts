@@ -1,0 +1,206 @@
+
+Power Supply:
+Voltage: 50 Volts
+Power                              Actual        Total
+Supply    Model                    Output     Capacity    Status
+                                 (Watts )     (Watts )
+-------  -------------------  -----------  -----------  --------------
+1        N7K-AC-6.0KW               994 W       6000 W     Ok        
+2        N7K-AC-6.0KW               830 W       6000 W     Ok        
+3        N7K-AC-6.0KW               822 W       6000 W     Ok        
+
+
+                                  Actual        Power      
+Module    Model                     Draw    Allocated    Status
+                                 (Watts )     (Watts )     
+-------  -------------------  -----------  -----------  --------------
+3        N7K-M224XP-23L             660 W        795 W    Powered-Up
+4        N7K-M224XP-23L             664 W        795 W    Powered-Up
+5        N7K-SUP2                    97 W        190 W    Powered-Up
+6        N7K-SUP2                    99 W        190 W    Powered-Up
+7        N7K-M324FQ-25L             511 W        750 W    Powered-Up
+8        N7K-M324FQ-25L             506 W        750 W    Powered-Up
+Xb1      N7K-C7010-FAB-2             43 W         80 W    Powered-Up
+Xb2      N7K-C7010-FAB-2             42 W         80 W    Powered-Up
+Xb3      N7K-C7010-FAB-2             41 W         80 W    Powered-Up
+Xb4      N7K-C7010-FAB-2             42 W         80 W    Powered-Up
+Xb5      N7K-C7010-FAB-2             41 W         80 W    Powered-Up
+fan1     N7K-C7010-FAN-S            198 W        720 W    Powered-Up
+fan2     N7K-C7010-FAN-S            198 W        720 W    Powered-Up
+fan3     N7K-C7010-FAN-F             14 W        120 W    Powered-Up
+fan4     N7K-C7010-FAN-F             14 W        120 W    Powered-Up
+
+N/A - Per module power not available
+
+
+Power Usage Summary:
+--------------------
+Power Supply redundancy mode (configured)                PS-Redundant
+Power Supply redundancy mode (operational)               PS-Redundant
+
+Total Power Capacity (based on configured mode)              12000 W
+Total Power of all Inputs (cumulative)                       18000 W
+Total Power Output (actual draw)                              2646 W
+Total Power Allocated (budget)                                5550 W
+Total Power Available for additional modules                  6450 W
+
+Clock:
+----------------------------------------------------------
+Clock           Model                Hw         Status
+----------------------------------------------------------
+A               Clock Module         --         NotSupported/None
+B               Clock Module         --         NotSupported/None
+
+
+Fan:
+------------------------------------------------------
+Fan             Model                Hw         Status
+------------------------------------------------------
+Fan1(sys_fan1)  N7K-C7010-FAN-S      1.1        Ok 
+Fan2(sys_fan2)  N7K-C7010-FAN-S      1.1        Ok 
+Fan3(fab_fan1)  N7K-C7010-FAN-F      1.1        Ok 
+Fan4(fab_fan2)  N7K-C7010-FAN-F      1.1        Ok 
+Fan_in_PS1      --                   --         Ok             
+Fan_in_PS2      --                   --         Ok             
+Fan_in_PS3      --                   --         Ok             
+Fan Zone Speed %(Hex): Zone 1: 56.47(0x90) Zone 2: 37.65(0x60)
+Fan Air Filter : Present
+
+
+Temperature:
+--------------------------------------------------------------------
+Module   Sensor        MajorThresh   MinorThres   CurTemp     Status
+                       (Celsius)     (Celsius)    (Celsius)         
+--------------------------------------------------------------------
+3        MAC0Sn0(s2)     115             105         44         Ok             
+3        MAC0Sn1(s3)     115             105         44         Ok             
+3        MAC0-Buf0(s4)   115             105         33         Ok             
+3        MAC0-Buf1(s5)   115             105         40         Ok             
+3        MAC0-Buf2(s6)   115             105         42         Ok             
+3        MAC0-Buf3(s7)   115             105         46         Ok             
+3        MAC1Sn0(s8)     115             105         36         Ok             
+3        MAC1Sn1(s9)     115             105         37         Ok             
+3        MAC1-Buf0(s10)  115             105         26         Ok             
+3        MAC1-Buf1(s11)  115             105         37         Ok             
+3        MAC1-Buf2(s12)  115             105         31         Ok             
+3        MAC1-Buf3(s13)  115             105         27         Ok             
+3        Fwd0Sn0(s14)    115             105         63         Ok             
+3        Fwd0Sn1(s15)    115             105         63         Ok             
+3        Fwd1Sn0(s16)    115             105         54         Ok             
+3        Fwd1Sn1(s17)    115             105         54         Ok             
+3        Fwd2Sn0(s18)    115             105         56         Ok             
+3        Fwd2Sn1(s19)    115             105         56         Ok             
+3        Fwd3Sn0(s20)    115             105         42         Ok             
+3        Fwd3Sn1(s21)    115             105         42         Ok             
+3        QEng0Sn0(s22)   115             105         65         Ok             
+3        QEng0Sn1(s23)   115             105         65         Ok             
+3        QEng1Sn0(s24)   115             105         65         Ok             
+3        QEng1Sn1(s25)   115             105         65         Ok             
+3        QEng2Sn0(s26)   115             105         56         Ok             
+3        QEng2Sn1(s27)   115             105         56         Ok             
+3        QEng3Sn0(s28)   115             105         50         Ok             
+3        QEng3Sn1(s29)   115             105         50         Ok             
+3        Crossbar(s30)   115             105         38         Ok             
+4        MAC0Sn0(s2)     115             105         44         Ok             
+4        MAC0Sn1(s3)     115             105         44         Ok             
+4        MAC0-Buf0(s4)   115             105         33         Ok             
+4        MAC0-Buf1(s5)   115             105         41         Ok             
+4        MAC0-Buf2(s6)   115             105         42         Ok             
+4        MAC0-Buf3(s7)   115             105         45         Ok             
+4        MAC1Sn0(s8)     115             105         37         Ok             
+4        MAC1Sn1(s9)     115             105         39         Ok             
+4        MAC1-Buf0(s10)  115             105         26         Ok             
+4        MAC1-Buf1(s11)  115             105         40         Ok             
+4        MAC1-Buf2(s12)  115             105         31         Ok             
+4        MAC1-Buf3(s13)  115             105         23         Ok             
+4        Fwd0Sn0(s14)    115             105         64         Ok             
+4        Fwd0Sn1(s15)    115             105         64         Ok             
+4        Fwd1Sn0(s16)    115             105         56         Ok             
+4        Fwd1Sn1(s17)    115             105         56         Ok             
+4        Fwd2Sn0(s18)    115             105         58         Ok             
+4        Fwd2Sn1(s19)    115             105         58         Ok             
+4        Fwd3Sn0(s20)    115             105         43         Ok             
+4        Fwd3Sn1(s21)    115             105         43         Ok             
+4        QEng0Sn0(s22)   115             105         65         Ok             
+4        QEng0Sn1(s23)   115             105         65         Ok             
+4        QEng1Sn0(s24)   115             105         67         Ok             
+4        QEng1Sn1(s25)   115             105         67         Ok             
+4        QEng2Sn0(s26)   115             105         54         Ok             
+4        QEng2Sn1(s27)   115             105         54         Ok             
+4        QEng3Sn0(s28)   115             105         50         Ok             
+4        QEng3Sn1(s29)   115             105         50         Ok             
+4        Crossbar(s30)   115             105         41         Ok             
+5        Inlet  (s1)     60              42          18         Ok             
+5        PMFPGA (s2)     80              60          32         Ok             
+5        Crossbar(s3)    105             95          39         Ok             
+5        L2L3Dev1(s4)    105             95          27         Ok             
+5        Arbiter (s5)    105             95          37         Ok             
+5        CPU1CORE1(s6)   85              70          29         Ok             
+5        CPU1CORE2(s7)   85              70          27         Ok             
+5        CPU1CORE3(s8)   85              70          30         Ok             
+5        CPU1CORE4(s9)   85              70          26         Ok             
+5        DDR3DIMM1(s14)  95              85          32         Ok             
+5        DDR3DIMM2(s15)  95              85          32         Ok             
+5        DDR3DIMM3(s16)  95              85          32         Ok             
+6        Inlet  (s1)     60              42          18         Ok             
+6        PMFPGA (s2)     80              60          33         Ok             
+6        Crossbar(s3)    105             95          39         Ok             
+6        L2L3Dev1(s4)    105             95          27         Ok             
+6        Arbiter (s5)    105             95          38         Ok             
+6        CPU1CORE1(s6)   85              70          33         Ok             
+6        CPU1CORE2(s7)   85              70          27         Ok             
+6        CPU1CORE3(s8)   85              70          31         Ok             
+6        CPU1CORE4(s9)   85              70          26         Ok             
+6        DDR3DIMM1(s14)  95              85          31         Ok             
+6        DDR3DIMM2(s15)  95              85          33         Ok             
+6        DDR3DIMM3(s16)  95              85          31         Ok             
+7        Crossbar1(s1)   125             115         40         Ok             
+7        Crossbar2(s2)   125             105         45         Ok             
+7        Arb-muxSn0(s3)  125             105         45         Ok             
+7        CPU     (s4)    125             115         40         Ok             
+7        PCISW   (s5)    125             115         40         Ok             
+7        L2L3Dev1Sn1(s6) 125             105         44         Ok             
+7        L2L3Dev1Sn2(s7) 125             105         44         Ok             
+7        L3Lkup1Sn1(s8)  125             115         44         Ok             
+7        L3Lkup1Sn2(s9)  125             115         44         Ok             
+7        L2L3Dev2Sn1(s10 125             105         47         Ok             
+7        L2L3Dev2Sn2(s11 125             105         50         Ok             
+7        L3Lkup2Sn1(s12) 125             115         39         Ok             
+7        L3Lkup2Sn2(s13) 125             115         40         Ok             
+7        L2L3Dev3Sn1(s14 125             105         43         Ok             
+7        L2L3Dev3Sn2(s15 125             105         44         Ok             
+7        L3Lkup3Sn1(s16) 125             115         41         Ok             
+7        L3Lkup3Sn2(s17) 125             115         42         Ok             
+7        L2L3Dev4Sn1(s18 125             105         33         Ok             
+7        L2L3Dev4Sn2(s19 125             105         34         Ok             
+8        Crossbar1(s1)   125             115         41         Ok             
+8        Crossbar2(s2)   125             105         43         Ok             
+8        Arb-muxSn0(s3)  125             105         42         Ok             
+8        CPU     (s4)    125             115         39         Ok             
+8        PCISW   (s5)    125             115         40         Ok             
+8        L2L3Dev1Sn1(s6) 125             105         43         Ok             
+8        L2L3Dev1Sn2(s7) 125             105         43         Ok             
+8        L3Lkup1Sn1(s8)  125             115         42         Ok             
+8        L3Lkup1Sn2(s9)  125             115         46         Ok             
+8        L2L3Dev2Sn1(s10 125             105         44         Ok             
+8        L2L3Dev2Sn2(s11 125             105         46         Ok             
+8        L3Lkup2Sn1(s12) 125             115         38         Ok             
+8        L3Lkup2Sn2(s13) 125             115         39         Ok             
+8        L2L3Dev3Sn1(s14 125             105         42         Ok             
+8        L2L3Dev3Sn2(s15 125             105         42         Ok             
+8        L3Lkup3Sn1(s16) 125             115         38         Ok             
+8        L3Lkup3Sn2(s17) 125             115         39         Ok             
+8        L2L3Dev4Sn1(s18 125             105         32         Ok             
+8        L2L3Dev4Sn2(s19 125             105         34         Ok             
+xbar-1   Intake  (s2)    60              42          26         Ok             
+xbar-1   Crossbar(s3)    105             95          46         Ok             
+xbar-2   Intake  (s2)    60              42          27         Ok             
+xbar-2   Crossbar(s3)    105             95          43         Ok             
+xbar-3   Intake  (s2)    60              42          25         Ok             
+xbar-3   Crossbar(s3)    105             95          45         Ok             
+xbar-4   Intake  (s2)    60              42          25         Ok             
+xbar-4   Crossbar(s3)    105             95          48         Ok             
+xbar-5   Intake  (s2)    60              42          25         Ok             
+xbar-5   Crossbar(s3)    105             95          47         Ok             
+
+

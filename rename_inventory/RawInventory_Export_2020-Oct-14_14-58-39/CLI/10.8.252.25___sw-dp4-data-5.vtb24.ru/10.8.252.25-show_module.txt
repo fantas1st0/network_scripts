@@ -1,0 +1,40 @@
+Mod Ports Card Type                              Model              Serial No.
+--- ----- -------------------------------------- ------------------ -----------
+  1   48  CEF720 48 port 10/100/1000mb Ethernet  WS-X6748-GE-TX     SAL124480ZQ
+  2   48  CEF720 48 port 10/100/1000mb Ethernet  WS-X6748-GE-TX     SAL12459HZY
+  3   48  CEF720 48 port 10/100/1000mb Ethernet  WS-X6748-GE-TX     SAL12469QTD
+  4   48  CEF720 48 port 10/100/1000mb Ethernet  WS-X6748-GE-TX     SAL12458ZYP
+  5    2  Supervisor Engine 720 (Active)         WS-SUP720-3B       SAL1032XQQ6
+  6   48  CEF720 48 port 10/100/1000mb Ethernet  WS-X6748-GE-TX     SAL12469QSX
+  9   16  CEF720 16 port 10GE                    WS-X6716-10GE      SAL1529KC8B
+
+Mod MAC addresses                       Hw    Fw           Sw           Status
+--- ---------------------------------- ------ ------------ ------------ -------
+  1  0021.a04a.a808 to 0021.a04a.a837   3.0   12.2(18r)S1  12.2(33)SXJ7 Ok
+  2  0021.a04a.fa80 to 0021.a04a.faaf   3.0   12.2(18r)S1  12.2(33)SXJ7 Ok
+  3  0022.55d5.88d4 to 0022.55d5.8903   3.0   12.2(18r)S1  12.2(33)SXJ7 Ok
+  4  0022.55e7.5488 to 0022.55e7.54b7   3.0   12.2(18r)S1  12.2(33)SXJ7 Ok
+  5  0013.c347.31c4 to 0013.c347.31c7   5.2   8.4(2)       12.2(33)SXJ7 Ok
+  6  0021.a08f.4ad0 to 0021.a08f.4aff   3.0   12.2(18r)S1  12.2(33)SXJ7 Ok
+  9  c89c.1ddc.adc8 to c89c.1ddc.add7   1.1   12.2(18r)S1  12.2(33)SXJ7 Ok
+
+Mod  Sub-Module                  Model              Serial       Hw     Status 
+---- --------------------------- ------------------ ----------- ------- -------
+  1  Distributed Forwarding Card WS-F6700-DFC3B     SAL12448N26  4.7    Ok
+  2  Distributed Forwarding Card WS-F6700-DFC3B     SAL12459F8W  4.7    Ok
+  3  Distributed Forwarding Card WS-F6700-DFC3B     SAL12459F8J  4.7    Ok
+  4  Distributed Forwarding Card WS-F6700-DFC3B     SAL12459FB6  4.7    Ok
+  5  Policy Feature Card 3       WS-F6K-PFC3B       SAL1032XR5G  2.3    Ok
+  5  MSFC3 Daughterboard         WS-SUP720          SAL1032XQZD  2.5    Ok
+  6  Distributed Forwarding Card WS-F6700-DFC3B     SAL12459F9R  4.7    Ok
+  9  Distributed Forwarding Card WS-F6700-DFC3C     SAL1528JVQR  1.4    Ok
+
+Mod  Online Diag Status 
+---- -------------------
+  1  Pass
+  2  Pass
+  3  Pass
+  4  Pass
+  5  Pass
+  6  Pass
+  9  Pass

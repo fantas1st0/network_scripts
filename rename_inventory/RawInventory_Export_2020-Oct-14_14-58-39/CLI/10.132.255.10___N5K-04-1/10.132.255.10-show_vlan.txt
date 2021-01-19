@@ -1,0 +1,224 @@
+
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Po7, Po1000, Eth1/25, Eth1/26
+                                                Eth1/27, Eth1/28, Eth2/5, Eth2/6
+                                                Eth2/7, Eth2/8, Eth2/9, Eth2/10
+                                                Eth2/11, Eth2/12, Eth2/13
+                                                Eth2/14, Eth2/15, Eth103/1/18
+                                                Eth103/1/19, Eth103/1/20
+                                                Eth103/1/21, Eth103/1/22
+                                                Eth103/1/23, Eth103/1/24
+                                                Eth103/1/25, Eth103/1/26
+                                                Eth103/1/27, Eth103/1/28
+                                                Eth103/1/29, Eth103/1/30
+                                                Eth103/1/31, Eth103/1/32
+                                                Eth103/1/33, Eth103/1/34
+                                                Eth103/1/35, Eth103/1/36
+                                                Eth103/1/37, Eth103/1/38
+                                                Eth103/1/39, Eth103/1/40
+                                                Eth103/1/41, Eth103/1/42
+                                                Eth103/1/43, Eth103/1/44
+                                                Eth103/1/45, Eth103/1/46
+                                                Eth103/1/47, Eth103/1/48
+                                                Eth104/1/40, Eth104/1/41
+                                                Eth104/1/42, Eth104/1/43
+                                                Eth104/1/44, Eth104/1/45
+                                                Eth104/1/46, Eth104/1/47
+                                                Eth104/1/48, Eth105/1/9
+                                                Eth105/1/10, Eth105/1/11
+                                                Eth105/1/12, Eth105/1/13
+                                                Eth105/1/14, Eth105/1/15
+                                                Eth105/1/16, Eth105/1/17
+                                                Eth105/1/18, Eth105/1/19
+                                                Eth105/1/20, Eth105/1/21
+                                                Eth105/1/22, Eth105/1/23
+                                                Eth105/1/24, Eth105/1/25
+                                                Eth105/1/26, Eth105/1/27
+                                                Eth105/1/28, Eth105/1/29
+                                                Eth105/1/30, Eth105/1/31
+                                                Eth105/1/32, Eth105/1/33
+                                                Eth105/1/34, Eth105/1/35
+                                                Eth105/1/36, Eth105/1/37
+                                                Eth105/1/38, Eth105/1/39
+                                                Eth105/1/40, Eth105/1/41
+                                                Eth105/1/42, Eth105/1/43
+                                                Eth105/1/44, Eth105/1/45
+                                                Eth105/1/46, Eth105/1/47
+                                                Eth105/1/48, Eth106/1/27
+                                                Eth106/1/28, Eth106/1/29
+                                                Eth106/1/30, Eth106/1/31
+                                                Eth106/1/32, Eth106/1/33
+                                                Eth106/1/34, Eth106/1/35
+                                                Eth106/1/36, Eth106/1/37
+                                                Eth106/1/38, Eth106/1/39
+                                                Eth106/1/40, Eth106/1/41
+                                                Eth106/1/42, Eth106/1/43
+                                                Eth106/1/44, Eth106/1/45
+                                                Eth106/1/46, Eth106/1/47
+                                                Eth106/1/48, Eth107/1/34
+                                                Eth107/1/35, Eth107/1/36
+                                                Eth107/1/37, Eth107/1/38
+                                                Eth107/1/39, Eth107/1/40
+                                                Eth107/1/41, Eth107/1/42
+                                                Eth107/1/43, Eth107/1/44
+                                                Eth107/1/45, Eth107/1/46
+                                                Eth107/1/47, Eth107/1/48
+                                                Eth108/1/10, Eth108/1/36
+10   v-VPNServers                     active    Po7, Po1000, Eth103/1/2
+107  v-nInet-Srv                      active    Po7, Po1000
+110  v-vrnNetDevices                  active    Po7, Po201, Po202, Po203, Po204
+                                                Po205, Po206, Po1000, Eth1/19
+                                                Eth1/20
+129  DirectInet                       active    Po7, Po1000
+139  v-VRN-VTB-MM                     active    Po7, Po1000
+145  Swift_DMZ                        active    Po7, Po1000
+167  HB-502-610                       active    Po7, Po1000, Eth104/1/9
+                                                Eth104/1/12
+168  SLB_VTB_Servers                  active    Po7, Po1000
+169  VTBServers_2                     active    Po7, Po201, Po202, Po1000
+                                                Eth103/1/8, Eth108/1/11
+                                                Eth108/1/12
+171  VTBServers3                      active    Po7, Po1000
+172  vVipInet                         active    Po7, Po1000
+174  vVRN-nInet-SRV                   active    Po7, Po201, Po202, Po205
+                                                Po1000, Eth108/1/4
+175  Local_HB                         active    Po7, Po1000
+176  vContactSRV                      active    Po7, Po1000
+177  vVrnInetServers                  active    Po7, Po205, Po323, Po1000
+178  vRServers                        active    Po7, Po1000, Eth104/1/6
+                                                Eth104/1/8, Eth104/1/14
+                                                Eth104/1/16, Eth104/1/32
+179  Somib_Servers                    active    Po7, Po1000
+180  vForeign-Branch-Servers          active    Po7, Po1000
+183  HB_Transit_Temp                  active    Po7, Po1000
+184  vVRN-PSB-VTB                     active    Po7, Po1000
+187  v-vrn-VTB-MM-CC                  active    Po7, Po323, Po1000
+188  VTB-SERVERS-ROOM502              active    Po7, Po1000, Eth104/1/7
+                                                Eth104/1/10, Eth104/1/13
+                                                Eth104/1/30, Eth105/1/1
+                                                Eth105/1/2, Eth105/1/3
+                                                Eth105/1/4, Eth105/1/5
+                                                Eth105/1/6, Eth105/1/7
+                                                Eth105/1/8, Eth106/1/1
+                                                Eth106/1/2, Eth106/1/3
+                                                Eth106/1/4, Eth106/1/5
+                                                Eth106/1/6, Eth106/1/7
+                                                Eth106/1/8, Eth106/1/9
+                                                Eth106/1/10, Eth107/1/1
+                                                Eth107/1/2, Eth107/1/3
+                                                Eth107/1/4, Eth107/1/5
+                                                Eth107/1/6, Eth107/1/7
+                                                Eth107/1/8, Eth107/1/9
+                                                Eth107/1/10
+189  ZOOServers                       active    Po7, Po1000
+190  SERVER_VORON2                    active    Po7, Po201, Po202, Po203, Po204
+                                                Po205, Po206, Po1000, Eth1/19
+                                                Eth1/20, Eth103/1/10
+                                                Eth103/1/12, Eth104/1/4
+                                                Eth104/1/22, Eth104/1/24
+                                                Eth104/1/26, Eth104/1/28
+                                                Eth108/1/1, Eth108/1/2
+                                                Eth108/1/7, Eth108/1/8
+                                                Eth108/1/9, Eth108/1/14
+                                                Eth108/1/15, Eth108/1/16
+                                                Eth108/1/17
+191  v-VTB-CC-LOCAL-VLAN              active    Po7, Po1000
+193  RSRV                             active    Po7, Po203, Po204, Po1000
+                                                Eth1/19, Eth1/20
+194  vVRN-VTB-DEV-Servers2            active    Po7, Po201, Po203, Po204, Po205
+                                                Po206, Po1000, Eth1/19, Eth1/20
+199  v-VTB-CORE-NET-SRV               active    Po7, Po323, Po1000
+294  nInet_Servers                    active    Po7, Po323, Po1000
+295  Plu-Backup_Net                   active    Po7, Po201, Po202, Po206
+                                                Po1000, Eth104/1/20, Eth106/1/11
+                                                Eth106/1/12, Eth106/1/13
+                                                Eth106/1/14, Eth106/1/15
+                                                Eth106/1/16, Eth106/1/17
+                                                Eth106/1/18, Eth106/1/19
+                                                Eth106/1/20, Eth106/1/21
+                                                Eth106/1/22, Eth106/1/23
+                                                Eth106/1/24, Eth106/1/25
+                                                Eth106/1/26, Eth108/1/6
+                                                Eth108/1/13, Eth108/1/21
+701  Cluster_HB                       active    Po7, Po1000, Eth104/1/18
+702  CrazyCluster                     active    Po7, Po1000, Eth104/1/19
+711  v-NM-VCENTER-HA                  active    Po7, Po323, Po1000
+3000 MNG                              active    Po7, Po1000
+3006 peer-keepalive                   active    Po7, Po1001
+3042 TTKInet_SRV                      active    Po7, Po323, Po1000
+3128 NetAdmins-Servers                active    Po7, Po323, Po324, Po1000
+3130 SRV_VTB-Core                     active    Po7, Po201, Po202, Po205
+                                                Po1000, Eth2/16, Eth103/1/4
+                                                Eth103/1/6, Eth103/1/16
+                                                Eth104/1/2, Eth107/1/11
+                                                Eth107/1/12, Eth107/1/13
+                                                Eth107/1/14
+3131 mng_SRV_VTB-Core                 active    Po7, Po1000, Eth103/1/1
+                                                Eth103/1/3, Eth103/1/5
+                                                Eth103/1/7, Eth103/1/9
+                                                Eth103/1/11, Eth103/1/13
+                                                Eth104/1/1, Eth104/1/5
+                                                Eth104/1/15, Eth104/1/17
+                                                Eth104/1/21, Eth104/1/23
+                                                Eth104/1/25, Eth104/1/27
+                                                Eth104/1/29, Eth104/1/31
+                                                Eth104/1/33, Eth108/1/3
+                                                Eth108/1/5, Eth108/1/18
+                                                Eth108/1/19, Eth108/1/20
+3136 Ilo_2                            active    Po7, Po201, Po205, Po305, Po306
+                                                Po1000, Eth104/1/3, Eth104/1/38
+                                                Eth104/1/39, Eth107/1/15
+                                                Eth107/1/16, Eth107/1/18
+                                                Eth107/1/19, Eth107/1/20
+                                                Eth107/1/21, Eth107/1/22
+                                                Eth107/1/23, Eth107/1/24
+                                                Eth107/1/25, Eth107/1/26
+                                                Eth107/1/27, Eth107/1/28
+                                                Eth107/1/29, Eth107/1/30
+                                                Eth107/1/31, Eth107/1/32
+                                                Eth107/1/33, Eth108/1/22
+3137 Core_AppCommon                   active    Po7, Po201, Po205, Po1000
+3138 VTBCore-VirtServers              active    Po7, Po1000
+3139 Core-VirtServers2                active    Po7, Po1000, Eth108/1/39
+                                                Eth108/1/40
+3141 cons-2                           active    Po7, Po202, Po1000, Eth108/1/23
+                                                Eth108/1/29, Eth108/1/30
+                                                Eth108/1/31, Eth108/1/41
+                                                Eth108/1/42, Eth108/1/43
+                                                Eth108/1/44, Eth108/1/45
+                                                Eth108/1/46, Eth108/1/47
+                                                Eth108/1/48
+3143 Virt                             active    Po7, Po1000
+3144 VirtBalance                      active    Po7, Po201, Po1000
+3145 esx_l2                           active    Po7, Po1000
+3147 TMG_Balance                      active    Po7, Po1000
+3150 NFS                              active    Po7, Po305, Po306, Po1000
+3151 RSRV-252.64/26                   active    Po7, Po1000
+3152 RSRV-249.0/25                    active    Po7, Po1000
+3160 Core-132.160./24                 active    Po7, Po1000, Eth107/1/17
+3163 DCI-VTBCore                      active    Po7, Po207, Po1000
+3172 nInet-Proxy                      active    Po7, Po206, Po1000
+3173 Local-Esafe-to-Proxy             active    Po7, Po1000
+3183 ILO_Console                      active    Po7, Po1000, Eth103/1/15
+                                                Eth103/1/17, Eth104/1/11
+                                                Eth108/1/24, Eth108/1/25
+                                                Eth108/1/26, Eth108/1/27
+                                                Eth108/1/28, Eth108/1/37
+                                                Eth108/1/38, Eth108/1/39
+                                                Eth108/1/40
+3628 VTB-RF-SERVERS-VRN-01            active    Po7, Po1000
+3642 VTB-RF-24-SRV1                   active    Po7, Po323, Po1000
+3965 Cloud_3965                       active    Po7, Po1000, Eth103/1/14
+4050 test                             active    Po7, Po205, Po1000
+4051 test2                            active    Po7, Po205, Po1000
+
+Remote SPAN VLANs
+-------------------------------------------------------------------------------
+
+Primary  Secondary  Type             Ports
+-------  ---------  ---------------  -------------------------------------------
+
+
+

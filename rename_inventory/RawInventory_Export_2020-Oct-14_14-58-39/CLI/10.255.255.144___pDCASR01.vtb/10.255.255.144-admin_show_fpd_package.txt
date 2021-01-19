@@ -1,0 +1,1086 @@
+
+Fri Oct  2 00:22:01.200 MSK
+
+=============================== ================================================
+                                        Field Programmable Device Package
+                                ================================================
+                                                                      SW      Min Req   Min Req
+Card Type                 FPD Description            Type Subtype   Version   SW Ver    HW Vers
+========================= ========================== ==== ======= =========== ========  =========
+ASR-9910-BPID2            Can Bus Ctrl (CBC) BP2     bp   cbc         7.104       0.00      0.1  
+                          Can Bus Ctrl (CBC) BP2     lc   cbc         7.104       0.00      0.1  
+-------------------------------------------------------------------------------------------------
+ASR-9904-BPID2            Can Bus Ctrl (CBC) BP2     bp   cbc         7.104       0.00      0.1  
+-------------------------------------------------------------------------------------------------
+ASR-9912-BPID2            Can Bus Ctrl (CBC) BP2     bp   cbc         7.104       0.00      0.1  
+                          Can Bus Ctrl (CBC) BP2     lc   cbc         7.104       0.00      0.1  
+-------------------------------------------------------------------------------------------------
+ASR-9922-BPID2            Can Bus Ctrl (CBC) BP2     bp   cbc         7.104       0.00      0.1  
+                          Can Bus Ctrl (CBC) BP2     lc   cbc         7.104       0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-BPID2-E-10-SLOT       Can Bus Ctrl (CBC) BP2     bp   cbc         7.104       0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-BPID2-E-6-SLOT        Can Bus Ctrl (CBC) BP2     bp   cbc         7.104       0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-BPID2-10-SLOT         Can Bus Ctrl (CBC) BP2     bp   cbc         7.104       0.00      0.1  
+                          Can Bus Ctrl (CBC) BP2     lc   cbc         7.104       0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-BPID2-6-SLOT          Can Bus Ctrl (CBC) BP2     bp   cbc         7.104       0.00      0.1  
+                          Can Bus Ctrl (CBC) BP2     lc   cbc         7.104       0.00      0.1  
+-------------------------------------------------------------------------------------------------
+ASR-9922-SFC110           Can Bus Ctrl (CBC) MTFC    fc   cbc        28.06        0.00      0.1  
+                          Fabric Ctrl0 MTFC          fc   fpga7       1.03        0.00      0.1  
+                          Can Bus Ctrl (CBC) MTFC    lc   cbc        28.06        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+ASR-9912-SFC110           Can Bus Ctrl (CBC) SSFC    fc   cbc        32.05        0.00      0.1  
+                          Fabric Ctrl0 MTFC          fc   fpga7       1.03        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A99-SFC2                  Can Bus Ctrl (CBC) MTFC    fc   cbc        37.20        0.00      0.1  
+                          Fabric Ctrl0 MTFC          fc   fcfsbl      1.79        0.00      0.1  
+                          Fabric Ctrl0 MTFC          fc   fclnxfw     1.79        0.00      0.1  
+                          Fabric Ctrl0 MTFC          fc   fpga8       0.33        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+ASR-9912-SFC220           Can Bus Ctrl (CBC) MTFC    fc   cbc        37.20        0.00      0.1  
+                          Fabric Ctrl0 MTFC          fc   fcfsbl      1.79        0.00      0.1  
+                          Fabric Ctrl0 MTFC          fc   fclnxfw     1.79        0.00      0.1  
+                          Fabric Ctrl0 MTFC          fc   fpga8       0.33        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A99-SFC-S                 Can Bus Ctrl (CBC) SHFC    fc   cbc        44.02        0.00      0.1  
+                          Fabric Ctrl0 SHFC          fc   fcfsbl      1.80        0.00      0.1  
+                          Fabric Ctrl0 SHFC          fc   fclnxfw     1.80        0.00      0.1  
+                          Fabric Ctrl0 SHFC          fc   fpga8       0.32        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+ASR-9010-FAN              Can Bus Ctrl (CBC) FAN     ft   cbc         4.03        0.00      0.1  
+                          Can Bus Ctrl (CBC) FAN     lc   cbc         4.03        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+ASR-9006-FAN              Can Bus Ctrl (CBC) FAN     ft   cbc         5.04        0.00      0.1  
+                          Can Bus Ctrl (CBC) FAN     lc   cbc         5.04        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+ASR-9922-FAN              Can Bus Ctrl (CBC) MFAN    ft   cbc        29.12        0.00      0.1  
+                          Can Bus Ctrl (CBC) MFAN    lc   cbc        29.12        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+ASR-9912-FAN              Can Bus Ctrl (CBC) SFAN    ft   cbc        31.05        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+ASR-9010-FAN-V2           Can Bus Ctrl (CBC) FAN     ft   cbc        29.12        0.00      0.1  
+                          Can Bus Ctrl (CBC) FAN     lc   cbc        29.12        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+ASR-9904-FAN              Can Bus Ctrl (CBC) SFAN    ft   cbc        31.05        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+ASR-9922-FAN-V2           Can Bus Ctrl (CBC) MFAN    ft   cbc        40.07        0.00      0.1  
+                          Fan Controller MFAN        ft   fpga9       2.04        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+ASR-9006-FAN-V2           Can Bus Ctrl (CBC) FAN     ft   cbc         5.04        0.00      0.1  
+                          Can Bus Ctrl (CBC) FAN     lc   cbc         5.04        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+ASR-9910-FAN              Can Bus Ctrl (CBC) SHFAN   ft   cbc        45.02        0.00      0.1  
+                          Fan Controller SHFAN       ft   fpga9       2.06        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+ASR-9001-FAN              Can Bus Ctrl (CBC) FAN     ft   cbc        24.115       0.00      0.1  
+                          Can Bus Ctrl (CBC) FAN     lc   cbc        24.115       0.00      0.1  
+-------------------------------------------------------------------------------------------------
+ASR-9001-FAN-V2           Can Bus Ctrl (CBC) FAN     ft   cbc        24.115       0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-40GE-B                Can Bus Ctrl (CBC) LC2     lc   cbc         2.03        0.00      0.1  
+                          CPUCtrl LC2                lc   cpld1       1.00        0.00      0.1  
+                          PHYCtrl LC2                lc   cpld2       0.06        0.00      0.1  
+                          PortCtrl LC2               lc   fpga2       0.10        0.00      0.1  
+                          Bridge LC2                 lc   fpga1       0.44        0.00      0.1  
+                          ROMMONB LC2                lc   rommon      1.05        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-4T-B                  Can Bus Ctrl (CBC) LC2     lc   cbc         2.03        0.00      0.1  
+                          CPUCtrl LC2                lc   cpld1       1.00        0.00      0.1  
+                          PHYCtrl LC2                lc   cpld2       0.08        0.00      0.1  
+                          LCClkCtrl LC2              lc   cpld3       0.03        0.00      0.1  
+                          PortCtrl LC2               lc   fpga2       0.10        0.00      0.1  
+                          PHY LC2                    lc   fpga3      14.44        0.00      0.1  
+                          Bridge LC2                 lc   fpga1       0.44        0.00      0.1  
+                          ROMMONB LC2                lc   rommon      1.05        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-8T/4-B                Can Bus Ctrl (CBC) LC2     lc   cbc         2.03        0.00      0.1  
+                          CPUCtrl LC2                lc   cpld1       1.00        0.00      0.1  
+                          PHYCtrl LC2                lc   cpld2       0.08        0.00      0.1  
+                          LCClkCtrl LC2              lc   cpld3       0.03        0.00      0.1  
+                          PortCtrl LC2               lc   fpga2       0.10        0.00      0.1  
+                          PHY LC2                    lc   fpga3      14.44        0.00      0.1  
+                          Bridge LC2                 lc   fpga1       0.44        0.00      0.1  
+                          ROMMONB LC2                lc   rommon      1.05        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-2T20GE-B              Can Bus Ctrl (CBC) LC2     lc   cbc         2.03        0.00      0.1  
+                          CPUCtrl LC2                lc   cpld1       1.00        0.00      0.1  
+                          PHYCtrl LC2                lc   cpld2       0.11        0.00      0.1  
+                          LCClkCtrl LC2              lc   cpld3       0.10        0.00      0.1  
+                          PortCtrl LC2               lc   fpga2       0.16        0.00      0.1  
+                          Bridge LC2                 lc   fpga1       0.44        0.00      0.1  
+                          ROMMONB LC2                lc   rommon      1.05        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-40GE-E                Can Bus Ctrl (CBC) LC2     lc   cbc         2.03        0.00      0.1  
+                          CPUCtrl LC2                lc   cpld1       1.00        0.00      0.1  
+                          PHYCtrl LC2                lc   cpld2       0.06        0.00      0.1  
+                          PortCtrl LC2               lc   fpga2       0.10        0.00      0.1  
+                          Bridge LC2                 lc   fpga1       0.44        0.00      0.1  
+                          ROMMONB LC2                lc   rommon      1.05        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-4T-E                  Can Bus Ctrl (CBC) LC2     lc   cbc         2.03        0.00      0.1  
+                          CPUCtrl LC2                lc   cpld1       1.00        0.00      0.1  
+                          PHYCtrl LC2                lc   cpld2       0.08        0.00      0.1  
+                          LCClkCtrl LC2              lc   cpld3       0.03        0.00      0.1  
+                          PortCtrl LC2               lc   fpga2       0.10        0.00      0.1  
+                          PHY LC2                    lc   fpga3      14.44        0.00      0.1  
+                          Bridge LC2                 lc   fpga1       0.44        0.00      0.1  
+                          ROMMONB LC2                lc   rommon      1.05        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-8T/4-E                Can Bus Ctrl (CBC) LC2     lc   cbc         2.03        0.00      0.1  
+                          CPUCtrl LC2                lc   cpld1       1.00        0.00      0.1  
+                          PHYCtrl LC2                lc   cpld2       0.08        0.00      0.1  
+                          LCClkCtrl LC2              lc   cpld3       0.03        0.00      0.1  
+                          PortCtrl LC2               lc   fpga2       0.10        0.00      0.1  
+                          PHY LC2                    lc   fpga3      14.44        0.00      0.1  
+                          Bridge LC2                 lc   fpga1       0.44        0.00      0.1  
+                          ROMMONB LC2                lc   rommon      1.05        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-2T20GE-E              Can Bus Ctrl (CBC) LC2     lc   cbc         2.03        0.00      0.1  
+                          CPUCtrl LC2                lc   cpld1       1.00        0.00      0.1  
+                          PHYCtrl LC2                lc   cpld2       0.11        0.00      0.1  
+                          LCClkCtrl LC2              lc   cpld3       0.10        0.00      0.1  
+                          PortCtrl LC2               lc   fpga2       0.16        0.00      0.1  
+                          Bridge LC2                 lc   fpga1       0.44        0.00      0.1  
+                          ROMMONB LC2                lc   rommon      1.05        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-8T-B                  Can Bus Ctrl (CBC) LC3     lc   cbc         6.11        0.00      0.1  
+                          CPUCtrl LC3                lc   cpld1       1.02        0.00      0.1  
+                          PHYCtrl LC3                lc   cpld2       0.08        0.00      0.1  
+                          LCClkCtrl LC3              lc   cpld3       0.03        0.00      0.1  
+                          DB CPUCtrl LC3             lc   cpld4       1.03        0.00      0.1  
+                          PortCtrl LC3               lc   fpga2       0.11        0.00      0.1  
+                          Raven LC3                  lc   fpga1       1.03        0.00      0.1  
+                          ROMMONB LC3                lc   rommon      1.03        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-16T/8-B               Can Bus Ctrl (CBC) LC3     lc   cbc         6.12        0.00      0.1  
+                          CPUCtrl LC3                lc   cpld1       1.02        0.00      0.1  
+                          PHYCtrl LC3                lc   cpld2       0.04        0.00      0.1  
+                          LCClkCtrl LC3              lc   cpld3       0.01        0.00      0.1  
+                          DB CPUCtrl LC3             lc   cpld4       1.03        0.00      0.1  
+                          PortCtrl LC3               lc   fpga2       0.01        0.00      0.1  
+                          Raven LC3                  lc   fpga1       1.03        0.00      0.1  
+                          ROMMONB LC3                lc   rommon      1.03        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-8T-E                  Can Bus Ctrl (CBC) LC3     lc   cbc         6.11        0.00      0.1  
+                          CPUCtrl LC3                lc   cpld1       1.02        0.00      0.1  
+                          PHYCtrl LC3                lc   cpld2       0.08        0.00      0.1  
+                          LCClkCtrl LC3              lc   cpld3       0.03        0.00      0.1  
+                          CPUCtrl LC3                lc   cpld4       1.03        0.00      0.1  
+                          PortCtrl LC3               lc   fpga2       0.11        0.00      0.1  
+                          Raven LC3                  lc   fpga1       1.03        0.00      0.1  
+                          ROMMONB LC3                lc   rommon      1.03        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-16T/8-E               Can Bus Ctrl (CBC) LC3     lc   cbc         6.12        0.00      0.1  
+                          CPUCtrl LC3                lc   cpld1       1.02        0.00      0.1  
+                          PHYCtrl LC3                lc   cpld2       0.04        0.00      0.1  
+                          LCClkCtrl LC3              lc   cpld3       0.01        0.00      0.1  
+                          DB CPUCtrl LC3             lc   cpld4       1.03        0.00      0.1  
+                          PortCtrl LC3               lc   fpga2       0.01        0.00      0.1  
+                          Raven LC3                  lc   fpga1       1.03        0.00      0.1  
+                          ROMMONB LC3                lc   rommon      1.03        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-40GE-L                Can Bus Ctrl (CBC) LC2     lc   cbc         2.03        0.00      0.1  
+                          CPUCtrl LC2                lc   cpld1       1.00        0.00      0.1  
+                          PHYCtrl LC2                lc   cpld2       0.06        0.00      0.1  
+                          PortCtrl LC2               lc   fpga2       0.10        0.00      0.1  
+                          Bridge LC2                 lc   fpga1       0.44        0.00      0.1  
+                          ROMMONB LC2                lc   rommon      1.05        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-4T-L                  Can Bus Ctrl (CBC) LC2     lc   cbc         2.03        0.00      0.1  
+                          CPUCtrl LC2                lc   cpld1       1.00        0.00      0.1  
+                          PHYCtrl LC2                lc   cpld2       0.08        0.00      0.1  
+                          LCClkCtrl LC2              lc   cpld3       0.03        0.00      0.1  
+                          PortCtrl LC2               lc   fpga2       0.10        0.00      0.1  
+                          Serdes Upgrade LC2         lc   fpga3      14.44        0.00      0.1  
+                          Bridge LC2                 lc   fpga1       0.44        0.00      0.1  
+                          ROMMONB LC2                lc   rommon      1.05        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-8T/4-L                Can Bus Ctrl (CBC) LC2     lc   cbc         2.03        0.00      0.1  
+                          CPUCtrl LC2                lc   cpld1       1.00        0.00      0.1  
+                          PHYCtrl LC2                lc   cpld2       0.08        0.00      0.1  
+                          LCClkCtrl LC2              lc   cpld3       0.03        0.00      0.1  
+                          PortCtrl LC2               lc   fpga2       0.10        0.00      0.1  
+                          Serdes Upgrade LC2         lc   fpga3      14.44        0.00      0.1  
+                          Bridge LC2                 lc   fpga1       0.44        0.00      0.1  
+                          ROMMONB LC2                lc   rommon      1.05        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-2T20GE-L              Can Bus Ctrl (CBC) LC2     lc   cbc         2.03        0.00      0.1  
+                          CPUCtrl LC2                lc   cpld1       1.00        0.00      0.1  
+                          PHYCtrl LC2                lc   cpld2       0.11        0.00      0.1  
+                          LCClkCtrl LC2              lc   cpld3       0.10        0.00      0.1  
+                          Tomcat LC2                 lc   fpga2       0.16        0.00      0.1  
+                          Bridge LC2                 lc   fpga1       0.44        0.00      0.1  
+                          ROMMONB LC2                lc   rommon      1.05        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-8T-L                  Can Bus Ctrl (CBC) LC3     lc   cbc         6.11        0.00      0.1  
+                          CPUCtrl LC3                lc   cpld1       1.02        0.00      0.1  
+                          PHYCtrl LC3                lc   cpld2       0.08        0.00      0.1  
+                          LCClkCtrl LC3              lc   cpld3       0.03        0.00      0.1  
+                          CPUCtrl LC3                lc   cpld4       1.03        0.00      0.1  
+                          PortCtrl LC3               lc   fpga2       0.11        0.00      0.1  
+                          Raven LC3                  lc   fpga1       1.03        0.00      0.1  
+                          ROMMONB LC3                lc   rommon      1.03        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-16T/8-L               Can Bus Ctrl (CBC) LC3     lc   cbc         6.12        0.00      0.1  
+                          CPUCtrl LC3                lc   cpld1       1.02        0.00      0.1  
+                          PHYCtrl LC3                lc   cpld2       0.04        0.00      0.1  
+                          LCClkCtrl LC3              lc   cpld3       0.01        0.00      0.1  
+                          DB CPUCtrl LC3             lc   cpld4       1.03        0.00      0.1  
+                          PortCtrl LC3               lc   fpga2       0.01        0.00      0.1  
+                          Raven LC3                  lc   fpga1       1.03        0.00      0.1  
+                          ROMMONB LC3                lc   rommon      1.03        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-SIP-700               Can Bus Ctrl (CBC) LC5     lc   cbc         3.06        0.00      0.1  
+                          CPUCtrl LC5                lc   cpld1       0.15        0.00      0.1  
+                          QFPCPUBridge LC5           lc   fpga2       5.14        0.00      0.1  
+                          NPUXBarBridge LC5          lc   fpga1       0.24        0.00      0.1  
+                          ROMMONB LC5                lc   rommon      1.04        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-SIP-500               Can Bus Ctrl (CBC) LC5     lc   cbc         3.06        0.00      0.1  
+                          CPUCtrl LC5                lc   cpld1       0.15        0.00      0.1  
+                          QFPCPUBridge LC5           lc   fpga2       5.14        0.00      0.1  
+                          NPUXBarBridge LC5          lc   fpga1       0.24        0.00      0.1  
+                          ROMMONB LC5                lc   rommon      1.04        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-SIP-700-8G            Can Bus Ctrl (CBC) LC5     lc   cbc         3.06        0.00      0.1  
+                          CPUCtrl LC5                lc   cpld1       0.15        0.00      0.1  
+                          QFPCPUBridge LC5           lc   fpga2       5.14        0.00      0.1  
+                          NPUXBarBridge LC5          lc   fpga1       0.24        0.00      0.1  
+                          ROMMONB LC5                lc   rommon      1.35        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-RSP-2G                Can Bus Ctrl (CBC) RSP2    lc   cbc         1.03        0.00      0.1  
+                          CPUCtrl RSP2               lc   cpld2       1.18        0.00      0.1  
+                          IntCtrl RSP2               lc   fpga2       1.15        0.00      0.1  
+                          ClkCtrl RSP2               lc   fpga3       1.23        0.00      0.1  
+                          UTI RSP2                   lc   fpga4       3.08        0.00      0.1  
+                          PUNT RSP2                  lc   fpga1       1.05        0.00      0.1  
+                          ROMMONB RSP2               lc   rommon      1.06        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-RSP-4G                Can Bus Ctrl (CBC) RSP2    lc   cbc         1.03        0.00      0.1  
+                          CPUCtrl RSP2               lc   cpld2       1.18        0.00      0.1  
+                          IntCtrl RSP2               lc   fpga2       1.15        0.00      0.1  
+                          ClkCtrl RSP2               lc   fpga3       1.23        0.00      0.1  
+                          UTI RSP2                   lc   fpga4       3.08        0.00      0.1  
+                          PUNT RSP2                  lc   fpga1       1.05        0.00      0.1  
+                          ROMMONB RSP2               lc   rommon      1.06        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-RSP-8G                Can Bus Ctrl (CBC) RSP2    lc   cbc         1.03        0.00      0.1  
+                          CPUCtrl RSP2               lc   cpld2       1.18        0.00      0.1  
+                          IntCtrl RSP2               lc   fpga2       1.15        0.00      0.1  
+                          ClkCtrl RSP2               lc   fpga3       1.23        0.00      0.1  
+                          UTI RSP2                   lc   fpga4       3.08        0.00      0.1  
+                          PUNT RSP2                  lc   fpga1       1.05        0.00      0.1  
+                          ROMMONB RSP2               lc   rommon      1.06        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-RSP440-TR             Can Bus Ctrl (CBC) RSP3    lc   cbc        16.116       0.00      0.1  
+                          ClockCtrl0 RSP3            lc   fpga2       1.09        0.00      0.1  
+                          UTI RSP3                   lc   fpga3       4.09        0.00      0.1  
+                          CPUCtrl RSP3               lc   fpga1       0.11        0.00      0.1  
+                          ROMMONB RSP3               lc   rommon      0.75        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-RSP440-SE             Can Bus Ctrl (CBC) RSP3    lc   cbc        16.116       0.00      0.1  
+                          ClockCtrl0 RSP3            lc   fpga2       1.09        0.00      0.1  
+                          UTI RSP3                   lc   fpga3       4.09        0.00      0.1  
+                          CPUCtrl RSP3               lc   fpga1       0.11        0.00      0.1  
+                          ROMMONB RSP3               lc   rommon      0.75        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+ASR-9922-RP-TR            Can Bus Ctrl (CBC) MTRP    lc   cbc        25.03        0.00      0.1  
+                          Fabric Ctrl3 MTFC          lc   fpga10      1.03        0.00      0.1  
+                          Fabric Ctrl4 MTFC          lc   fpga11      1.03        0.00      0.1  
+                          Fabric Ctrl5 MTFC          lc   fpga12      1.03        0.00      0.1  
+                          Fabric Ctrl6 MTFC          lc   fpga13      1.03        0.00      0.1  
+                          CPUCtrl1                   lc   fpga2       1.03        0.00      0.1  
+                          ClkCtrl                    lc   fpga3       1.05        0.00      0.1  
+                          IntCtrl                    lc   fpga4       1.04        0.00      0.1  
+                          UTI                        lc   fpga5       4.09        0.00      0.1  
+                          Timex                      lc   fpga6       0.02        0.00      0.1  
+                          Fabric Ctrl0 MTFC          lc   fpga7       1.03        0.00      0.1  
+                          Fabric Ctrl1 MTFC          lc   fpga8       1.03        0.00      0.1  
+                          Fabric Ctrl2 MTFC          lc   fpga9       1.03        0.00      0.1  
+                          CPUCtrl0                   lc   fpga1       1.05        0.00      0.1  
+                          ROMMONB MTRP               lc   rommon      5.15        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+ASR-9922-RP-SE            Can Bus Ctrl (CBC) MTRP    lc   cbc        25.03        0.00      0.1  
+                          Fabric Ctrl3 MTFC          lc   fpga10      1.03        0.00      0.1  
+                          Fabric Ctrl4 MTFC          lc   fpga11      1.03        0.00      0.1  
+                          Fabric Ctrl5 MTFC          lc   fpga12      1.03        0.00      0.1  
+                          Fabric Ctrl6 MTFC          lc   fpga13      1.03        0.00      0.1  
+                          CPUCtrl1                   lc   fpga2       1.03        0.00      0.1  
+                          ClkCtrl                    lc   fpga3       1.05        0.00      0.1  
+                          IntCtrl                    lc   fpga4       1.04        0.00      0.1  
+                          UTI                        lc   fpga5       4.09        0.00      0.1  
+                          Timex                      lc   fpga6       0.02        0.00      0.1  
+                          Fabric Ctrl0 MTFC          lc   fpga7       1.03        0.00      0.1  
+                          Fabric Ctrl1 MTFC          lc   fpga8       1.03        0.00      0.1  
+                          Fabric Ctrl2 MTFC          lc   fpga9       1.03        0.00      0.1  
+                          CPUCtrl0                   lc   fpga1       1.05        0.00      0.1  
+                          ROMMONB MTRP               lc   rommon      5.15        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+ASR-9900-RP-TR            Can Bus Ctrl (CBC) MTRP    lc   cbc        25.03        0.00      0.1  
+                          Fabric Ctrl3 MTFC          lc   fpga10      1.03        0.00      0.1  
+                          Fabric Ctrl4 MTFC          lc   fpga11      1.03        0.00      0.1  
+                          Fabric Ctrl5 MTFC          lc   fpga12      1.03        0.00      0.1  
+                          Fabric Ctrl6 MTFC          lc   fpga13      1.03        0.00      0.1  
+                          CPUCtrl1                   lc   fpga2       1.03        0.00      0.1  
+                          ClkCtrl                    lc   fpga3       1.05        0.00      0.1  
+                          IntCtrl                    lc   fpga4       1.04        0.00      0.1  
+                          UTI                        lc   fpga5       4.09        0.00      0.1  
+                          Timex                      lc   fpga6       0.02        0.00      0.1  
+                          Fabric Ctrl0 MTFC          lc   fpga7       1.03        0.00      0.1  
+                          Fabric Ctrl1 MTFC          lc   fpga8       1.03        0.00      0.1  
+                          Fabric Ctrl2 MTFC          lc   fpga9       1.03        0.00      0.1  
+                          CPUCtrl0                   lc   fpga1       1.05        0.00      0.1  
+                          ROMMONB MTRP               lc   rommon      5.15        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+ASR-9900-RP-SE            Can Bus Ctrl (CBC) MTRP    lc   cbc        25.03        0.00      0.1  
+                          Fabric Ctrl3 MTFC          lc   fpga10      1.03        0.00      0.1  
+                          Fabric Ctrl4 MTFC          lc   fpga11      1.03        0.00      0.1  
+                          Fabric Ctrl5 MTFC          lc   fpga12      1.03        0.00      0.1  
+                          Fabric Ctrl6 MTFC          lc   fpga13      1.03        0.00      0.1  
+                          CPUCtrl1                   lc   fpga2       1.03        0.00      0.1  
+                          ClkCtrl                    lc   fpga3       1.05        0.00      0.1  
+                          IntCtrl                    lc   fpga4       1.04        0.00      0.1  
+                          UTI                        lc   fpga5       4.09        0.00      0.1  
+                          Timex                      lc   fpga6       0.02        0.00      0.1  
+                          Fabric Ctrl0 MTFC          lc   fpga7       1.03        0.00      0.1  
+                          Fabric Ctrl1 MTFC          lc   fpga8       1.03        0.00      0.1  
+                          Fabric Ctrl2 MTFC          lc   fpga9       1.03        0.00      0.1  
+                          CPUCtrl0                   lc   fpga1       1.05        0.00      0.1  
+                          ROMMONB MTRP               lc   rommon      5.15        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-RSP440-LT             Can Bus Ctrl (CBC) RSP3    lc   cbc        16.116       0.00      0.1  
+                          ClockCtrl0 RSP3            lc   fpga2       1.11        0.00      0.1  
+                          UTI RSP3                   lc   fpga3       4.09        0.00      0.1  
+                          CPUCtrl RSP3               lc   fpga1       0.11        0.00      0.1  
+                          ROMMONB RSP3               lc   rommon      0.75        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-RSP880-TR             Can Bus Ctrl (CBC) RSP4    lc   cbc        34.38        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       0.42        0.00      0.0  
+                          DBCtrl                     lc   fpga3       0.14        0.00      0.0  
+                          DBCtrl                     lc   fpga4       0.11        0.00      0.0  
+                          DBCtrl                     lc   fpga5       0.12        0.00      0.0  
+                          PUNT FPGA                  lc   fpga6       0.05        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.80        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.80        0.00      0.0  
+                          ROMMONB RSP4               lc   rommon     10.50        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-RSP880-SE             Can Bus Ctrl (CBC) RSP4    lc   cbc        34.38        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       0.42        0.00      0.0  
+                          DBCtrl                     lc   fpga3       0.14        0.00      0.0  
+                          DBCtrl                     lc   fpga4       0.11        0.00      0.0  
+                          DBCtrl                     lc   fpga5       0.12        0.00      0.0  
+                          PUNT FPGA                  lc   fpga6       0.05        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.80        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.80        0.00      0.0  
+                          ROMMONB RSP4               lc   rommon     10.50        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A99-RSP-TR                Can Bus Ctrl (CBC) RSP4S   lc   cbc        43.02        0.00      0.1  
+                          MB CPUCtrl                 lc   fpga2       0.40        0.00      0.0  
+                          DBCtrl                     lc   fpga3       0.13        0.00      0.0  
+                          DBCtrl                     lc   fpga4       0.11        0.00      0.0  
+                          DBCtrl                     lc   fpga5       0.11        0.00      0.0  
+                          PUNT FPGA                  lc   fpga6       0.04        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.81        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.81        0.00      0.0  
+                          ROMMONB RSP4SHW            lc   rommon     16.03        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A99-RSP-SE                Can Bus Ctrl (CBC) RSP4S   lc   cbc        43.02        0.00      0.1  
+                          MB CPUCtrl                 lc   fpga2       0.40        0.00      0.0  
+                          DBCtrl                     lc   fpga3       0.13        0.00      0.0  
+                          DBCtrl                     lc   fpga4       0.11        0.00      0.0  
+                          DBCtrl                     lc   fpga5       0.11        0.00      0.0  
+                          PUNT FPGA                  lc   fpga6       0.04        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.81        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.81        0.00      0.0  
+                          ROMMONB RSP4SHW            lc   rommon     16.03        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A99-RP2-TR                Can Bus Ctrl (CBC) MTRP    lc   cbc        35.12        0.00      0.1  
+                          MB CPUCtrl                 lc   fpga2       0.42        0.00      0.0  
+                          DBCtrl                     lc   fpga3       0.14        0.00      0.0  
+                          DBCtrl                     lc   fpga4       0.11        0.00      0.0  
+                          DBCtrl                     lc   fpga5       0.12        0.00      0.0  
+                          PUNT FPGA                  lc   fpga6       0.05        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.80        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.80        0.00      0.0  
+                          ROMMONB RP2                lc   rommon     14.20        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A99-RP2-SE                Can Bus Ctrl (CBC) MTRP    lc   cbc        35.12        0.00      0.1  
+                          MB CPUCtrl                 lc   fpga2       0.42        0.00      0.0  
+                          DBCtrl                     lc   fpga3       0.14        0.00      0.0  
+                          DBCtrl                     lc   fpga4       0.11        0.00      0.0  
+                          DBCtrl                     lc   fpga5       0.12        0.00      0.0  
+                          PUNT FPGA                  lc   fpga6       0.05        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.80        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.80        0.00      0.0  
+                          ROMMONB RP2                lc   rommon     14.20        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+ASR9001-RP                Can Bus Ctrl (CBC) IMRP    lc   cbc        22.114       0.00      0.1  
+                          MB CPUCtrl                 lc   fpga2       1.15        0.00      0.0  
+                          ROMMONB IM RP              lc   rommon      2.04        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-24x10GE-SE            Can Bus Ctrl (CBC) LC6     lc   cbc        19.112       0.00      0.0  
+                          DBCtrl LC6                 lc   fpga2       1.03        0.00      0.0  
+                          LinkCtrl LC6               lc   fpga3       1.01        0.00      0.0  
+                          LCCPUCtrl LC6              lc   fpga4       1.07        0.00      0.0  
+                          ROMMONB LC6                lc   rommon      3.03        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-2x100GE-SE            Can Bus Ctrl (CBC) LC4     lc   cbc        21.111       0.00      0.1  
+                          DB IO FPGA1                lc   cpld1       1.03        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.08        0.00      0.0  
+                          PortCtrl                   lc   fpga3       1.05        0.00      0.0  
+                          Imux                       lc   fpga4       1.04        0.00      0.0  
+                          Emux                       lc   fpga5       1.04        0.00      0.0  
+                          100GIGMAC                  lc   fpga6      41.00        0.00      0.0  
+                          ROMMONB LC4                lc   rommon      3.03        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-MOD80-SE              Can Bus Ctrl (CBC) LC4     lc   cbc        20.118       0.00      0.1  
+                          DB Ctrl                    lc   fpga2       1.04        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga4       1.05        0.00      0.0  
+                          ROMMONB LC4                lc   rommon      3.03        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-MOD160-SE             Can Bus Ctrl (CBC) LC4     lc   cbc        20.118       0.00      0.1  
+                          DB Ctrl                    lc   fpga2       1.04        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga4       1.05        0.00      0.0  
+                          ROMMONB LC4                lc   rommon      3.03        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-24x10GE-TR            Can Bus Ctrl (CBC) LC6     lc   cbc        19.112       0.00      0.0  
+                          DBCtrl LC6                 lc   fpga2       1.03        0.00      0.0  
+                          LinkCtrl LC6               lc   fpga3       1.01        0.00      0.0  
+                          LCCPUCtrl LC6              lc   fpga4       1.07        0.00      0.0  
+                          ROMMONB LC6                lc   rommon      3.03        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-2x100GE-TR            Can Bus Ctrl (CBC) LC4     lc   cbc        21.111       0.00      0.1  
+                          DB IO FPGA1                lc   cpld1       1.03        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.08        0.00      0.0  
+                          PortCtrl                   lc   fpga3       1.05        0.00      0.0  
+                          Imux                       lc   fpga4       1.04        0.00      0.0  
+                          Emux                       lc   fpga5       1.04        0.00      0.0  
+                          100GIGMAC                  lc   fpga6      41.00        0.00      0.0  
+                          ROMMONB LC4                lc   rommon      3.03        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-MOD80-TR              Can Bus Ctrl (CBC) LC4     lc   cbc        20.118       0.00      0.1  
+                          DB Ctrl                    lc   fpga2       1.04        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga4       1.05        0.00      0.0  
+                          ROMMONB LC4                lc   rommon      3.03        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-MOD160-TR             Can Bus Ctrl (CBC) LC4     lc   cbc        20.118       0.00      0.1  
+                          DB Ctrl                    lc   fpga2       1.04        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga4       1.05        0.00      0.0  
+                          ROMMONB LC4                lc   rommon      3.03        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-36x10GE-SE            Can Bus Ctrl (CBC) LC6     lc   cbc        15.104       0.00      0.0  
+                          DBCtrl LC6                 lc   fpga2       1.01        0.00      0.0  
+                          LinkCtrl LC6               lc   fpga3       1.00        0.00      0.0  
+                          LCCPUCtrl LC6              lc   fpga4       1.03        0.00      0.0  
+                          ROMMONB LC6                lc   rommon      3.03        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-36x10GE_SC7-SE        Can Bus Ctrl (CBC) LC6     lc   cbc        15.104       0.00      0.0  
+                          DBCtrl LC6                 lc   fpga2       1.01        0.00      0.0  
+                          LinkCtrl LC6               lc   fpga3       1.00        0.00      0.0  
+                          LCCPUCtrl LC6              lc   fpga4       1.03        0.00      0.0  
+                          ROMMONB LC6                lc   rommon      3.03        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-36x10GE-TR            Can Bus Ctrl (CBC) LC6     lc   cbc        15.104       0.00      0.0  
+                          DBCtrl LC6                 lc   fpga2       1.01        0.00      0.0  
+                          LinkCtrl LC6               lc   fpga3       1.00        0.00      0.0  
+                          LCCPUCtrl LC6              lc   fpga4       1.03        0.00      0.0  
+                          ROMMONB LC6                lc   rommon      3.03        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-36x10GE_SC7-TR        Can Bus Ctrl (CBC) LC6     lc   cbc        15.104       0.00      0.0  
+                          DBCtrl LC6                 lc   fpga2       1.01        0.00      0.0  
+                          LinkCtrl LC6               lc   fpga3       1.00        0.00      0.0  
+                          LCCPUCtrl LC6              lc   fpga4       1.03        0.00      0.0  
+                          ROMMONB LC6                lc   rommon      3.03        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-1x100GE-SE            Can Bus Ctrl (CBC) LC4     lc   cbc        21.111       0.00      0.1  
+                          DB IO FPGA1                lc   cpld1       1.03        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.08        0.00      0.0  
+                          PortCtrl                   lc   fpga3       1.05        0.00      0.0  
+                          Imux                       lc   fpga4       1.04        0.00      0.0  
+                          Emux                       lc   fpga5       1.04        0.00      0.0  
+                          100GIGMAC                  lc   fpga6      41.00        0.00      0.0  
+                          ROMMONB LC4                lc   rommon      3.03        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-1x100GE-TR            Can Bus Ctrl (CBC) LC4     lc   cbc        21.111       0.00      0.1  
+                          DB IO FPGA1                lc   cpld1       1.03        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.08        0.00      0.0  
+                          PortCtrl                   lc   fpga3       1.05        0.00      0.0  
+                          Imux                       lc   fpga4       1.04        0.00      0.0  
+                          Emux                       lc   fpga5       1.04        0.00      0.0  
+                          100GIGMAC                  lc   fpga6      41.00        0.00      0.0  
+                          ROMMONB LC4                lc   rommon      3.03        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-VSM-500               CPUCtrl Forge              lc   cbc        33.05        0.00      0.1  
+                          CPUCtrl Forge              lc   fpga1       1.26        0.00      0.1  
+                          CPUCtrl Forge              lc   ibmc        5.08        0.00      0.1  
+                          CPUCtrl Forge              lc   rommon      3.07        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A99-8X100GE-SE            Can Bus Ctrl (CBC) LC4     lc   cbc        38.23        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.04        0.00      0.0  
+                          PortCtrl                   lc   fpga4       1.06        0.00      0.0  
+                          CPAK LR4                   lc   fpga5       1.16        0.00      0.0  
+                          CPAK SR10                  lc   fpga6       2.02        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A99-8X100GE-TR            Can Bus Ctrl (CBC) LC4     lc   cbc        38.23        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.04        0.00      0.0  
+                          PortCtrl                   lc   fpga4       1.06        0.00      0.0  
+                          CPAK LR4                   lc   fpga5       1.16        0.00      0.0  
+                          CPAK SR10                  lc   fpga6       2.02        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A99-4X100GE-SE            Can Bus Ctrl (CBC) LC4     lc   cbc        38.23        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.04        0.00      0.0  
+                          PortCtrl                   lc   fpga4       1.06        0.00      0.0  
+                          CPAK LR4                   lc   fpga5       1.16        0.00      0.0  
+                          CPAK SR10                  lc   fpga6       2.02        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A99-4X100GE-SE-TAA        Can Bus Ctrl (CBC) LC4     lc   cbc        38.23        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.04        0.00      0.0  
+                          PortCtrl                   lc   fpga4       1.06        0.00      0.0  
+                          CPAK LR4                   lc   fpga5       1.16        0.00      0.0  
+                          CPAK SR10                  lc   fpga6       2.02        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A99-4X100GE-TR            Can Bus Ctrl (CBC) LC4     lc   cbc        38.23        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.04        0.00      0.0  
+                          PortCtrl                   lc   fpga4       1.06        0.00      0.0  
+                          CPAK LR4                   lc   fpga5       1.16        0.00      0.0  
+                          CPAK SR10                  lc   fpga6       2.02        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A99-4X100GE-TR-TAA        Can Bus Ctrl (CBC) LC4     lc   cbc        38.23        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.04        0.00      0.0  
+                          PortCtrl                   lc   fpga4       1.06        0.00      0.0  
+                          CPAK LR4                   lc   fpga5       1.16        0.00      0.0  
+                          CPAK SR10                  lc   fpga6       2.02        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A99-4X100GE-TAA           Can Bus Ctrl (CBC) LC4     lc   cbc        38.23        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.04        0.00      0.0  
+                          PortCtrl                   lc   fpga4       1.06        0.00      0.0  
+                          CPAK LR4                   lc   fpga5       1.16        0.00      0.0  
+                          CPAK SR10                  lc   fpga6       2.02        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-4X100GE-SE            Can Bus Ctrl (CBC) LC4     lc   cbc        38.23        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.04        0.00      0.0  
+                          PortCtrl                   lc   fpga4       1.06        0.00      0.0  
+                          CPAK LR4                   lc   fpga5       1.16        0.00      0.0  
+                          CPAK SR10                  lc   fpga6       2.02        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-4X100GE-SE-TAA        Can Bus Ctrl (CBC) LC4     lc   cbc        38.23        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.04        0.00      0.0  
+                          PortCtrl                   lc   fpga4       1.06        0.00      0.0  
+                          CPAK LR4                   lc   fpga5       1.16        0.00      0.0  
+                          CPAK SR10                  lc   fpga6       2.02        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-4X100GE-TR            Can Bus Ctrl (CBC) LC4     lc   cbc        38.23        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.04        0.00      0.0  
+                          PortCtrl                   lc   fpga4       1.06        0.00      0.0  
+                          CPAK LR4                   lc   fpga5       1.16        0.00      0.0  
+                          CPAK SR10                  lc   fpga6       2.02        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-4X100GE-TR-TAA        Can Bus Ctrl (CBC) LC4     lc   cbc        38.23        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.04        0.00      0.0  
+                          PortCtrl                   lc   fpga4       1.06        0.00      0.0  
+                          CPAK LR4                   lc   fpga5       1.16        0.00      0.0  
+                          CPAK SR10                  lc   fpga6       2.02        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-4X100GE-TAA           Can Bus Ctrl (CBC) LC4     lc   cbc        38.23        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.04        0.00      0.0  
+                          PortCtrl                   lc   fpga4       1.06        0.00      0.0  
+                          CPAK LR4                   lc   fpga5       1.16        0.00      0.0  
+                          CPAK SR10                  lc   fpga6       2.02        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A99K-MOD200-SE            Can Bus Ctrl (CBC) LC4     lc   cbc        39.05        0.00      0.0  
+                          DBCtrl                     lc   fpga10      1.17        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A99K-200MOD-SE-TAA        Can Bus Ctrl (CBC) LC4     lc   cbc        39.05        0.00      0.0  
+                          DBCtrl                     lc   fpga10      1.17        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A99K-MOD200-TR            Can Bus Ctrl (CBC) LC4     lc   cbc        39.05        0.00      0.0  
+                          DBCtrl                     lc   fpga10      1.17        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A99K-MOD200-TR-TAA        Can Bus Ctrl (CBC) LC4     lc   cbc        39.05        0.00      0.0  
+                          DBCtrl                     lc   fpga10      1.17        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-MOD200-SE             Can Bus Ctrl (CBC) LC4     lc   cbc        39.05        0.00      0.0  
+                          DBCtrl                     lc   fpga10      1.17        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-MOD200-SE-TAA         Can Bus Ctrl (CBC) LC4     lc   cbc        39.05        0.00      0.0  
+                          DBCtrl                     lc   fpga10      1.17        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-MOD200-TR             Can Bus Ctrl (CBC) LC4     lc   cbc        39.05        0.00      0.0  
+                          DBCtrl                     lc   fpga10      1.17        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-MOD200-TR-TAA         Can Bus Ctrl (CBC) LC4     lc   cbc        39.05        0.00      0.0  
+                          DBCtrl                     lc   fpga10      1.17        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-MOD200-TAA            Can Bus Ctrl (CBC) LC4     lc   cbc        39.05        0.00      0.0  
+                          DBCtrl                     lc   fpga10      1.17        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A99K-MOD400-SE            Can Bus Ctrl (CBC) LC4     lc   cbc        39.05        0.00      0.0  
+                          DBCtrl                     lc   fpga10      1.17        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A99K-MOD400-SE-TAA        Can Bus Ctrl (CBC) LC4     lc   cbc        39.05        0.00      0.0  
+                          DBCtrl                     lc   fpga10      1.17        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A99K-MOD400-TR            Can Bus Ctrl (CBC) LC4     lc   cbc        39.05        0.00      0.0  
+                          DBCtrl                     lc   fpga10      1.17        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A99K-MOD400-TR-TAA        Can Bus Ctrl (CBC) LC4     lc   cbc        39.05        0.00      0.0  
+                          DBCtrl                     lc   fpga10      1.17        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-MOD400-SE             Can Bus Ctrl (CBC) LC4     lc   cbc        39.05        0.00      0.0  
+                          DBCtrl                     lc   fpga10      1.17        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-MOD400-SE-TAA         Can Bus Ctrl (CBC) LC4     lc   cbc        39.05        0.00      0.0  
+                          DBCtrl                     lc   fpga10      1.17        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-MOD400-TR             Can Bus Ctrl (CBC) LC4     lc   cbc        39.05        0.00      0.0  
+                          DBCtrl                     lc   fpga10      1.17        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-MOD400-TR-TAA         Can Bus Ctrl (CBC) LC4     lc   cbc        39.05        0.00      0.0  
+                          DBCtrl                     lc   fpga10      1.17        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-MOD400-TAA            Can Bus Ctrl (CBC) LC4     lc   cbc        39.05        0.00      0.0  
+                          DBCtrl                     lc   fpga10      1.17        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-8X100GE-L-SE          Can Bus Ctrl (CBC) LC4     lc   cbc        38.23        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.04        0.00      0.0  
+                          PortCtrl                   lc   fpga4       1.06        0.00      0.0  
+                          CPAK LR4                   lc   fpga5       1.16        0.00      0.0  
+                          CPAK SR10                  lc   fpga6       2.02        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-8X100GE-L-TR          Can Bus Ctrl (CBC) LC4     lc   cbc        38.23        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.04        0.00      0.0  
+                          PortCtrl                   lc   fpga4       1.06        0.00      0.0  
+                          CPAK LR4                   lc   fpga5       1.16        0.00      0.0  
+                          CPAK SR10                  lc   fpga6       2.02        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-8X100GE-SE            Can Bus Ctrl (CBC) LC4     lc   cbc        38.23        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.04        0.00      0.0  
+                          PortCtrl                   lc   fpga4       1.06        0.00      0.0  
+                          CPAK LR4                   lc   fpga5       1.16        0.00      0.0  
+                          CPAK SR10                  lc   fpga6       2.02        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-8X100GE-TR            Can Bus Ctrl (CBC) LC4     lc   cbc        38.23        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.04        0.00      0.0  
+                          PortCtrl                   lc   fpga4       1.06        0.00      0.0  
+                          CPAK LR4                   lc   fpga5       1.16        0.00      0.0  
+                          CPAK SR10                  lc   fpga6       2.02        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A99L-4X100GE-SE           Can Bus Ctrl (CBC) LC4     lc   cbc        38.23        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.04        0.00      0.0  
+                          PortCtrl                   lc   fpga4       1.06        0.00      0.0  
+                          CPAK LR4                   lc   fpga5       1.16        0.00      0.0  
+                          CPAK SR10                  lc   fpga6       2.02        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A99L-4X100GE-TR           Can Bus Ctrl (CBC) LC4     lc   cbc        38.23        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.04        0.00      0.0  
+                          PortCtrl                   lc   fpga4       1.06        0.00      0.0  
+                          CPAK LR4                   lc   fpga5       1.16        0.00      0.0  
+                          CPAK SR10                  lc   fpga6       2.02        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9KL-4X100GE-SE           Can Bus Ctrl (CBC) LC4     lc   cbc        38.23        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.04        0.00      0.0  
+                          PortCtrl                   lc   fpga4       1.06        0.00      0.0  
+                          CPAK LR4                   lc   fpga5       1.16        0.00      0.0  
+                          CPAK SR10                  lc   fpga6       2.02        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9KL-4X100GE-TR           Can Bus Ctrl (CBC) LC4     lc   cbc        38.23        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.04        0.00      0.0  
+                          PortCtrl                   lc   fpga4       1.06        0.00      0.0  
+                          CPAK LR4                   lc   fpga5       1.16        0.00      0.0  
+                          CPAK SR10                  lc   fpga6       2.02        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-400G-DWDM-TR          Can Bus Ctrl (CBC) LC4     lc   cbc        42.02        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.77        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.04        0.00      0.0  
+                          DBCtrl                     lc   fpga4       1.01        0.00      0.0  
+                          DBCtrl                     lc   fpga5       1.01        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga6       3.54        0.00      1.0  
+                          DBCtrl                     lc   fpga7      49.00        0.00      0.0  
+                          DBCtrl                     lc   fpga8       4.38        0.00      1.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-4X100GE-L             Can Bus Ctrl (CBC) LC4     lc   cbc        46.06        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.78        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.02        0.00      0.0  
+                          PortCtrl                   lc   fpga4       1.02        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.81        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.81        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      9.20        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A99-12X100GE              Can Bus Ctrl (CBC) LC4     lc   cbc        46.06        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.78        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.02        0.00      0.0  
+                          PortCtrl                   lc   fpga4       1.02        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.81        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.81        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      9.20        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A99-8X100GE-CM            Can Bus Ctrl (CBC) LC4     lc   cbc        38.23        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.04        0.00      0.0  
+                          PortCtrl                   lc   fpga4       1.06        0.00      0.0  
+                          CPAK LR4                   lc   fpga5       1.16        0.00      0.0  
+                          CPAK SR10                  lc   fpga6       2.02        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-8X100GE-CM            Can Bus Ctrl (CBC) LC4     lc   cbc        38.23        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.76        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.04        0.00      0.0  
+                          PortCtrl                   lc   fpga4       1.06        0.00      0.0  
+                          CPAK LR4                   lc   fpga5       1.16        0.00      0.0  
+                          CPAK SR10                  lc   fpga6       2.02        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.78        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.78        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      8.40        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A99-12X100GE-CM           Can Bus Ctrl (CBC) LC4     lc   cbc        46.06        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga2       1.78        0.00      0.0  
+                          DBCtrl                     lc   fpga3       1.02        0.00      0.0  
+                          PortCtrl                   lc   fpga4       1.02        0.00      0.0  
+                          Fsbl                       lc   fsbl        1.81        0.00      0.0  
+                          LinuxFW                    lc   lnxfw       1.81        0.00      0.0  
+                          ROMMONB LC1                lc   rommon      9.20        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-40GE-SE               Can Bus Ctrl (CBC) LC4     lc   cbc        41.104       0.00      0.1  
+                          PortCtrl                   lc   fpga2       0.08        0.00      0.0  
+                          PortCtrl                   lc   fpga3       0.08        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga4       0.06        0.00      0.0  
+                          ROMMONB LC4                lc   rommon      3.03        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-4T16GE-SE             Can Bus Ctrl (CBC) LC4     lc   cbc        41.104       0.00      0.1  
+                          PortCtrl                   lc   fpga2       0.08        0.00      0.0  
+                          PortCtrl                   lc   fpga3       1.00        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga4       0.06        0.00      0.0  
+                          ROMMONB LC4                lc   rommon      3.03        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-40GE-TR               Can Bus Ctrl (CBC) LC4     lc   cbc        41.104       0.00      0.1  
+                          PortCtrl                   lc   fpga2       0.08        0.00      0.0  
+                          PortCtrl                   lc   fpga3       0.08        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga4       0.06        0.00      0.0  
+                          ROMMONB LC4                lc   rommon      3.03        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-4T16GE-TR             Can Bus Ctrl (CBC) LC4     lc   cbc        41.104       0.00      0.1  
+                          PortCtrl                   lc   fpga2       0.08        0.00      0.0  
+                          PortCtrl                   lc   fpga3       1.00        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga4       0.06        0.00      0.0  
+                          ROMMONB LC4                lc   rommon      3.03        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+ASR9001-LC                Can Bus Ctrl (CBC) IMLC    lc   cbc        23.114       0.00      0.1  
+                          DB CPUCtrl                 lc   fpga2       1.18        0.00      0.0  
+                          EP Gambit                  lc   fpga3       1.00        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga4       2.10        0.00      0.0  
+                          EP Rogue                   lc   fpga6       1.06        0.00      0.0  
+                          EP Sage                    lc   fpga7       1.02        0.00      0.0  
+                          ROMMONB IM LC              lc   rommon      2.04        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+ASR9001-LC-S              Can Bus Ctrl (CBC) IMLC    lc   cbc        23.114       0.00      0.1  
+                          DB CPUCtrl                 lc   fpga2       1.18        0.00      0.0  
+                          EP Gambit                  lc   fpga3       1.00        0.00      0.0  
+                          MB CPUCtrl                 lc   fpga4       2.10        0.00      0.0  
+                          EP Rogue                   lc   fpga6       1.06        0.00      0.0  
+                          EP Sage                    lc   fpga7       1.02        0.00      0.0  
+                          ROMMONB IM LC              lc   rommon      2.04        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+A9K-ISM-100               Can Bus Ctrl (CBC) LC6     lc   cbc        18.08        0.00      0.1  
+                          CPUCtrl LC6                lc   cpld1       0.01        0.00      0.1  
+                          Maintenance LC6            lc   fpga2       2.13        0.00      0.1  
+                          Amistad LC6                lc   fpga1       0.33        0.00      0.20 
+                          ROMMONB LC6                lc   rommon      1.02        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+PWR-3KW-AC-V2             Delta AC logic PM          pm   fpga11      6.04        0.00      0.1  
+                          Delta AC primary PM        pm   fpga12      6.02        0.00      0.1  
+                          Delta AC secondary PM      pm   fpga13      6.02        0.00      0.1  
+                          Emerson AC logic PM        pm   fpga14      3.18        0.00      0.1  
+                          Emerson AC primary PM      pm   fpga15      3.06        0.00      0.1  
+                          Emerson AC secondary PM    pm   fpga16      3.12        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+PWR-2KW-DC-V2             Delta DC logic PM          pm   fpga11      6.03        0.00      0.1  
+                          Delta DC primary PM        pm   fpga12      6.03        0.00      0.1  
+                          Delta DC secondary PM      pm   fpga13      6.02        0.00      0.1  
+                          Emerson DC logic PM        pm   fpga14      3.19        0.00      0.1  
+                          Emerson DC primary PM      pm   fpga15      3.12        0.00      0.1  
+                          Emerson DC secondary PM    pm   fpga16      3.19        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+PWR-6KW-AC-V3             Delta V3 AC logic PM       pm   fpga11      4.01        0.00      0.1  
+                          Delta V3 AC primary PM     pm   fpga12      4.00        0.00      0.1  
+                          Delta V3 AC secondary PM   pm   fpga13      4.01        0.00      0.1  
+                          Acbel V3 AC logic PM       pm   fpga14      1.00        0.00      0.1  
+                          Acbel V3 AC primary PM     pm   fpga15      1.00        0.00      0.1  
+                          Acbel V3 AC secondary PM   pm   fpga16      1.00        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+PWR-4.4KW-DC-V3           Delta V3 DC logic PM       pm   fpga11      3.00        0.00      0.1  
+                          Delta V3 DC primary PM     pm   fpga12      3.00        0.00      0.1  
+                          Delta V3 DC secondary PM   pm   fpga13      3.00        0.00      0.1  
+                          Acbel V3 DC logic PM       pm   fpga14      1.00        0.00      0.1  
+                          Acbel V3 DC primary PM     pm   fpga15      1.00        0.00      0.1  
+                          Acbel V3 DC secondary PM   pm   fpga16      1.00        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+PWR-3KW-HVDC              Delta HVDC logic PM        pm   fpga11      2.03        0.00      0.1  
+                          Delta HVDC primary PM      pm   fpga12      2.02        0.00      0.1  
+                          Delta HVDC secondary PM    pm   fpga13      2.02        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+SPA-4XT3/E3               SPA E3 Subrate FPGA        spa  fpga2       1.04        0.00      0.0  
+                          SPA T3 Subrate FPGA        spa  fpga3       1.04        0.00      0.0  
+                          SPA I/O FPGA               spa  fpga1       1.01        0.00      0.0  
+                          SPA ROMMON                 spa  rommon      2.12        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+SPA-4XCT3/DS0             SPA T3 Subrate FPGA        spa  fpga2       0.11        0.00      0.100
+                          SPA T3 Subrate FPGA        spa  fpga2       1.04        0.00      0.200
+                          SPA I/O FPGA               spa  fpga1       2.08        0.00      0.100
+                          SPA ROMMON                 spa  rommon      2.12        0.00      0.100
+-------------------------------------------------------------------------------------------------
+SPA-OC192POS-XFP          SPA FPGA swv1.101 hwv3     spa  fpga2       1.101       0.00      3.0  
+                          SPA FPGA swv1.2 hwv2       spa  fpga1       1.02        0.00      2.0  
+-------------------------------------------------------------------------------------------------
+SPA-1XCHSTM1/OC3          SPA T3 Subrate FPGA        spa  fpga2       1.04        0.00      0.0  
+                          SPA I/O FPGA               spa  fpga1       1.08        0.00      0.0  
+                          SPA ROMMON                 spa  rommon      2.12        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+SPA-1XOC48POS/RPR         SPA FPGA swv1.101 hwv3     spa  fpga2       1.101       0.00      3.0  
+-------------------------------------------------------------------------------------------------
+SPA-24CHT1-CE-ATM         SPA T3 Subrate FPGA        spa  fpga2       1.10        0.00      1.0  
+                          SPA I/O FPGA               spa  fpga1       2.32        0.00      1.0  
+                          SPA ROMMON                 spa  rommon      1.03        0.00      1.0  
+-------------------------------------------------------------------------------------------------
+SPA-2CHT3-CE-ATM          SPA T3 Subrate FPGA        spa  fpga2       1.11        0.00      1.0  
+                          SPA I/O FPGA               spa  fpga1       2.22        0.00      1.0  
+                          SPA ROMMON                 spa  rommon      1.04        0.00      1.0  
+-------------------------------------------------------------------------------------------------
+SPA-1CHOC3-CE-ATM         SPA OC3 Subrate FPGA       spa  fpga2       2.23        0.00      0.0  
+                          SPA I/O FPGA               spa  fpga1       2.23        0.00      2.0  
+                          SPA ROMMON                 spa  rommon      1.04        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+SPA-1XCHOC48/DS3          SPA I/O FPGA               spa  fpga2       1.00        0.00      0.49 
+                          SPA I/O FPGA               spa  fpga3       1.00        0.00      0.52 
+                          SPA I/O FPGA               spa  fpga1       1.36        0.00      0.49 
+                          SPA ROMMON                 spa  rommon      2.02        0.00      0.49 
+-------------------------------------------------------------------------------------------------
+SPA-1XOC3-ATM-V2          SPA FPGA swv2.104 hwv2     spa  fpga2       2.104       0.00      2.8  
+                          SPA FPGA swv1.2            spa  fpga1       2.02        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+SPA-3XOC3-ATM-V2          SPA FPGA swv2.104 hwv2     spa  fpga2       2.104       0.00      2.8  
+                          SPA FPGA swv1.2            spa  fpga1       2.02        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+SPA-1XOC12-ATM-V2         SPA FPGA swv2.104 hwv2     spa  fpga2       2.104       0.00      2.8  
+                          SPA FPGA swv1.2            spa  fpga1       2.02        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+SPA-2XCHOC12/DS0          SPA FPGA2 swv1.00          spa  fpga2       1.00        0.00      0.0  
+                          SPA FPGA swv1.36           spa  fpga1       1.36        0.00      0.49 
+                          SPA ROMMON swv2.2          spa  rommon      2.02        0.00      0.49 
+-------------------------------------------------------------------------------------------------
+A9K-MPA-20X1GE            EP I/O FPGA                spa  fpga3       1.00        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-MPA-20X10GE           EP Skyquake                spa  fpga5       1.12        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-MPA-2X10GE            EP I/O FPGA                spa  fpga6       1.06        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-MPA-4X10GE            EP I/O FPGA                spa  fpga6       1.06        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-MPA-2X40GE            EP Sage                    spa  fpga7       1.03        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-MPA-1X40GE            EP Sage                    spa  fpga7       1.03        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-MPA-8X10GE            EP I/O FPGA                spa  fpga8       1.07        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-MPA-2X100GE           EP Springer                spa  fpga9       1.00        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+A9K-MPA-1X100GE           EP Springer                spa  fpga9       1.00        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+SPA-8XOC12-POS            SPA FPGA swv1.0            spa  fpga1       1.00        0.00      0.5  
+-------------------------------------------------------------------------------------------------
+SPA-8XCHT1/E1             SPA I/O FPGA               spa  fpga1       2.08        0.00      0.0  
+                          SPA ROMMON                 spa  rommon      2.12        0.00      0.140
+-------------------------------------------------------------------------------------------------
+SPA-2XOC48POS/RPR         SPA FPGA swv1.0            spa  fpga1       1.00        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+SPA-4XOC48POS/RPR         SPA FPGA swv1.0            spa  fpga1       1.00        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+SPA-8XOC3-POS             SPA FPGA swv1.0            spa  fpga1       1.00        0.00      0.5  
+-------------------------------------------------------------------------------------------------
+SPA-2XOC12-POS            SPA FPGA swv1.0            spa  fpga1       1.00        0.00      0.5  
+-------------------------------------------------------------------------------------------------
+SPA-4XOC12-POS            SPA FPGA swv1.0            spa  fpga1       1.00        0.00      0.5  
+-------------------------------------------------------------------------------------------------
+SPA-10X1GE-V2             SPA FPGA swv1.10           spa  fpga1       1.10        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+SPA-4XOC3-POS-V2          SPA FPGA swv1.0            spa  fpga1       1.00        0.00      0.5  
+-------------------------------------------------------------------------------------------------
+SPA-2XOC3-ATM-V2          SPA FPGA swv1.2            spa  fpga1       2.02        0.00      0.0  
+-------------------------------------------------------------------------------------------------
+SPA-8XCHT1/E1-V2          SPA I/O FPGA               spa  fpga1       1.02        0.00      1.0  
+                          SPA ROMMON                 spa  rommon      1.00        0.00      1.0  
+-------------------------------------------------------------------------------------------------
+SPA-1CHSTM1/OC3V2         SPA I/O FPGA               spa  fpga1       1.00        0.00      0.1  
+                          SPA ROMMON                 spa  rommon      1.00        0.00      0.1  
+-------------------------------------------------------------------------------------------------
+SPA-2XCT3/DS0-V2          SPA I/O FPGA               spa  fpga1       1.01        0.00      1.0  
+                          SPA ROMMON                 spa  rommon      1.00        0.00      1.0  
+-------------------------------------------------------------------------------------------------
+SPA-4XCT3/DS0-V2          SPA I/O FPGA               spa  fpga1       1.01        0.00      1.0  
+                          SPA ROMMON                 spa  rommon      1.00        0.00      1.0  
+-------------------------------------------------------------------------------------------------
+SPA-2XT3/E3-V2            SPA FPGA swv1.1 hwv3       spa  fpga1       1.01        0.00      1.0  
+                          SPA ROMMON                 spa  rommon      1.00        0.00      1.0  
+-------------------------------------------------------------------------------------------------
+SPA-4XT3/E3-V2            SPA FPGA swv1.1 hwv3       spa  fpga1       1.01        0.00      1.0  
+                          SPA ROMMON                 spa  rommon      1.00        0.00      1.0  
+-------------------------------------------------------------------------------------------------

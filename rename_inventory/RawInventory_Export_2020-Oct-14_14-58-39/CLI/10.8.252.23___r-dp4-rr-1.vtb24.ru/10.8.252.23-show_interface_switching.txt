@@ -1,0 +1,120 @@
+TenGigabitEthernet0/0/0 [L3] sw-dp4-core-1
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs  820174146      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          0          0          0          0
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE  466961260 51115916524   84932245 10142410532
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      46631    2797860      46629    2797740
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  CDP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     874186  267151435     971319  379785729
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  MPLS                
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          0          0          0          0
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE  585869764 64965298661  860569709 92825518577
+
+    Protocol  UDLD                
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          0          0    3496756  447584687
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  Other               
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     377993  101175256          0          0
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE    4791963  877631670    4514701  830167853
+
+    NOTE: all counts are cumulative and reset only after a reload.
+TenGigabitEthernet0/0/1 [L3] sw-dp4-core-2
+          Throttle count          0
+                   Drops         RP          0         SP          0
+             SPD Flushes       Fast          0        SSE          0
+             SPD Aggress       Fast          0
+            SPD Priority     Inputs  743476285      Drops          0
+
+    Protocol  IP                  
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          0          0          0          0
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE  430113781 46788130891  214785919 43893774249
+
+    Protocol  ARP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process      46627    2797620      46627    2797620
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  CDP                 
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     874206  252081445     971331  379790421
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  MPLS                
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          1         60          0          0
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE  501553713 56477711725  823411537 89614046790
+
+    Protocol  UDLD                
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process          0          0    3496834  447594644
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE          0          0          0          0
+
+    Protocol  Other               
+          Switching path    Pkts In   Chars In   Pkts Out  Chars Out
+                 Process     378027  102122491          0          0
+            Cache misses          0          -          -          -
+                    Fast          0          0          0          0
+               Auton/SSE    4791940  863497869    4514790  830182483
+
+    NOTE: all counts are cumulative and reset only after a reload.
+Interface GigabitEthernet0/0/0 is disabled
+
+Interface GigabitEthernet0/0/1 is disabled
+
+Interface GigabitEthernet0/0/2 is disabled
+
+Interface GigabitEthernet0/0/3 is disabled
+
+Interface GigabitEthernet0/0/4 is disabled
+
+Interface GigabitEthernet0/0/5 is disabled
+
+Interface GigabitEthernet0 is disabled
+
+Loopback0 [L3] router-id
+
+    All statistics for this interface are zero.
+Loopback10 [L3][SAP] WAN NTP #3
+
+    All statistics for this interface are zero.

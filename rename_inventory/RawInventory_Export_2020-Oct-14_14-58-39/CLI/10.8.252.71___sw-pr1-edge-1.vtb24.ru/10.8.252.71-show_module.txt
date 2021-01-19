@@ -1,0 +1,82 @@
+
+Mod  Ports  Module-Type                         Model              Status
+---  -----  ----------------------------------- ------------------ ----------
+1    48     1/10 Gbps Ethernet Module           N7K-F248XP-25E     ok
+2    48     1/10 Gbps Ethernet Module           N7K-F248XP-25E     ok
+3    24     10 Gbps Ethernet Module             N7K-M224XP-23L     ok
+4    24     10 Gbps Ethernet Module             N7K-M224XP-23L     ok
+5    0      Supervisor Module-2                 N7K-SUP2           active *
+6    0      Supervisor Module-2                 N7K-SUP2           ha-standby
+7    48     1/10 Gbps Ethernet Module           N7K-F248XP-25E     ok
+8    48     1/10 Gbps Ethernet Module           N7K-F248XP-25E     ok
+9    48     1/10 Gbps Ethernet Module           N7K-F248XP-25E     ok
+10   48     1/10 Gbps Ethernet Module           N7K-F248XP-25E     ok
+
+Mod  Sw              Hw
+---  --------------  ------
+1    6.2(16)         1.0     
+2    6.2(16)         1.0     
+3    6.2(16)         2.0     
+4    6.2(16)         1.0     
+5    6.2(16)         3.2     
+6    6.2(16)         1.0     
+7    6.2(16)         1.2     
+8    6.2(16)         1.2     
+9    6.2(16)         1.2     
+10   6.2(16)         1.2     
+
+
+
+Mod  MAC-Address(es)                         Serial-Num
+---  --------------------------------------  ----------
+1    84-78-ac-18-b0-80 to 84-78-ac-18-b0-b3  JAF1716BFHJ
+2    e4-c7-22-1a-46-b0 to e4-c7-22-1a-46-e3  JAF1750ALLN
+3    e4-c7-22-01-91-24 to e4-c7-22-01-91-3f  JAF1738ACPT
+4    84-78-ac-0a-c2-18 to 84-78-ac-0a-c2-33  JAF1648AHKQ
+5    00-6c-bc-a7-98-b8 to 00-6c-bc-a7-98-ca  JAE201506EN
+6    84-78-ac-0a-a3-a6 to 84-78-ac-0a-a3-b8  JAF1650AMPK
+7    9c-57-ad-2b-d1-e8 to 9c-57-ad-2b-d2-1b  JAE1938017F
+8    50-06-ab-90-1d-a8 to 50-06-ab-90-1d-db  JAE1940059Z
+9    80-e0-1d-89-32-40 to 80-e0-1d-89-32-73  JAE192401FV
+10   80-e0-1d-8a-1d-ac to 80-e0-1d-8a-1d-df  JAE192403XQ
+
+Mod  Online Diag Status
+---  ------------------
+1    Pass
+2    Pass
+3    Pass
+4    Pass
+5    Pass
+6    Pass
+7    Pass
+8    Pass
+9    Pass
+10   Pass
+
+Xbar Ports  Module-Type                         Model              Status
+---  -----  ----------------------------------- ------------------ ----------
+1    0      Fabric Module 2                     N7K-C7010-FAB-2    ok
+2    0      Fabric Module 2                     N7K-C7010-FAB-2    ok
+3    0      Fabric Module 2                     N7K-C7010-FAB-2    ok
+4    0      Fabric Module 2                     N7K-C7010-FAB-2    ok
+5    0      Fabric Module 2                     N7K-C7010-FAB-2    ok
+
+Xbar Sw              Hw
+---  --------------  ------
+1    NA              1.2     
+2    NA              1.2     
+3    NA              1.2     
+4    NA              1.2     
+5    NA              1.2     
+
+
+
+Xbar MAC-Address(es)                         Serial-Num
+---  --------------------------------------  ----------
+1    NA                                      JAF1649ACAF
+2    NA                                      JAF1647BMDS
+3    NA                                      JAF1649ATGB
+4    NA                                      JAF1649ATKK
+5    NA                                      JAF1649ATHQ
+
+* this terminal session 

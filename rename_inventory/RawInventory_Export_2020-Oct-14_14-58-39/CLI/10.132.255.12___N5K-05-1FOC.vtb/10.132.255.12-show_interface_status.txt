@@ -1,0 +1,239 @@
+
+
+--------------------------------------------------------------------------------
+Port          Name               Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------
+Eth1/1        --- 2K5-101 ---    connected 1         full    10G     Fabric Exte
+Eth1/2        --- 2K5-101 ---    connected 1         full    10G     Fabric Exte
+Eth1/3        --                 xcvrInval 1         full    10G     Fabric Exte
+Eth1/4        --                 xcvrInval 1         full    10G     Fabric Exte
+Eth1/5        --- 2K5-105 ---    connected 1         full    10G     Fabric Exte
+Eth1/6        --- 2K5-105 ---    connected 1         full    10G     Fabric Exte
+Eth1/7        --- 2K5-107 ---    connected 1         full    10G     Fabric Exte
+Eth1/8        --- 2K5-107 ---    connected 1         full    10G     Fabric Exte
+Eth1/9        --                 xcvrInval 1         full    10G     Fabric Exte
+Eth1/10       --                 xcvrInval 1         full    10G     Fabric Exte
+Eth1/11       --- 2K5-111 ---    connected 1         full    10G     Fabric Exte
+Eth1/12       --- 2K5-111 ---    connected 1         full    10G     Fabric Exte
+Eth1/13       --                 sfpAbsent 1         full    10G     --         
+Eth1/14       --                 sfpAbsent 1         full    10G     --         
+Eth1/15       --- 2K5-115 ---    connected 1         full    10G     Fabric Exte
+Eth1/16       --- 2K5-115 ---    connected 1         full    10G     Fabric Exte
+Eth1/17       --                 xcvrInval 1         full    10G     Fabric Exte
+Eth1/18       --                 xcvrInval 1         full    10G     Fabric Exte
+Eth1/19       --                 sfpAbsent 1         full    10G     --         
+Eth1/20       --                 sfpAbsent 1         full    10G     --         
+Eth1/21       UCS Test           sfpAbsent trunk     full    10G     --         
+Eth1/22       UCS Test           sfpAbsent trunk     full    10G     --         
+Eth1/23       --                 sfpAbsent 3141      full    10G     --         
+Eth1/24       --                 xcvrInval 1         full    10G     Fabric Exte
+Eth1/25       --                 xcvrInval 1         full    10G     Fabric Exte
+Eth1/26       --                 xcvrInval 1         full    10G     Fabric Exte
+Eth1/27       --                 xcvrInval 1         full    10G     Fabric Exte
+Eth1/28       --                 xcvrInval 1         full    10G     Fabric Exte
+Eth1/29       keepalive channel  connected trunk     full    10G     10Gbase-SR 
+Eth1/30       --                 connected trunk     full    10G     10Gbase-SR 
+Eth1/31       --                 connected trunk     full    10G     10Gbase-SR 
+Eth1/32       --                 connected trunk     full    10G     10Gbase-SR 
+Eth2/1        --                 connected trunk     full    10G     10Gbase-SR 
+Eth2/2        --                 connected trunk     full    10G     10Gbase-SR 
+Eth2/3        --                 connected trunk     full    10G     10Gbase-SR 
+Eth2/4        keepalive channel  connected trunk     full    10G     10Gbase-SR 
+Eth2/5        Huawei Server. DBO sfpAbsent trunk     full    10G     --         
+Eth2/6        --                 sfpAbsent trunk     full    10G     --         
+Eth2/7        --                 notconnec trunk     full    1000    SFP-1000BAS
+Eth2/8        --                 xcvrInval 1         full    10G     Fabric Exte
+Eth2/9        --                 xcvrInval 1         full    10G     Fabric Exte
+Eth2/10       --                 xcvrInval 1         full    10G     Fabric Exte
+Eth2/11       --                 sfpAbsent trunk     full    10G     --         
+Eth2/12       --                 sfpAbsent 1         full    10G     --         
+Eth2/13       --                 sfpAbsent 1         full    10G     --         
+Eth2/14       --                 sfpAbsent 1         full    10G     --         
+Eth2/15       --                 sfpAbsent 1         full    10G     --         
+Eth2/16       F5 test            notconnec trunk     full    10G     10Gbase-SR 
+Po7           --                 connected trunk     full    a-10G   --         
+Po101         --- 2K5-101 ---    connected 1         full    a-10G   --         
+Po105         --- 2K5-105 ---    connected 1         full    a-10G   --         
+Po107         --- 2K5-107 ---    connected 1         full    a-10G   --         
+Po111         --- 2K5-111 ---    connected 1         full    a-10G   --         
+Po115         --- 2K5-115 ---    connected 1         full    a-10G   --         
+Po123         --                 noOperMem 1         full    auto    --         
+Po201         VMWare2 FOK        noOperMem 1         auto    auto    --         
+Po203         == netappfs03-c1 = connected trunk     full    a-10G   --         
+Po204         == netappfs03-c2 = connected trunk     full    a-10G   --         
+Po205         == F5 SDO experime noOperMem trunk     full    auto    --         
+Po206         == netappfs ==     noOperMem 1         auto    10G     --         
+Po301         IBM Prod           noOperMem trunk     full    auto    --         
+Po303         IBM-Standby HB     noOperMem trunk     full    auto    --         
+Po305         IBM-p720 Cloud Tes noOperMem trunk     full    auto    --         
+Po331         GTB_Server_1       noOperMem trunk     full    auto    --         
+Po332         GTB_Server_2       noOperMem trunk     full    auto    --         
+Po333         GTB_Server_3       noOperMem trunk     full    auto    --         
+Po334         GTB_Server_4       noOperMem trunk     full    auto    --         
+Po335         GTB_Server_5       noOperMem trunk     full    auto    --         
+Po336         GTB_Server_6       noOperMem trunk     full    auto    --         
+Po337         GTB_Server_7       noOperMem trunk     full    auto    --         
+Po340         kbrn101            connected 3318      full    1000    --         
+Po1000        --- 5K5 peer-link  connected trunk     full    a-10G   --         
+Po1001        --- 5K5 peer-keepa connected trunk     full    a-10G   --         
+mgmt0         --                 connected routed    full    a-1000  --         
+Eth101/1/1    --                 notconnec 1         auto    auto    --         
+Eth101/1/2    --                 connected 3141      full    a-1000  --         
+Eth101/1/3    --                 connected trunk     full    a-10G   --         
+Eth101/1/4    --                 connected trunk     full    a-10G   --         
+Eth101/1/5    --                 notconnec 1         auto    auto    --         
+Eth101/1/6    --                 notconnec 1         auto    auto    --         
+Eth101/1/7    pSeries HMC2 1.1   connected 3850      full    a-1000  --         
+Eth101/1/8    pSeries HMC2 2.2   connected 3950      full    a-1000  --         
+Eth101/1/9    --                 notconnec 1         auto    auto    --         
+Eth101/1/10   --                 notconnec 1         auto    auto    --         
+Eth101/1/11   --                 notconnec 1         auto    auto    --         
+Eth101/1/12   --                 notconnec 1         auto    auto    --         
+Eth101/1/13   --                 notconnec 1         auto    auto    --         
+Eth101/1/14   --                 notconnec 1         auto    auto    --         
+Eth101/1/15   --                 notconnec 1         auto    auto    --         
+Eth101/1/16   --                 notconnec 1         auto    auto    --         
+Eth101/1/17   --                 notconnec 1         auto    auto    --         
+Eth101/1/18   --                 notconnec 1         auto    auto    --         
+Eth101/1/19   --                 notconnec 1         auto    auto    --         
+Eth101/1/20   --                 notconnec 1         auto    auto    --         
+Eth101/1/21   --                 notconnec 1         auto    auto    --         
+Eth101/1/22   --                 notconnec 1         auto    auto    --         
+Eth101/1/23   --                 notconnec 1         auto    auto    --         
+Eth101/1/24   --                 notconnec 1         auto    auto    --         
+Eth101/1/25   --                 notconnec 1         auto    auto    --         
+Eth101/1/26   --                 notconnec 1         auto    auto    --         
+Eth101/1/27   --                 notconnec 1         auto    auto    --         
+Eth101/1/28   --                 notconnec 1         auto    auto    --         
+Eth101/1/29   --                 notconnec 1         auto    auto    --         
+Eth101/1/30   --                 notconnec 1         auto    auto    --         
+Eth101/1/31   --                 notconnec 1         auto    auto    --         
+Eth101/1/32   --                 notconnec 1         auto    auto    --         
+Eth105/1/1    --                 notconnec 3183      auto    auto    --         
+Eth105/1/2    --                 notconnec 3183      auto    auto    --         
+Eth105/1/3    --                 notconnec 3183      auto    auto    --         
+Eth105/1/4    --                 notconnec 3183      auto    auto    --         
+Eth105/1/5    GTB_Server_1       notconnec trunk     auto    auto    --         
+Eth105/1/6    GTB_Server_2       notconnec trunk     auto    auto    --         
+Eth105/1/7    GTB_Server_3       notconnec trunk     auto    auto    --         
+Eth105/1/8    GTB_Server_4       notconnec trunk     auto    auto    --         
+Eth105/1/9    GTB_Server_5       notconnec trunk     auto    auto    --         
+Eth105/1/10   GTB_Server_6       notconnec trunk     auto    auto    --         
+Eth105/1/11   GTB_Server_7       notconnec trunk     auto    auto    --         
+Eth105/1/12   kbrn101            connected 3318      full    1000    --         
+Eth105/1/13   --                 notconnec 1         auto    auto    --         
+Eth105/1/14   --                 notconnec 1         auto    auto    --         
+Eth105/1/15   --                 notconnec 1         auto    auto    --         
+Eth105/1/16   --                 notconnec 1         auto    auto    --         
+Eth105/1/17   --                 notconnec 1         auto    auto    --         
+Eth105/1/18   --                 notconnec 1         auto    auto    --         
+Eth105/1/19   --                 notconnec 1         auto    auto    --         
+Eth105/1/20   --                 notconnec 1         auto    auto    --         
+Eth105/1/21   --                 notconnec 1         auto    auto    --         
+Eth105/1/22   --                 notconnec 1         auto    auto    --         
+Eth105/1/23   --                 notconnec 1         auto    auto    --         
+Eth105/1/24   --                 notconnec 1         auto    auto    --         
+Eth105/1/25   --                 notconnec 1         auto    auto    --         
+Eth105/1/26   --                 notconnec 1         auto    auto    --         
+Eth105/1/27   --                 notconnec 1         auto    auto    --         
+Eth105/1/28   --                 notconnec 1         auto    auto    --         
+Eth105/1/29   --                 notconnec 1         auto    auto    --         
+Eth105/1/30   --                 notconnec 1         auto    auto    --         
+Eth105/1/31   --                 notconnec 1         auto    auto    --         
+Eth105/1/32   --                 notconnec 1         auto    auto    --         
+Eth107/1/1    --                 connected 3136      full    a-1000  --         
+Eth107/1/2    NBmediasrv RF-0012 connected 3130      full    a-1000  --         
+Eth107/1/3    --                 notconnec 1         auto    auto    --         
+Eth107/1/4    --                 notconnec 1         auto    auto    --         
+Eth107/1/5    --                 notconnec 1         auto    auto    --         
+Eth107/1/6    --                 notconnec 1         auto    auto    --         
+Eth107/1/7    --                 notconnec 1         auto    auto    --         
+Eth107/1/8    --                 notconnec 1         auto    auto    --         
+Eth107/1/9    --                 notconnec 1         auto    auto    --         
+Eth107/1/10   --                 notconnec 1         auto    auto    --         
+Eth107/1/11   --                 notconnec 1         auto    auto    --         
+Eth107/1/12   --                 notconnec 1         auto    auto    --         
+Eth107/1/13   --                 notconnec 1         auto    auto    --         
+Eth107/1/14   --                 notconnec 1         auto    auto    --         
+Eth107/1/15   --                 notconnec 1         auto    auto    --         
+Eth107/1/16   --                 notconnec 1         auto    auto    --         
+Eth107/1/17   --                 notconnec 1         auto    auto    --         
+Eth107/1/18   --                 notconnec 1         auto    auto    --         
+Eth107/1/19   --                 notconnec 1         auto    auto    --         
+Eth107/1/20   --                 notconnec 1         auto    auto    --         
+Eth107/1/21   --                 notconnec 1         auto    auto    --         
+Eth107/1/22   --                 notconnec 1         auto    auto    --         
+Eth107/1/23   --                 notconnec 1         auto    auto    --         
+Eth107/1/24   --                 notconnec 1         auto    auto    --         
+Eth107/1/25   --                 notconnec 1         auto    auto    --         
+Eth107/1/26   --                 notconnec 1         auto    auto    --         
+Eth107/1/27   --                 notconnec 1         auto    auto    --         
+Eth107/1/28   --                 notconnec 1         auto    auto    --         
+Eth107/1/29   --                 notconnec 1         auto    auto    --         
+Eth107/1/30   --                 notconnec 1         auto    auto    --         
+Eth107/1/31   --                 notconnec 1         auto    auto    --         
+Eth107/1/32   --                 notconnec 1         auto    auto    --         
+Eth111/1/1    --                 connected 3141      full    a-1000  --         
+Eth111/1/2    --                 connected 3141      full    a-1000  --         
+Eth111/1/3    --                 notconnec 1         auto    auto    --         
+Eth111/1/4    --                 notconnec 1         auto    auto    --         
+Eth111/1/5    --                 notconnec 1         auto    auto    --         
+Eth111/1/6    --                 notconnec 1         auto    auto    --         
+Eth111/1/7    --                 notconnec 1         auto    auto    --         
+Eth111/1/8    --                 notconnec 1         auto    auto    --         
+Eth111/1/9    --                 notconnec 1         auto    auto    --         
+Eth111/1/10   --                 notconnec 1         auto    auto    --         
+Eth111/1/11   --                 notconnec 1         auto    auto    --         
+Eth111/1/12   --                 notconnec 1         auto    auto    --         
+Eth111/1/13   --                 notconnec 1         auto    auto    --         
+Eth111/1/14   --                 notconnec 1         auto    auto    --         
+Eth111/1/15   --                 notconnec 1         auto    auto    --         
+Eth111/1/16   --                 notconnec 1         auto    auto    --         
+Eth111/1/17   --                 notconnec 1         auto    auto    --         
+Eth111/1/18   --                 notconnec 1         auto    auto    --         
+Eth111/1/19   --                 notconnec 1         auto    auto    --         
+Eth111/1/20   --                 notconnec 1         auto    auto    --         
+Eth111/1/21   --                 notconnec 1         auto    auto    --         
+Eth111/1/22   --                 notconnec 1         auto    auto    --         
+Eth111/1/23   --                 notconnec 1         auto    auto    --         
+Eth111/1/24   --                 notconnec 1         auto    auto    --         
+Eth111/1/25   --                 notconnec 1         auto    auto    --         
+Eth111/1/26   --                 notconnec 1         auto    auto    --         
+Eth111/1/27   --                 notconnec 1         auto    auto    --         
+Eth111/1/28   --                 notconnec 1         auto    auto    --         
+Eth111/1/29   --                 notconnec 1         auto    auto    --         
+Eth111/1/30   --                 notconnec 1         auto    auto    --         
+Eth111/1/31   --                 notconnec 1         auto    auto    --         
+Eth111/1/32   --                 notconnec 3128      auto    auto    --         
+Eth115/1/1    --                 connected 3183      full    a-1000  --         
+Eth115/1/2    --                 connected 3183      full    a-1000  --         
+Eth115/1/3    --                 notconnec 3180      auto    auto    --         
+Eth115/1/4    --                 connected 3141      full    a-1000  --         
+Eth115/1/5    --                 notconnec trunk     auto    auto    --         
+Eth115/1/6    --                 notconnec trunk     auto    auto    --         
+Eth115/1/7    pSeries HMC 1.1    connected 3850      full    a-1000  --         
+Eth115/1/8    pSeries HMC 2.2    connected 3950      full    a-1000  --         
+Eth115/1/9    --                 notconnec 3141      auto    auto    --         
+Eth115/1/10   --                 disabled  3141      auto    auto    --         
+Eth115/1/11   --                 disabled  3141      auto    auto    --         
+Eth115/1/12   --                 notconnec 3141      auto    auto    --         
+Eth115/1/13   --                 notconnec 3141      auto    auto    --         
+Eth115/1/14   --                 notconnec 3141      auto    auto    --         
+Eth115/1/15   --                 notconnec 3141      auto    auto    --         
+Eth115/1/16   --                 notconnec 3141      auto    auto    --         
+Eth115/1/17   --                 notconnec 3141      auto    auto    --         
+Eth115/1/18   --                 notconnec 3141      auto    auto    --         
+Eth115/1/19   --                 notconnec 3141      auto    auto    --         
+Eth115/1/20   --                 notconnec 3141      auto    auto    --         
+Eth115/1/21   --                 notconnec 3183      auto    auto    --         
+Eth115/1/22   --                 notconnec 3130      auto    auto    --         
+Eth115/1/23   --                 notconnec 3130      auto    auto    --         
+Eth115/1/24   --                 disabled  3136      auto    auto    --         
+Eth115/1/25   --                 notconnec 3136      auto    auto    --         
+Eth115/1/26   --                 disabled  1         auto    auto    --         
+Eth115/1/27   --                 notconnec 1         auto    auto    --         
+Eth115/1/28   --                 notconnec 1         auto    auto    --         
+Eth115/1/29   --                 notconnec 3183      auto    auto    --         
+Eth115/1/30   --                 notconnec 3183      auto    auto    --         
+Eth115/1/31   -= VTB-SC-GW-5 KWM connected 3141      full    a-1000  --         
+Eth115/1/32   -= VTB-SC-GW-5 Gi0 connected 3408      full    a-1000  --         

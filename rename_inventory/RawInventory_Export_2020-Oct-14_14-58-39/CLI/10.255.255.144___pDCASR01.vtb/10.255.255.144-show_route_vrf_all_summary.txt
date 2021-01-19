@@ -1,0 +1,557 @@
+
+Tue Oct 13 20:14:40.977 MSK
+
+VRF: **nVSatellite
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        0          2          0           320          
+local                            2          0          0           320          
+Total                            2          2          0           640          
+
+
+VRF: Management
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        1          0          0           160          
+local                            1          0          0           160          
+static                           1          0          0           160          
+dagr                             0          0          0           0            
+Total                            3          0          0           480          
+
+
+VRF: VTB-Core
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        5          0          0           800          
+local                            5          0          0           800          
+bgp 65535                        1638       0          0           262080       
+dagr                             0          0          0           0            
+eigrp 65535                      95         4          0           22392        
+Total                            1743       4          0           286072       
+
+
+VRF: VTB-DEV
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        4          0          0           640          
+local                            4          0          0           640          
+dagr                             0          0          0           0            
+eigrp 65535                      2          2          0           784          
+bgp 65535                        232        0          0           37120        
+Total                            242        2          0           39184        
+
+
+VRF: VTB-FIN
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        2          0          0           320          
+local                            2          0          0           320          
+dagr                             0          0          0           0            
+bgp 65535                        13         0          0           2080         
+eigrp 65535                      3          2          0           1016         
+Total                            20         2          0           3736         
+
+
+VRF: nInet-SRV
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        4          0          0           640          
+local                            4          0          0           640          
+dagr                             0          0          0           0            
+bgp 65535                        1388       0          0           222080       
+eigrp 65535                      18         2          0           4208         
+Total                            1414       2          0           227568       
+
+
+VRF: nInet
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        4          0          0           640          
+local                            4          0          0           640          
+dagr                             0          0          0           0            
+eigrp 65535                      4          2          0           1248         
+bgp 65535                        214        0          0           34240        
+Total                            226        2          0           36768        
+
+
+VRF: VipInet
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        4          0          0           640          
+local                            4          0          0           640          
+dagr                             0          0          0           0            
+eigrp 65535                      4          5          0           1944         
+bgp 65535                        113        0          0           18080        
+Total                            125        5          0           21304        
+
+
+VRF: VTB-OTV
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        1          0          0           160          
+local                            1          0          0           160          
+bgp 65535                        5          0          0           800          
+eigrp 65535                      0          0          0           0            
+dagr                             0          0          0           0            
+Total                            7          0          0           1120         
+
+
+VRF: GROUPVTB
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        2          0          0           320          
+local                            2          0          0           320          
+dagr                             0          0          0           0            
+eigrp 65535                      3          2          0           1016         
+bgp 65535                        28         0          0           4480         
+Total                            35         2          0           6136         
+
+
+VRF: RF-TR-24
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        1          0          0           160          
+local                            1          0          0           160          
+dagr                             0          0          0           0            
+bgp 65535                        7          0          0           1120         
+Total                            9          0          0           1440         
+
+
+VRF: RF-TR-BM
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        1          0          0           160          
+local                            1          0          0           160          
+dagr                             0          0          0           0            
+bgp 65535                        10         0          0           1600         
+Total                            12         0          0           1920         
+
+
+VRF: RF-TR-CAP
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        0          0          0           0            
+local                            0          0          0           0            
+Total                            0          0          0           0            
+
+
+VRF: VTB-RF-24
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        2          0          0           320          
+local                            2          0          0           320          
+bgp 65535                        6          0          0           960          
+dagr                             0          0          0           0            
+eigrp 65535                      0          0          0           0            
+Total                            10         0          0           1600         
+
+
+VRF: VTB-RF-BM
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        2          0          0           320          
+local                            2          0          0           320          
+bgp 65535                        6          0          0           960          
+dagr                             0          0          0           0            
+eigrp 65535                      0          0          0           0            
+Total                            10         0          0           1600         
+
+
+VRF: VTB-RF-CAP
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        2          0          0           320          
+local                            2          0          0           320          
+bgp 65535                        14         0          0           2240         
+dagr                             0          0          0           0            
+eigrp 65535                      1          0          0           232          
+Total                            19         0          0           3112         
+
+
+VRF: VTB-RF
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        4          0          0           640          
+local                            4          0          0           640          
+bgp 65535                        297        0          0           47520        
+dagr                             0          0          0           0            
+eigrp 65535                      4          0          0           928          
+Total                            309        0          0           49728        
+
+
+VRF: M-BANK-DC
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        3          0          0           480          
+local                            3          0          0           480          
+bgp 65535                        14         0          0           2240         
+eigrp 65535                      10         2          0           2640         
+dagr                             0          0          0           0            
+Total                            30         2          0           5840         
+
+
+VRF: VTB-24
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        3          0          0           480          
+local                            3          0          0           480          
+dagr                             0          0          0           0            
+bgp 65535                        666        0          0           106560       
+eigrp 65535                      1          1          0           320          
+Total                            673        1          0           107840       
+
+
+VRF: WIFI-VTBCOM
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        1          0          0           160          
+local                            1          0          0           160          
+dagr                             0          0          0           0            
+bgp 65535                        9          0          0           1440         
+Total                            11         0          0           1760         
+
+
+VRF: VTB-RSRV
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        2          0          0           320          
+local                            2          0          0           320          
+dagr                             0          0          0           0            
+eigrp 65535                      3          2          0           1016         
+bgp 65535                        51         0          0           8160         
+Total                            58         2          0           9816         
+
+
+VRF: M-BANK
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        2          0          0           320          
+local                            2          0          0           320          
+dagr                             0          0          0           0            
+bgp 65535                        206        0          0           32960        
+Total                            210        0          0           33600        
+
+
+VRF: BANKMOSCOW
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        1          0          0           160          
+local                            1          0          0           160          
+dagr                             0          0          0           0            
+bgp 65535                        108        0          0           17280        
+Total                            110        0          0           17600        
+
+
+VRF: VTB-RK
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        1          0          0           160          
+local                            1          0          0           160          
+dagr                             0          0          0           0            
+bgp 65535                        25         0          0           4000         
+Total                            27         0          0           4320         
+
+
+VRF: VTB-MM
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        4          0          0           640          
+local                            4          0          0           640          
+dagr                             0          0          0           0            
+bgp 65535                        432        0          0           69120        
+eigrp 65535                      5          2          0           1480         
+Total                            445        2          0           71880        
+
+
+VRF: VTB-SEC
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        2          0          0           320          
+local                            2          0          0           320          
+dagr                             0          0          0           0            
+bgp 65535                        167        0          0           26720        
+Total                            171        0          0           27360        
+
+
+VRF: VTB-IRB
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        2          0          0           320          
+local                            2          0          0           320          
+dagr                             0          0          0           0            
+bgp 65535                        65         0          0           10400        
+Total                            69         0          0           11040        
+
+
+VRF: VTB-STR
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        2          0          0           320          
+local                            2          0          0           320          
+dagr                             0          0          0           0            
+eigrp 65535                      2          2          0           784          
+bgp 65535                        7          0          0           1120         
+Total                            13         2          0           2544         
+
+
+VRF: nInet-BE
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        2          0          0           320          
+local                            2          0          0           320          
+dagr                             0          0          0           0            
+bgp 65535                        12         0          0           1920         
+eigrp 65535                      3          2          0           1016         
+Total                            19         2          0           3576         
+
+
+VRF: VTB-FXT
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        1          0          0           160          
+local                            1          0          0           160          
+dagr                             0          0          0           0            
+bgp 65535                        14         0          0           2240         
+Total                            16         0          0           2560         
+
+
+VRF: VTB24-MSK-AUX-VPN
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        2          0          0           320          
+local                            2          0          0           320          
+dagr                             0          0          0           0            
+bgp 65535                        62         0          0           9920         
+Total                            66         0          0           10560        
+
+
+VRF: DBO_PROM
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+local                            2          0          0           320          
+connected                        2          0          0           320          
+dagr                             0          0          0           0            
+bgp 65535                        16         0          0           2560         
+eigrp 65535                      3          2          0           1016         
+Total                            23         2          0           4216         
+
+
+VRF: DBO_TEST
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        2          0          0           320          
+local                            2          0          0           320          
+dagr                             0          0          0           0            
+eigrp 65535                      3          2          0           1016         
+bgp 65535                        17         0          0           2720         
+Total                            24         2          0           4376         
+
+
+VRF: nInet-Proxy
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        2          0          0           320          
+local                            2          0          0           320          
+dagr                             0          0          0           0            
+eigrp 65535                      3          2          0           1016         
+bgp 65535                        20         0          0           3200         
+Total                            27         2          0           4856         
+
+
+VRF: ATM
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        1          0          0           160          
+local                            1          0          0           160          
+dagr                             0          0          0           0            
+bgp 65535                        4          0          0           640          
+Total                            6          0          0           960          
+
+
+VRF: VTB-GTR
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        1          0          0           160          
+local                            1          0          0           160          
+dagr                             0          0          0           0            
+bgp 65535                        64         0          0           10240        
+Total                            66         0          0           10560        
+
+
+VRF: VTB-24-USERS-DEFAULT
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        1          0          0           160          
+local                            1          0          0           160          
+dagr                             0          0          0           0            
+bgp 65535                        10         0          0           1600         
+Total                            12         0          0           1920         
+
+
+VRF: VTB24_SUPPORT-INF
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        4          0          0           640          
+local                            4          0          0           640          
+dagr                             0          0          0           0            
+bgp 65535                        34         0          0           5440         
+eigrp 65535                      2          2          0           784          
+Total                            44         2          0           7504         
+
+
+VRF: VTB-FBS
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        2          0          0           320          
+local                            2          0          0           320          
+dagr                             0          0          0           0            
+eigrp 65535                      2          2          0           784          
+bgp 65535                        12         0          0           1920         
+Total                            18         2          0           3344         
+
+
+VRF: VTB-DEV-USERS
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        2          0          0           320          
+local                            2          0          0           320          
+dagr                             0          0          0           0            
+bgp 65535                        182        0          0           29120        
+Total                            186        0          0           29760        
+
+
+VRF: VTB-KBR
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        2          0          0           320          
+local                            2          0          0           320          
+dagr                             0          0          0           0            
+eigrp 65535                      3          2          0           1016         
+bgp 65535                        20         0          0           3200         
+Total                            27         2          0           4856         
+
+
+VRF: Internet
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        1          0          0           160          
+local                            1          0          0           160          
+dagr                             0          0          0           0            
+bgp 65535                        27         0          0           4320         
+Total                            29         0          0           4640         
+
+
+VRF: VTB-USERS
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        4          0          0           640          
+local                            4          0          0           640          
+dagr                             0          0          0           0            
+bgp 65535                        787        0          0           125920       
+eigrp 65535                      10         6          0           3568         
+Total                            805        6          0           130768       
+
+
+VRF: VTB-CTR
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        1          0          0           160          
+local                            1          0          0           160          
+bgp 65535                        11         0          0           1760         
+dagr                             0          0          0           0            
+Total                            13         0          0           2080         
+
+
+VRF: VTB-VCS-GW
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        2          0          0           320          
+local                            2          0          0           320          
+dagr                             0          0          0           0            
+eigrp 65535                      2          2          0           784          
+bgp 65535                        22         0          0           3520         
+Total                            28         2          0           4944         
+
+
+VRF: VTB-GW
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        2          0          0           320          
+local                            2          0          0           320          
+dagr                             0          0          0           0            
+eigrp 65535                      2          2          0           784          
+bgp 65535                        28         0          0           4480         
+Total                            34         2          0           5904         
+
+
+VRF: VTB-Somib
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+local                            2          0          0           320          
+connected                        2          0          0           320          
+dagr                             0          0          0           0            
+bgp 65535                        61         0          0           9760         
+eigrp 65535                      2          2          0           784          
+Total                            67         2          0           11184        
+
+
+VRF: VTB-EFX
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        2          0          0           320          
+local                            2          0          0           320          
+dagr                             0          0          0           0            
+eigrp 65535                      3          2          0           1016         
+bgp 65535                        21         0          0           3360         
+Total                            28         2          0           5016         
+
+
+VRF: VTB-MON
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        2          0          0           320          
+local                            2          0          0           320          
+dagr                             0          0          0           0            
+bgp 65535                        260        0          0           41600        
+Total                            264        0          0           42240        
+
+
+VRF: VTB24_ALIEN
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        3          0          0           480          
+local                            3          0          0           480          
+dagr                             0          0          0           0            
+bgp 65535                        5          0          0           800          
+eigrp 65535                      5          2          0           1480         
+Total                            16         2          0           3240         
+
+
+VRF: WIFI-VTB-AIR
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        3          0          0           480          
+local                            3          0          0           480          
+dagr                             0          0          0           0            
+bgp 65535                        16         0          0           2560         
+eigrp 65535                      3          2          0           1016         
+Total                            25         2          0           4536         
+
+
+VRF: OutSide
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        1          0          0           160          
+local                            1          0          0           160          
+dagr                             0          0          0           0            
+bgp 65535                        952        0          0           152320       
+Total                            954        0          0           152640       
+
+
+VRF: **eint
+
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        1          0          0           160          
+local                            1          0          0           160          
+Total                            2          0          0           320          
+

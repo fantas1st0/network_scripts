@@ -1,0 +1,41 @@
+
+Fri Oct  2 00:22:32.191 MSK
+Redundancy information for node 0/RSP0/CPU0:
+==========================================
+Node 0/RSP0/CPU0 is in ACTIVE role
+Node 0/RSP0/CPU0 has no valid partner
+
+Group            Primary         Backup          Status         
+---------        ---------       ---------       ---------      
+dsc              0/RSP0/CPU0     N/A             Not Ready      
+dlrsc            0/RSP0/CPU0     N/A             Not Ready      
+central-services 0/RSP0/CPU0     N/A             Not Ready      
+v4-routing       0/RSP0/CPU0     N/A             Not Ready      
+v4-routing       0/RSP0/CPU0     N/A             Not NSR-Ready  
+netmgmt          0/RSP0/CPU0     N/A             Not Ready      
+mcast-routing    0/RSP0/CPU0     N/A             Not Ready      
+mcast-routing    0/RSP0/CPU0     N/A             Not NSR-Ready  
+v6-routing       0/RSP0/CPU0     N/A             Not Ready      
+
+Process Group Details
+---------------------
+
+Current primary rmf state: Not Ready
+  <jid>       <node>       <name>      <group> Reason for backup not ready
+    412  0/RSP0/CPU0      rmf_svr          dsc No location for backup set
+        Not ready set Wed Oct 12 18:38:35 2016: 3 years, 50 weeks, 5 days, 5 hours, 43 minutes ago
+    412  0/RSP0/CPU0      rmf_svr        dlrsc No location for backup set
+        Not ready set Wed Oct 12 18:38:37 2016: 3 years, 50 weeks, 5 days, 5 hours, 43 minutes ago
+    412  0/RSP0/CPU0      rmf_svr central-services No location for backup set
+        Not ready set Wed Oct 12 18:39:26 2016: 3 years, 50 weeks, 5 days, 5 hours, 43 minutes ago
+    412  0/RSP0/CPU0      rmf_svr   v4-routing No location for backup set
+        Not ready set Wed Oct 12 18:39:26 2016: 3 years, 50 weeks, 5 days, 5 hours, 43 minutes ago
+    412  0/RSP0/CPU0      rmf_svr      netmgmt No location for backup set
+        Not ready set Wed Oct 12 18:39:26 2016: 3 years, 50 weeks, 5 days, 5 hours, 43 minutes ago
+    412  0/RSP0/CPU0      rmf_svr mcast-routing No location for backup set
+        Not ready set Wed Oct 12 18:39:26 2016: 3 years, 50 weeks, 5 days, 5 hours, 43 minutes ago
+    412  0/RSP0/CPU0      rmf_svr   v6-routing No locatio
+
+Active node reload  Cause: dSC node reload is required by install operation
+
+

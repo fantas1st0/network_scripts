@@ -1,0 +1,1165 @@
+
+
+
+Global statistics status :   enabled
+
+port-channel10
+
+  Service-policy (queuing) input:   default-4q-8e-in-policy 
+    SNMP Policy Index:  301989889
+
+    Class-map (queuing):   2q4t-8e-in-q1 (match-any)
+      queue-limit percent 10 
+      bandwidth percent 50 
+      queue dropped pkts : 44301 
+      queue dropped bytes : 67126772 
+      queue transmit pkts: 11714147102  queue transmit bytes: 7716509882057
+
+    Class-map (queuing):   2q4t-8e-in-q-default (match-any)
+      queue-limit percent 90 
+      bandwidth percent 50 
+      queue dropped pkts : 2605595 
+      queue dropped bytes : 3907967867 
+      queue transmit pkts: 1130509609721  queue transmit bytes: 1076128579306875
+
+  Service-policy (queuing) output:   default-4q-8e-out-policy 
+    SNMP Policy Index:  301989898
+
+    Class-map (queuing):   1p3q1t-8e-out-pq1 (match-any)
+      priority level 1
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 344040596  queue transmit bytes: 25306181376
+
+    Class-map (queuing):   1p3q1t-8e-out-q2 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 299095603  queue transmit bytes: 41271770000
+
+    Class-map (queuing):   1p3q1t-8e-out-q3 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 18  queue transmit bytes: 1224
+
+    Class-map (queuing):   1p3q1t-8e-out-q-default (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 456 
+      queue dropped bytes : 0 
+      queue transmit pkts: 887793247368  queue transmit bytes: 593141480905524
+
+port-channel40
+
+  Service-policy (queuing) input:   default-in-policy 
+    SNMP Policy Index:  301990161
+
+    Class-map (queuing):   in-q1 (match-any)
+      queue-limit percent 50 
+      bandwidth percent 80 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 10608  queue transmit bytes: 6916416
+
+    Class-map (queuing):   in-q-default (match-any)
+      queue-limit percent 50 
+      bandwidth percent 20 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 889106187360  queue transmit bytes: 655493022273854
+
+  Service-policy (queuing) output:   default-out-policy 
+    SNMP Policy Index:  301990170
+
+    Class-map (queuing):   out-pq1 (match-any)
+      priority level 1
+      queue-limit percent 16 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 11051305635  queue transmit bytes: 8174728226695
+
+    Class-map (queuing):   out-q2 (match-any)
+      queue-limit percent 1 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 0  queue transmit bytes: 0
+
+    Class-map (queuing):   out-q3 (match-any)
+      queue-limit percent 1 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 0  queue transmit bytes: 0
+
+    Class-map (queuing):   out-q-default (match-any)
+      queue-limit percent 82 
+      bandwidth remaining percent 25
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 1130132254909  queue transmit bytes: 1128065359270117
+
+Ethernet2/9
+
+  Service-policy (queuing) input:   default-4q-8e-in-policy 
+    SNMP Policy Index:  301989889
+
+    Class-map (queuing):   2q4t-8e-in-q1 (match-any)
+      queue-limit percent 10 
+      bandwidth percent 50 
+      queue dropped pkts : 44301 
+      queue dropped bytes : 67126772 
+      queue transmit pkts: 11714147102  queue transmit bytes: 7716509882057
+
+    Class-map (queuing):   2q4t-8e-in-q-default (match-any)
+      queue-limit percent 90 
+      bandwidth percent 50 
+      queue dropped pkts : 2605595 
+      queue dropped bytes : 3907967867 
+      queue transmit pkts: 1130509609721  queue transmit bytes: 1076128579306875
+
+  Service-policy (queuing) output:   default-4q-8e-out-policy 
+    SNMP Policy Index:  301989898
+
+    Class-map (queuing):   1p3q1t-8e-out-pq1 (match-any)
+      priority level 1
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 344040596  queue transmit bytes: 25306181376
+
+    Class-map (queuing):   1p3q1t-8e-out-q2 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 299095603  queue transmit bytes: 41271770000
+
+    Class-map (queuing):   1p3q1t-8e-out-q3 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 18  queue transmit bytes: 1224
+
+    Class-map (queuing):   1p3q1t-8e-out-q-default (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 456 
+      queue dropped bytes : 0 
+      queue transmit pkts: 887793247368  queue transmit bytes: 593141480905524
+
+Ethernet2/10
+
+  Service-policy (queuing) input:   default-4q-8e-in-policy 
+    SNMP Policy Index:  301989889
+
+    Class-map (queuing):   2q4t-8e-in-q1 (match-any)
+      queue-limit percent 10 
+      bandwidth percent 50 
+      queue dropped pkts : 44301 
+      queue dropped bytes : 67126772 
+      queue transmit pkts: 11714147102  queue transmit bytes: 7716509882057
+
+    Class-map (queuing):   2q4t-8e-in-q-default (match-any)
+      queue-limit percent 90 
+      bandwidth percent 50 
+      queue dropped pkts : 2605595 
+      queue dropped bytes : 3907967867 
+      queue transmit pkts: 1130509609721  queue transmit bytes: 1076128579306875
+
+  Service-policy (queuing) output:   default-4q-8e-out-policy 
+    SNMP Policy Index:  301989898
+
+    Class-map (queuing):   1p3q1t-8e-out-pq1 (match-any)
+      priority level 1
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 344040596  queue transmit bytes: 25306181376
+
+    Class-map (queuing):   1p3q1t-8e-out-q2 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 299095603  queue transmit bytes: 41271770000
+
+    Class-map (queuing):   1p3q1t-8e-out-q3 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 18  queue transmit bytes: 1224
+
+    Class-map (queuing):   1p3q1t-8e-out-q-default (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 456 
+      queue dropped bytes : 0 
+      queue transmit pkts: 887793247368  queue transmit bytes: 593141480905524
+
+Ethernet2/11
+
+  Service-policy (queuing) input:   default-4q-8e-in-policy 
+    SNMP Policy Index:  301989911
+
+    Class-map (queuing):   2q4t-8e-in-q1 (match-any)
+      queue-limit percent 10 
+      bandwidth percent 50 
+
+    Class-map (queuing):   2q4t-8e-in-q-default (match-any)
+      queue-limit percent 90 
+      bandwidth percent 50 
+
+  Service-policy (queuing) output:   default-4q-8e-out-policy 
+    SNMP Policy Index:  301989920
+
+    Class-map (queuing):   1p3q1t-8e-out-pq1 (match-any)
+      priority level 1
+
+    Class-map (queuing):   1p3q1t-8e-out-q2 (match-any)
+      bandwidth remaining percent 33
+
+    Class-map (queuing):   1p3q1t-8e-out-q3 (match-any)
+      bandwidth remaining percent 33
+
+    Class-map (queuing):   1p3q1t-8e-out-q-default (match-any)
+      bandwidth remaining percent 33
+
+Ethernet2/12
+
+  Service-policy (queuing) input:   default-4q-8e-in-policy 
+    SNMP Policy Index:  301989933
+
+    Class-map (queuing):   2q4t-8e-in-q1 (match-any)
+      queue-limit percent 10 
+      bandwidth percent 50 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 30068  queue transmit bytes: 4089248
+
+    Class-map (queuing):   2q4t-8e-in-q-default (match-any)
+      queue-limit percent 90 
+      bandwidth percent 50 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 0  queue transmit bytes: 0
+
+  Service-policy (queuing) output:   default-4q-8e-out-policy 
+    SNMP Policy Index:  301989942
+
+    Class-map (queuing):   1p3q1t-8e-out-pq1 (match-any)
+      priority level 1
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 1855011091  queue transmit bytes: 128645218214
+
+    Class-map (queuing):   1p3q1t-8e-out-q2 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 87410172  queue transmit bytes: 5943917996
+
+    Class-map (queuing):   1p3q1t-8e-out-q3 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 0  queue transmit bytes: 0
+
+    Class-map (queuing):   1p3q1t-8e-out-q-default (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 228 
+      queue dropped bytes : 0 
+      queue transmit pkts: 451679783  queue transmit bytes: 52383584101
+
+Ethernet2/29
+
+  Service-policy (queuing) input:   default-4q-8e-in-policy 
+    SNMP Policy Index:  301989889
+
+    Class-map (queuing):   2q4t-8e-in-q1 (match-any)
+      queue-limit percent 10 
+      bandwidth percent 50 
+      queue dropped pkts : 44301 
+      queue dropped bytes : 67126772 
+      queue transmit pkts: 11714147102  queue transmit bytes: 7716509882057
+
+    Class-map (queuing):   2q4t-8e-in-q-default (match-any)
+      queue-limit percent 90 
+      bandwidth percent 50 
+      queue dropped pkts : 2605595 
+      queue dropped bytes : 3907967867 
+      queue transmit pkts: 1130509609721  queue transmit bytes: 1076128579306875
+
+  Service-policy (queuing) output:   default-4q-8e-out-policy 
+    SNMP Policy Index:  301989898
+
+    Class-map (queuing):   1p3q1t-8e-out-pq1 (match-any)
+      priority level 1
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 344040596  queue transmit bytes: 25306181376
+
+    Class-map (queuing):   1p3q1t-8e-out-q2 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 299095603  queue transmit bytes: 41271770000
+
+    Class-map (queuing):   1p3q1t-8e-out-q3 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 18  queue transmit bytes: 1224
+
+    Class-map (queuing):   1p3q1t-8e-out-q-default (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 456 
+      queue dropped bytes : 0 
+      queue transmit pkts: 887793247368  queue transmit bytes: 593141480905524
+
+Ethernet2/30
+
+  Service-policy (queuing) input:   default-4q-8e-in-policy 
+    SNMP Policy Index:  301989889
+
+    Class-map (queuing):   2q4t-8e-in-q1 (match-any)
+      queue-limit percent 10 
+      bandwidth percent 50 
+      queue dropped pkts : 44301 
+      queue dropped bytes : 67126772 
+      queue transmit pkts: 11714147102  queue transmit bytes: 7716509882057
+
+    Class-map (queuing):   2q4t-8e-in-q-default (match-any)
+      queue-limit percent 90 
+      bandwidth percent 50 
+      queue dropped pkts : 2605595 
+      queue dropped bytes : 3907967867 
+      queue transmit pkts: 1130509609721  queue transmit bytes: 1076128579306875
+
+  Service-policy (queuing) output:   default-4q-8e-out-policy 
+    SNMP Policy Index:  301989898
+
+    Class-map (queuing):   1p3q1t-8e-out-pq1 (match-any)
+      priority level 1
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 344040596  queue transmit bytes: 25306181376
+
+    Class-map (queuing):   1p3q1t-8e-out-q2 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 299095603  queue transmit bytes: 41271770000
+
+    Class-map (queuing):   1p3q1t-8e-out-q3 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 18  queue transmit bytes: 1224
+
+    Class-map (queuing):   1p3q1t-8e-out-q-default (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 456 
+      queue dropped bytes : 0 
+      queue transmit pkts: 887793247368  queue transmit bytes: 593141480905524
+
+Ethernet2/31
+
+  Service-policy (queuing) input:   default-4q-8e-in-policy 
+    SNMP Policy Index:  301989955
+
+    Class-map (queuing):   2q4t-8e-in-q1 (match-any)
+      queue-limit percent 10 
+      bandwidth percent 50 
+
+    Class-map (queuing):   2q4t-8e-in-q-default (match-any)
+      queue-limit percent 90 
+      bandwidth percent 50 
+
+  Service-policy (queuing) output:   default-4q-8e-out-policy 
+    SNMP Policy Index:  301989964
+
+    Class-map (queuing):   1p3q1t-8e-out-pq1 (match-any)
+      priority level 1
+
+    Class-map (queuing):   1p3q1t-8e-out-q2 (match-any)
+      bandwidth remaining percent 33
+
+    Class-map (queuing):   1p3q1t-8e-out-q3 (match-any)
+      bandwidth remaining percent 33
+
+    Class-map (queuing):   1p3q1t-8e-out-q-default (match-any)
+      bandwidth remaining percent 33
+
+Ethernet2/32
+
+  Service-policy (queuing) input:   default-4q-8e-in-policy 
+    SNMP Policy Index:  301989977
+
+    Class-map (queuing):   2q4t-8e-in-q1 (match-any)
+      queue-limit percent 10 
+      bandwidth percent 50 
+
+    Class-map (queuing):   2q4t-8e-in-q-default (match-any)
+      queue-limit percent 90 
+      bandwidth percent 50 
+
+  Service-policy (queuing) output:   default-4q-8e-out-policy 
+    SNMP Policy Index:  301989986
+
+    Class-map (queuing):   1p3q1t-8e-out-pq1 (match-any)
+      priority level 1
+
+    Class-map (queuing):   1p3q1t-8e-out-q2 (match-any)
+      bandwidth remaining percent 33
+
+    Class-map (queuing):   1p3q1t-8e-out-q3 (match-any)
+      bandwidth remaining percent 33
+
+    Class-map (queuing):   1p3q1t-8e-out-q-default (match-any)
+      bandwidth remaining percent 33
+
+Ethernet3/9
+
+  Service-policy (queuing) input:   default-in-policy 
+    SNMP Policy Index:  301990161
+
+    Class-map (queuing):   in-q1 (match-any)
+      queue-limit percent 50 
+      bandwidth percent 80 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 10608  queue transmit bytes: 6916416
+
+    Class-map (queuing):   in-q-default (match-any)
+      queue-limit percent 50 
+      bandwidth percent 20 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 889106187360  queue transmit bytes: 655493022273854
+
+  Service-policy (queuing) output:   default-out-policy 
+    SNMP Policy Index:  301990170
+
+    Class-map (queuing):   out-pq1 (match-any)
+      priority level 1
+      queue-limit percent 16 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 11051305635  queue transmit bytes: 8174728226695
+
+    Class-map (queuing):   out-q2 (match-any)
+      queue-limit percent 1 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 0  queue transmit bytes: 0
+
+    Class-map (queuing):   out-q3 (match-any)
+      queue-limit percent 1 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 0  queue transmit bytes: 0
+
+    Class-map (queuing):   out-q-default (match-any)
+      queue-limit percent 82 
+      bandwidth remaining percent 25
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 1130132254909  queue transmit bytes: 1128065359270117
+
+Ethernet3/10
+
+  Service-policy (queuing) input:   default-in-policy 
+    SNMP Policy Index:  301990161
+
+    Class-map (queuing):   in-q1 (match-any)
+      queue-limit percent 50 
+      bandwidth percent 80 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 10608  queue transmit bytes: 6916416
+
+    Class-map (queuing):   in-q-default (match-any)
+      queue-limit percent 50 
+      bandwidth percent 20 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 889106187360  queue transmit bytes: 655493022273854
+
+  Service-policy (queuing) output:   default-out-policy 
+    SNMP Policy Index:  301990170
+
+    Class-map (queuing):   out-pq1 (match-any)
+      priority level 1
+      queue-limit percent 16 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 11051305635  queue transmit bytes: 8174728226695
+
+    Class-map (queuing):   out-q2 (match-any)
+      queue-limit percent 1 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 0  queue transmit bytes: 0
+
+    Class-map (queuing):   out-q3 (match-any)
+      queue-limit percent 1 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 0  queue transmit bytes: 0
+
+    Class-map (queuing):   out-q-default (match-any)
+      queue-limit percent 82 
+      bandwidth remaining percent 25
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 1130132254909  queue transmit bytes: 1128065359270117
+
+Ethernet3/12
+
+  Service-policy (queuing) input:   default-in-policy 
+    SNMP Policy Index:  301990161
+
+    Class-map (queuing):   in-q1 (match-any)
+      queue-limit percent 50 
+      bandwidth percent 80 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 10608  queue transmit bytes: 6916416
+
+    Class-map (queuing):   in-q-default (match-any)
+      queue-limit percent 50 
+      bandwidth percent 20 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 889106187360  queue transmit bytes: 655493022273854
+
+  Service-policy (queuing) output:   default-out-policy 
+    SNMP Policy Index:  301990170
+
+    Class-map (queuing):   out-pq1 (match-any)
+      priority level 1
+      queue-limit percent 16 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 11051305635  queue transmit bytes: 8174728226695
+
+    Class-map (queuing):   out-q2 (match-any)
+      queue-limit percent 1 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 0  queue transmit bytes: 0
+
+    Class-map (queuing):   out-q3 (match-any)
+      queue-limit percent 1 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 0  queue transmit bytes: 0
+
+    Class-map (queuing):   out-q-default (match-any)
+      queue-limit percent 82 
+      bandwidth remaining percent 25
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 1130132254909  queue transmit bytes: 1128065359270117
+
+Ethernet3/13
+
+  Service-policy (queuing) input:   default-in-policy 
+    SNMP Policy Index:  301990161
+
+    Class-map (queuing):   in-q1 (match-any)
+      queue-limit percent 50 
+      bandwidth percent 80 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 10608  queue transmit bytes: 6916416
+
+    Class-map (queuing):   in-q-default (match-any)
+      queue-limit percent 50 
+      bandwidth percent 20 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 889106187360  queue transmit bytes: 655493022273854
+
+  Service-policy (queuing) output:   default-out-policy 
+    SNMP Policy Index:  301990170
+
+    Class-map (queuing):   out-pq1 (match-any)
+      priority level 1
+      queue-limit percent 16 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 11051305635  queue transmit bytes: 8174728226695
+
+    Class-map (queuing):   out-q2 (match-any)
+      queue-limit percent 1 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 0  queue transmit bytes: 0
+
+    Class-map (queuing):   out-q3 (match-any)
+      queue-limit percent 1 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 0  queue transmit bytes: 0
+
+    Class-map (queuing):   out-q-default (match-any)
+      queue-limit percent 82 
+      bandwidth remaining percent 25
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 1130132254909  queue transmit bytes: 1128065359270117
+
+Ethernet4/9
+
+  Service-policy (queuing) input:   default-in-policy 
+    SNMP Policy Index:  301990161
+
+    Class-map (queuing):   in-q1 (match-any)
+      queue-limit percent 50 
+      bandwidth percent 80 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 10608  queue transmit bytes: 6916416
+
+    Class-map (queuing):   in-q-default (match-any)
+      queue-limit percent 50 
+      bandwidth percent 20 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 889106187360  queue transmit bytes: 655493022273854
+
+  Service-policy (queuing) output:   default-out-policy 
+    SNMP Policy Index:  301990170
+
+    Class-map (queuing):   out-pq1 (match-any)
+      priority level 1
+      queue-limit percent 16 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 11051305635  queue transmit bytes: 8174728226695
+
+    Class-map (queuing):   out-q2 (match-any)
+      queue-limit percent 1 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 0  queue transmit bytes: 0
+
+    Class-map (queuing):   out-q3 (match-any)
+      queue-limit percent 1 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 0  queue transmit bytes: 0
+
+    Class-map (queuing):   out-q-default (match-any)
+      queue-limit percent 82 
+      bandwidth remaining percent 25
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 1130132254909  queue transmit bytes: 1128065359270117
+
+Ethernet4/10
+
+  Service-policy (queuing) input:   default-in-policy 
+    SNMP Policy Index:  301990161
+
+    Class-map (queuing):   in-q1 (match-any)
+      queue-limit percent 50 
+      bandwidth percent 80 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 10608  queue transmit bytes: 6916416
+
+    Class-map (queuing):   in-q-default (match-any)
+      queue-limit percent 50 
+      bandwidth percent 20 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 889106187360  queue transmit bytes: 655493022273854
+
+  Service-policy (queuing) output:   default-out-policy 
+    SNMP Policy Index:  301990170
+
+    Class-map (queuing):   out-pq1 (match-any)
+      priority level 1
+      queue-limit percent 16 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 11051305635  queue transmit bytes: 8174728226695
+
+    Class-map (queuing):   out-q2 (match-any)
+      queue-limit percent 1 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 0  queue transmit bytes: 0
+
+    Class-map (queuing):   out-q3 (match-any)
+      queue-limit percent 1 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 0  queue transmit bytes: 0
+
+    Class-map (queuing):   out-q-default (match-any)
+      queue-limit percent 82 
+      bandwidth remaining percent 25
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 1130132254909  queue transmit bytes: 1128065359270117
+
+Ethernet4/12
+
+  Service-policy (queuing) input:   default-in-policy 
+    SNMP Policy Index:  301990161
+
+    Class-map (queuing):   in-q1 (match-any)
+      queue-limit percent 50 
+      bandwidth percent 80 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 10608  queue transmit bytes: 6916416
+
+    Class-map (queuing):   in-q-default (match-any)
+      queue-limit percent 50 
+      bandwidth percent 20 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 889106187360  queue transmit bytes: 655493022273854
+
+  Service-policy (queuing) output:   default-out-policy 
+    SNMP Policy Index:  301990170
+
+    Class-map (queuing):   out-pq1 (match-any)
+      priority level 1
+      queue-limit percent 16 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 11051305635  queue transmit bytes: 8174728226695
+
+    Class-map (queuing):   out-q2 (match-any)
+      queue-limit percent 1 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 0  queue transmit bytes: 0
+
+    Class-map (queuing):   out-q3 (match-any)
+      queue-limit percent 1 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 0  queue transmit bytes: 0
+
+    Class-map (queuing):   out-q-default (match-any)
+      queue-limit percent 82 
+      bandwidth remaining percent 25
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 1130132254909  queue transmit bytes: 1128065359270117
+
+Ethernet4/13
+
+  Service-policy (queuing) input:   default-in-policy 
+    SNMP Policy Index:  301990161
+
+    Class-map (queuing):   in-q1 (match-any)
+      queue-limit percent 50 
+      bandwidth percent 80 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 10608  queue transmit bytes: 6916416
+
+    Class-map (queuing):   in-q-default (match-any)
+      queue-limit percent 50 
+      bandwidth percent 20 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 889106187360  queue transmit bytes: 655493022273854
+
+  Service-policy (queuing) output:   default-out-policy 
+    SNMP Policy Index:  301990170
+
+    Class-map (queuing):   out-pq1 (match-any)
+      priority level 1
+      queue-limit percent 16 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 11051305635  queue transmit bytes: 8174728226695
+
+    Class-map (queuing):   out-q2 (match-any)
+      queue-limit percent 1 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 0  queue transmit bytes: 0
+
+    Class-map (queuing):   out-q3 (match-any)
+      queue-limit percent 1 
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 0  queue transmit bytes: 0
+
+    Class-map (queuing):   out-q-default (match-any)
+      queue-limit percent 82 
+      bandwidth remaining percent 25
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 1130132254909  queue transmit bytes: 1128065359270117
+
+Ethernet7/45
+
+  Service-policy (queuing) input:   default-4q-8e-in-policy 
+    SNMP Policy Index:  301989889
+
+    Class-map (queuing):   2q4t-8e-in-q1 (match-any)
+      queue-limit percent 10 
+      bandwidth percent 50 
+      queue dropped pkts : 44301 
+      queue dropped bytes : 67126772 
+      queue transmit pkts: 11714147102  queue transmit bytes: 7716509882057
+
+    Class-map (queuing):   2q4t-8e-in-q-default (match-any)
+      queue-limit percent 90 
+      bandwidth percent 50 
+      queue dropped pkts : 2605595 
+      queue dropped bytes : 3907967867 
+      queue transmit pkts: 1130509609721  queue transmit bytes: 1076128579306875
+
+  Service-policy (queuing) output:   default-4q-8e-out-policy 
+    SNMP Policy Index:  301989898
+
+    Class-map (queuing):   1p3q1t-8e-out-pq1 (match-any)
+      priority level 1
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 344040596  queue transmit bytes: 25306181376
+
+    Class-map (queuing):   1p3q1t-8e-out-q2 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 299095603  queue transmit bytes: 41271770000
+
+    Class-map (queuing):   1p3q1t-8e-out-q3 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 18  queue transmit bytes: 1224
+
+    Class-map (queuing):   1p3q1t-8e-out-q-default (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 456 
+      queue dropped bytes : 0 
+      queue transmit pkts: 887793247368  queue transmit bytes: 593141480905524
+
+Ethernet7/46
+
+  Service-policy (queuing) input:   default-4q-8e-in-policy 
+    SNMP Policy Index:  301989889
+
+    Class-map (queuing):   2q4t-8e-in-q1 (match-any)
+      queue-limit percent 10 
+      bandwidth percent 50 
+      queue dropped pkts : 44301 
+      queue dropped bytes : 67126772 
+      queue transmit pkts: 11714147102  queue transmit bytes: 7716509882057
+
+    Class-map (queuing):   2q4t-8e-in-q-default (match-any)
+      queue-limit percent 90 
+      bandwidth percent 50 
+      queue dropped pkts : 2605595 
+      queue dropped bytes : 3907967867 
+      queue transmit pkts: 1130509609721  queue transmit bytes: 1076128579306875
+
+  Service-policy (queuing) output:   default-4q-8e-out-policy 
+    SNMP Policy Index:  301989898
+
+    Class-map (queuing):   1p3q1t-8e-out-pq1 (match-any)
+      priority level 1
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 344040596  queue transmit bytes: 25306181376
+
+    Class-map (queuing):   1p3q1t-8e-out-q2 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 299095603  queue transmit bytes: 41271770000
+
+    Class-map (queuing):   1p3q1t-8e-out-q3 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 18  queue transmit bytes: 1224
+
+    Class-map (queuing):   1p3q1t-8e-out-q-default (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 456 
+      queue dropped bytes : 0 
+      queue transmit pkts: 887793247368  queue transmit bytes: 593141480905524
+
+Ethernet7/47
+
+  Service-policy (queuing) input:   default-4q-8e-in-policy 
+    SNMP Policy Index:  301989889
+
+    Class-map (queuing):   2q4t-8e-in-q1 (match-any)
+      queue-limit percent 10 
+      bandwidth percent 50 
+      queue dropped pkts : 44301 
+      queue dropped bytes : 67126772 
+      queue transmit pkts: 11714147102  queue transmit bytes: 7716509882057
+
+    Class-map (queuing):   2q4t-8e-in-q-default (match-any)
+      queue-limit percent 90 
+      bandwidth percent 50 
+      queue dropped pkts : 2605595 
+      queue dropped bytes : 3907967867 
+      queue transmit pkts: 1130509609721  queue transmit bytes: 1076128579306875
+
+  Service-policy (queuing) output:   default-4q-8e-out-policy 
+    SNMP Policy Index:  301989898
+
+    Class-map (queuing):   1p3q1t-8e-out-pq1 (match-any)
+      priority level 1
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 344040596  queue transmit bytes: 25306181376
+
+    Class-map (queuing):   1p3q1t-8e-out-q2 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 299095603  queue transmit bytes: 41271770000
+
+    Class-map (queuing):   1p3q1t-8e-out-q3 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 18  queue transmit bytes: 1224
+
+    Class-map (queuing):   1p3q1t-8e-out-q-default (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 456 
+      queue dropped bytes : 0 
+      queue transmit pkts: 887793247368  queue transmit bytes: 593141480905524
+
+Ethernet7/48
+
+  Service-policy (queuing) input:   default-4q-8e-in-policy 
+    SNMP Policy Index:  301989889
+
+    Class-map (queuing):   2q4t-8e-in-q1 (match-any)
+      queue-limit percent 10 
+      bandwidth percent 50 
+      queue dropped pkts : 44301 
+      queue dropped bytes : 67126772 
+      queue transmit pkts: 11714147102  queue transmit bytes: 7716509882057
+
+    Class-map (queuing):   2q4t-8e-in-q-default (match-any)
+      queue-limit percent 90 
+      bandwidth percent 50 
+      queue dropped pkts : 2605595 
+      queue dropped bytes : 3907967867 
+      queue transmit pkts: 1130509609721  queue transmit bytes: 1076128579306875
+
+  Service-policy (queuing) output:   default-4q-8e-out-policy 
+    SNMP Policy Index:  301989898
+
+    Class-map (queuing):   1p3q1t-8e-out-pq1 (match-any)
+      priority level 1
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 344040596  queue transmit bytes: 25306181376
+
+    Class-map (queuing):   1p3q1t-8e-out-q2 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 299095603  queue transmit bytes: 41271770000
+
+    Class-map (queuing):   1p3q1t-8e-out-q3 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 18  queue transmit bytes: 1224
+
+    Class-map (queuing):   1p3q1t-8e-out-q-default (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 456 
+      queue dropped bytes : 0 
+      queue transmit pkts: 887793247368  queue transmit bytes: 593141480905524
+
+Ethernet8/45
+
+  Service-policy (queuing) input:   default-4q-8e-in-policy 
+    SNMP Policy Index:  301989889
+
+    Class-map (queuing):   2q4t-8e-in-q1 (match-any)
+      queue-limit percent 10 
+      bandwidth percent 50 
+      queue dropped pkts : 44301 
+      queue dropped bytes : 67126772 
+      queue transmit pkts: 11714147102  queue transmit bytes: 7716509882057
+
+    Class-map (queuing):   2q4t-8e-in-q-default (match-any)
+      queue-limit percent 90 
+      bandwidth percent 50 
+      queue dropped pkts : 2605595 
+      queue dropped bytes : 3907967867 
+      queue transmit pkts: 1130509609721  queue transmit bytes: 1076128579306875
+
+  Service-policy (queuing) output:   default-4q-8e-out-policy 
+    SNMP Policy Index:  301989898
+
+    Class-map (queuing):   1p3q1t-8e-out-pq1 (match-any)
+      priority level 1
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 344040596  queue transmit bytes: 25306181376
+
+    Class-map (queuing):   1p3q1t-8e-out-q2 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 299095603  queue transmit bytes: 41271770000
+
+    Class-map (queuing):   1p3q1t-8e-out-q3 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 18  queue transmit bytes: 1224
+
+    Class-map (queuing):   1p3q1t-8e-out-q-default (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 456 
+      queue dropped bytes : 0 
+      queue transmit pkts: 887793247368  queue transmit bytes: 593141480905524
+
+Ethernet8/46
+
+  Service-policy (queuing) input:   default-4q-8e-in-policy 
+    SNMP Policy Index:  301989889
+
+    Class-map (queuing):   2q4t-8e-in-q1 (match-any)
+      queue-limit percent 10 
+      bandwidth percent 50 
+      queue dropped pkts : 44301 
+      queue dropped bytes : 67126772 
+      queue transmit pkts: 11714147102  queue transmit bytes: 7716509882057
+
+    Class-map (queuing):   2q4t-8e-in-q-default (match-any)
+      queue-limit percent 90 
+      bandwidth percent 50 
+      queue dropped pkts : 2605595 
+      queue dropped bytes : 3907967867 
+      queue transmit pkts: 1130509609721  queue transmit bytes: 1076128579306875
+
+  Service-policy (queuing) output:   default-4q-8e-out-policy 
+    SNMP Policy Index:  301989898
+
+    Class-map (queuing):   1p3q1t-8e-out-pq1 (match-any)
+      priority level 1
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 344040596  queue transmit bytes: 25306181376
+
+    Class-map (queuing):   1p3q1t-8e-out-q2 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 299095603  queue transmit bytes: 41271770000
+
+    Class-map (queuing):   1p3q1t-8e-out-q3 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 18  queue transmit bytes: 1224
+
+    Class-map (queuing):   1p3q1t-8e-out-q-default (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 456 
+      queue dropped bytes : 0 
+      queue transmit pkts: 887793247368  queue transmit bytes: 593141480905524
+
+Ethernet8/47
+
+  Service-policy (queuing) input:   default-4q-8e-in-policy 
+    SNMP Policy Index:  301989889
+
+    Class-map (queuing):   2q4t-8e-in-q1 (match-any)
+      queue-limit percent 10 
+      bandwidth percent 50 
+      queue dropped pkts : 44301 
+      queue dropped bytes : 67126772 
+      queue transmit pkts: 11714147102  queue transmit bytes: 7716509882057
+
+    Class-map (queuing):   2q4t-8e-in-q-default (match-any)
+      queue-limit percent 90 
+      bandwidth percent 50 
+      queue dropped pkts : 2605595 
+      queue dropped bytes : 3907967867 
+      queue transmit pkts: 1130509609721  queue transmit bytes: 1076128579306875
+
+  Service-policy (queuing) output:   default-4q-8e-out-policy 
+    SNMP Policy Index:  301989898
+
+    Class-map (queuing):   1p3q1t-8e-out-pq1 (match-any)
+      priority level 1
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 344040596  queue transmit bytes: 25306181376
+
+    Class-map (queuing):   1p3q1t-8e-out-q2 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 299095603  queue transmit bytes: 41271770000
+
+    Class-map (queuing):   1p3q1t-8e-out-q3 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 18  queue transmit bytes: 1224
+
+    Class-map (queuing):   1p3q1t-8e-out-q-default (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 456 
+      queue dropped bytes : 0 
+      queue transmit pkts: 887793247368  queue transmit bytes: 593141480905524
+
+Ethernet8/48
+
+  Service-policy (queuing) input:   default-4q-8e-in-policy 
+    SNMP Policy Index:  301989889
+
+    Class-map (queuing):   2q4t-8e-in-q1 (match-any)
+      queue-limit percent 10 
+      bandwidth percent 50 
+      queue dropped pkts : 44301 
+      queue dropped bytes : 67126772 
+      queue transmit pkts: 11714147102  queue transmit bytes: 7716509882057
+
+    Class-map (queuing):   2q4t-8e-in-q-default (match-any)
+      queue-limit percent 90 
+      bandwidth percent 50 
+      queue dropped pkts : 2605595 
+      queue dropped bytes : 3907967867 
+      queue transmit pkts: 1130509609721  queue transmit bytes: 1076128579306875
+
+  Service-policy (queuing) output:   default-4q-8e-out-policy 
+    SNMP Policy Index:  301989898
+
+    Class-map (queuing):   1p3q1t-8e-out-pq1 (match-any)
+      priority level 1
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 344040596  queue transmit bytes: 25306181376
+
+    Class-map (queuing):   1p3q1t-8e-out-q2 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 299095603  queue transmit bytes: 41271770000
+
+    Class-map (queuing):   1p3q1t-8e-out-q3 (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 0 
+      queue dropped bytes : 0 
+      queue transmit pkts: 18  queue transmit bytes: 1224
+
+    Class-map (queuing):   1p3q1t-8e-out-q-default (match-any)
+      bandwidth remaining percent 33
+      queue dropped pkts : 456 
+      queue dropped bytes : 0 
+      queue transmit pkts: 887793247368  queue transmit bytes: 593141480905524
+

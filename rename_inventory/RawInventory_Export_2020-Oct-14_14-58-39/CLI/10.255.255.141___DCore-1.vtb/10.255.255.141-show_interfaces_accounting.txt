@@ -1,0 +1,277 @@
+TenGigabitEthernet2/1 To DCore-2 (TE2/1)
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                   Other          0          0    3593249  344951904
+                     CDP    1996153  842185334    1996205  916257024
+                     DTP    3593219  172474512          0          0
+                    LACP    3884219  481643156    3884299  621487840
+TenGigabitEthernet2/2 OTV vN7K2-vOTV-2 3/24/1
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                     CDP    1799619  437307417    1999466  905758098
+                    LACP    3599163  446296212    3890432  622469120
+TenGigabitEthernet2/3 To ASA-5585 (TE0/9)
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                   Other          0          0    3599028  345506688
+           Spanning Tree          0          0       8222     822200
+                     CDP          0          0    1999439  917740519
+                    LACP    3890139  482377236    3890618  622498880
+TenGigabitEthernet2/4 pDCASR01.vtb Te0/0/0/0
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 40094664823353 35812230496369043 1073334061 173982489105
+                 DEC MOP          0          0     179584   20292992
+                     ARP       7893     473580       7894     757824
+                     CDP    1799065  404789625    1999413  905734089
+                    MPLS  809893114 78231821404 39609027682700 34178211872350943
+TenGigabitEthernet4/1 
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 25369625083085 21829847379993634 2003806857 318093771669
+                 DEC MOP     179449   13817573     179491   20282483
+                     ARP       7254     435240       7257     696672
+                     CDP    1998330  833303610    1998447  905296491
+                    MPLS  133844721 13143450736 4076706368473 1985818461810787
+TenGigabitEthernet4/2 V43-MPLS-1-P-1 ETH 2/1
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 371917326035 136616408116436   28120117 6503531582
+                 DEC MOP          0          0       1787     201931
+                     ARP        954      57240        954      91584
+                     CDP      17887    4400202      19871    9001563
+                    MPLS    3907619  494015169 207565227300 83344653033321
+TenGigabitEthernet4/3 N77K-01 1/20/1 (old 1/47)
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 14787685413609 11605293355287735 27623615296883 22725559226147796
+                 DEC MOP          0          0     179584   20292992
+                     ARP    2841564  170493840    2847612  273370752
+                     CDP    1799642  440912290    1999639  905836116
+                    MPLS          0          0 2172440219 1066091684650
+TenGigabitEthernet4/4 N77K-02 1/20/1 (old 1/47)
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 17712067208141 14583331224337047 39397006212520 36260039067104391
+                 DEC MOP          0          0     179584   20292992
+                     ARP    2841558  170493480    2847490  273359040
+                     CDP    1799591  440884019    1999607  905821620
+                    MPLS          0          0  574517304 506251113783
+GigabitEthernet5/1 vDCRoot
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                   Other    1712475   82198800          0          0
+                      IP 2285449280 997493066570 1310159571 441800427758
+                 DEC MOP          0          0      85430    9653590
+           Spanning Tree   25685067 1643844288          0          0
+                     ARP       3456     207360       3461     332256
+                     CDP     951344  493747536     951346  423348970
+Interface GigabitEthernet5/2 is disabled
+
+Loopback0 
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                     ARP          8        224          8        224
+Port-channel2 vN77-1-vOTV-1 Po1 (OTV)
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 2545683890092 1805846861410455 2713105996718 2161357827839882
+                 DEC MOP          0          0     179584   20292992
+                     ARP      95978    5758680      95977    9213792
+Port-channel10 to DCore-2
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+           Spanning Tree        729      41833 2234272079 223427207900
+Port-channel30 to DC-MPLS-ASA 
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+           Spanning Tree          0          0 2237931416 223793141600
+Interface Vlan1 is disabled
+
+Vlan414 
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP  163284623 38155554859  309899691 56788086037
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      69397    4163820      22337    2144352
+Vlan917 Link-to-GISGMP
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 1728178434 777176376502 3661275510 2155309979677
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      46599    2795940      32459    3116064
+Vlan2501 --- Link DC-MPLS-ASA # nInet
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 817015987914 564140982502889 413361824461 41732791990925
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      42387    2543220      47273    4538208
+                    MPLS          0          0 11813457036 1122030107842
+Vlan2505 --- Link DC-MPLS-ASA # VTB-GROUP
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 526578440243 69614476732537 239906685785 41892582139419
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      42073    2524380      46550    4468800
+                    MPLS          0          0         51       4452
+Vlan2506 
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 32203173652 28630497142119 35311864027 20027196001931
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      23841    1430460      15887    1525152
+Vlan2507 
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 576339814674 113824734353729 391901621399 117541328897798
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      24359    1461540      15818    1518528
+Vlan2508 vDcMPLS-ASA(context VTB-GROUP)
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 684768179359 147848841823631 809195492631 134142475916602
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      24907    1494420      16562    1589952
+Vlan2509 
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 7139633996 4528331560190 6784773496 4313096023365
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      30783    1846980      23573    2263008
+Vlan2601 link vrf nInet to context nInet
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 115540211115 34756023793114 282807824268 304820005373595
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      34318    2059080      22150    2126400
+Vlan2607 Connect vrf DEMO to context nInet-SRV
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP   52031798 3374479694   51900890 16015349491
+                 DEC MOP      77654    5979358      77807    8792191
+                     ARP      14232     853920       6274     602304
+Vlan3213 --- Link DC-MPLS-ASA # nInet-BE
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 57494283511 35590402164810 67808394714 68461170790078
+                 DEC MOP     132938   10236226     133160   15047080
+                     ARP      26867    1612020      18896    1814016
+Vlan3234 --- Link DC-MPLS-ASA # DBO_PROM
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 17543977997 4356258045919 53577317194 66016940846169
+                 DEC MOP     124438    9581726     124635   14083755
+                     ARP      24224    1453440      18954    1819584
+Vlan3235 --- Link vpn DBO_TEST to Context nInet-SRV DC-MPLS-ASA 
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 7391164337 2133024986796 5115090752 712003218512
+                 DEC MOP     123899    9540223     124097   14022961
+                     ARP      27388    1643280      22157    2127072
+Vlan3345 link GROUPVTB to context nInet-SRV
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 12269858268 9606575064502 18104811141 20949295395871
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      34592    2075520      22598    2169408
+                    MPLS          0          0 2107693658 1795595884610
+Vlan3346 VTB-Core -dcASA- iSRV
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 849010004610 535464556323246 325478573464 131241420063647
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      41704    2502240      46589    4472544
+Vlan3348 iSRV-dcASA-VTB-Core
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 507190130207 219375401576149 463510650296 299651306801959
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      36006    2160360      24007    2304672
+Vlan3349 Link to ASA
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP  191627664 41136531659 720873107762 435111299691491
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      34200    2052000      14379    1380384
+Vlan3352 link to ASA ctx VTB-SEC
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 2393705249 2373512367250 1058390330 76623207398
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      37702    2262120      46325    4447200
+Vlan3353 
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP  914139936 62887299725 2513117186 2373978402847
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      29735    1784100      22132    2124672
+Vlan3354 VTB-Core link for ASA ctx VTB-DEV
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 605122187986 609668513237232 277737806428 97892893014177
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      41959    2517540      46470    4461120
+Vlan3355 VTB-DEV link for ASA ctx VTB-DEV
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 331448309875 127911143812642 583359087384 597748421675508
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      41843    2510580      27306    2621376
+Vlan3356 VTB-Core link for ASA ctx VTB-MON
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 1940532994 832686648375 1607838048 210116006130
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      41441    2486460      45918    4408128
+                    MPLS          0          0    3255641 1129152116
+Vlan3357 VTB-MON link for ASA ctx VTB-MON
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 2209883969 264614652088 2235349754 848571068998
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      34392    2063520      22678    2177088
+Vlan3358 VTB-GW link for ASA ctx RZD-TR
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP  794710364 243482933597 5833582050 5657848370154
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      34261    2055660      16334    1568064
+                    MPLS          0          0 1367915027 1706804231536
+Vlan3359 VTB-GW-RW link for ASA ctx RZD-TR
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP  119545858 7220122702 5218353216 1604671027346
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      34349    2060940      14499    1391904
+Vlan3372 --- Link DC-MPLS-ASA # VTB-Finance Transport
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 2993682990 1901346196452 5165986583 2140226062392
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      35226    2113560      21525    2066400
+Vlan3373 --- Link DC-MPLS-ASA # VTB-Finance 
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 4852722078 2473432149588 5421255714 3929761457875
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      46734    2804040      23436    2249856
+Vlan3374 --- Link DC-MPLS-ASA # VTB-Finance 
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 6319069994 3321392644925 3898173374 1801102485189
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      42939    2576340      46584    4472064
+Vlan3426 --- link to DC-MPLS-ASA(VTB-BM) inside ----
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 1388034736108 376400068952050 1531828165070 331656343386837
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      42967    2578020      59603    5721888
+Vlan3427 
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 2059556969104 452702684820952 1358672433664 364939520162682
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      36964    2217840      25894    2485824
+Vlan3435 VTB-KBR/CTX-FIN
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP  723489463 345516759725  714654004 97210801764
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      23725    1423500      15306    1469376
+Vlan3648 VTB-RF(-24)-ASA-ctx-VTB-RF-24
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 2755283006466 846906755886300 1806166841205 522000189116068
+                 DEC MOP     179256   13802712     179583   20292879
+                     ARP      36197    2171820      39060    3749760
+Vlan3649 
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 2587602031822 756921003806108 2755613421146 839059066368883
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      38401    2304060      26407    2535072
+Vlan3650 
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 4388994639 1409913800365 3731919399 764843415680
+                 DEC MOP     170038   13092926     170356   19250228
+                     ARP      32116    1926960      36179    3473184
+Vlan3651 
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 6461308884 1347084801948 4440442095 1402666837481
+                 DEC MOP     170037   13092849     170355   19250115
+                     ARP      32417    1945020      21088    2024448
+Vlan3652 VTB-RF(-BM)-ASA-ctx-VTB-RF-BM
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 1569895204458 353465563115536 1161151598197 370684164950599
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      35366    2121960      39853    3825888
+Vlan3653 
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 1712885428492 554796403856160 1583105050394 347937160270914
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      34255    2055300      22730    2182080
+Vlan3654 
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 1289910734928 663649747840374 865422032707 351185237915624
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      40853    2451180      28373    2723808
+Vlan3655 Link VTB-Core to context VTB-RF
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                      IP 1233891636023 492223151012671 1040861812805 493478741840178
+                 DEC MOP     179257   13802789     179584   20292992
+                     ARP      42123    2527380      46690    4482240

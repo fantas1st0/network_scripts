@@ -1,0 +1,63 @@
+
+
+--------------------------------------------------------------------------------
+Port             Name            Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------
+mgmt0            --              notconnec routed    auto    auto    --         
+Eth1/1           [TEC] sw-m35-co connected routed    full    a-10G   10Gbase-SR 
+Eth1/2           [L3] sw-dp4-cor connected routed    full    a-10G   10Gbase-ER 
+Eth1/3           [L3] r-m35-edge connected routed    full    a-10G   10Gbase-SR 
+Eth1/4           [L3] sw-m35-lan connected routed    full    a-10G   10Gbase-LR 
+Eth1/5           [L3] sw-m35-dat connected routed    full    a-10G   10Gbase-SR 
+Eth1/6           [L3] r-m35-edge connected routed    full    a-10G   10Gbase-SR 
+Eth1/7           [L3] sw-v43-cor connected routed    full    a-10G   10Gbase-LR 
+Eth1/8           [L3] sw-pr1-cor connected routed    full    a-10G   10Gbase-ER 
+Eth1/9           [L3] sw-r18-lan connected routed    full    a-10G   10Gbase-LR 
+Eth1/10          [L3] sw-nb37-la connected routed    full    a-10G   10Gbase-LR 
+Eth1/11          [L3] sw-arg3-co connected routed    full    a-10G   10Gbase-ER 
+Eth1/12          [PC] sw-edge-2  connected routed    full    a-10G   10Gbase-SR 
+Eth1/13          [L3] sw-bnn-lan connected routed    full    a-10G   10Gbase-ER 
+Eth1/14          --              disabled  routed    auto    auto    10Gbase-SR 
+Eth1/15          --              disabled  routed    auto    auto    10Gbase-SR 
+Eth1/16          [TEST] MacSec L disabled  routed    auto    auto    10Gbase-LR 
+Eth1/17          --              disabled  routed    auto    auto    10Gbase-SR 
+Eth1/18          --              disabled  routed    auto    auto    10Gbase-SR 
+Eth1/19          --              sfpAbsent routed    auto    auto    --         
+Eth1/20          --              sfpAbsent routed    auto    auto    --         
+Eth1/21          --              sfpAbsent routed    auto    auto    --         
+Eth1/22          --              sfpAbsent routed    auto    auto    --         
+Eth1/23          --              sfpAbsent routed    auto    auto    --         
+Eth1/24          --              sfpAbsent routed    auto    auto    --         
+Eth2/1           [TEC] sw-m35-co connected routed    full    a-10G   10Gbase-SR 
+Eth2/2           [L3] sw-dp4-cor connected routed    full    a-10G   10Gbase-ER 
+Eth2/3           --              disabled  routed    auto    auto    10Gbase-SR 
+Eth2/4           [L3] sw-m35-lan connected routed    full    a-10G   10Gbase-LR 
+Eth2/5           [L3] sw-m35-dat connected routed    full    a-10G   10Gbase-SR 
+Eth2/6           [L3] r-m35-rr-1 connected routed    full    a-10G   10Gbase-SR 
+Eth2/7           [L3] sw-v43-cor connected routed    full    a-10G   10Gbase-LR 
+Eth2/8           [L3] sw-pr1-cor connected routed    full    a-10G   10Gbase-ER 
+Eth2/9           [L3] sw-r18-lan connected routed    full    a-10G   10Gbase-LR 
+Eth2/10          --              disabled  routed    auto    auto    10Gbase-LR 
+Eth2/11          $notm           disabled  routed    auto    auto    10Gbase-ER 
+Eth2/12          [PC] sw-edge-2  connected routed    full    a-10G   10Gbase-SR 
+Eth2/13          --              disabled  routed    auto    auto    10Gbase-SR 
+Eth2/14          --              disabled  routed    auto    auto    10Gbase-SR 
+Eth2/15          --              disabled  routed    auto    auto    10Gbase-SR 
+Eth2/16          --              disabled  routed    auto    auto    10Gbase-SR 
+Eth2/17          --              sfpAbsent routed    auto    auto    --         
+Eth2/18          --              sfpAbsent routed    auto    auto    --         
+Eth2/19          --              sfpAbsent routed    auto    auto    --         
+Eth2/20          --              sfpAbsent routed    auto    auto    --         
+Eth2/21          --              sfpAbsent routed    auto    auto    --         
+Eth2/22          --              sfpAbsent routed    auto    auto    --         
+Eth2/23          --              sfpAbsent routed    auto    auto    --         
+Eth2/24          --              sfpAbsent routed    auto    auto    --         
+Po5              [L3] sw-edge-2  connected routed    full    a-10G   --         
+Po12             [L3] sw-m35-cor connected routed    full    a-10G   --         
+Po30             [L3] sw-v43-dat disabled  routed    auto    auto    --         
+Lo0              [L3] router-id  connected routed    auto    auto    --         
+
+-------------------------------------------------------------------------------
+Interface      Name                           Status     Reason            
+-------------------------------------------------------------------------------
+tunnel-te7055  --                             connected  none               

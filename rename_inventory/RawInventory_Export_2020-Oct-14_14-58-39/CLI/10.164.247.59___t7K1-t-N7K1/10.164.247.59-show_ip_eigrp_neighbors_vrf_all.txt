@@ -1,0 +1,45 @@
+
+IP-EIGRP neighbors for process 0 VRF default
+
+IP-EIGRP neighbors for process 10 VRF VTB-Core
+H   Address                 Interface       Hold  Uptime  SRTT   RTO  Q  Seq
+                                            (sec)         (ms)       Cnt Num
+2   10.164.247.98           Vlan3500        12   4y4w      1    50    0   1193210
+1   10.164.247.106          Eth1/47.3501    13   4y4w      2    50    0   1348332
+0   10.164.247.110          Eth2/47.3502    12   4y4w      2    50    0   1339762
+IP-EIGRP neighbors for process 10 VRF VTB-RSRV
+H   Address                 Interface       Hold  Uptime  SRTT   RTO  Q  Seq
+                                            (sec)         (ms)       Cnt Num
+0   10.0.248.66             Vlan3505        11   4y2w      1    50    0   6820
+1   10.0.248.70             Eth1/47.3506    12   4y2w      1    50    0   9470
+2   10.0.248.74             Eth2/47.3507    11   4y2w      1    50    0   7447
+IP-EIGRP neighbors for process 10 VRF nInet-SRV
+H   Address                 Interface       Hold  Uptime  SRTT   RTO  Q  Seq
+                                            (sec)         (ms)       Cnt Num
+0   172.16.231.66           Vlan3510        10   4y2w      1    50    0   405294
+1   172.16.231.70           Eth1/47.3511    14   4y2w      1    50    0   312162
+2   172.16.231.74           Eth2/47.3512    12   4y2w      1    50    0   313384
+IP-EIGRP neighbors for process 10 VRF VTB-DEV
+H   Address                 Interface       Hold  Uptime  SRTT   RTO  Q  Seq
+                                            (sec)         (ms)       Cnt Num
+2   10.144.251.2            Vlan3515        12   4y2w      1    50    0   252734
+0   10.144.251.6            Eth1/47.3516    11   4y2w      2    50    0   393196
+1   10.144.251.10           Eth2/47.3517    13   4y2w      2    50    0   359986
+IP-EIGRP neighbors for process 10 VRF GROUPVTB
+H   Address                 Interface       Hold  Uptime  SRTT   RTO  Q  Seq
+                                            (sec)         (ms)       Cnt Num
+2   10.193.255.146          Vlan3520        13   4y2w      1    50    0   901
+0   10.193.255.150          Eth1/47.3521    13   4y2w      1    50    0   1655
+1   10.193.255.154          Eth2/47.3522    11   4y2w      1    50    0   1705
+IP-EIGRP neighbors for process 10 VRF VTB-USERS
+H   Address                 Interface       Hold  Uptime  SRTT   RTO  Q  Seq
+                                            (sec)         (ms)       Cnt Num
+0   10.164.247.122          Vlan2630        11   9w6d      1    50    0   13556
+1   10.164.247.125          Eth1/47.2631    12   9w6d      1    50    0   19798
+2   10.164.247.133          Eth2/47.2633    11   9w6d      1    50    0   19881
+IP-EIGRP neighbors for process 10 VRF VipInet
+H   Address                 Interface       Hold  Uptime  SRTT   RTO  Q  Seq
+                                            (sec)         (ms)       Cnt Num
+2   172.16.161.26           Vlan2352        13   6w1d      1    50    0   102001
+0   172.16.161.29           Eth1/47.2353    14   6w1d      1    50    0   1140577
+1   172.16.161.37           Eth2/47.2355    10   6w1d      1    50    0   1138835

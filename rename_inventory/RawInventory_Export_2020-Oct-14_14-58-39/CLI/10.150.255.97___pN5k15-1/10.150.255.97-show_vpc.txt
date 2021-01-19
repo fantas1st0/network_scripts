@@ -1,0 +1,70 @@
+
+Legend:
+                (*) - local vPC is down, forwarding via vPC peer-link
+
+vPC domain id                     : 65  
+Peer status                       : peer adjacency formed ok      
+vPC keep-alive status             : peer is alive                 
+Configuration consistency status  : success 
+Per-vlan consistency status       : success                       
+Type-2 consistency status         : success 
+vPC role                          : primary                       
+Number of vPCs configured         : 41  
+Peer Gateway                      : Disabled
+Dual-active excluded VLANs        : -
+Graceful Consistency Check        : Enabled
+Operational Layer3 Peer-router    : Disabled
+Auto-recovery status              : Enabled (timeout = 240 seconds)
+
+vPC Peer-link status
+---------------------------------------------------------------------
+id   Port   Status Active vlans    
+--   ----   ------ --------------------------------------------------
+1    Po1000 up     1,2913-2914,3533,3799                                     
+
+vPC status
+----------------------------------------------------------------------------
+id     Port        Status Consistency Reason                     Active vlans
+------ ----------- ------ ----------- -------------------------- -----------
+7      Po7         up     success     success                    2913-2914,3 
+                                                                 533,3799    
+600    Po600       up     success     success                    3533        
+601    Po601       up     success     success                    3533        
+602    Po602       up     success     success                    3533        
+603    Po603       up     success     success                    3533        
+604    Po604       up     success     success                    3533        
+605    Po605       up     success     success                    3533        
+606    Po606       up     success     success                    3533        
+607    Po607       up     success     success                    3533        
+608    Po608       up     success     success                    3533        
+609    Po609       up     success     success                    3533        
+610    Po610       up     success     success                    3533        
+611    Po611       up     success     success                    3533        
+612    Po612       up     success     success                    3533        
+613    Po613       up     success     success                    3533        
+614    Po614       up     success     success                    3533        
+615    Po615       up     success     success                    3533        
+616    Po616       up     success     success                    3533        
+617    Po617       up     success     success                    3533        
+618    Po618       up     success     success                    3533        
+619    Po619       up     success     success                    3533        
+700    Po700       up     success     success                    2913-2914   
+701    Po701       up     success     success                    2913-2914   
+702    Po702       up     success     success                    2913-2914   
+703    Po703       up     success     success                    2913-2914   
+704    Po704       up     success     success                    2913-2914   
+705    Po705       up     success     success                    2913-2914   
+706    Po706       up     success     success                    2913-2914   
+707    Po707       up     success     success                    2913-2914   
+708    Po708       up     success     success                    2913-2914   
+709    Po709       up     success     success                    2913-2914   
+710    Po710       up     success     success                    2913-2914   
+711    Po711       up     success     success                    2913-2914   
+712    Po712       up     success     success                    2913-2914   
+713    Po713       up     success     success                    2913-2914   
+714    Po714       up     success     success                    2913-2914   
+715    Po715       up     success     success                    2913-2914   
+716    Po716       up     success     success                    2913-2914   
+717    Po717       up     success     success                    2913-2914   
+718    Po718       up     success     success                    2913-2914   
+719    Po719       up     success     success                    2913-2914   

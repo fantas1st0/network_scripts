@@ -1,0 +1,14 @@
+Fri Oct  2 00:21:59.648 MSK
+Building configuration...
+!! IOS XR Admin Configuration 6.0.2
+username xxxxxxxx
+ group root-system
+ secret 5 xxxxxxxx
+!
+username xxxxxxxx
+ group root-system
+ group cisco-support
+ secret 5 xxxxxxxx
+!
+end
+

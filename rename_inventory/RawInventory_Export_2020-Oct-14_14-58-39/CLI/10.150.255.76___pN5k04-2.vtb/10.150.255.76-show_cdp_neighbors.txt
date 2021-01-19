@@ -1,0 +1,64 @@
+
+Capability Codes: R - Router, T - Trans-Bridge, B - Source-Route-Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater,
+                  V - VoIP-Phone, D - Remotely-Managed-Device,
+                  s - Supports-STP-Dispute
+
+
+Device-ID             Local Intrfce Hldtme Capability  Platform         Port ID
+pN77-1-switch1(JPG203100LV)
+                    Eth1/1         179    R S I s   N77-C7710          Eth2/6/3      
+pN77-1-switch1(JPG203100LV)
+                    Eth1/2         128    R S I s   N77-C7710          Eth2/6/4      
+pN5k04-1.vtb(SSI17130CA1)
+                    Eth1/3         129    S I s     N5K-C5548UP        Eth1/3        
+pN5k04-1.vtb(SSI17130CA1)
+                    Eth1/4         177    S I s     N5K-C5548UP        Eth1/4        
+vdic-hv209h         Eth1/5         104    S H       Linux              eth1          
+vdic-hv209h         Eth1/6         109    S H       Linux              eth2          
+vdic-hv211h         Eth1/7         118    S H       Linux              eth1          
+vdic-hv211h         Eth1/8         118    S H       Linux              eth2          
+vdic-hv213h         Eth1/9         99     S H       Linux              eth1          
+vdic-hv213h         Eth1/10        99     S H       Linux              eth2          
+vdic-hv215h         Eth1/11        118    S H       Linux              eth1          
+vdic-hv215h         Eth1/12        118    S H       Linux              eth2          
+vdic-hv217h         Eth1/13        97     S H       Linux              eth1          
+vdic-hv217h         Eth1/14        97     S H       Linux              eth2          
+vdic-hv219h         Eth1/15        105    S H       Linux              eth1          
+vdic-hv219h         Eth1/16        105    S H       Linux              eth2          
+vdic-hv221h         Eth1/17        119    S H       Linux              eth1          
+vdic-hv221h         Eth1/18        119    S H       Linux              eth2          
+vdic-hv223h         Eth1/19        117    S H       Linux              eth1          
+vdic-hv223h         Eth1/20        117    S H       Linux              eth2          
+vdic-hv225h         Eth1/21        112    S H       Linux              eth1          
+vdic-hv225h         Eth1/22        112    S H       Linux              eth2          
+vdic-hv227h         Eth1/23        95     S H       Linux              eth1          
+vdic-hv227h         Eth1/24        95     S H       Linux              eth2          
+vdic-hv210h         Eth1/25        95     S H       Linux              eth1          
+vdic-hv210h         Eth1/26        95     S H       Linux              eth2          
+vdic-hv212h         Eth1/27        106    S H       Linux              eth1          
+vdic-hv212h         Eth1/28        106    S H       Linux              eth2          
+vdic-hv214h         Eth1/29        101    S H       Linux              eth1          
+vdic-hv214h         Eth1/30        101    S H       Linux              eth2          
+vdic-hv216h         Eth1/31        116    S H       Linux              eth1          
+vdic-hv216h         Eth1/32        116    S H       Linux              eth2          
+pN77-2-switch2(JPG203100NQ)
+                    Eth2/1         135    R S I s   N77-C7710          Eth2/6/3      
+pN77-2-switch2(JPG203100NQ)
+                    Eth2/2         135    R S I s   N77-C7710          Eth2/6/4      
+pN5k04-1.vtb(SSI17130CA1)
+                    Eth2/3         140    S I s     N5K-C5548UP        Eth2/3        
+pN5k04-1.vtb(SSI17130CA1)
+                    Eth2/4         129    S I s     N5K-C5548UP        Eth2/4        
+vdic-hv218h         Eth2/5         109    S H       Linux              eth1          
+vdic-hv218h         Eth2/6         109    S H       Linux              eth2          
+vdic-hv220h         Eth2/7         92     S H       Linux              eth1          
+vdic-hv220h         Eth2/8         92     S H       Linux              eth2          
+vdic-hv222h         Eth2/9         90     S H       Linux              eth1          
+vdic-hv222h         Eth2/10        90     S H       Linux              eth2          
+vdic-hv224h         Eth2/11        103    S H       Linux              eth1          
+vdic-hv224h         Eth2/12        103    S H       Linux              eth2          
+vdic-hv226h         Eth2/13        112    S H       Linux              eth1          
+vdic-hv226h         Eth2/14        112    S H       Linux              eth2          
+vdic-hv228h         Eth2/15        115    S H       Linux              eth1          
+vdic-hv228h         Eth2/16        115    S H       Linux              eth2          

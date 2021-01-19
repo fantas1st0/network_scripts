@@ -1,0 +1,1139 @@
+
+
+!Command: show startup-config
+!Time: Thu Oct  1 21:23:31 2020
+!Startup config saved at: Wed Sep  9 09:07:13 2020
+
+version 7.3(1)N1(1)
+interface breakout slot 1 port 1-6 map 10g-4x
+interface breakout slot 2 port 1-6 map 10g-4x
+
+hostname pN5K07-1
+
+feature privilege
+feature telnet
+feature tacacs+
+cfs eth distribute
+feature udld
+feature interface-vlan
+feature lacp
+feature vpc
+feature lldp
+feature fex
+
+logging level vpc 7
+username xxxxxxx password 5 xxxxxxx role network-admin
+no password strength-check
+
+banner motd ^
+
+Perovo DC.
+Nexus 5648Q. 
+
+Cloud.
+
+VPC Pair 7, unit 1.
+access:
+VTB authorized staff only 
+
+^
+
+no ip domain-lookup
+ip domain-name vtb
+tacacs-server host 10.128.128.11 key 7  xxxxxxxx 
+tacacs-server host 10.164.140.150 key 7  xxxxxxxx 
+aaa group server tacacs+ MSK-TAC
+  server 10.128.128.11
+  server 10.164.140.150
+  source-interface Vlan3799
+logging event link-status default
+ip access-list 111
+  10 permit ip 10.64.0.111/32 any
+ip access-list Snmp-Enable
+  10 permit ip 10.132.128.0/24 any
+  20 permit ip 10.150.128.0/24 any
+  50 permit ip 10.164.147.0/24 any
+fex 101
+  pinning max-links 1
+  description "pN2K07-101"
+fex 103
+  pinning max-links 1
+  description "pN2K07-103"
+snmp-server user xxxxxxxx network-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server host 10.132.128.21 traps version 2c xxxxxxxx 
+snmp-server host 10.164.147.100 traps version 2c xxxxxxxx 
+snmp-server host 10.150.128.100 traps version 2c xxxxxxxx 
+snmp-server host 10.150.128.100 use-vrf default
+snmp-server community xxxxxxxx group network-admin
+snmp-server community xxxxxxxx group network-operator
+snmp-server community xxxxxxxx use-acl Snmp-Enable
+snmp-server community xxxxxxxx use-acl 111
+ntp server 10.130.255.100
+ntp server 10.164.0.200
+ntp source-interface Vlan3799
+aaa authentication login default group MSK-TAC local
+aaa authentication login console group MSK-TAC local
+aaa accounting default group MSK-TAC
+
+ip route 10.0.0.0/8 10.150.255.65
+vlan 1
+vlan 3163
+  name PROD_CABS_etc...
+vlan 3187
+  name DBO_PROM_STRETCH
+vlan 3192
+  name nInetProxy_Stretched
+vlan 3314
+  name nInet_stretched
+vlan 3656
+  name VTB-RF-24-SRV2
+vlan 3668
+  name VTB-RF-BM-SRV2
+vlan 3674
+  name VTB-RF-SRV2
+vlan 3768
+  name VTB-FBS_LOCAL
+vlan 3769
+  name DBO_TEST_STRETCH
+vlan 3785
+  name VTB-FIN-Stretched
+vlan 3786
+  name VTB-KBR-Stretched
+vlan 3799
+  name MGM
+vlan 3801
+  name Cloud3801
+vlan 3802
+  name Cloud3802
+vlan 3803
+  name Cloud3803
+vlan 3805
+  name Cloud_3805
+vlan 3807
+  name Cloud_3807
+vlan 3809
+  name Cloud3809
+vlan 3810
+  name Cloud3810
+vlan 3811
+  name Cloud3811
+vlan 3812
+  name Cloud_3812
+vlan 3815
+  name Cloud_3815
+vlan 3816
+  name Cloud3816
+vlan 3822
+  name Cloud_3822
+vlan 3823
+  name pVTB-STR
+vlan 3824
+  name 10.193.6.0/24_GroupVTB
+vlan 3826
+  name Cloud_3826
+vlan 3829
+  name cloud_3829
+vlan 3830
+  name Cloud_3970_DEVCORP
+vlan 3838
+  name cloud_3838
+vlan 3839
+  name Cloud_3839
+vlan 3841
+  name Cloud3841
+vlan 3842
+  name Cloud3842
+vlan 3843
+  name Cloud3843
+vlan 3845
+  name Cloud3845
+vlan 3846
+  name Cloud3846
+vlan 3847
+  name Cloud3847
+vlan 3848
+  name Cloud_3848
+vlan 3850
+  name Cloud3850
+vlan 3852
+  name Cloud3852
+vlan 3853
+  name Cloud3853
+vlan 3854
+  name Cloud3854
+vlan 3855
+  name Cloud3855
+vlan 3856
+  name Cloud3856
+vlan 3857
+  name Cloud3857
+vlan 3858
+  name Cloud3858
+vlan 3859
+  name Cloud3859
+vlan 3860
+  name Cloud3860
+vlan 3861
+  name Cloud3861
+vlan 3862
+  name Cloud3862
+vlan 3865
+  name cloud_3865
+vlan 3867
+  name Cloud_3870_M-BANK-DC
+vlan 3868
+  name Cloud_3868
+vlan 3869
+  name cloud_3869
+vlan 3901
+  name Cloud_3901
+vlan 3915
+  name Cloud3915
+vlan 3917
+  name CLD_Power_OTV_3917
+vlan 3923
+  name cloud_3923
+vlan 3926
+  name Cloud_3926
+vlan 3945
+  name VCS_3945
+vlan 3948
+  name Cloud_3948
+vlan 3950
+  name Cloud3950
+vlan 3965
+  name Cloud_3965
+
+spanning-tree vlan 1-3967, 4050-4093 priority 57344
+vrf context management
+  ip route 10.128.0.0/9 10.150.255.1
+vpc domain 57
+  role priority 100
+  peer-keepalive destination 10.150.255.154 source 10.150.255.153 vrf default
+  delay restore 150
+
+
+interface Vlan1
+
+interface Vlan3799
+  no shutdown
+  ip address 10.150.255.81/26
+
+interface port-channel7
+  description pN77K
+  switchport mode trunk
+  vpc 7
+
+interface port-channel101
+  description pN2K07-101
+  switchport mode fex-fabric
+  fex associate 101
+
+interface port-channel103
+  description pN2K07-103
+  switchport mode fex-fabric
+  fex associate 103
+
+interface port-channel200
+  description pSeries ER2-1/04 VIOs202 SEA 1
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3812,3816,3838,3845-3846,3848,3854,3859-3860,3867,3869,3917,3945,3948
+  vpc 200
+
+interface port-channel201
+  description pSeries ER2-1/04 VIOs203 SEA 1
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3812,3816,3838,3845-3846,3848,3854,3859-3860,3867,3869,3917,3945,3948
+  vpc 201
+
+interface port-channel202
+  description pSeries ER2-2/17 VIOs204
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3811,3816,3823,3838,3845-3846,3848,3854,3859-3860,3867,3869,3948
+  vpc 202
+
+interface port-channel203
+  description pSeries ER2-2/17 VIOs205
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3811,3816,3823,3838,3845-3846,3848,3854,3859-3860,3867,3869,3948
+  vpc 203
+
+interface port-channel204
+  description pSeries ER2-2/18 VIOs206
+  switchport mode trunk
+  switchport trunk allowed vlan 3838,3854,3867,3869
+  vpc 204
+
+interface port-channel205
+  description pSeries ER2-2/18 VIOs207
+  switchport mode trunk
+  switchport trunk allowed vlan 3838,3854,3867,3869
+  vpc 205
+
+interface port-channel206
+  description HNAS-1
+  switchport mode trunk
+  switchport trunk allowed vlan 3187,3192,3314,3656,3668,3674,3769,3785-3786,3815,3826,3867,3923,3926
+  speed 10000
+  vpc 206
+
+interface port-channel207
+  description HNAS-2
+  switchport mode trunk
+  switchport trunk allowed vlan 3187,3192,3314,3656,3668,3674,3769,3785-3786,3815,3826,3867,3923,3926
+  speed 10000
+  vpc 207
+
+interface port-channel208
+  switchport access vlan 3826
+  speed 10000
+  vpc 208
+
+interface port-channel209
+  switchport access vlan 3805
+  speed 10000
+  vpc 209
+
+interface port-channel210
+  switchport access vlan 3826
+  speed 10000
+  vpc 210
+
+interface port-channel211
+  switchport access vlan 3805
+  speed 10000
+  vpc 211
+
+interface port-channel212
+  switchport access vlan 3826
+  speed 10000
+  vpc 212
+
+interface port-channel213
+  switchport access vlan 3805
+  speed 10000
+  vpc 213
+
+interface port-channel214
+  switchport access vlan 3829
+  speed 10000
+  vpc 214
+
+interface port-channel215
+  shutdown
+  switchport access vlan 3805
+  speed 10000
+  vpc 215
+
+interface port-channel216
+  switchport access vlan 3826
+  speed 10000
+  vpc 216
+
+interface port-channel217
+  switchport access vlan 3805
+  speed 10000
+  vpc 217
+
+interface port-channel218
+  switchport access vlan 3826
+  speed 10000
+  vpc 218
+
+interface port-channel219
+  switchport access vlan 3826
+  speed 10000
+  vpc 219
+
+interface port-channel220
+  switchport access vlan 3826
+  speed 10000
+  vpc 220
+
+interface port-channel221
+  switchport access vlan 3826
+  speed 10000
+  vpc 221
+
+interface port-channel222
+  switchport access vlan 3826
+  speed 10000
+  vpc 222
+
+interface port-channel223
+  switchport access vlan 3826
+  speed 10000
+  vpc 223
+
+interface port-channel224
+  description pSeries ER2-2/17 VIOs204 VCS
+  switchport mode trunk
+  switchport trunk allowed vlan 3838,3845-3846,3848,3867,3869,3945,3948
+
+interface port-channel225
+  description pSeries ER2-2/17 VIOs205 VCS
+  switchport mode trunk
+  switchport trunk allowed vlan 3838,3845-3846,3848,3867,3869,3945,3948
+
+interface port-channel226
+  description pSeries ER2-1/04 VIOs202 SEA 2
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3812,3816,3838,3845-3846,3848,3854,3859-3860,3867,3869,3917,3945,3948
+  vpc 226
+
+interface port-channel227
+  description pSeries ER2-1/04 VIOs203 SEA 2
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3812,3816,3838,3845-3846,3848,3854,3859-3860,3867,3869,3917,3945,3948
+  vpc 227
+
+interface port-channel228
+  description pSeries ER2-1/04 VIOs202 VCS
+  switchport mode trunk
+  switchport trunk allowed vlan 3838,3845-3846,3867,3869,3945
+
+interface port-channel229
+  description pSeries ER2-1/04 VIOs203 VCS
+  switchport mode trunk
+  switchport trunk allowed vlan 3838,3845-3846,3867,3869,3945
+
+interface port-channel230
+  description StorOnce_6200
+  switchport access vlan 3826
+  speed 10000
+  vpc 230
+
+interface port-channel231
+  description StorOnce_6200
+  switchport access vlan 3826
+  speed 10000
+  vpc 231
+
+interface port-channel232
+  description StorOnce_6200
+  switchport access vlan 3826
+  speed 10000
+  vpc 232
+
+interface port-channel233
+  description StorOnce_6200
+  switchport access vlan 3826
+  speed 10000
+  vpc 233
+
+interface port-channel234
+  description StorOnce_6200
+  switchport access vlan 3826
+  speed 10000
+  vpc 234
+
+interface port-channel235
+  description StorOnce_6200
+  switchport access vlan 3826
+  speed 10000
+  vpc 235
+
+interface port-channel236
+  description StorOnce_6200
+  switchport access vlan 3826
+  speed 10000
+  vpc 236
+
+interface port-channel237
+  description StorOnce_6200
+  switchport access vlan 3826
+  speed 10000
+  vpc 237
+
+interface port-channel238
+  description pSeries ER2-1/05 VIOs200 SEA
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3812,3816,3830,3838,3845-3846,3848,3854,3859-3860,3867,3869,3917,3945,3948
+  vpc 238
+
+interface port-channel239
+  description pSeries ER2-1/05 VIOs201 SEA
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3812,3816,3830,3838,3845-3846,3848,3854,3859-3860,3867,3869,3917,3945,3948
+  vpc 239
+
+interface port-channel240
+  description // DWH201L //
+  switchport mode trunk
+  switchport trunk allowed vlan 3901
+  vpc 240
+
+interface port-channel241
+  description nbmedia217l
+  switchport access vlan 3839
+  speed 10000
+  vpc 241
+
+interface port-channel242
+  switchport access vlan 3674
+  speed 10000
+
+interface port-channel243
+  description inetex201
+  switchport access vlan 3829
+  speed 10000
+  vpc 243
+
+interface port-channel244
+  description inetex202
+  switchport access vlan 3829
+  speed 10000
+  vpc 244
+
+interface port-channel245
+  description esxihpevsa201
+  switchport mode trunk
+  switchport trunk allowed vlan 3807,3852-3853
+  speed 1000
+  vpc 245
+
+interface port-channel246
+  description [PROD_CABS_etc] ER2-2_17_SN21E97E7:ae RF-001840974
+  switchport access vlan 3163
+  speed 10000
+  vpc 246
+
+interface port-channel247
+  description pSeries ER2-2/18 IOD1.P1.C2.p1 VIOs206 !! VCS !!
+  switchport mode trunk
+  switchport trunk allowed vlan 3845-3846,3945-3946
+  speed 10000
+
+interface port-channel248
+  description pSeries ER2-2/18 IOD1.P1.C2.p2 VIOs207 !! VCS !!
+
+interface port-channel352
+  description nbmedia218l
+  switchport access vlan 3674
+  vpc 242
+
+interface port-channel1000
+  description pN5K07 peer-link
+  switchport mode trunk
+  spanning-tree port type network
+  vpc peer-link
+
+interface port-channel1001
+  description pN5K07 peer-keepalive
+  no switchport
+  no lacp suspend-individual
+  ip address 10.150.255.153/30
+
+interface Ethernet1/1/1
+
+interface Ethernet1/1/2
+
+interface Ethernet1/1/3
+
+interface Ethernet1/1/4
+
+interface Ethernet1/2/1
+
+interface Ethernet1/2/2
+
+interface Ethernet1/2/3
+
+interface Ethernet1/2/4
+
+interface Ethernet1/3/1
+
+interface Ethernet1/3/2
+
+interface Ethernet1/3/3
+
+interface Ethernet1/3/4
+
+interface Ethernet1/4/1
+
+interface Ethernet1/4/2
+
+interface Ethernet1/4/3
+
+interface Ethernet1/4/4
+
+interface Ethernet1/5/1
+
+interface Ethernet1/5/2
+
+interface Ethernet1/5/3
+
+interface Ethernet1/5/4
+
+interface Ethernet1/6/1
+
+interface Ethernet1/6/2
+
+interface Ethernet1/6/3
+
+interface Ethernet1/6/4
+
+interface Ethernet1/7
+
+interface Ethernet1/8
+  description to pN2K07-101 FI1
+  switchport mode fex-fabric
+  fex associate 101
+  channel-group 101
+
+interface Ethernet1/9
+  description to pN2K07-103 FI1
+  switchport mode fex-fabric
+  fex associate 103
+  channel-group 103
+
+interface Ethernet1/10
+  description pN5K07-02 peer-keepalive
+  no switchport
+  channel-group 1001 mode active
+
+interface Ethernet1/11
+  description to pN77K-1 E1/9
+  switchport mode trunk
+  channel-group 7 mode active
+
+interface Ethernet1/12
+  description pN5K07-02 peer-link
+  switchport mode trunk
+  channel-group 1000 mode active
+
+interface Ethernet2/1/1
+
+interface Ethernet2/1/2
+
+interface Ethernet2/1/3
+
+interface Ethernet2/1/4
+
+interface Ethernet2/2/1
+
+interface Ethernet2/2/2
+
+interface Ethernet2/2/3
+
+interface Ethernet2/2/4
+
+interface Ethernet2/3/1
+
+interface Ethernet2/3/2
+
+interface Ethernet2/3/3
+
+interface Ethernet2/3/4
+
+interface Ethernet2/4/1
+
+interface Ethernet2/4/2
+
+interface Ethernet2/4/3
+
+interface Ethernet2/4/4
+
+interface Ethernet2/5/1
+
+interface Ethernet2/5/2
+
+interface Ethernet2/5/3
+
+interface Ethernet2/5/4
+
+interface Ethernet2/6/1
+
+interface Ethernet2/6/2
+
+interface Ethernet2/6/3
+
+interface Ethernet2/6/4
+
+interface Ethernet2/7
+
+interface Ethernet2/8
+  description to pN2K07-101 FI2
+  switchport mode fex-fabric
+  fex associate 101
+  channel-group 101
+
+interface Ethernet2/9
+  description to pN2K07-103 FI2
+  switchport mode fex-fabric
+  fex associate 103
+  channel-group 103
+
+interface Ethernet2/10
+  description pN5K07-02 peer-keepalive
+  no switchport
+  channel-group 1001 mode active
+
+interface Ethernet2/11
+  description to pN77K-2 E1/9
+  switchport mode trunk
+  channel-group 7 mode active
+
+interface Ethernet2/12
+  description pN5K07-02 peer-link
+  switchport mode trunk
+  channel-group 1000 mode active
+
+interface mgmt0
+  vrf member management
+  ip address 10.150.255.25/26
+
+interface Ethernet101/1/1
+  switchport mode trunk
+  switchport trunk allowed vlan 3187,3192,3314,3656,3668,3674,3769,3785-3786,3815,3826,3867,3923,3926
+  channel-group 206 mode active
+
+interface Ethernet101/1/2
+  switchport mode trunk
+  switchport trunk allowed vlan 3187,3192,3314,3656,3668,3674,3769,3785-3786,3815,3826,3867,3923,3926
+  channel-group 207 mode active
+
+interface Ethernet101/1/3
+  switchport mode trunk
+  switchport trunk allowed vlan 3187,3192,3314,3656,3668,3674,3769,3785-3786,3815,3826,3867,3923,3926
+  channel-group 206 mode active
+
+interface Ethernet101/1/4
+  switchport mode trunk
+  switchport trunk allowed vlan 3187,3192,3314,3656,3668,3674,3769,3785-3786,3815,3826,3867,3923,3926
+  channel-group 207 mode active
+
+interface Ethernet101/1/5
+  switchport access vlan 3965
+  speed 1000
+
+interface Ethernet101/1/6
+  switchport access vlan 3965
+  speed 1000
+
+interface Ethernet101/1/7
+  switchport access vlan 3826
+  channel-group 208 mode active
+
+interface Ethernet101/1/8
+  switchport access vlan 3805
+  channel-group 209 mode active
+
+interface Ethernet101/1/9
+  switchport access vlan 3826
+  channel-group 210 mode active
+
+interface Ethernet101/1/10
+  switchport access vlan 3805
+  channel-group 211 mode active
+
+interface Ethernet101/1/11
+  switchport access vlan 3826
+  channel-group 212 mode active
+
+interface Ethernet101/1/12
+  switchport access vlan 3805
+  channel-group 213 mode active
+
+interface Ethernet101/1/13
+  switchport access vlan 3965
+  speed 1000
+
+interface Ethernet101/1/14
+  switchport access vlan 3826
+  channel-group 230 mode active
+
+interface Ethernet101/1/15
+  switchport access vlan 3826
+  channel-group 231 mode active
+
+interface Ethernet101/1/16
+  switchport access vlan 3826
+  channel-group 232 mode active
+
+interface Ethernet101/1/17
+  description pSeries ER2-1/04 SCU 1 port 1
+  switchport access vlan 3850
+  speed 1000
+
+interface Ethernet101/1/18
+  description pSeries ER2-1/05 SCU 1 port 1
+  switchport access vlan 3850
+  speed 1000
+
+interface Ethernet101/1/19
+  description pSeries ER2-1/04 SCU 2 port 2
+  switchport access vlan 3950
+  speed 1000
+
+interface Ethernet101/1/20
+  description pSeries ER2-1/05 SCU 2 port 2
+  switchport access vlan 3950
+  speed 1000
+
+interface Ethernet101/1/21
+  description pSeries ER2-1/04 IOD1.P1.C1.p1 VIOs202 SEA 1
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3812,3816,3838,3845-3846,3848,3854,3859-3860,3867,3869,3917,3945,3948
+  channel-group 200 mode active
+
+interface Ethernet101/1/22
+  description pSeries ER2-1/05 SN4.C2.p1 VIOs200
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3812,3816,3830,3838,3845-3846,3848,3854,3859-3860,3867,3869,3917,3945,3948
+  channel-group 238 mode active
+
+interface Ethernet101/1/23
+  description pSeries ER2-1/04 IOD1.P1.C4.p1 VIOs203 SEA 1
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3812,3816,3838,3845-3846,3848,3854,3859-3860,3867,3869,3917,3945,3948
+  channel-group 201 mode active
+
+interface Ethernet101/1/24
+  description pSeries ER2-1/05 SN1.C2.p1 VIOs200
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3812,3816,3830,3838,3845-3846,3848,3854,3859-3860,3867,3869,3917,3945,3948
+  channel-group 238 mode active
+
+interface Ethernet101/1/25
+  description pSeries ER2-1/04 IOD1.P2.C1.p1 VIOs202 SEA 2
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3812,3816,3838,3845-3846,3848,3854,3859-3860,3867,3869,3917,3945,3948
+  channel-group 226 mode active
+
+interface Ethernet101/1/26
+  description pSeries ER2-1/05 SN2.C2.p1 VIOs201
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3812,3816,3830,3838,3845-3846,3848,3854,3859-3860,3867,3869,3917,3945,3948
+  channel-group 239 mode active
+
+interface Ethernet101/1/27
+  description pSeries ER2-1/04 IOD1.P2.C4.p1 VIOs203 SEA 2
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3812,3816,3838,3845-3846,3848,3854,3859-3860,3867,3869,3917,3945,3948
+  channel-group 227 mode active
+
+interface Ethernet101/1/28
+  description pSeries ER2-1/05 SN3.C2.p1 VIOs201
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3812,3816,3830,3838,3845-3846,3848,3854,3859-3860,3867,3869,3917,3945,3948
+  channel-group 239 mode active
+
+interface Ethernet101/1/29
+  description pSeries ER2-1/04 IOD2.P1.C1.p1 VIOs202 SEA 1
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3812,3816,3838,3845-3846,3848,3854,3859-3860,3867,3869,3917,3945,3948
+  channel-group 200 mode active
+
+interface Ethernet101/1/30
+  switchport access vlan 3826
+  channel-group 233 mode active
+
+interface Ethernet101/1/31
+  description pSeries ER2-1/04 IOD2.P1.C4.p1 VIOs203 SEA 1
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3812,3816,3838,3845-3846,3848,3854,3859-3860,3867,3869,3917,3945,3948
+  channel-group 201 mode active
+
+interface Ethernet101/1/32
+  switchport access vlan 3826
+  channel-group 234 mode active
+
+interface Ethernet101/1/33
+  description pSeries ER2-1/04 IOD2.P2.C1.p1 VIOs202 SEA 2
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3812,3816,3838,3845-3846,3848,3854,3859-3860,3867,3869,3917,3945,3948
+  channel-group 226 mode active
+
+interface Ethernet101/1/34
+  switchport access vlan 3826
+  channel-group 235 mode active
+
+interface Ethernet101/1/35
+  description pSeries ER2-1/04 IOD2.P2.C4.p1 VIOs203 SEA 2
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3812,3816,3838,3845-3846,3848,3854,3859-3860,3867,3869,3917,3945,3948
+  channel-group 227 mode active
+
+interface Ethernet101/1/36
+  switchport access vlan 3826
+  channel-group 236 mode active
+
+interface Ethernet101/1/37
+  description pSeries ER2-1/04 IOD1.P1.C2.p1 VIOs202 !! VCS !!
+  switchport mode trunk
+  switchport trunk allowed vlan 3838,3845-3846,3867,3869,3945
+  channel-group 228 mode active
+
+interface Ethernet101/1/38
+  switchport access vlan 3826
+  channel-group 237 mode active
+
+interface Ethernet101/1/39
+  description nbmedia218l
+  switchport access vlan 3674
+  no snmp trap link-status
+  channel-group 242 mode active
+
+interface Ethernet101/1/40
+  description HSM_From_Tower
+  switchport access vlan 3823
+  speed 1000
+
+interface Ethernet101/1/41
+  description // DWH201L //
+  switchport mode trunk
+  switchport trunk allowed vlan 3901
+  channel-group 240 mode active
+
+interface Ethernet101/1/42
+  description nbmedia217l
+  switchport access vlan 3839
+  channel-group 241 mode active
+
+interface Ethernet101/1/43
+  description inexex201
+  switchport access vlan 3829
+  channel-group 243 mode active
+
+interface Ethernet101/1/44
+  description inexex202
+  switchport access vlan 3829
+  channel-group 244 mode active
+
+interface Ethernet101/1/45
+  description esxihpevsa201
+  switchport mode trunk
+  switchport trunk allowed vlan 3807,3852-3853
+  speed 1000
+  channel-group 245 mode active
+
+interface Ethernet101/1/46
+
+interface Ethernet101/1/47
+  description inetex201_ilo
+  switchport access vlan 3854
+  speed 1000
+
+interface Ethernet101/1/48
+  description temp for notebook
+  switchport access vlan 3854
+  speed 1000
+
+interface Ethernet103/1/1
+  description StoreOnce c1n1p1
+  switchport access vlan 3826
+  channel-group 218 mode active
+
+interface Ethernet103/1/2
+  description StoreOnce c1n2p1
+  switchport access vlan 3826
+  channel-group 219 mode active
+
+interface Ethernet103/1/3
+  description StoreOnce c2n1p1
+  switchport access vlan 3826
+  channel-group 220 mode active
+
+interface Ethernet103/1/4
+  description StoreOnce c2n2p1
+  switchport access vlan 3826
+  channel-group 221 mode active
+
+interface Ethernet103/1/5
+  description StoreOnce c3n1p1
+  switchport access vlan 3826
+  channel-group 222 mode active
+
+interface Ethernet103/1/6
+  description StoreOnce c3n2p1
+  switchport access vlan 3826
+  channel-group 223 mode active
+
+interface Ethernet103/1/7
+
+interface Ethernet103/1/8
+
+interface Ethernet103/1/9
+  description pSeries ER2-2/18 IOD1.P1.C1.p1 VIOs206
+  switchport mode trunk
+  switchport trunk allowed vlan 3838,3854,3867,3869
+  channel-group 204 mode active
+
+interface Ethernet103/1/10
+  description pSeries ER2-2/17 IOD1.P1.C1.p1 VIOs204
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3811,3816,3823,3838,3845-3846,3848,3854,3859-3860,3867,3869,3948
+  channel-group 202 mode active
+
+interface Ethernet103/1/11
+  description pSeries ER2-2/18 IOD1.P1.C4.p1 VIOs207
+  switchport mode trunk
+  switchport trunk allowed vlan 3838,3854,3867,3869
+  channel-group 205 mode active
+
+interface Ethernet103/1/12
+  description pSeries ER2-2/17 IOD1.P1.C4.p1 VIOs205
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3811,3816,3823,3838,3845-3846,3848,3854,3859-3860,3867,3869,3948
+  channel-group 203 mode active
+
+interface Ethernet103/1/13
+  description pSeries ER2-2/18 IOD1.P2.C1.p1 VIOs206
+  switchport mode trunk
+  switchport trunk allowed vlan 3838,3854,3867,3869
+  channel-group 204 mode active
+
+interface Ethernet103/1/14
+  description pSeries ER2-2/17 IOD1.P2.C1.p1 VIOs204
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3811,3816,3823,3838,3845-3846,3848,3854,3859-3860,3867,3869,3948
+  channel-group 202 mode active
+
+interface Ethernet103/1/15
+  description pSeries ER2-2/18 IOD1.P2.C4.p1 VIOs207
+  switchport mode trunk
+  switchport trunk allowed vlan 3838,3854,3867,3869
+  channel-group 205 mode active
+
+interface Ethernet103/1/16
+  description pSeries ER2-2/17 IOD1.P2.C4.p1 VIOs205
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3811,3816,3823,3838,3845-3846,3848,3854,3859-3860,3867,3869,3948
+  channel-group 203 mode active
+
+interface Ethernet103/1/17
+  description pSeries ER2-2/18 IOD2.P1.C1.p1 VIOs206
+  switchport mode trunk
+  switchport trunk allowed vlan 3838,3854,3867,3869
+  channel-group 204 mode active
+
+interface Ethernet103/1/18
+  description pSeries ER2-2/17 IOD2.P1.C1.p1 VIOs204
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3811,3816,3823,3838,3845-3846,3848,3854,3859-3860,3867,3869,3948
+  channel-group 202 mode active
+
+interface Ethernet103/1/19
+  description pSeries ER2-2/18 IOD2.P1.C4.p1 VIOs207
+  switchport mode trunk
+  switchport trunk allowed vlan 3838,3854,3867,3869
+  channel-group 205 mode active
+
+interface Ethernet103/1/20
+  description pSeries ER2-2/17 IOD2.P1.C4.p1 VIOs205
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3811,3816,3823,3838,3845-3846,3848,3854,3859-3860,3867,3869,3948
+  channel-group 203 mode active
+
+interface Ethernet103/1/21
+  description pSeries ER2-2/18 IOD2.P2.C1.p1 VIOs206
+  switchport mode trunk
+  switchport trunk allowed vlan 3838,3854,3867,3869
+  channel-group 204 mode active
+
+interface Ethernet103/1/22
+  description pSeries ER2-2/17 IOD2.P2.C1.p1 VIOs204
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3811,3816,3823,3838,3845-3846,3848,3854,3859-3860,3867,3869,3948
+  channel-group 202 mode active
+
+interface Ethernet103/1/23
+  description pSeries ER2-2/18 IOD2.P2.C4.p1 VIOs207
+  switchport mode trunk
+  switchport trunk allowed vlan 3838,3854,3867,3869
+  channel-group 205 mode active
+
+interface Ethernet103/1/24
+  description pSeries ER2-2/17 IOD2.P2.C4.p1 VIOs205
+  switchport mode trunk
+  switchport trunk allowed vlan 3163,3810-3811,3816,3823,3838,3845-3846,3848,3854,3859-3860,3867,3869,3948
+  channel-group 203 mode active
+
+interface Ethernet103/1/25
+  description pSeries ER2-2/18 IOD1.P1.C2.p1 VIOs206 !! VCS !!
+  switchport mode trunk
+  switchport trunk allowed vlan 3845-3846,3945-3946
+  channel-group 247 mode active
+
+interface Ethernet103/1/26
+  description pSeries ER2-2/17 IOD1.P1.C2.p1 VIOs204 !! VCS !!
+  switchport mode trunk
+  switchport trunk allowed vlan 3838,3845-3846,3848,3867,3869,3945,3948
+  channel-group 224 mode active
+
+interface Ethernet103/1/27
+  description pSeries ER2-2/18 SCU 1 port 1
+  switchport access vlan 3850
+  speed 1000
+
+interface Ethernet103/1/28
+  description pSeries ER2-2/17 SCU 1 port 1
+  switchport access vlan 3850
+  speed 1000
+
+interface Ethernet103/1/29
+  description pSeries ER2-2/18 SCU 2 port 2
+  switchport access vlan 3950
+  speed 1000
+
+interface Ethernet103/1/30
+  description pSeries ER2-2/17 SCU 2 port 2
+  switchport access vlan 3950
+  speed 1000
+
+interface Ethernet103/1/31
+  switchport access vlan 3829
+  channel-group 214 mode active
+
+interface Ethernet103/1/32
+  switchport access vlan 3829
+  channel-group 214 mode active
+
+interface Ethernet103/1/33
+  description RF-001036667
+  switchport access vlan 3805
+  channel-group 217 mode active
+
+interface Ethernet103/1/34
+  description RF-001036667
+  switchport access vlan 3805
+  channel-group 217 mode active
+
+interface Ethernet103/1/35
+  description [PROD_CABS_etc] ER2-2_17_SN21E97E7:U78CD.001.FZHE625-P1-C3-T1 RF-001840974
+  switchport access vlan 3163
+  channel-group 246 mode active
+
+interface Ethernet103/1/36
+
+interface Ethernet103/1/37
+
+interface Ethernet103/1/38
+
+interface Ethernet103/1/39
+
+interface Ethernet103/1/40
+
+interface Ethernet103/1/41
+
+interface Ethernet103/1/42
+
+interface Ethernet103/1/43
+
+interface Ethernet103/1/44
+
+interface Ethernet103/1/45
+
+interface Ethernet103/1/46
+
+interface Ethernet103/1/47
+
+interface Ethernet103/1/48
+cli alias name wr copy running startup
+line console
+line vty
+boot kickstart bootflash:/n6000-uk9-kickstart.7.3.1.N1.1.bin
+boot system bootflash:/n6000-uk9.7.3.1.N1.1.bin
+poap transit
+
+

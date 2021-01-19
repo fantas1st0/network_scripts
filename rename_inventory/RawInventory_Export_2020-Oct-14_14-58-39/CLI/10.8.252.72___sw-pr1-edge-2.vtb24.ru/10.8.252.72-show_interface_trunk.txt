@@ -1,0 +1,128 @@
+
+
+--------------------------------------------------------------------------------
+Port          Native  Status        Port
+              Vlan                  Channel
+--------------------------------------------------------------------------------
+Eth3/5        1       trnk-bndl     Po63
+Eth3/6        1       trnk-bndl     Po63
+Eth3/7        1       trnk-bndl     Po63
+Eth3/8        1       trnk-bndl     Po63
+Eth4/5        1       trnk-bndl     Po64
+Eth4/6        1       trnk-bndl     Po64
+Eth4/7        1       trnk-bndl     Po64
+Eth4/8        1       trnk-bndl     Po64
+Eth7/1        1       trnk-bndl     Po4000
+Eth7/2        1       trnk-bndl     Po4000
+Eth7/3        1       trnk-bndl     Po502
+Eth8/1        1       trnk-bndl     Po4000
+Eth8/2        1       trnk-bndl     Po4000
+Po63          1       trunking      --
+Po64          1       trunking      --
+Po502         1       not-trunking  --
+Po4000        1       trunking      --
+
+--------------------------------------------------------------------------------
+Port          Vlans Allowed on Trunk
+--------------------------------------------------------------------------------
+Eth3/5        512-515,953-954,958
+Eth3/6        512-515,953-954,958
+Eth3/7        512-515,953-954,958
+Eth3/8        512-515,953-954,958
+Eth4/5        512-515,953-954,958
+Eth4/6        512-515,953-954,958
+Eth4/7        512-515,953-954,958
+Eth4/8        512-515,953-954,958
+Eth7/1        1-4094
+Eth7/2        1-4094
+Eth7/3        955-956
+Eth8/1        1-4094
+Eth8/2        1-4094
+Po63          512-515,953-954,958
+Po64          512-515,953-954,958
+Po502         955-956
+Po4000        1-4094
+
+--------------------------------------------------------------------------------
+Port          Vlans Err-disabled on Trunk
+--------------------------------------------------------------------------------
+Eth3/5        none
+Eth3/6        none
+Eth3/7        none
+Eth3/8        none
+Eth4/5        none
+Eth4/6        none
+Eth4/7        none
+Eth4/8        none
+Eth7/1        none
+Eth7/2        none
+Eth7/3        none
+Eth8/1        none
+Eth8/2        none
+Po63          none
+Po64          none
+Po502         none
+Po4000        none
+
+--------------------------------------------------------------------------------
+Port          STP Forwarding
+--------------------------------------------------------------------------------
+Eth3/5        none
+Eth3/6        none
+Eth3/7        none
+Eth3/8        none
+Eth4/5        none
+Eth4/6        none
+Eth4/7        none
+Eth4/8        none
+Eth7/1        none
+Eth7/2        none
+Eth7/3        none
+Eth8/1        none
+Eth8/2        none
+Po63          512-515,953-954,958
+Po64          512-515,953-954,958
+Po502         none
+Po4000        1,512-515,953-954,958
+
+--------------------------------------------------------------------------------
+Port          Vlans in spanning tree forwarding state and not pruned
+--------------------------------------------------------------------------------
+Eth3/5        none
+Eth3/6        none
+Eth3/7        none
+Eth3/8        none
+Eth4/5        none
+Eth4/6        none
+Eth4/7        none
+Eth4/8        none
+Eth7/1        none
+Eth7/2        none
+Eth7/3        none
+Eth8/1        none
+Eth8/2        none
+Po63          512-515,953-954,958
+Po64          512-515,953-954,958
+Po502         none
+Po4000        1,512-515,953-954,958
+
+--------------------------------------------------------------------------------
+Port          Vlans Forwarding on FabricPath
+--------------------------------------------------------------------------------
+Eth3/5        none
+Eth3/6        none
+Eth3/7        none
+Eth3/8        none
+Eth4/5        none
+Eth4/6        none
+Eth4/7        none
+Eth4/8        none
+Eth7/1        none
+Eth7/2        none
+Eth7/3        none
+Eth8/1        none
+Eth8/2        none
+Po63          none
+Po64          none
+Po502         none
+Po4000        none

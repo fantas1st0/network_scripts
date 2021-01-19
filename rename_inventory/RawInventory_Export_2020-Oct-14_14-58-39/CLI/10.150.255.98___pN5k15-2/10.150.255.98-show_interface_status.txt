@@ -1,0 +1,100 @@
+
+
+--------------------------------------------------------------------------------
+Port          Name               Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------
+Eth1/1        pN77-1-switch1     connected trunk     full    10G     10Gbase-SR 
+Eth1/2        pN77-2-switch2     connected trunk     full    10G     10Gbase-SR 
+Eth1/3        peer-link          connected trunk     full    10G     10Gbase-SR 
+Eth1/4        peer-keepalive     connected trunk     full    10G     10Gbase-SR 
+Eth1/5        TRUNK vdic-hv2168h connected trunk     full    10G     10Gbase-SR 
+Eth1/6        TRUNK vdic-hv2168h connected trunk     full    10G     10Gbase-SR 
+Eth1/7        TRUNK vdic-hv2167h connected trunk     full    10G     10Gbase-SR 
+Eth1/8        TRUNK vdic-hv2167h connected trunk     full    10G     10Gbase-SR 
+Eth1/9        TRUNK vdic-hv2166h connected trunk     full    10G     10Gbase-SR 
+Eth1/10       TRUNK vdic-hv2166h connected trunk     full    10G     10Gbase-SR 
+Eth1/11       TRUNK vdic-hv2165h connected trunk     full    10G     10Gbase-SR 
+Eth1/12       TRUNK vdic-hv2165h connected trunk     full    10G     10Gbase-SR 
+Eth1/13       TRUNK vdic-hv2164h connected trunk     full    10G     10Gbase-SR 
+Eth1/14       TRUNK vdic-hv2164h connected trunk     full    10G     10Gbase-SR 
+Eth1/15       TRUNK vdic-hv2163h connected trunk     full    10G     10Gbase-SR 
+Eth1/16       TRUNK vdic-hv2163h connected trunk     full    10G     10Gbase-SR 
+Eth1/17       TRUNK vdic-hv2162h connected trunk     full    10G     10Gbase-SR 
+Eth1/18       TRUNK vdic-hv2162h connected trunk     full    10G     10Gbase-SR 
+Eth1/19       TRUNK vdic-hv2161h connected trunk     full    10G     10Gbase-SR 
+Eth1/20       TRUNK vdic-hv2161h connected trunk     full    10G     10Gbase-SR 
+Eth1/21       TRUNK vdic-hv2160h connected trunk     full    10G     10Gbase-SR 
+Eth1/22       TRUNK vdic-hv2160h connected trunk     full    10G     10Gbase-SR 
+Eth1/23       TRUNK vdic-hv2159h connected trunk     full    10G     10Gbase-SR 
+Eth1/24       TRUNK vdic-hv2159h connected trunk     full    10G     10Gbase-SR 
+Eth1/25       TRUNK vdic-hv2158h connected trunk     full    10G     10Gbase-SR 
+Eth1/26       TRUNK vdic-hv2158h connected trunk     full    10G     10Gbase-SR 
+Eth1/27       TRUNK vdic-hv2157h connected trunk     full    10G     10Gbase-SR 
+Eth1/28       TRUNK vdic-hv2157h connected trunk     full    10G     10Gbase-SR 
+Eth1/29       TRUNK vdic-hv2156h connected trunk     full    10G     10Gbase-SR 
+Eth1/30       TRUNK vdic-hv2156h connected trunk     full    10G     10Gbase-SR 
+Eth1/31       TRUNK vdic-hv2155h connected trunk     full    10G     10Gbase-SR 
+Eth1/32       TRUNK vdic-hv2155h connected trunk     full    10G     10Gbase-SR 
+Eth2/1        pN77-2-switch2     connected trunk     full    10G     10Gbase-SR 
+Eth2/2        pN77-2-switch2     connected trunk     full    10G     10Gbase-SR 
+Eth2/3        peer-link          connected trunk     full    10G     10Gbase-SR 
+Eth2/4        peer-keepalive     connected trunk     full    10G     10Gbase-SR 
+Eth2/5        TRUNK vdic-hv2154h connected trunk     full    10G     10Gbase-SR 
+Eth2/6        TRUNK vdic-hv2154h connected trunk     full    10G     10Gbase-SR 
+Eth2/7        TRUNK vdic-hv2153h connected trunk     full    10G     10Gbase-SR 
+Eth2/8        TRUNK vdic-hv2153h connected trunk     full    10G     10Gbase-SR 
+Eth2/9        TRUNK vdic-hv2152h connected trunk     full    10G     10Gbase-SR 
+Eth2/10       TRUNK vdic-hv2152h connected trunk     full    10G     10Gbase-SR 
+Eth2/11       TRUNK vdic-hv2151h connected trunk     full    10G     10Gbase-SR 
+Eth2/12       TRUNK vdic-hv2151h connected trunk     full    10G     10Gbase-SR 
+Eth2/13       TRUNK vdic-hv2150h connected trunk     full    10G     10Gbase-SR 
+Eth2/14       TRUNK vdic-hv2150h connected trunk     full    10G     10Gbase-SR 
+Eth2/15       TRUNK vdic-hv2149h connected trunk     full    10G     10Gbase-SR 
+Eth2/16       TRUNK vdic-hv2149h connected trunk     full    10G     10Gbase-SR 
+Po7           pN77k              connected trunk     full    a-10G   --         
+Po600         TRUNK vdic-hv2149h connected trunk     full    10G     --         
+Po601         TRUNK vdic-hv2150h connected trunk     full    10G     --         
+Po602         TRUNK vdic-hv2151h connected trunk     full    10G     --         
+Po603         TRUNK vdic-hv2152h connected trunk     full    10G     --         
+Po604         TRUNK vdic-hv2153h connected trunk     full    10G     --         
+Po605         TRUNK vdic-hv2154h connected trunk     full    10G     --         
+Po606         TRUNK vdic-hv2155h connected trunk     full    10G     --         
+Po607         TRUNK vdic-hv2156h connected trunk     full    10G     --         
+Po608         TRUNK vdic-hv2157h connected trunk     full    10G     --         
+Po609         TRUNK vdic-hv2158h connected trunk     full    10G     --         
+Po610         TRUNK vdic-hv2159h connected trunk     full    10G     --         
+Po611         TRUNK vdic-hv2160h connected trunk     full    10G     --         
+Po612         TRUNK vdic-hv2161h connected trunk     full    10G     --         
+Po613         TRUNK vdic-hv2162h connected trunk     full    10G     --         
+Po614         TRUNK vdic-hv2163h connected trunk     full    10G     --         
+Po615         TRUNK vdic-hv2164h connected trunk     full    10G     --         
+Po616         TRUNK vdic-hv2165h connected trunk     full    10G     --         
+Po617         TRUNK vdic-hv2166h connected trunk     full    10G     --         
+Po618         TRUNK vdic-hv2167h connected trunk     full    10G     --         
+Po619         TRUNK vdic-hv2168h connected trunk     full    10G     --         
+Po700         TRUNK vdic-hv2149h connected trunk     full    10G     --         
+Po701         TRUNK vdic-hv2150h connected trunk     full    10G     --         
+Po702         TRUNK vdic-hv2151h connected trunk     full    10G     --         
+Po703         TRUNK vdic-hv2152h connected trunk     full    10G     --         
+Po704         TRUNK vdic-hv2153h connected trunk     full    10G     --         
+Po705         TRUNK vdic-hv2154h connected trunk     full    10G     --         
+Po706         TRUNK vdic-hv2155h connected trunk     full    10G     --         
+Po707         TRUNK vdic-hv2156h connected trunk     full    10G     --         
+Po708         TRUNK vdic-hv2157h connected trunk     full    10G     --         
+Po709         TRUNK vdic-hv2158h connected trunk     full    10G     --         
+Po710         TRUNK vdic-hv2159h connected trunk     full    10G     --         
+Po711         TRUNK vdic-hv2160h connected trunk     full    10G     --         
+Po712         TRUNK vdic-hv2161h connected trunk     full    10G     --         
+Po713         TRUNK vdic-hv2162h connected trunk     full    10G     --         
+Po714         TRUNK vdic-hv2163h connected trunk     full    10G     --         
+Po715         TRUNK vdic-hv2164h connected trunk     full    10G     --         
+Po716         TRUNK vdic-hv2165h connected trunk     full    10G     --         
+Po717         TRUNK vdic-hv2166h connected trunk     full    10G     --         
+Po718         TRUNK vdic-hv2167h connected trunk     full    10G     --         
+Po719         TRUNK vdic-hv2168h connected trunk     full    10G     --         
+Po1000        peer-link !!! DO N connected trunk     full    a-10G   --         
+Po1001        [TRUNK] peer-keepa connected trunk     full    a-10G   --         
+mgmt0         --                 connected routed    full    a-1000  --         
+Vlan1         --                 down      routed    auto    auto    --
+Vlan2806      vPC KeepAlive Net  connected routed    auto    auto    --
+Vlan3799      Management         connected routed    auto    auto    --

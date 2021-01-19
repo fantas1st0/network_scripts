@@ -1,0 +1,77 @@
+environmental alarms:
+  no alarms
+
+backplane: 
+  operating clock count: 2
+  
+fan-tray 1: 
+  fan-tray 1 type: FAN-MOD-6SHS
+  fan-tray 1 mode: Auto
+  fan-tray 1 fan-fail: OK
+clock 1: 
+  clock 1 OK: OK, clock 1 clock-inuse: in-use
+clock 2: 
+  clock 2 OK: OK, clock 2 clock-inuse: not-in-use
+power-supply 1: 
+  power-supply 1 fan-fail: OK
+  power-supply 1 power-input: AC high
+  power-supply 1 power-output-mode: high
+  power-supply 1 incompatible with fan: OK
+  power-supply 1 power-output-fail: OK
+power-supply 2: 
+  power-supply 2 fan-fail: OK
+  power-supply 2 power-input: AC high
+  power-supply 2 power-output-mode: high
+  power-supply 2 incompatible with fan: OK
+  power-supply 2 power-output-fail: OK
+module 2: 
+  module 2 power-output-fail: OK
+  module 2 outlet temperature: 40C
+  module 2 inlet temperature: 27C
+  module 2 aux-1 temperature: 37C
+  module 2 aux-2 temperature: 29C
+  module 2 asic-1 (SSA-1) temp: 64C
+  module 2 asic-2 (SSA-2) temp: 63C
+  module 2 EARL outlet temperature: 34C
+  module 2 EARL inlet temperature: 29C
+module 4: 
+  module 4 power-output-fail: OK
+  module 4 outlet temperature: 42C
+  module 4 inlet temperature: 27C
+  module 4 EARL outlet temperature: 31C
+  module 4 EARL inlet temperature: 31C
+module 5: 
+  module 5 power-output-fail: OK
+  module 5 outlet temperature: 25C
+  module 5 inlet temperature: 22C
+  module 5 device-1 temperature: 30C
+  module 5 device-2 temperature: 30C
+  module 5 asic-1 (SSO-1) temp: 22C
+  module 5 asic-2 (SSO-2) temp: 22C
+  module 5 asic-3 (SSO-3) temp: 22C
+  module 5 asic-4 (SSO-4) temp: 22C
+  module 5 asic-5 (SSA-1) temp: 22C
+  module 5 asic-6 (HYPERION-1) temp: 22C
+  module 5 RP outlet temperature: 28C
+  module 5 RP inlet temperature: 25C
+  module 5 EARL outlet temperature: 28C
+  module 5 EARL inlet temperature: 23C
+
+
+chassis connector rating: 1680.00 Watts (40.00 Amps @ 42V)
+module 2
+  module 2 connector rating: 2016.00 Watts (48.00 Amps @ 42V)
+  module 2 power consumption: 444.36 Watts (10.58 Amps @ 42V)
+module 4
+  module 4 connector rating: 2016.00 Watts (48.00 Amps @ 42V)
+  module 4 power consumption: 333.06 Watts ( 7.93 Amps @ 42V)
+module 5
+  module 5 connector rating: 1260.00 Watts (30.00 Amps @ 42V)
+  module 5 power consumption: 310.38 Watts ( 7.39 Amps @ 42V)
+
+chassis per slot cooling capacity: 91 cfm
+ambient temperature: < 55C
+  module 2 cooling requirement: 84 cfm
+  module 4 cooling requirement: 70 cfm
+  module 5 cooling requirement: 35 cfm
+

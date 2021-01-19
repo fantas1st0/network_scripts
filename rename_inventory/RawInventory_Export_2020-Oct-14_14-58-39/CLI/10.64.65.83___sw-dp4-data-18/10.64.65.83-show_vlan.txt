@@ -1,0 +1,173 @@
+
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Po4000, Eth3/45, Eth3/46
+                                                Eth4/45, Eth4/46
+604  DATA-SRV-INF                     active    Po10, Po4000, Eth3/1, Eth3/2
+                                                Eth3/3, Eth3/4, Eth3/5, Eth3/6
+                                                Eth3/7, Eth3/8, Eth3/9, Eth3/10
+                                                Eth3/11, Eth3/12, Eth3/21
+                                                Eth3/22, Eth3/23, Eth3/24
+                                                Eth3/25, Eth3/26, Eth3/37
+                                                Eth3/38, Eth3/45, Eth3/46
+                                                Eth4/1, Eth4/2, Eth4/3, Eth4/4
+                                                Eth4/5, Eth4/6, Eth4/7, Eth4/8
+                                                Eth4/9, Eth4/10, Eth4/11
+                                                Eth4/12, Eth4/21, Eth4/22
+                                                Eth4/25, Eth4/26, Eth4/27
+                                                Eth4/28, Eth4/37, Eth4/38
+                                                Eth4/45, Eth4/46
+609  DATA-VMWARE                      active    Po10, Po4000, Eth3/1, Eth3/2
+                                                Eth3/3, Eth3/4, Eth3/5, Eth3/6
+                                                Eth3/7, Eth3/8, Eth3/9, Eth3/10
+                                                Eth3/11, Eth3/12, Eth3/21
+                                                Eth3/22, Eth3/23, Eth3/24
+                                                Eth3/25, Eth3/26, Eth3/37
+                                                Eth3/38, Eth3/45, Eth3/46
+                                                Eth4/1, Eth4/2, Eth4/3, Eth4/4
+                                                Eth4/5, Eth4/6, Eth4/7, Eth4/8
+                                                Eth4/9, Eth4/10, Eth4/11
+                                                Eth4/12, Eth4/21, Eth4/22
+                                                Eth4/25, Eth4/26, Eth4/27
+                                                Eth4/28, Eth4/37, Eth4/38
+                                                Eth4/45, Eth4/46
+629  DATA-VMWARE2                     active    Po10, Po4000, Eth3/37, Eth3/38
+                                                Eth3/45, Eth3/46, Eth4/37
+                                                Eth4/38, Eth4/45, Eth4/46
+654  DATA-BACKUP                      active    Po10, Po4000, Eth3/1, Eth3/2
+                                                Eth3/3, Eth3/4, Eth3/5, Eth3/6
+                                                Eth3/7, Eth3/8, Eth3/9, Eth3/10
+                                                Eth3/11, Eth3/12, Eth3/21
+                                                Eth3/22, Eth3/23, Eth3/24
+                                                Eth3/25, Eth3/26, Eth3/37
+                                                Eth3/38, Eth3/45, Eth3/46
+                                                Eth4/1, Eth4/2, Eth4/3, Eth4/4
+                                                Eth4/5, Eth4/6, Eth4/7, Eth4/8
+                                                Eth4/9, Eth4/10, Eth4/11
+                                                Eth4/12, Eth4/21, Eth4/22
+                                                Eth4/25, Eth4/26, Eth4/27
+                                                Eth4/28, Eth4/37, Eth4/38
+                                                Eth4/45, Eth4/46
+680  ~DATA-VIEW-ADMIN                 active    Po10, Po4000, Eth3/1, Eth3/2
+                                                Eth3/3, Eth3/4, Eth3/5, Eth3/6
+                                                Eth3/7, Eth3/8, Eth3/9, Eth3/10
+                                                Eth3/11, Eth3/12, Eth3/21
+                                                Eth3/22, Eth3/23, Eth3/24
+                                                Eth3/25, Eth3/26, Eth3/37
+                                                Eth3/38, Eth3/45, Eth3/46
+                                                Eth4/1, Eth4/2, Eth4/3, Eth4/4
+                                                Eth4/5, Eth4/6, Eth4/7, Eth4/8
+                                                Eth4/9, Eth4/10, Eth4/11
+                                                Eth4/12, Eth4/21, Eth4/22
+                                                Eth4/25, Eth4/26, Eth4/27
+                                                Eth4/28, Eth4/37, Eth4/38
+                                                Eth4/45, Eth4/46
+681  ~DATA-VIEW-CC                    active    Po10, Po4000, Eth3/1, Eth3/2
+                                                Eth3/3, Eth3/4, Eth3/5, Eth3/6
+                                                Eth3/7, Eth3/8, Eth3/9, Eth3/10
+                                                Eth3/11, Eth3/12, Eth3/21
+                                                Eth3/22, Eth3/23, Eth3/24
+                                                Eth3/25, Eth3/26, Eth3/37
+                                                Eth3/38, Eth3/45, Eth3/46
+                                                Eth4/1, Eth4/2, Eth4/3, Eth4/4
+                                                Eth4/5, Eth4/6, Eth4/7, Eth4/8
+                                                Eth4/9, Eth4/10, Eth4/11
+                                                Eth4/12, Eth4/21, Eth4/22
+                                                Eth4/25, Eth4/26, Eth4/27
+                                                Eth4/28, Eth4/37, Eth4/38
+                                                Eth4/45, Eth4/46
+682  ~DATA-VIEW-MISC                  active    Po10, Po4000, Eth3/1, Eth3/2
+                                                Eth3/3, Eth3/4, Eth3/5, Eth3/6
+                                                Eth3/7, Eth3/8, Eth3/9, Eth3/10
+                                                Eth3/11, Eth3/12, Eth3/21
+                                                Eth3/22, Eth3/23, Eth3/24
+                                                Eth3/25, Eth3/26, Eth3/37
+                                                Eth3/38, Eth3/45, Eth3/46
+                                                Eth4/1, Eth4/2, Eth4/3, Eth4/4
+                                                Eth4/5, Eth4/6, Eth4/7, Eth4/8
+                                                Eth4/9, Eth4/10, Eth4/11
+                                                Eth4/12, Eth4/21, Eth4/22
+                                                Eth4/25, Eth4/26, Eth4/27
+                                                Eth4/28, Eth4/37, Eth4/38
+                                                Eth4/45, Eth4/46
+683  ~DATA-VIEW-URM                   active    Po10, Po4000, Eth3/1, Eth3/2
+                                                Eth3/3, Eth3/4, Eth3/5, Eth3/6
+                                                Eth3/7, Eth3/8, Eth3/9, Eth3/10
+                                                Eth3/11, Eth3/12, Eth3/21
+                                                Eth3/22, Eth3/23, Eth3/24
+                                                Eth3/25, Eth3/26, Eth3/37
+                                                Eth3/38, Eth3/45, Eth3/46
+                                                Eth4/1, Eth4/2, Eth4/3, Eth4/4
+                                                Eth4/5, Eth4/6, Eth4/7, Eth4/8
+                                                Eth4/9, Eth4/10, Eth4/11
+                                                Eth4/12, Eth4/21, Eth4/22
+                                                Eth4/25, Eth4/26, Eth4/27
+                                                Eth4/28, Eth4/37, Eth4/38
+                                                Eth4/45, Eth4/46
+684  ~DATA-VIEW-ALIEN                 active    Po10, Po4000, Eth3/1, Eth3/2
+                                                Eth3/3, Eth3/4, Eth3/5, Eth3/6
+                                                Eth3/7, Eth3/8, Eth3/9, Eth3/10
+                                                Eth3/11, Eth3/12, Eth3/21
+                                                Eth3/22, Eth3/23, Eth3/24
+                                                Eth3/25, Eth3/26, Eth3/37
+                                                Eth3/38, Eth3/45, Eth3/46
+                                                Eth4/1, Eth4/2, Eth4/3, Eth4/4
+                                                Eth4/5, Eth4/6, Eth4/7, Eth4/8
+                                                Eth4/9, Eth4/10, Eth4/11
+                                                Eth4/12, Eth4/21, Eth4/22
+                                                Eth4/25, Eth4/26, Eth4/27
+                                                Eth4/28, Eth4/37, Eth4/38
+                                                Eth4/45, Eth4/46
+685  ~DATA-VIEW-MAIN                  active    Po10, Po4000, Eth3/1, Eth3/2
+                                                Eth3/3, Eth3/4, Eth3/5, Eth3/6
+                                                Eth3/7, Eth3/8, Eth3/9, Eth3/10
+                                                Eth3/11, Eth3/12, Eth3/21
+                                                Eth3/22, Eth3/23, Eth3/24
+                                                Eth3/25, Eth3/26, Eth3/37
+                                                Eth3/38, Eth3/45, Eth3/46
+                                                Eth4/1, Eth4/2, Eth4/3, Eth4/4
+                                                Eth4/5, Eth4/6, Eth4/7, Eth4/8
+                                                Eth4/9, Eth4/10, Eth4/11
+                                                Eth4/12, Eth4/21, Eth4/22
+                                                Eth4/25, Eth4/26, Eth4/27
+                                                Eth4/28, Eth4/37, Eth4/38
+                                                Eth4/45, Eth4/46
+686  ~DATA-VIEW-DEV                   active    Po10, Po4000, Eth3/1, Eth3/2
+                                                Eth3/3, Eth3/4, Eth3/5, Eth3/6
+                                                Eth3/7, Eth3/8, Eth3/9, Eth3/10
+                                                Eth3/11, Eth3/12, Eth3/21
+                                                Eth3/22, Eth3/23, Eth3/24
+                                                Eth3/25, Eth3/26, Eth3/37
+                                                Eth3/38, Eth3/45, Eth3/46
+                                                Eth4/1, Eth4/2, Eth4/3, Eth4/4
+                                                Eth4/5, Eth4/6, Eth4/7, Eth4/8
+                                                Eth4/9, Eth4/10, Eth4/11
+                                                Eth4/12, Eth4/21, Eth4/22
+                                                Eth4/25, Eth4/26, Eth4/27
+                                                Eth4/28, Eth4/37, Eth4/38
+                                                Eth4/45, Eth4/46
+
+VLAN Type         Vlan-mode
+---- -----        ----------
+1    enet         CE     
+604  enet         CE     
+609  enet         CE     
+629  enet         CE     
+654  enet         CE     
+680  enet         CE     
+681  enet         CE     
+682  enet         CE     
+683  enet         CE     
+684  enet         CE     
+685  enet         CE     
+686  enet         CE     
+
+Remote SPAN VLANs
+-------------------------------------------------------------------------------
+
+Primary  Secondary  Type             Ports
+-------  ---------  ---------------  -------------------------------------------
+
+
+

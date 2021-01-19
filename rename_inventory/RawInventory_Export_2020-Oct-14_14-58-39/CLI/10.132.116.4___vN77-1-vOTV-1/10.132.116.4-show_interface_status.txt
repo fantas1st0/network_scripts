@@ -1,0 +1,24 @@
+
+
+--------------------------------------------------------------------------------
+Port             Name            Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------
+mgmt0            --              connected routed    full    a-1000  --         
+Eth3/19          --              xcvrAbsen routed    auto    auto    --         
+Eth3/20          Join-if Cloud o connected routed    full    a-40G   QSFP-40G-SR
+Eth3/21          otv part downst connected trunk     full    a-40G   QSFP-40G-SR
+Eth3/22          otv part downst connected trunk     full    a-40G   QSFP-40G-SR
+Eth3/23          --              xcvrAbsen routed    auto    auto    --         
+Eth3/24/1        part joint otv  connected routed    full    a-10G   QSFP-40G-CS
+Eth3/24/2        --              disabled  routed    auto    auto    QSFP-40G-CS
+Eth3/24/3        --              disabled  routed    auto    auto    QSFP-40G-CS
+Eth3/24/4        --              disabled  routed    auto    auto    QSFP-40G-CS
+Po1              OTV upstream (j connected routed    full    a-10G   --         
+Po1.3431         Join-if OTV ov  connected routed    full    a-10G   --         
+Po2              Downstream      connected trunk     full    a-40G   --         
+
+-------------------------------------------------------------------------------
+Interface      Name                           Status     Reason            
+-------------------------------------------------------------------------------
+Overlay1       -- OTV over MPLS Core --       connected  none               
+Overlay2       -- CLOUD overlay over DWDM --  connected  none               

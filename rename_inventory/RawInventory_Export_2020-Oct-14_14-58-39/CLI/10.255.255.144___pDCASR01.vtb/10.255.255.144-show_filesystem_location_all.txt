@@ -1,0 +1,41 @@
+
+Fri Oct  2 00:22:25.592 MSK
+
+ node:	node0_RSP0_CPU0
+------------------------------------------------------------------
+File Systems:
+
+     Size(b)     Free(b)        Type  Flags  Prefixes
+           -           -     network     rw  qsm/dev/fs/tftp:
+           -           -     network     rw  qsm/dev/fs/rcp:
+           -           -     network     rw  qsm/dev/fs/ftp:
+  2562719744  2561537536  dumper-lnk     rw  qsm/dumper_disk0a:
+  6576652288  3189714432  dumper-lnk     rw  qsm/dumper_harddisk:
+   786972672   786964480  dumper-lnk     rw  qsm/dumper_harddiskb:
+   822083584   820369920  dumper-lnk     rw  qsm/dumper_harddiska:
+ 12810436608  9399214592  dumper-lnk     rw  qsm/dumper_disk0:
+ 12810436608  9399214592  flash-disk     rw  disk0:
+  6576652288  3189714432    harddisk     rw  harddisk:
+   822083584   820369920    harddisk     rw  harddiska:
+   786972672   786964480    harddisk     rw  harddiskb:
+  2562719744  2561537536  flash-disk     rw  disk0a:
+      515072      462848       nvram     rw  nvram:
+
+ node:	node0_0_CPU0
+------------------------------------------------------------------
+File Systems:
+
+     Size(b)     Free(b)        Type  Flags  Prefixes
+           -           -     network     rw  qsm/dev/fs/tftp:
+           -           -     network     rw  qsm/dev/fs/rcp:
+           -           -     network     rw  qsm/dev/fs/ftp:
+   786972672   786964480                 rw  qsm/harddiskb:
+   822083584   820369920                 rw  qsm/harddiska:
+  6576652288  3189714432                 rw  qsm/harddisk:
+  2562719744  2561537536                 rw  qsm/disk0a:
+ 12810436608  9399214592                 rw  qsm/disk0:
+ 12810436608  9399214592  dumper-lnk     rw  qsm/dumper_disk0:
+  6576652288  3189714432  dumper-lnk     rw  qsm/dumper_harddisk:
+ 12508446720 12505367040                 rw  lcdisk0:
+  3127902208  3127112704                 rw  lcdisk0a:
+    58327040    53056716       flash     rw  bootflash:

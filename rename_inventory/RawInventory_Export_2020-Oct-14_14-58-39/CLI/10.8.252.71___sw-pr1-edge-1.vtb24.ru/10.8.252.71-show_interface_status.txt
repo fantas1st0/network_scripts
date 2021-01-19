@@ -1,0 +1,52 @@
+
+
+--------------------------------------------------------------------------------
+Port             Name            Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------
+Eth3/1           [PC] sw-pr1-cor connected routed    full    10G     10Gbase-SR 
+Eth3/2           [PC] sw-pr1-cor connected routed    full    10G     10Gbase-SR 
+Eth3/3           --              disabled  1         auto    auto    10Gbase-SR 
+Eth3/4           [L3][PILOT] lib notconnec routed    auto    auto    10Gbase-SR 
+Eth3/5           [VPC] fw-cpedge connected trunk     full    10G     10Gbase-SR 
+Eth3/6           [VPC] fw-cpedge connected trunk     full    10G     10Gbase-SR 
+Eth3/7           [VPC] fw-cpedge connected trunk     full    10G     10Gbase-SR 
+Eth3/8           [VPC] fw-cpedge connected trunk     full    10G     10Gbase-SR 
+Eth3/19          [PC] inter-swit connected routed    full    10G     10Gbase-SR 
+Eth4/1           [PC] sw-pr1-cor connected routed    full    10G     10Gbase-SR 
+Eth4/2           [PC] sw-pr1-cor connected routed    full    10G     10Gbase-SR 
+Eth4/3           --              disabled  1         auto    auto    10Gbase-SR 
+Eth4/4           [L3][PILOT] Are connected routed    full    10G     10Gbase-SR 
+Eth4/5           [VPC] fw-cpedge connected trunk     full    10G     10Gbase-SR 
+Eth4/6           [VPC] fw-cpedge connected trunk     full    10G     10Gbase-SR 
+Eth4/7           [VPC] fw-cpedge connected trunk     full    10G     10Gbase-SR 
+Eth4/8           [VPC] fw-cpedge connected trunk     full    10G     10Gbase-SR 
+Eth4/19          [PC] inter-swit connected routed    full    10G     10Gbase-SR 
+Eth7/1           [PC] peer-link  connected trunk     full    a-10G   10Gbase-SR 
+Eth7/2           [PC] peer-link  connected trunk     full    a-10G   10Gbase-SR 
+Eth7/3           [VPC] hub-sw (H disabled  trunk     auto    auto    10Gbase-SR 
+Eth7/4           --              disabled  1         auto    auto    10Gbase-SR 
+Eth8/1           [PC] peer-link  connected trunk     full    a-10G   10Gbase-SR 
+Eth8/2           [PC] peer-link  connected trunk     full    a-10G   10Gbase-SR 
+Eth8/3           --              sfpAbsent 1         auto    auto    --         
+Eth8/4           --              disabled  1         auto    auto    10Gbase-SR 
+Po1              [L3] sw-pr1-cor connected routed    full    10G     --         
+Po2              [L3] sw-pr1-cor connected routed    full    10G     --         
+Po5              [TRUNK] inter-s connected routed    full    10G     --         
+Po5.10           [L3] sw-pr1-edg connected routed    full    10G     --         
+Po5.20           [L3] peer-keepa connected routed    full    10G     --         
+Po63             [TRUNK] fw-cped connected trunk     full    10G     --         
+Po64             [TRUNK] fw-cped connected trunk     full    10G     --         
+Po502            [TRUNK] hub-sw  disabled  1         auto    auto    --         
+Po4000           [TRUNK] peer-li connected trunk     full    a-10G   --         
+Lo0              [L3] router-id  connected routed    auto    auto    --         
+Lo1023           IBGP_TRACK_LOOP connected routed    auto    auto    --         
+Vlan1         --                 down      routed    auto    auto    --
+Vlan512       [L3] FW-CPEDGE-VTB connected routed    auto    auto    --
+Vlan513       [L3] FW-CPEDGE-24  connected routed    auto    auto    --
+Vlan514       [L3] FW-CPEDGE-BM  connected routed    auto    auto    --
+Vlan515       [L3] FW-CPEDGE-USE connected routed    auto    auto    --
+Vlan953       [L3] FW-DSO-INT    connected routed    auto    auto    --
+Vlan954       [L3] FW-DSO-VTB-DE connected routed    auto    auto    --
+Vlan955       [L3] HUAWEI-SP-VPN down      routed    auto    auto    --
+Vlan956       [L3] HUAWEI-MSK-AU down      routed    auto    auto    --
+Vlan958       [L3] FW-DSO-VTB-DE connected routed    auto    auto    --

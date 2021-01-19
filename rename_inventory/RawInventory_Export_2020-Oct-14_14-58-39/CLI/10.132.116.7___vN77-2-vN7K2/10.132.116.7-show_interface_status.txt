@@ -1,0 +1,505 @@
+
+
+--------------------------------------------------------------------------------
+Port             Name            Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------
+mgmt0            --              connected routed    full    a-1000  --         
+Eth1/1/1         --- VPC51 N5K01 connected trunk     full    a-10G   QSFP-40G-CS
+Eth1/1/2         --- VPC51 N5K01 connected trunk     full    a-10G   QSFP-40G-CS
+Eth1/1/3         --- VPC52 N5K02 connected trunk     full    a-10G   QSFP-40G-CS
+Eth1/1/4         --- VPC52 N5K02 connected trunk     full    a-10G   QSFP-40G-CS
+Eth1/2/1         --- VPC53 N5K03 connected trunk     full    a-10G   QSFP-40G-CS
+Eth1/2/2         --- VPC53 N5K03 connected trunk     full    a-10G   QSFP-40G-CS
+Eth1/2/3         --- VPC54 N5K04 connected trunk     full    a-10G   QSFP-40G-CS
+Eth1/2/4         --- VPC54 N5K04 connected trunk     full    a-10G   QSFP-40G-CS
+Eth1/3/1         --- VPC55 N5K05 connected trunk     full    a-10G   QSFP-40G-CS
+Eth1/3/2         --- VPC55 N5K05 connected trunk     full    a-10G   QSFP-40G-CS
+Eth1/3/3         --- VPC56 N5K06 connected trunk     full    a-10G   QSFP-40G-CS
+Eth1/3/4         --- VPC56 N5K06 connected trunk     full    a-10G   QSFP-40G-CS
+Eth1/4/1         --- VPC57 N5K07 connected trunk     full    a-10G   QSFP-40G-CS
+Eth1/4/2         --- VPC57 N5K07 connected trunk     full    a-10G   QSFP-40G-CS
+Eth1/4/3         --- VPC58 N5K01 connected trunk     full    a-10G   QSFP-40G-CS
+Eth1/4/4         --- VPC58 N5K01 connected trunk     full    a-10G   QSFP-40G-CS
+Eth1/5           --- VPC59 N5K09 connected trunk     full    a-40G   QSFP-40G-SR
+Eth1/6           --- VPC60 N5K10 connected trunk     full    a-40G   QSFP-40G-SR
+Eth1/7           --- VPC60 N5K11 connected trunk     full    a-40G   QSFP-40G-SR
+Eth1/8           [TRUNK] dpN5K-A connected trunk     full    a-40G   QSFP-40G-ER
+Eth1/9           --              xcvrAbsen routed    auto    auto    --         
+Eth1/10          --              xcvrAbsen routed    auto    auto    --         
+Eth1/11          --              xcvrAbsen routed    auto    auto    --         
+Eth1/12          --              xcvrAbsen routed    auto    auto    --         
+Eth1/13          --              xcvrAbsen routed    auto    auto    --         
+Eth1/14          --              xcvrAbsen routed    auto    auto    --         
+Eth1/15          --              xcvrAbsen routed    auto    auto    --         
+Eth1/16/1        --              connected trunk     full    a-10G   QSFP-40G-SR
+Eth1/16/2        --              connected trunk     full    a-10G   QSFP-40G-SR
+Eth1/16/3        --              connected trunk     full    a-10G   QSFP-40G-SR
+Eth1/16/4        --              connected trunk     full    a-10G   QSFP-40G-SR
+Eth1/17          --              xcvrAbsen routed    auto    auto    --         
+Eth1/18/1        --- VPC70 N5K20 sfpAbsent trunk     auto    auto    --         
+Eth1/18/2        --- VPC70 N5K20 sfpAbsent trunk     auto    auto    --         
+Eth1/18/3        --- VPC70 N5K20 sfpAbsent trunk     auto    auto    --         
+Eth1/18/4        --- VPC70 N5K20 sfpAbsent trunk     auto    auto    --         
+Eth1/19/1        --- VPC VrnVss  connected trunk     full    a-10G   QSFP-40G-CS
+Eth1/19/2        --              disabled  routed    auto    auto    QSFP-40G-CS
+Eth1/19/3        --              disabled  routed    auto    auto    QSFP-40G-CS
+Eth1/19/4        --              disabled  routed    auto    auto    QSFP-40G-CS
+Eth1/20/1        --- vDcCore-1 T connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.552    --- vDcCore-1 T connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.2622   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3003   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3008   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3015   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3020   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3025   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3029   DcCore-1 Te4/4  connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3039   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3046   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3065   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3083   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3209   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3215   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3220   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3320   -- vDcCore1(TE4 connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3365   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3368   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3379   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3384   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3388   --- vDcCore-1 T connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3392   -- vDCCore1(TE4 connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3397   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3406   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3412   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3419   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3437   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3584   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3589   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3603   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3608   RF <-> RF-24    connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3612   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3616   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3621   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3634   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3640   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/1.3646   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth1/20/2        --              disabled  routed    auto    auto    QSFP-40G-CS
+Eth1/20/2.3420   --              disabled  routed    auto    auto    QSFP-40G-CS
+Eth1/20/3        --              disabled  routed    auto    auto    QSFP-40G-CS
+Eth1/20/4        --              disabled  routed    auto    auto    QSFP-40G-CS
+Eth1/21          RESERVED VXLAN  xcvrAbsen routed    auto    auto    --         
+Eth1/22          --- VPC keepali connected routed    full    a-40G   QSFP-40G-CR
+Eth1/23          --              xcvrAbsen routed    auto    auto    --         
+Eth1/24          --- Peer-Link 1 connected trunk     full    a-40G   QSFP-40G-CR
+Eth2/1/1         --- VPC51 N5K01 connected trunk     full    a-10G   QSFP-40G-CS
+Eth2/1/2         --- VPC51 N5K01 connected trunk     full    a-10G   QSFP-40G-CS
+Eth2/1/3         --- VPC52 N5K02 connected trunk     full    a-10G   QSFP-40G-CS
+Eth2/1/4         --- VPC52 N5K02 connected trunk     full    a-10G   QSFP-40G-CS
+Eth2/2/1         --- VPC53 N5K03 connected trunk     full    a-10G   QSFP-40G-CS
+Eth2/2/2         --- VPC53 N5K03 connected trunk     full    a-10G   QSFP-40G-CS
+Eth2/2/3         --- VPC54 N5K04 connected trunk     full    a-10G   QSFP-40G-CS
+Eth2/2/4         --- VPC54 N5K04 connected trunk     full    a-10G   QSFP-40G-CS
+Eth2/3/1         --- VPC55 N5K05 connected trunk     full    a-10G   QSFP-40G-CS
+Eth2/3/2         --- VPC55 N5K05 connected trunk     full    a-10G   QSFP-40G-CS
+Eth2/3/3         --- VPC56 N5K06 connected trunk     full    a-10G   QSFP-40G-CS
+Eth2/3/4         --- VPC56 N5K06 connected trunk     full    a-10G   QSFP-40G-CS
+Eth2/4/1         --- VPC57 N5K07 connected trunk     full    a-10G   QSFP-40G-CS
+Eth2/4/2         --- VPC57 N5K07 connected trunk     full    a-10G   QSFP-40G-CS
+Eth2/4/3         --- VPC58 N5K02 connected trunk     full    a-10G   QSFP-40G-CS
+Eth2/4/4         --- VPC58 N5K02 connected trunk     full    a-10G   QSFP-40G-CS
+Eth2/5           --- VPC59 N5K09 connected trunk     full    a-40G   QSFP-40G-CS
+Eth2/6           --- VPC60 N5K10 connected trunk     full    a-40G   QSFP-40G-SR
+Eth2/7           --- VPC60 N5K11 connected trunk     full    a-40G   QSFP-40G-SR
+Eth2/8           dpN5K-AGG01-2 E connected trunk     full    a-40G   QSFP-40G-ER
+Eth2/9           --              xcvrAbsen routed    auto    auto    --         
+Eth2/10          --              xcvrAbsen routed    auto    auto    --         
+Eth2/11          --              xcvrAbsen routed    auto    auto    --         
+Eth2/12          --              xcvrAbsen routed    auto    auto    --         
+Eth2/13          --- Loop for LB connected routed    full    a-40G   QSFP-40G-SR
+Eth2/13.3424     --              connected routed    full    a-40G   QSFP-40G-SR
+Eth2/13.3541     --              connected routed    full    a-40G   QSFP-40G-SR
+Eth2/14          Loop for LB to  connected routed    full    a-40G   QSFP-40G-SR
+Eth2/14.3424     --              connected routed    full    a-40G   QSFP-40G-SR
+Eth2/14.3541     --              connected routed    full    a-40G   QSFP-40G-SR
+Eth2/15/1        f5 BM-CLD       notconnec trunk     auto    auto    CVR-QSFP-SF
+Eth2/15/2        --              disabled  routed    auto    auto    CVR-QSFP-SF
+Eth2/15/3        --              disabled  routed    auto    auto    CVR-QSFP-SF
+Eth2/15/4        --              disabled  routed    auto    auto    CVR-QSFP-SF
+Eth2/16/1        --              connected trunk     full    a-10G   QSFP-40G-SR
+Eth2/16/2        --              connected trunk     full    a-10G   QSFP-40G-SR
+Eth2/16/3        --              connected trunk     full    a-10G   QSFP-40G-SR
+Eth2/16/4        --              connected trunk     full    a-10G   QSFP-40G-SR
+Eth2/17          part of OTV 1 u connected trunk     full    a-40G   QSFP-40G-SR
+Eth2/18          part of OTV 2 u connected trunk     full    a-40G   QSFP-40G-SR
+Eth2/19/1        --              sfpAbsent routed    auto    auto    --         
+Eth2/19/2        --              sfpAbsent routed    auto    auto    --         
+Eth2/19/3        --              sfpAbsent routed    auto    auto    --         
+Eth2/19/4        --              sfpAbsent routed    auto    auto    --         
+Eth2/20/1        --- vDcCore-2 T connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.554    --- vDcCore-2 T connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.2624   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3004   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3009   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3016   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3021   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3026   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3031   DcCore-2 Te4/3  connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3041   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3048   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3067   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3085   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3211   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3216   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3222   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3322   -- vDcCore2(TE4 connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3366   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3370   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3377   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3382   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3386   --- vDcCore-2 T connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3394   -- vDCCore2(TE4 connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3398   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3407   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3413   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3420   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3439   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3586   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3591   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3604   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3609   RF <-> RF-24    connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3613   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3617   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3622   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3635   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3641   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/1.3647   --              connected routed    full    a-10G   QSFP-40G-CS
+Eth2/20/2        --              disabled  routed    auto    auto    QSFP-40G-CS
+Eth2/20/3        --              disabled  routed    auto    auto    QSFP-40G-CS
+Eth2/20/4        --              disabled  routed    auto    auto    QSFP-40G-CS
+Eth2/21          --              xcvrAbsen routed    auto    auto    --         
+Eth2/22          --- VPC keepali connected routed    full    a-40G   QSFP-40G-CR
+Eth2/23          --              xcvrAbsen routed    auto    auto    --         
+Eth2/24          --- Peer-Link 2 connected trunk     full    a-40G   QSFP-40G-CR
+Eth3/1           --              xcvrAbsen routed    auto    auto    --         
+Eth3/2           --              xcvrAbsen routed    auto    auto    --         
+Eth3/3           --              xcvrAbsen routed    auto    auto    --         
+Eth3/4           --              xcvrAbsen routed    auto    auto    --         
+Eth3/5           --              xcvrAbsen routed    auto    auto    --         
+Eth3/6           --              xcvrAbsen routed    auto    auto    --         
+Eth3/7           --              xcvrAbsen routed    auto    auto    --         
+Eth3/8           --              xcvrAbsen routed    auto    auto    --         
+Eth3/9           --              xcvrAbsen routed    auto    auto    --         
+Eth3/10          --              xcvrAbsen routed    auto    auto    --         
+Eth3/11          --              xcvrAbsen routed    auto    auto    --         
+Eth3/12          RESERVED VXLAN  xcvrAbsen routed    auto    auto    --         
+Eth3/13          transport "OTV  connected routed    full    a-40G   QSFP-40G-SR
+Eth3/14          transport "OTV  connected routed    full    a-40G   QSFP-40G-SR
+Eth3/15/1        transport "OTV  connected routed    full    a-10G   QSFP-40G-CS
+Eth3/15/2        --              disabled  routed    auto    auto    QSFP-40G-CS
+Eth3/15/3        OTV Cloud over  connected routed    full    a-10G   QSFP-40G-CS
+Eth3/15/4        --              notconnec routed    auto    auto    QSFP-40G-CS
+Eth3/16          --              xcvrAbsen routed    auto    auto    --         
+Eth3/17          description L3  xcvrAbsen routed    auto    auto    --         
+Eth3/18          --              xcvrAbsen routed    auto    auto    --         
+Po31             OTV1 transport  connected trunk     full    a-40G   --         
+Po32             OTV2 transport  connected trunk     full    a-40G   --         
+Po33             f5-1 8x10g  1/1 connected trunk     full    a-10G   --         
+Po34             f5-2 8x10g  2/1 connected trunk     full    a-10G   --         
+Po35             f5 BM-CLD       noOperMem trunk     auto    auto    --         
+Po51             ---- N5K01 ---  connected trunk     full    a-10G   --         
+Po52             ---- N5K02 ---  connected trunk     full    a-10G   --         
+Po53             ---- N5K03 ---  connected trunk     full    a-10G   --         
+Po54             ---- N5K04 ---  connected trunk     full    a-10G   --         
+Po55             ---- N5K05 ---  connected trunk     full    a-10G   --         
+Po56             ---- N5K06 ---  connected trunk     full    a-10G   --         
+Po57             ---- N5K07 ---  connected trunk     full    a-10G   --         
+Po58             ---- N5K08 ---  connected trunk     full    a-10G   --         
+Po59             ---- N5K09 FOC  connected trunk     full    a-40G   --         
+Po60             ---- N5K10 r518 connected trunk     full    a-40G   --         
+Po61             ---- N5K11 r518 connected trunk     full    a-40G   --         
+Po65             --- VPC VrnVss  connected trunk     full    a-10G   --         
+Po70             ---- N5K20 ---  noOperMem trunk     auto    auto    --         
+Po999            --- dpN5K01 --- connected trunk     full    a-40G   --         
+Po1000           --- VPC peer-li connected trunk     full    a-40G   --         
+Po1001           --- Keepalive-l connected routed    full    a-40G   --         
+Vlan1         --                 down      routed    auto    auto    --
+Vlan139       --                 connected routed    auto    auto    --
+Vlan174       --                 connected routed    auto    auto    --
+Vlan177       --                 connected routed    auto    auto    --
+Vlan178       --                 connected routed    auto    auto    --
+Vlan179       --                 connected routed    auto    auto    --
+Vlan180       --                 connected routed    auto    auto    --
+Vlan187       --                 connected routed    auto    auto    --
+Vlan189       --                 connected routed    auto    auto    --
+Vlan193       --                 connected routed    auto    auto    --
+Vlan280       --                 connected routed    auto    auto    --
+Vlan293       --                 connected routed    auto    auto    --
+Vlan294       --                 connected routed    auto    auto    --
+Vlan446       --                 connected routed    auto    auto    --
+Vlan447       --                 connected routed    auto    auto    --
+Vlan555       --- ip link 7k-7k  connected routed    auto    auto    --
+Vlan557       link VTB-FXT-B ove connected routed    auto    auto    --
+Vlan702       --                 connected routed    auto    auto    --
+Vlan2291      --                 connected routed    auto    auto    --
+Vlan2292      --                 connected routed    auto    auto    --
+Vlan2620      --                 connected routed    auto    auto    --
+Vlan2800      xVTB on DP4 Inline connected routed    auto    auto    --
+Vlan2801      new_Mail_PROD      connected routed    auto    auto    --
+Vlan2810      --                 connected routed    auto    auto    --
+Vlan2811      --                 connected routed    auto    auto    --
+Vlan2812      --                 connected routed    auto    auto    --
+Vlan2841      toEXPRESSWAY_DP4 ( connected routed    auto    auto    --
+Vlan2842      toEXPRESSWAY_DP4 ( connected routed    auto    auto    --
+Vlan2843      to_DP4 (C1027700)  connected routed    auto    auto    --
+Vlan2844      to_DP4 (C1027700)  connected routed    auto    auto    --
+Vlan2845      to_DP4 (C1027700)  connected routed    auto    auto    --
+Vlan2846      to_DP4 (C1027700)  connected routed    auto    auto    --
+Vlan2847      --                 connected routed    auto    auto    --
+Vlan2851      new_Mail_mgmt      connected routed    auto    auto    --
+Vlan2854      to_DP4 (C1027700)  connected routed    auto    auto    --
+Vlan3000      --                 connected routed    auto    auto    --
+Vlan3005      --- ip link 7k-7k  connected routed    auto    auto    --
+Vlan3010      --- ip link 7k-7k  connected routed    auto    auto    --
+Vlan3017      --- ip link 7k-7k  connected routed    auto    auto    --
+Vlan3022      --- ip link 7k-7k  connected routed    auto    auto    --
+Vlan3027      --- ip link 7k-7k  connected routed    auto    auto    --
+Vlan3032      --- ip link 7k-7k  connected routed    auto    auto    --
+Vlan3033      --                 connected routed    auto    auto    --
+Vlan3034      --                 connected routed    auto    auto    --
+Vlan3037      --                 connected routed    auto    auto    --
+Vlan3042      --                 connected routed    auto    auto    --
+Vlan3044      --                 connected routed    auto    auto    --
+Vlan3063      --                 connected routed    auto    auto    --
+Vlan3081      --                 connected routed    auto    auto    --
+Vlan3102      toEXPRESSWAY_V43 ( connected routed    auto    auto    --
+Vlan3107      --                 connected routed    auto    auto    --
+Vlan3123      --                 connected routed    auto    auto    --
+Vlan3126      --                 down      routed    auto    auto    --
+Vlan3128      --                 connected routed    auto    auto    --
+Vlan3130      --                 connected routed    auto    auto    --
+Vlan3131      --                 connected routed    auto    auto    --
+Vlan3133      --                 connected routed    auto    auto    --
+Vlan3136      --                 connected routed    auto    auto    --
+Vlan3137      --                 connected routed    auto    auto    --
+Vlan3138      --                 connected routed    auto    auto    --
+Vlan3139      --                 connected routed    auto    auto    --
+Vlan3140      --- VTB-Core Clear connected routed    auto    auto    --
+Vlan3141      --                 connected routed    auto    auto    --
+Vlan3143      --                 connected routed    auto    auto    --
+Vlan3144      --                 connected routed    auto    auto    --
+Vlan3147      --                 connected routed    auto    auto    --
+Vlan3149      --                 connected routed    auto    auto    --
+Vlan3150      --                 connected routed    auto    auto    --
+Vlan3151      --                 connected routed    auto    auto    --
+Vlan3152      --                 connected routed    auto    auto    --
+Vlan3153      --                 connected routed    auto    auto    --
+Vlan3154      --- RSRV without L connected routed    auto    auto    --
+Vlan3155      --                 connected routed    auto    auto    --
+Vlan3157      --                 connected routed    auto    auto    --
+Vlan3159      --                 connected routed    auto    auto    --
+Vlan3160      --                 connected routed    auto    auto    --
+Vlan3161      --                 connected routed    auto    auto    --
+Vlan3162      --                 connected routed    auto    auto    --
+Vlan3163      --                 connected routed    auto    auto    --
+Vlan3167      --                 connected routed    auto    auto    --
+Vlan3168      --- for VDI load b connected routed    auto    auto    --
+Vlan3170      --                 connected routed    auto    auto    --
+Vlan3171      --- nInet-SRV migr connected routed    auto    auto    --
+Vlan3172      --                 connected routed    auto    auto    --
+Vlan3176      --                 connected routed    auto    auto    --
+Vlan3177      --                 connected routed    auto    auto    --
+Vlan3178      --                 connected routed    auto    auto    --
+Vlan3180      --                 connected routed    auto    auto    --
+Vlan3181      --                 connected routed    auto    auto    --
+Vlan3182      --                 connected routed    auto    auto    --
+Vlan3183      --                 connected routed    auto    auto    --
+Vlan3184      --                 connected routed    auto    auto    --
+Vlan3185      MS AZUR TEMP       connected routed    auto    auto    --
+Vlan3186      --                 connected routed    auto    auto    --
+Vlan3187      --                 connected routed    auto    auto    --
+Vlan3188      --                 connected routed    auto    auto    --
+Vlan3189      --                 connected routed    auto    auto    --
+Vlan3190      --                 down      routed    auto    auto    --
+Vlan3191      --                 connected routed    auto    auto    --
+Vlan3192      --                 connected routed    auto    auto    --
+Vlan3193      TEST_MCAST         connected routed    auto    auto    --
+Vlan3194      TEST_MCAST         down      routed    auto    auto    --
+Vlan3197      --                 connected routed    auto    auto    --
+Vlan3198      --- nInet-SRV Clea connected routed    auto    auto    --
+Vlan3200      --                 connected routed    auto    auto    --
+Vlan3201      --                 connected routed    auto    auto    --
+Vlan3202      --                 connected routed    auto    auto    --
+Vlan3203      --                 connected routed    auto    auto    --
+Vlan3204      ibm test cloud     connected routed    auto    auto    --
+Vlan3212      --- ip link 7k-7k  connected routed    auto    auto    --
+Vlan3218      --- ip link 7k-7k  connected routed    auto    auto    --
+Vlan3223      --- ip link 7k-7k  connected routed    auto    auto    --
+Vlan3258      --                 connected routed    auto    auto    --
+Vlan3300      --                 connected routed    auto    auto    --
+Vlan3301      --                 connected routed    auto    auto    --
+Vlan3302      --                 connected routed    auto    auto    --
+Vlan3303      --                 connected routed    auto    auto    --
+Vlan3304      --                 connected routed    auto    auto    --
+Vlan3305      --                 connected routed    auto    auto    --
+Vlan3306      --                 connected routed    auto    auto    --
+Vlan3307      --                 connected routed    auto    auto    --
+Vlan3308      --                 connected routed    auto    auto    --
+Vlan3313      --                 connected routed    auto    auto    --
+Vlan3314      --                 connected routed    auto    auto    --
+Vlan3315      --                 connected routed    auto    auto    --
+Vlan3317      --                 connected routed    auto    auto    --
+Vlan3318      --                 connected routed    auto    auto    --
+Vlan3323      --                 connected routed    auto    auto    --
+Vlan3324      --                 connected routed    auto    auto    --
+Vlan3325      --                 connected routed    auto    auto    --
+Vlan3326      --                 connected routed    auto    auto    --
+Vlan3327      --                 connected routed    auto    auto    --
+Vlan3328      --                 connected routed    auto    auto    --
+Vlan3329      --                 down      routed    auto    auto    --
+Vlan3330      --                 down      routed    auto    auto    --
+Vlan3331      --                 down      routed    auto    auto    --
+Vlan3332      --                 down      routed    auto    auto    --
+Vlan3341      --                 connected routed    auto    auto    --
+Vlan3342      --                 connected routed    auto    auto    --
+Vlan3343      --                 connected routed    auto    auto    --
+Vlan3344      --                 connected routed    auto    auto    --
+Vlan3362      --- ip link 7k-7k  connected routed    auto    auto    --
+Vlan3371      --- ip link 7k-7k  connected routed    auto    auto    --
+Vlan3375      --- ip link 7k-7k  connected routed    auto    auto    --
+Vlan3380      --- ip link 7k-7k  connected routed    auto    auto    --
+Vlan3385      --- ip link 7k-7k  connected routed    auto    auto    --
+Vlan3390      -- nInet-Proxy-N7K connected routed    auto    auto    --
+Vlan3399      --                 connected routed    auto    auto    --
+Vlan3401      --                 connected routed    auto    auto    --
+Vlan3402      --                 connected routed    auto    auto    --
+Vlan3403      -- ip link 7k-7k f connected routed    auto    auto    --
+Vlan3408      --                 connected routed    auto    auto    --
+Vlan3409      -- ip link 7k-7k f connected routed    auto    auto    --
+Vlan3414      --                 connected routed    auto    auto    --
+Vlan3415      --                 connected routed    auto    auto    --
+Vlan3416      -- ip link 7k-7k f connected routed    auto    auto    --
+Vlan3421      --                 connected routed    auto    auto    --
+Vlan3422      --                 connected routed    auto    auto    --
+Vlan3425      --                 connected routed    auto    auto    --
+Vlan3428      --                 connected routed    auto    auto    --
+Vlan3429      --                 connected routed    auto    auto    --
+Vlan3430      --                 connected routed    auto    auto    --
+Vlan3433      --- RSRV Citrix Fa connected routed    auto    auto    --
+Vlan3434      --                 connected routed    auto    auto    --
+Vlan3440      --                 connected routed    auto    auto    --
+Vlan3441      --                 connected routed    auto    auto    --
+Vlan3442      --                 connected routed    auto    auto    --
+Vlan3443      --                 connected routed    auto    auto    --
+Vlan3444      STerra-Link        connected routed    auto    auto    --
+Vlan3446      --                 connected routed    auto    auto    --
+Vlan3447      --                 connected routed    auto    auto    --
+Vlan3450      --                 connected routed    auto    auto    --
+Vlan3451      --                 connected routed    auto    auto    --
+Vlan3452      --                 connected routed    auto    auto    --
+Vlan3453      --                 connected routed    auto    auto    --
+Vlan3467      --                 connected routed    auto    auto    --
+Vlan3488      --                 connected routed    auto    auto    --
+Vlan3493      --                 connected routed    auto    auto    --
+Vlan3519      --                 connected routed    auto    auto    --
+Vlan3523      --                 connected routed    auto    auto    --
+Vlan3538      --                 connected routed    auto    auto    --
+Vlan3539      --                 connected routed    auto    auto    --
+Vlan3543      --                 connected routed    auto    auto    --
+Vlan3544      --                 connected routed    auto    auto    --
+Vlan3555      --- OpenShift-1 -- connected routed    auto    auto    --
+Vlan3556      --- OpenShift-2 -- connected routed    auto    auto    --
+Vlan3574      --                 connected routed    auto    auto    --
+Vlan3582      --                 connected routed    auto    auto    --
+Vlan3587      --                 connected routed    auto    auto    --
+Vlan3598      --                 connected routed    auto    auto    --
+Vlan3618      --                 connected routed    auto    auto    --
+Vlan3628      --                 connected routed    auto    auto    --
+Vlan3629      --                 connected routed    auto    auto    --
+Vlan3630      --                 connected routed    auto    auto    --
+Vlan3631      --                 connected routed    auto    auto    --
+Vlan3636      --                 connected routed    auto    auto    --
+Vlan3637      --                 connected routed    auto    auto    --
+Vlan3642      --                 connected routed    auto    auto    --
+Vlan3643      --                 connected routed    auto    auto    --
+Vlan3769      --                 connected routed    auto    auto    --
+Vlan3772      --                 connected routed    auto    auto    --
+Vlan3785      --                 connected routed    auto    auto    --
+Vlan3786      --                 connected routed    auto    auto    --
+Vlan3788      --                 connected routed    auto    auto    --
+Vlan3801      --                 connected routed    auto    auto    --
+Vlan3804      --                 connected routed    auto    auto    --
+Vlan3812      --                 down      routed    auto    auto    --
+Vlan3815      --                 connected routed    auto    auto    --
+Vlan3817      --                 connected routed    auto    auto    --
+Vlan3825      --                 connected routed    auto    auto    --
+Vlan3826      --                 connected routed    auto    auto    --
+Vlan3837      --                 connected routed    auto    auto    --
+Vlan3838      --                 connected routed    auto    auto    --
+Vlan3842      --                 connected routed    auto    auto    --
+Vlan3845      --                 connected routed    auto    auto    --
+Vlan3848      --                 connected routed    auto    auto    --
+Vlan3867      --                 connected routed    auto    auto    --
+Vlan3901      --                 connected routed    auto    auto    --
+Vlan3902      --                 connected routed    auto    auto    --
+Vlan3903      --                 connected routed    auto    auto    --
+Vlan3904      --                 connected routed    auto    auto    --
+Vlan3905      --                 connected routed    auto    auto    --
+Vlan3906      --                 connected routed    auto    auto    --
+Vlan3907      --                 connected routed    auto    auto    --
+Vlan3908      --                 connected routed    auto    auto    --
+Vlan3909      --                 connected routed    auto    auto    --
+Vlan3910      --                 connected routed    auto    auto    --
+Vlan3911      --                 connected routed    auto    auto    --
+Vlan3912      --                 connected routed    auto    auto    --
+Vlan3913      --                 connected routed    auto    auto    --
+Vlan3914      --                 connected routed    auto    auto    --
+Vlan3915      --                 connected routed    auto    auto    --
+Vlan3916      --                 connected routed    auto    auto    --
+Vlan3917      --                 connected routed    auto    auto    --
+Vlan3918      --                 connected routed    auto    auto    --
+Vlan3919      --                 connected routed    auto    auto    --
+Vlan3920      --                 connected routed    auto    auto    --
+Vlan3921      --                 connected routed    auto    auto    --
+Vlan3922      --                 connected routed    auto    auto    --
+Vlan3923      --                 connected routed    auto    auto    --
+Vlan3924      --                 connected routed    auto    auto    --
+Vlan3925      Local_HB_DBO       down      routed    auto    auto    --
+Vlan3926      --                 connected routed    auto    auto    --
+Vlan3927      --                 connected routed    auto    auto    --
+Vlan3928      --                 connected routed    auto    auto    --
+Vlan3929      --                 connected routed    auto    auto    --
+Vlan3930      --                 connected routed    auto    auto    --
+Vlan3931      --                 connected routed    auto    auto    --
+Vlan3932      --                 connected routed    auto    auto    --
+Vlan3933      --                 connected routed    auto    auto    --
+Vlan3934      --                 connected routed    auto    auto    --
+Vlan3935      --                 connected routed    auto    auto    --
+Vlan3936      --                 connected routed    auto    auto    --
+Vlan3937      --                 connected routed    auto    auto    --
+Vlan3938      --                 connected routed    auto    auto    --
+Vlan3939      --                 connected routed    auto    auto    --
+Vlan3940      --                 connected routed    auto    auto    --
+Vlan3941      --                 connected routed    auto    auto    --
+Vlan3942      --                 connected routed    auto    auto    --
+Vlan3943      --                 connected routed    auto    auto    --
+Vlan3945      --                 connected routed    auto    auto    --
+Vlan3946      --                 connected routed    auto    auto    --
+Vlan3947      --                 connected routed    auto    auto    --
+Vlan3948      --                 connected routed    auto    auto    --
+Vlan3949      --                 connected routed    auto    auto    --
+Vlan3951      --                 connected routed    auto    auto    --
+Vlan3952      --                 connected routed    auto    auto    --
+Vlan3953      --                 connected routed    auto    auto    --
+Vlan3954      --                 connected routed    auto    auto    --
+Vlan3955      --                 connected routed    auto    auto    --
+Vlan3956      --                 connected routed    auto    auto    --
+Vlan3957      --                 connected routed    auto    auto    --
+Vlan3958      --                 connected routed    auto    auto    --
+Vlan3959      --                 connected routed    auto    auto    --
+Vlan3960      --                 connected routed    auto    auto    --
+Vlan3961      --                 connected routed    auto    auto    --
+Vlan3962      --                 connected routed    auto    auto    --
+Vlan3963      --                 connected routed    auto    auto    --
+Vlan3964      --                 connected routed    auto    auto    --
+Vlan3965      --                 connected routed    auto    auto    --
+Vlan3966      RSRV in CLOUD      connected routed    auto    auto    --
+Vlan3967      --                 connected routed    auto    auto    --

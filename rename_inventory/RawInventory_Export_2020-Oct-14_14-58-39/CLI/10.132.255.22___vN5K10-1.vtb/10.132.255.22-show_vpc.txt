@@ -1,0 +1,501 @@
+
+Legend:
+                (*) - local vPC is down, forwarding via vPC peer-link
+
+vPC domain id                     : 60  
+Peer status                       : peer adjacency formed ok      
+vPC keep-alive status             : peer is alive                 
+Configuration consistency status  : success 
+Per-vlan consistency status       : success                       
+Type-2 consistency status         : success 
+vPC role                          : primary                       
+Number of vPCs configured         : 142 
+Peer Gateway                      : Disabled
+Dual-active excluded VLANs        : -
+Graceful Consistency Check        : Enabled
+Operational Layer3 Peer-router    : Disabled
+Auto-recovery status              : Enabled (timeout = 240 seconds)
+
+vPC Peer-link status
+---------------------------------------------------------------------
+id   Port   Status Active vlans    
+--   ----   ------ --------------------------------------------------
+1    Po1000 up     1,139,168-169,171-172,174,177-178,180,184,188,190,        
+                   193-194,280,294,3000,3033-3034,3130,3137-3139,3143        
+                   -3144,3147,3149,3151-3155,3162-3163,3169-3170,3184        
+                   ,3186-3189,3192,3198,3200,3203,3318,3401,3428,3434        
+                   ,3441,3443,3488,3539,3574,3624,3628,3630,3636,3642    ....
+
+vPC status
+----------------------------------------------------------------------------
+id     Port        Status Consistency Reason                     Active vlans
+------ ----------- ------ ----------- -------------------------- -----------
+7      Po7         up     success     success                    139,168-169 
+                                                                 ,171-172,17 
+                                                                 4,177-178,1 
+                                                                 80,184,188, 
+                                                                 190,193-....
+202    Po202       up     success     success                    3163,3401,3 
+                                                                 838,3848,38 
+                                                                 67,3910-391 
+                                                                 1,3916,3945 
+                                                                 -3946,39....
+203    Po203       up     success     success                    3163,3401,3 
+                                                                 838,3848,38 
+                                                                 67,3910-391 
+                                                                 1,3916,3945 
+                                                                 -3946,39....
+204    Po204       down*  failed      vpc port channel           -           
+                                      mis-config due to vpc                  
+                                      links in the 2 switches                
+                                      connected to different                 
+                                      partners                               
+205    Po205       up     success     success                    3905        
+206    Po206       up     success     success                    3929        
+207    Po207       down*  Not         Consistency Check Not      -           
+                          Applicable  Performed                              
+208    Po208       up     success     success                    3826        
+209    Po209       up     success     success                    3905        
+210    Po210       up     success     success                    3826        
+211    Po211       up     success     success                    3905        
+212    Po212       up     success     success                    3826        
+213    Po213       up     success     success                    3905        
+214    Po214       up     success     success                    3826        
+215    Po215       up     success     success                    3826        
+216    Po216       up     success     success                    3826        
+217    Po217       up     success     success                    3826        
+218    Po218       up     success     success                    3826        
+219    Po219       up     success     success                    3826        
+220    Po220       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+221    Po221       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+222    Po222       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+223    Po223       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+224    Po224       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+225    Po225       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+226    Po226       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+227    Po227       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+228    Po228       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+229    Po229       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+230    Po230       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+231    Po231       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+232    Po232       up     success     success                    3443        
+233    Po233       down*  success     success                    -           
+234    Po234       down*  success     success                    -           
+235    Po235       down*  success     success                    -           
+236    Po236       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+237    Po237       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+238    Po238       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+239    Po239       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+240    Po240       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+241    Po241       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+242    Po242       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+243    Po243       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+244    Po244       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+245    Po245       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+246    Po246       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+247    Po247       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+248    Po248       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+249    Po249       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+250    Po250       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+251    Po251       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+252    Po252       up     success     success                    3905        
+253    Po253       down*  success     success                    -           
+254    Po254       down*  success     success                    -           
+255    Po255       down*  success     success                    -           
+256    Po256       down*  success     success                    -           
+257    Po257       down*  success     success                    -           
+258    Po258       down*  success     success                    -           
+259    Po259       down*  success     success                    -           
+260    Po260       down*  success     success                    -           
+261    Po261       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+262    Po262       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+263    Po263       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+264    Po264       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+265    Po265       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+266    Po266       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+267    Po267       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+268    Po268       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+269    Po269       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+270    Po270       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+271    Po271       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+272    Po272       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+273    Po273       up     success     success                    3815        
+274    Po274       up     success     success                    3815        
+275    Po275       up     success     success                    3924        
+276    Po276       up     success     success                    3488        
+277    Po277       up     success     success                    3924        
+278    Po278       up     success     success                    3905        
+279    Po279       up     success     success                    3906        
+280    Po280       up     success     success                    3905        
+281    Po281       up     success     success                    3908        
+282    Po282       up     success     success                    3905        
+283    Po283       up     success     success                    3908        
+284    Po284       up     success     success                    3905        
+285    Po285       up     success     success                    3908        
+286    Po286       down*  Not         Consistency Check Not      -           
+                          Applicable  Performed                              
+287    Po287       down*  Not         Consistency Check Not      -           
+                          Applicable  Performed                              
+288    Po288       up     success     success                    3628        
+289    Po289       up     success     success                    3929        
+290    Po290       up     success     success                    3186        
+291    Po291       up     success     success                    3186        
+350    Po350       down*  Not         Consistency Check Not      -           
+                          Applicable  Performed                              
+351    Po351       down*  Not         Consistency Check Not      -           
+                          Applicable  Performed                              
+352    Po352       down*  Not         Consistency Check Not      -           
+                          Applicable  Performed                              
+353    Po353       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+354    Po354       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+355    Po355       down*  Not         Consistency Check Not      -           
+                          Applicable  Performed                              
+356    Po356       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+357    Po357       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 94,3033-303 
+                                                                 4,3130,3....
+358    Po358       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 94,3033-303 
+                                                                 4,3130,3....
+359    Po359       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+360    Po360       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+361    Po361       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+362    Po362       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+363    Po363       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+364    Po364       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+365    Po365       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+366    Po366       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+367    Po367       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+368    Po368       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+369    Po369       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+371    Po371       up     success     success                    3907        
+372    Po372       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+373    Po373       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+376    Po376       up     success     success                    3907        
+377    Po377       up     success     success                    3825,3907   
+378    Po378       up     success     success                    3907        
+382    Po382       down*  success     success                    -           
+383    Po383       up     success     success                    3908        
+384    Po384       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+385    Po385       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+386    Po386       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+387    Po387       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+388    Po388       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+389    Po389       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+390    Po390       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+391    Po391       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+392    Po392       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+393    Po393       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+394    Po394       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+395    Po395       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+396    Po396       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+397    Po397       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+398    Po398       up     success     success                    3908        
+399    Po399       up     success     success                    3908        
+400    Po400       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+401    Po401       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+402    Po402       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+403    Po403       up     success     success                    139,172,174 
+                                                                 ,177-178,18 
+                                                                 0,184,193,2 
+                                                                 80,294,3033 
+                                                                 -3034,31....
+404    Po404       up     success     success                    3908        
+405    Po405       up     success     success                    3908        
+406    Po406       up     success     success                    3908        

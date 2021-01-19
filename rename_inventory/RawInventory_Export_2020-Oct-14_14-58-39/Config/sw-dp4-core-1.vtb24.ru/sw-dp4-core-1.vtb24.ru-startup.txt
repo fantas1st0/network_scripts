@@ -1,0 +1,886 @@
+
+
+!Command: show startup-config
+!Time: Fri Oct  2 00:23:14 2020
+!Startup config saved at: Thu Oct  1 22:22:24 2020
+
+version 8.2(5)
+system interop-mode m2-m3 module 1
+system interop-mode m2-m3 module 2
+power redundancy-mode ps-redundant
+license grace-period
+
+hostname sw-dp4-core-1
+no system admin-vdc
+install feature-set mpls
+vdc sw-dp4-core-1 id 1
+  limit-resource module-type m2xl m3 
+  allow feature-set mpls
+  cpu-share 5
+  allocate interface Ethernet1/1-24
+  allocate interface Ethernet2/1-24
+  allocate interface Ethernet7/1-24
+  allocate interface Ethernet8/1-24
+  limit-resource vlan minimum 16 maximum 4094
+  limit-resource monitor-session minimum 0 maximum 2
+  limit-resource monitor-session-erspan-dst minimum 0 maximum 23
+  limit-resource vrf minimum 2 maximum 4096
+  limit-resource port-channel minimum 0 maximum 768
+  limit-resource u4route-mem minimum 96 maximum 96
+  limit-resource u6route-mem minimum 24 maximum 24
+  limit-resource m4route-mem minimum 58 maximum 58
+  limit-resource m6route-mem minimum 8 maximum 8
+  limit-resource monitor-session-inband-src minimum 0 maximum 1
+  limit-resource anycast_bundleid minimum 0 maximum 16
+  limit-resource monitor-session-mx-exception-src minimum 0 maximum 1
+  limit-resource monitor-session-extended minimum 0 maximum 12
+  limit-resource monitor-rbs-filter minimum 0 maximum 12
+  limit-resource monitor-rbs-product minimum 0 maximum 12
+feature-set mpls
+
+feature telnet
+feature tacacs+
+feature ospf
+feature mpls traffic-eng
+feature mpls ldp
+feature udld
+feature dot1x
+feature lacp
+feature cts
+feature lldp
+
+logging level cts 3
+no password strength-check
+username xxxxxxx password 5 xxxxxxx role network-admin
+username xxxxxxx password 5 xxxxxxx role network-admin
+username xxxxxxxx passphrase  lifetime 99999 warntime 7
+
+banner motd #sw-dp4-core-1 - NEXUS switch#
+
+no ip domain-lookup
+ip domain-name vtb24.ru
+ip tacacs source-interface loopback0
+tacacs-server timeout 10
+tacacs-server host 10.64.0.68 key 7  xxxxxxxx  
+tacacs-server host 10.64.0.69 key 7  xxxxxxxx  
+aaa group server tacacs+ TACACS+ 
+    server 10.64.0.68 
+    server 10.64.0.69 
+    source-interface loopback0
+aaa group server radius aaa-private-sg 
+errdisable recovery interval 60
+errdisable recovery cause link-flap
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause loopback
+errdisable recovery cause storm-control
+errdisable recovery cause security-violation
+errdisable recovery cause psecure-violation
+errdisable recovery cause vpc-peerlink
+errdisable recovery cause failed-port-state
+ip access-list 1
+  10 permit ip 192.168.1.0/24 any 
+  20 permit ip 10.64.0.0/21 any 
+  30 permit ip 10.68.0.0/21 any 
+  40 permit ip 10.69.240.0/24 any 
+  50 permit ip 10.194.160.71/32 any 
+  60 permit ip 10.194.162.33/32 any 
+ip access-list 111
+  10 permit ip 10.64.0.111/32 any 
+diagnostic bootup level bypass
+copp profile strict
+snmp-server contact VTB24 NOC, noc@vtb24.ru
+snmp-server location HQ=ID:0000=MOW=DP4=DC1=126a=R32
+snmp-server source-interface traps loopback0
+snmp-server source-interface informs loopback0
+snmp-server user xxxxxxxx network-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server user xxxxxxxx network-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server host 10.194.160.71 traps version 2c xxxxxxxx 
+snmp-server host 10.194.162.33 traps version 2c xxxxxxxx 
+snmp-server host 10.64.1.75 traps version 2c xxxxxxxx 
+snmp-server host 10.64.1.75 use-vrf default
+rmon event 1 log trap public description FATAL(1) owner PMON@FATAL
+rmon event 2 log trap public description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 log trap public description ERROR(3) owner PMON@ERROR
+rmon event 4 log trap public description WARNING(4) owner PMON@WARNING
+rmon event 5 log trap public description INFORMATION(5) owner PMON@INFO
+snmp-server enable traps switchfabric fabric-crc
+snmp-server enable traps callhome event-notify
+snmp-server enable traps callhome smtp-send-fail
+snmp-server enable traps cfs state-change-notif
+snmp-server enable traps cfs merge-failure
+snmp-server enable traps aaa server-state-change
+snmp-server enable traps feature-control FeatureOpStatusChange
+snmp-server enable traps sysmgr cseFailSwCoreNotifyExtended
+snmp-server enable traps config ccmCLIRunningConfigChanged
+snmp-server enable traps snmp authentication
+snmp-server enable traps mpls ldp session-up
+snmp-server enable traps mpls ldp session-down
+snmp-server enable traps mpls traffic-eng tunnel-up
+snmp-server enable traps mpls traffic-eng tunnel-down
+snmp-server enable traps mpls traffic-eng tunnel-reroute
+snmp-server enable traps mpls traffic-eng tunnel-reopt
+snmp-server enable traps mpls fast-reroute protected
+snmp-server enable traps link cisco-xcvr-mon-status-chg
+snmp-server enable traps vtp notifs
+snmp-server enable traps vtp vlancreate
+snmp-server enable traps vtp vlandelete
+snmp-server enable traps bridge newroot
+snmp-server enable traps bridge topologychange
+snmp-server enable traps stpx inconsistency
+snmp-server enable traps stpx root-inconsistency
+snmp-server enable traps stpx loop-inconsistency
+snmp-server enable traps system Clock-change-notification
+snmp-server enable traps feature-control ciscoFeatOpStatusChange
+snmp-server community xxxxxxxx group network-operator
+snmp-server community xxxxxxxx group network-operator
+snmp-server community xxxxxxxx group network-admin
+snmp-server community xxxxxxxx use-acl 1
+snmp-server community xxxxxxxx use-acl 1
+snmp-server community xxxxxxxx use-ipv4acl 111
+ntp server 10.9.0.3 key 1
+ntp server 10.9.0.4 key 1
+ntp source-interface  loopback0
+ntp authenticate
+ntp authentication-key 0 md5 xxxxxxxx 7
+aaa authentication login default group TACACS+ 
+aaa authentication login console local 
+aaa authorization config-commands default group TACACS+ local 
+aaa authorization commands default group TACACS+ local 
+aaa accounting default group TACACS+ 
+aaa authentication login error-enable 
+tacacs-server directed-request 
+
+vlan 1
+vlan 1
+
+mpls traffic-eng configuration
+  trace buffer error size 16
+  trace buffer warning size 16
+  trace buffer event size 16
+  logging lsp setups
+  logging lsp teardowns
+  logging tunnel lsp-selection
+  logging tunnel path change
+  reoptimize timers frequency 30
+  explicit-path name TO_M35-EDGE-3
+    index 1 next-address 10.8.252.3
+    index 2 next-address 10.8.252.56
+udld aggressive
+vrf context management
+  ip route 0.0.0.0/0 10.67.0.1
+port-channel load-balance src-dst ip-l4port    
+
+
+interface mgmt0
+  description [MGMT] sw-edge-1-e102/1/47-48
+  vrf member management
+  ip address 10.67.0.37/24
+
+interface port-channel3
+  description [L3] sw-dp4-data-11
+  mpls ip
+  mtu 9216
+  ip address 10.8.1.181/30
+  ip ospf cost 10000
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+
+interface port-channel4
+  description [L3] sw-dp4-data-12
+  mpls ip
+  mtu 9216
+  ip address 10.8.1.185/30
+  ip ospf cost 10000
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+
+interface port-channel5
+  description [L3] sw-edge-1
+  mpls ip
+  mtu 9216
+  ip address 10.8.1.209/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+
+interface port-channel10
+  description [L3] sw-dp4-core-2
+  mpls ip
+  mtu 9216
+  ip address 10.8.255.177/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+
+interface port-channel12
+  mpls traffic-eng tunnels
+  mpls traffic-eng bandwidth percent 100
+  description [L3] sw-dp4-core-2
+  mpls ip
+  mtu 9216
+  ip address 10.8.255.37/30
+  ip ospf cost 10000
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+
+interface port-channel1051
+  description [L3] sw-pr1-core-1
+  cts manual
+    no propagate-sgt
+  mpls ip
+  mtu 9216
+  ip address 10.8.255.137/30
+  ip ospf cost 10000
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+
+interface port-channel1052
+  description [L3] sw-pr1-core-2 via OBK-13
+  cts manual
+    no propagate-sgt
+  mpls ip
+  mtu 9216
+  ip address 10.8.255.141/30
+  ip ospf cost 10000
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+
+interface tunnel-te7056
+  mpls ip
+  ip unnumbered loopback0
+  ip ospf cost 16
+  no ip ospf passive-interface
+  no shutdown
+  destination 10.8.252.56
+  forwarding-adjacency
+  path-option 10 explicit name TO_M35-EDGE-3
+  path-option 20 dynamic
+
+interface Ethernet1/1
+  description [TEC] sw-dp4-core-2
+  mtu 9216
+  channel-group 12 mode active
+  no shutdown
+
+interface Ethernet1/2
+  mpls traffic-eng tunnels
+  mpls traffic-eng bandwidth percent 100
+  description [L3] sw-m35-core-1
+  cts manual
+    no propagate-sgt
+    sap pmk 409612e6208007eb0dd9bc62f9dc2bb2882ee2d135188ef524c88e68d7c36c7c
+  mpls ip
+  mtu 9216
+  ip address 10.8.255.45/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet1/3
+  description [L3] dp4-x24-br-1 te0/0/0/32
+  mpls ip
+  mtu 9202
+  ip address 10.8.1.241/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet1/4
+  description [L3] sw-dp4-lan-1
+  mpls ip
+  mtu 9216
+  ip address 10.8.1.157/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet1/5
+  description [L3] sw-dp4-data-3notm
+  mpls ip
+  mtu 9216
+  ip address 10.8.1.125/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet1/6
+  description [L3] sw-edge-1
+  mpls ip
+  mtu 9216
+  ip address 10.8.1.141/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+
+interface Ethernet1/7
+  description [L3] sw-v43-core-1
+  cts manual
+    no propagate-sgt
+    sap pmk 409612e6208007eb0dd9bc62f9dc2bb2882ee2d135188ef524c88e68d7c36c7c
+  mpls ip
+  mtu 9216
+  ip address 10.8.255.101/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet1/8
+  description [L3] r-dp4-rr-1
+  mpls ip
+  mtu 9216
+  ip address 10.8.1.201/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet1/9
+
+interface Ethernet1/10
+  description [L3] sw-nb37-lan-1
+  mpls ip
+  mtu 9216
+  ip address 10.8.2.121/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet1/11
+  description [L3] sw-arg3-core-1
+  cts manual
+    no propagate-sgt
+    sap pmk 409612e6208007eb0dd9bc62f9dc2bb2882ee2d135188ef524c88e68d7c36c7c
+  mpls ip
+  mtu 9216
+  ip address 10.8.255.129/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet1/12
+  description [TEC] sw-edge-1
+  mtu 9216
+  channel-group 5 mode active
+  no shutdown
+
+interface Ethernet1/13
+  description [PC] sw-pr1-core-1
+  cts manual
+    no propagate-sgt
+    sap pmk 409612e6208007eb0dd9bc62f9dc2bb2882ee2d135188ef524c88e68d7c36c7c
+  mtu 9216
+  channel-group 1051 mode active
+  no shutdown
+
+interface Ethernet1/14
+  description [PC] sw-pr1-core-1
+  cts manual
+    no propagate-sgt
+    sap pmk 409612e6208007eb0dd9bc62f9dc2bb2882ee2d135188ef524c88e68d7c36c7c
+  mtu 9216
+  channel-group 1051 mode active
+  no shutdown
+
+interface Ethernet1/15
+  description notm[PC]sw-pr1-core-2
+  cts manual
+    no propagate-sgt
+    sap pmk 409612e6208007eb0dd9bc62f9dc2bb2882ee2d135188ef524c88e68d7c36c7c
+  mtu 9216
+  channel-group 1052 mode active
+
+interface Ethernet1/16
+  description notm [PC] sw-pr1-core-2
+  cts manual
+    no propagate-sgt
+    sap pmk 409612e6208007eb0dd9bc62f9dc2bb2882ee2d135188ef524c88e68d7c36c7c
+  mtu 9216
+  channel-group 1052 mode active
+
+interface Ethernet1/17
+  description [PC] sw-pr1-core-2
+  cts manual
+    no propagate-sgt
+    sap pmk 409612e6208007eb0dd9bc62f9dc2bb2882ee2d135188ef524c88e68d7c36c7c
+  mtu 9216
+  channel-group 1052 mode active
+  no shutdown
+
+interface Ethernet1/18
+  description [PC] sw-pr1-core-2
+  cts manual
+    no propagate-sgt
+    sap pmk 409612e6208007eb0dd9bc62f9dc2bb2882ee2d135188ef524c88e68d7c36c7c
+  mtu 9216
+  channel-group 1052 mode active
+  no shutdown
+
+interface Ethernet1/19
+
+interface Ethernet1/20
+  description [L3] dp4-dc-pe-501 C-00001742
+  mpls ip
+  mtu 9216
+  ip address 10.8.1.217/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet1/21
+  description [PC] sw-dp4-data-11
+  mtu 9216
+  channel-group 3 mode active
+  no shutdown
+
+interface Ethernet1/22
+  description [PC] sw-dp4-data-11
+  mtu 9216
+  channel-group 3 mode active
+  no shutdown
+
+interface Ethernet1/23
+  description [PC] sw-dp4-data-11
+  mtu 9216
+  channel-group 3 mode active
+  no shutdown
+
+interface Ethernet1/24
+  description [PC] sw-dp4-data-11
+  mtu 9216
+  channel-group 3 mode active
+  no shutdown
+
+interface Ethernet2/1
+  description [TEC] sw-dp4-core-2
+  mtu 9216
+  channel-group 12 mode active
+  no shutdown
+
+interface Ethernet2/2
+  mpls traffic-eng tunnels
+  mpls traffic-eng bandwidth percent 100
+  description [L3] sw-m35-core-2
+  cts manual
+    no propagate-sgt
+    sap pmk 409612e6208007eb0dd9bc62f9dc2bb2882ee2d135188ef524c88e68d7c36c7c
+  mpls ip
+  mtu 9216
+  ip address 10.8.255.49/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet2/3
+  description [L3] dp4-x24-br-2 te0/0/0/32
+  mpls ip
+  mtu 9202
+  ip address 10.8.1.245/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet2/4
+  description [L3] sw-dp4-lan-2
+  mpls ip
+  mtu 9216
+  ip address 10.8.1.161/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet2/5
+  description [L3] sw-dp4-data-4 notm
+  mpls ip
+  mtu 9216
+  ip address 10.8.1.129/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet2/6
+  mpls traffic-eng tunnels
+  mpls traffic-eng bandwidth percent 100
+  description [L3] r-dp4-edge-3
+  mpls ip
+  mtu 9216
+  ip address 10.8.1.173/30
+  ip ospf cost 16
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet2/7
+  description [L3] sw-v43-core-2
+  cts manual
+    no propagate-sgt
+    sap pmk 409612e6208007eb0dd9bc62f9dc2bb2882ee2d135188ef524c88e68d7c36c7c
+  mpls ip
+  mtu 9216
+  ip address 10.8.255.105/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet2/8
+  description [L3] r-dp4-edge-4 Xe0/0/0 RF-001554937
+  mpls ip
+  mtu 9216
+  ip address 10.8.1.233/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet2/9
+
+interface Ethernet2/10
+
+interface Ethernet2/11
+
+interface Ethernet2/12
+  description [TEC] sw-edge-1
+  mtu 9216
+  channel-group 5 mode active
+  no shutdown
+
+interface Ethernet2/13
+  description [PC] sw-pr1-core-1
+  cts manual
+    no propagate-sgt
+    sap pmk 409612e6208007eb0dd9bc62f9dc2bb2882ee2d135188ef524c88e68d7c36c7c
+  mtu 9216
+  channel-group 1051 mode active
+  no shutdown
+
+interface Ethernet2/14
+  description [PC] sw-pr1-core-1
+  cts manual
+    no propagate-sgt
+    sap pmk 409612e6208007eb0dd9bc62f9dc2bb2882ee2d135188ef524c88e68d7c36c7c
+  mtu 9216
+  channel-group 1051 mode active
+  no shutdown
+
+interface Ethernet2/15
+  description notm [PC] sw-pr1-core-2
+  cts manual
+    no propagate-sgt
+    sap pmk 409612e6208007eb0dd9bc62f9dc2bb2882ee2d135188ef524c88e68d7c36c7c
+  mtu 9216
+  channel-group 1052 mode active
+
+interface Ethernet2/16
+  description notm [PC] sw-pr1-core-2
+  cts manual
+    no propagate-sgt
+    sap pmk 409612e6208007eb0dd9bc62f9dc2bb2882ee2d135188ef524c88e68d7c36c7c
+  mtu 9216
+  channel-group 1052 mode active
+
+interface Ethernet2/17
+  description [PC] sw-pr1-core-2
+  cts manual
+    no propagate-sgt
+    sap pmk 409612e6208007eb0dd9bc62f9dc2bb2882ee2d135188ef524c88e68d7c36c7c
+  mtu 9216
+  channel-group 1052 mode active
+  no shutdown
+
+interface Ethernet2/18
+  description [PC] sw-pr1-core-2
+  cts manual
+    no propagate-sgt
+    sap pmk 409612e6208007eb0dd9bc62f9dc2bb2882ee2d135188ef524c88e68d7c36c7c
+  mtu 9216
+  channel-group 1052 mode active
+  no shutdown
+
+interface Ethernet2/19
+
+interface Ethernet2/20
+  description [L3] dp4-dc-pe-502 C-00001742
+  mpls ip
+  mtu 9216
+  ip address 10.8.1.225/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet2/21
+  description [PC] sw-dp4-data-12
+  mtu 9216
+  channel-group 4 mode active
+  no shutdown
+
+interface Ethernet2/22
+  description [PC] sw-dp4-data-12
+  mtu 9216
+  channel-group 4 mode active
+  no shutdown
+
+interface Ethernet2/23
+  description [PC] sw-dp4-data-12
+  mtu 9216
+  channel-group 4 mode active
+  no shutdown
+
+interface Ethernet2/24
+  description [PC] sw-dp4-data-12
+  mtu 9216
+  channel-group 4 mode active
+  no shutdown
+
+interface Ethernet7/1
+  description [PC] sw-dp4-core-2
+  mtu 9216
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet7/2
+  description [L3] sw-pr1-core-1
+  cts manual
+    no propagate-sgt
+    sap pmk 409612e6208007eb0dd9bc62f9dc2bb2882ee2d135188ef524c88e68d7c36c7c
+  mpls ip
+  mtu 9216
+  ip address 10.8.255.182/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet7/3
+  description [L3] sw-dp4-data-11 eth8/20
+  mpls ip
+  mtu 9216
+  ip address 10.8.13.101/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet7/4
+
+interface Ethernet7/5
+
+interface Ethernet7/6
+
+interface Ethernet7/7
+
+interface Ethernet7/8
+
+interface Ethernet7/9
+
+interface Ethernet7/10
+
+interface Ethernet7/11
+
+interface Ethernet7/12
+
+interface Ethernet7/13
+
+interface Ethernet7/14
+
+interface Ethernet7/15
+
+interface Ethernet7/16
+
+interface Ethernet7/17
+
+interface Ethernet7/18
+
+interface Ethernet7/19
+
+interface Ethernet7/20
+
+interface Ethernet7/21
+
+interface Ethernet7/22
+
+interface Ethernet7/23
+
+interface Ethernet7/24
+
+interface Ethernet8/1
+  description [PC] sw-dp4-core-2
+  mtu 9216
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet8/2
+  description [L3] sw-pr1-core-2
+  cts manual
+    no propagate-sgt
+    sap pmk 409612e6208007eb0dd9bc62f9dc2bb2882ee2d135188ef524c88e68d7c36c7c
+  mpls ip
+  mtu 9216
+  ip address 10.8.255.190/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet8/3
+  description [L3] sw-dp4-data-12 eth8/20
+  mpls ip
+  mtu 9216
+  ip address 10.8.13.105/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet8/4
+
+interface Ethernet8/5
+
+interface Ethernet8/6
+
+interface Ethernet8/7
+
+interface Ethernet8/8
+
+interface Ethernet8/9
+
+interface Ethernet8/10
+
+interface Ethernet8/11
+
+interface Ethernet8/12
+
+interface Ethernet8/13
+
+interface Ethernet8/14
+
+interface Ethernet8/15
+
+interface Ethernet8/16
+
+interface Ethernet8/17
+
+interface Ethernet8/18
+
+interface Ethernet8/19
+
+interface Ethernet8/20
+
+interface Ethernet8/21
+
+interface Ethernet8/22
+
+interface Ethernet8/23
+
+interface Ethernet8/24
+
+interface loopback0
+  description [L3] router-id
+  ip address 10.8.252.1/32
+  ip router ospf 1 area 0.0.0.0
+clock timezone MSK 3 0
+cli alias name wr copy running-config startup-config
+no terminal log-all
+line console
+  terminal width  80
+line vty
+boot kickstart bootflash:/n7000-s2-kickstart.8.2.5.bin sup-1
+boot system bootflash:/n7000-s2-dk9.8.2.5.bin sup-1
+boot kickstart bootflash:/n7000-s2-kickstart.8.2.5.bin sup-2
+boot system bootflash:/n7000-s2-dk9.8.2.5.bin sup-2
+mpls ldp configuration
+  router-id Lo0 force
+no system auto-upgrade epld
+logging logfile device.log 7 size 1000000
+logging server 10.64.0.93
+logging source-interface loopback0
+logging timestamp milliseconds
+logging origin-id hostname
+router ospf 1
+  router-id 10.8.252.1
+  log-adjacency-changes
+  timers throttle spf 10 100 5000
+  timers lsa-arrival 80
+  timers throttle lsa 10 100 5000
+  passive-interface default
+  mpls traffic-eng area 0.0.0.0
+  mpls traffic-eng router-id loopback0
+
+

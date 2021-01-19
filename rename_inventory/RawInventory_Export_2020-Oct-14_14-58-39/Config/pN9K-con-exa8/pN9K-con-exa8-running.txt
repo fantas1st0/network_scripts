@@ -1,0 +1,395 @@
+
+
+!Command: show running-config
+!Running configuration last done at: Wed Sep  9 12:19:29 2020
+!Time: Fri Oct  2 00:22:31 2020
+
+version 7.0(3)I7(6) Bios:version 05.33 
+hostname pN9K-con-exa8
+vdc pN9K-con-exa8 id 1
+  limit-resource vlan minimum 16 maximum 4094
+  limit-resource vrf minimum 2 maximum 4096
+  limit-resource port-channel minimum 0 maximum 511
+  limit-resource u4route-mem minimum 248 maximum 248
+  limit-resource u6route-mem minimum 96 maximum 96
+  limit-resource m4route-mem minimum 58 maximum 58
+  limit-resource m6route-mem minimum 8 maximum 8
+
+feature telnet
+feature tacacs+
+cfs eth distribute
+feature interface-vlan
+feature lacp
+feature vpc
+feature lldp
+clock timezone MSK 3 0
+
+no password strength-check
+username xxxxxxx password 5 xxxxxxx role network-admin
+username xxxxxxx password 5 xxxxxxx role network-admin
+
+banner motd ^
+
+PR1 DC.
+Nexus 9000.
+
+EXADATA management switch.
+
+VTB authorized staff only
+
+^
+
+no ip domain-lookup
+tacacs-server host 10.128.128.11 key 7  xxxxxxxx  
+tacacs-server host 10.164.140.150 key 7  xxxxxxxx  
+aaa group server tacacs+ MSK-TAC 
+    server 10.128.128.11 
+    server 10.164.140.150 
+    source-interface Vlan2951
+system default switchport
+errdisable recovery interval 60
+errdisable recovery cause link-flap
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause loopback
+errdisable recovery cause storm-control
+errdisable recovery cause security-violation
+errdisable recovery cause psecure-violation
+errdisable recovery cause vpc-peerlink
+errdisable recovery cause failed-port-state
+ip access-list 111
+  10 permit ip 10.64.0.111/32 any 
+ip access-list Snmp-Enable
+  10 permit ip 10.132.128.0/24 any 
+  20 permit ip 10.150.128.0/24 any 
+  50 permit ip 10.164.147.0/24 any 
+copp profile lenient
+snmp-server location PR1,ER1-3/02
+snmp-server user xxxxxxxx network-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server user xxxxxxxx network-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server host 10.132.128.21 traps version 2c xxxxxxxx 
+snmp-server host 10.132.128.21 use-vrf default
+snmp-server host 10.164.147.100 traps version 2c xxxxxxxx 
+snmp-server host 10.164.147.100 use-vrf default
+snmp-server host 10.150.128.100 traps version 2c xxxxxxxx 
+snmp-server host 10.150.128.100 use-vrf default
+rmon event 1 description FATAL(1) owner PMON@FATAL
+rmon event 2 description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 description ERROR(3) owner PMON@ERROR
+rmon event 4 description WARNING(4) owner PMON@WARNING
+rmon event 5 description INFORMATION(5) owner PMON@INFO
+snmp-server enable traps cfs state-change-notif
+snmp-server enable traps cfs merge-failure
+snmp-server enable traps feature-control FeatureOpStatusChange
+snmp-server enable traps sysmgr cseFailSwCoreNotifyExtended
+snmp-server enable traps config ccmCLIRunningConfigChanged
+snmp-server enable traps bridge newroot
+snmp-server enable traps bridge topologychange
+snmp-server enable traps system Clock-change-notification
+snmp-server enable traps feature-control ciscoFeatOpStatusChange
+snmp-server community xxxxxxxx group network-operator
+snmp-server community xxxxxxxx group network-admin
+snmp-server community xxxxxxxx use-acl 111
+snmp-server community xxxxxxxx use-acl Snmp-Enable
+ntp server 10.130.255.100 use-vrf default
+ntp server 10.164.0.200 use-vrf default
+ntp source-interface  Vlan2951
+aaa authentication login default group MSK-TAC local 
+aaa authentication login console local 
+aaa accounting default group MSK-TAC 
+
+ip route 0.0.0.0/0 10.150.240.1
+vlan 1,2951
+vlan 2951
+  name MGMT
+
+spanning-tree pathcost method long
+spanning-tree port type edge default
+spanning-tree port type edge bpduguard default
+spanning-tree loopguard default
+spanning-tree vlan 1-3967 priority 53248
+vrf context management
+
+
+interface Vlan1
+
+interface Vlan2951
+  description [L3] mgmt
+  no shutdown
+  management
+  ip address 10.150.243.249/22
+
+interface port-channel1
+  switchport mode trunk
+  switchport trunk allowed vlan 2951
+
+interface Ethernet1/1
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/2
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/3
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/4
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/5
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/6
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/7
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/8
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/9
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/10
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/11
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/12
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/13
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/14
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/15
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/16
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/17
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/18
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/19
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/20
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/21
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/22
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/23
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/24
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/25
+  shutdown
+  switchport mode trunk
+  switchport trunk allowed vlan 2951
+
+interface Ethernet1/26
+  shutdown
+  switchport mode trunk
+  switchport trunk allowed vlan 2951
+
+interface Ethernet1/27
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/28
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/29
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/30
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/31
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/32
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/33
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/34
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/35
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/36
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/37
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/38
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/39
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/40
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/41
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/42
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/43
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/44
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/45
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/46
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/47
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type edge
+
+interface Ethernet1/48
+  description [MNGT] RF-001183092
+  switchport access vlan 2951
+  spanning-tree port type network
+
+interface Ethernet1/49
+  description pN5k10-1
+  switchport mode trunk
+  switchport trunk allowed vlan 2951
+  channel-group 1 mode active
+
+interface Ethernet1/50
+  description pN5k10-2
+  switchport mode trunk
+  switchport trunk allowed vlan 2951
+  channel-group 1 mode active
+
+interface Ethernet1/51
+
+interface Ethernet1/52
+
+interface Ethernet1/53
+
+interface Ethernet1/54
+
+interface mgmt0
+  vrf member management
+cli alias name wr copy running-config startup-config
+line console
+line vty
+boot nxos bootflash:/nxos.7.0.3.I7.6.bin 
+no system default switchport shutdown
+
+
+

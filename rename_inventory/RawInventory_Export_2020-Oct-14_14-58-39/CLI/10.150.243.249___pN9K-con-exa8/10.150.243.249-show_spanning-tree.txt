@@ -1,0 +1,35 @@
+
+
+VLAN2951
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    35719
+             Address     00de.fb1a.5242
+             Cost        1002
+             Port        4096 (port-channel1)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    56199  (priority 53248 sys-id-ext 2951)
+             Address     d478.9bd3.26df
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po1              Root FWD 1000      128.4096 P2p 
+Eth1/1           Desg FWD 20000     128.1    Edge P2p 
+Eth1/23          Desg FWD 20000     128.89   Edge P2p 
+Eth1/24          Desg FWD 20000     128.93   Edge P2p 
+Eth1/27          Desg FWD 20000     128.105  Edge P2p 
+Eth1/28          Desg FWD 20000     128.109  Edge P2p 
+Eth1/29          Desg FWD 20000     128.113  Edge P2p 
+Eth1/30          Desg FWD 20000     128.117  Edge P2p 
+Eth1/37          Desg FWD 20000     128.145  Edge P2p 
+Eth1/38          Desg FWD 20000     128.149  Edge P2p 
+Eth1/39          Desg FWD 20000     128.153  Edge P2p 
+Eth1/40          Desg FWD 20000     128.157  Edge P2p 
+Eth1/41          Desg FWD 20000     128.161  Edge P2p 
+Eth1/42          Desg FWD 20000     128.165  Edge P2p 
+Eth1/43          Desg FWD 20000     128.169  Edge P2p 
+Eth1/44          Desg FWD 20000     128.173  Edge P2p 
+Eth1/45          Desg FWD 20000     128.177  Edge P2p 
+Eth1/46          Desg FWD 20000     128.181  Edge P2p 
+

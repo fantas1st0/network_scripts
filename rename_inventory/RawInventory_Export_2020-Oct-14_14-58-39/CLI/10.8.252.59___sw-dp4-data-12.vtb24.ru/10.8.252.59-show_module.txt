@@ -1,0 +1,87 @@
+
+Mod  Ports  Module-Type                         Model              Status
+---  -----  ----------------------------------- ------------------ ----------
+8    24     10/40 Gbps Ethernet Module          N77-F324FQ-25      ok
+9    0      Supervisor Module-2                 N77-SUP2E          active *
+10   0      Supervisor Module-2                 N77-SUP2E          ha-standby
+11   24     10/40 Gbps Ethernet Module          N77-F324FQ-25      ok
+12   24     10/40 Gbps Ethernet Module          N77-F324FQ-25      ok
+13   24     10/40 Gbps Ethernet Module          N77-F324FQ-25      ok
+14   24     10/40 Gbps Ethernet Module          N77-F324FQ-25      ok
+15   24     10/40 Gbps Ethernet Module          N77-F324FQ-25      ok
+16   24     10/40 Gbps Ethernet Module          N77-F324FQ-25      ok
+17   24     10/40 Gbps Ethernet Module          N77-F324FQ-25      ok
+18   24     10/40 Gbps Ethernet Module          N77-F324FQ-25      ok
+
+Mod  Sw               Hw
+---  ---------------  ------
+8    7.3(3)D1(1)      1.3     
+9    7.3(3)D1(1)      1.2     
+10   7.3(3)D1(1)      1.2     
+11   7.3(3)D1(1)      1.0     
+12   7.3(3)D1(1)      1.0     
+13   7.3(3)D1(1)      1.1     
+14   7.3(3)D1(1)      1.0     
+15   7.3(3)D1(1)      1.0     
+16   7.3(3)D1(1)      1.0     
+17   7.3(3)D1(1)      1.0     
+18   7.3(3)D1(1)      1.0     
+
+
+Mod  MAC-Address(es)                         Serial-Num
+---  --------------------------------------  ----------
+8    f4-db-e6-cc-09-de to f4-db-e6-cc-0a-4f  JAE22390RLN
+9    28-c7-ce-59-1b-d8 to 28-c7-ce-59-1b-ea  JAE1825078X
+10   28-c7-ce-59-1b-b2 to 28-c7-ce-59-1b-c4  JAE1825079V
+11   28-c7-ce-58-b1-6a to 28-c7-ce-58-b1-db  JAE182306C0
+12   28-c7-ce-58-d4-26 to 28-c7-ce-58-d4-97  JAE182405X6
+13   74-a2-e6-fc-6a-e2 to 74-a2-e6-fc-6b-53  JAE190302FC
+14   28-c7-ce-58-8b-90 to 28-c7-ce-58-8c-01  JAE182303T9
+15   28-c7-ce-58-b4-fa to 28-c7-ce-58-b5-6b  JAE182306AN
+16   28-c7-ce-58-8b-1e to 28-c7-ce-58-8b-8f  JAE1823068Z
+17   28-c7-ce-58-cd-06 to 28-c7-ce-58-cd-77  JAE182405UT
+18   28-c7-ce-58-92-3e to 28-c7-ce-58-92-af  JAE182306AT
+
+Mod  Online Diag Status
+---  ------------------
+8    Pass
+9    Pass
+10   Pass
+11   Pass
+12   Pass
+13   Pass
+14   Pass
+15   Pass
+16   Pass
+17   Pass
+18   Pass
+
+Xbar Ports  Module-Type                         Model              Status
+---  -----  ----------------------------------- ------------------ ----------
+1    0      Fabric Module 2                     N77-C7718-FAB-2    ok
+2    0      Fabric Module 2                     N77-C7718-FAB-2    ok
+3    0      Fabric Module 2                     N77-C7718-FAB-2    ok
+4    0      Fabric Module 2                     N77-C7718-FAB-2    ok
+5    0      Fabric Module 2                     N77-C7718-FAB-2    ok
+6    0      Fabric Module 2                     N77-C7718-FAB-2    ok
+
+Xbar Sw               Hw
+---  ---------------  ------
+1    NA               1.1     
+2    NA               1.1     
+3    NA               1.1     
+4    NA               1.1     
+5    NA               1.1     
+6    NA               1.1     
+
+
+Xbar MAC-Address(es)                         Serial-Num
+---  --------------------------------------  ----------
+1    NA                                      JAF1821ADDD
+2    NA                                      JAF1820ACRD
+3    NA                                      JAF1820ACQQ
+4    NA                                      JAF1820ACSS
+5    NA                                      JAF1820ACQP
+6    NA                                      JAF1820ACPP
+
+* this terminal session 

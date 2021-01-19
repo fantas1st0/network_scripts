@@ -10,13 +10,12 @@ from pprint import pprint
 import os
 import sys
 sys.path.append('../device_inventory')
-from device_list import get_devices
+from device_list import get_data
 
 def find_ver(device_list):
 	ver_dict = {}
 	show_ver_list = []
 	os.chdir("../define_software_type")
-	cwd = os.getcwd()
 	for device in device_list:
 		ver_file = device + "-show_version" + ".txt"
 		with open (ver_file) as f:
@@ -32,6 +31,6 @@ def find_ver(device_list):
 
 if __name__ == '__main__':
 	device_file = "/Users/alexguse/Documents/Python/Scripts/network_scripts/device_inventory/device_list.xlsx"
-	device_list = get_devices(device_file)
+	device_list = get_data(device_file)
 	soft = find_ver(device_list)
 	pprint(soft)

@@ -1,0 +1,3613 @@
+
+
+!Command: show startup-config
+!Time: Fri Oct  2 00:27:07 2020
+!Startup config saved at: Mon Sep 21 15:01:50 2020
+
+version 7.3(5)N1(1)
+interface breakout slot 1 port 1-6 map 10g-4x
+interface breakout slot 2 port 1-3 map 10g-4x
+interface breakout slot 3 port 1-6 map 10g-4x
+interface breakout slot 4 port 1-6 map 10g-4x
+
+hostname pN5k11-1
+
+feature telnet
+feature tacacs+
+cfs eth distribute
+feature udld
+feature interface-vlan
+feature lacp
+feature vpc
+feature lldp
+feature fex
+
+username xxxxxxx password 5 xxxxxxx role network-admin
+password xxxxxxxx
+
+banner motd ^
+
+Perovo DC.
+Nexus 5648Q.
+
+VPC Pair 11, unit 1.
+access:
+VTB authorized staff only
+
+^
+
+no ip domain-lookup
+tacacs-server host 10.128.128.11 key 7  xxxxxxxx 
+tacacs-server host 10.164.140.150 key 7  xxxxxxxx 
+aaa group server tacacs+ MSK-TAC
+  server 10.128.128.11
+  server 10.164.140.150
+  source-interface Vlan3799
+logging event link-status default
+service unsupported-transceiver
+ip access-list 111
+  10 permit ip 10.64.0.111/32 any
+ip access-list Snmp-Enable
+  10 permit ip 10.132.128.0/24 any
+  20 permit ip 10.150.128.0/24 any
+  50 permit ip 10.164.147.0/24 any
+fex 101
+  pinning max-links 1
+  description "pN2K11-101"
+fex 103
+  pinning max-links 1
+  description "pN2K11-103"
+fex 105
+  pinning max-links 1
+  description "pN2K11-105"
+fex 107
+  pinning max-links 1
+  description "pN2K11-107"
+fex 109
+  pinning max-links 1
+  description "pN2K11-109"
+fex 111
+  pinning max-links 1
+  description "pN2K11-111"
+fex 113
+  pinning max-links 1
+  description "pN2K11-113"
+fex 115
+  pinning max-links 1
+  description "pN2K11-115"
+fex 117
+  pinning max-links 1
+  description "pN2K11-117"
+fex 119
+  pinning max-links 1
+  description "pN2K11-119"
+fex 121
+  pinning max-links 1
+  description "pN2K11-121"
+fex 123
+  pinning max-links 1
+  description "FEX0123"
+fex 127
+  pinning max-links 1
+  description "FEX0127"
+snmp-server location MSK, Perovskoe highway 1, building 1, room ER3, rack _____
+snmp-server user xxxxxxxx network-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server host 10.132.128.21 traps version 2c xxxxxxxx 
+snmp-server host 10.132.128.21 use-vrf default
+snmp-server host 10.164.147.100 traps version 2c xxxxxxxx 
+snmp-server host 10.164.147.100 use-vrf default
+snmp-server host 10.150.128.100 traps version 2c xxxxxxxx 
+snmp-server host 10.150.128.100 use-vrf default
+snmp-server enable traps cfs state-change-notif
+snmp-server enable traps cfs merge-failure
+snmp-server enable traps feature-control FeatureOpStatusChange
+snmp-server enable traps sysmgr cseFailSwCoreNotifyExtended
+snmp-server enable traps config ccmCLIRunningConfigChanged
+snmp-server enable traps bridge newroot
+snmp-server enable traps bridge topologychange
+snmp-server enable traps feature-control ciscoFeatOpStatusChange
+snmp-server community xxxxxxxx group network-admin
+snmp-server community xxxxxxxx group network-operator
+snmp-server community xxxxxxxx use-acl Snmp-Enable
+snmp-server community xxxxxxxx use-acl 111
+ntp server 10.130.255.100
+ntp server 10.164.0.200
+ntp source-interface Vlan3799
+aaa authentication login default group MSK-TAC local
+aaa authentication login console group MSK-TAC local
+aaa accounting default group MSK-TAC
+
+ip route 10.0.0.0/8 10.150.255.65
+vlan 1
+vlan 2951
+  name new_Mail_mgmt
+vlan 3035
+  name VTB-MM-SBC-VTB-Core
+vlan 3036
+  name VTB-Core-SBC-VTB-MM
+vlan 3105
+  name VTB-MM-SRV
+vlan 3106
+  name Local_HB_HCP
+vlan 3155
+  name VDI-SRV2
+vlan 3187
+  name DBO_PROM_STRETCH
+vlan 3192
+  name Stretched_nInet-Proxy
+vlan 3428
+  name vdi_vipinet_vmk0
+vlan 3535
+  name pLBF5-APPSRV
+vlan 3545
+  name LCL_hrtbit_VERTICA
+vlan 3565
+  name OpenShift-3
+vlan 3566
+  name OpenShift-4
+vlan 3567
+  name OpenShift-5-TEST
+vlan 3573
+  name MM-CUCM
+vlan 3597
+  name VTB-SOMIB-Servers
+vlan 3656
+  name VTB-RF-24-SRV2
+vlan 3662
+  name VTB-RF-CAP-SRV2
+vlan 3668
+  name VTB-RF-BM-SRV2
+vlan 3674
+  name VTB-RF-SRV2
+vlan 3768
+  name VTB-FBS_LOCAL
+vlan 3769
+  name DBO_TEST_STRETCH
+vlan 3770
+  name DBO_PROM_LOCAL
+vlan 3771
+  name DBO_TEST_LOCAL
+vlan 3772
+  name nInet-BE_STRETCH
+vlan 3773
+  name nInet-BE_LOCAL
+vlan 3774
+  name nInet_for_srv
+vlan 3776
+  name 10.194.133.0-24_VTB-Core
+vlan 3782
+  name nInet-Proxy_LOCAL
+vlan 3783
+  name VTB-EFX-servers
+vlan 3784
+  name VTB-KBR_LOCAL
+vlan 3791
+vlan 3799
+  name inbound_MNG_pN5K
+vlan 3801
+  name cloud_3801
+vlan 3802
+  name cloud_3802
+vlan 3803
+  name cloud_3803
+vlan 3804
+  name cloud_3804
+vlan 3805
+  name cloud_3805
+vlan 3806
+  name cloud_3806
+vlan 3807
+  name cloud_3807
+vlan 3808
+  name cloud_3808
+vlan 3809
+  name cloud_3809
+vlan 3810
+  name Cloud3810
+vlan 3811
+  name Cloud3811
+vlan 3812
+  name cloud_3812
+vlan 3815
+  name Cloud3815
+vlan 3816
+  name Cloud3816
+vlan 3821
+  name cloud_3821
+vlan 3824
+  name cloud_3824
+vlan 3825
+  name cloud_3825
+vlan 3826
+  name Cloud3826
+vlan 3828
+  name 172.16.227.64_cloud
+vlan 3829
+  name cloud_3829
+vlan 3830
+  name Cloud_3970_DEVCORP
+vlan 3835
+  name cloud_3835
+vlan 3836
+  name cloud_3836
+vlan 3837
+  name Cloud_3837_M-BANK-DC
+vlan 3839
+  name Cloud_3839_M-BANK-DC
+vlan 3840
+  name Cloud3840
+vlan 3841
+  name Cloud3841
+vlan 3842
+  name cloud_3842
+vlan 3843
+  name cloud_3843
+vlan 3844
+  name cloud_3844_test_LENOVO
+vlan 3845
+  name Cloud3845
+vlan 3846
+  name Cloud3846
+vlan 3847
+  name Cloud3847
+vlan 3850
+  name Cloud3850
+vlan 3852
+  name cloud_3852
+vlan 3853
+  name cloud_3853
+vlan 3854
+  name Cloud3854
+vlan 3855
+  name Cloud3855
+vlan 3856
+  name Cloud3856
+vlan 3857
+  name cloud_3857
+vlan 3858
+  name cloud_3858
+vlan 3859
+  name Cloud3859
+vlan 3860
+  name Cloud3860
+vlan 3861
+  name Cloud3861
+vlan 3862
+  name Cloud3862
+vlan 3865
+  name Cloud_3865
+vlan 3866
+  name CLOUD_RSRV
+vlan 3867
+  name Cloud_3870_M-BANK-DC
+vlan 3868
+  name Cloud_3868
+vlan 3901
+  name cloud_3901
+vlan 3904
+  name cloud_3904
+vlan 3915
+  name Cloud-3915
+vlan 3926
+  name Cloud_3926
+vlan 3950
+  name Cloud3950
+vlan 3965
+  name Cloud_3965
+
+spanning-tree vlan 1-3967 priority 36864
+vrf context management
+  ip route 0.0.0.0/0 10.76.64.1
+vrf context vpc-keepalive
+  description vPC KeepAlive Only
+vpc domain 61
+  role priority 100
+  peer-keepalive destination 10.150.255.170 source 10.150.255.169 vrf vpc-keepalive
+  delay restore 150
+
+
+interface Vlan1
+
+interface Vlan3799
+  description Management
+  no shutdown
+  mtu 2000
+  ip address 10.150.255.89/26
+
+interface port-channel7
+  description pN77K
+  switchport mode trunk
+  switchport trunk allowed vlan 2951,3035-3036,3105-3106,3155,3187,3192,3428,3535,3545,3565-3567,3573-3574,3597,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3799,3801-3812,3815-3816,3821,3824-3826,3828-3830,3835-3837,3839-3847,3850,3852-3855,3857-3862,3865-3868,3901,3904,3915,3926,3950,3965
+  vpc 7
+
+interface port-channel101
+  description --- pN2K11-101 ---
+  switchport mode fex-fabric
+  fex associate 101
+
+interface port-channel103
+  description --- 2K11-103 660c1ER3 ---
+  switchport mode fex-fabric
+  fex associate 103
+
+interface port-channel105
+  description --- 2K11-105 ---
+  switchport mode fex-fabric
+  fex associate 105
+
+interface port-channel107
+  description --- 2K11-107 ---
+  switchport mode fex-fabric
+  fex associate 107
+
+interface port-channel109
+  description --- 2K11-109 ---
+  switchport mode fex-fabric
+  fex associate 109
+
+interface port-channel111
+  description --- 2K11-111 ---
+  switchport mode fex-fabric
+  fex associate 111
+
+interface port-channel113
+  description --- 2K11-113 ---
+  switchport mode fex-fabric
+  fex associate 113
+
+interface port-channel115
+  description --- 2K11-115 ---
+  switchport mode fex-fabric
+  fex associate 115
+
+interface port-channel117
+  description --- 2K11-117 ---
+  switchport mode fex-fabric
+  fex associate 117
+
+interface port-channel119
+  description --- 2K11-119 ---
+  switchport mode fex-fabric
+  fex associate 119
+
+interface port-channel121
+  description --- 2K11-121 ---
+  switchport mode fex-fabric
+  fex associate 121
+
+interface port-channel123
+  description --- 2K11-123 ---
+  switchport mode fex-fabric
+  fex associate 123
+
+interface port-channel127
+  description --- 2K11-127 ---
+  switchport mode fex-fabric
+  fex associate 127
+
+interface port-channel200
+  description TRUNK mpc202e.region.vtb.ru:vmnic2 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 200
+
+interface port-channel201
+  description TRUNK mpc202e.region.vtb.ru:vmnic0 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 201
+
+interface port-channel202
+  description TRUNK mpc201e.region.vtb.ru:vmnic2 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 202
+
+interface port-channel203
+  description TRUNK mpc201e.region.vtb.ru:vmnic0 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 203
+
+interface port-channel204
+  description TRUNK pc201e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 204
+
+interface port-channel205
+  description TRUNK pc201e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 205
+
+interface port-channel206
+  description TRUNK pc202e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 206
+
+interface port-channel207
+  description TRUNK pc202e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 207
+
+interface port-channel208
+  description TRUNK pc203e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 208
+
+interface port-channel209
+  description TRUNK pc203e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 209
+
+interface port-channel210
+  description TRUNK pc204e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 210
+
+interface port-channel211
+  description TRUNK pc204e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 211
+
+interface port-channel212
+  description TRUNK pc205e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 212
+
+interface port-channel213
+  description TRUNK pc205e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 213
+
+interface port-channel214
+  description TRUNK pc206e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 214
+
+interface port-channel215
+  description TRUNK pc206e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 215
+
+interface port-channel220
+  description TRUNK mpc203e.region.vtb.ru:vmnic2 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 220
+
+interface port-channel221
+  description TRUNK mpc203e.region.vtb.ru:vmnic0 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 221
+
+interface port-channel222
+  description TRUNK mpc204e.region.vtb.ru:vmnic2 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 222
+
+interface port-channel223
+  description TRUNK mpc204e.region.vtb.ru:vmnic0 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 223
+
+interface port-channel226
+  description Mskregex21 DL360
+  switchport access vlan 3776
+  vpc 226
+
+interface port-channel227
+  description Mskregex23 DL360
+  switchport access vlan 3776
+  vpc 227
+
+interface port-channel228
+  description TRUNK pc209e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 228
+
+interface port-channel229
+  description TRUNK pc209e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 229
+
+interface port-channel230
+  description TRUNK pc210e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 230
+
+interface port-channel231
+  description TRUNK pc210e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 231
+
+interface port-channel232
+  description TRUNK pc211e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 232
+
+interface port-channel233
+  description TRUNK pc211e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 233
+
+interface port-channel234
+  description TRUNK mpc205e.region.vtb.ru:vmnic0 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 234
+
+interface port-channel235
+  description TRUNK mpc205e.region.vtb.ru:vmnic2 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 235
+
+interface port-channel236
+  description TRUNK pc212e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 236
+
+interface port-channel237
+  description TRUNK pc212e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 237
+
+interface port-channel238
+  description TRUNK pc213e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 238
+
+interface port-channel239
+  description TRUNK pc213e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 239
+
+interface port-channel240
+  description TRUNK pc214e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 240
+
+interface port-channel241
+  description TRUNK pc214e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 241
+
+interface port-channel242
+  description TRUNK mpc206e.region.vtb.ru:vmnic0 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 242
+
+interface port-channel243
+  description TRUNK mpc206e.region.vtb.ru:vmnic2 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 243
+
+interface port-channel252
+  description TRUNK pc218e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 252
+
+interface port-channel253
+  description TRUNK pc218e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 253
+
+interface port-channel254
+  description TRUNK pc219e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 254
+
+interface port-channel255
+  description TRUNK pc219e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 255
+
+interface port-channel256
+  description TRUNK pc220e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 256
+
+interface port-channel257
+  description TRUNK pc220e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 257
+
+interface port-channel260
+  description CLD_A 10.151.3.35 dwh03l
+  switchport access vlan 3803
+  vpc 260
+
+interface port-channel269
+  description TRUNK pc225e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3428,3535,3573-3574,3656,3662,3668,3674,3769-3773,3776,3782-3784,3801-3809,3812,3821,3824-3825,3828-3830,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 269
+
+interface port-channel270
+  description TRUNK pc225e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 270
+
+interface port-channel271
+  description TRUNK pc226e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3428,3535,3573-3574,3656,3662,3668,3674,3769-3773,3776,3782-3784,3801-3809,3812,3821,3824-3825,3828-3830,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 271
+
+interface port-channel272
+  description TRUNK pc226e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 272
+
+interface port-channel273
+  description ESXi_evhcpesxi03
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3428,3768,3784,3791,3802,3807,3835,3840,3852-3853,3865,3965
+  speed 10000
+  vpc 273
+
+interface port-channel274
+  description ESXi_evhcpesxi02
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3428,3768,3784,3791,3802,3807,3835,3840,3852-3853,3865,3965
+  speed 10000
+  vpc 274
+
+interface port-channel275
+  description ESXi_evhcpesxi01
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3428,3768,3784,3791,3802,3807,3835,3840,3852-3853,3865,3965
+  speed 10000
+  vpc 275
+
+interface port-channel276
+  description oradb206l
+  switchport access vlan 3773
+  speed 10000
+  vpc 276
+
+interface port-channel278
+  description etlinf217l
+  switchport access vlan 3802
+  speed 10000
+  vpc 278
+
+interface port-channel279
+  description shodapp201l
+  switchport access vlan 3805
+  speed 10000
+  vpc 279
+
+interface port-channel280
+  description shodapp202l
+  switchport access vlan 3805
+  speed 10000
+  vpc 280
+
+interface port-channel281
+  switchport access vlan 3805
+  vpc 281
+
+interface port-channel282
+  switchport access vlan 3805
+  vpc 282
+
+interface port-channel283
+  switchport access vlan 3805
+  vpc 283
+
+interface port-channel284
+  description fxlora201v
+  switchport access vlan 3805
+  vpc 284
+
+interface port-channel285
+  switchport access vlan 3805
+  vpc 285
+
+interface port-channel286
+  description [VTB_Core_VMs] ptdbo2pg251l:ae RF-001234823
+  switchport access vlan 3808
+  vpc 286
+
+interface port-channel288
+  description [VTB_Core_VMs] ptdbo2pg252l:ae RF-001234823
+  switchport access vlan 3808
+  vpc 288
+
+interface port-channel292
+  description [DBO_PROM_SRV2] dbo2pg298l:ae RF-001262889
+  switchport access vlan 3770
+  vpc 292
+
+interface port-channel293
+  description [DBO_PROM_SRV2] dbo2pg299l:ae RF-001262889
+  switchport access vlan 3770
+  vpc 293
+
+interface port-channel299
+  description msfoapp203l
+  switchport access vlan 3803
+  speed 1000
+  vpc 299
+
+interface port-channel301
+  description msfoapp202l
+  switchport access vlan 3803
+  speed 1000
+  vpc 301
+
+interface port-channel302
+  description shoddb201l
+  switchport access vlan 3806
+  speed 10000
+  vpc 302
+
+interface port-channel303
+  description cpora201l
+  switchport access vlan 3806
+  speed 10000
+  vpc 303
+
+interface port-channel352
+  description CLD_A 10.151.9.230 cldora201l
+  switchport access vlan 3809
+  vpc 352
+
+interface port-channel357
+  description CLD_A 10.151.6.67 foivdb201
+  switchport access vlan 3806
+  vpc 357
+
+interface port-channel359
+  description TRUNK pc240e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  vpc 359
+
+interface port-channel360
+  description TRUNK pc240e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573-3574,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  vpc 360
+
+interface port-channel361
+  description CLD_A 10.151.52.135 tpc286e
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  vpc 361
+
+interface port-channel362
+  description TRUNK pc239e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 362
+
+interface port-channel365
+  description TRUNK tpc201e.region.vtb.ru:vmnic2 RF-001869328
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  vpc 365
+
+interface port-channel366
+  description TRUNK tpc201e.region.vtb.ru:vmnic0 RF-001869328
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  vpc 366
+
+interface port-channel367
+  description CLD_A 10.151.52.50 tpc202e
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  vpc 367
+
+interface port-channel368
+  description CLD_A 10.151.52.50 tpc202e
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  vpc 368
+
+interface port-channel369
+  description CLD_A 10.151.52.51 tpc203e
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  vpc 369
+
+interface port-channel370
+  description TRUNK tpc203e.region.vtb.ru:vmnic0 RF-001869328
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  vpc 370
+
+interface port-channel371
+  description kbrn201
+  switchport access vlan 3821
+  speed 1000
+  vpc 371
+
+interface port-channel373
+  description [VTB_Core_VMs_3806_Local] DD990-1:ae RF-001537585
+  switchport access vlan 2951
+  speed 1000
+  vpc 373
+
+interface port-channel374
+  description [VTB_Core_VMs_3806_Local] DD990-1:ae RF-001537585
+  switchport access vlan 3806
+  speed 1000
+  vpc 374
+
+interface port-channel375
+  description [VTB_Core_VMs_3806_Local] DD990:ae RF-001537585
+  switchport access vlan 2951
+  speed 1000
+  vpc 375
+
+interface port-channel376
+  description [VTB_Core_VMs_3806_Local] DD990:ae RF-001537585
+  switchport access vlan 3806
+  speed 1000
+  vpc 376
+
+interface port-channel384
+  description TRUNK pc228e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 384
+
+interface port-channel385
+  description TRUNK pc228e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 385
+
+interface port-channel386
+  description RF-000744199
+  switchport access vlan 3806
+  vpc 386
+
+interface port-channel387
+  description TRUNK pc239e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 387
+
+interface port-channel388
+  description TRUNK pc229e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573-3574,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  vpc 388
+
+interface port-channel389
+  description TRUNK pc229e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573-3574,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  vpc 389
+
+interface port-channel390
+  description TRUNK pc230e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573-3574,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  vpc 390
+
+interface port-channel391
+  description TRUNK pc230e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573-3574,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  vpc 391
+
+interface port-channel392
+  description TRUNK pc232e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 392
+
+interface port-channel393
+  description TRUNK pc232e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 393
+
+interface port-channel394
+  description TRUNK pc233e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 394
+
+interface port-channel395
+  description TRUNK pc233e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 395
+
+interface port-channel398
+  description TRUNK pc234e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 398
+
+interface port-channel399
+  description TRUNK pc234e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 399
+
+interface port-channel400
+  description TRUNK pc235e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 400
+
+interface port-channel401
+  description TRUNK pc235e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 401
+
+interface port-channel402
+  description TRUNK pc236e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 402
+
+interface port-channel403
+  description TRUNK pc236e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 403
+
+interface port-channel404
+  description TRUNK pc237e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 404
+
+interface port-channel405
+  description TRUNK pc237e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 405
+
+interface port-channel406
+  description TRUNK pc238e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 406
+
+interface port-channel407
+  description TRUNK pc238e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 407
+
+interface port-channel408
+  description [planora203l] PER_460_CZ3603XFKR RF-000994201
+  switchport access vlan 3807
+  vpc 408
+
+interface port-channel413
+  description [TRUNK] CLOD201:aeRF-001103679
+  switchport mode trunk
+  switchport access vlan 3807
+  vpc 413
+
+interface port-channel414
+  description CLD_A 10.151.52.135 tpc286e
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  vpc 414
+
+interface port-channel417
+  description TRUNK pc250e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  speed 10000
+  vpc 417
+
+interface port-channel418
+  description TRUNK pc250e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  speed 10000
+  vpc 418
+
+interface port-channel419
+  description TRUNK pc251e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  speed 10000
+  vpc 419
+
+interface port-channel420
+  description TRUNK pc251e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  speed 10000
+  vpc 420
+
+interface port-channel421
+  description TRUNK pc252e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  speed 10000
+  vpc 421
+
+interface port-channel422
+  description TRUNK pc252e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  speed 10000
+  vpc 422
+
+interface port-channel423
+  description TRUNK pc253e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  speed 10000
+  vpc 423
+
+interface port-channel424
+  description TRUNK pc253e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  speed 10000
+  vpc 424
+
+interface port-channel425
+  description TRUNK pc254e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  speed 10000
+  vpc 425
+
+interface port-channel426
+  description TRUNK pc254e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  speed 10000
+  vpc 426
+
+interface port-channel427
+  description TRUNK pc255e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  speed 10000
+  vpc 427
+
+interface port-channel428
+  description TRUNK pc255e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  speed 10000
+  vpc 428
+
+interface port-channel429
+  description [VTB_Core_VMs_3807_Local] eggora201l RF-001287661
+  switchport access vlan 3807
+  vpc 429
+
+interface port-channel430
+  description [VTB_Core_VMs] eggora202l:1 RF-001304405
+  switchport access vlan 3808
+  vpc 430
+
+interface port-channel431
+  description [VTB_Core_VMs] dgaxon221l:1 RF-001347514
+  switchport access vlan 3808
+  vpc 431
+
+interface port-channel432
+  description [VTB_Core_VMs] dgaxon222l:1 RF-001347514
+  switchport access vlan 3808
+  vpc 432
+
+interface port-channel433
+  description [VTB_Core_VMs] dgedc223l:ae RF-001347997
+  switchport access vlan 3808
+  vpc 433
+
+interface port-channel434
+  description [VTB_Core_VMs_3808_Local] esmvert212l:ae RF-001490564
+  switchport access vlan 3808
+  vpc 434
+
+interface port-channel435
+  description [VTB_Core_VMs_3808_Local] esmvert213l:ae RF-001490564
+  switchport access vlan 3808
+  vpc 435
+
+interface port-channel436
+  description [VTB_Core_VMs_3808_Local] esmvert214l:ae RF-001490564
+  switchport access vlan 3808
+  vpc 436
+
+interface port-channel437
+  description TRUNK pc269:ae RF-001548857
+  switchport mode trunk
+  switchport trunk allowed vlan 3565-3567,3852-3853
+  speed 10000
+  vpc 437
+
+interface port-channel438
+  description TRUNK pc269:ae RF-001548857
+  switchport mode trunk
+  switchport trunk allowed vlan 3565-3567,3852-3853
+  speed 10000
+  vpc 438
+
+interface port-channel439
+  description TRUNK pc270:ae RF-001548857
+  switchport mode trunk
+  switchport trunk allowed vlan 3565-3567,3852-3853
+  speed 10000
+  vpc 439
+
+interface port-channel440
+  description TRUNK pc270:ae RF-001548857
+  switchport mode trunk
+  switchport trunk allowed vlan 3565-3567,3852-3853
+  speed 10000
+  vpc 440
+
+interface port-channel441
+  description TRUNK pc271:ae RF-001548857
+  switchport mode trunk
+  switchport trunk allowed vlan 3565-3567,3852-3853
+  speed 10000
+  vpc 441
+
+interface port-channel442
+  description TRUNK pc271:ae RF-001548857
+  switchport mode trunk
+  switchport trunk allowed vlan 3565-3567,3852-3853
+  speed 10000
+  vpc 442
+
+interface port-channel443
+  description TRUNK pc272:ae RF-001548857
+  switchport mode trunk
+  switchport trunk allowed vlan 3565-3567,3852-3853
+  speed 10000
+  vpc 443
+
+interface port-channel444
+  description TRUNK pc272:ae RF-001548857
+  switchport mode trunk
+  switchport trunk allowed vlan 3565-3567,3852-3853
+  speed 10000
+  vpc 444
+
+interface port-channel445
+  description [VTB_Core_VMs_3808_Local] gcmoradb201l:ae RF-001580138
+  switchport access vlan 3808
+  vpc 445
+
+interface port-channel446
+  description [edkdb202l] int1 RF-001605535
+  switchport access vlan 3808
+  speed 10000
+  vpc 446
+
+interface port-channel447
+  description None ukkdb201l:ae RF-001687246
+  switchport access vlan 3808
+  vpc 447
+
+interface port-channel449
+  description TRUNK pc273e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3858,3865-3866,3868,3901,3904,3915,3965
+  speed 10000
+  vpc 449
+
+interface port-channel450
+  description TRUNK pc273e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  speed 10000
+  vpc 450
+
+interface port-channel451
+  description TRUNK pc274e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  speed 10000
+  vpc 451
+
+interface port-channel452
+  description TRUNK pc274e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  speed 10000
+  vpc 452
+
+interface port-channel453
+  description TRUNK   tps284e:ae RF-001807463
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  vpc 453
+
+interface port-channel454
+  description TRUNK   tps282e:ae RF-001807463
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  vpc 454
+
+interface port-channel455
+  description TRUNK   tps283e:ae RF-001807463
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  vpc 455
+
+interface port-channel456
+  description TRUNK   tps284e:ae RF-001807463
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  vpc 456
+
+interface port-channel457
+  description TRUNK   tps282e:ae RF-001807463
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  vpc 457
+
+interface port-channel458
+  description TRUNK   tps283e:ae RF-001807463
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  vpc 458
+
+interface port-channel534
+  description [LCL_hrtbit_VERTICA] esmvert212l:ae RF-001662502
+  switchport access vlan 3545
+  vpc 534
+
+interface port-channel535
+  description [LCL_hrtbit_VERTICA] esmvert213l:ae RF-001662502
+  switchport access vlan 3545
+  vpc 535
+
+interface port-channel536
+  description [LCL_hrtbit_VERTICA] esmvert214l:ae RF-001662502
+  switchport access vlan 3545
+  vpc 536
+
+interface port-channel601
+  description TRUNK pc207e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 601
+
+interface port-channel602
+  description TRUNK pc208e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 602
+
+interface port-channel603
+  description TRUNK mpc208e.region.vtb.ru:vmnic2 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3155,3674,3802-3803,3805-3809,3843,3852-3853,3857-3858
+  vpc 603
+
+interface port-channel604
+  description TRUNK pc223e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 604
+
+interface port-channel605
+  description TRUNK pc224e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 605
+
+interface port-channel606
+  description TRUNK tpc281e:2 RF-001864606
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  vpc 606
+
+interface port-channel607
+  description TRUNK tpc285e:2 RF-001864606
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  vpc 607
+
+interface port-channel608
+  description TRUNK tpc202e.region.vtb.ru:vmnic2 RF-001869328
+  switchport mode trunk
+  switchport trunk allowed vlan 3187,3192,3656,3662,3668,3674,3769-3774,3776,3782,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 608
+
+interface port-channel701
+  description TRUNK pc207e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 701
+
+interface port-channel702
+  description TRUNK pc208e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 702
+
+interface port-channel703
+  description TRUNK mpc208e.region.vtb.ru:vmnic0 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3155,3187,3192,3428,3769,3772,3801,3804,3809,3812,3825,3837,3842,3865,3901,3904,3909,3915,3926,3965
+  vpc 703
+
+interface port-channel704
+  description TRUNK pc223e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 704
+
+interface port-channel705
+  description TRUNK pc224e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 705
+
+interface port-channel706
+  description TRUNK tpc281e:4 RF-001864606
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  vpc 706
+
+interface port-channel707
+  description TRUNK tpc285e:4 RF-001864606
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  vpc 707
+
+interface port-channel708
+  description TRUNK tpc202e.region.vtb.ru:vmnic0 RF-001869328
+  switchport mode trunk
+  switchport trunk allowed vlan 3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  vpc 708
+
+interface port-channel801
+  description TRUNK pc215e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 801
+
+interface port-channel802
+  description TRUNK pc215e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 802
+
+interface port-channel803
+  description TRUNK pc216e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 803
+
+interface port-channel804
+  description TRUNK pc216e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 804
+
+interface port-channel805
+  description TRUNK pc217e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 805
+
+interface port-channel806
+  description TRUNK pc217e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 806
+
+interface port-channel807
+  description TRUNK mpc207e.region.vtb.ru:vmnic2 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 807
+
+interface port-channel808
+  description TRUNK mpc207e.region.vtb.ru:vmnic0 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 808
+
+interface port-channel809
+  description TRUNK pc221e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 809
+
+interface port-channel810
+  description TRUNK pc221e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 810
+
+interface port-channel811
+  description TRUNK pc222e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 811
+
+interface port-channel812
+  description TRUNK pc222e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  vpc 812
+
+interface port-channel983
+  description TRUNK pc264e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  speed 10000
+  vpc 983
+
+interface port-channel984
+  description TRUNK pc265e.region.vtb.ru:vmnic4 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  speed 10000
+  vpc 984
+
+interface port-channel985
+  description TRUNK pc267e.region.vtb.ru:vmnic0 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  speed 10000
+  vpc 985
+
+interface port-channel986
+  description TRUNK pc264e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  speed 10000
+  vpc 986
+
+interface port-channel987
+  description TRUNK pc268e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  speed 10000
+  vpc 987
+
+interface port-channel988
+  description TRUNK pc268e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  speed 10000
+  vpc 988
+
+interface port-channel989
+  description TRUNK pc267e.region.vtb.ru:vmnic4 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  speed 10000
+  vpc 989
+
+interface port-channel990
+  description TRUNK pc265e.region.vtb.ru:vmnic0 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  speed 10000
+  vpc 990
+
+interface port-channel991
+  description TRUNK pc266e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  speed 10000
+  vpc 991
+
+interface port-channel992
+  description TRUNK pc266e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  speed 10000
+  vpc 992
+
+interface port-channel993
+  description TRUNK pc263e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  speed 10000
+  vpc 993
+
+interface port-channel994
+  description TRUNK pc263e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  speed 10000
+  vpc 994
+
+interface port-channel995
+  description TRUNK pc262e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  speed 10000
+  vpc 995
+
+interface port-channel996
+  description TRUNK pc262e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 354-3573,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  speed 10000
+  vpc 996
+
+interface port-channel997
+  description msfoapp203l
+  switchport access vlan 3803
+  speed 1000
+  vpc 997
+
+interface port-channel998
+  description VGATE01
+  switchport mode trunk
+  switchport trunk allowed vlan 3155,3347
+  speed 1000
+  vpc 998
+
+interface port-channel999
+  description VGATE02
+  switchport mode trunk
+  switchport trunk allowed vlan 3155,3347
+  speed 1000
+  vpc 999
+
+interface port-channel1000
+  description Peer link VPC pair
+  switchport mode trunk
+  no lacp suspend-individual
+  spanning-tree port type network
+  vpc peer-link
+
+interface port-channel1001
+  description keepalive link
+  no switchport
+  no lacp suspend-individual
+  vrf member vpc-keepalive
+  ip address 10.150.255.169/30
+
+interface Ethernet1/1/1
+
+interface Ethernet1/1/2
+
+interface Ethernet1/1/3
+
+interface Ethernet1/1/4
+
+interface Ethernet1/2/1
+
+interface Ethernet1/2/2
+
+interface Ethernet1/2/3
+
+interface Ethernet1/2/4
+
+interface Ethernet1/3/1
+  description --- 2K11-117 ---
+  switchport mode fex-fabric
+  fex associate 117
+  channel-group 117
+
+interface Ethernet1/3/2
+  description --- 2K11-117 ---
+  switchport mode fex-fabric
+  fex associate 117
+  channel-group 117
+
+interface Ethernet1/3/3
+  description --- 2K11-117 ---
+  switchport mode fex-fabric
+  fex associate 117
+  channel-group 117
+
+interface Ethernet1/3/4
+  description --- 2K11-117 ---
+  switchport mode fex-fabric
+  fex associate 117
+  channel-group 117
+
+interface Ethernet1/4/1
+  description --- 2K11-121 ---
+  switchport mode fex-fabric
+  fex associate 121
+  channel-group 121
+
+interface Ethernet1/4/2
+  description --- 2K11-121 ---
+  switchport mode fex-fabric
+  fex associate 121
+  channel-group 121
+
+interface Ethernet1/4/3
+  description --- 2K11-121 ---
+  switchport mode fex-fabric
+  fex associate 121
+  channel-group 121
+
+interface Ethernet1/4/4
+  description --- 2K11-121 ---
+  switchport mode fex-fabric
+  fex associate 121
+  channel-group 121
+
+interface Ethernet1/5/1
+
+interface Ethernet1/5/2
+
+interface Ethernet1/5/3
+
+interface Ethernet1/5/4
+
+interface Ethernet1/6/1
+  description --- 2K11-127 ---
+  switchport mode fex-fabric
+  fex associate 127
+  channel-group 127
+
+interface Ethernet1/6/2
+  description --- 2K11-127 ---
+  switchport mode fex-fabric
+  fex associate 127
+  channel-group 127
+
+interface Ethernet1/6/3
+  description --- 2K11-127 ---
+  switchport mode fex-fabric
+  fex associate 127
+  channel-group 127
+
+interface Ethernet1/6/4
+  description --- 2K11-127 ---
+  switchport mode fex-fabric
+  fex associate 127
+  channel-group 127
+
+interface Ethernet1/7
+  shutdown
+
+interface Ethernet1/8
+  shutdown
+
+interface Ethernet1/9
+  description --- 2K11-105 ---
+  switchport mode fex-fabric
+  fex associate 105
+  channel-group 105
+
+interface Ethernet1/10
+  description peer-keepalive
+  no switchport
+  channel-group 1001 mode active
+
+interface Ethernet1/11
+  description pN77-1-switch1
+  switchport mode trunk
+  switchport trunk allowed vlan 2951,3035-3036,3105-3106,3155,3187,3192,3428,3535,3545,3565-3567,3573-3574,3597,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3799,3801-3812,3815-3816,3821,3824-3826,3828-3830,3835-3837,3839-3847,3850,3852-3855,3857-3862,3865-3868,3901,3904,3915,3926,3950,3965
+  channel-group 7 mode active
+
+interface Ethernet1/12
+  description peer-link
+  switchport mode trunk
+  channel-group 1000 mode active
+
+interface Ethernet2/1/1
+  description --- pN2K11-101 ---
+  switchport mode fex-fabric
+  fex associate 101
+  channel-group 101
+
+interface Ethernet2/1/2
+  description --- pN2K11-101 ---
+  switchport mode fex-fabric
+  fex associate 101
+  channel-group 101
+
+interface Ethernet2/1/3
+  description --- pN2K11-101 ---
+  switchport mode fex-fabric
+  fex associate 101
+  channel-group 101
+
+interface Ethernet2/1/4
+  description --- pN2K11-101 ---
+  switchport mode fex-fabric
+  fex associate 101
+  channel-group 101
+
+interface Ethernet2/2/1
+
+interface Ethernet2/2/2
+
+interface Ethernet2/2/3
+
+interface Ethernet2/2/4
+
+interface Ethernet2/3/1
+  description --- 2K11-119 ---
+  switchport mode fex-fabric
+  fex associate 119
+  channel-group 119
+
+interface Ethernet2/3/2
+  description --- 2K11-119 ---
+  switchport mode fex-fabric
+  fex associate 119
+  channel-group 119
+
+interface Ethernet2/3/3
+  description --- 2K11-119 ---
+  switchport mode fex-fabric
+  fex associate 119
+  channel-group 119
+
+interface Ethernet2/3/4
+  description --- 2K11-119 ---
+  switchport mode fex-fabric
+  fex associate 119
+  channel-group 119
+
+interface Ethernet2/4
+  shutdown
+
+interface Ethernet2/5
+  shutdown
+
+interface Ethernet2/6
+  shutdown
+
+interface Ethernet2/7
+  shutdown
+
+interface Ethernet2/8
+  shutdown
+
+interface Ethernet2/9
+  description --- 2K11-105 ---
+  switchport mode fex-fabric
+  fex associate 105
+  channel-group 105
+
+interface Ethernet2/10
+  description peer-keepalive
+  no switchport
+  channel-group 1001 mode active
+
+interface Ethernet2/11
+  description pN77-2-switch2
+  switchport mode trunk
+  switchport trunk allowed vlan 2951,3035-3036,3105-3106,3155,3187,3192,3428,3535,3545,3565-3567,3573-3574,3597,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3799,3801-3812,3815-3816,3821,3824-3826,3828-3830,3835-3837,3839-3847,3850,3852-3855,3857-3862,3865-3868,3901,3904,3915,3926,3950,3965
+  channel-group 7 mode active
+
+interface Ethernet2/12
+  description peer-link
+  switchport mode trunk
+  channel-group 1000 mode active
+
+interface Ethernet3/1/1
+  description --- 2K11-103 660c1ER3 ---
+  switchport mode fex-fabric
+  fex associate 103
+  channel-group 103
+
+interface Ethernet3/1/2
+  description --- 2K11-103 660c1ER3 ---
+  switchport mode fex-fabric
+  fex associate 103
+  channel-group 103
+
+interface Ethernet3/1/3
+  description --- 2K11-103 660c1ER3 ---
+  switchport mode fex-fabric
+  fex associate 103
+  channel-group 103
+
+interface Ethernet3/1/4
+  description --- 2K11-103 660c1ER3 ---
+  switchport mode fex-fabric
+  fex associate 103
+  channel-group 103
+
+interface Ethernet3/2/1
+  description --- 2K11-107 ---
+  switchport mode fex-fabric
+  fex associate 107
+  channel-group 107
+
+interface Ethernet3/2/2
+  description --- 2K11-107 ---
+  switchport mode fex-fabric
+  fex associate 107
+  channel-group 107
+
+interface Ethernet3/2/3
+  description --- 2K11-107 ---
+  switchport mode fex-fabric
+  fex associate 107
+  channel-group 107
+
+interface Ethernet3/2/4
+  description --- 2K11-107 ---
+  switchport mode fex-fabric
+  fex associate 107
+  channel-group 107
+
+interface Ethernet3/3/1
+  description --- 2K11-109 ---
+  switchport mode fex-fabric
+  fex associate 109
+  channel-group 109
+
+interface Ethernet3/3/2
+  description --- 2K11-109 ---
+  switchport mode fex-fabric
+  fex associate 109
+  channel-group 109
+
+interface Ethernet3/3/3
+  description --- 2K11-109 ---
+  switchport mode fex-fabric
+  fex associate 109
+  channel-group 109
+
+interface Ethernet3/3/4
+  description --- 2K11-109 ---
+  switchport mode fex-fabric
+  fex associate 109
+  channel-group 109
+
+interface Ethernet3/4/1
+  description --- 2K11-113 ---
+  switchport mode fex-fabric
+  fex associate 113
+  channel-group 113
+
+interface Ethernet3/4/2
+  description --- 2K11-113 ---
+  switchport mode fex-fabric
+  fex associate 113
+  channel-group 113
+
+interface Ethernet3/4/3
+  description --- 2K11-113 ---
+  switchport mode fex-fabric
+  fex associate 113
+  channel-group 113
+
+interface Ethernet3/4/4
+  description --- 2K11-113 ---
+  switchport mode fex-fabric
+  fex associate 113
+  channel-group 113
+
+interface Ethernet3/5/1
+
+interface Ethernet3/5/2
+
+interface Ethernet3/5/3
+
+interface Ethernet3/5/4
+
+interface Ethernet3/6/1
+  description --- 2K11-127 ---
+  switchport mode fex-fabric
+  fex associate 127
+  channel-group 127
+
+interface Ethernet3/6/2
+  description --- 2K11-127 ---
+  switchport mode fex-fabric
+  fex associate 127
+  channel-group 127
+
+interface Ethernet3/6/3
+  description --- 2K11-127 ---
+  switchport mode fex-fabric
+  fex associate 127
+  channel-group 127
+
+interface Ethernet3/6/4
+  description --- 2K11-127 ---
+  switchport mode fex-fabric
+  fex associate 127
+  channel-group 127
+
+interface Ethernet3/7
+  shutdown
+
+interface Ethernet3/8
+  description --- 2K11-123 ---
+  switchport mode fex-fabric
+  fex associate 123
+  channel-group 123
+
+interface Ethernet3/9
+  shutdown
+
+interface Ethernet3/10
+  shutdown
+
+interface Ethernet3/11
+  description pN77-1-switch1
+  switchport mode trunk
+  switchport trunk allowed vlan 2951,3035-3036,3105-3106,3155,3187,3192,3428,3535,3545,3565-3567,3573-3574,3597,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3799,3801-3812,3815-3816,3821,3824-3826,3828-3830,3835-3837,3839-3847,3850,3852-3855,3857-3862,3865-3868,3901,3904,3915,3926,3950,3965
+  channel-group 7 mode active
+
+interface Ethernet3/12
+  shutdown
+
+interface Ethernet4/1/1
+  description --- 2K11-103 660c1ER3 ---
+  switchport mode fex-fabric
+  fex associate 103
+  channel-group 103
+
+interface Ethernet4/1/2
+  description --- 2K11-103 660c1ER3 ---
+  switchport mode fex-fabric
+  fex associate 103
+  channel-group 103
+
+interface Ethernet4/1/3
+  description --- 2K11-103 660c1ER3 ---
+  switchport mode fex-fabric
+  fex associate 103
+  channel-group 103
+
+interface Ethernet4/1/4
+  description --- 2K11-103 660c1ER3 ---
+  switchport mode fex-fabric
+  fex associate 103
+  channel-group 103
+
+interface Ethernet4/2/1
+  description --- 2K11-107 ---
+  switchport mode fex-fabric
+  fex associate 107
+  channel-group 107
+
+interface Ethernet4/2/2
+  description --- 2K11-107 ---
+  switchport mode fex-fabric
+  fex associate 107
+  channel-group 107
+
+interface Ethernet4/2/3
+  description --- 2K11-107 ---
+  switchport mode fex-fabric
+  fex associate 107
+  channel-group 107
+
+interface Ethernet4/2/4
+  description --- 2K11-107 ---
+  switchport mode fex-fabric
+  fex associate 107
+  channel-group 107
+
+interface Ethernet4/3/1
+  description --- 2K11-111 ---
+  switchport mode fex-fabric
+  fex associate 111
+  channel-group 111
+
+interface Ethernet4/3/2
+  description --- 2K11-111 ---
+  switchport mode fex-fabric
+  fex associate 111
+  channel-group 111
+
+interface Ethernet4/3/3
+  description --- 2K11-111 ---
+  switchport mode fex-fabric
+  fex associate 111
+  channel-group 111
+
+interface Ethernet4/3/4
+  description --- 2K11-111 ---
+  switchport mode fex-fabric
+  fex associate 111
+  channel-group 111
+
+interface Ethernet4/4/1
+  description --- 2K11-115 ---
+  switchport mode fex-fabric
+  fex associate 115
+  channel-group 115
+
+interface Ethernet4/4/2
+  description --- 2K11-115 ---
+  switchport mode fex-fabric
+  fex associate 115
+  channel-group 115
+
+interface Ethernet4/4/3
+  description --- 2K11-115 ---
+  switchport mode fex-fabric
+  fex associate 115
+  channel-group 115
+
+interface Ethernet4/4/4
+  description --- 2K11-115 ---
+  switchport mode fex-fabric
+  fex associate 115
+  channel-group 115
+
+interface Ethernet4/5/1
+
+interface Ethernet4/5/2
+
+interface Ethernet4/5/3
+
+interface Ethernet4/5/4
+
+interface Ethernet4/6/1
+
+interface Ethernet4/6/2
+
+interface Ethernet4/6/3
+
+interface Ethernet4/6/4
+
+interface Ethernet4/7
+
+interface Ethernet4/8
+  description --- 2K11-123 ---
+  switchport mode fex-fabric
+  fex associate 123
+  channel-group 123
+
+interface Ethernet4/9
+
+interface Ethernet4/10
+
+interface Ethernet4/11
+  description pN77-2-switch2
+  switchport mode trunk
+  switchport trunk allowed vlan 2951,3035-3036,3105-3106,3155,3187,3192,3428,3535,3545,3565-3567,3573-3574,3597,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3799,3801-3812,3815-3816,3821,3824-3826,3828-3830,3835-3837,3839-3847,3850,3852-3855,3857-3862,3865-3868,3901,3904,3915,3926,3950,3965
+  channel-group 7 mode active
+
+interface Ethernet4/12
+
+interface mgmt0
+  vrf member management
+  ip address 10.76.68.86/21
+
+interface Ethernet101/1/1
+  description TRUNK pc207e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 601 mode active
+
+interface Ethernet101/1/2
+  description TRUNK pc208e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 602 mode active
+
+interface Ethernet101/1/3
+  description TRUNK mpc208e.region.vtb.ru:vmnic2 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3155,3674,3802-3803,3805-3809,3843,3852-3853,3857-3858
+  channel-group 603 mode active
+
+interface Ethernet101/1/4
+  description TRUNK pc223e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 604 mode active
+
+interface Ethernet101/1/5
+  description TRUNK pc224e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 605 mode active
+
+interface Ethernet101/1/6
+  description TRUNK tpc281e:1 RF-001864606
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 606 mode active
+
+interface Ethernet101/1/7
+  description TRUNK tpc285e:1 RF-001864606
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 607 mode active
+
+interface Ethernet101/1/8
+  description TRUNK tpc202e.region.vtb.ru:vmnic2 RF-001864606
+  switchport mode trunk
+  switchport trunk allowed vlan 3187,3192,3656,3662,3668,3674,3769-3774,3776,3782,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 608 mode active
+
+interface Ethernet101/1/9
+  description TRUNK pc207e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 701 mode active
+
+interface Ethernet101/1/10
+  description TRUNK pc208e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 702 mode active
+
+interface Ethernet101/1/11
+  description TRUNK mpc208e.region.vtb.ru:vmnic0 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3155,3187,3192,3428,3769,3772,3801,3804,3809,3812,3825,3837,3842,3865,3901,3904,3909,3915,3926,3965
+  channel-group 703 mode active
+
+interface Ethernet101/1/12
+  description TRUNK pc223e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 704 mode active
+
+interface Ethernet101/1/13
+  description TRUNK pc224e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 705 mode active
+
+interface Ethernet101/1/14
+  description TRUNK tpc281e:3 RF-001864606
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 706 mode active
+
+interface Ethernet101/1/15
+  description TRUNK tpc285e:3 RF-001864606
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 707 mode active
+
+interface Ethernet101/1/16
+  description TRUNK tpc202e.region.vtb.ru:vmnic0 RF-001864606
+  switchport mode trunk
+  switchport trunk allowed vlan 3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 708 mode active
+
+interface Ethernet103/1/1
+  description vtb-core  tpc205e:1 RF-001883034
+  switchport mode trunk
+  switchport trunk allowed vlan 3187,3192,3656,3662,3668,3674,3769-3774,3776,3782,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+
+interface Ethernet103/1/2
+  description TRUNK pc215e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 801 mode active
+
+interface Ethernet103/1/3
+  description TRUNK pc216e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 803 mode active
+
+interface Ethernet103/1/4
+  description TRUNK pc217e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 805 mode active
+
+interface Ethernet103/1/5
+  description TRUNK mpc207e.region.vtb.ru:vmnic2 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 807 mode active
+
+interface Ethernet103/1/6
+  description TRUNK pc221e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 809 mode active
+
+interface Ethernet103/1/7
+  description TRUNK pc222e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 811 mode active
+
+interface Ethernet103/1/8
+  description vtb-core N/A tpc204e:1 RF-001883034
+  switchport mode trunk
+  switchport trunk allowed vlan 3187,3192,3656,3662,3668,3674,3769-3774,3776,3782,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+
+interface Ethernet103/1/9
+  description vtb-core N/A tpc205e:3 RF-001883034
+  switchport mode trunk
+  switchport trunk allowed vlan 3656,3662,3668,3674,3839,3852-3853,3866,3915
+
+interface Ethernet103/1/10
+  description TRUNK pc215e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 802 mode active
+
+interface Ethernet103/1/11
+  description TRUNK pc216e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 804 mode active
+
+interface Ethernet103/1/12
+  description TRUNK pc217e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 806 mode active
+
+interface Ethernet103/1/13
+  description TRUNK mpc207e.region.vtb.ru:vmnic0 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 808 mode active
+
+interface Ethernet103/1/14
+  description TRUNK pc221e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 810 mode active
+
+interface Ethernet103/1/15
+  description TRUNK pc222e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 812 mode active
+
+interface Ethernet103/1/16
+  description vtb-core N/A tpc204e:3 RF-001883034
+  switchport mode trunk
+  switchport trunk allowed vlan 3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+
+interface Ethernet105/1/1
+  description HMC ER1-6/04 port 1
+  switchport access vlan 3850
+  speed 1000
+  no snmp trap link-status
+
+interface Ethernet105/1/2
+  description HMC ER1-6/04 port 3 DOWNED
+  shutdown
+  switchport access vlan 3854
+  no snmp trap link-status
+
+interface Ethernet105/1/3
+
+interface Ethernet105/1/4
+
+interface Ethernet105/1/5
+
+interface Ethernet105/1/6
+
+interface Ethernet105/1/7
+
+interface Ethernet105/1/8
+
+interface Ethernet105/1/9
+  description [VTB_Core_VMs_3806_Local] DD990-1:1 RF-001537585
+  switchport access vlan 2951
+  speed 1000
+  channel-group 373 mode active
+
+interface Ethernet105/1/10
+  description [VTB_Core_VMs_3806_Local] DD990-1:0 RF-001537585
+  switchport access vlan 3806
+  speed 1000
+  channel-group 374 mode active
+
+interface Ethernet105/1/11
+  description [VTB_Core_VMs_3806_Local] DD990:0 RF-001537585
+  switchport access vlan 3806
+  speed 1000
+  channel-group 376 mode active
+
+interface Ethernet105/1/12
+  description [VTB_Core_VMs_3806_Local] DD990:1 RF-001537585
+  switchport access vlan 2951
+  speed 1000
+  channel-group 375 mode active
+
+interface Ethernet105/1/13
+  description [MGMT] PER_660_CZ270405X9
+  switchport access vlan 3854
+
+interface Ethernet105/1/14
+  description [MGMT] PER_660_CZ270405X1
+  switchport access vlan 3854
+  speed 1000
+  no snmp trap link-status
+
+interface Ethernet105/1/15
+
+interface Ethernet105/1/16
+  description C7000 BL460 ER1-6/7 OA-1 10.151.54.40
+  switchport access vlan 3854
+  no snmp trap link-status
+
+interface Ethernet105/1/17
+  description PER_460_CZ3603XFKR_mgmt
+  switchport access vlan 3855
+  no snmp trap link-status
+
+interface Ethernet105/1/18
+  description PER_460_CZ270405X3_mgmt
+  switchport access vlan 3854
+  no snmp trap link-status
+
+interface Ethernet105/1/19
+
+interface Ethernet105/1/20
+  description CZ324208PM_OA_int
+  switchport access vlan 3854
+
+interface Ethernet105/1/21
+
+interface Ethernet105/1/22
+
+interface Ethernet105/1/23
+
+interface Ethernet105/1/24
+
+interface Ethernet105/1/25
+  description TRUNK pc262e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 354-3573,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 996 mode active
+
+interface Ethernet105/1/26
+  description TRUNK pc262e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 995 mode active
+
+interface Ethernet105/1/27
+  description TRUNK pc263e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 994 mode active
+
+interface Ethernet105/1/28
+  description TRUNK pc263e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 993 mode active
+
+interface Ethernet105/1/29
+  description TRUNK pc266e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 992 mode active
+
+interface Ethernet105/1/30
+  description TRUNK pc266e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 991 mode active
+
+interface Ethernet105/1/31
+  description TRUNK pc267e.region.vtb.ru:vmnic0 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 985 mode active
+
+interface Ethernet105/1/32
+  description TRUNK pc267e.region.vtb.ru:vmnic4 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 989 mode active
+
+interface Ethernet105/1/33
+  description TRUNK pc268e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 988 mode active
+
+interface Ethernet105/1/34
+  description TRUNK pc268e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 987 mode active
+
+interface Ethernet105/1/35
+  description TRUNK pc264e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 983 mode active
+
+interface Ethernet105/1/36
+  description TRUNK pc264e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 986 mode active
+
+interface Ethernet105/1/37
+  description TRUNK pc265e.region.vtb.ru:vmnic0 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 990 mode active
+
+interface Ethernet105/1/38
+  description TRUNK pc265e.region.vtb.ru:vmnic4 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3155,3187,3192,3428,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839-3840,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 984 mode active
+
+interface Ethernet105/1/39
+
+interface Ethernet105/1/40
+  description [VTB-Core] rootdc210:eth1 RF-001014770
+  switchport access vlan 3805
+  speed 1000
+  no snmp trap link-status
+
+interface Ethernet105/1/41
+  description [VTB-Core] regdc210:eth1 RF-001014770
+  switchport access vlan 3805
+  speed 1000
+  no snmp trap link-status
+
+interface Ethernet105/1/42
+  description [VTB-Core] corpdc210:eth1 RF-001014770
+  switchport access vlan 3805
+  speed 1000
+  no snmp trap link-status
+
+interface Ethernet105/1/43
+
+interface Ethernet105/1/44
+
+interface Ethernet105/1/45
+  description mgmt_console_KY-1_YADRO
+  switchport access vlan 3855
+
+interface Ethernet105/1/46
+  description ESXi_evhcpesxi02
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3428,3768,3784,3791,3802,3807,3835,3840,3852-3853,3865,3965
+  no snmp trap link-status
+  channel-group 274 mode active
+
+interface Ethernet105/1/47
+  description ESXi_evhcpesxi01
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3428,3768,3784,3791,3802,3807,3835,3840,3852-3853,3865,3965
+  no snmp trap link-status
+  channel-group 275 mode active
+
+interface Ethernet105/1/48
+  description ESXi_evhcpesxi03
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105-3106,3428,3768,3784,3791,3802,3807,3835,3840,3852-3853,3865,3965
+  no snmp trap link-status
+  channel-group 273 mode active
+
+interface Ethernet107/1/1
+  description TRUNK mpc203e.region.vtb.ru:vmnic2 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 220 mode active
+
+interface Ethernet107/1/2
+  description TRUNK mpc204e.region.vtb.ru:vmnic2 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 222 mode active
+
+interface Ethernet107/1/3
+  description CLD_A 10.151.52.50 tpc202e
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 367 mode active
+
+interface Ethernet107/1/4
+  description CLD_A 10.151.52.51 tpc203e
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 369 mode active
+
+interface Ethernet107/1/5
+  description CLD_A 10.151.52.135 tpc286e
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  no snmp trap link-status
+  channel-group 361 mode active
+
+interface Ethernet107/1/6
+  description CLD_A 10.151.52.49 tpc201e
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 365 mode active
+
+interface Ethernet107/1/7
+  description TRUNK tpc206e.region.vtb.ru:vmnic2 RF-001869328
+  switchport mode trunk
+  switchport trunk allowed vlan 3187,3192,3656,3662,3668,3674,3769-3774,3776,3782,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+
+interface Ethernet107/1/8
+  description CLD_A 10.151.3.35 dwh03l
+  switchport access vlan 3803
+  channel-group 260 mode active
+
+interface Ethernet107/1/9
+  description TRUNK mpc203e.region.vtb.ru:vmnic0 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 221 mode active
+
+interface Ethernet107/1/10
+  description TRUNK mpc204e.region.vtb.ru:vmnic0 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 223 mode active
+
+interface Ethernet107/1/11
+  description CLD_A 10.151.52.50 tpc202e
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 368 mode active
+
+interface Ethernet107/1/12
+  description CLD_A 10.151.52.51 tpc203e
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 370 mode active
+
+interface Ethernet107/1/13
+  description CLD_A 10.151.52.135 tpc286e
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  no snmp trap link-status
+  channel-group 414 mode active
+
+interface Ethernet107/1/14
+  description CLD_A 10.151.52.49 tpc201e
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 366 mode active
+
+interface Ethernet107/1/15
+  description TRUNK tpc206e.region.vtb.ru:vmnic0 RF-001869328
+  switchport mode trunk
+  switchport trunk allowed vlan 3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843-3844,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+
+interface Ethernet107/1/16
+  description CLD_A_SHUT 10.151.3.35 dwh03l
+  shutdown
+
+interface Ethernet109/1/1
+  description TRUNK mpc202e.region.vtb.ru:vmnic0 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 201 mode active
+
+interface Ethernet109/1/2
+  description TRUNK pc204e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 211 mode active
+
+interface Ethernet109/1/3
+  description TRUNK pc205e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 213 mode active
+
+interface Ethernet109/1/4
+  description TRUNK pc206e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 215 mode active
+
+interface Ethernet109/1/5
+  description shodapp202l
+  switchport access vlan 3805
+  speed 10000
+  channel-group 280 mode active
+
+interface Ethernet109/1/6
+  description etlinf217l
+  switchport access vlan 3802
+  speed 10000
+  channel-group 278 mode active
+
+interface Ethernet109/1/7
+  description CLD_A 10.151.6.67 foivdb201
+  switchport access vlan 3806
+  channel-group 357 mode active
+
+interface Ethernet109/1/8
+  description shoddb201l
+  switchport access vlan 3806
+  speed 10000
+  channel-group 302 mode active
+
+interface Ethernet109/1/9
+  description TRUNK pc240e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 359 mode active
+
+interface Ethernet109/1/10
+  description TRUNK pc229e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573-3574,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 388 mode active
+
+interface Ethernet109/1/11
+  description TRUNK pc228e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 384 mode active
+
+interface Ethernet109/1/12
+  description TRUNK pc230e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573-3574,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 390 mode active
+
+interface Ethernet109/1/13
+  description TRUNK pc209e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 228 mode active
+
+interface Ethernet109/1/14
+  description TRUNK pc210e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 230 mode active
+
+interface Ethernet109/1/15
+  description TRUNK pc211e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 232 mode active
+
+interface Ethernet109/1/16
+  description TRUNK mpc205e.region.vtb.ru:vmnic0 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 234 mode active
+
+interface Ethernet111/1/1
+  description TRUNK mpc202e.region.vtb.ru:vmnic2 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 200 mode active
+
+interface Ethernet111/1/2
+  description TRUNK pc204e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 210 mode active
+
+interface Ethernet111/1/3
+  description TRUNK pc205e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 212 mode active
+
+interface Ethernet111/1/4
+  description TRUNK pc206e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 214 mode active
+
+interface Ethernet111/1/5
+  description UNCONFIGURED
+  switchport access vlan 3857
+
+interface Ethernet111/1/6
+  description UNCONFIGURED
+  switchport access vlan 3857
+
+interface Ethernet111/1/7
+  description UNCONFIGURED
+  switchport access vlan 3857
+
+interface Ethernet111/1/8
+  description UNCONFIGURED
+  switchport access vlan 3857
+
+interface Ethernet111/1/9
+  description TRUNK pc240e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573-3574,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 360 mode active
+
+interface Ethernet111/1/10
+  description TRUNK pc229e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573-3574,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 389 mode active
+
+interface Ethernet111/1/11
+  description TRUNK pc228e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 385 mode active
+
+interface Ethernet111/1/12
+  description TRUNK pc230e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573-3574,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 391 mode active
+
+interface Ethernet111/1/13
+  description TRUNK pc209e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 229 mode active
+
+interface Ethernet111/1/14
+  description TRUNK pc210e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 231 mode active
+
+interface Ethernet111/1/15
+  description TRUNK pc211e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 233 mode active
+
+interface Ethernet111/1/16
+  description TRUNK mpc205e.region.vtb.ru:vmnic2 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 235 mode active
+
+interface Ethernet113/1/1
+  description [VTB_Core_VMs_3808_Local] esmvert214l:2 RF-001490564
+  switchport access vlan 3808
+  channel-group 436 mode active
+
+interface Ethernet113/1/2
+
+interface Ethernet113/1/3
+  description TRUNK pc234e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 398 mode active
+
+interface Ethernet113/1/4
+  description TRUNK pc235e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 400 mode active
+
+interface Ethernet113/1/5
+  description TRUNK pc236e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 402 mode active
+
+interface Ethernet113/1/6
+  description TRUNK pc237e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 404 mode active
+
+interface Ethernet113/1/7
+  description TRUNK pc238e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 406 mode active
+
+interface Ethernet113/1/8
+  description [VTB_Core_VMs_3808_Local] esmvert212l:2 RF-001490564
+  switchport access vlan 3808
+  channel-group 434 mode active
+
+interface Ethernet113/1/9
+  description planapp202l
+  switchport access vlan 3807
+
+interface Ethernet113/1/10
+  description [planora203l] PER_460_CZ3603XFKR RF-000994201
+  switchport access vlan 3807
+  channel-group 408 mode active
+
+interface Ethernet113/1/11
+  description qlikcdapp203 RF-001044292
+  switchport access vlan 3807
+
+interface Ethernet113/1/12
+  description [VTB_Core_VMs_3806_Local] PER_460_CZ3603XFKR
+  switchport access vlan 3806
+
+interface Ethernet113/1/13
+  description [VTB_Core_VMs] qvsapp205:2 RF-001203428
+  switchport access vlan 3808
+
+interface Ethernet113/1/14
+  description [VTB_Core_VMs] eggora202l:1 RF-001304405
+  switchport access vlan 3808
+  channel-group 430 mode active
+
+interface Ethernet113/1/15
+  description [VTB_Core_VMs] dgedc223l:2 RF-001347997
+  switchport access vlan 3808
+  no snmp trap link-status
+  channel-group 433 mode active
+
+interface Ethernet113/1/16
+  description [VTB_Core_VMs_3808_Local] esmvert213l:2 RF-001490564
+  switchport access vlan 3808
+  channel-group 435 mode active
+
+interface Ethernet115/1/1
+  description [LCL_hrtbit_VERTICA] esmvert214l:4 RF-001662502
+  switchport access vlan 3545
+  channel-group 536 mode active
+
+interface Ethernet115/1/2
+
+interface Ethernet115/1/3
+  description TRUNK pc234e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 399 mode active
+
+interface Ethernet115/1/4
+  description TRUNK pc235e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 401 mode active
+
+interface Ethernet115/1/5
+  description TRUNK pc236e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 403 mode active
+
+interface Ethernet115/1/6
+  description TRUNK pc237e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 405 mode active
+
+interface Ethernet115/1/7
+  description TRUNK pc238e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 407 mode active
+
+interface Ethernet115/1/8
+  description [LCL_hrtbit_VERTICA] esmvert212l:4 RF-001662502
+  switchport access vlan 3545
+  channel-group 534 mode active
+
+interface Ethernet115/1/9
+
+interface Ethernet115/1/10
+  description planapp203l
+  switchport access vlan 3807
+
+interface Ethernet115/1/11
+
+interface Ethernet115/1/12
+
+interface Ethernet115/1/13
+
+interface Ethernet115/1/14
+
+interface Ethernet115/1/15
+
+interface Ethernet115/1/16
+  description [LCL_hrtbit_VERTICA] esmvert213l:4 RF-001662502
+  switchport access vlan 3545
+  channel-group 535 mode active
+
+interface Ethernet117/1/1
+  description TRUNK mpc201e.region.vtb.ru:vmnic0 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 203 mode active
+
+interface Ethernet117/1/2
+  description TRUNK pc201e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 205 mode active
+
+interface Ethernet117/1/3
+  description TRUNK pc202e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 207 mode active
+
+interface Ethernet117/1/4
+  description TRUNK pc203e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 209 mode active
+
+interface Ethernet117/1/5
+  description shodapp201l
+  switchport access vlan 3805
+  speed 10000
+  no snmp trap link-status
+  channel-group 279 mode active
+
+interface Ethernet117/1/6
+  description oradb203l
+  switchport access vlan 3805
+  no snmp trap link-status
+
+interface Ethernet117/1/7
+  description oradb206l
+  switchport access vlan 3773
+  speed 10000
+  no snmp trap link-status
+  channel-group 276 mode active
+
+interface Ethernet117/1/8
+  description oradb204l
+  switchport access vlan 3839
+  speed 10000
+  no snmp trap link-status
+
+interface Ethernet117/1/9
+  description cpora201l
+  switchport access vlan 3806
+  speed 10000
+  no snmp trap link-status
+  channel-group 303 mode active
+
+interface Ethernet117/1/10
+  description TRUNK pc239e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 362 mode active
+
+interface Ethernet117/1/11
+  description TRUNK pc233e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 394 mode active
+
+interface Ethernet117/1/12
+  description TRUNK pc232e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 392 mode active
+
+interface Ethernet117/1/13
+  description TRUNK pc212e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 236 mode active
+
+interface Ethernet117/1/14
+  description TRUNK pc213e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 238 mode active
+
+interface Ethernet117/1/15
+  description TRUNK pc214e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 240 mode active
+
+interface Ethernet117/1/16
+  description TRUNK mpc206e.region.vtb.ru:vmnic0 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 242 mode active
+
+interface Ethernet119/1/1
+  description TRUNK mpc201e.region.vtb.ru:vmnic2 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 202 mode active
+
+interface Ethernet119/1/2
+  description TRUNK pc201e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 204 mode active
+
+interface Ethernet119/1/3
+  description TRUNK pc202e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 206 mode active
+
+interface Ethernet119/1/4
+  description TRUNK pc203e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 208 mode active
+
+interface Ethernet119/1/5
+
+interface Ethernet119/1/6
+
+interface Ethernet119/1/7
+
+interface Ethernet119/1/8
+
+interface Ethernet119/1/9
+  description UNCONFIGURED
+  switchport access vlan 3857
+  no snmp trap link-status
+
+interface Ethernet119/1/10
+  description TRUNK pc239e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 387 mode active
+
+interface Ethernet119/1/11
+  description TRUNK pc233e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 395 mode active
+
+interface Ethernet119/1/12
+  description TRUNK pc232e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 393 mode active
+
+interface Ethernet119/1/13
+  description TRUNK pc212e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 237 mode active
+
+interface Ethernet119/1/14
+  description TRUNK pc213e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 239 mode active
+
+interface Ethernet119/1/15
+  description TRUNK pc214e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 241 mode active
+
+interface Ethernet119/1/16
+  description TRUNK mpc206e.region.vtb.ru:vmnic2 IM-010979476
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3656,3662,3668,3674,3768-3774,3776,3782,3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  no snmp trap link-status
+  channel-group 243 mode active
+
+interface Ethernet121/1/1
+  switchport access vlan 3805
+  channel-group 281 mode active
+
+interface Ethernet121/1/2
+  switchport access vlan 3805
+  channel-group 282 mode active
+
+interface Ethernet121/1/3
+  switchport access vlan 3805
+  channel-group 283 mode active
+
+interface Ethernet121/1/4
+  switchport access vlan 3805
+  channel-group 284 mode active
+
+interface Ethernet121/1/5
+  switchport access vlan 3805
+  channel-group 285 mode active
+
+interface Ethernet121/1/6
+  description [VTB_Core_VMs] ptdbo2pg251l:1 RF-001234823
+  switchport access vlan 3808
+  channel-group 286 mode active
+
+interface Ethernet121/1/7
+  description [VTB_Core_VMs_3808_Local] gcmoradb201l:1 RF-001580138
+  switchport access vlan 3808
+  channel-group 445 mode active
+
+interface Ethernet121/1/8
+  description [VTB_Core_VMs] ptdbo2pg252l:1 RF-001234823
+  switchport access vlan 3808
+  channel-group 288 mode active
+
+interface Ethernet121/1/9
+  description None ukkdb201l:1 RF-001687246
+  switchport access vlan 3808
+  channel-group 447 mode active
+
+interface Ethernet121/1/10
+  description [VTB_Core_VMs_3807_Local] eggora201l(Nic1) RF-001287661
+  switchport access vlan 3807
+  no snmp trap link-status
+  channel-group 429 mode active
+
+interface Ethernet121/1/11
+  description RF-000744199
+  switchport access vlan 3806
+  channel-group 386 mode active
+
+interface Ethernet121/1/12
+  description [DBO_PROM_SRV2] dbo2pg298l:1 RF-001262889
+  switchport access vlan 3770
+  no snmp trap link-status
+  channel-group 292 mode active
+
+interface Ethernet121/1/13
+  description [DBO_PROM_SRV2] dbo2pg299l:1 RF-001262889
+  switchport access vlan 3770
+  no snmp trap link-status
+  channel-group 293 mode active
+
+interface Ethernet121/1/14
+  description [TRUNK] CLOD201:1 RF-001103679
+  switchport mode trunk
+  switchport access vlan 3807
+  no snmp trap link-status
+  channel-group 413 mode active
+
+interface Ethernet121/1/15
+  description [VTB_Core_VMs] dgaxon221l:1 RF-001347514
+  switchport access vlan 3808
+  channel-group 431 mode active
+
+interface Ethernet121/1/16
+  description [VTB_Core_VMs] dgaxon222l:1 RF-001347514
+  switchport access vlan 3808
+  channel-group 432 mode active
+
+interface Ethernet123/1/1
+  description TRUNK pc250e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 417 mode active
+
+interface Ethernet123/1/2
+  description TRUNK pc250e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 418 mode active
+
+interface Ethernet123/1/3
+  description TRUNK pc251e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 419 mode active
+
+interface Ethernet123/1/4
+  description TRUNK pc251e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 420 mode active
+
+interface Ethernet123/1/5
+  description TRUNK pc252e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 421 mode active
+
+interface Ethernet123/1/6
+  description TRUNK pc252e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 422 mode active
+
+interface Ethernet123/1/7
+  description TRUNK pc253e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 423 mode active
+
+interface Ethernet123/1/8
+  description TRUNK pc253e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 424 mode active
+
+interface Ethernet123/1/9
+  description TRUNK pc254e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 425 mode active
+
+interface Ethernet123/1/10
+  description TRUNK pc254e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 426 mode active
+
+interface Ethernet123/1/11
+  description TRUNK pc255e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 427 mode active
+
+interface Ethernet123/1/12
+  description TRUNK pc255e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 428 mode active
+
+interface Ethernet123/1/13
+  description TRUNK pc269:Int Port 1 RF-001548857
+  switchport mode trunk
+  switchport trunk allowed vlan 3565-3567,3852-3853
+  channel-group 437 mode active
+
+interface Ethernet123/1/14
+  description TRUNK pc269:Int Port 3 RF-001548857
+  switchport mode trunk
+  switchport trunk allowed vlan 3565-3567,3852-3853
+  channel-group 438 mode active
+
+interface Ethernet123/1/15
+  description TRUNK pc270:Int Port 1 RF-001548857
+  switchport mode trunk
+  switchport trunk allowed vlan 3565-3567,3852-3853
+  channel-group 439 mode active
+
+interface Ethernet123/1/16
+  description TRUNK pc270:Int Port 3 RF-001548857
+  switchport mode trunk
+  switchport trunk allowed vlan 3565-3567,3852-3853
+  channel-group 440 mode active
+
+interface Ethernet123/1/17
+  description TRUNK pc271:Int Port 1 RF-001548857
+  switchport mode trunk
+  switchport trunk allowed vlan 3565-3567,3852-3853
+  channel-group 441 mode active
+
+interface Ethernet123/1/18
+  description TRUNK pc271:Int Port 3 RF-001548857
+  switchport mode trunk
+  switchport trunk allowed vlan 3565-3567,3852-3853
+  channel-group 442 mode active
+
+interface Ethernet123/1/19
+  description TRUNK pc272:Int Port 1 RF-001548857
+  switchport mode trunk
+  switchport trunk allowed vlan 3565-3567,3852-3853
+  channel-group 443 mode active
+
+interface Ethernet123/1/20
+  description TRUNK pc272:Int Port 3 RF-001548857
+  switchport mode trunk
+  switchport trunk allowed vlan 3565-3567,3852-3853
+  channel-group 444 mode active
+
+interface Ethernet123/1/21
+  description [edkdb202l] int1 RF-001605535
+  switchport access vlan 3808
+  channel-group 446 mode active
+
+interface Ethernet123/1/22
+  description TRUNK pc273e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 449 mode active
+
+interface Ethernet123/1/23
+  description TRUNK pc273e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 450 mode active
+
+interface Ethernet123/1/24
+  description TRUNK pc274e.region.vtb.ru:vmnic0 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 451 mode active
+
+interface Ethernet123/1/25
+  description TRUNK pc274e.region.vtb.ru:vmnic4 RF-002065224
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3535,3573,3656,3662,3668,3674,3768,3770-3771,3773-3774,3776,3782-3784,3791,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 452 mode active
+
+interface Ethernet123/1/26
+  description DL360 type 3 ER1-5/4 U24 10G_1
+  switchport access vlan 3801
+  no snmp trap link-status
+
+interface Ethernet123/1/27
+  description TRUNK is203e.region.vtb.ru:vmnic0 RF-001738416
+  switchport mode trunk
+  switchport trunk allowed vlan 3801,3852-3853,3926
+
+interface Ethernet123/1/28
+  description TRUNK is204e.region.vtb.ru:vmnic0 RF-001738416
+  switchport mode trunk
+  switchport trunk allowed vlan 3801,3852-3853,3926
+
+interface Ethernet123/1/29
+  description VGATE02
+  switchport mode trunk
+  switchport trunk allowed vlan 3155,3347
+  speed 1000
+  channel-group 999 mode active
+
+interface Ethernet123/1/30
+  description VGATE01
+  switchport mode trunk
+  switchport trunk allowed vlan 3155,3347
+  speed 1000
+  channel-group 998 mode active
+
+interface Ethernet123/1/31
+  description DL360 type 1 ER1-6/4 U25 10G_1
+  switchport access vlan 3776
+  channel-group 226 mode active
+
+interface Ethernet123/1/32
+
+interface Ethernet123/1/33
+  description tmddei208l_eth0
+  switchport access vlan 3774
+  speed 1000
+  no snmp trap link-status
+
+interface Ethernet123/1/34
+  description tmddei208l
+  switchport access vlan 3597
+  speed 1000
+  no snmp trap link-status
+
+interface Ethernet123/1/35
+  description tmddei209l_eth0
+  switchport access vlan 3774
+  speed 1000
+  no snmp trap link-status
+
+interface Ethernet123/1/36
+  description tmddei209l
+  switchport access vlan 3597
+  speed 1000
+  no snmp trap link-status
+
+interface Ethernet123/1/37
+  description tmddei210l_eth0
+  switchport access vlan 3774
+  speed 1000
+  no snmp trap link-status
+
+interface Ethernet123/1/38
+  description tmddei210l
+  switchport access vlan 3597
+  speed 1000
+  no snmp trap link-status
+
+interface Ethernet123/1/39
+  description DL360 type 3 ER1-5/4 U22 10G_1
+  switchport access vlan 3801
+  no snmp trap link-status
+
+interface Ethernet123/1/40
+  description msfoapp203l
+  switchport access vlan 3803
+  speed 1000
+  channel-group 997 mode active
+
+interface Ethernet123/1/41
+  description msfoapp203l
+  switchport access vlan 3803
+  speed 1000
+  channel-group 299 mode active
+
+interface Ethernet123/1/42
+  description msfoapp202l
+  switchport access vlan 3803
+  speed 1000
+  channel-group 301 mode active
+
+interface Ethernet123/1/43
+  description kbrn201
+  switchport access vlan 3821
+  speed 1000
+  channel-group 371 mode active
+
+interface Ethernet123/1/44
+  description CLD_A 10.151.9.230 cldora201l
+  switchport access vlan 3809
+  channel-group 352 mode active
+
+interface Ethernet123/1/45
+  description DL360 type 3 ER1-5/4 U24 10G_1
+  switchport access vlan 3801
+  no snmp trap link-status
+
+interface Ethernet123/1/46
+
+interface Ethernet123/1/47
+
+interface Ethernet123/1/48
+
+interface Ethernet127/1/1
+  description TRUNK pc218e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 253 mode active
+
+interface Ethernet127/1/2
+  description TRUNK pc219e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 255 mode active
+
+interface Ethernet127/1/3
+  description TRUNK pc220e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 257 mode active
+
+interface Ethernet127/1/4
+  description TRUNK   tps284e:1 RF-001807463
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 453 mode active
+
+interface Ethernet127/1/5
+  description TRUNK pc225e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 270 mode active
+
+interface Ethernet127/1/6
+  description TRUNK pc226e.region.vtb.ru:vmnic2 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 272 mode active
+
+interface Ethernet127/1/7
+  description TRUNK   tps282e:1 RF-001807463
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 454 mode active
+
+interface Ethernet127/1/8
+  description TRUNK   tpc283e:1 RF-001807463
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 455 mode active
+
+interface Ethernet127/1/9
+  description TRUNK pc218e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 252 mode active
+
+interface Ethernet127/1/10
+  description TRUNK pc219e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 254 mode active
+
+interface Ethernet127/1/11
+  description TRUNK pc220e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3192,3428,3535,3573-3574,3656,3662,3668,3674,3768-3774,3776,3782-3784,3791,3801-3809,3812,3821,3824-3825,3828-3830,3835-3837,3839,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 256 mode active
+
+interface Ethernet127/1/12
+  description TRUNK   tps284e:3 RF-001807463
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 456 mode active
+
+interface Ethernet127/1/13
+  description TRUNK pc225e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3428,3535,3573-3574,3656,3662,3668,3674,3769-3773,3776,3782-3784,3801-3809,3812,3821,3824-3825,3828-3830,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 269 mode active
+
+interface Ethernet127/1/14
+  description TRUNK pc226e.region.vtb.ru:vmnic0 RF-002066324
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3155,3187,3428,3535,3573-3574,3656,3662,3668,3674,3769-3773,3776,3782-3784,3801-3809,3812,3821,3824-3825,3828-3830,3842-3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3926,3965
+  channel-group 271 mode active
+
+interface Ethernet127/1/15
+  description TRUNK   tps282e:3 RF-001807463
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 457 mode active
+
+interface Ethernet127/1/16
+  description vtb-core TRUNK   tpc283e:3 RF-001807463
+  switchport mode trunk
+  switchport trunk allowed vlan 3035-3036,3105,3428,3656,3662,3668,3674,3770-3771,3773-3774,3776,3801-3809,3821,3824-3825,3828-3830,3835-3836,3839,3843,3852-3853,3857-3858,3865-3866,3868,3901,3904,3915,3965
+  channel-group 458 mode active
+clock timezone MSK 3 0
+cli alias name wr copy running-config startup-config
+line console
+line vty
+boot kickstart bootflash:/n6000-uk9-kickstart.7.3.5.N1.1.bin
+boot system bootflash:/n6000-uk9.7.3.5.N1.1.bin
+poap transit
+
+

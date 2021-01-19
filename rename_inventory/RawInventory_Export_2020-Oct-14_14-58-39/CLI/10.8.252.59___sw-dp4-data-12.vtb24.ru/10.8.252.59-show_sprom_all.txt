@@ -1,0 +1,2536 @@
+
+DISPLAY active supervisor sprom contents:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x186a
+ EEPROM Size     : 65535
+ Block Count     : 3
+ FRU Major Type  : 0x6002
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-SUP2E
+ Serial Number   : JAE1825078X
+ Part Number     : 73-14544-07
+ Part Revision   : A0
+ Mfg Deviation   : 
+ H/W Version     : 1.2
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.9.97.5.0
+ Power Consump   : -530
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUCAECBAB
+ VID             : V02
+Supervisor Module specific block:
+ Block Signature : 0x6002
+ Block Version   : 2
+ Block Length    : 103
+ Block Checksum  : 0xd6d
+ Feature Bits    : 0x0
+ HW Changes Bits : 0x5
+ Card Index      : 18055
+ MAC Addresses   : 28-c7-ce-59-1b-d8
+ Number of MACs  : 19
+ Number of EPLD  : 1
+ EPLD A          : 0x0
+ Port Type-Num   : 7-2
+ Sensor #1       : 60,42
+ Sensor #2       : 125,115
+ Sensor #3       : 125,105
+ Sensor #4       : -128,-128
+ Sensor #5       : -128,-128
+ Sensor #6       : -128,-128
+ Sensor #7       : -128,-128
+ Sensor #8       : -128,-128
+ Max Connector Power: 1000
+ Cooling Requirement: 75
+ Ambient Temperature: 55
+Temperature Sensor block:
+ Block Signature : 0x6008
+ Block Version   : 1
+ Block Length    : 71
+ Block Checksum  : 0x1bf6
+ Number of Valid Sensors : 14
+ Sensor #9       : 85,75
+ Sensor #10       : 85,75
+ Sensor #11       : 85,75
+ Sensor #12       : 85,75
+ Sensor #13       : 85,75
+ Sensor #14       : 85,75
+ Sensor #15       : 85,75
+ Sensor #16       : 85,75
+ Sensor #17       : 95,85
+ Sensor #18       : 95,85
+ Sensor #19       : 95,85
+ Sensor #20       : 95,85
+ Sensor #21       : 95,85
+ Sensor #22       : 95,85
+ Sensor #23       : -128,-128
+ Sensor #24       : -128,-128
+ Sensor #25       : -128,-128
+ Sensor #26       : -128,-128
+ Sensor #27       : -128,-128
+ Sensor #28       : -128,-128
+ Sensor #29       : -128,-128
+ Sensor #30       : -128,-128
+ Sensor #31       : -128,-128
+ Sensor #32       : -128,-128
+ Sensor #33       : -128,-128
+ Sensor #34       : -128,-128
+ Sensor #35       : -128,-128
+ Sensor #36       : -128,-128
+ Sensor #37       : -128,-128
+ Sensor #38       : -128,-128
+ Sensor #39       : -128,-128
+ Sensor #40       : -128,-128
+
+
+DISPLAY active supervisor daughter card sprom contents:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x1346
+ EEPROM Size     : 65535
+ Block Count     : 3
+ FRU Major Type  : 0x6003
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : DB-N77-SUP2E
+ Serial Number   : JAE182402UM
+ Part Number     : 73-14773-02
+ Part Revision   : A0
+ Mfg Deviation   : 
+ H/W Version     : 1.0
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 0.0.0.0.0.0.0.0
+ Power Consump   : 0
+ RMA Code        : 0-0-0-0
+ CLEI Code       : 
+ VID             : 
+Supervisor Module specific block:
+ Block Signature : 0x6002
+ Block Version   : 2
+ Block Length    : 103
+ Block Checksum  : 0xa28
+ Feature Bits    : 0x0
+ HW Changes Bits : 0x2
+ Card Index      : 18056
+ MAC Addresses   : 00-00-00-55-00-4d
+ Number of MACs  : 0
+ Number of EPLD  : 0
+ Port Type-Num   : 0-0
+ Sensor #1       : 125,110
+ Sensor #2       : -128,-128
+ Sensor #3       : -128,-128
+ Sensor #4       : -128,-128
+ Sensor #5       : -128,-128
+ Sensor #6       : -128,-128
+ Sensor #7       : -128,-128
+ Sensor #8       : -128,-128
+ Max Connector Power: 0
+ Cooling Requirement: 0
+ Ambient Temperature: 0
+Temperature Sensor block:
+ Block Signature : 0x6008
+ Block Version   : 1
+ Block Length    : 71
+ Block Checksum  : 0x1230
+ Number of Valid Sensors : 0
+ Sensor #9       : -128,-128
+ Sensor #10       : -128,-128
+ Sensor #11       : -128,-128
+ Sensor #12       : -128,-128
+ Sensor #13       : -128,-128
+ Sensor #14       : -128,-128
+ Sensor #15       : -128,-128
+ Sensor #16       : -128,-128
+ Sensor #17       : -128,-128
+ Sensor #18       : -128,-128
+ Sensor #19       : -128,-128
+ Sensor #20       : -128,-128
+ Sensor #21       : -128,-128
+ Sensor #22       : -128,-128
+ Sensor #23       : -128,-128
+ Sensor #24       : -128,-128
+ Sensor #25       : -128,-128
+ Sensor #26       : -128,0
+ Sensor #27       : 0,0
+ Sensor #28       : 0,0
+ Sensor #29       : 0,0
+ Sensor #30       : 0,0
+ Sensor #31       : 0,0
+ Sensor #32       : 0,0
+ Sensor #33       : 0,0
+ Sensor #34       : 0,0
+ Sensor #35       : 0,0
+ Sensor #36       : 0,0
+ Sensor #37       : 0,0
+ Sensor #38       : 0,0
+ Sensor #39       : 0,0
+ Sensor #40       : 0,0
+
+
+DISPLAY standby supervisor sprom contents:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x1869
+ EEPROM Size     : 65535
+ Block Count     : 3
+ FRU Major Type  : 0x6002
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-SUP2E
+ Serial Number   : JAE1825079V
+ Part Number     : 73-14544-07
+ Part Revision   : A0
+ Mfg Deviation   : 
+ H/W Version     : 1.2
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.9.97.5.0
+ Power Consump   : -530
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUCAECBAB
+ VID             : V02
+Supervisor Module specific block:
+ Block Signature : 0x6002
+ Block Version   : 2
+ Block Length    : 103
+ Block Checksum  : 0xd47
+ Feature Bits    : 0x0
+ HW Changes Bits : 0x5
+ Card Index      : 18055
+ MAC Addresses   : 28-c7-ce-59-1b-b2
+ Number of MACs  : 19
+ Number of EPLD  : 1
+ EPLD A          : 0x0
+ Port Type-Num   : 7-2
+ Sensor #1       : 60,42
+ Sensor #2       : 125,115
+ Sensor #3       : 125,105
+ Sensor #4       : -128,-128
+ Sensor #5       : -128,-128
+ Sensor #6       : -128,-128
+ Sensor #7       : -128,-128
+ Sensor #8       : -128,-128
+ Max Connector Power: 1000
+ Cooling Requirement: 75
+ Ambient Temperature: 55
+Temperature Sensor block:
+ Block Signature : 0x6008
+ Block Version   : 1
+ Block Length    : 71
+ Block Checksum  : 0x1bf6
+ Number of Valid Sensors : 14
+ Sensor #9       : 85,75
+ Sensor #10       : 85,75
+ Sensor #11       : 85,75
+ Sensor #12       : 85,75
+ Sensor #13       : 85,75
+ Sensor #14       : 85,75
+ Sensor #15       : 85,75
+ Sensor #16       : 85,75
+ Sensor #17       : 95,85
+ Sensor #18       : 95,85
+ Sensor #19       : 95,85
+ Sensor #20       : 95,85
+ Sensor #21       : 95,85
+ Sensor #22       : 95,85
+ Sensor #23       : -128,-128
+ Sensor #24       : -128,-128
+ Sensor #25       : -128,-128
+ Sensor #26       : -128,-128
+ Sensor #27       : -128,-128
+ Sensor #28       : -128,-128
+ Sensor #29       : -128,-128
+ Sensor #30       : -128,-128
+ Sensor #31       : -128,-128
+ Sensor #32       : -128,-128
+ Sensor #33       : -128,-128
+ Sensor #34       : -128,-128
+ Sensor #35       : -128,-128
+ Sensor #36       : -128,-128
+ Sensor #37       : -128,-128
+ Sensor #38       : -128,-128
+ Sensor #39       : -128,-128
+ Sensor #40       : -128,-128
+
+
+DISPLAY daughter card sprom contents:
+
+
+DISPLAY backplane sprom 1 contents:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x1617
+ EEPROM Size     : 65535
+ Block Count     : 5
+ FRU Major Type  : 0x6001
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-C7718
+ Serial Number   : JAF1814ADMK
+ Part Number     : 73-14605-04
+ Part Revision   : A0
+ Mfg Deviation   : 
+ H/W Version     : 1.0
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.3.1352.0.0
+ Power Consump   : 0
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMMKH00ARA
+ VID             : V01
+Chassis specific block:
+ Block Signature : 0x6001
+ Block Version   : 3
+ Block Length    : 39
+ Block Checksum  : 0x36a
+ Feature Bits    : 0x0
+ HW Changes Bits : 0x0
+ Stackmib OID    : 0
+ MAC Addresses   : 00-2a-6a-b7-86-80
+ Number of MACs  : 128
+ OEM Enterprise  : 9
+ OEM MIB Offset  : 5
+ MAX Connector Power: 0
+WWN software-module specific block:
+ Block Signature : 0x6005
+ Block Version   : 1
+ Block Length    : 0
+ Block Checksum  : 0x66
+wwn usage bits:
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00
+License software-module specific block:
+ Block Signature : 0x6006
+ Block Version   : 1
+ Block Length    : 16
+ Block Checksum  : 0x14a
+lic usage bits:
+ c0 13 00 00 00 00 00 00
+Second Serial number specific block:
+ Block Signature : 0x6007
+ Block Version   : 1
+ Block Length    : 28
+ Block Checksum  : 0x34c
+ Serial Number   : JAF1746ATDL
+
+
+DISPLAY backplane sprom 2 contents:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x1617
+ EEPROM Size     : 65535
+ Block Count     : 5
+ FRU Major Type  : 0x6001
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-C7718
+ Serial Number   : JAF1814ADMK
+ Part Number     : 73-14605-04
+ Part Revision   : A0
+ Mfg Deviation   : 
+ H/W Version     : 1.0
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.3.1352.0.0
+ Power Consump   : 0
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMMKH00ARA
+ VID             : V01
+Chassis specific block:
+ Block Signature : 0x6001
+ Block Version   : 3
+ Block Length    : 39
+ Block Checksum  : 0x36a
+ Feature Bits    : 0x0
+ HW Changes Bits : 0x0
+ Stackmib OID    : 0
+ MAC Addresses   : 00-2a-6a-b7-86-80
+ Number of MACs  : 128
+ OEM Enterprise  : 9
+ OEM MIB Offset  : 5
+ MAX Connector Power: 0
+WWN software-module specific block:
+ Block Signature : 0x6005
+ Block Version   : 1
+ Block Length    : 0
+ Block Checksum  : 0x66
+wwn usage bits:
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00 00 00 00 00 00 00
+ 00 00
+License software-module specific block:
+ Block Signature : 0x6006
+ Block Version   : 1
+ Block Length    : 16
+ Block Checksum  : 0x14a
+lic usage bits:
+ c0 13 00 00 00 00 00 00
+Second Serial number specific block:
+ Block Signature : 0x6007
+ Block Version   : 1
+ Block Length    : 28
+ Block Checksum  : 0x34c
+ Serial Number   : JAF1746ATDL
+
+
+DISPLAY sprom contents for linecard 1 instance 1:
+Module 1 is absent. So can't display its sprom contents
+
+
+DISPLAY sprom contents for linecard 1 instance 2:
+Module 1 is absent. So can't display its sprom contents
+
+
+DISPLAY sprom contents for linecard 1 instance 3:
+Module 1 is absent. So can't display its sprom contents
+
+
+DISPLAY sprom contents for linecard 2 instance 1:
+Module 2 is absent. So can't display its sprom contents
+
+
+DISPLAY sprom contents for linecard 2 instance 2:
+Module 2 is absent. So can't display its sprom contents
+
+
+DISPLAY sprom contents for linecard 2 instance 3:
+Module 2 is absent. So can't display its sprom contents
+
+
+DISPLAY sprom contents for linecard 3 instance 1:
+Module 3 is absent. So can't display its sprom contents
+
+
+DISPLAY sprom contents for linecard 3 instance 2:
+Module 3 is absent. So can't display its sprom contents
+
+
+DISPLAY sprom contents for linecard 3 instance 3:
+Module 3 is absent. So can't display its sprom contents
+
+
+DISPLAY sprom contents for linecard 4 instance 1:
+Module 4 is absent. So can't display its sprom contents
+
+
+DISPLAY sprom contents for linecard 4 instance 2:
+Module 4 is absent. So can't display its sprom contents
+
+
+DISPLAY sprom contents for linecard 4 instance 3:
+Module 4 is absent. So can't display its sprom contents
+
+
+DISPLAY sprom contents for linecard 5 instance 1:
+Module 5 is absent. So can't display its sprom contents
+
+
+DISPLAY sprom contents for linecard 5 instance 2:
+Module 5 is absent. So can't display its sprom contents
+
+
+DISPLAY sprom contents for linecard 5 instance 3:
+Module 5 is absent. So can't display its sprom contents
+
+
+DISPLAY sprom contents for linecard 6 instance 1:
+Module 6 is absent. So can't display its sprom contents
+
+
+DISPLAY sprom contents for linecard 6 instance 2:
+Module 6 is absent. So can't display its sprom contents
+
+
+DISPLAY sprom contents for linecard 6 instance 3:
+Module 6 is absent. So can't display its sprom contents
+
+
+DISPLAY sprom contents for linecard 7 instance 1:
+Module 7 is absent. So can't display its sprom contents
+
+
+DISPLAY sprom contents for linecard 7 instance 2:
+Module 7 is absent. So can't display its sprom contents
+
+
+DISPLAY sprom contents for linecard 7 instance 3:
+Module 7 is absent. So can't display its sprom contents
+
+
+DISPLAY sprom contents for linecard 8 instance 1:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x188e
+ EEPROM Size     : 65535
+ Block Count     : 3
+ FRU Major Type  : 0x6003
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-F324FQ-25
+ Serial Number   : JAE22390RLN
+ Part Number     : 73-15003-08
+ Part Revision   : B0
+ Mfg Deviation   : 
+ H/W Version     : 1.3
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.9.97.6.0
+ Power Consump   : -1480
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUIAJVCAC
+ VID             : V03
+Linecard Module specific block:
+ Block Signature : 0x6003
+ Block Version   : 2
+ Block Length    : 103
+ Block Checksum  : 0xf72
+ Feature Bits    : 0x0
+ HW Changes Bits : 0x3
+ Card Index      : 18063
+ MAC Addresses   : f4-db-e6-cc-09-de
+ Number of MACs  : 114
+ Number of EOBC links : 2
+ Number of EPLD  : 2
+ EPLD A          : 0x0
+ EPLD B          : 0x0
+ Port Type-Num   : 2-96;7-12
+ SRAM size       : 0
+ Sensor #1       : 125,115
+ Sensor #2       : 125,115
+ Sensor #3       : 125,115
+ Sensor #4       : -128,-128
+ Sensor #5       : 125,115
+ Sensor #6       : 125,115
+ Sensor #7       : 125,115
+ Sensor #8       : 125,115
+ Max Connector Power: 2400
+ Cooling Requirement: 75
+ Ambient Temperature: 55
+Temperature Sensor block:
+ Block Signature : 0x6008
+ Block Version   : 1
+ Block Length    : 71
+ Block Checksum  : 0x2038
+ Number of Valid Sensors : 8
+ Sensor #9       : 125,115
+ Sensor #10       : 125,115
+ Sensor #11       : 125,115
+ Sensor #12       : 125,115
+ Sensor #13       : 125,115
+ Sensor #14       : 125,115
+ Sensor #15       : 125,115
+ Sensor #16       : 125,115
+ Sensor #17       : -128,-128
+ Sensor #18       : -128,-128
+ Sensor #19       : -128,-128
+ Sensor #20       : -128,-128
+ Sensor #21       : -128,-128
+ Sensor #22       : -128,-128
+ Sensor #23       : -128,-128
+ Sensor #24       : -128,-128
+ Sensor #25       : -128,-128
+ Sensor #26       : -128,-128
+ Sensor #27       : -128,-128
+ Sensor #28       : -128,-128
+ Sensor #29       : -128,-128
+ Sensor #30       : -128,-128
+ Sensor #31       : -128,-128
+ Sensor #32       : -128,-128
+ Sensor #33       : -128,-128
+ Sensor #34       : -128,-128
+ Sensor #35       : -128,-128
+ Sensor #36       : -128,-128
+ Sensor #37       : -128,-128
+ Sensor #38       : -128,-128
+ Sensor #39       : -128,-128
+ Sensor #40       : -128,-128
+
+
+DISPLAY sprom contents for linecard 8 instance 2:
+Module 8 only has 1 instances of sproms.
+
+
+DISPLAY sprom contents for linecard 8 instance 3:
+Module 8 only has 1 instances of sproms.
+
+
+DISPLAY sprom contents for linecard 11 instance 1:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x183f
+ EEPROM Size     : 65535
+ Block Count     : 3
+ FRU Major Type  : 0x6003
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-F324FQ-25
+ Serial Number   : JAE182306C0
+ Part Number     : 73-15003-06
+ Part Revision   : A0
+ Mfg Deviation   : 
+ H/W Version     : 1.0
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.9.97.6.0
+ Power Consump   : -1480
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUIAJVCAA
+ VID             : V01
+Linecard Module specific block:
+ Block Signature : 0x6003
+ Block Version   : 2
+ Block Length    : 103
+ Block Checksum  : 0xe3a
+ Feature Bits    : 0x0
+ HW Changes Bits : 0x3
+ Card Index      : 18063
+ MAC Addresses   : 28-c7-ce-58-b1-6a
+ Number of MACs  : 114
+ Number of EOBC links : 2
+ Number of EPLD  : 2
+ EPLD A          : 0x0
+ EPLD B          : 0x0
+ Port Type-Num   : 2-96;7-12
+ SRAM size       : 0
+ Sensor #1       : 125,115
+ Sensor #2       : 125,115
+ Sensor #3       : 125,115
+ Sensor #4       : -128,-128
+ Sensor #5       : 125,115
+ Sensor #6       : 125,115
+ Sensor #7       : 125,115
+ Sensor #8       : 125,115
+ Max Connector Power: 2400
+ Cooling Requirement: 75
+ Ambient Temperature: 55
+Temperature Sensor block:
+ Block Signature : 0x6008
+ Block Version   : 1
+ Block Length    : 71
+ Block Checksum  : 0x2038
+ Number of Valid Sensors : 8
+ Sensor #9       : 125,115
+ Sensor #10       : 125,115
+ Sensor #11       : 125,115
+ Sensor #12       : 125,115
+ Sensor #13       : 125,115
+ Sensor #14       : 125,115
+ Sensor #15       : 125,115
+ Sensor #16       : 125,115
+ Sensor #17       : -128,-128
+ Sensor #18       : -128,-128
+ Sensor #19       : -128,-128
+ Sensor #20       : -128,-128
+ Sensor #21       : -128,-128
+ Sensor #22       : -128,-128
+ Sensor #23       : -128,-128
+ Sensor #24       : -128,-128
+ Sensor #25       : -128,-128
+ Sensor #26       : -128,-128
+ Sensor #27       : -128,-128
+ Sensor #28       : -128,-128
+ Sensor #29       : -128,-128
+ Sensor #30       : -128,-128
+ Sensor #31       : -128,-128
+ Sensor #32       : -128,-128
+ Sensor #33       : -128,-128
+ Sensor #34       : -128,-128
+ Sensor #35       : -128,-128
+ Sensor #36       : -128,-128
+ Sensor #37       : -128,-128
+ Sensor #38       : -128,-128
+ Sensor #39       : -128,-128
+ Sensor #40       : -128,-128
+
+
+DISPLAY sprom contents for linecard 11 instance 2:
+Module 11 only has 1 instances of sproms.
+
+
+DISPLAY sprom contents for linecard 11 instance 3:
+Module 11 only has 1 instances of sproms.
+
+
+DISPLAY sprom contents for linecard 12 instance 1:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x185a
+ EEPROM Size     : 65535
+ Block Count     : 3
+ FRU Major Type  : 0x6003
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-F324FQ-25
+ Serial Number   : JAE182405X6
+ Part Number     : 73-15003-06
+ Part Revision   : A0
+ Mfg Deviation   : 
+ H/W Version     : 1.0
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.9.97.6.0
+ Power Consump   : -1480
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUIAJVCAA
+ VID             : V01
+Linecard Module specific block:
+ Block Signature : 0x6003
+ Block Version   : 2
+ Block Length    : 103
+ Block Checksum  : 0xe19
+ Feature Bits    : 0x0
+ HW Changes Bits : 0x3
+ Card Index      : 18063
+ MAC Addresses   : 28-c7-ce-58-d4-26
+ Number of MACs  : 114
+ Number of EOBC links : 2
+ Number of EPLD  : 2
+ EPLD A          : 0x0
+ EPLD B          : 0x0
+ Port Type-Num   : 2-96;7-12
+ SRAM size       : 0
+ Sensor #1       : 125,115
+ Sensor #2       : 125,115
+ Sensor #3       : 125,115
+ Sensor #4       : -128,-128
+ Sensor #5       : 125,115
+ Sensor #6       : 125,115
+ Sensor #7       : 125,115
+ Sensor #8       : 125,115
+ Max Connector Power: 2400
+ Cooling Requirement: 75
+ Ambient Temperature: 55
+Temperature Sensor block:
+ Block Signature : 0x6008
+ Block Version   : 1
+ Block Length    : 71
+ Block Checksum  : 0x2038
+ Number of Valid Sensors : 8
+ Sensor #9       : 125,115
+ Sensor #10       : 125,115
+ Sensor #11       : 125,115
+ Sensor #12       : 125,115
+ Sensor #13       : 125,115
+ Sensor #14       : 125,115
+ Sensor #15       : 125,115
+ Sensor #16       : 125,115
+ Sensor #17       : -128,-128
+ Sensor #18       : -128,-128
+ Sensor #19       : -128,-128
+ Sensor #20       : -128,-128
+ Sensor #21       : -128,-128
+ Sensor #22       : -128,-128
+ Sensor #23       : -128,-128
+ Sensor #24       : -128,-128
+ Sensor #25       : -128,-128
+ Sensor #26       : -128,-128
+ Sensor #27       : -128,-128
+ Sensor #28       : -128,-128
+ Sensor #29       : -128,-128
+ Sensor #30       : -128,-128
+ Sensor #31       : -128,-128
+ Sensor #32       : -128,-128
+ Sensor #33       : -128,-128
+ Sensor #34       : -128,-128
+ Sensor #35       : -128,-128
+ Sensor #36       : -128,-128
+ Sensor #37       : -128,-128
+ Sensor #38       : -128,-128
+ Sensor #39       : -128,-128
+ Sensor #40       : -128,-128
+
+
+DISPLAY sprom contents for linecard 12 instance 2:
+Module 12 only has 1 instances of sproms.
+
+
+DISPLAY sprom contents for linecard 12 instance 3:
+Module 12 only has 1 instances of sproms.
+
+
+DISPLAY sprom contents for linecard 13 instance 1:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x1854
+ EEPROM Size     : 65535
+ Block Count     : 3
+ FRU Major Type  : 0x6003
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-F324FQ-25
+ Serial Number   : JAE190302FC
+ Part Number     : 73-15003-07
+ Part Revision   : A0
+ Mfg Deviation   : 
+ H/W Version     : 1.1
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.9.97.6.0
+ Power Consump   : -1480
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUIAJVCAB
+ VID             : V02
+Linecard Module specific block:
+ Block Signature : 0x6003
+ Block Version   : 2
+ Block Length    : 103
+ Block Checksum  : 0xf6f
+ Feature Bits    : 0x0
+ HW Changes Bits : 0x3
+ Card Index      : 18063
+ MAC Addresses   : 74-a2-e6-fc-6a-e2
+ Number of MACs  : 114
+ Number of EOBC links : 2
+ Number of EPLD  : 2
+ EPLD A          : 0x0
+ EPLD B          : 0x0
+ Port Type-Num   : 2-96;7-12
+ SRAM size       : 0
+ Sensor #1       : 125,115
+ Sensor #2       : 125,115
+ Sensor #3       : 125,115
+ Sensor #4       : -128,-128
+ Sensor #5       : 125,115
+ Sensor #6       : 125,115
+ Sensor #7       : 125,115
+ Sensor #8       : 125,115
+ Max Connector Power: 2400
+ Cooling Requirement: 75
+ Ambient Temperature: 55
+Temperature Sensor block:
+ Block Signature : 0x6008
+ Block Version   : 1
+ Block Length    : 71
+ Block Checksum  : 0x2038
+ Number of Valid Sensors : 8
+ Sensor #9       : 125,115
+ Sensor #10       : 125,115
+ Sensor #11       : 125,115
+ Sensor #12       : 125,115
+ Sensor #13       : 125,115
+ Sensor #14       : 125,115
+ Sensor #15       : 125,115
+ Sensor #16       : 125,115
+ Sensor #17       : -128,-128
+ Sensor #18       : -128,-128
+ Sensor #19       : -128,-128
+ Sensor #20       : -128,-128
+ Sensor #21       : -128,-128
+ Sensor #22       : -128,-128
+ Sensor #23       : -128,-128
+ Sensor #24       : -128,-128
+ Sensor #25       : -128,-128
+ Sensor #26       : -128,-128
+ Sensor #27       : -128,-128
+ Sensor #28       : -128,-128
+ Sensor #29       : -128,-128
+ Sensor #30       : -128,-128
+ Sensor #31       : -128,-128
+ Sensor #32       : -128,-128
+ Sensor #33       : -128,-128
+ Sensor #34       : -128,-128
+ Sensor #35       : -128,-128
+ Sensor #36       : -128,-128
+ Sensor #37       : -128,-128
+ Sensor #38       : -128,-128
+ Sensor #39       : -128,-128
+ Sensor #40       : -128,-128
+
+
+DISPLAY sprom contents for linecard 13 instance 2:
+Module 13 only has 1 instances of sproms.
+
+
+DISPLAY sprom contents for linecard 13 instance 3:
+Module 13 only has 1 instances of sproms.
+
+
+DISPLAY sprom contents for linecard 14 instance 1:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x1856
+ EEPROM Size     : 65535
+ Block Count     : 3
+ FRU Major Type  : 0x6003
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-F324FQ-25
+ Serial Number   : JAE182303T9
+ Part Number     : 73-15003-06
+ Part Revision   : A0
+ Mfg Deviation   : 
+ H/W Version     : 1.0
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.9.97.6.0
+ Power Consump   : -1480
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUIAJVCAA
+ VID             : V01
+Linecard Module specific block:
+ Block Signature : 0x6003
+ Block Version   : 2
+ Block Length    : 103
+ Block Checksum  : 0xe3a
+ Feature Bits    : 0x0
+ HW Changes Bits : 0x3
+ Card Index      : 18063
+ MAC Addresses   : 28-c7-ce-58-8b-90
+ Number of MACs  : 114
+ Number of EOBC links : 2
+ Number of EPLD  : 2
+ EPLD A          : 0x0
+ EPLD B          : 0x0
+ Port Type-Num   : 2-96;7-12
+ SRAM size       : 0
+ Sensor #1       : 125,115
+ Sensor #2       : 125,115
+ Sensor #3       : 125,115
+ Sensor #4       : -128,-128
+ Sensor #5       : 125,115
+ Sensor #6       : 125,115
+ Sensor #7       : 125,115
+ Sensor #8       : 125,115
+ Max Connector Power: 2400
+ Cooling Requirement: 75
+ Ambient Temperature: 55
+Temperature Sensor block:
+ Block Signature : 0x6008
+ Block Version   : 1
+ Block Length    : 71
+ Block Checksum  : 0x2038
+ Number of Valid Sensors : 8
+ Sensor #9       : 125,115
+ Sensor #10       : 125,115
+ Sensor #11       : 125,115
+ Sensor #12       : 125,115
+ Sensor #13       : 125,115
+ Sensor #14       : 125,115
+ Sensor #15       : 125,115
+ Sensor #16       : 125,115
+ Sensor #17       : -128,-128
+ Sensor #18       : -128,-128
+ Sensor #19       : -128,-128
+ Sensor #20       : -128,-128
+ Sensor #21       : -128,-128
+ Sensor #22       : -128,-128
+ Sensor #23       : -128,-128
+ Sensor #24       : -128,-128
+ Sensor #25       : -128,-128
+ Sensor #26       : -128,-128
+ Sensor #27       : -128,-128
+ Sensor #28       : -128,-128
+ Sensor #29       : -128,-128
+ Sensor #30       : -128,-128
+ Sensor #31       : -128,-128
+ Sensor #32       : -128,-128
+ Sensor #33       : -128,-128
+ Sensor #34       : -128,-128
+ Sensor #35       : -128,-128
+ Sensor #36       : -128,-128
+ Sensor #37       : -128,-128
+ Sensor #38       : -128,-128
+ Sensor #39       : -128,-128
+ Sensor #40       : -128,-128
+
+
+DISPLAY sprom contents for linecard 14 instance 2:
+Module 14 only has 1 instances of sproms.
+
+
+DISPLAY sprom contents for linecard 14 instance 3:
+Module 14 only has 1 instances of sproms.
+
+
+DISPLAY sprom contents for linecard 15 instance 1:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x185b
+ EEPROM Size     : 65535
+ Block Count     : 3
+ FRU Major Type  : 0x6003
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-F324FQ-25
+ Serial Number   : JAE182306AN
+ Part Number     : 73-15003-06
+ Part Revision   : A0
+ Mfg Deviation   : 
+ H/W Version     : 1.0
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.9.97.6.0
+ Power Consump   : -1480
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUIAJVCAA
+ VID             : V01
+Linecard Module specific block:
+ Block Signature : 0x6003
+ Block Version   : 2
+ Block Length    : 103
+ Block Checksum  : 0xecd
+ Feature Bits    : 0x0
+ HW Changes Bits : 0x3
+ Card Index      : 18063
+ MAC Addresses   : 28-c7-ce-58-b4-fa
+ Number of MACs  : 114
+ Number of EOBC links : 2
+ Number of EPLD  : 2
+ EPLD A          : 0x0
+ EPLD B          : 0x0
+ Port Type-Num   : 2-96;7-12
+ SRAM size       : 0
+ Sensor #1       : 125,115
+ Sensor #2       : 125,115
+ Sensor #3       : 125,115
+ Sensor #4       : -128,-128
+ Sensor #5       : 125,115
+ Sensor #6       : 125,115
+ Sensor #7       : 125,115
+ Sensor #8       : 125,115
+ Max Connector Power: 2400
+ Cooling Requirement: 75
+ Ambient Temperature: 55
+Temperature Sensor block:
+ Block Signature : 0x6008
+ Block Version   : 1
+ Block Length    : 71
+ Block Checksum  : 0x2038
+ Number of Valid Sensors : 8
+ Sensor #9       : 125,115
+ Sensor #10       : 125,115
+ Sensor #11       : 125,115
+ Sensor #12       : 125,115
+ Sensor #13       : 125,115
+ Sensor #14       : 125,115
+ Sensor #15       : 125,115
+ Sensor #16       : 125,115
+ Sensor #17       : -128,-128
+ Sensor #18       : -128,-128
+ Sensor #19       : -128,-128
+ Sensor #20       : -128,-128
+ Sensor #21       : -128,-128
+ Sensor #22       : -128,-128
+ Sensor #23       : -128,-128
+ Sensor #24       : -128,-128
+ Sensor #25       : -128,-128
+ Sensor #26       : -128,-128
+ Sensor #27       : -128,-128
+ Sensor #28       : -128,-128
+ Sensor #29       : -128,-128
+ Sensor #30       : -128,-128
+ Sensor #31       : -128,-128
+ Sensor #32       : -128,-128
+ Sensor #33       : -128,-128
+ Sensor #34       : -128,-128
+ Sensor #35       : -128,-128
+ Sensor #36       : -128,-128
+ Sensor #37       : -128,-128
+ Sensor #38       : -128,-128
+ Sensor #39       : -128,-128
+ Sensor #40       : -128,-128
+
+
+DISPLAY sprom contents for linecard 15 instance 2:
+Module 15 only has 1 instances of sproms.
+
+
+DISPLAY sprom contents for linecard 15 instance 3:
+Module 15 only has 1 instances of sproms.
+
+
+DISPLAY sprom contents for linecard 16 instance 1:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x185e
+ EEPROM Size     : 65535
+ Block Count     : 3
+ FRU Major Type  : 0x6003
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-F324FQ-25
+ Serial Number   : JAE1823068Z
+ Part Number     : 73-15003-06
+ Part Revision   : A0
+ Mfg Deviation   : 
+ H/W Version     : 1.0
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.9.97.6.0
+ Power Consump   : -1480
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUIAJVCAA
+ VID             : V01
+Linecard Module specific block:
+ Block Signature : 0x6003
+ Block Version   : 2
+ Block Length    : 103
+ Block Checksum  : 0xdc8
+ Feature Bits    : 0x0
+ HW Changes Bits : 0x3
+ Card Index      : 18063
+ MAC Addresses   : 28-c7-ce-58-8b-1e
+ Number of MACs  : 114
+ Number of EOBC links : 2
+ Number of EPLD  : 2
+ EPLD A          : 0x0
+ EPLD B          : 0x0
+ Port Type-Num   : 2-96;7-12
+ SRAM size       : 0
+ Sensor #1       : 125,115
+ Sensor #2       : 125,115
+ Sensor #3       : 125,115
+ Sensor #4       : -128,-128
+ Sensor #5       : 125,115
+ Sensor #6       : 125,115
+ Sensor #7       : 125,115
+ Sensor #8       : 125,115
+ Max Connector Power: 2400
+ Cooling Requirement: 75
+ Ambient Temperature: 55
+Temperature Sensor block:
+ Block Signature : 0x6008
+ Block Version   : 1
+ Block Length    : 71
+ Block Checksum  : 0x2038
+ Number of Valid Sensors : 8
+ Sensor #9       : 125,115
+ Sensor #10       : 125,115
+ Sensor #11       : 125,115
+ Sensor #12       : 125,115
+ Sensor #13       : 125,115
+ Sensor #14       : 125,115
+ Sensor #15       : 125,115
+ Sensor #16       : 125,115
+ Sensor #17       : -128,-128
+ Sensor #18       : -128,-128
+ Sensor #19       : -128,-128
+ Sensor #20       : -128,-128
+ Sensor #21       : -128,-128
+ Sensor #22       : -128,-128
+ Sensor #23       : -128,-128
+ Sensor #24       : -128,-128
+ Sensor #25       : -128,-128
+ Sensor #26       : -128,-128
+ Sensor #27       : -128,-128
+ Sensor #28       : -128,-128
+ Sensor #29       : -128,-128
+ Sensor #30       : -128,-128
+ Sensor #31       : -128,-128
+ Sensor #32       : -128,-128
+ Sensor #33       : -128,-128
+ Sensor #34       : -128,-128
+ Sensor #35       : -128,-128
+ Sensor #36       : -128,-128
+ Sensor #37       : -128,-128
+ Sensor #38       : -128,-128
+ Sensor #39       : -128,-128
+ Sensor #40       : -128,-128
+
+
+DISPLAY sprom contents for linecard 16 instance 2:
+Module 16 only has 1 instances of sproms.
+
+
+DISPLAY sprom contents for linecard 16 instance 3:
+Module 16 only has 1 instances of sproms.
+
+
+DISPLAY sprom contents for linecard 17 instance 1:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x1875
+ EEPROM Size     : 65535
+ Block Count     : 3
+ FRU Major Type  : 0x6003
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-F324FQ-25
+ Serial Number   : JAE182405UT
+ Part Number     : 73-15003-06
+ Part Revision   : A0
+ Mfg Deviation   : 
+ H/W Version     : 1.0
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.9.97.6.0
+ Power Consump   : -1480
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUIAJVCAA
+ VID             : V01
+Linecard Module specific block:
+ Block Signature : 0x6003
+ Block Version   : 2
+ Block Length    : 103
+ Block Checksum  : 0xdf2
+ Feature Bits    : 0x0
+ HW Changes Bits : 0x3
+ Card Index      : 18063
+ MAC Addresses   : 28-c7-ce-58-cd-06
+ Number of MACs  : 114
+ Number of EOBC links : 2
+ Number of EPLD  : 2
+ EPLD A          : 0x0
+ EPLD B          : 0x0
+ Port Type-Num   : 2-96;7-12
+ SRAM size       : 0
+ Sensor #1       : 125,115
+ Sensor #2       : 125,115
+ Sensor #3       : 125,115
+ Sensor #4       : -128,-128
+ Sensor #5       : 125,115
+ Sensor #6       : 125,115
+ Sensor #7       : 125,115
+ Sensor #8       : 125,115
+ Max Connector Power: 2400
+ Cooling Requirement: 75
+ Ambient Temperature: 55
+Temperature Sensor block:
+ Block Signature : 0x6008
+ Block Version   : 1
+ Block Length    : 71
+ Block Checksum  : 0x2038
+ Number of Valid Sensors : 8
+ Sensor #9       : 125,115
+ Sensor #10       : 125,115
+ Sensor #11       : 125,115
+ Sensor #12       : 125,115
+ Sensor #13       : 125,115
+ Sensor #14       : 125,115
+ Sensor #15       : 125,115
+ Sensor #16       : 125,115
+ Sensor #17       : -128,-128
+ Sensor #18       : -128,-128
+ Sensor #19       : -128,-128
+ Sensor #20       : -128,-128
+ Sensor #21       : -128,-128
+ Sensor #22       : -128,-128
+ Sensor #23       : -128,-128
+ Sensor #24       : -128,-128
+ Sensor #25       : -128,-128
+ Sensor #26       : -128,-128
+ Sensor #27       : -128,-128
+ Sensor #28       : -128,-128
+ Sensor #29       : -128,-128
+ Sensor #30       : -128,-128
+ Sensor #31       : -128,-128
+ Sensor #32       : -128,-128
+ Sensor #33       : -128,-128
+ Sensor #34       : -128,-128
+ Sensor #35       : -128,-128
+ Sensor #36       : -128,-128
+ Sensor #37       : -128,-128
+ Sensor #38       : -128,-128
+ Sensor #39       : -128,-128
+ Sensor #40       : -128,-128
+
+
+DISPLAY sprom contents for linecard 17 instance 2:
+Module 17 only has 1 instances of sproms.
+
+
+DISPLAY sprom contents for linecard 17 instance 3:
+Module 17 only has 1 instances of sproms.
+
+
+DISPLAY sprom contents for linecard 18 instance 1:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x1861
+ EEPROM Size     : 65535
+ Block Count     : 3
+ FRU Major Type  : 0x6003
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-F324FQ-25
+ Serial Number   : JAE182306AT
+ Part Number     : 73-15003-06
+ Part Revision   : A0
+ Mfg Deviation   : 
+ H/W Version     : 1.0
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.9.97.6.0
+ Power Consump   : -1480
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUIAJVCAA
+ VID             : V01
+Linecard Module specific block:
+ Block Signature : 0x6003
+ Block Version   : 2
+ Block Length    : 103
+ Block Checksum  : 0xdef
+ Feature Bits    : 0x0
+ HW Changes Bits : 0x3
+ Card Index      : 18063
+ MAC Addresses   : 28-c7-ce-58-92-3e
+ Number of MACs  : 114
+ Number of EOBC links : 2
+ Number of EPLD  : 2
+ EPLD A          : 0x0
+ EPLD B          : 0x0
+ Port Type-Num   : 2-96;7-12
+ SRAM size       : 0
+ Sensor #1       : 125,115
+ Sensor #2       : 125,115
+ Sensor #3       : 125,115
+ Sensor #4       : -128,-128
+ Sensor #5       : 125,115
+ Sensor #6       : 125,115
+ Sensor #7       : 125,115
+ Sensor #8       : 125,115
+ Max Connector Power: 2400
+ Cooling Requirement: 75
+ Ambient Temperature: 55
+Temperature Sensor block:
+ Block Signature : 0x6008
+ Block Version   : 1
+ Block Length    : 71
+ Block Checksum  : 0x2038
+ Number of Valid Sensors : 8
+ Sensor #9       : 125,115
+ Sensor #10       : 125,115
+ Sensor #11       : 125,115
+ Sensor #12       : 125,115
+ Sensor #13       : 125,115
+ Sensor #14       : 125,115
+ Sensor #15       : 125,115
+ Sensor #16       : 125,115
+ Sensor #17       : -128,-128
+ Sensor #18       : -128,-128
+ Sensor #19       : -128,-128
+ Sensor #20       : -128,-128
+ Sensor #21       : -128,-128
+ Sensor #22       : -128,-128
+ Sensor #23       : -128,-128
+ Sensor #24       : -128,-128
+ Sensor #25       : -128,-128
+ Sensor #26       : -128,-128
+ Sensor #27       : -128,-128
+ Sensor #28       : -128,-128
+ Sensor #29       : -128,-128
+ Sensor #30       : -128,-128
+ Sensor #31       : -128,-128
+ Sensor #32       : -128,-128
+ Sensor #33       : -128,-128
+ Sensor #34       : -128,-128
+ Sensor #35       : -128,-128
+ Sensor #36       : -128,-128
+ Sensor #37       : -128,-128
+ Sensor #38       : -128,-128
+ Sensor #39       : -128,-128
+ Sensor #40       : -128,-128
+
+
+DISPLAY sprom contents for linecard 18 instance 2:
+Module 18 only has 1 instances of sproms.
+
+
+DISPLAY sprom contents for linecard 18 instance 3:
+Module 18 only has 1 instances of sproms.
+
+
+DISPLAY fabric sprom contents of xbar 1:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x1921
+ EEPROM Size     : 65535
+ Block Count     : 3
+ FRU Major Type  : 0x6003
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-C7718-FAB-2
+ Serial Number   : JAF1821ADDD
+ Part Number     : 73-14158-02
+ Part Revision   : B0
+ Mfg Deviation   : 
+ H/W Version     : 1.1
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.9.97.1.0
+ Power Consump   : -600
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUCAD7BAA
+ VID             : V01
+Linecard Module specific block:
+ Block Signature : 0x6003
+ Block Version   : 2
+ Block Length    : 103
+ Block Checksum  : 0xb4f
+ Feature Bits    : 0x0
+ HW Changes Bits : 0x2
+ Card Index      : 18053
+ MAC Addresses   : 00-00-00-44-00-44
+ Number of MACs  : 0
+ Number of EOBC links : 0
+ Number of EPLD  : 1
+ EPLD A          : 0x0
+ Port Type-Num   : 0-0
+ SRAM size       : 0
+ Sensor #1       : 125,115
+ Sensor #2       : 125,115
+ Sensor #3       : 125,115
+ Sensor #4       : 125,115
+ Sensor #5       : -128,-128
+ Sensor #6       : -128,-128
+ Sensor #7       : -128,-128
+ Sensor #8       : -128,-128
+ Max Connector Power: 1000
+ Cooling Requirement: 75
+ Ambient Temperature: 55
+Temperature Sensor block:
+ Block Signature : 0x6008
+ Block Version   : 1
+ Block Length    : 71
+ Block Checksum  : 0x20b0
+ Number of Valid Sensors : 0
+ Sensor #9       : -128,-128
+ Sensor #10       : -128,-128
+ Sensor #11       : -128,-128
+ Sensor #12       : -128,-128
+ Sensor #13       : -128,-128
+ Sensor #14       : -128,-128
+ Sensor #15       : -128,-128
+ Sensor #16       : -128,-128
+ Sensor #17       : -128,-128
+ Sensor #18       : -128,-128
+ Sensor #19       : -128,-128
+ Sensor #20       : -128,-128
+ Sensor #21       : -128,-128
+ Sensor #22       : -128,-128
+ Sensor #23       : -128,-128
+ Sensor #24       : -128,-128
+ Sensor #25       : -128,-128
+ Sensor #26       : -128,-128
+ Sensor #27       : -128,-128
+ Sensor #28       : -128,-128
+ Sensor #29       : -128,-128
+ Sensor #30       : -128,-128
+ Sensor #31       : -128,-128
+ Sensor #32       : -128,-128
+ Sensor #33       : -128,-128
+ Sensor #34       : -128,-128
+ Sensor #35       : -128,-128
+ Sensor #36       : -128,-128
+ Sensor #37       : -128,-128
+ Sensor #38       : -128,-128
+ Sensor #39       : -128,-128
+ Sensor #40       : -128,-128
+
+
+DISPLAY fabric sprom contents of xbar 2:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x192d
+ EEPROM Size     : 65535
+ Block Count     : 3
+ FRU Major Type  : 0x6003
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-C7718-FAB-2
+ Serial Number   : JAF1820ACRD
+ Part Number     : 73-14158-02
+ Part Revision   : B0
+ Mfg Deviation   : 
+ H/W Version     : 1.1
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.9.97.1.0
+ Power Consump   : -600
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUCAD7BAA
+ VID             : V01
+Linecard Module specific block:
+ Block Signature : 0x6003
+ Block Version   : 2
+ Block Length    : 103
+ Block Checksum  : 0xb5d
+ Feature Bits    : 0x0
+ HW Changes Bits : 0x2
+ Card Index      : 18053
+ MAC Addresses   : 00-00-00-52-00-44
+ Number of MACs  : 0
+ Number of EOBC links : 0
+ Number of EPLD  : 1
+ EPLD A          : 0x0
+ Port Type-Num   : 0-0
+ SRAM size       : 0
+ Sensor #1       : 125,115
+ Sensor #2       : 125,115
+ Sensor #3       : 125,115
+ Sensor #4       : 125,115
+ Sensor #5       : -128,-128
+ Sensor #6       : -128,-128
+ Sensor #7       : -128,-128
+ Sensor #8       : -128,-128
+ Max Connector Power: 1000
+ Cooling Requirement: 75
+ Ambient Temperature: 55
+Temperature Sensor block:
+ Block Signature : 0x6008
+ Block Version   : 1
+ Block Length    : 71
+ Block Checksum  : 0x20b0
+ Number of Valid Sensors : 0
+ Sensor #9       : -128,-128
+ Sensor #10       : -128,-128
+ Sensor #11       : -128,-128
+ Sensor #12       : -128,-128
+ Sensor #13       : -128,-128
+ Sensor #14       : -128,-128
+ Sensor #15       : -128,-128
+ Sensor #16       : -128,-128
+ Sensor #17       : -128,-128
+ Sensor #18       : -128,-128
+ Sensor #19       : -128,-128
+ Sensor #20       : -128,-128
+ Sensor #21       : -128,-128
+ Sensor #22       : -128,-128
+ Sensor #23       : -128,-128
+ Sensor #24       : -128,-128
+ Sensor #25       : -128,-128
+ Sensor #26       : -128,-128
+ Sensor #27       : -128,-128
+ Sensor #28       : -128,-128
+ Sensor #29       : -128,-128
+ Sensor #30       : -128,-128
+ Sensor #31       : -128,-128
+ Sensor #32       : -128,-128
+ Sensor #33       : -128,-128
+ Sensor #34       : -128,-128
+ Sensor #35       : -128,-128
+ Sensor #36       : -128,-128
+ Sensor #37       : -128,-128
+ Sensor #38       : -128,-128
+ Sensor #39       : -128,-128
+ Sensor #40       : -128,-128
+
+
+DISPLAY fabric sprom contents of xbar 3:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x1939
+ EEPROM Size     : 65535
+ Block Count     : 3
+ FRU Major Type  : 0x6003
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-C7718-FAB-2
+ Serial Number   : JAF1820ACQQ
+ Part Number     : 73-14158-02
+ Part Revision   : B0
+ Mfg Deviation   : 
+ H/W Version     : 1.1
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.9.97.1.0
+ Power Consump   : -600
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUCAD7BAA
+ VID             : V01
+Linecard Module specific block:
+ Block Signature : 0x6003
+ Block Version   : 2
+ Block Length    : 103
+ Block Checksum  : 0xb69
+ Feature Bits    : 0x0
+ HW Changes Bits : 0x2
+ Card Index      : 18053
+ MAC Addresses   : 00-00-00-51-00-51
+ Number of MACs  : 0
+ Number of EOBC links : 0
+ Number of EPLD  : 1
+ EPLD A          : 0x0
+ Port Type-Num   : 0-0
+ SRAM size       : 0
+ Sensor #1       : 125,115
+ Sensor #2       : 125,115
+ Sensor #3       : 125,115
+ Sensor #4       : 125,115
+ Sensor #5       : -128,-128
+ Sensor #6       : -128,-128
+ Sensor #7       : -128,-128
+ Sensor #8       : -128,-128
+ Max Connector Power: 1000
+ Cooling Requirement: 75
+ Ambient Temperature: 55
+Temperature Sensor block:
+ Block Signature : 0x6008
+ Block Version   : 1
+ Block Length    : 71
+ Block Checksum  : 0x20b0
+ Number of Valid Sensors : 0
+ Sensor #9       : -128,-128
+ Sensor #10       : -128,-128
+ Sensor #11       : -128,-128
+ Sensor #12       : -128,-128
+ Sensor #13       : -128,-128
+ Sensor #14       : -128,-128
+ Sensor #15       : -128,-128
+ Sensor #16       : -128,-128
+ Sensor #17       : -128,-128
+ Sensor #18       : -128,-128
+ Sensor #19       : -128,-128
+ Sensor #20       : -128,-128
+ Sensor #21       : -128,-128
+ Sensor #22       : -128,-128
+ Sensor #23       : -128,-128
+ Sensor #24       : -128,-128
+ Sensor #25       : -128,-128
+ Sensor #26       : -128,-128
+ Sensor #27       : -128,-128
+ Sensor #28       : -128,-128
+ Sensor #29       : -128,-128
+ Sensor #30       : -128,-128
+ Sensor #31       : -128,-128
+ Sensor #32       : -128,-128
+ Sensor #33       : -128,-128
+ Sensor #34       : -128,-128
+ Sensor #35       : -128,-128
+ Sensor #36       : -128,-128
+ Sensor #37       : -128,-128
+ Sensor #38       : -128,-128
+ Sensor #39       : -128,-128
+ Sensor #40       : -128,-128
+
+
+DISPLAY fabric sprom contents of xbar 4:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x193d
+ EEPROM Size     : 65535
+ Block Count     : 3
+ FRU Major Type  : 0x6003
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-C7718-FAB-2
+ Serial Number   : JAF1820ACSS
+ Part Number     : 73-14158-02
+ Part Revision   : B0
+ Mfg Deviation   : 
+ H/W Version     : 1.1
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.9.97.1.0
+ Power Consump   : -600
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUCAD7BAA
+ VID             : V01
+Linecard Module specific block:
+ Block Signature : 0x6003
+ Block Version   : 2
+ Block Length    : 103
+ Block Checksum  : 0xb6d
+ Feature Bits    : 0x0
+ HW Changes Bits : 0x2
+ Card Index      : 18053
+ MAC Addresses   : 00-00-00-53-00-53
+ Number of MACs  : 0
+ Number of EOBC links : 0
+ Number of EPLD  : 1
+ EPLD A          : 0x0
+ Port Type-Num   : 0-0
+ SRAM size       : 0
+ Sensor #1       : 125,115
+ Sensor #2       : 125,115
+ Sensor #3       : 125,115
+ Sensor #4       : 125,115
+ Sensor #5       : -128,-128
+ Sensor #6       : -128,-128
+ Sensor #7       : -128,-128
+ Sensor #8       : -128,-128
+ Max Connector Power: 1000
+ Cooling Requirement: 75
+ Ambient Temperature: 55
+Temperature Sensor block:
+ Block Signature : 0x6008
+ Block Version   : 1
+ Block Length    : 71
+ Block Checksum  : 0x20b0
+ Number of Valid Sensors : 0
+ Sensor #9       : -128,-128
+ Sensor #10       : -128,-128
+ Sensor #11       : -128,-128
+ Sensor #12       : -128,-128
+ Sensor #13       : -128,-128
+ Sensor #14       : -128,-128
+ Sensor #15       : -128,-128
+ Sensor #16       : -128,-128
+ Sensor #17       : -128,-128
+ Sensor #18       : -128,-128
+ Sensor #19       : -128,-128
+ Sensor #20       : -128,-128
+ Sensor #21       : -128,-128
+ Sensor #22       : -128,-128
+ Sensor #23       : -128,-128
+ Sensor #24       : -128,-128
+ Sensor #25       : -128,-128
+ Sensor #26       : -128,-128
+ Sensor #27       : -128,-128
+ Sensor #28       : -128,-128
+ Sensor #29       : -128,-128
+ Sensor #30       : -128,-128
+ Sensor #31       : -128,-128
+ Sensor #32       : -128,-128
+ Sensor #33       : -128,-128
+ Sensor #34       : -128,-128
+ Sensor #35       : -128,-128
+ Sensor #36       : -128,-128
+ Sensor #37       : -128,-128
+ Sensor #38       : -128,-128
+ Sensor #39       : -128,-128
+ Sensor #40       : -128,-128
+
+
+DISPLAY fabric sprom contents of xbar 5:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x1938
+ EEPROM Size     : 65535
+ Block Count     : 3
+ FRU Major Type  : 0x6003
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-C7718-FAB-2
+ Serial Number   : JAF1820ACQP
+ Part Number     : 73-14158-02
+ Part Revision   : B0
+ Mfg Deviation   : 
+ H/W Version     : 1.1
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.9.97.1.0
+ Power Consump   : -600
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUCAD7BAA
+ VID             : V01
+Linecard Module specific block:
+ Block Signature : 0x6003
+ Block Version   : 2
+ Block Length    : 103
+ Block Checksum  : 0xb68
+ Feature Bits    : 0x0
+ HW Changes Bits : 0x2
+ Card Index      : 18053
+ MAC Addresses   : 00-00-00-51-00-50
+ Number of MACs  : 0
+ Number of EOBC links : 0
+ Number of EPLD  : 1
+ EPLD A          : 0x0
+ Port Type-Num   : 0-0
+ SRAM size       : 0
+ Sensor #1       : 125,115
+ Sensor #2       : 125,115
+ Sensor #3       : 125,115
+ Sensor #4       : 125,115
+ Sensor #5       : -128,-128
+ Sensor #6       : -128,-128
+ Sensor #7       : -128,-128
+ Sensor #8       : -128,-128
+ Max Connector Power: 1000
+ Cooling Requirement: 75
+ Ambient Temperature: 55
+Temperature Sensor block:
+ Block Signature : 0x6008
+ Block Version   : 1
+ Block Length    : 71
+ Block Checksum  : 0x20b0
+ Number of Valid Sensors : 0
+ Sensor #9       : -128,-128
+ Sensor #10       : -128,-128
+ Sensor #11       : -128,-128
+ Sensor #12       : -128,-128
+ Sensor #13       : -128,-128
+ Sensor #14       : -128,-128
+ Sensor #15       : -128,-128
+ Sensor #16       : -128,-128
+ Sensor #17       : -128,-128
+ Sensor #18       : -128,-128
+ Sensor #19       : -128,-128
+ Sensor #20       : -128,-128
+ Sensor #21       : -128,-128
+ Sensor #22       : -128,-128
+ Sensor #23       : -128,-128
+ Sensor #24       : -128,-128
+ Sensor #25       : -128,-128
+ Sensor #26       : -128,-128
+ Sensor #27       : -128,-128
+ Sensor #28       : -128,-128
+ Sensor #29       : -128,-128
+ Sensor #30       : -128,-128
+ Sensor #31       : -128,-128
+ Sensor #32       : -128,-128
+ Sensor #33       : -128,-128
+ Sensor #34       : -128,-128
+ Sensor #35       : -128,-128
+ Sensor #36       : -128,-128
+ Sensor #37       : -128,-128
+ Sensor #38       : -128,-128
+ Sensor #39       : -128,-128
+ Sensor #40       : -128,-128
+
+
+DISPLAY fabric sprom contents of xbar 6:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x1937
+ EEPROM Size     : 65535
+ Block Count     : 3
+ FRU Major Type  : 0x6003
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-C7718-FAB-2
+ Serial Number   : JAF1820ACPP
+ Part Number     : 73-14158-02
+ Part Revision   : B0
+ Mfg Deviation   : 
+ H/W Version     : 1.1
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.9.97.1.0
+ Power Consump   : -600
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUCAD7BAA
+ VID             : V01
+Linecard Module specific block:
+ Block Signature : 0x6003
+ Block Version   : 2
+ Block Length    : 103
+ Block Checksum  : 0xb67
+ Feature Bits    : 0x0
+ HW Changes Bits : 0x2
+ Card Index      : 18053
+ MAC Addresses   : 00-00-00-50-00-50
+ Number of MACs  : 0
+ Number of EOBC links : 0
+ Number of EPLD  : 1
+ EPLD A          : 0x0
+ Port Type-Num   : 0-0
+ SRAM size       : 0
+ Sensor #1       : 125,115
+ Sensor #2       : 125,115
+ Sensor #3       : 125,115
+ Sensor #4       : 125,115
+ Sensor #5       : -128,-128
+ Sensor #6       : -128,-128
+ Sensor #7       : -128,-128
+ Sensor #8       : -128,-128
+ Max Connector Power: 1000
+ Cooling Requirement: 75
+ Ambient Temperature: 55
+Temperature Sensor block:
+ Block Signature : 0x6008
+ Block Version   : 1
+ Block Length    : 71
+ Block Checksum  : 0x20b0
+ Number of Valid Sensors : 0
+ Sensor #9       : -128,-128
+ Sensor #10       : -128,-128
+ Sensor #11       : -128,-128
+ Sensor #12       : -128,-128
+ Sensor #13       : -128,-128
+ Sensor #14       : -128,-128
+ Sensor #15       : -128,-128
+ Sensor #16       : -128,-128
+ Sensor #17       : -128,-128
+ Sensor #18       : -128,-128
+ Sensor #19       : -128,-128
+ Sensor #20       : -128,-128
+ Sensor #21       : -128,-128
+ Sensor #22       : -128,-128
+ Sensor #23       : -128,-128
+ Sensor #24       : -128,-128
+ Sensor #25       : -128,-128
+ Sensor #26       : -128,-128
+ Sensor #27       : -128,-128
+ Sensor #28       : -128,-128
+ Sensor #29       : -128,-128
+ Sensor #30       : -128,-128
+ Sensor #31       : -128,-128
+ Sensor #32       : -128,-128
+ Sensor #33       : -128,-128
+ Sensor #34       : -128,-128
+ Sensor #35       : -128,-128
+ Sensor #36       : -128,-128
+ Sensor #37       : -128,-128
+ Sensor #38       : -128,-128
+ Sensor #39       : -128,-128
+ Sensor #40       : -128,-128
+
+
+DISPLAY power-supply:1 sprom contents:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x1705
+ EEPROM Size     : 65535
+ Block Count     : 2
+ FRU Major Type  : 0xab01
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-AC-3KW
+ Serial Number   : ART181370B3
+ Part Number     : 341-0600-01
+ Part Revision   : A1
+ Mfg Deviation   : 0
+ H/W Version     : 1.1
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.6.383.0.0
+ Power Consump   : 0
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUPAB4CAA
+ VID             : V01
+Power supply specific block:
+ Block Signature : 0xab01
+ Block Version   : 2
+ Block Length    : 36
+ Block Checksum  : 0x3d4
+ Feature Bits    : 0x0
+ Current 110v    : 2800
+ Current 220v    : 6000
+ Current 277v    : 0
+ Stackmib OID    : 0
+
+
+DISPLAY power-supply:2 sprom contents:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x1723
+ EEPROM Size     : 65535
+ Block Count     : 2
+ FRU Major Type  : 0xab01
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-AC-3KW
+ Serial Number   : ART1813709Z
+ Part Number     : 341-0600-01
+ Part Revision   : A1
+ Mfg Deviation   : 0
+ H/W Version     : 1.1
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.6.383.0.0
+ Power Consump   : 0
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUPAB4CAA
+ VID             : V01
+Power supply specific block:
+ Block Signature : 0xab01
+ Block Version   : 2
+ Block Length    : 36
+ Block Checksum  : 0x3d4
+ Feature Bits    : 0x0
+ Current 110v    : 2800
+ Current 220v    : 6000
+ Current 277v    : 0
+ Stackmib OID    : 0
+
+
+DISPLAY power-supply:3 sprom contents:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x171d
+ EEPROM Size     : 65535
+ Block Count     : 2
+ FRU Major Type  : 0xab01
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-AC-3KW
+ Serial Number   : ART1813708U
+ Part Number     : 341-0600-01
+ Part Revision   : A1
+ Mfg Deviation   : 0
+ H/W Version     : 1.1
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.6.383.0.0
+ Power Consump   : 0
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUPAB4CAA
+ VID             : V01
+Power supply specific block:
+ Block Signature : 0xab01
+ Block Version   : 2
+ Block Length    : 36
+ Block Checksum  : 0x3d4
+ Feature Bits    : 0x0
+ Current 110v    : 2800
+ Current 220v    : 6000
+ Current 277v    : 0
+ Stackmib OID    : 0
+
+
+DISPLAY power-supply:4 sprom contents:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x172b
+ EEPROM Size     : 65535
+ Block Count     : 2
+ FRU Major Type  : 0xab01
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-AC-3KW
+ Serial Number   : ART181870FP
+ Part Number     : 341-0600-01
+ Part Revision   : A1
+ Mfg Deviation   : 0
+ H/W Version     : 1.1
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.6.383.0.0
+ Power Consump   : 0
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUPAB4CAA
+ VID             : V01
+Power supply specific block:
+ Block Signature : 0xab01
+ Block Version   : 2
+ Block Length    : 36
+ Block Checksum  : 0x3d4
+ Feature Bits    : 0x0
+ Current 110v    : 2800
+ Current 220v    : 6000
+ Current 277v    : 0
+ Stackmib OID    : 0
+
+
+DISPLAY power-supply:5 sprom contents:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x1708
+ EEPROM Size     : 65535
+ Block Count     : 2
+ FRU Major Type  : 0xab01
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-AC-3KW
+ Serial Number   : ART1813707A
+ Part Number     : 341-0600-01
+ Part Revision   : A1
+ Mfg Deviation   : 0
+ H/W Version     : 1.1
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.6.383.0.0
+ Power Consump   : 0
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUPAB4CAA
+ VID             : V01
+Power supply specific block:
+ Block Signature : 0xab01
+ Block Version   : 2
+ Block Length    : 36
+ Block Checksum  : 0x3d4
+ Feature Bits    : 0x0
+ Current 110v    : 2800
+ Current 220v    : 6000
+ Current 277v    : 0
+ Stackmib OID    : 0
+
+
+DISPLAY power-supply:6 sprom contents:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x1709
+ EEPROM Size     : 65535
+ Block Count     : 2
+ FRU Major Type  : 0xab01
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-AC-3KW
+ Serial Number   : ART1813707B
+ Part Number     : 341-0600-01
+ Part Revision   : A1
+ Mfg Deviation   : 0
+ H/W Version     : 1.1
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.6.383.0.0
+ Power Consump   : 0
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUPAB4CAA
+ VID             : V01
+Power supply specific block:
+ Block Signature : 0xab01
+ Block Version   : 2
+ Block Length    : 36
+ Block Checksum  : 0x3d4
+ Feature Bits    : 0x0
+ Current 110v    : 2800
+ Current 220v    : 6000
+ Current 277v    : 0
+ Stackmib OID    : 0
+
+
+DISPLAY power-supply:7 sprom contents:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x1729
+ EEPROM Size     : 65535
+ Block Count     : 2
+ FRU Major Type  : 0xab01
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-AC-3KW
+ Serial Number   : ART181870FN
+ Part Number     : 341-0600-01
+ Part Revision   : A1
+ Mfg Deviation   : 0
+ H/W Version     : 1.1
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.6.383.0.0
+ Power Consump   : 0
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUPAB4CAA
+ VID             : V01
+Power supply specific block:
+ Block Signature : 0xab01
+ Block Version   : 2
+ Block Length    : 36
+ Block Checksum  : 0x3d4
+ Feature Bits    : 0x0
+ Current 110v    : 2800
+ Current 220v    : 6000
+ Current 277v    : 0
+ Stackmib OID    : 0
+
+
+DISPLAY power-supply:8 sprom contents:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x171f
+ EEPROM Size     : 65535
+ Block Count     : 2
+ FRU Major Type  : 0xab01
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-AC-3KW
+ Serial Number   : ART1813709V
+ Part Number     : 341-0600-01
+ Part Revision   : A1
+ Mfg Deviation   : 0
+ H/W Version     : 1.1
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.6.383.0.0
+ Power Consump   : 0
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUPAB4CAA
+ VID             : V01
+Power supply specific block:
+ Block Signature : 0xab01
+ Block Version   : 2
+ Block Length    : 36
+ Block Checksum  : 0x3d4
+ Feature Bits    : 0x0
+ Current 110v    : 2800
+ Current 220v    : 6000
+ Current 277v    : 0
+ Stackmib OID    : 0
+
+
+DISPLAY power-supply:9 sprom contents:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x1718
+ EEPROM Size     : 65535
+ Block Count     : 2
+ FRU Major Type  : 0xab01
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-AC-3KW
+ Serial Number   : ART1813708P
+ Part Number     : 341-0600-01
+ Part Revision   : A1
+ Mfg Deviation   : 0
+ H/W Version     : 1.1
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.6.383.0.0
+ Power Consump   : 0
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUPAB4CAA
+ VID             : V01
+Power supply specific block:
+ Block Signature : 0xab01
+ Block Version   : 2
+ Block Length    : 36
+ Block Checksum  : 0x3d4
+ Feature Bits    : 0x0
+ Current 110v    : 2800
+ Current 220v    : 6000
+ Current 277v    : 0
+ Stackmib OID    : 0
+
+
+DISPLAY power-supply:10 sprom contents:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x1724
+ EEPROM Size     : 65535
+ Block Count     : 2
+ FRU Major Type  : 0xab01
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-AC-3KW
+ Serial Number   : ART181370CQ
+ Part Number     : 341-0600-01
+ Part Revision   : A1
+ Mfg Deviation   : 0
+ H/W Version     : 1.1
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.6.383.0.0
+ Power Consump   : 0
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUPAB4CAA
+ VID             : V01
+Power supply specific block:
+ Block Signature : 0xab01
+ Block Version   : 2
+ Block Length    : 36
+ Block Checksum  : 0x3d4
+ Feature Bits    : 0x0
+ Current 110v    : 2800
+ Current 220v    : 6000
+ Current 277v    : 0
+ Stackmib OID    : 0
+
+
+DISPLAY power-supply:11 sprom contents:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x1720
+ EEPROM Size     : 65535
+ Block Count     : 2
+ FRU Major Type  : 0xab01
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-AC-3KW
+ Serial Number   : ART1813709W
+ Part Number     : 341-0600-01
+ Part Revision   : A1
+ Mfg Deviation   : 0
+ H/W Version     : 1.1
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.6.383.0.0
+ Power Consump   : 0
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUPAB4CAA
+ VID             : V01
+Power supply specific block:
+ Block Signature : 0xab01
+ Block Version   : 2
+ Block Length    : 36
+ Block Checksum  : 0x3d4
+ Feature Bits    : 0x0
+ Current 110v    : 2800
+ Current 220v    : 6000
+ Current 277v    : 0
+ Stackmib OID    : 0
+
+
+DISPLAY power-supply:12 sprom contents:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x1710
+ EEPROM Size     : 65535
+ Block Count     : 2
+ FRU Major Type  : 0xab01
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-AC-3KW
+ Serial Number   : ART1813709G
+ Part Number     : 341-0600-01
+ Part Revision   : A1
+ Mfg Deviation   : 0
+ H/W Version     : 1.1
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.6.383.0.0
+ Power Consump   : 0
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUPAB4CAA
+ VID             : V01
+Power supply specific block:
+ Block Signature : 0xab01
+ Block Version   : 2
+ Block Length    : 36
+ Block Checksum  : 0x3d4
+ Feature Bits    : 0x0
+ Current 110v    : 2800
+ Current 220v    : 6000
+ Current 277v    : 0
+ Stackmib OID    : 0
+
+
+DISPLAY power-supply:13 sprom contents:
+power supply 13 is absent. So can't show its sprom contents
+
+
+DISPLAY power-supply:14 sprom contents:
+power supply 14 is absent. So can't show its sprom contents
+
+
+DISPLAY power-supply:15 sprom contents:
+power supply 15 is absent. So can't show its sprom contents
+
+
+DISPLAY power-supply:16 sprom contents:
+power supply 16 is absent. So can't show its sprom contents
+
+
+DISPLAY fan 1 sprom contents:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x19e9
+ EEPROM Size     : 65535
+ Block Count     : 3
+ FRU Major Type  : 0xab04
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-C7718-FAN
+ Serial Number   : JAF1743BJTF
+ Part Number     : 73-14165-03
+ Part Revision   : A1
+ Mfg Deviation   : 
+ H/W Version     : 1.0
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.7.207.0.0
+ Power Consump   : -1800
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUCAD6BAA
+ VID             : V01
+Fan Module specific block:
+ Block Signature : 0xab04
+ Block Version   : 3
+ Block Length    : 32
+ Block Checksum  : 0x109
+ Feature Bits    : 0x0
+ HW Changes Bits : 0x0
+ Stackmib OID    : 0
+ Cooling Capacity    : 0
+ Ambient Temperature : 55
+Second Serial number specific block:
+ Block Signature : 0x6007
+ Block Version   : 1
+ Block Length    : 28
+ Block Checksum  : 0x34a
+ Serial Number   : JAF1743BJTF
+
+
+DISPLAY fan 2 sprom contents:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x19dc
+ EEPROM Size     : 65535
+ Block Count     : 3
+ FRU Major Type  : 0xab04
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-C7718-FAN
+ Serial Number   : JAF1743BKDH
+ Part Number     : 73-14165-03
+ Part Revision   : A1
+ Mfg Deviation   : 
+ H/W Version     : 1.0
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.7.207.0.0
+ Power Consump   : -1800
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUCAD6BAA
+ VID             : V01
+Fan Module specific block:
+ Block Signature : 0xab04
+ Block Version   : 3
+ Block Length    : 32
+ Block Checksum  : 0x109
+ Feature Bits    : 0x0
+ HW Changes Bits : 0x0
+ Stackmib OID    : 0
+ Cooling Capacity    : 0
+ Ambient Temperature : 55
+Second Serial number specific block:
+ Block Signature : 0x6007
+ Block Version   : 1
+ Block Length    : 28
+ Block Checksum  : 0x33d
+ Serial Number   : JAF1743BKDH
+
+
+DISPLAY fan 3 sprom contents:
+Common block:
+ Block Signature : 0xabab
+ Block Version   : 3
+ Block Length    : 160
+ Block Checksum  : 0x19e0
+ EEPROM Size     : 65535
+ Block Count     : 3
+ FRU Major Type  : 0xab04
+ FRU Minor Type  : 0x0
+ OEM String      : Cisco Systems, Inc.
+ Product Number  : N77-C7718-FAN
+ Serial Number   : JAF1746BFLF
+ Part Number     : 73-14165-03
+ Part Revision   : A1
+ Mfg Deviation   : 
+ H/W Version     : 1.0
+ Mfg Bits        : 0
+ Engineer Use    : 0
+ snmpOID         : 9.12.3.1.7.207.0.0
+ Power Consump   : -1800
+ RMA Code        : 0-0-0-0
+ CLEI Code       : CMUCAD6BAA
+ VID             : V01
+Fan Module specific block:
+ Block Signature : 0xab04
+ Block Version   : 3
+ Block Length    : 32
+ Block Checksum  : 0x109
+ Feature Bits    : 0x0
+ HW Changes Bits : 0x0
+ Stackmib OID    : 0
+ Cooling Capacity    : 0
+ Ambient Temperature : 55
+Second Serial number specific block:
+ Block Signature : 0x6007
+ Block Version   : 1
+ Block Length    : 28
+ Block Checksum  : 0x341
+ Serial Number   : JAF1746BFLF
+
+

@@ -1,0 +1,481 @@
+
+
+!Command: show running-config
+!Running configuration last done at: Fri Sep 11 18:51:28 2020
+!Time: Fri Oct  2 00:22:33 2020
+
+version 9.3(5) Bios:version 05.42 
+hostname pN9K13-1
+install feature-set fex
+vdc pN9K13-1 id 1
+  allow feature-set fex
+  limit-resource vlan minimum 16 maximum 4094
+  limit-resource vrf minimum 2 maximum 4096
+  limit-resource port-channel minimum 0 maximum 511
+  limit-resource u4route-mem minimum 248 maximum 248
+  limit-resource u6route-mem minimum 96 maximum 96
+  limit-resource m4route-mem minimum 58 maximum 58
+  limit-resource m6route-mem minimum 8 maximum 8
+  limit-resource vni_bd minimum 4096 maximum 4096
+feature-set fex
+
+feature privilege
+feature telnet
+feature tacacs+
+cfs eth distribute
+feature udld
+feature interface-vlan
+feature lacp
+feature vpc
+feature lldp
+clock timezone MSK 3 0
+
+username xxxxxxx password 5 xxxxxxx role network-admin
+username xxxxxxx password 5 xxxxxxx role network-admin
+username xxxxxxxx passphrase  lifetime 99999 warntime 14 gracetime 3
+
+banner motd ^
+Perovo DC.
+Nexus 93180-FX.
+VPC Pair 13, unit 1.
+access:
+VTB authorized staff only
+^
+
+no ip domain-lookup
+tacacs-server host 10.128.128.11 key 7  xxxxxxxx  
+tacacs-server host 10.164.140.150 key 7  xxxxxxxx  
+aaa group server tacacs+ MSK-TAC 
+    server 10.128.128.11 
+    server 10.164.140.150 
+    source-interface Vlan3799
+crypto key generate rsa label pN9K13-1 modulus 2048
+ip access-list 111
+  10 permit ip 10.64.0.111/32 any 
+ip access-list Snmp-Enable
+  10 permit ip 10.132.128.0/24 any 
+  20 permit ip 10.150.128.0/24 any 
+  50 permit ip 10.164.147.0/24 any 
+copp profile strict
+fex 101
+  pinning max-links 1
+  description "FEX0101"
+ip ftp source-interface mgmt0
+snmp-server location MSK, Perovskoe highway 1, building 1, room ER3, rack ER3-7/05
+snmp-server user xxxxxxxx network-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server user xxxxxxxx network-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server host 10.132.128.21 traps version 2c xxxxxxxx 
+snmp-server host 10.132.128.21 use-vrf default
+snmp-server host 10.164.147.100 traps version 2c xxxxxxxx 
+snmp-server host 10.164.147.100 use-vrf default
+snmp-server host 10.150.128.100 traps version 2c xxxxxxxx 
+snmp-server host 10.150.128.100 use-vrf default
+rmon event 1 description FATAL(1) owner PMON@FATAL
+rmon event 2 description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 description ERROR(3) owner PMON@ERROR
+rmon event 4 description WARNING(4) owner PMON@WARNING
+rmon event 5 description INFORMATION(5) owner PMON@INFO
+snmp-server enable traps cfs state-change-notif
+snmp-server enable traps cfs merge-failure
+snmp-server enable traps feature-control FeatureOpStatusChange
+snmp-server enable traps sysmgr cseFailSwCoreNotifyExtended
+snmp-server enable traps config ccmCLIRunningConfigChanged
+snmp-server enable traps bridge newroot
+snmp-server enable traps bridge topologychange
+snmp-server enable traps feature-control ciscoFeatOpStatusChange
+snmp-server community xxxxxxxx group network-operator
+snmp-server community xxxxxxxx group network-admin
+snmp-server community xxxxxxxx use-acl 111
+snmp-server community xxxxxxxx use-acl Snmp-Enable
+ntp server 10.130.255.100 use-vrf default
+ntp server 10.164.0.200 use-vrf default
+ntp source-interface Vlan3799
+aaa authentication login default group MSK-TAC local 
+aaa authentication login console group MSK-TAC local 
+aaa accounting default group MSK-TAC 
+
+ip route 10.0.0.0/8 10.150.255.65
+vlan 1,2806,2901,2951,3126,3155,3779,3781,3792,3799,3801,3807-3808,3852-3854,3926
+vlan 2806
+  name vpc-keepalive
+vlan 2901
+  name new_Mail_PROD
+vlan 2951
+  name new_Mail_mgmt
+vlan 3126
+  name SDX_VDI
+vlan 3155
+  name VDI_SRV
+vlan 3779
+  name CitrixSDX-VipInet
+vlan 3781
+  name GROUPVTB
+vlan 3792
+  name ilo_vdi
+vlan 3799
+  name inbound_MNG_pN9K
+vlan 3801
+  name cloud_3801
+vlan 3807
+  name cloud_3807
+vlan 3808
+  name cloud_3808
+vlan 3852
+  name cloud_3852
+vlan 3853
+  name cloud_3853
+vlan 3854
+  name cloud_3854
+vlan 3926
+  name Cloud_3926
+
+spanning-tree vlan 1-3967 priority 36864
+vrf context management
+  ip route 0.0.0.0/0 mgmt0 10.76.64.1
+vrf context vpc-keepalive
+  description vPC KeepAlive Only (Vlan 2806)
+vpc domain 63
+  role priority 100
+  peer-keepalive destination 10.150.255.178 source 10.150.255.177 vrf vpc-keepalive
+  delay restore 150
+
+
+interface Vlan1
+
+interface Vlan2806
+  description vPC KeepAlive Net
+  no shutdown
+  vrf member vpc-keepalive
+  ip address 10.150.255.177/30
+
+interface Vlan3799
+  description Management
+  no shutdown
+  mtu 2000
+  ip address 10.150.255.93/26
+
+interface port-channel7
+  description pN77K
+  switchport
+  switchport mode trunk
+  vpc 7
+
+interface port-channel101
+  switchport
+  switchport mode fex-fabric
+  fex associate 101
+
+interface port-channel301
+  description [new_Mail_PROD] 2102311XDB6TKA000126 if-tdfm-db201l:ae RF-001940859
+  switchport
+  switchport access vlan 2901
+  vpc 301
+
+interface port-channel302
+  description [cloud_3807] Cporatst202l RF-001282292
+  switchport
+  switchport access vlan 3808
+  speed 10000
+  vpc 302
+
+interface port-channel303
+  description [cloud_3807] Cpora203l RF-001282292
+  switchport
+  switchport access vlan 3807
+  speed 10000
+  vpc 303
+
+interface port-channel304
+  description [cloud_3807] Cpora202l RF-001282292
+  switchport
+  switchport access vlan 3807
+  speed 10000
+  vpc 304
+
+interface port-channel305
+  description [cloud_3807] cporapre202l RF-001282292
+  switchport
+  switchport access vlan 3808
+  speed 10000
+  vpc 305
+
+interface port-channel306
+  description [cloud_3807] Cpora203l RF-001282292
+  switchport
+  switchport access vlan 3807
+  speed 10000
+  vpc 306
+
+interface port-channel307
+  description [cloud_3807] Cpora203l RF-001282292
+  switchport
+  switchport access vlan 3807
+  speed 10000
+  vpc 307
+
+interface port-channel308
+  description Citrix SDX
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3126,3155,3779,3781
+  vpc 308
+
+interface port-channel309
+  description Citrix SDX
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3126,3155,3779,3781
+  vpc 309
+
+interface port-channel1000
+  description peer-link !!! DO NOT ALLOW VLAN ID 2806 !!!
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1-2805,2807-3967
+  spanning-tree port type network
+  no lacp suspend-individual
+  vpc peer-link
+
+interface port-channel1001
+  description [TRUNK] peer-keepalive
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 2806
+
+interface Ethernet1/1
+  description [new_Mail_PROD] 2102311XDB6TKA000126 if-tdfm-db201l:eth1 RF-001940859
+  switchport
+  switchport access vlan 2901
+  channel-group 301 mode active
+  no shutdown
+
+interface Ethernet1/2
+  description [cloud_3807] Cporatst202l(Nic1) RF-001282292
+  switchport
+  switchport access vlan 3808
+  speed 10000
+  channel-group 302 mode active
+  no shutdown
+
+interface Ethernet1/3
+  description [cloud_3807] cporapre202l(Nic1) RF-001282292
+  switchport
+  switchport access vlan 3808
+  speed 10000
+  channel-group 305 mode active
+  no shutdown
+
+interface Ethernet1/4
+  description [cloud_3807] Cpora202l(Nic1) RF-001282292
+  switchport
+  switchport access vlan 3807
+  speed 10000
+  channel-group 304 mode active
+  no shutdown
+
+interface Ethernet1/5
+
+interface Ethernet1/6
+  description [cloud_3807] Cpora203l(Nic1) RF-001282292
+  switchport
+  switchport access vlan 3807
+  speed 10000
+  channel-group 303 mode active
+  no shutdown
+
+interface Ethernet1/7
+  description [cloud_3807] Cpora203l(Nic1) RF-001282292
+  switchport
+  switchport access vlan 3807
+  speed 10000
+  channel-group 307 mode active
+  no shutdown
+
+interface Ethernet1/8
+
+interface Ethernet1/9
+
+interface Ethernet1/10
+
+interface Ethernet1/11
+
+interface Ethernet1/12
+
+interface Ethernet1/13
+
+interface Ethernet1/14
+
+interface Ethernet1/15
+
+interface Ethernet1/16
+  description MSKREGEX23 RF-000968278
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3801,3852-3853,3926
+  no shutdown
+
+interface Ethernet1/17
+  description MSKREGEX25  RF-000968278
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3801,3852-3853,3926
+  no shutdown
+
+interface Ethernet1/18
+
+interface Ethernet1/19
+
+interface Ethernet1/20
+
+interface Ethernet1/21
+
+interface Ethernet1/22
+
+interface Ethernet1/23
+
+interface Ethernet1/24
+  description peer-keepalive
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 2806
+  udld aggressive
+  channel-group 1001 mode active
+  no shutdown
+
+interface Ethernet1/25
+
+interface Ethernet1/26
+
+interface Ethernet1/27
+
+interface Ethernet1/28
+
+interface Ethernet1/29
+
+interface Ethernet1/30
+
+interface Ethernet1/31
+
+interface Ethernet1/32
+
+interface Ethernet1/33
+
+interface Ethernet1/34
+
+interface Ethernet1/35
+
+interface Ethernet1/36
+
+interface Ethernet1/37
+
+interface Ethernet1/38
+
+interface Ethernet1/39
+  description Citrix SDX
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3126,3155,3779,3781
+  channel-group 308 mode active
+  no shutdown
+
+interface Ethernet1/40
+  description Citrix SDX
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3126,3155,3779,3781
+  channel-group 308 mode active
+  no shutdown
+
+interface Ethernet1/41
+  description Citrix SDX
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3126,3155,3779,3781
+  channel-group 309 mode active
+  no shutdown
+
+interface Ethernet1/42
+  description Citrix SDX
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3126,3155,3779,3781
+  channel-group 309 mode active
+  no shutdown
+
+interface Ethernet1/43
+
+interface Ethernet1/44
+
+interface Ethernet1/45
+
+interface Ethernet1/46
+  description [FEX] fex101
+  switchport
+  switchport mode fex-fabric
+  fex associate 101
+  channel-group 101
+  no shutdown
+
+interface Ethernet1/47
+  description [FEX] fex101
+  switchport
+  switchport mode fex-fabric
+  fex associate 101
+  channel-group 101
+  no shutdown
+
+interface Ethernet1/48
+  description peer-keepalive
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 2806
+  udld aggressive
+  channel-group 1001 mode active
+  no shutdown
+
+interface Ethernet1/49
+
+interface Ethernet1/50
+
+interface Ethernet1/51
+  description pN77-1-switch1 Eth1/10
+  switchport
+  switchport mode trunk
+  channel-group 7 mode active
+  no shutdown
+
+interface Ethernet1/52
+  description pN77-1-switch2 Eth1/10
+  switchport
+  switchport mode trunk
+  channel-group 7 mode active
+  no shutdown
+
+interface Ethernet1/53
+  description peer-link
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1-2805,2807-3967
+  udld aggressive
+  channel-group 1000 mode active
+  no shutdown
+
+interface Ethernet1/54
+  description peer-link
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1-2805,2807-3967
+  udld aggressive
+  channel-group 1000 mode active
+  no shutdown
+
+interface mgmt0
+  vrf member management
+  ip address 10.76.68.90/21
+cli alias name wr copy running-config startup-config
+line console
+line vty
+boot nxos bootflash:/nxos.9.3.5.bin 
+
+
+

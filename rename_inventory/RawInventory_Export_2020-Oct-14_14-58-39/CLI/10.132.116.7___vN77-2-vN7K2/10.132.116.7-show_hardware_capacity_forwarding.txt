@@ -1,0 +1,2919 @@
+
+
+
+
+
+
+L2 Forwarding Resources
+-------------------------
+  L2 entries: Module inst   total    used   mcast   ucast   lines   lines_full
+------------------------------------------------------------------------------
+              1         0   65536   10074       4   10070    2048            0
+              1         1   65536   10259      13   10246    2048            0
+              1         2   65536    5733      12    5721    2048            0
+              1         3   65536   10019      12   10007    2048            0
+              1         4   65536     524       0     524    2048            0
+              1         5   65536     524       0     524    2048            0
+              1         6   65536     524       0     524    2048            0
+              1         7   65536    4848       0    4848    2048            0
+              1         8   65536   10209       7   10202    2048            0
+              1         9   65536   10161       0   10161    2048            0
+              1        10   65536    1523       0    1523    2048            0
+              1        11   65536   10227       7   10220    2048            0
+
+L2 Forwarding Resources
+-------------------------
+  L2 entries: Module inst   total    used   mcast   ucast   lines   lines_full
+------------------------------------------------------------------------------
+              2         0   65536   10050       1   10049    2048            0
+              2         1   65536   10233       7   10226    2048            0
+              2         2   65536    5717       6    5711    2048            0
+              2         3   65536    9988       6    9982    2048            0
+              2         4   65536     524       0     524    2048            0
+              2         5   65536     524       0     524    2048            0
+              2         6   65536    1741       0    1741    2048            0
+              2         7   65536   10232      13   10219    2048            0
+              2         8   65536    9743       2    9741    2048            0
+              2         9   65536    9930       0    9930    2048            0
+              2        10   65536    1529       0    1529    2048            0
+              2        11   65536   10232       7   10225    2048            0
+
+L2 Forwarding Resources
+-------------------------
+  L2 entries: Module inst   total    used   mcast   ucast   lines   lines_full
+------------------------------------------------------------------------------
+              3         0   65536     524       0     524    2048            0
+              3         1   65536     524       0     524    2048            0
+              3         2   65536     524       0     524    2048            0
+              3         3   65536     524       0     524    2048            0
+              3         4   65536     524       0     524    2048            0
+              3         5   65536     524       0     524    2048            0
+              3         6   65536    1580       0    1580    2048            0
+              3         7   65536    1543       0    1543    2048            0
+              3         8   65536    1543       0    1543    2048            0
+              3         9   65536    1885     163    1722    2048            0
+              3        10   65536    1886     163    1723    2048            0
+              3        11   65536    1885     163    1722    2048            0
+
+
+INSTANCE 0x0
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 1)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           20      4076    0.49
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           36      4060    0.88
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              3       20      13.04  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   0       1535    0.00   
+Non L4op labels, Tcam 1   4       1531    0.26   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   2       251     0.79   
+Egress Dest info table    1       255     0.39   
+
+
+INSTANCE 0x1
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 1)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           20      4076    0.49
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           36      4060    0.88
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              3       20      13.04  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   0       1535    0.00   
+Non L4op labels, Tcam 1   4       1531    0.26   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   2       251     0.79   
+Egress Dest info table    1       255     0.39   
+
+
+INSTANCE 0x2
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 1)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           20      4076    0.49
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           36      4060    0.88
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              3       20      13.04  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   0       1535    0.00   
+Non L4op labels, Tcam 1   4       1531    0.26   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   2       251     0.79   
+Egress Dest info table    1       255     0.39   
+
+
+INSTANCE 0x3
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 1)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           20      4076    0.49
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           36      4060    0.88
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              3       20      13.04  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   0       1535    0.00   
+Non L4op labels, Tcam 1   4       1531    0.26   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   2       251     0.79   
+Egress Dest info table    1       255     0.39   
+
+
+INSTANCE 0x4
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 1)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           20      4076    0.49
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           28      4068    0.68
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              3       20      13.04  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   0       1535    0.00   
+Non L4op labels, Tcam 1   2       1533    0.13   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   1       252     0.39   
+Egress Dest info table    1       255     0.39   
+
+
+INSTANCE 0x5
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 1)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           20      4076    0.49
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           28      4068    0.68
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              3       20      13.04  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   0       1535    0.00   
+Non L4op labels, Tcam 1   2       1533    0.13   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   1       252     0.39   
+Egress Dest info table    1       255     0.39   
+
+
+INSTANCE 0x6
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 1)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           20      4076    0.49
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           28      4068    0.68
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              3       20      13.04  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   0       1535    0.00   
+Non L4op labels, Tcam 1   2       1533    0.13   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   1       252     0.39   
+Egress Dest info table    1       255     0.39   
+
+
+INSTANCE 0x7
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 1)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           20      4076    0.49
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           28      4068    0.68
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              3       20      13.04  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   0       1535    0.00   
+Non L4op labels, Tcam 1   2       1533    0.13   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   1       252     0.39   
+Egress Dest info table    1       255     0.39   
+
+
+INSTANCE 0x8
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 1)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           20      4076    0.49
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           36      4060    0.88
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              3       20      13.04  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   0       1535    0.00   
+Non L4op labels, Tcam 1   4       1531    0.26   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   2       251     0.79   
+Egress Dest info table    1       255     0.39   
+
+
+INSTANCE 0x9
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 1)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           20      4076    0.49
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           28      4068    0.68
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              3       20      13.04  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   0       1535    0.00   
+Non L4op labels, Tcam 1   2       1533    0.13   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   1       252     0.39   
+Egress Dest info table    1       255     0.39   
+
+
+INSTANCE 0xa
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 1)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           20      4076    0.49
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           28      4068    0.68
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              3       20      13.04  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   0       1535    0.00   
+Non L4op labels, Tcam 1   2       1533    0.13   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   1       252     0.39   
+Egress Dest info table    1       255     0.39   
+
+
+INSTANCE 0xb
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 1)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           20      4076    0.49
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           36      4060    0.88
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              3       20      13.04  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   0       1535    0.00   
+Non L4op labels, Tcam 1   4       1531    0.26   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   2       251     0.79   
+Egress Dest info table    1       255     0.39   
+
+
+INSTANCE 0x0
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 2)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           20      4076    0.49
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           36      4060    0.88
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              3       20      13.04  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   0       1535    0.00   
+Non L4op labels, Tcam 1   4       1531    0.26   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   2       251     0.79   
+Egress Dest info table    1       255     0.39   
+
+
+INSTANCE 0x1
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 2)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           20      4076    0.49
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           36      4060    0.88
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              3       20      13.04  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   0       1535    0.00   
+Non L4op labels, Tcam 1   4       1531    0.26   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   2       251     0.79   
+Egress Dest info table    1       255     0.39   
+
+
+INSTANCE 0x2
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 2)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           20      4076    0.49
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           36      4060    0.88
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              3       20      13.04  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   0       1535    0.00   
+Non L4op labels, Tcam 1   4       1531    0.26   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   2       251     0.79   
+Egress Dest info table    1       255     0.39   
+
+
+INSTANCE 0x3
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 2)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           20      4076    0.49
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           36      4060    0.88
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              3       20      13.04  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   0       1535    0.00   
+Non L4op labels, Tcam 1   4       1531    0.26   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   2       251     0.79   
+Egress Dest info table    1       255     0.39   
+
+
+INSTANCE 0x4
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 2)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           20      4076    0.49
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           28      4068    0.68
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              3       20      13.04  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   0       1535    0.00   
+Non L4op labels, Tcam 1   2       1533    0.13   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   1       252     0.39   
+Egress Dest info table    1       255     0.39   
+
+
+INSTANCE 0x5
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 2)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           20      4076    0.49
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           28      4068    0.68
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              3       20      13.04  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   0       1535    0.00   
+Non L4op labels, Tcam 1   2       1533    0.13   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   1       252     0.39   
+Egress Dest info table    1       255     0.39   
+
+
+INSTANCE 0x6
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 2)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           20      4076    0.49
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           28      4068    0.68
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              3       20      13.04  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   0       1535    0.00   
+Non L4op labels, Tcam 1   2       1533    0.13   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   1       252     0.39   
+Egress Dest info table    1       255     0.39   
+
+
+INSTANCE 0x7
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 2)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           20      4076    0.49
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           36      4060    0.88
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              3       20      13.04  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   0       1535    0.00   
+Non L4op labels, Tcam 1   4       1531    0.26   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   2       251     0.79   
+Egress Dest info table    1       255     0.39   
+
+
+INSTANCE 0x8
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 2)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           20      4076    0.49
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           33      4063    0.81
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              3       20      13.04  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   0       1535    0.00   
+Non L4op labels, Tcam 1   3       1532    0.19   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   2       251     0.79   
+Egress Dest info table    1       255     0.39   
+
+
+INSTANCE 0x9
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 2)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           20      4076    0.49
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           28      4068    0.68
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              3       20      13.04  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   0       1535    0.00   
+Non L4op labels, Tcam 1   2       1533    0.13   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   1       252     0.39   
+Egress Dest info table    1       255     0.39   
+
+
+INSTANCE 0xa
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 2)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           20      4076    0.49
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           28      4068    0.68
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              3       20      13.04  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   0       1535    0.00   
+Non L4op labels, Tcam 1   2       1533    0.13   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   1       252     0.39   
+Egress Dest info table    1       255     0.39   
+
+
+INSTANCE 0xb
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 2)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           20      4076    0.49
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           36      4060    0.88
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              3       20      13.04  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   0       1535    0.00   
+Non L4op labels, Tcam 1   4       1531    0.26   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   2       251     0.79   
+Egress Dest info table    1       255     0.39   
+
+
+INSTANCE 0x0
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 3)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           37      4059    0.90
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           28      4068    0.68
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              4       19      17.39  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   1       1534    0.06   
+Non L4op labels, Tcam 1   2       1533    0.13   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   1       252     0.39   
+Egress Dest info table    2       254     0.78   
+
+
+INSTANCE 0x1
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 3)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           37      4059    0.90
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           28      4068    0.68
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              4       19      17.39  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   1       1534    0.06   
+Non L4op labels, Tcam 1   2       1533    0.13   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   1       252     0.39   
+Egress Dest info table    2       254     0.78   
+
+
+INSTANCE 0x2
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 3)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           37      4059    0.90
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           28      4068    0.68
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              4       19      17.39  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   1       1534    0.06   
+Non L4op labels, Tcam 1   2       1533    0.13   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   1       252     0.39   
+Egress Dest info table    2       254     0.78   
+
+
+INSTANCE 0x3
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 3)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           37      4059    0.90
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           28      4068    0.68
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              4       19      17.39  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   1       1534    0.06   
+Non L4op labels, Tcam 1   2       1533    0.13   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   1       252     0.39   
+Egress Dest info table    2       254     0.78   
+
+
+INSTANCE 0x4
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 3)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           37      4059    0.90
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           28      4068    0.68
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              4       19      17.39  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   1       1534    0.06   
+Non L4op labels, Tcam 1   2       1533    0.13   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   1       252     0.39   
+Egress Dest info table    2       254     0.78   
+
+
+INSTANCE 0x5
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 3)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           37      4059    0.90
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           28      4068    0.68
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              4       19      17.39  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   1       1534    0.06   
+Non L4op labels, Tcam 1   2       1533    0.13   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   1       252     0.39   
+Egress Dest info table    2       254     0.78   
+
+
+INSTANCE 0x6
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 3)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           37      4059    0.90
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           28      4068    0.68
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              4       19      17.39  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   1       1534    0.06   
+Non L4op labels, Tcam 1   2       1533    0.13   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   1       252     0.39   
+Egress Dest info table    2       254     0.78   
+
+
+INSTANCE 0x7
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 3)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           37      4059    0.90
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           28      4068    0.68
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              4       19      17.39  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   1       1534    0.06   
+Non L4op labels, Tcam 1   2       1533    0.13   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   1       252     0.39   
+Egress Dest info table    2       254     0.78   
+
+
+INSTANCE 0x8
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 3)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           37      4059    0.90
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           28      4068    0.68
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              4       19      17.39  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   1       1534    0.06   
+Non L4op labels, Tcam 1   2       1533    0.13   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   1       252     0.39   
+Egress Dest info table    2       254     0.78   
+
+
+INSTANCE 0x9
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 3)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           37      4059    0.90
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           28      4068    0.68
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              4       19      17.39  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   1       1534    0.06   
+Non L4op labels, Tcam 1   2       1533    0.13   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   1       252     0.39   
+Egress Dest info table    2       254     0.78   
+
+
+INSTANCE 0xa
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 3)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           37      4059    0.90
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           36      4060    0.88
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              4       19      17.39  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   1       1534    0.06   
+Non L4op labels, Tcam 1   3       1532    0.19   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   1       252     0.39   
+Egress Dest info table    2       254     0.78   
+
+
+INSTANCE 0xb
+-------------
+
+
+         ACL Hardware Resource Utilization (Mod 3)
+         -------------------------------------------- 
+                          Used    Free    Percent 
+                                          Utilization
+----------------------------------------------------- 
+Tcam 0, Bank 0           37      4059    0.90
+Tcam 0, Bank 1           20      4076    0.49
+Tcam 1, Bank 0           28      4068    0.68
+Tcam 1, Bank 1           437     3659    10.67
+LOU                       4       100     3.84   
+Both LOU Operands         2       
+Single LOU Operands       2       
+LOU L4 src port:          1
+LOU L4 dst port:          1
+LOU L3 packet len:        0
+LOU IP tos:               0
+LOU IP dscp:              0
+LOU ip precedence:        0
+LOU ip TTL:               0
+TCP Flags                 0       16      0.00   
+
+Protocol CAM              4       19      17.39  
+Mac Etype/Proto CAM       11      3       78.57  
+
+Non L4op labels, Tcam 0   1       1534    0.06   
+Non L4op labels, Tcam 1   2       1533    0.13   
+L4 op labels, Tcam 0      0       491     0.00   
+L4 op labels, Tcam 1      1       490     0.20   
+
+Ingress Dest info table   1       252     0.39   
+Egress Dest info table    2       254     0.78   
+Module 1 usage:
+TCAM usage statistics for instance :0
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       12520           12520           19              
+  IPV4 unicast              12516           12516           19              
+  IPV4 multicast            4               4               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            2               4               0               
+  IPV6 unicast              1               2               0               
+
+Quad-Width Entries:         5               20              0               
+  IPV6 multicast            5               20              0               
+
+Free Single-Width Entries:  51454           51454           80              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :1
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       13253           13253           20              
+  IPV4 unicast              13249           13249           20              
+  IPV4 multicast            4               4               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            2               4               0               
+  IPV6 unicast              1               2               0               
+
+Quad-Width Entries:         5               20              0               
+  IPV6 multicast            5               20              0               
+
+Free Single-Width Entries:  50721           50721           79              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :2
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       7575            7575            11              
+  IPV4 unicast              7571            7571            11              
+  IPV4 multicast            4               4               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            2               4               0               
+  IPV6 unicast              1               2               0               
+
+Quad-Width Entries:         5               20              0               
+  IPV6 multicast            5               20              0               
+
+Free Single-Width Entries:  56399           56399           88              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :3
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       12907           12907           20              
+  IPV4 unicast              12903           12903           20              
+  IPV4 multicast            4               4               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            2               4               0               
+  IPV6 unicast              1               2               0               
+
+Quad-Width Entries:         5               20              0               
+  IPV6 multicast            5               20              0               
+
+Free Single-Width Entries:  51067           51067           79              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :4
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       7               7               0               
+  IPV4 unicast              3               3               0               
+  IPV4 multicast            4               4               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            2               4               0               
+  IPV6 unicast              1               2               0               
+
+Quad-Width Entries:         5               20              0               
+  IPV6 multicast            5               20              0               
+
+Free Single-Width Entries:  63967           63967           99              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :5
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       7               7               0               
+  IPV4 unicast              3               3               0               
+  IPV4 multicast            4               4               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            2               4               0               
+  IPV6 unicast              1               2               0               
+
+Quad-Width Entries:         5               20              0               
+  IPV6 multicast            5               20              0               
+
+Free Single-Width Entries:  63967           63967           99              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :6
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       7               7               0               
+  IPV4 unicast              3               3               0               
+  IPV4 multicast            4               4               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            2               4               0               
+  IPV6 unicast              1               2               0               
+
+Quad-Width Entries:         5               20              0               
+  IPV6 multicast            5               20              0               
+
+Free Single-Width Entries:  63967           63967           99              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :7
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       5744            5744            8               
+  IPV4 unicast              5740            5740            8               
+  IPV4 multicast            4               4               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            2               4               0               
+  IPV6 unicast              1               2               0               
+
+Quad-Width Entries:         5               20              0               
+  IPV6 multicast            5               20              0               
+
+Free Single-Width Entries:  58230           58230           90              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :8
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       13146           13146           20              
+  IPV4 unicast              13142           13142           20              
+  IPV4 multicast            4               4               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            2               4               0               
+  IPV6 unicast              1               2               0               
+
+Quad-Width Entries:         5               20              0               
+  IPV6 multicast            5               20              0               
+
+Free Single-Width Entries:  50828           50828           79              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :9
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       13200           13200           20              
+  IPV4 unicast              13196           13196           20              
+  IPV4 multicast            4               4               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            2               4               0               
+  IPV6 unicast              1               2               0               
+
+Quad-Width Entries:         5               20              0               
+  IPV6 multicast            5               20              0               
+
+Free Single-Width Entries:  50774           50774           79              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :10
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       12              12              0               
+  IPV4 unicast              8               8               0               
+  IPV4 multicast            4               4               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            2               4               0               
+  IPV6 unicast              1               2               0               
+
+Quad-Width Entries:         5               20              0               
+  IPV6 multicast            5               20              0               
+
+Free Single-Width Entries:  63962           63962           99              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :11
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       13253           13253           20              
+  IPV4 unicast              13249           13249           20              
+  IPV4 multicast            4               4               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            2               4               0               
+  IPV6 unicast              1               2               0               
+
+Quad-Width Entries:         5               20              0               
+  IPV6 multicast            5               20              0               
+
+Free Single-Width Entries:  50721           50721           79              
+----------------------------------------------------------------------------
+Module 2 usage:
+TCAM usage statistics for instance :0
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       12520           12520           19              
+  IPV4 unicast              12516           12516           19              
+  IPV4 multicast            4               4               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            2               4               0               
+  IPV6 unicast              1               2               0               
+
+Quad-Width Entries:         5               20              0               
+  IPV6 multicast            5               20              0               
+
+Free Single-Width Entries:  51454           51454           80              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :1
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       13253           13253           20              
+  IPV4 unicast              13249           13249           20              
+  IPV4 multicast            4               4               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            2               4               0               
+  IPV6 unicast              1               2               0               
+
+Quad-Width Entries:         5               20              0               
+  IPV6 multicast            5               20              0               
+
+Free Single-Width Entries:  50721           50721           79              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :2
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       7575            7575            11              
+  IPV4 unicast              7571            7571            11              
+  IPV4 multicast            4               4               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            2               4               0               
+  IPV6 unicast              1               2               0               
+
+Quad-Width Entries:         5               20              0               
+  IPV6 multicast            5               20              0               
+
+Free Single-Width Entries:  56399           56399           88              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :3
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       12907           12907           20              
+  IPV4 unicast              12903           12903           20              
+  IPV4 multicast            4               4               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            2               4               0               
+  IPV6 unicast              1               2               0               
+
+Quad-Width Entries:         5               20              0               
+  IPV6 multicast            5               20              0               
+
+Free Single-Width Entries:  51067           51067           79              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :4
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       7               7               0               
+  IPV4 unicast              3               3               0               
+  IPV4 multicast            4               4               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            2               4               0               
+  IPV6 unicast              1               2               0               
+
+Quad-Width Entries:         5               20              0               
+  IPV6 multicast            5               20              0               
+
+Free Single-Width Entries:  63967           63967           99              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :5
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       7               7               0               
+  IPV4 unicast              3               3               0               
+  IPV4 multicast            4               4               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            2               4               0               
+  IPV6 unicast              1               2               0               
+
+Quad-Width Entries:         5               20              0               
+  IPV6 multicast            5               20              0               
+
+Free Single-Width Entries:  63967           63967           99              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :6
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       392             392             0               
+  IPV4 unicast              388             388             0               
+  IPV4 multicast            4               4               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            2               4               0               
+  IPV6 unicast              1               2               0               
+
+Quad-Width Entries:         5               20              0               
+  IPV6 multicast            5               20              0               
+
+Free Single-Width Entries:  63582           63582           99              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :7
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       13169           13169           20              
+  IPV4 unicast              13165           13165           20              
+  IPV4 multicast            4               4               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            2               4               0               
+  IPV6 unicast              1               2               0               
+
+Quad-Width Entries:         5               20              0               
+  IPV6 multicast            5               20              0               
+
+Free Single-Width Entries:  50805           50805           79              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :8
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       11561           11561           18              
+  IPV4 unicast              11557           11557           18              
+  IPV4 multicast            4               4               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            2               4               0               
+  IPV6 unicast              1               2               0               
+
+Quad-Width Entries:         5               20              0               
+  IPV6 multicast            5               20              0               
+
+Free Single-Width Entries:  52413           52413           81              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :9
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       13200           13200           20              
+  IPV4 unicast              13196           13196           20              
+  IPV4 multicast            4               4               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            2               4               0               
+  IPV6 unicast              1               2               0               
+
+Quad-Width Entries:         5               20              0               
+  IPV6 multicast            5               20              0               
+
+Free Single-Width Entries:  50774           50774           79              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :10
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       12              12              0               
+  IPV4 unicast              8               8               0               
+  IPV4 multicast            4               4               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            2               4               0               
+  IPV6 unicast              1               2               0               
+
+Quad-Width Entries:         5               20              0               
+  IPV6 multicast            5               20              0               
+
+Free Single-Width Entries:  63962           63962           99              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :11
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       13253           13253           20              
+  IPV4 unicast              13249           13249           20              
+  IPV4 multicast            4               4               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            2               4               0               
+  IPV6 unicast              1               2               0               
+
+Quad-Width Entries:         5               20              0               
+  IPV6 multicast            5               20              0               
+
+Free Single-Width Entries:  50721           50721           79              
+----------------------------------------------------------------------------
+Module 3 usage:
+TCAM usage statistics for instance :0
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       11              11              0               
+  IPV4 unicast              3               3               0               
+  IPV4 multicast            8               8               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            1               2               0               
+  IPV6 unicast              2               4               0               
+
+Quad-Width Entries:         10              40              0               
+  IPV6 multicast            10              40              0               
+
+Free Single-Width Entries:  63943           63943           99              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :1
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       11              11              0               
+  IPV4 unicast              3               3               0               
+  IPV4 multicast            8               8               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            1               2               0               
+  IPV6 unicast              2               4               0               
+
+Quad-Width Entries:         10              40              0               
+  IPV6 multicast            10              40              0               
+
+Free Single-Width Entries:  63943           63943           99              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :2
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       11              11              0               
+  IPV4 unicast              3               3               0               
+  IPV4 multicast            8               8               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            1               2               0               
+  IPV6 unicast              2               4               0               
+
+Quad-Width Entries:         10              40              0               
+  IPV6 multicast            10              40              0               
+
+Free Single-Width Entries:  63943           63943           99              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :3
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       11              11              0               
+  IPV4 unicast              3               3               0               
+  IPV4 multicast            8               8               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            1               2               0               
+  IPV6 unicast              2               4               0               
+
+Quad-Width Entries:         10              40              0               
+  IPV6 multicast            10              40              0               
+
+Free Single-Width Entries:  63943           63943           99              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :4
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       11              11              0               
+  IPV4 unicast              3               3               0               
+  IPV4 multicast            8               8               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            1               2               0               
+  IPV6 unicast              2               4               0               
+
+Quad-Width Entries:         10              40              0               
+  IPV6 multicast            10              40              0               
+
+Free Single-Width Entries:  63943           63943           99              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :5
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       11              11              0               
+  IPV4 unicast              3               3               0               
+  IPV4 multicast            8               8               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            1               2               0               
+  IPV6 unicast              2               4               0               
+
+Quad-Width Entries:         10              40              0               
+  IPV6 multicast            10              40              0               
+
+Free Single-Width Entries:  63943           63943           99              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :6
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       37              37              0               
+  IPV4 unicast              29              29              0               
+  IPV4 multicast            8               8               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            1               2               0               
+  IPV6 unicast              2               4               0               
+
+Quad-Width Entries:         10              40              0               
+  IPV6 multicast            10              40              0               
+
+Free Single-Width Entries:  63917           63917           99              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :7
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       42              42              0               
+  IPV4 unicast              34              34              0               
+  IPV4 multicast            8               8               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            1               2               0               
+  IPV6 unicast              2               4               0               
+
+Quad-Width Entries:         10              40              0               
+  IPV6 multicast            10              40              0               
+
+Free Single-Width Entries:  63912           63912           99              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :8
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       16              16              0               
+  IPV4 unicast              8               8               0               
+  IPV4 multicast            8               8               0               
+  MPLS                      0               0               0               
+  EOM Peer                  0               0               0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            1               2               0               
+  IPV6 unicast              2               4               0               
+
+Quad-Width Entries:         10              40              0               
+  IPV6 multicast            10              40              0               
+
+Free Single-Width Entries:  63938           63938           99              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :9
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       153             153             0               
+  IPV4 unicast              27              27              0               
+  IPV4 multicast            8               8               0               
+  MPLS                      0               0               0               
+  EOM Peer                  118             118             0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            1               2               0               
+  IPV6 unicast              2               4               0               
+
+Quad-Width Entries:         10              40              0               
+  IPV6 multicast            10              40              0               
+
+Free Single-Width Entries:  63801           63801           99              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :10
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       206             206             0               
+  IPV4 unicast              9               9               0               
+  IPV4 multicast            8               8               0               
+  MPLS                      0               0               0               
+  EOM Peer                  189             189             0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            1               2               0               
+  IPV6 unicast              2               4               0               
+
+Quad-Width Entries:         10              40              0               
+  IPV6 multicast            10              40              0               
+
+Free Single-Width Entries:  63748           63748           99              
+----------------------------------------------------------------------------
+TCAM usage statistics for instance :11
+
+Total capacity : 64000 (Single-Width Entries)
+Note: Algorithmic TCAM utilization may not reach theoretical maximum.
+---------------------------------------------------------------------------
+Entry                       Logical         Physical        %Total         
+Type                        Entries         Entries          TCAM Capacity  
+---------------------------------------------------------------------------
+Single-Width Entries:       153             153             0               
+  IPV4 unicast              27              27              0               
+  IPV4 multicast            8               8               0               
+  MPLS                      0               0               0               
+  EOM Peer                  118             118             0               
+  MPLS VPN                  0               0               0               
+  FCMPLS                    0               0               0               
+  FCOE                      0               0               0               
+
+Dual-Width Entries:         3               6               0               
+  IPV6 LinkLocal            1               2               0               
+  IPV6 unicast              2               4               0               
+
+Quad-Width Entries:         10              40              0               
+  IPV6 multicast            10              40              0               
+
+Free Single-Width Entries:  63801           63801           99              
+----------------------------------------------------------------------------
+
+Adjacency table usage.
+Module 1 usage:
+
+SW index usage statistics
+Used     %Used  Free     %Free  Total
+--------------------------------------
+9532      0     4184772   99    4194304   
+
+Adjacency usage statistics for Instance 0
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        9212      14    56239     85    65461     
+Stats - MFIB        7         0     56239     85    65461     
+Stats - FCFIB       2         0     56239     85    65461     
+Stats - ACL         1         0     56239     85    65461     
+Stats - LFIB        0         0     56239     85    65461     
+
+Adjacency usage statistics for Instance 1
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        9500      14    55951     85    65461     
+Stats - MFIB        7         0     55951     85    65461     
+Stats - FCFIB       2         0     55951     85    65461     
+Stats - ACL         1         0     55951     85    65461     
+Stats - LFIB        0         0     55951     85    65461     
+
+Adjacency usage statistics for Instance 2
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        5219      7     60232     92    65461     
+Stats - MFIB        7         0     60232     92    65461     
+Stats - FCFIB       2         0     60232     92    65461     
+Stats - ACL         1         0     60232     92    65461     
+Stats - LFIB        0         0     60232     92    65461     
+
+Adjacency usage statistics for Instance 3
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        9447      14    56004     85    65461     
+Stats - MFIB        7         0     56004     85    65461     
+Stats - FCFIB       2         0     56004     85    65461     
+Stats - ACL         1         0     56004     85    65461     
+Stats - LFIB        0         0     56004     85    65461     
+
+Adjacency usage statistics for Instance 4
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        5         0     65446     99    65461     
+Stats - MFIB        7         0     65446     99    65461     
+Stats - FCFIB       2         0     65446     99    65461     
+Stats - ACL         1         0     65446     99    65461     
+Stats - LFIB        0         0     65446     99    65461     
+
+Adjacency usage statistics for Instance 5
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        5         0     65446     99    65461     
+Stats - MFIB        7         0     65446     99    65461     
+Stats - FCFIB       2         0     65446     99    65461     
+Stats - ACL         1         0     65446     99    65461     
+Stats - LFIB        0         0     65446     99    65461     
+
+Adjacency usage statistics for Instance 6
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        5         0     65446     99    65461     
+Stats - MFIB        7         0     65446     99    65461     
+Stats - FCFIB       2         0     65446     99    65461     
+Stats - ACL         1         0     65446     99    65461     
+Stats - LFIB        0         0     65446     99    65461     
+
+Adjacency usage statistics for Instance 7
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        4538      6     60913     93    65461     
+Stats - MFIB        7         0     60913     93    65461     
+Stats - FCFIB       2         0     60913     93    65461     
+Stats - ACL         1         0     60913     93    65461     
+Stats - LFIB        0         0     60913     93    65461     
+
+Adjacency usage statistics for Instance 8
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        9447      14    56004     85    65461     
+Stats - MFIB        7         0     56004     85    65461     
+Stats - FCFIB       2         0     56004     85    65461     
+Stats - ACL         1         0     56004     85    65461     
+Stats - LFIB        0         0     56004     85    65461     
+
+Adjacency usage statistics for Instance 9
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        9478      14    55973     85    65461     
+Stats - MFIB        7         0     55973     85    65461     
+Stats - FCFIB       2         0     55973     85    65461     
+Stats - ACL         1         0     55973     85    65461     
+Stats - LFIB        0         0     55973     85    65461     
+
+Adjacency usage statistics for Instance 10
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        7         0     65444     99    65461     
+Stats - MFIB        7         0     65444     99    65461     
+Stats - FCFIB       2         0     65444     99    65461     
+Stats - ACL         1         0     65444     99    65461     
+Stats - LFIB        0         0     65444     99    65461     
+
+Adjacency usage statistics for Instance 11
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        9500      14    55951     85    65461     
+Stats - MFIB        7         0     55951     85    65461     
+Stats - FCFIB       2         0     55951     85    65461     
+Stats - ACL         1         0     55951     85    65461     
+Stats - LFIB        0         0     55951     85    65461     
+
+Adjacency table usage.
+Module 2 usage:
+
+SW index usage statistics
+Used     %Used  Free     %Free  Total
+--------------------------------------
+9532      0     4184772   99    4194304   
+
+Adjacency usage statistics for Instance 0
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        9212      14    56239     85    65461     
+Stats - MFIB        7         0     56239     85    65461     
+Stats - FCFIB       2         0     56239     85    65461     
+Stats - ACL         1         0     56239     85    65461     
+Stats - LFIB        0         0     56239     85    65461     
+
+Adjacency usage statistics for Instance 1
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        9500      14    55951     85    65461     
+Stats - MFIB        7         0     55951     85    65461     
+Stats - FCFIB       2         0     55951     85    65461     
+Stats - ACL         1         0     55951     85    65461     
+Stats - LFIB        0         0     55951     85    65461     
+
+Adjacency usage statistics for Instance 2
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        5219      7     60232     92    65461     
+Stats - MFIB        7         0     60232     92    65461     
+Stats - FCFIB       2         0     60232     92    65461     
+Stats - ACL         1         0     60232     92    65461     
+Stats - LFIB        0         0     60232     92    65461     
+
+Adjacency usage statistics for Instance 3
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        9447      14    56004     85    65461     
+Stats - MFIB        7         0     56004     85    65461     
+Stats - FCFIB       2         0     56004     85    65461     
+Stats - ACL         1         0     56004     85    65461     
+Stats - LFIB        0         0     56004     85    65461     
+
+Adjacency usage statistics for Instance 4
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        5         0     65446     99    65461     
+Stats - MFIB        7         0     65446     99    65461     
+Stats - FCFIB       2         0     65446     99    65461     
+Stats - ACL         1         0     65446     99    65461     
+Stats - LFIB        0         0     65446     99    65461     
+
+Adjacency usage statistics for Instance 5
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        5         0     65446     99    65461     
+Stats - MFIB        7         0     65446     99    65461     
+Stats - FCFIB       2         0     65446     99    65461     
+Stats - ACL         1         0     65446     99    65461     
+Stats - LFIB        0         0     65446     99    65461     
+
+Adjacency usage statistics for Instance 6
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        276       0     65175     99    65461     
+Stats - MFIB        7         0     65175     99    65461     
+Stats - FCFIB       2         0     65175     99    65461     
+Stats - ACL         1         0     65175     99    65461     
+Stats - LFIB        0         0     65175     99    65461     
+
+Adjacency usage statistics for Instance 7
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        9455      14    55996     85    65461     
+Stats - MFIB        7         0     55996     85    65461     
+Stats - FCFIB       2         0     55996     85    65461     
+Stats - ACL         1         0     55996     85    65461     
+Stats - LFIB        0         0     55996     85    65461     
+
+Adjacency usage statistics for Instance 8
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        9116      13    56335     86    65461     
+Stats - MFIB        7         0     56335     86    65461     
+Stats - FCFIB       2         0     56335     86    65461     
+Stats - ACL         1         0     56335     86    65461     
+Stats - LFIB        0         0     56335     86    65461     
+
+Adjacency usage statistics for Instance 9
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        9478      14    55973     85    65461     
+Stats - MFIB        7         0     55973     85    65461     
+Stats - FCFIB       2         0     55973     85    65461     
+Stats - ACL         1         0     55973     85    65461     
+Stats - LFIB        0         0     55973     85    65461     
+
+Adjacency usage statistics for Instance 10
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        7         0     65444     99    65461     
+Stats - MFIB        7         0     65444     99    65461     
+Stats - FCFIB       2         0     65444     99    65461     
+Stats - ACL         1         0     65444     99    65461     
+Stats - LFIB        0         0     65444     99    65461     
+
+Adjacency usage statistics for Instance 11
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        9500      14    55951     85    65461     
+Stats - MFIB        7         0     55951     85    65461     
+Stats - FCFIB       2         0     55951     85    65461     
+Stats - ACL         1         0     55951     85    65461     
+Stats - LFIB        0         0     55951     85    65461     
+
+Adjacency table usage.
+Module 3 usage:
+
+SW index usage statistics
+Used     %Used  Free     %Free  Total
+--------------------------------------
+9550      0     4184754   99    4194304   
+
+Adjacency usage statistics for Instance 0
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        5         0     65430     99    65461     
+Stats - MFIB        7         0     65430     99    65461     
+Stats - FCFIB       2         0     65430     99    65461     
+Stats - ACL         17        0     65430     99    65461     
+Stats - LFIB        0         0     65430     99    65461     
+
+Adjacency usage statistics for Instance 1
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        5         0     65430     99    65461     
+Stats - MFIB        7         0     65430     99    65461     
+Stats - FCFIB       2         0     65430     99    65461     
+Stats - ACL         17        0     65430     99    65461     
+Stats - LFIB        0         0     65430     99    65461     
+
+Adjacency usage statistics for Instance 2
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        5         0     65430     99    65461     
+Stats - MFIB        7         0     65430     99    65461     
+Stats - FCFIB       2         0     65430     99    65461     
+Stats - ACL         17        0     65430     99    65461     
+Stats - LFIB        0         0     65430     99    65461     
+
+Adjacency usage statistics for Instance 3
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        5         0     65430     99    65461     
+Stats - MFIB        7         0     65430     99    65461     
+Stats - FCFIB       2         0     65430     99    65461     
+Stats - ACL         17        0     65430     99    65461     
+Stats - LFIB        0         0     65430     99    65461     
+
+Adjacency usage statistics for Instance 4
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        5         0     65430     99    65461     
+Stats - MFIB        7         0     65430     99    65461     
+Stats - FCFIB       2         0     65430     99    65461     
+Stats - ACL         17        0     65430     99    65461     
+Stats - LFIB        0         0     65430     99    65461     
+
+Adjacency usage statistics for Instance 5
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        5         0     65430     99    65461     
+Stats - MFIB        7         0     65430     99    65461     
+Stats - FCFIB       2         0     65430     99    65461     
+Stats - ACL         17        0     65430     99    65461     
+Stats - LFIB        0         0     65430     99    65461     
+
+Adjacency usage statistics for Instance 6
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        12        0     65423     99    65461     
+Stats - MFIB        7         0     65423     99    65461     
+Stats - FCFIB       2         0     65423     99    65461     
+Stats - ACL         17        0     65423     99    65461     
+Stats - LFIB        0         0     65423     99    65461     
+
+Adjacency usage statistics for Instance 7
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        13        0     65422     99    65461     
+Stats - MFIB        7         0     65422     99    65461     
+Stats - FCFIB       2         0     65422     99    65461     
+Stats - ACL         17        0     65422     99    65461     
+Stats - LFIB        0         0     65422     99    65461     
+
+Adjacency usage statistics for Instance 8
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        9         0     65426     99    65461     
+Stats - MFIB        7         0     65426     99    65461     
+Stats - FCFIB       2         0     65426     99    65461     
+Stats - ACL         17        0     65426     99    65461     
+Stats - LFIB        0         0     65426     99    65461     
+
+Adjacency usage statistics for Instance 9
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        9         0     65308     99    65461     
+Stats - MFIB        125       0     65308     99    65461     
+Stats - FCFIB       2         0     65308     99    65461     
+Stats - ACL         17        0     65308     99    65461     
+Stats - LFIB        0         0     65308     99    65461     
+
+Adjacency usage statistics for Instance 10
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        13        0     65304     99    65461     
+Stats - MFIB        125       0     65304     99    65461     
+Stats - FCFIB       2         0     65304     99    65461     
+Stats - ACL         17        0     65304     99    65461     
+Stats - LFIB        0         0     65304     99    65461     
+
+Adjacency usage statistics for Instance 11
+Feature             Used     %Used  Free     %Free  Total
+----------------------------------------------------------
+Stats - UFIB        9         0     65308     99    65461     
+Stats - MFIB        125       0     65308     99    65461     
+Stats - FCFIB       2         0     65308     99    65461     
+Stats - ACL         17        0     65308     99    65461     
+Stats - LFIB        0         0     65308     99    65461     
+
+MET usage statistics for Instance 0
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 1
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 2
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 3
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 4
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 5
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 6
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 7
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 8
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 9
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 10
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 11
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 0
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 1
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 2
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 3
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 4
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 5
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 6
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 7
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 8
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 9
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 10
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 11
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 0
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 1
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 2
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 3
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 4
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 5
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 6
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 7
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 8
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        1         0.00      32767     32768     0         
+
+MET usage statistics for Instance 9
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        15        0.04      32753     32768     0         
+
+MET usage statistics for Instance 10
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        85        0.25      32683     32768     0         
+
+MET usage statistics for Instance 11
+Feature        Used      %Used     Free      Total   mcast-groups
+-----------------------------------------------------------------
+EGRESS         1         0.00      32767     32768     0         
+INGRESS        15        0.04      32753     32768     0         
+
+QoS Resource Utilization 
+------------------------ 
+
+Resource                      Module    Total        Used         Free        
+--------                      ------    -----        ----         ----        
+Aggregate policers:               1     12288        228          12060       
+Distributed policers:             1     12288        0            12288       
+Policer Profiles:                 1     3072         204          2868        
+
+QoS Resource Utilization 
+------------------------ 
+
+Resource                      Module    Total        Used         Free        
+--------                      ------    -----        ----         ----        
+Aggregate policers:               2     12288        228          12060       
+Distributed policers:             2     12288        0            12288       
+Policer Profiles:                 2     3072         204          2868        
+
+QoS Resource Utilization 
+------------------------ 
+
+Resource                      Module    Total        Used         Free        
+--------                      ------    -----        ----         ----        
+Aggregate policers:               3     12288        228          12060       
+Distributed policers:             3     12288        0            12288       
+Policer Profiles:                 3     3072         204          2868        
+

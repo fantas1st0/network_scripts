@@ -1,0 +1,60 @@
+
+Legend:
+		(*) - local vPC is down, forwarding via vPC peer-link
+
+vPC domain id                     : 63  
+Peer status                       : peer adjacency formed ok      
+vPC keep-alive status             : peer is alive                 
+Configuration consistency status  : success 
+Per-vlan consistency status       : success                       
+Type-2 consistency status         : success 
+vPC role                          : secondary                     
+Number of vPCs configured         : 10  
+Peer Gateway                      : Disabled
+Dual-active excluded VLANs        : -
+Graceful Consistency Check        : Enabled
+Auto-recovery status              : Disabled
+Delay-restore status              : Timer is off.(timeout = 150s)
+Delay-restore SVI status          : Timer is off.(timeout = 10s)
+Operational Layer3 Peer-router    : Disabled
+Virtual-peerlink mode             : Disabled
+
+vPC Peer-link status
+---------------------------------------------------------------------
+id    Port   Status Active vlans    
+--    ----   ------ -------------------------------------------------
+1     Po1000 up     1,2901,2951,3126,3155,3779,3781,3792,3799,3801,                      
+                    3807-3808,3852-3854,3926                                             
+
+vPC status
+----------------------------------------------------------------------------
+Id    Port          Status Consistency Reason                Active vlans
+--    ------------  ------ ----------- ------                ---------------
+7     Po7           up     success     success               1,2901,2951,3126,           
+                                                             3155,3779,3781,             
+                                                             3792,3799,3801,             
+                                                             3807-3808,                  
+                                                             3852-3854,3926              
+301   Po301         up     success     success               2901                        
+                                                                                         
+302   Po302         up     success     success               3808                        
+                                                                                         
+303   Po303         up     success     success               3807                        
+                                                                                         
+304   Po304         down*  success     success               -                           
+                                                                                         
+305   Po305         up     success     success               3808                        
+                                                                                         
+306   Po306         down*  Not         Consistency Check Not -                           
+                           Applicable   Performed                                        
+307   Po307         up     success     success               3807                        
+                                                                                         
+308   Po308         up     success     success               3126,3155,3779,             
+                                                             3781                        
+309   Po309         up     success     success               3126,3155,3779,             
+                                                             3781                        
+
+Please check "show vpc consistency-parameters vpc <vpc-num>" for the 
+consistency reason of down vpc and for type-2 consistency reasons for 
+any vpc.
+

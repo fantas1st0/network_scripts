@@ -1,0 +1,820 @@
+
+
+!Command: show running-config
+!Time: Fri Oct  2 00:22:27 2020
+
+version 6.2(16)
+feature-set mpls
+switchname sw-v43-edge-2
+
+feature tacacs+
+cfs eth distribute
+feature ospf
+feature bgp
+feature mpls l3vpn
+feature mpls ldp
+feature udld
+feature interface-vlan
+feature hsrp
+feature lacp
+feature dhcp
+feature vpc
+feature vtp
+
+username xxxxxxx password 5 xxxxxxx role vdc-admin
+username xxxxxxx password 5 xxxxxxx role vdc-admin
+no password strength-check
+no ip domain-lookup
+ip domain-name vtb24.ru
+ip tacacs source-interface loopback0
+tacacs-server timeout 10
+tacacs-server host 10.64.0.68 key 7  xxxxxxxx  
+tacacs-server host 10.64.0.69 key 7  xxxxxxxx  
+aaa group server tacacs+ TACACS+ 
+    server 10.64.0.68 
+    server 10.64.0.69 
+    source-interface loopback0
+system default switchport
+errdisable recovery interval 60
+errdisable recovery cause link-flap
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause loopback
+errdisable recovery cause storm-control
+errdisable recovery cause security-violation
+errdisable recovery cause psecure-violation
+errdisable recovery cause vpc-peerlink
+errdisable recovery cause failed-port-state
+ip access-list 1
+  20 permit ip 10.64.0.0/21 any 
+  30 permit ip 10.68.0.0/21 any 
+  40 permit ip 10.74.57.7/32 any 
+  50 permit ip 10.194.160.71/32 any 
+  60 permit ip 10.194.62.33/32 any 
+  70 permit ip 10.194.162.33/32 any 
+ip access-list 111
+  10 permit ip 10.64.0.111/32 any 
+snmp-server contact VTB24 NOC, noc@vtb24.ru
+snmp-server location MSK, Vorontsovskaya 43, Room 503A, Rack 5A-BB, Units 15-29
+snmp-server source-interface trap loopback0
+snmp-server source-interface inform loopback0
+snmp-server user xxxxxxxx vdc-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server user xxxxxxxx vdc-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server host 10.194.160.71 traps version 2c xxxxxxxx 
+snmp-server host 10.194.162.33 traps version 2c xxxxxxxx 
+snmp-server host 10.64.1.75 traps version 2c xxxxxxxx 
+snmp-server host 10.64.1.75 use-vrf default
+rmon event 1 log trap public description FATAL(1) owner PMON@FATAL
+rmon event 2 log trap public description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 log trap public description ERROR(3) owner PMON@ERROR
+rmon event 4 log trap public description WARNING(4) owner PMON@WARNING
+rmon event 5 log trap public description INFORMATION(5) owner PMON@INFO
+snmp-server enable traps switchfabric fabric-crc
+snmp-server enable traps callhome event-notify
+snmp-server enable traps callhome smtp-send-fail
+snmp-server enable traps cfs state-change-notif
+snmp-server enable traps cfs merge-failure
+snmp-server enable traps aaa server-state-change
+snmp-server enable traps hsrp state-change
+snmp-server enable traps feature-control FeatureOpStatusChange
+snmp-server enable traps sysmgr cseFailSwCoreNotifyExtended
+snmp-server enable traps config ccmCLIRunningConfigChanged
+snmp-server enable traps snmp authentication
+snmp-server enable traps mpls ldp session-up
+snmp-server enable traps mpls ldp session-down
+snmp-server enable traps mpls vpn vrf-up
+snmp-server enable traps mpls vpn vrf-down
+snmp-server enable traps mpls vpn mid-thresh-exceeded
+snmp-server enable traps mpls vpn max-thresh-exceeded
+snmp-server enable traps mpls vpn max-thresh-cleared
+snmp-server enable traps link cisco-xcvr-mon-status-chg
+snmp-server enable traps vtp notifs
+snmp-server enable traps vtp vlancreate
+snmp-server enable traps vtp vlandelete
+snmp-server enable traps bridge newroot
+snmp-server enable traps bridge topologychange
+snmp-server enable traps stpx inconsistency
+snmp-server enable traps stpx root-inconsistency
+snmp-server enable traps stpx loop-inconsistency
+snmp-server enable traps system Clock-change-notification
+snmp-server enable traps feature-control ciscoFeatOpStatusChange
+snmp-server community xxxxxxxx group vdc-operator
+snmp-server community xxxxxxxx group vdc-operator
+snmp-server community xxxxxxxx group vdc-operator
+snmp-server community xxxxxxxx use-ipv4acl 1
+snmp-server community xxxxxxxx use-ipv4acl 1
+snmp-server community xxxxxxxx use-ipv4acl 111
+aaa authentication login default group TACACS+ 
+aaa authorization config-commands default group TACACS+ local 
+aaa authorization commands default group TACACS+ local 
+aaa accounting default group TACACS+ 
+aaa authentication login error-enable 
+
+spanning-tree port type edge default
+spanning-tree port type edge bpduguard default
+spanning-tree loopguard default
+spanning-tree vlan 1-3967 priority 8192
+ip prefix-list bgp-deny-any seq 5 deny 0.0.0.0/0 le 32 
+route-map map-match-any permit 10
+route-map map-match-tag-200 permit 10
+  match tag 200 
+route-map map-static-to-bgp permit 10
+  description LOCAL statically routed subnets
+  match tag 210 220 
+route-map map-static-to-bgp permit 20
+  description LOCAL statically routed subnets
+  match tag 200 
+  set community local-AS 
+route-map map-static-to-bgp permit 30
+  description FW-CPEDGE statically routed subnets
+  match tag 400 
+  set weight 0
+  set local-preference 90
+  set community 24823:401 additive 
+key chain KEY-HSRP
+  key 0
+    key-string xxxxxxxx
+  key 1
+    key-string xxxxxxxx
+udld aggressive
+service dhcp
+ip dhcp relay
+ipv6 dhcp relay
+vrf context GLOBAL
+  ip route 10.0.240.0/20 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.1.5.128/26 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.1.6.0/23 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.1.8.0/23 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.2.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.2.32.0/19 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.3.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.3.32.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.5.0.0/17 Vlan513 10.67.162.8 name PREFIX-INF-NADEJNOST_C-00008928 tag 400 250
+  ip route 10.5.128.0/18 Vlan513 10.67.162.8 name PREFIX-INF-NADEJNOST_C-00008928 tag 400 250
+  ip route 10.8.36.0/23 Vlan513 10.67.162.8 name PREFIX-INF-NADEJNOST_C-00008928 tag 400 250
+  ip route 10.8.40.128/25 Vlan513 10.67.162.8 name PREFIX-INF-NADEJNOST_C-00008928 tag 400 250
+  ip route 10.8.41.0/25 Vlan513 10.67.162.8 name PREFIX-INF-NADEJNOST_C-00008928 tag 400 250
+  ip route 10.10.64.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.14.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.15.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.16.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.16.32.0/19 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.18.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.21.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.22.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.23.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.23.32.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.23.64.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.23.96.0/19 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.24.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.24.32.0/19 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.24.64.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.25.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.25.32.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.26.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.26.32.0/19 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.27.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.28.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.29.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.31.0.0/21 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.31.30.0/24 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.32.0.0/21 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.33.0.0/21 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.34.0.0/21 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.35.1.0/24 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.35.56.0/21 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.35.63.0/24 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.36.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.36.32.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.38.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.39.32.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.40.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.41.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.42.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.42.32.0/19 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.42.64.0/21 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.43.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.44.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.46.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.46.32.0/19 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.47.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.48.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.49.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.51.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.52.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.52.32.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.52.64.0/19 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.53.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.54.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.54.32.0/19 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.55.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.56.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.56.32.0/19 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.56.64.0/18 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.58.64.0/18 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.59.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.59.32.0/19 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.59.94.0/23 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.60.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.61.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.61.32.0/19 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.62.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.63.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.65.32.0/19 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.66.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.66.32.0/19 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.70.0.0/21 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.71.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.72.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.73.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.75.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.76.254.128/25 Vlan513 10.67.162.8 name VTB-USERS tag 400 250
+  ip route 10.78.32.0/19 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.78.64.0/22 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.83.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.93.0.0/21 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.99.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.105.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.105.32.0/22 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.105.36.0/22 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.105.40.0/22 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.106.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.107.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.108.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.109.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.111.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.112.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.117.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.118.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.126.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.128.0.0/17 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.128.128.0/17 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.130.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.132.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.133.0.0/16 Vlan513 10.67.162.8 name VTB-USERS tag 400 250
+  ip route 10.134.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.136.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.144.133.0/24 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.144.134.0/24 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.145.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.148.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.150.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.151.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.152.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.164.0.0/17 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.164.128.0/17 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.165.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.166.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.168.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.172.0.0/16 Vlan513 10.67.162.8 name PREFIX-LAN-BM tag 400 250
+  ip route 10.173.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.174.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.175.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.176.0.0/17 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.177.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.178.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.190.0.0/18 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.190.64.0/19 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.190.255.0/27 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.191.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.192.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.192.1.0/24 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.192.192.0/27 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.193.0.0/22 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.193.4.0/23 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.193.6.0/24 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.200.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.200.32.0/23 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.200.39.0/24 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.201.0.0/17 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.202.96.0/19 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.202.128.0/19 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.203.0.0/19 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.208.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.210.64.0/24 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.210.254.0/24 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.211.64.0/24 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.235.0.0/16 Vlan513 10.67.162.8 name VTB-USERS tag 400 250
+  ip route 10.236.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.239.0.0/18 Vlan513 10.67.162.8 name VTB-USERS tag 400 250
+  ip route 10.239.64.0/20 Vlan513 10.67.162.8 name VTB-USERS_C-00008661 tag 400 250
+  ip route 10.240.0.0/15 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.246.0.0/15 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.248.0.0/15 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.250.0.0/16 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 10.251.0.0/16 Vlan513 10.67.162.8 name VTB-USERS tag 400 250
+  ip route 10.252.0.0/16 Vlan513 10.67.162.8 name VTB-USERS tag 400 250
+  ip route 10.253.0.0/16 Vlan513 10.67.162.8 name VTB-USERS tag 400 250
+  ip route 10.254.48.0/20 Vlan513 10.67.162.8 name VTB-USERS tag 400 250
+  ip route 10.254.96.0/22 Vlan513 10.67.162.8 name VTB-USERS tag 400 250
+  ip route 10.254.100.0/24 Vlan513 10.67.162.8 name VTB-USERS tag 400 250
+  ip route 10.254.101.0/24 Vlan513 10.67.162.8 name VTB-USERS tag 400 250
+  ip route 10.254.226.0/25 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 10.255.255.128/25 Vlan513 10.67.162.8 name PREFIX-INF-VTB tag 400 250
+  ip route 172.16.1.32/32 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  ip route 172.16.62.0/24 Vlan513 10.67.162.8 name PREFIX-INF-BM tag 400 250
+  rd 10.8.252.87:200
+  address-family ipv4 unicast
+    route-target import 10.8.252.87:200
+    route-target import 24823:200
+    route-target import 24823:9071
+    route-target import 24823:9991
+    route-target export 10.8.252.87:200
+    route-target export 24823:200
+    route-target export 24823:9072
+    route-target export 24823:9992
+vrf context VTB-BM
+  ip route 10.12.0.0/16 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 25
+  ip route 10.14.48.0/20 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 10.15.48.0/20 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 10.15.64.0/23 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 10.20.0.0/16 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 10.31.129.0/24 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 10.64.0.0/15 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 10.67.0.0/16 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 10.68.0.0/15 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 10.69.240.0/24 Vlan514 10.172.255.254 name PREFIX-ADMINS-24 tag 400 250
+  ip route 10.70.0.0/16 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 10.74.0.0/16 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 10.75.32.0/19 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 10.75.64.0/18 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 10.75.128.0/17 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 10.76.0.0/16 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 10.79.0.0/16 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 10.81.0.0/16 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 10.84.0.0/14 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 10.88.0.0/16 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 10.96.0.0/15 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 10.98.0.0/16 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 10.133.0.0/16 Vlan514 10.172.255.254 name VTB-USERS-VDI tag 400 250
+  ip route 10.203.32.0/19 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 10.203.64.0/19 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 10.235.0.0/16 Vlan514 10.172.255.254 name VTB-USERS tag 400 250
+  ip route 10.239.0.0/18 Vlan514 10.172.255.254 name VTB-USERS tag 400 250
+  ip route 10.239.64.0/20 Vlan514 10.172.255.254 name VTB-USERS_C-00008661 tag 400 250
+  ip route 10.251.0.0/16 Vlan514 10.172.255.254 name VTB-USERS tag 400 250
+  ip route 10.252.0.0/16 Vlan514 10.172.255.254 name VTB-USERS tag 400 250
+  ip route 10.253.0.0/16 Vlan514 10.172.255.254 name VTB-USERS tag 400 250
+  ip route 10.254.0.0/16 Vlan514 10.172.255.254 name VTB-USERS tag 400 250
+  ip route 10.254.0.0/20 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 10.254.16.0/20 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 10.254.32.0/20 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 10.254.224.0/24 Vlan514 10.172.255.254 name SUPPORT-INF tag 400 250
+  ip route 10.254.225.0/24 Vlan514 10.172.255.254 name SUPPORT-INF tag 400 250
+  ip route 10.254.227.0/24 Vlan514 10.172.255.254 name SUPPORT-INF tag 400 250
+  ip route 10.254.228.0/24 Vlan514 10.172.255.254 name SUPPORT-INF tag 400 250
+  ip route 172.18.0.0/15 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 172.20.0.0/15 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 25
+  ip route 172.23.0.0/16 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 172.24.0.0/14 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 192.168.32.0/24 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 192.168.37.0/24 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 192.168.46.0/23 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 192.168.57.0/24 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 192.168.58.0/24 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 192.168.60.0/24 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 192.168.62.0/24 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 192.168.74.0/24 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 192.168.76.0/24 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 192.168.78.0/23 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 192.168.93.0/24 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 217.14.50.0/24 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  ip route 217.14.51.0/24 Vlan514 10.172.255.254 name PREFIX-INF-24 tag 400 250
+  rd 10.8.252.87:2230
+  address-family ipv4 unicast
+    route-target import 10.8.252.87:2230
+    route-target import 24823:2230
+    route-target export 10.8.252.87:2230
+    route-target export 24823:2230
+vrf context VTB-PC
+  description VTB-CORE
+  ip route 10.10.0.0/18 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.12.0.0/16 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.14.48.0/20 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.15.48.0/20 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.15.64.0/23 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.20.0.0/16 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.31.129.0/24 Vlan512 10.132.252.88 name VTB24-MAIL tag 400 250
+  ip route 10.64.0.0/15 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.65.240.0/24 Vlan512 10.132.252.88 name PREFIX-ADMINS-24 tag 400 250
+  ip route 10.67.0.0/16 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.68.0.0/15 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.69.240.0/24 Vlan512 10.132.252.88 name PREFIX-ADMINS-24 tag 400 250
+  ip route 10.70.16.0/20 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.70.32.0/19 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.70.64.0/18 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.70.128.0/17 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.73.128.0/17 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.74.0.0/16 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.75.32.0/19 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.75.64.0/18 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.75.128.0/17 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.76.0.0/16 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.79.0.0/16 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.81.0.0/16 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.84.0.0/14 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.86.0.0/16 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.87.0.0/16 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.88.0.0/16 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.96.0.0/15 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.96.0.0/16 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.97.0.0/16 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.98.0.0/16 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.133.0.0/16 Vlan512 10.132.252.88 name VTB-USERS-VDI tag 400 250
+  ip route 10.135.0.0/16 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.191.200.0/24 Vlan512 10.132.252.88 name PREFIX-INF-24-RA tag 400 250
+  ip route 10.203.64.0/19 Vlan512 10.132.252.88 name VTB-DSO tag 400 250
+  ip route 10.235.0.0/16 Vlan512 10.132.252.88 name VTB-USERS tag 400 250
+  ip route 10.239.0.0/18 Vlan512 10.132.252.88 name VTB-USERS tag 400 250
+  ip route 10.239.64.0/20 Vlan512 10.132.252.88 name VTB-USERS_C-00008661 tag 400 250
+  ip route 10.251.0.0/16 Vlan512 10.132.252.88 name VTB-USERS tag 400 250
+  ip route 10.252.0.0/16 Vlan512 10.132.252.88 name VTB-USERS tag 400 250
+  ip route 10.253.0.0/16 Vlan512 10.132.252.88 name VTB-USERS tag 400 250
+  ip route 10.254.0.0/16 Vlan512 10.132.252.88 name VTB-USERS tag 400 250
+  ip route 10.254.0.0/20 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.254.16.0/20 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.254.32.0/20 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 10.254.224.0/24 Vlan512 10.132.252.88 name SUPPORT-INF tag 400 250
+  ip route 10.254.225.0/24 Vlan512 10.132.252.88 name SUPPORT-INF tag 400 250
+  ip route 10.254.227.0/24 Vlan512 10.132.252.88 name SUPPORT-INF tag 400 250
+  ip route 10.254.228.0/24 Vlan512 10.132.252.88 name SUPPORT-INF tag 400 250
+  ip route 172.18.0.0/15 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 172.20.0.0/15 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 172.22.0.0/15 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 172.23.0.0/16 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 172.24.0.0/14 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 172.28.0.0/16 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 172.30.0.0/16 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 192.168.32.0/24 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 192.168.37.0/24 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 192.168.46.0/23 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 192.168.57.0/24 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 192.168.58.0/24 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 192.168.60.0/24 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 192.168.62.0/24 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 192.168.74.0/24 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 192.168.76.0/24 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 192.168.78.0/23 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  ip route 192.168.93.0/24 Vlan512 10.132.252.88 name PREFIX-INF-24 tag 400 250
+  rd 10.8.252.87:2210
+  address-family ipv4 unicast
+    route-target import 10.8.252.87:2210
+    route-target import 24823:2210
+    route-target export 10.8.252.87:2210
+    route-target export 24823:2210
+vrf context VTB-USERS
+  ip route 0.0.0.0/0 Vlan515 10.255.128.120 name VTB-USERS-DEFAULT tag 400 250
+  rd 10.8.252.87:16000
+  address-family ipv4 unicast
+    route-target import 65535:16000
+    route-target export 65535:16000
+vrf context management
+vrf context vpc-keepalive
+vpc domain 2
+  peer-switch
+  role priority 1
+  peer-keepalive destination 192.168.1.1 source 192.168.1.2 vrf vpc-keepalive
+  delay restore 120
+  peer-gateway
+  ip arp synchronize
+port-profile type ethernet ETH-TRUNK-EDGEPORT
+  switchport
+  switchport mode trunk
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  state enabled
+port-profile type port-channel PC-TRUNK-EDGEPORT
+  switchport
+  switchport mode trunk
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  state enabled
+
+
+interface Vlan1
+  no ip redirects
+
+interface Vlan512
+  vrf member VTB-PC
+  no ip redirects
+  ip address 10.132.252.83/28
+  no ipv6 redirects
+  hsrp version 2
+  hsrp delay reload 120 
+  hsrp 0 
+    authentication md5 key-chain KEY-HSRP
+    preempt delay minimum 5 
+    priority 50
+    ip 10.132.252.81
+  description [L3] FW-CPEDGE-VTB 
+  no shutdown
+
+interface Vlan513
+  vrf member GLOBAL
+  no ip redirects
+  ip address 10.67.162.3/28
+  no ipv6 redirects
+  hsrp version 2
+  hsrp delay reload 120 
+  hsrp 0 
+    authentication md5 key-chain KEY-HSRP
+    preempt delay minimum 5 
+    priority 50
+    ip 10.67.162.1
+  description [L3] FW-CPEDGE-24
+  no shutdown
+
+interface Vlan514
+  vrf member VTB-BM
+  no ip redirects
+  ip address 10.172.255.251/29
+  no ipv6 redirects
+  hsrp version 2
+  hsrp delay reload 120 
+  hsrp 0 
+    authentication md5 key-chain KEY-HSRP
+    preempt delay minimum 5 
+    priority 50
+    ip 10.172.255.249
+  description [L3] FW-CPEDGE-BM
+  no shutdown
+
+interface Vlan515
+  vrf member VTB-USERS
+  no ip redirects
+  ip address 10.255.128.115/28
+  no ipv6 redirects
+  hsrp version 2
+  hsrp delay reload 120 
+  hsrp 0 
+    authentication md5 key-chain KEY-HSRP
+    preempt delay minimum 5 
+    priority 50
+    ip 10.255.128.113
+  description [L3] FW-CPEDGE-USERS
+  no shutdown
+
+interface port-channel1
+  description [L3] sw-v43-core-1
+  no switchport
+  mpls ip
+  mtu 9216
+  ip address 10.8.10.50/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+
+interface port-channel2
+  description [L3] sw-v43-core-2
+  no switchport
+  mpls ip
+  mtu 9216
+  ip address 10.8.10.58/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+
+interface port-channel5
+  description [TRUNK] inter-switch L3
+  no switchport
+  mtu 9216
+
+interface port-channel5.10
+  mpls ip
+  description [L3] sw-v43-edge-1
+  mtu 9216
+  encapsulation dot1q 10
+  ip address 10.8.10.62/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface port-channel5.20
+  description [L3] peer-keepalive
+  mtu 9216
+  encapsulation dot1q 20
+  vrf member vpc-keepalive
+  ip address 192.168.1.2/24
+  no shutdown
+
+interface port-channel63
+  inherit port-profile PC-TRUNK-EDGEPORT
+  description [TRUNK] fw-cpedge-v43-1
+  switchport trunk allowed vlan 512-515
+  vpc 63
+
+interface port-channel64
+  inherit port-profile PC-TRUNK-EDGEPORT
+  description [TRUNK] fw-cpedge-v43-2
+  switchport trunk allowed vlan 512-515
+  vpc 64
+
+interface port-channel4000
+  description [TRUNK] peer-link
+  switchport mode trunk
+  spanning-tree port type network
+  vpc peer-link
+
+interface Ethernet3/11
+  description [PC] sw-v43-core-1
+  no switchport
+  mtu 9216
+  channel-group 1 mode active
+  no shutdown
+
+interface Ethernet3/12
+  description [PC] sw-v43-core-2
+  no switchport
+  mtu 9216
+  channel-group 2 mode active
+  no shutdown
+
+interface Ethernet3/18
+  description [PC] inter-switch L3
+  no switchport
+  mtu 9216
+  channel-group 5 mode active
+  no shutdown
+
+interface Ethernet3/21
+  description [VPC] fw-cpedge-v43-1 eth1-13 (Sachkov_06072018)
+  switchport mode trunk
+  switchport trunk allowed vlan 512-515
+  channel-group 63 mode active
+  no shutdown
+
+interface Ethernet3/22
+  description [VPC] fw-cpedge-v43-1 eth1-14 (Sachkov_06072018)
+  switchport mode trunk
+  switchport trunk allowed vlan 512-515
+  channel-group 63 mode active
+  no shutdown
+
+interface Ethernet3/23
+  description [VPC] fw-cpedge-v43-1 eth1-15 (Sachkov_06072018)
+  switchport mode trunk
+  switchport trunk allowed vlan 512-515
+  channel-group 63 mode active
+  no shutdown
+
+interface Ethernet3/24
+  description [VPC] fw-cpedge-v43-1 eth1-16 (Sachkov_06072018)
+  switchport mode trunk
+  switchport trunk allowed vlan 512-515
+  channel-group 63 mode active
+  no shutdown
+
+interface Ethernet4/11
+  description [PC] sw-v43-core-1
+  no switchport
+  mtu 9216
+  channel-group 1 mode active
+  no shutdown
+
+interface Ethernet4/12
+  description [PC] sw-v43-core-2
+  no switchport
+  mtu 9216
+  channel-group 2 mode active
+  no shutdown
+
+interface Ethernet4/18
+  description [PC] inter-switch L3
+  no switchport
+  mtu 9216
+  channel-group 5 mode active
+  no shutdown
+
+interface Ethernet4/21
+  description [VPC] fw-cpedge-v43-2 eth1-13 (Sachkov 06072018)
+  switchport mode trunk
+  switchport trunk allowed vlan 512-515
+  channel-group 64 mode active
+  no shutdown
+
+interface Ethernet4/22
+  description [VPC] fw-cpedge-v43-2 eth1-14 (Sachkov_06072018)
+  switchport mode trunk
+  switchport trunk allowed vlan 512-515
+  channel-group 64 mode active
+  no shutdown
+
+interface Ethernet4/23
+  description [VPC] fw-cpedge-v43-2 eth1-15 (Sachkov_06072018)
+  switchport mode trunk
+  switchport trunk allowed vlan 512-515
+  channel-group 64 mode active
+  no shutdown
+
+interface Ethernet4/24
+  description [VPC] fw-cpedge-v43-2 eth1-16 (Sachkov_06072018)
+  switchport mode trunk
+  switchport trunk allowed vlan 512-515
+  channel-group 64 mode active
+  no shutdown
+
+interface Ethernet5/41
+
+interface Ethernet5/42
+
+interface Ethernet5/43
+  description [PC] peer-link
+  switchport mode trunk
+  channel-group 4000 mode active
+  no shutdown
+
+interface Ethernet5/44
+  description [PC] peer-link
+  switchport mode trunk
+  channel-group 4000 mode active
+  no shutdown
+
+interface Ethernet6/41
+
+interface Ethernet6/42
+
+interface Ethernet6/43
+  description [PC] peer-link
+  switchport mode trunk
+  channel-group 4000 mode active
+  no shutdown
+
+interface Ethernet6/44
+  description [PC] peer-link
+  switchport mode trunk
+  channel-group 4000 mode active
+  no shutdown
+
+interface loopback0
+  description [L3] router-id
+  ip address 10.8.252.87/32
+  ip router ospf 1 area 0.0.0.0
+logging logfile device.log 7 size 1000000
+logging server 10.64.0.93
+logging source-interface loopback 0
+logging timestamp milliseconds
+logging monitor 7
+cli alias name wr copy running-config startup-config
+line vty
+mpls ldp configuration
+  router-id Lo0 force
+router ospf 1
+  router-id 10.8.252.87
+  log-adjacency-changes
+  timers throttle spf 10 100 5000
+  timers lsa-arrival 80
+  timers throttle lsa 10 100 5000
+  passive-interface default
+router bgp 24823
+  router-id 10.8.252.87
+  timers bgp 10 30
+  bestpath med missing-as-worst
+  log-neighbor-changes
+  address-family ipv4 unicast
+  address-family vpnv4 unicast
+  template peer RR
+    remote-as 24823
+    password 7 xxxxxxxx
+    update-source loopback0
+    address-family vpnv4 unicast
+      send-community both
+  neighbor 10.8.252.23
+    inherit peer RR
+    no shutdown
+    address-family vpnv4 unicast
+    no address-family vpnv6 unicast
+  neighbor 10.8.252.24
+    inherit peer RR
+    no shutdown
+    address-family vpnv4 unicast
+    no address-family vpnv6 unicast
+  vrf GLOBAL
+    address-family ipv4 unicast
+      redistribute direct route-map map-match-any
+      redistribute static route-map map-static-to-bgp
+      maximum-paths eibgp 8
+  vrf VTB-BM
+    address-family ipv4 unicast
+      redistribute direct route-map map-match-any
+      redistribute static route-map map-static-to-bgp
+      maximum-paths eibgp 8
+  vrf VTB-PC
+    address-family ipv4 unicast
+      redistribute direct route-map map-match-any
+      redistribute static route-map map-static-to-bgp
+      maximum-paths eibgp 8
+  vrf VTB-USERS
+    address-family ipv4 unicast
+      redistribute direct route-map map-match-any
+      redistribute static route-map map-static-to-bgp
+      maximum-paths eibgp 8
+      default-information originate
+
+

@@ -1,0 +1,26 @@
+
+Capability Codes: R - Router, T - Trans-Bridge, B - Source-Route-Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater,
+                  V - VoIP-Phone, D - Remotely-Managed-Device,
+                  s - Supports-STP-Dispute
+
+
+Device-ID             Local Intrfce Hldtme Capability  Platform         Port ID
+pN5k11-1(FOC2127R1M6)
+                    Eth1/10        133    R S s     N5K-C5648Q         Eth1/10       
+pN77-1-switch1(JPG203100LV)
+                    Eth1/11        172    R S I s   N77-C7710          Eth1/4        
+pN5k11-1(FOC2127R1M6)
+                    Eth1/12        133    R S I s   N5K-C5648Q         Eth1/12       
+pN5k11-1(FOC2127R1M6)
+                    Eth2/10        133    R S s     N5K-C5648Q         Eth2/10       
+pN77-2-switch2(JPG203100NQ)
+                    Eth2/11        156    R S I s   N77-C7710          Eth1/4        
+pN5k11-1(FOC2127R1M6)
+                    Eth2/12        133    R S I s   N5K-C5648Q         Eth2/12       
+pN77-1-switch1(JPG203100LV)
+                    Eth3/11        128    R S I s   N77-C7710          Eth3/2        
+pN77-2-switch2(JPG203100NQ)
+                    Eth4/11        128    R S I s   N77-C7710          Eth3/2        
+ats-msk-cucm0-01.pbx.vtb.ru
+                    Eth124/1/6     166    H         VMware             eth0          

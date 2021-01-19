@@ -1,0 +1,1291 @@
+
+Ethernet2/9 is up
+admin state is up, Dedicated Interface
+  Belongs to Po10
+  Hardware: 1000/10000 Ethernet, address: e4c7.221a.46bc (bia e4c7.221a.46bc)
+  Description: [PC] data-2
+  MTU 9216 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 2/255, rxload 6/255
+  Encapsulation ARPA, medium is p2p
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Auto-Negotiation is turned on
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned on
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+  Last link flapped 2week(s) 6day(s)
+  Last clearing of "show interface" counters 2w6d
+  0 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 266679360 bits/sec, 51092 packets/sec
+    30 seconds output rate 93894544 bits/sec, 20457 packets/sec
+    input rate 266.68 Mbps, 51.09 Kpps; output rate 93.89 Mbps, 20.46 Kpps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 353156936 bits/sec, 56549 packets/sec
+    300 seconds output rate 116533544 bits/sec, 24000 packets/sec
+    input rate 353.16 Mbps, 56.55 Kpps; output rate 116.53 Mbps, 24.00 Kpps
+  RX
+    229972492721 unicast packets  11924592 multicast packets  23713173 broadcast packets
+    230008100449 input packets  224565991553912 bytes
+    405107388 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  489421 input discard
+    0 Rx pause
+  TX
+    116900367015 unicast packets  16407667 multicast packets  5330588 broadcast packets
+    116922075236 output packets  75160197036377 bytes
+    117320229 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet2/10 is up
+admin state is up, Dedicated Interface
+  Belongs to Po10
+  Hardware: 1000/10000 Ethernet, address: e4c7.221a.46bd (bia e4c7.221a.46bd)
+  Description: [PC] data-2
+  MTU 9216 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 8/255, rxload 6/255
+  Encapsulation ARPA, medium is p2p
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Auto-Negotiation is turned on
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned on
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+  Last link flapped 2week(s) 6day(s)
+  Last clearing of "show interface" counters 2w6d
+  0 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 242588008 bits/sec, 54615 packets/sec
+    30 seconds output rate 327124496 bits/sec, 46361 packets/sec
+    input rate 242.59 Mbps, 54.62 Kpps; output rate 327.12 Mbps, 46.36 Kpps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 363758800 bits/sec, 59072 packets/sec
+    300 seconds output rate 330545680 bits/sec, 46959 packets/sec
+    input rate 363.76 Mbps, 59.07 Kpps; output rate 330.55 Mbps, 46.96 Kpps
+  RX
+    227120472237 unicast packets  13789551 multicast packets  20855315 broadcast packets
+    227155087066 input packets  219810047850886 bytes
+    25593 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  536735 input discard
+    0 Rx pause
+  TX
+    117517497716 unicast packets  14018603 multicast packets  28676759 broadcast packets
+    117560163040 output packets  80278985098324 bytes
+    25582 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet2/11 is down (Administratively down)
+admin state is down, Dedicated Interface
+  Hardware: 1000/10000 Ethernet, address: e4c7.221a.46be (bia e4c7.221a.46be)
+  Description: [RESERVED] For OTV VDC (RF-001416188) $notm
+  MTU 1500 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is p2p
+  Port mode is access
+  auto-duplex, auto-speed, media type is 10G
+  Beacon is turned off
+  Auto-Negotiation is turned on
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned on
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+  Last link flapped never
+  Last clearing of "show interface" counters 2w6d
+  0 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 0 bits/sec, 0 packets/sec
+    30 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 0 bits/sec, 0 packets/sec
+    300 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    38084 unicast packets  0 multicast packets  0 broadcast packets
+    8016 input packets  5004480 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    38084 unicast packets  0 multicast packets  0 broadcast packets
+    8016 output packets  5001984 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet2/12 is up
+admin state is up, Dedicated Interface
+  Hardware: 1000/10000 Ethernet, address: e4c7.221a.46bf (bia e4c7.221a.46bf)
+  Description: Gigamon-HC1-3 x7 (BUM traffic monitor port) RF-001416188
+  MTU 9216 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is p2p
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Auto-Negotiation is turned on
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned on
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+  Last link flapped 2week(s) 6day(s)
+  Last clearing of "show interface" counters 2w6d
+  1 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 0 bits/sec, 0 packets/sec
+    30 seconds output rate 806816 bits/sec, 1336 packets/sec
+    input rate 0 bps, 0 pps; output rate 806.82 Kbps, 1.34 Kpps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 0 bits/sec, 0 packets/sec
+    300 seconds output rate 800536 bits/sec, 1274 packets/sec
+    input rate 0 bps, 0 pps; output rate 800.54 Kbps, 1.27 Kpps
+  RX
+    30068 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  2496 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    192007638 unicast packets  279440538 multicast packets  1922716254 broadcast packets
+    2394134360 output packets  186975202893 bytes
+    206953 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet2/29 is up
+admin state is up, Dedicated Interface
+  Belongs to Po10
+  Hardware: 1000/10000 Ethernet, address: e4c7.221a.46d0 (bia e4c7.221a.46d0)
+  Description: [PC] data-1
+  MTU 9216 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 19/255, rxload 2/255
+  Encapsulation ARPA, medium is p2p
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Auto-Negotiation is turned on
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned on
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+  Last link flapped 2week(s) 6day(s)
+  Last clearing of "show interface" counters 2w6d
+  0 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 79357352 bits/sec, 16433 packets/sec
+    30 seconds output rate 762460496 bits/sec, 81277 packets/sec
+    input rate 79.36 Mbps, 16.43 Kpps; output rate 762.46 Mbps, 81.28 Kpps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 73624432 bits/sec, 16592 packets/sec
+    300 seconds output rate 673919360 bits/sec, 74392 packets/sec
+    input rate 73.62 Mbps, 16.59 Kpps; output rate 673.92 Mbps, 74.39 Kpps
+  RX
+    48607722268 unicast packets  87111678 multicast packets  169945430 broadcast packets
+    48864749340 input packets  41799241415344 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  121763 input discard
+    0 Rx pause
+  TX
+    109724937357 unicast packets  14214823 multicast packets  32227777 broadcast packets
+    109771349891 output packets  67187573321935 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet2/30 is up
+admin state is up, Dedicated Interface
+  Belongs to Po10
+  Hardware: 1000/10000 Ethernet, address: e4c7.221a.46d1 (bia e4c7.221a.46d1)
+  Description: [PC] data-1
+  MTU 9216 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 8/255, rxload 1/255
+  Encapsulation ARPA, medium is p2p
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Auto-Negotiation is turned on
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned on
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+  Last link flapped 2week(s) 6day(s)
+  Last clearing of "show interface" counters 2w6d
+  0 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 46029880 bits/sec, 8984 packets/sec
+    30 seconds output rate 320839440 bits/sec, 45963 packets/sec
+    input rate 46.03 Mbps, 8.98 Kpps; output rate 320.84 Mbps, 45.96 Kpps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 51866280 bits/sec, 9719 packets/sec
+    300 seconds output rate 283945320 bits/sec, 42573 packets/sec
+    input rate 51.87 Mbps, 9.72 Kpps; output rate 283.95 Mbps, 42.57 Kpps
+  RX
+    47878147100 unicast packets  9317886 multicast packets  243812552 broadcast packets
+    48131247530 input packets  41790951658104 bytes
+    25639 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  117045 input discard
+    0 Rx pause
+  TX
+    109860833606 unicast packets  12799601 multicast packets  8342311 broadcast packets
+    109881945481 output packets  72313454633535 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet2/31 is down (SFP not inserted)
+admin state is down, Dedicated Interface
+  Hardware: 1000/10000 Ethernet, address: e4c7.221a.46d2 (bia e4c7.221a.46d2)
+  MTU 1500 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is p2p
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned on
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+  Last link flapped never
+  Last clearing of "show interface" counters 2w6d
+  0 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 0 bits/sec, 0 packets/sec
+    30 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 0 bits/sec, 0 packets/sec
+    300 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    38084 unicast packets  0 multicast packets  0 broadcast packets
+    8016 input packets  5004480 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    38084 unicast packets  0 multicast packets  0 broadcast packets
+    8016 output packets  5001984 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet2/32 is down (SFP not inserted)
+admin state is down, Dedicated Interface
+  Hardware: 1000/10000 Ethernet, address: e4c7.221a.46d3 (bia e4c7.221a.46d3)
+  MTU 1500 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is p2p
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned on
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+  Last link flapped never
+  Last clearing of "show interface" counters 2w6d
+  0 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 0 bits/sec, 0 packets/sec
+    30 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 0 bits/sec, 0 packets/sec
+    300 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    38084 unicast packets  0 multicast packets  0 broadcast packets
+    8016 input packets  5004480 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    38084 unicast packets  0 multicast packets  0 broadcast packets
+    8016 output packets  5001984 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet3/9 is up
+admin state is up, Dedicated Interface
+  Belongs to Po40
+  Hardware: 10000 Ethernet, address: d867.d96f.05c2 (bia e4c7.2201.9130)
+  Description: [PC][JOIN] data-1
+  MTU 9216 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 18/255, rxload 18/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is routed
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Auto-Negotiation is turned off
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+  Last link flapped 2week(s) 6day(s)
+  Last clearing of "show interface" counters 2w6d
+  1 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 709469472 bits/sec, 102765 packets/sec
+    30 seconds output rate 729736464 bits/sec, 91105 packets/sec
+    input rate 709.47 Mbps, 102.76 Kpps; output rate 729.74 Mbps, 91.11 Kpps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 561169440 bits/sec, 83881 packets/sec
+    300 seconds output rate 920658136 bits/sec, 103696 packets/sec
+    input rate 561.17 Mbps, 83.88 Kpps; output rate 920.66 Mbps, 103.70 Kpps
+  L3 in Switched:
+    ucast: 0 pkts, 0 bytes - mcast: 0 pkts, 0 bytes
+  L3 out Switched:
+    ucast: 0 pkts, 0 bytes - mcast: 0 pkts, 0 bytes
+  RX
+    315592418792 unicast packets  270337 multicast packets  2 broadcast packets
+    315589539985 input packets  215573838613201 bytes
+    94306135352 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    380417451455 unicast packets  210194 multicast packets  9 broadcast packets
+    380411839277 output packets  396160753509499 bytes
+    214331903627 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet3/10 is up
+admin state is up, Dedicated Interface
+  Belongs to Po40
+  Hardware: 10000 Ethernet, address: d867.d96f.05c2 (bia e4c7.2201.9131)
+  Description: [PC][JOIN] data-1
+  MTU 9216 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is routed
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Auto-Negotiation is turned off
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+  Last link flapped 2week(s) 6day(s)
+  Last clearing of "show interface" counters 2w6d
+  1 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 2560 bits/sec, 0 packets/sec
+    30 seconds output rate 168 bits/sec, 0 packets/sec
+    input rate 2.56 Kbps, 0 pps; output rate 168 bps, 0 pps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 2376 bits/sec, 0 packets/sec
+    300 seconds output rate 152 bits/sec, 0 packets/sec
+    input rate 2.38 Kbps, 0 pps; output rate 152 bps, 0 pps
+  L3 in Switched:
+    ucast: 0 pkts, 0 bytes - mcast: 0 pkts, 0 bytes
+  L3 out Switched:
+    ucast: 0 pkts, 0 bytes - mcast: 0 pkts, 0 bytes
+  RX
+    510017 unicast packets  270358 multicast packets  0 broadcast packets
+    780290 input packets  640034586 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  210195 multicast packets  0 broadcast packets
+    210159 output packets  34559408 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet3/12 is up
+admin state is up, Dedicated Interface
+  Belongs to Po40
+  Hardware: 10000 Ethernet, address: d867.d96f.05c2 (bia e4c7.2201.9133)
+  Description: [PC][JOIN] data-1
+  MTU 9216 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is routed
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Auto-Negotiation is turned off
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+  Last link flapped 2week(s) 0day(s)
+  Last clearing of "show interface" counters 2w0d
+  1 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 1248 bits/sec, 0 packets/sec
+    30 seconds output rate 208 bits/sec, 0 packets/sec
+    input rate 1.25 Kbps, 0 pps; output rate 208 bps, 0 pps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 1624 bits/sec, 0 packets/sec
+    300 seconds output rate 152 bits/sec, 0 packets/sec
+    input rate 1.62 Kbps, 0 pps; output rate 152 bps, 0 pps
+  L3 in Switched:
+    ucast: 0 pkts, 0 bytes - mcast: 0 pkts, 0 bytes
+  L3 out Switched:
+    ucast: 0 pkts, 0 bytes - mcast: 0 pkts, 0 bytes
+  RX
+    249775 unicast packets  182139 multicast packets  0 broadcast packets
+    431910 input packets  325155104 bytes
+    905 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    1380 unicast packets  141599 multicast packets  0 broadcast packets
+    142976 output packets  23996825 bytes
+    228 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet3/13 is up
+admin state is up, Dedicated Interface
+  Belongs to Po40
+  Hardware: 10000 Ethernet, address: d867.d96f.05c2 (bia e4c7.2201.9134)
+  Description: [PC][JOIN] data-1
+  MTU 9216 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is routed
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Auto-Negotiation is turned off
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+  Last link flapped 2week(s) 0day(s)
+  Last clearing of "show interface" counters 2w0d
+  1 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 47064 bits/sec, 47 packets/sec
+    30 seconds output rate 116960 bits/sec, 125 packets/sec
+    input rate 47.06 Kbps, 47 pps; output rate 116.96 Kbps, 125 pps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 42688 bits/sec, 20 packets/sec
+    300 seconds output rate 119208 bits/sec, 81 packets/sec
+    input rate 42.69 Kbps, 20 pps; output rate 119.21 Kbps, 81 pps
+  L3 in Switched:
+    ucast: 0 pkts, 0 bytes - mcast: 0 pkts, 0 bytes
+  L3 out Switched:
+    ucast: 0 pkts, 0 bytes - mcast: 0 pkts, 0 bytes
+  RX
+    66380996 unicast packets  182140 multicast packets  0 broadcast packets
+    66562942 input packets  7309440096 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    165885212 unicast packets  141600 multicast packets  0 broadcast packets
+    166026024 output packets  17989191429 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet4/9 is up
+admin state is up, Dedicated Interface
+  Belongs to Po40
+  Hardware: 10000 Ethernet, address: d867.d96f.05c2 (bia 8478.ac0a.c224)
+  Description: [PC][JOIN] data-1
+  MTU 9216 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 13/255, rxload 19/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is routed
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Auto-Negotiation is turned off
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+  Last link flapped 2week(s) 6day(s)
+  Last clearing of "show interface" counters 2w6d
+  1 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 779090872 bits/sec, 93306 packets/sec
+    30 seconds output rate 542279288 bits/sec, 80187 packets/sec
+    input rate 779.09 Mbps, 93.31 Kpps; output rate 542.28 Mbps, 80.19 Kpps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 723188112 bits/sec, 90537 packets/sec
+    300 seconds output rate 838730688 bits/sec, 103326 packets/sec
+    input rate 723.19 Mbps, 90.54 Kpps; output rate 838.73 Mbps, 103.33 Kpps
+  L3 in Switched:
+    ucast: 0 pkts, 0 bytes - mcast: 0 pkts, 0 bytes
+  L3 out Switched:
+    ucast: 0 pkts, 0 bytes - mcast: 0 pkts, 0 bytes
+  RX
+    181639882268 unicast packets  270347 multicast packets  3 broadcast packets
+    181638731959 input packets  122560969196971 bytes
+    51329015952 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    293451772142 unicast packets  210195 multicast packets  0 broadcast packets
+    293448891046 output packets  277306806388706 bytes
+    142649579057 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet4/10 is up
+admin state is up, Dedicated Interface
+  Belongs to Po40
+  Hardware: 10000 Ethernet, address: d867.d96f.05c2 (bia 8478.ac0a.c225)
+  Description: [PC][JOIN] data-1
+  MTU 9216 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 12/255, rxload 15/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is routed
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Auto-Negotiation is turned off
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+  Last link flapped 2week(s) 6day(s)
+  Last clearing of "show interface" counters 2w6d
+  1 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 589021384 bits/sec, 87285 packets/sec
+    30 seconds output rate 509399744 bits/sec, 92775 packets/sec
+    input rate 589.02 Mbps, 87.29 Kpps; output rate 509.40 Mbps, 92.78 Kpps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 548222888 bits/sec, 86144 packets/sec
+    300 seconds output rate 608184360 bits/sec, 95196 packets/sec
+    input rate 548.22 Mbps, 86.14 Kpps; output rate 608.18 Mbps, 95.20 Kpps
+  L3 in Switched:
+    ucast: 0 pkts, 0 bytes - mcast: 0 pkts, 0 bytes
+  L3 out Switched:
+    ucast: 0 pkts, 0 bytes - mcast: 0 pkts, 0 bytes
+  RX
+    260597766137 unicast packets  270346 multicast packets  0 broadcast packets
+    260596091903 input packets  191302273649513 bytes
+    72637129738 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    293826382464 unicast packets  210194 multicast packets  0 broadcast packets
+    293823644987 output packets  284913608539475 bytes
+    148457980163 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet4/12 is up
+admin state is up, Dedicated Interface
+  Belongs to Po40
+  Hardware: 10000 Ethernet, address: d867.d96f.05c2 (bia 8478.ac0a.c227)
+  Description: [PC][JOIN] data-1
+  MTU 9216 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 7/255, rxload 8/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is routed
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Auto-Negotiation is turned off
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+  Last link flapped 2week(s) 0day(s)
+  Last clearing of "show interface" counters 2w0d
+  1 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 342350696 bits/sec, 53942 packets/sec
+    30 seconds output rate 312095160 bits/sec, 62955 packets/sec
+    input rate 342.35 Mbps, 53.94 Kpps; output rate 312.10 Mbps, 62.96 Kpps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 338292976 bits/sec, 54464 packets/sec
+    300 seconds output rate 422106640 bits/sec, 71607 packets/sec
+    input rate 338.29 Mbps, 54.46 Kpps; output rate 422.11 Mbps, 71.61 Kpps
+  L3 in Switched:
+    ucast: 0 pkts, 0 bytes - mcast: 0 pkts, 0 bytes
+  L3 out Switched:
+    ucast: 0 pkts, 0 bytes - mcast: 0 pkts, 0 bytes
+  RX
+    131219932123 unicast packets  182133 multicast packets  0 broadcast packets
+    131219747741 input packets  97602969531489 bytes
+    48885053959 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    173332842527 unicast packets  141596 multicast packets  0 broadcast packets
+    173332468058 output packets  168707355986860 bytes
+    88229106298 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet4/13 is up
+admin state is up, Dedicated Interface
+  Belongs to Po40
+  Hardware: 10000 Ethernet, address: d867.d96f.05c2 (bia 8478.ac0a.c228)
+  Description: [PC][JOIN] data-1
+  MTU 9216 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is routed
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Auto-Negotiation is turned off
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+  Last link flapped 2week(s) 0day(s)
+  Last clearing of "show interface" counters 2w0d
+  1 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 2632 bits/sec, 0 packets/sec
+    30 seconds output rate 136 bits/sec, 0 packets/sec
+    input rate 2.63 Kbps, 0 pps; output rate 136 bps, 0 pps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 1624 bits/sec, 0 packets/sec
+    300 seconds output rate 72 bits/sec, 0 packets/sec
+    input rate 1.62 Kbps, 0 pps; output rate 72 bps, 0 pps
+  L3 in Switched:
+    ucast: 0 pkts, 0 bytes - mcast: 0 pkts, 0 bytes
+  L3 out Switched:
+    ucast: 0 pkts, 0 bytes - mcast: 0 pkts, 0 bytes
+  RX
+    248688 unicast packets  274479 multicast packets  0 broadcast packets
+    523157 input packets  332985953 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    4 unicast packets  60788 multicast packets  0 broadcast packets
+    60788 output packets  10923458 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet7/45 is down (Administratively down)
+admin state is down, Dedicated Interface
+  Belongs to Po10
+  Hardware: 1000/10000 Ethernet, address: 9c57.ad2b.d218 (bia 9c57.ad2b.d218)
+  Description: [PC] data-1
+  MTU 9216 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is p2p
+  Port mode is trunk
+  auto-duplex, auto-speed, media type is 10G
+  Beacon is turned off
+  Auto-Negotiation is turned on
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned on
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+  Last link flapped never
+  Last clearing of "show interface" counters 2w6d
+  0 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 0 bits/sec, 0 packets/sec
+    30 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 0 bits/sec, 0 packets/sec
+    300 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    38044 unicast packets  0 multicast packets  0 broadcast packets
+    8008 input packets  4996992 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    38044 unicast packets  0 multicast packets  0 broadcast packets
+    8008 output packets  4996992 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet7/46 is down (Administratively down)
+admin state is down, Dedicated Interface
+  Belongs to Po10
+  Hardware: 1000/10000 Ethernet, address: 9c57.ad2b.d219 (bia 9c57.ad2b.d219)
+  Description: [PC] data-1
+  MTU 9216 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is p2p
+  Port mode is trunk
+  auto-duplex, auto-speed, media type is 10G
+  Beacon is turned off
+  Auto-Negotiation is turned on
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned on
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+  Last link flapped never
+  Last clearing of "show interface" counters 2w6d
+  0 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 0 bits/sec, 0 packets/sec
+    30 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 0 bits/sec, 0 packets/sec
+    300 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    38044 unicast packets  0 multicast packets  0 broadcast packets
+    8008 input packets  4994496 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    38044 unicast packets  0 multicast packets  0 broadcast packets
+    8008 output packets  4996992 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet7/47 is up
+admin state is up, Dedicated Interface
+  Belongs to Po10
+  Hardware: 1000/10000 Ethernet, address: 9c57.ad2b.d21a (bia 9c57.ad2b.d21a)
+  Description: [PC] data-1
+  MTU 9216 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 4/255, rxload 3/255
+  Encapsulation ARPA, medium is p2p
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Auto-Negotiation is turned on
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned on
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+  Last link flapped 2week(s) 6day(s)
+  Last clearing of "show interface" counters 2w6d
+  0 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 152731008 bits/sec, 21659 packets/sec
+    30 seconds output rate 163459288 bits/sec, 38739 packets/sec
+    input rate 152.73 Mbps, 21.66 Kpps; output rate 163.46 Mbps, 38.74 Kpps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 126732120 bits/sec, 19940 packets/sec
+    300 seconds output rate 136924320 bits/sec, 31840 packets/sec
+    input rate 126.73 Mbps, 19.94 Kpps; output rate 136.92 Mbps, 31.84 Kpps
+  RX
+    56724165477 unicast packets  8765436 multicast packets  222783961 broadcast packets
+    56955684838 input packets  45147194764679 bytes
+    10734533 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  114774 input discard
+    0 Rx pause
+  TX
+    105615837638 unicast packets  17496390 multicast packets  162844854 broadcast packets
+    105796148845 output packets  64461463720309 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet7/48 is up
+admin state is up, Dedicated Interface
+  Belongs to Po10
+  Hardware: 1000/10000 Ethernet, address: 9c57.ad2b.d21b (bia 9c57.ad2b.d21b)
+  Description: [PC] data-1
+  MTU 9216 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 3/255
+  Encapsulation ARPA, medium is p2p
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Auto-Negotiation is turned on
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned on
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+  Last link flapped 2week(s) 6day(s)
+  Last clearing of "show interface" counters 2w6d
+  0 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 150343448 bits/sec, 20274 packets/sec
+    30 seconds output rate 76694128 bits/sec, 21258 packets/sec
+    input rate 150.34 Mbps, 20.27 Kpps; output rate 76.69 Mbps, 21.26 Kpps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 173594536 bits/sec, 23213 packets/sec
+    300 seconds output rate 96860920 bits/sec, 23471 packets/sec
+    input rate 173.59 Mbps, 23.21 Kpps; output rate 96.86 Mbps, 23.47 Kpps
+  RX
+    60954927005 unicast packets  8843529 multicast packets  146367277 broadcast packets
+    61110107775 input packets  50056959871483 bytes
+    25443 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  124045 input discard
+    0 Rx pause
+  TX
+    103986788968 unicast packets  14084239 multicast packets  9828610 broadcast packets
+    104010671789 output packets  63420044777657 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet8/45 is down (Administratively down)
+admin state is down, Dedicated Interface
+  Belongs to Po10
+  Hardware: 1000/10000 Ethernet, address: 5006.ab90.1dd8 (bia 5006.ab90.1dd8)
+  Description: [PC] data-2
+  MTU 9216 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is p2p
+  Port mode is trunk
+  auto-duplex, auto-speed, media type is 10G
+  Beacon is turned off
+  Auto-Negotiation is turned on
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned on
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+  Last link flapped never
+  Last clearing of "show interface" counters 2w6d
+  0 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 0 bits/sec, 0 packets/sec
+    30 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 0 bits/sec, 0 packets/sec
+    300 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    38044 unicast packets  0 multicast packets  0 broadcast packets
+    8008 input packets  4996992 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    38044 unicast packets  0 multicast packets  0 broadcast packets
+    8008 output packets  4996992 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet8/46 is down (Administratively down)
+admin state is down, Dedicated Interface
+  Belongs to Po10
+  Hardware: 1000/10000 Ethernet, address: 5006.ab90.1dd9 (bia 5006.ab90.1dd9)
+  Description: [PC] data-2
+  MTU 9216 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is p2p
+  Port mode is trunk
+  auto-duplex, auto-speed, media type is 10G
+  Beacon is turned off
+  Auto-Negotiation is turned on
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned on
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+  Last link flapped never
+  Last clearing of "show interface" counters 2w6d
+  0 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 0 bits/sec, 0 packets/sec
+    30 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 0 bits/sec, 0 packets/sec
+    300 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    38044 unicast packets  0 multicast packets  0 broadcast packets
+    8008 input packets  4996992 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    38044 unicast packets  0 multicast packets  0 broadcast packets
+    8008 output packets  4996992 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet8/47 is up
+admin state is up, Dedicated Interface
+  Belongs to Po10
+  Hardware: 1000/10000 Ethernet, address: 5006.ab90.1dda (bia 5006.ab90.1dda)
+  Description: [PC] data-2
+  MTU 9216 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 6/255, rxload 11/255
+  Encapsulation ARPA, medium is p2p
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Auto-Negotiation is turned on
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned on
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+  Last link flapped 2week(s) 6day(s)
+  Last clearing of "show interface" counters 2w6d
+  0 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 447656808 bits/sec, 67629 packets/sec
+    30 seconds output rate 261499392 bits/sec, 37489 packets/sec
+    input rate 447.66 Mbps, 67.63 Kpps; output rate 261.50 Mbps, 37.49 Kpps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 612008208 bits/sec, 82372 packets/sec
+    300 seconds output rate 279675920 bits/sec, 39920 packets/sec
+    input rate 612.01 Mbps, 82.37 Kpps; output rate 279.67 Mbps, 39.92 Kpps
+  RX
+    247487268668 unicast packets  89003946 multicast packets  24845702 broadcast packets
+    247601088284 input packets  248983664503395 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  632109 input discard
+    0 Rx pause
+  TX
+    120819444705 unicast packets  13279316 multicast packets  8391918 broadcast packets
+    120841085951 output packets  108311903180027 bytes
+    3057435127 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet8/48 is up
+admin state is up, Dedicated Interface
+  Belongs to Po10
+  Hardware: 1000/10000 Ethernet, address: 5006.ab90.1ddb (bia 5006.ab90.1ddb)
+  Description: [PC] data-2
+  MTU 9216 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 7/255, rxload 15/255
+  Encapsulation ARPA, medium is p2p
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Auto-Negotiation is turned on
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned on
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+  Last link flapped 2week(s) 6day(s)
+  Last clearing of "show interface" counters 2w6d
+  0 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 624100832 bits/sec, 88586 packets/sec
+    30 seconds output rate 275650520 bits/sec, 41596 packets/sec
+    input rate 624.10 Mbps, 88.59 Kpps; output rate 275.65 Mbps, 41.60 Kpps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 898191952 bits/sec, 107527 packets/sec
+    300 seconds output rate 173491432 bits/sec, 32942 packets/sec
+    input rate 898.19 Mbps, 107.53 Kpps; output rate 173.49 Mbps, 32.94 Kpps
+  RX
+    220806147690 unicast packets  13541084 multicast packets  18740483 broadcast packets
+    220838399222 input packets  209787902950385 bytes
+    372 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  511500 input discard
+    0 Rx pause
+  TX
+    103103006785 unicast packets  11907661 multicast packets  7291186 broadcast packets
+    103122175595 output packets  61681959369791 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+port-channel10 is up
+admin state is up
+  Hardware: Port-Channel, address: e4c7.221a.46bc (bia e4c7.221a.46bc)
+  Description: [TRUNK] data-1/2
+  MTU 9216 bytes, BW 80000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 7/255, rxload 6/255
+  Encapsulation ARPA, medium is p2p
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth2/9, Eth2/10, Eth2/29, Eth2/30, Eth7/45, Eth7/46, Eth7/47, Eth7/48, Eth8/45, Eth8/46, Eth8/47, Eth8/48
+  Last clearing of "show interface" counters 2w6d
+  0 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 2046313648 bits/sec, 332269 packets/sec
+    30 seconds output rate 2275620192 bits/sec, 333642 packets/sec
+    input rate 2.05 Gbps, 332.27 Kpps; output rate 2.28 Gbps, 333.64 Kpps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 2649468232 bits/sec, 375016 packets/sec
+    300 seconds output rate 2080955008 bits/sec, 315444 packets/sec
+    input rate 2.65 Gbps, 375.02 Kpps; output rate 2.08 Gbps, 315.44 Kpps
+  RX
+    1139551667343 unicast packets  242298011 multicast packets  871064189 broadcast packets
+    1140664669072 input packets  1081942108175241 bytes
+    415918972 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  2647392 input discard
+    0 Rx pause
+  TX
+    887529054997 unicast packets  114208341 multicast packets  262934070 broadcast packets
+    887905837055 output packets  592815748116561 bytes
+    3174780938 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+port-channel40 is up
+admin state is up
+  Hardware: Port-Channel, address: d867.d96f.05c2 (bia e4c7.2201.9131)
+  Description: [L3][JOIN] data-1
+  Internet Address is 10.76.255.226/29
+  MTU 9216 bytes, BW 80000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 6/255, rxload 7/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is routed
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth3/9, Eth3/10, Eth3/12, Eth3/13, Eth4/9, Eth4/10, Eth4/12, Eth4/13
+  Last clearing of "show interface" counters never
+  1 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 2423695632 bits/sec, 333380 packets/sec
+    30 seconds output rate 2094481904 bits/sec, 323588 packets/sec
+    input rate 2.42 Gbps, 333.38 Kpps; output rate 2.09 Gbps, 323.59 Kpps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 2170323800 bits/sec, 314072 packets/sec
+    300 seconds output rate 2781172656 bits/sec, 372671 packets/sec
+    input rate 2.17 Gbps, 314.07 Kpps; output rate 2.78 Gbps, 372.67 Kpps
+  L3 in Switched:
+    ucast: 889108934733 pkts, 627046888799848 bytes - mcast: 0 pkts, 0 bytes
+  L3 out Switched:
+    ucast: 1140936334169 pkts, 1127080134367233 bytes - mcast: 0 pkts, 0 bytes
+  RX
+    889117601016 unicast packets  1902279 multicast packets  5 broadcast packets
+    889112622226 input packets  627048823556198 bytes
+    267157414327 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    1141194567073 unicast packets  1326361 multicast packets  9 broadcast packets
+    1141183515516 output packets  1127106750234275 bytes
+    593668650553 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Vlan1 is down (Administratively down), line protocol is down, autostate enabled
+  Hardware is EtherSVI, address is  d867.d96f.05c2
+  MTU 1500 bytes, BW 1000000 Kbit, DLY 10 usec,
+
+   reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not supported
+  ARP type: ARPA
+  Last clearing of "show interface" counters never
+  60 seconds input rate 0 bits/sec, 0 packets/sec
+  60 seconds output rate 0 bits/sec, 0 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  L3 Switched:
+    input: 0 pkts, 0 bytes - output: 0 pkts, 0 bytes
+  L3 in Switched:
+    ucast: 0 pkts, 0 bytes - mcast: 0 pkts, 0 bytes
+  L3 out Switched:
+    ucast: 0 pkts, 0 bytes - mcast: 0 pkts, 0 bytes
+
+Vlan505 is up, line protocol is up, autostate enabled
+  Hardware is EtherSVI, address is  d867.d96f.05c2
+  Description: [OTV-MGMT] mgmt  Internet Address is 10.76.255.220/29
+  MTU 1500 bytes, BW 1000000 Kbit, DLY 10 usec,
+
+   reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not supported
+  ARP type: ARPA
+  Last clearing of "show interface" counters never
+  60 seconds input rate 7035 bits/sec, 3 packets/sec
+  60 seconds output rate 0 bits/sec, 0 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 3.39 Kbps, 1 pps; output rate 0 bps, 0 pps
+  L3 Switched:
+    input: 2921868 pkts, 609930307 bytes - output: 0 pkts, 0 bytes
+  L3 in Switched:
+    ucast: 1616083 pkts, 455847677 bytes - mcast: 1305785 pkts, 154082630 bytes
+  L3 out Switched:
+    ucast: 0 pkts, 0 bytes - mcast: 0 pkts, 0 bytes
+
+Vlan506 is up, line protocol is up, autostate enabled
+  Hardware is EtherSVI, address is  d867.d96f.05c2
+  Description: [OTV-SITE] Fast Convergence  Internet Address is 10.76.255.241/30
+  MTU 1500 bytes, BW 1000000 Kbit, DLY 10 usec,
+
+   reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not supported
+  ARP type: ARPA
+  Last clearing of "show interface" counters never
+  60 seconds input rate 22661 bits/sec, 40 packets/sec
+  60 seconds output rate 22661 bits/sec, 40 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 22.66 Kbps, 40 pps; output rate 22.66 Kbps, 40 pps
+  L3 Switched:
+    input: 73009336 pkts, 5110653560 bytes - output: 73009326 pkts, 5110652820 bytes
+  L3 in Switched:
+    ucast: 73009336 pkts, 5110653560 bytes - mcast: 0 pkts, 0 bytes
+  L3 out Switched:
+    ucast: 73009326 pkts, 5110652820 bytes - mcast: 0 pkts, 0 bytes
+
+Overlay0 is up
+    MTU 1400 bytes, BW 1000000 Kbit
+    Encapsulation OTV
+    Last link flapped 21:11:55
+    Last clearing of "show interface" counters never
+    Load-Interval is 5 minute (300 seconds)
+    RX
+      63272620276 unicast packets  0 multicast packets
+      0 bytes  0 bits/sec  12718 packets/sec
+    TX
+      68229823847 unicast packets  0 multicast packets
+      71824712949453 bytes  0 bits/sec  14815 packets/sec
+

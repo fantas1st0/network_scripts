@@ -1,0 +1,54 @@
+
+Mod  Ports  Module-Type                         Model              Status
+---  -----  ----------------------------------- ------------------ ----------
+1    24     10/40 Gbps Ethernet Module          N77-F324FQ-25      ok
+2    24     10/40 Gbps Ethernet Module          N77-F324FQ-25      ok
+3    24     10/40 Gbps Ethernet Module          N77-F324FQ-25      ok
+5    0      Supervisor Module-2                 N77-SUP2E          active *
+6    0      Supervisor Module-2                 N77-SUP2E          ha-standby
+
+Mod  Sw               Hw
+---  ---------------  ------
+1    7.3(1)D1(1)      1.3     
+2    7.3(1)D1(1)      1.3     
+3    7.3(1)D1(1)      1.3     
+5    7.3(1)D1(1)      1.4     
+6    7.3(1)D1(1)      1.4     
+
+
+Mod  MAC-Address(es)                         Serial-Num
+---  --------------------------------------  ----------
+1    2c-86-d2-0c-51-80 to 2c-86-d2-0c-51-f1  JAE20500AEY
+2    2c-86-d2-0c-78-3e to 2c-86-d2-0c-78-af  JAE20500AEG
+3    2c-86-d2-0c-5e-6a to 2c-86-d2-0c-5e-db  JAE20500AG7
+5    2c-31-24-50-e7-80 to 2c-31-24-50-e7-92  JAE21010A53
+6    2c-31-24-50-e7-47 to 2c-31-24-50-e7-59  JAE21010A8L
+
+Mod  Online Diag Status
+---  ------------------
+1    Pass
+2    Pass
+3    Pass
+5    Pass
+6    Pass
+
+Xbar Ports  Module-Type                         Model              Status
+---  -----  ----------------------------------- ------------------ ----------
+1    0      Fabric Module 2                     N77-C7710-FAB-2    ok
+3    0      Fabric Module 2                     N77-C7710-FAB-2    ok
+5    0      Fabric Module 2                     N77-C7710-FAB-2    ok
+
+Xbar Sw               Hw
+---  ---------------  ------
+1    NA               1.0     
+3    NA               1.0     
+5    NA               1.0     
+
+
+Xbar MAC-Address(es)                         Serial-Num
+---  --------------------------------------  ----------
+1    NA                                      JAE205108X4
+3    NA                                      JAE2052097R
+5    NA                                      JAE210105UG
+
+* this terminal session 

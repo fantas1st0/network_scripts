@@ -1,0 +1,97 @@
+Buffer elements:
+     497 in free list (500 max allowed)
+     2832659869 hits, 0 misses, 0 created
+
+Public buffer pools:
+Small buffers, 104 bytes (total 1024, permanent 1024):
+     1020 in free list (128 min, 2048 max allowed)
+     519684081 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+Medium buffers, 256 bytes (total 3000, permanent 3000):
+     2998 in free list (64 min, 3000 max allowed)
+     1086635637 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+Middle buffers, 600 bytes (total 512, permanent 512):
+     498 in free list (64 min, 1024 max allowed)
+     175317001 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+Big buffers, 1536 bytes (total 1000, permanent 1000):
+     996 in free list (64 min, 1000 max allowed)
+     834824330 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+VeryBig buffers, 4520 bytes (total 10, permanent 10):
+     10 in free list (0 min, 100 max allowed)
+     5790 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+Large buffers, 9240 bytes (total 8, permanent 8):
+     8 in free list (0 min, 10 max allowed)
+     9922538 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+Huge buffers, 18024 bytes (total 2, permanent 2, peak 4 @ 7w0d):
+     2 in free list (0 min, 4 max allowed)
+     3784 hits, 11 misses, 22 trims, 22 created
+     0 failures (0 no memory)
+
+Interface buffer pools:
+CF Small buffers, 104 bytes (total 100, permanent 100):
+     100 in free list (100 min, 200 max allowed)
+     0 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+CF Middle buffers, 600 bytes (total 100, permanent 100):
+     100 in free list (100 min, 200 max allowed)
+     0 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+Syslog ED Pool buffers, 600 bytes (total 288, permanent 288):
+     254 in free list (288 min, 288 max allowed)
+     5952 hits, 0 misses
+LI Middle buffers, 600 bytes (total 512, permanent 256, peak 512 @ 7w0d):
+     256 in free list (256 min, 768 max allowed)
+     171 hits, 85 fallbacks, 0 trims, 256 created
+     0 failures (0 no memory)
+     256 max cache size, 256 in cache
+     0 hits in cache, 0 misses in cache
+EOBC0/0 buffers, 1524 bytes (total 2400, permanent 2400):
+     1200 in free list (0 min, 2400 max allowed)
+     1200 hits, 0 fallbacks
+     1200 max cache size, 688 in cache
+     1888776922 hits in cache, 0 misses in cache
+CF Big buffers, 1536 bytes (total 25, permanent 25):
+     25 in free list (25 min, 50 max allowed)
+     0 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+LI Big buffers, 1536 bytes (total 512, permanent 256, peak 512 @ 7w0d):
+     256 in free list (256 min, 768 max allowed)
+     171 hits, 85 fallbacks, 0 trims, 256 created
+     0 failures (0 no memory)
+     256 max cache size, 256 in cache
+     0 hits in cache, 0 misses in cache
+IPC buffers, 4096 bytes (total 1176, permanent 1176):
+     1110 in free list (392 min, 3920 max allowed)
+     2367852104 hits, 0 fallbacks, 0 trims, 0 created
+     0 failures (0 no memory)
+CF VeryBig buffers, 4520 bytes (total 2, permanent 2):
+     2 in free list (2 min, 4 max allowed)
+     0 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+LI Very Big buffers, 4520 bytes (total 257, permanent 128, peak 257 @ 7w0d):
+     129 in free list (128 min, 384 max allowed)
+     85 hits, 43 fallbacks, 6148 trims, 6277 created
+     0 failures (0 no memory)
+     128 max cache size, 128 in cache
+     0 hits in cache, 0 misses in cache
+CF Large buffers, 5024 bytes (total 1, permanent 1):
+     1 in free list (1 min, 2 max allowed)
+     0 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+Private Huge IPC buffers, 18024 bytes (total 2, permanent 2):
+     2 in free list (1 min, 4 max allowed)
+     0 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+Private Huge buffers, 65280 bytes (total 2, permanent 2):
+     2 in free list (1 min, 4 max allowed)
+     13315 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+
+Header pools:
+
+

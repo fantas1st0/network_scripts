@@ -1,0 +1,3548 @@
+
+Ethernet1/1 is up
+ Dedicated Interface 
+
+  Belongs to Po7
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8ee8 (bia 547f.ee04.8ee8)
+  Description: pN77-1-switch1
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5week(s) 5day(s)
+  Last clearing of "show interface" counters never
+  4 interface resets
+  30 seconds input rate 16440 bits/sec, 13 packets/sec
+  30 seconds output rate 2992 bits/sec, 0 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 16.82 Kbps, 12 pps; output rate 992 bps, 0 pps
+  RX
+    61798343 unicast packets  12322213 multicast packets  1090367 broadcast packets
+    75210923 input packets  44084667780 bytes
+    22461334 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    5044555 unicast packets  534012 multicast packets  6118 broadcast packets
+    5584685 output packets  1003197477 bytes
+    161705 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/2 is up
+ Dedicated Interface 
+
+  Belongs to Po7
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8ee9 (bia 547f.ee04.8ee9)
+  Description: pN77-2-switch2
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5week(s) 6day(s)
+  Last clearing of "show interface" counters never
+  1 interface resets
+  30 seconds input rate 6688 bits/sec, 1 packets/sec
+  30 seconds output rate 5336 bits/sec, 2 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 4.32 Kbps, 2 pps; output rate 7.70 Kbps, 1 pps
+  RX
+    31889334 unicast packets  536720 multicast packets  2 broadcast packets
+    32426056 input packets  40079565513 bytes
+    23259413 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    12022763 unicast packets  547158 multicast packets  43798 broadcast packets
+    12613719 output packets  3230470312 bytes
+    650408 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/3 is up
+ Dedicated Interface 
+
+  Belongs to Po1000
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8eea (bia 547f.ee04.8eea)
+  Description: peer-link
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5week(s) 6day(s)
+  Last clearing of "show interface" counters never
+  2 interface resets
+  30 seconds input rate 3608 bits/sec, 4 packets/sec
+  30 seconds output rate 2472 bits/sec, 3 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 3.21 Kbps, 4 pps; output rate 2.03 Kbps, 2 pps
+  RX
+    1706143965 unicast packets  17337898 multicast packets  58992 broadcast packets
+    1723540855 input packets  496096866077 bytes
+    146583025 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  90 input discard
+    0 Rx pause
+  TX
+    3993 unicast packets  12452129 multicast packets  206884 broadcast packets
+    12663006 output packets  2176504814 bytes
+    584588 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/4 is up
+ Dedicated Interface 
+
+  Belongs to Po1001
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8eeb (bia 547f.ee04.8eeb)
+  Description: peer-keepalive
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5week(s) 6day(s)
+  Last clearing of "show interface" counters never
+  3 interface resets
+  30 seconds input rate 792 bits/sec, 0 packets/sec
+  30 seconds output rate 1088 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 680 bps, 0 pps; output rate 912 bps, 1 pps
+  RX
+    3563382 unicast packets  545913 multicast packets  3 broadcast packets
+    4109298 input packets  416750154 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    3564425 unicast packets  2318698 multicast packets  708 broadcast packets
+    5883831 output packets  544082951 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/5 is up
+ Dedicated Interface 
+
+  Belongs to Po619
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8eec (bia 547f.ee04.8eec)
+  Description: TRUNK vdic-hv2168h:int_eth1 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d04h
+  Last clearing of "show interface" counters never
+  14 interface resets
+  30 seconds input rate 805016 bits/sec, 626 packets/sec
+  30 seconds output rate 848464 bits/sec, 652 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 1.53 Mbps, 705 pps; output rate 1.28 Mbps, 713 pps
+  RX
+    1955562468 unicast packets  342435 multicast packets  7467 broadcast packets
+    1955912370 input packets  422462311078 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    2361534290 unicast packets  3648751 multicast packets  169507 broadcast packets
+    2365352548 output packets  607865264514 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/6 is up
+ Dedicated Interface 
+
+  Belongs to Po719
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8eed (bia 547f.ee04.8eed)
+  Description: TRUNK vdic-hv2168h:int_eth2 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d04h
+  Last clearing of "show interface" counters never
+  7 interface resets
+  30 seconds input rate 120 bits/sec, 0 packets/sec
+  30 seconds output rate 1448 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.02 Kbps, 1 pps
+  RX
+    0 unicast packets  342377 multicast packets  7046 broadcast packets
+    349423 input packets  40127949 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6525011 multicast packets  708 broadcast packets
+    6525719 output packets  613915201 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/7 is up
+ Dedicated Interface 
+
+  Belongs to Po618
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8eee (bia 547f.ee04.8eee)
+  Description: TRUNK vdic-hv2167h:int_eth1 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d05h
+  Last clearing of "show interface" counters never
+  7 interface resets
+  30 seconds input rate 931584 bits/sec, 606 packets/sec
+  30 seconds output rate 1477328 bits/sec, 906 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 965.97 Kbps, 574 pps; output rate 1.71 Mbps, 942 pps
+  RX
+    1857753609 unicast packets  343710 multicast packets  10166 broadcast packets
+    1858107485 input packets  349338484406 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  410 input discard
+    0 Rx pause
+  TX
+    2199278309 unicast packets  3667254 multicast packets  164261 broadcast packets
+    2203109824 output packets  611132076612 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/8 is up
+ Dedicated Interface 
+
+  Belongs to Po718
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8eef (bia 547f.ee04.8eef)
+  Description: TRUNK vdic-hv2167h:int_eth2 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d05h
+  Last clearing of "show interface" counters never
+  5 interface resets
+  30 seconds input rate 88 bits/sec, 0 packets/sec
+  30 seconds output rate 1296 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 976 bps, 1 pps
+  RX
+    0 unicast packets  343615 multicast packets  22 broadcast packets
+    343637 input packets  39716139 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6531860 multicast packets  708 broadcast packets
+    6532568 output packets  614270280 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/9 is up
+ Dedicated Interface 
+
+  Belongs to Po617
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8ef0 (bia 547f.ee04.8ef0)
+  Description: TRUNK vdic-hv2166h:int_eth1 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d07h
+  Last clearing of "show interface" counters never
+  8 interface resets
+  30 seconds input rate 1029784 bits/sec, 672 packets/sec
+  30 seconds output rate 1080168 bits/sec, 688 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 1.14 Mbps, 655 pps; output rate 1.40 Mbps, 741 pps
+  RX
+    2207813849 unicast packets  344687 multicast packets  11365 broadcast packets
+    2208169901 input packets  381965273136 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    2525860706 unicast packets  3667101 multicast packets  170824 broadcast packets
+    2529698631 output packets  648583740743 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/10 is up
+ Dedicated Interface 
+
+  Belongs to Po717
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8ef1 (bia 547f.ee04.8ef1)
+  Description: TRUNK vdic-hv2166h:int_eth2 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d07h
+  Last clearing of "show interface" counters never
+  5 interface resets
+  30 seconds input rate 88 bits/sec, 0 packets/sec
+  30 seconds output rate 1408 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.10 Kbps, 1 pps
+  RX
+    0 unicast packets  344732 multicast packets  8271 broadcast packets
+    353003 input packets  40482968 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6540493 multicast packets  708 broadcast packets
+    6541201 output packets  616400741 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/11 is up
+ Dedicated Interface 
+
+  Belongs to Po616
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8ef2 (bia 547f.ee04.8ef2)
+  Description: TRUNK vdic-hv2165h:int_eth1 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d06h
+  Last clearing of "show interface" counters never
+  12 interface resets
+  30 seconds input rate 875472 bits/sec, 695 packets/sec
+  30 seconds output rate 962528 bits/sec, 755 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 951.42 Kbps, 699 pps; output rate 1.38 Mbps, 734 pps
+  RX
+    1959307947 unicast packets  343654 multicast packets  3754 broadcast packets
+    1959655355 input packets  401596145359 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    2510822770 unicast packets  3669277 multicast packets  171378 broadcast packets
+    2514663425 output packets  677576093001 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/12 is up
+ Dedicated Interface 
+
+  Belongs to Po716
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8ef3 (bia 547f.ee04.8ef3)
+  Description: TRUNK vdic-hv2165h:int_eth2 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d06h
+  Last clearing of "show interface" counters never
+  4 interface resets
+  30 seconds input rate 40 bits/sec, 0 packets/sec
+  30 seconds output rate 1392 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.02 Kbps, 1 pps
+  RX
+    0 unicast packets  343424 multicast packets  325 broadcast packets
+    343749 input packets  39692008 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6539372 multicast packets  708 broadcast packets
+    6540080 output packets  616188289 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/13 is up
+ Dedicated Interface 
+
+  Belongs to Po615
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8ef4 (bia 547f.ee04.8ef4)
+  Description: TRUNK vdic-hv2164h:int_eth1 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d05h
+  Last clearing of "show interface" counters never
+  8 interface resets
+  30 seconds input rate 931920 bits/sec, 651 packets/sec
+  30 seconds output rate 874824 bits/sec, 699 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 3.39 Mbps, 907 pps; output rate 1.15 Mbps, 765 pps
+  RX
+    3292306101 unicast packets  344488 multicast packets  9915 broadcast packets
+    3292660504 input packets  1962749627179 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    2604722478 unicast packets  3666863 multicast packets  171566 broadcast packets
+    2608560907 output packets  510997834355 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/14 is up
+ Dedicated Interface 
+
+  Belongs to Po715
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8ef5 (bia 547f.ee04.8ef5)
+  Description: TRUNK vdic-hv2164h:int_eth2 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d05h
+  Last clearing of "show interface" counters never
+  5 interface resets
+  30 seconds input rate 72 bits/sec, 0 packets/sec
+  30 seconds output rate 1360 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.04 Kbps, 1 pps
+  RX
+    0 unicast packets  344510 multicast packets  6925 broadcast packets
+    351435 input packets  40347891 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6542605 multicast packets  708 broadcast packets
+    6543313 output packets  616556582 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/15 is up
+ Dedicated Interface 
+
+  Belongs to Po614
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8ef6 (bia 547f.ee04.8ef6)
+  Description: TRUNK vdic-hv2163h:int_eth1 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d07h
+  Last clearing of "show interface" counters never
+  8 interface resets
+  30 seconds input rate 1363600 bits/sec, 823 packets/sec
+  30 seconds output rate 1003608 bits/sec, 825 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 3.40 Mbps, 1.05 Kpps; output rate 1.53 Mbps, 925 pps
+  RX
+    2351725405 unicast packets  344962 multicast packets  11324 broadcast packets
+    2352081691 input packets  618671212890 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    2420445259 unicast packets  3670112 multicast packets  172273 broadcast packets
+    2424287644 output packets  610233317685 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/16 is up
+ Dedicated Interface 
+
+  Belongs to Po714
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8ef7 (bia 547f.ee04.8ef7)
+  Description: TRUNK vdic-hv2163h:int_eth2 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d07h
+  Last clearing of "show interface" counters never
+  4 interface resets
+  30 seconds input rate 48 bits/sec, 0 packets/sec
+  30 seconds output rate 1376 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 984 bps, 1 pps
+  RX
+    0 unicast packets  344788 multicast packets  7162 broadcast packets
+    351950 input packets  40417701 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6544451 multicast packets  708 broadcast packets
+    6545159 output packets  616743874 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/17 is up
+ Dedicated Interface 
+
+  Belongs to Po613
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8ef8 (bia 547f.ee04.8ef8)
+  Description: TRUNK vdic-hv2162h:int_eth1 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d06h
+  Last clearing of "show interface" counters never
+  13 interface resets
+  30 seconds input rate 680176 bits/sec, 434 packets/sec
+  30 seconds output rate 699080 bits/sec, 558 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 787.06 Kbps, 478 pps; output rate 1.11 Mbps, 603 pps
+  RX
+    1880372218 unicast packets  342173 multicast packets  7412 broadcast packets
+    1880721803 input packets  314578985016 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  33 input discard
+    0 Rx pause
+  TX
+    1936363261 unicast packets  3648447 multicast packets  169372 broadcast packets
+    1940181080 output packets  553798875816 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/18 is up
+ Dedicated Interface 
+
+  Belongs to Po713
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8ef9 (bia 547f.ee04.8ef9)
+  Description: TRUNK vdic-hv2162h:int_eth2 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d06h
+  Last clearing of "show interface" counters never
+  4 interface resets
+  30 seconds input rate 24 bits/sec, 0 packets/sec
+  30 seconds output rate 1424 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.05 Kbps, 1 pps
+  RX
+    0 unicast packets  342231 multicast packets  8936 broadcast packets
+    351167 input packets  40236416 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6519027 multicast packets  708 broadcast packets
+    6519735 output packets  614175844 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/19 is up
+ Dedicated Interface 
+
+  Belongs to Po612
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8efa (bia 547f.ee04.8efa)
+  Description: TRUNK vdic-hv2161h:int_eth1 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d07h
+  Last clearing of "show interface" counters never
+  11 interface resets
+  30 seconds input rate 690552 bits/sec, 578 packets/sec
+  30 seconds output rate 825352 bits/sec, 556 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 811.30 Kbps, 575 pps; output rate 1.16 Mbps, 624 pps
+  RX
+    1758558808 unicast packets  344748 multicast packets  7937 broadcast packets
+    1758911493 input packets  290675108425 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  58 input discard
+    0 Rx pause
+  TX
+    2260076937 unicast packets  3672353 multicast packets  174053 broadcast packets
+    2263923343 output packets  585934542075 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/20 is up
+ Dedicated Interface 
+
+  Belongs to Po712
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8efb (bia 547f.ee04.8efb)
+  Description: TRUNK vdic-hv2161h:int_eth2 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d07h
+  Last clearing of "show interface" counters never
+  4 interface resets
+  30 seconds input rate 88 bits/sec, 0 packets/sec
+  30 seconds output rate 1352 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.02 Kbps, 1 pps
+  RX
+    0 unicast packets  344732 multicast packets  7329 broadcast packets
+    352061 input packets  40412922 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6548230 multicast packets  708 broadcast packets
+    6548938 output packets  617065824 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/21 is up
+ Dedicated Interface 
+
+  Belongs to Po611
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8efc (bia 547f.ee04.8efc)
+  Description: TRUNK vdic-hv2160h:int_eth1 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d05h
+  Last clearing of "show interface" counters never
+  9 interface resets
+  30 seconds input rate 1014120 bits/sec, 671 packets/sec
+  30 seconds output rate 510736 bits/sec, 371 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 1.11 Mbps, 751 pps; output rate 915.43 Kbps, 432 pps
+  RX
+    2300501650 unicast packets  344539 multicast packets  10079 broadcast packets
+    2300856268 input packets  394329986726 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    2728309304 unicast packets  3666945 multicast packets  169402 broadcast packets
+    2732145651 output packets  678227050389 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/22 is up
+ Dedicated Interface 
+
+  Belongs to Po711
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8efd (bia 547f.ee04.8efd)
+  Description: TRUNK vdic-hv2160h:int_eth2 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d05h
+  Last clearing of "show interface" counters never
+  3 interface resets
+  30 seconds input rate 144 bits/sec, 0 packets/sec
+  30 seconds output rate 1408 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.06 Kbps, 1 pps
+  RX
+    0 unicast packets  344572 multicast packets  7987 broadcast packets
+    352559 input packets  40435108 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6545673 multicast packets  708 broadcast packets
+    6546381 output packets  616816826 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/23 is up
+ Dedicated Interface 
+
+  Belongs to Po610
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8efe (bia 547f.ee04.8efe)
+  Description: TRUNK vdic-hv2159h:int_eth1 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d07h
+  Last clearing of "show interface" counters never
+  6 interface resets
+  30 seconds input rate 1115400 bits/sec, 582 packets/sec
+  30 seconds output rate 1204256 bits/sec, 874 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 1.22 Mbps, 637 pps; output rate 1.70 Mbps, 950 pps
+  RX
+    2921081286 unicast packets  343483 multicast packets  349 broadcast packets
+    2921425118 input packets  439517942564 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    2884101511 unicast packets  3665319 multicast packets  174259 broadcast packets
+    2887941089 output packets  668539226161 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/24 is up
+ Dedicated Interface 
+
+  Belongs to Po710
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8eff (bia 547f.ee04.8eff)
+  Description: TRUNK vdic-hv2159h:int_eth2 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d07h
+  Last clearing of "show interface" counters never
+  4 interface resets
+  30 seconds input rate 88 bits/sec, 0 packets/sec
+  30 seconds output rate 1576 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.02 Kbps, 1 pps
+  RX
+    0 unicast packets  343526 multicast packets  21 broadcast packets
+    343547 input packets  39701271 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6530502 multicast packets  708 broadcast packets
+    6531210 output packets  614916518 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/25 is up
+ Dedicated Interface 
+
+  Belongs to Po609
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8f00 (bia 547f.ee04.8f00)
+  Description: TRUNK vdic-hv2158h:int_eth1 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d06h
+  Last clearing of "show interface" counters never
+  9 interface resets
+  30 seconds input rate 992456 bits/sec, 722 packets/sec
+  30 seconds output rate 1065832 bits/sec, 601 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 1.07 Mbps, 735 pps; output rate 1.45 Mbps, 666 pps
+  RX
+    2150524853 unicast packets  344583 multicast packets  8816 broadcast packets
+    2150878252 input packets  365161993939 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    2523269276 unicast packets  3668965 multicast packets  172560 broadcast packets
+    2527110801 output packets  625479961097 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/26 is up
+ Dedicated Interface 
+
+  Belongs to Po709
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8f01 (bia 547f.ee04.8f01)
+  Description: TRUNK vdic-hv2158h:int_eth2 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d06h
+  Last clearing of "show interface" counters never
+  4 interface resets
+  30 seconds input rate 88 bits/sec, 0 packets/sec
+  30 seconds output rate 1496 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.06 Kbps, 1 pps
+  RX
+    0 unicast packets  344608 multicast packets  8171 broadcast packets
+    352779 input packets  40442579 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6538876 multicast packets  708 broadcast packets
+    6539584 output packets  616278562 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/27 is up
+ Dedicated Interface 
+
+  Belongs to Po608
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8f02 (bia 547f.ee04.8f02)
+  Description: TRUNK vdic-hv2157h:int_eth1 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d03h
+  Last clearing of "show interface" counters never
+  8 interface resets
+  30 seconds input rate 882256 bits/sec, 465 packets/sec
+  30 seconds output rate 972464 bits/sec, 693 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 956.89 Kbps, 474 pps; output rate 1.24 Mbps, 704 pps
+  RX
+    2149151777 unicast packets  344799 multicast packets  9742 broadcast packets
+    2149506318 input packets  359215504603 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    2359802755 unicast packets  3670174 multicast packets  172008 broadcast packets
+    2363644937 output packets  594109373931 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/28 is up
+ Dedicated Interface 
+
+  Belongs to Po708
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8f03 (bia 547f.ee04.8f03)
+  Description: TRUNK vdic-hv2157h:int_eth2 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d03h
+  Last clearing of "show interface" counters never
+  4 interface resets
+  30 seconds input rate 48 bits/sec, 0 packets/sec
+  30 seconds output rate 1408 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.06 Kbps, 1 pps
+  RX
+    0 unicast packets  344809 multicast packets  7328 broadcast packets
+    352137 input packets  40433598 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6538141 multicast packets  708 broadcast packets
+    6538849 output packets  616215150 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/29 is up
+ Dedicated Interface 
+
+  Belongs to Po607
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8f04 (bia 547f.ee04.8f04)
+  Description: TRUNK vdic-hv2156h:int_eth1 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d03h
+  Last clearing of "show interface" counters never
+  6 interface resets
+  30 seconds input rate 946896 bits/sec, 516 packets/sec
+  30 seconds output rate 866024 bits/sec, 684 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 1.30 Mbps, 604 pps; output rate 1.23 Mbps, 735 pps
+  RX
+    2911678897 unicast packets  343693 multicast packets  1686 broadcast packets
+    2912024276 input packets  1236427672253 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    3194487522 unicast packets  3668482 multicast packets  172855 broadcast packets
+    3198328859 output packets  675779567194 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/30 is up
+ Dedicated Interface 
+
+  Belongs to Po707
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8f05 (bia 547f.ee04.8f05)
+  Description: TRUNK vdic-hv2156h:int_eth2 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d03h
+  Last clearing of "show interface" counters never
+  4 interface resets
+  30 seconds input rate 8 bits/sec, 0 packets/sec
+  30 seconds output rate 1432 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.06 Kbps, 1 pps
+  RX
+    0 unicast packets  343744 multicast packets  0 broadcast packets
+    343744 input packets  39739015 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6530447 multicast packets  708 broadcast packets
+    6531155 output packets  614948162 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/31 is up
+ Dedicated Interface 
+
+  Belongs to Po606
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8f06 (bia 547f.ee04.8f06)
+  Description: TRUNK vdic-hv2155h:int_eth1 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d04h
+  Last clearing of "show interface" counters never
+  8 interface resets
+  30 seconds input rate 1257312 bits/sec, 881 packets/sec
+  30 seconds output rate 1162320 bits/sec, 990 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 3.02 Mbps, 1.06 Kpps; output rate 1.55 Mbps, 1.07 Kpps
+  RX
+    4073164079 unicast packets  344732 multicast packets  9028 broadcast packets
+    4073517839 input packets  1999865754468 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    3476473340 unicast packets  3669967 multicast packets  172913 broadcast packets
+    3480316220 output packets  633265259466 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet1/32 is up
+ Dedicated Interface 
+
+  Belongs to Po706
+  Hardware: 1000/10000 Ethernet, address: 547f.ee04.8f07 (bia 547f.ee04.8f07)
+  Description: TRUNK vdic-hv2155h:int_eth2 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d04h
+  Last clearing of "show interface" counters never
+  4 interface resets
+  30 seconds input rate 8 bits/sec, 0 packets/sec
+  30 seconds output rate 1456 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.06 Kbps, 1 pps
+  RX
+    0 unicast packets  344752 multicast packets  7610 broadcast packets
+    352362 input packets  40435388 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6538450 multicast packets  708 broadcast packets
+    6539158 output packets  616237650 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet2/1 is up
+ Dedicated Interface 
+
+  Belongs to Po7
+  Hardware: 1000/10000 Ethernet, address: 0005.73de.c940 (bia 0005.73de.c940)
+  Description: pN77-2-switch2
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5week(s) 6day(s)
+  Last clearing of "show interface" counters never
+  1 interface resets
+  30 seconds input rate 2640 bits/sec, 1 packets/sec
+  30 seconds output rate 6048 bits/sec, 2 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 1.42 Kbps, 1 pps; output rate 4.11 Kbps, 2 pps
+  RX
+    22001389 unicast packets  533540 multicast packets  2 broadcast packets
+    22534931 input packets  30646692949 bytes
+    17806905 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    11306292 unicast packets  543790 multicast packets  5444 broadcast packets
+    11855526 output packets  3214919793 bytes
+    979901 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet2/2 is up
+ Dedicated Interface 
+
+  Belongs to Po7
+  Hardware: 1000/10000 Ethernet, address: 0005.73de.c941 (bia 0005.73de.c941)
+  Description: pN77-2-switch2
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5week(s) 6day(s)
+  Last clearing of "show interface" counters never
+  1 interface resets
+  30 seconds input rate 1784 bits/sec, 1 packets/sec
+  30 seconds output rate 6120 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 1.85 Kbps, 1 pps; output rate 5.27 Kbps, 1 pps
+  RX
+    31236750 unicast packets  543001 multicast packets  0 broadcast packets
+    31779751 input packets  41189448221 bytes
+    23866344 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    20114978 unicast packets  536061 multicast packets  118147 broadcast packets
+    20769186 output packets  6155803885 bytes
+    2061008 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet2/3 is up
+ Dedicated Interface 
+
+  Belongs to Po1000
+  Hardware: 1000/10000 Ethernet, address: 0005.73de.c942 (bia 0005.73de.c942)
+  Description: peer-link
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5week(s) 6day(s)
+  Last clearing of "show interface" counters never
+  2 interface resets
+  30 seconds input rate 2096 bits/sec, 1 packets/sec
+  30 seconds output rate 3240 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 1.36 Kbps, 0 pps; output rate 1.82 Kbps, 1 pps
+  RX
+    1881513482 unicast packets  1530426 multicast packets  1494807 broadcast packets
+    1884538715 input packets  586283347041 bytes
+    186268258 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  145 input discard
+    0 Rx pause
+  TX
+    218823 unicast packets  6091485 multicast packets  1058439 broadcast packets
+    7368747 output packets  1362722876 bytes
+    292692 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet2/4 is up
+ Dedicated Interface 
+
+  Belongs to Po1001
+  Hardware: 1000/10000 Ethernet, address: 0005.73de.c943 (bia 0005.73de.c943)
+  Description: peer-keepalive
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5week(s) 6day(s)
+  Last clearing of "show interface" counters never
+  3 interface resets
+  30 seconds input rate 136 bits/sec, 0 packets/sec
+  30 seconds output rate 104 bits/sec, 0 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 232 bps, 0 pps; output rate 240 bps, 0 pps
+  RX
+    3256 unicast packets  545892 multicast packets  2 broadcast packets
+    549150 input packets  110517211 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    3257 unicast packets  537349 multicast packets  738 broadcast packets
+    541344 output packets  109506710 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet2/5 is up
+ Dedicated Interface 
+
+  Belongs to Po605
+  Hardware: 1000/10000 Ethernet, address: 0005.73de.c944 (bia 0005.73de.c944)
+  Description: TRUNK vdic-hv2154h:int_eth1 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d04h
+  Last clearing of "show interface" counters never
+  9 interface resets
+  30 seconds input rate 683288 bits/sec, 478 packets/sec
+  30 seconds output rate 861104 bits/sec, 625 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 763.62 Kbps, 489 pps; output rate 1.18 Mbps, 631 pps
+  RX
+    3593780098 unicast packets  344767 multicast packets  16875 broadcast packets
+    3594141740 input packets  600259691034 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  10 input discard
+    0 Rx pause
+  TX
+    3764732716 unicast packets  4771148 multicast packets  317247 broadcast packets
+    3769821111 output packets  1003143201153 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet2/6 is up
+ Dedicated Interface 
+
+  Belongs to Po705
+  Hardware: 1000/10000 Ethernet, address: 0005.73de.c945 (bia 0005.73de.c945)
+  Description: TRUNK vdic-hv2154h:int_eth2 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d04h
+  Last clearing of "show interface" counters never
+  4 interface resets
+  30 seconds input rate 80 bits/sec, 0 packets/sec
+  30 seconds output rate 1456 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.05 Kbps, 1 pps
+  RX
+    0 unicast packets  344729 multicast packets  7341 broadcast packets
+    352070 input packets  40418712 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6561723 multicast packets  708 broadcast packets
+    6562431 output packets  617407338 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet2/7 is up
+ Dedicated Interface 
+
+  Belongs to Po604
+  Hardware: 1000/10000 Ethernet, address: 0005.73de.c946 (bia 0005.73de.c946)
+  Description: TRUNK vdic-hv2153h:int_eth1 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d08h
+  Last clearing of "show interface" counters never
+  9 interface resets
+  30 seconds input rate 952016 bits/sec, 851 packets/sec
+  30 seconds output rate 1146648 bits/sec, 711 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 1.02 Mbps, 872 pps; output rate 1.44 Mbps, 732 pps
+  RX
+    3978623290 unicast packets  344789 multicast packets  11215 broadcast packets
+    3978979294 input packets  655938336378 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  15 input discard
+    0 Rx pause
+  TX
+    4173328172 unicast packets  4759803 multicast packets  262382 broadcast packets
+    4178350357 output packets  1093588002830 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet2/8 is up
+ Dedicated Interface 
+
+  Belongs to Po704
+  Hardware: 1000/10000 Ethernet, address: 0005.73de.c947 (bia 0005.73de.c947)
+  Description: TRUNK vdic-hv2153h:int_eth2 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d08h
+  Last clearing of "show interface" counters never
+  3 interface resets
+  30 seconds input rate 8 bits/sec, 0 packets/sec
+  30 seconds output rate 1424 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.09 Kbps, 1 pps
+  RX
+    0 unicast packets  344789 multicast packets  7868 broadcast packets
+    352657 input packets  40466069 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6537555 multicast packets  708 broadcast packets
+    6538263 output packets  615370975 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet2/9 is up
+ Dedicated Interface 
+
+  Belongs to Po603
+  Hardware: 1000/10000 Ethernet, address: 0005.73de.c948 (bia 0005.73de.c948)
+  Description: TRUNK vdic-hv2152h:int_eth1 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d04h
+  Last clearing of "show interface" counters never
+  10 interface resets
+  30 seconds input rate 736624 bits/sec, 715 packets/sec
+  30 seconds output rate 840736 bits/sec, 609 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 844.82 Kbps, 767 pps; output rate 1.25 Mbps, 671 pps
+  RX
+    2048518818 unicast packets  341127 multicast packets  1848 broadcast packets
+    2048861793 input packets  300453293976 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    2213182875 unicast packets  3644745 multicast packets  167911 broadcast packets
+    2216995531 output packets  599912135261 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet2/10 is up
+ Dedicated Interface 
+
+  Belongs to Po703
+  Hardware: 1000/10000 Ethernet, address: 0005.73de.c949 (bia 0005.73de.c949)
+  Description: TRUNK vdic-hv2152h:int_eth2 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d04h
+  Last clearing of "show interface" counters never
+  6 interface resets
+  30 seconds input rate 8 bits/sec, 0 packets/sec
+  30 seconds output rate 1400 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.04 Kbps, 1 pps
+  RX
+    0 unicast packets  341215 multicast packets  73 broadcast packets
+    341288 input packets  39444955 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6511882 multicast packets  708 broadcast packets
+    6512590 output packets  613001157 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet2/11 is up
+ Dedicated Interface 
+
+  Belongs to Po602
+  Hardware: 1000/10000 Ethernet, address: 0005.73de.c94a (bia 0005.73de.c94a)
+  Description: TRUNK vdic-hv2151h:int_eth1 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d08h
+  Last clearing of "show interface" counters never
+  6 interface resets
+  30 seconds input rate 1054560 bits/sec, 956 packets/sec
+  30 seconds output rate 887984 bits/sec, 642 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 1.16 Mbps, 1.01 Kpps; output rate 1.28 Mbps, 719 pps
+  RX
+    3448427551 unicast packets  345748 multicast packets  102084 broadcast packets
+    3448875383 input packets  938502933841 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    3751487331 unicast packets  3666220 multicast packets  72697 broadcast packets
+    3755226248 output packets  1204705255108 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet2/12 is up
+ Dedicated Interface 
+
+  Belongs to Po702
+  Hardware: 1000/10000 Ethernet, address: 0005.73de.c94b (bia 0005.73de.c94b)
+  Description: TRUNK vdic-hv2151h:int_eth2 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d08h
+  Last clearing of "show interface" counters never
+  4 interface resets
+  30 seconds input rate 32 bits/sec, 0 packets/sec
+  30 seconds output rate 1472 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.06 Kbps, 1 pps
+  RX
+    0 unicast packets  343748 multicast packets  20 broadcast packets
+    343768 input packets  39742323 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6529365 multicast packets  708 broadcast packets
+    6530073 output packets  614855225 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet2/13 is up
+ Dedicated Interface 
+
+  Belongs to Po601
+  Hardware: 1000/10000 Ethernet, address: 0005.73de.c94c (bia 0005.73de.c94c)
+  Description: TRUNK vdic-hv2150h:int_eth1 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d08h
+  Last clearing of "show interface" counters never
+  7 interface resets
+  30 seconds input rate 1191736 bits/sec, 789 packets/sec
+  30 seconds output rate 850944 bits/sec, 584 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 1.00 Mbps, 750 pps; output rate 2.18 Mbps, 682 pps
+  RX
+    1847935705 unicast packets  343424 multicast packets  18132 broadcast packets
+    1848297261 input packets  294357669629 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  17 input discard
+    0 Rx pause
+  TX
+    2195776860 unicast packets  3644042 multicast packets  151259 broadcast packets
+    2199572161 output packets  643286875537 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet2/14 is up
+ Dedicated Interface 
+
+  Belongs to Po701
+  Hardware: 1000/10000 Ethernet, address: 0005.73de.c94d (bia 0005.73de.c94d)
+  Description: TRUNK vdic-hv2150h:int_eth2 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d08h
+  Last clearing of "show interface" counters never
+  3 interface resets
+  30 seconds input rate 48 bits/sec, 0 packets/sec
+  30 seconds output rate 1368 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.06 Kbps, 1 pps
+  RX
+    0 unicast packets  343003 multicast packets  0 broadcast packets
+    343003 input packets  39827715 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6528344 multicast packets  708 broadcast packets
+    6529052 output packets  615343987 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet2/15 is up
+ Dedicated Interface 
+
+  Belongs to Po600
+  Hardware: 1000/10000 Ethernet, address: 0005.73de.c94e (bia 0005.73de.c94e)
+  Description: TRUNK vdic-hv2149h:int_eth1 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d06h
+  Last clearing of "show interface" counters never
+  7 interface resets
+  30 seconds input rate 964208 bits/sec, 933 packets/sec
+  30 seconds output rate 978032 bits/sec, 653 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 1.03 Mbps, 972 pps; output rate 1.34 Mbps, 680 pps
+  RX
+    2040928283 unicast packets  343747 multicast packets  6537 broadcast packets
+    2041278567 input packets  351482328884 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  11 input discard
+    0 Rx pause
+  TX
+    2352021960 unicast packets  3668565 multicast packets  168528 broadcast packets
+    2355859053 output packets  623568945878 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+Ethernet2/16 is up
+ Dedicated Interface 
+
+  Belongs to Po700
+  Hardware: 1000/10000 Ethernet, address: 0005.73de.c94f (bia 0005.73de.c94f)
+  Description: TRUNK vdic-hv2149h:int_eth2 RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 5d06h
+  Last clearing of "show interface" counters never
+  4 interface resets
+  30 seconds input rate 80 bits/sec, 0 packets/sec
+  30 seconds output rate 1480 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.03 Kbps, 1 pps
+  RX
+    0 unicast packets  343726 multicast packets  22 broadcast packets
+    343748 input packets  39736751 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6535757 multicast packets  708 broadcast packets
+    6536465 output packets  615970023 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel7 is up
+
+ vPC Status: Up, vPC number: 7
+  Hardware: Port-Channel, address: 0005.73de.c940 (bia 0005.73de.c940)
+  Description: pN77k
+  MTU 1500 bytes,  BW 40000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, auto-speed
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/1, Eth1/2, Eth2/1, Eth2/2
+  Last clearing of "show interface" counters never
+  1 interface resets
+  30 seconds input rate 27552 bits/sec, 16 packets/sec
+  30 seconds output rate 20496 bits/sec, 5 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 24.42 Kbps, 16 pps; output rate 18.08 Kbps, 4 pps
+  RX
+    146933790 unicast packets  13947297 multicast packets  1090371 broadcast packets
+    161971458 input packets  156003412994 bytes
+    87393996 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    48489269 unicast packets  2172843 multicast packets  173508 broadcast packets
+    50835620 output packets  13606972244 bytes
+    3853022 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel600 is up
+
+ vPC Status: Up, vPC number: 600
+  Hardware: Port-Channel, address: 0005.73de.c94e (bia 0005.73de.c94e)
+  Description: TRUNK vdic-hv2149h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth2/15
+  Last clearing of "show interface" counters never
+  6 interface resets
+  30 seconds input rate 964208 bits/sec, 933 packets/sec
+  30 seconds output rate 978032 bits/sec, 653 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 1.03 Mbps, 972 pps; output rate 1.34 Mbps, 680 pps
+  RX
+    2040928283 unicast packets  343747 multicast packets  6537 broadcast packets
+    2041278567 input packets  351482328884 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  11 input discard
+    0 Rx pause
+  TX
+    2352021960 unicast packets  3668565 multicast packets  168528 broadcast packets
+    2355859053 output packets  623568945878 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel601 is up
+
+ vPC Status: Up, vPC number: 601
+  Hardware: Port-Channel, address: 0005.73de.c94c (bia 0005.73de.c94c)
+  Description: TRUNK vdic-hv2150h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth2/13
+  Last clearing of "show interface" counters never
+  6 interface resets
+  30 seconds input rate 1191736 bits/sec, 789 packets/sec
+  30 seconds output rate 850944 bits/sec, 584 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 1.00 Mbps, 750 pps; output rate 2.18 Mbps, 682 pps
+  RX
+    1847935705 unicast packets  343424 multicast packets  18132 broadcast packets
+    1848297261 input packets  294357669629 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  17 input discard
+    0 Rx pause
+  TX
+    2195776860 unicast packets  3644042 multicast packets  151259 broadcast packets
+    2199572161 output packets  643286875537 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel602 is up
+
+ vPC Status: Up, vPC number: 602
+  Hardware: Port-Channel, address: 0005.73de.c94a (bia 0005.73de.c94a)
+  Description: TRUNK vdic-hv2151h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth2/11
+  Last clearing of "show interface" counters never
+  5 interface resets
+  30 seconds input rate 1054560 bits/sec, 956 packets/sec
+  30 seconds output rate 887984 bits/sec, 642 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 1.16 Mbps, 1.01 Kpps; output rate 1.28 Mbps, 719 pps
+  RX
+    3448427551 unicast packets  345748 multicast packets  102084 broadcast packets
+    3448875383 input packets  938502933841 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    3751487331 unicast packets  3666220 multicast packets  72697 broadcast packets
+    3755226248 output packets  1204705255108 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel603 is up
+
+ vPC Status: Up, vPC number: 603
+  Hardware: Port-Channel, address: 0005.73de.c948 (bia 0005.73de.c948)
+  Description: TRUNK vdic-hv2152h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth2/9
+  Last clearing of "show interface" counters never
+  9 interface resets
+  30 seconds input rate 736624 bits/sec, 715 packets/sec
+  30 seconds output rate 840736 bits/sec, 609 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 844.82 Kbps, 767 pps; output rate 1.25 Mbps, 671 pps
+  RX
+    2048524350 unicast packets  341127 multicast packets  1848 broadcast packets
+    2048867325 input packets  300453966246 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    2213187662 unicast packets  3644749 multicast packets  167911 broadcast packets
+    2217000322 output packets  599912959089 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel604 is up
+
+ vPC Status: Up, vPC number: 604
+  Hardware: Port-Channel, address: 0005.73de.c946 (bia 0005.73de.c946)
+  Description: TRUNK vdic-hv2153h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth2/7
+  Last clearing of "show interface" counters never
+  8 interface resets
+  30 seconds input rate 952016 bits/sec, 851 packets/sec
+  30 seconds output rate 1146648 bits/sec, 711 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 1.02 Mbps, 872 pps; output rate 1.44 Mbps, 732 pps
+  RX
+    3978628639 unicast packets  344789 multicast packets  11215 broadcast packets
+    3978984643 input packets  655939035338 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  15 input discard
+    0 Rx pause
+  TX
+    4173332750 unicast packets  4759808 multicast packets  262382 broadcast packets
+    4178354940 output packets  1093588869261 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel605 is up
+
+ vPC Status: Up, vPC number: 605
+  Hardware: Port-Channel, address: 0005.73de.c944 (bia 0005.73de.c944)
+  Description: TRUNK vdic-hv2154h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth2/5
+  Last clearing of "show interface" counters never
+  8 interface resets
+  30 seconds input rate 683288 bits/sec, 478 packets/sec
+  30 seconds output rate 861104 bits/sec, 625 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 763.62 Kbps, 489 pps; output rate 1.18 Mbps, 631 pps
+  RX
+    3593783335 unicast packets  344767 multicast packets  16875 broadcast packets
+    3594144977 input packets  600260233648 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  10 input discard
+    0 Rx pause
+  TX
+    3764737294 unicast packets  4771153 multicast packets  317247 broadcast packets
+    3769825694 output packets  1003143943556 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel606 is up
+
+ vPC Status: Up, vPC number: 606
+  Hardware: Port-Channel, address: 547f.ee04.8f06 (bia 547f.ee04.8f06)
+  Description: TRUNK vdic-hv2155h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/31
+  Last clearing of "show interface" counters never
+  7 interface resets
+  30 seconds input rate 1257312 bits/sec, 881 packets/sec
+  30 seconds output rate 1162320 bits/sec, 990 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 3.02 Mbps, 1.06 Kpps; output rate 1.55 Mbps, 1.07 Kpps
+  RX
+    4073169965 unicast packets  344733 multicast packets  9028 broadcast packets
+    4073523726 input packets  1999866990721 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    3476479878 unicast packets  3669973 multicast packets  172913 broadcast packets
+    3480322764 output packets  633266164998 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel607 is up
+
+ vPC Status: Up, vPC number: 607
+  Hardware: Port-Channel, address: 547f.ee04.8f04 (bia 547f.ee04.8f04)
+  Description: TRUNK vdic-hv2156h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/29
+  Last clearing of "show interface" counters never
+  5 interface resets
+  30 seconds input rate 946896 bits/sec, 516 packets/sec
+  30 seconds output rate 866024 bits/sec, 684 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 1.30 Mbps, 604 pps; output rate 1.23 Mbps, 735 pps
+  RX
+    2911681824 unicast packets  343694 multicast packets  1686 broadcast packets
+    2912027204 input packets  1236428377705 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    3194492189 unicast packets  3668486 multicast packets  172855 broadcast packets
+    3198333530 output packets  675780283669 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel608 is up
+
+ vPC Status: Up, vPC number: 608
+  Hardware: Port-Channel, address: 547f.ee04.8f02 (bia 547f.ee04.8f02)
+  Description: TRUNK vdic-hv2157h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/27
+  Last clearing of "show interface" counters never
+  7 interface resets
+  30 seconds input rate 882256 bits/sec, 465 packets/sec
+  30 seconds output rate 972464 bits/sec, 693 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 956.89 Kbps, 474 pps; output rate 1.24 Mbps, 704 pps
+  RX
+    2149154828 unicast packets  344802 multicast packets  9742 broadcast packets
+    2149509372 input packets  359216202632 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    2359807990 unicast packets  3670179 multicast packets  172008 broadcast packets
+    2363650177 output packets  594110259531 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel609 is up
+
+ vPC Status: Up, vPC number: 609
+  Hardware: Port-Channel, address: 547f.ee04.8f00 (bia 547f.ee04.8f00)
+  Description: TRUNK vdic-hv2158h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/25
+  Last clearing of "show interface" counters never
+  8 interface resets
+  30 seconds input rate 992456 bits/sec, 722 packets/sec
+  30 seconds output rate 1065832 bits/sec, 601 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 1.07 Mbps, 735 pps; output rate 1.45 Mbps, 666 pps
+  RX
+    2150529970 unicast packets  344585 multicast packets  8816 broadcast packets
+    2150883371 input packets  365162811967 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    2523273373 unicast packets  3668969 multicast packets  172560 broadcast packets
+    2527114902 output packets  625480796043 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel610 is up
+
+ vPC Status: Up, vPC number: 610
+  Hardware: Port-Channel, address: 547f.ee04.8efe (bia 547f.ee04.8efe)
+  Description: TRUNK vdic-hv2159h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/23
+  Last clearing of "show interface" counters never
+  5 interface resets
+  30 seconds input rate 1115400 bits/sec, 582 packets/sec
+  30 seconds output rate 1204256 bits/sec, 874 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 1.22 Mbps, 637 pps; output rate 1.70 Mbps, 950 pps
+  RX
+    2921085785 unicast packets  343483 multicast packets  349 broadcast packets
+    2921429617 input packets  439518898526 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    2884107322 unicast packets  3665324 multicast packets  174259 broadcast packets
+    2887946905 output packets  668540200775 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel611 is up
+
+ vPC Status: Up, vPC number: 611
+  Hardware: Port-Channel, address: 547f.ee04.8efc (bia 547f.ee04.8efc)
+  Description: TRUNK vdic-hv2160h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/21
+  Last clearing of "show interface" counters never
+  8 interface resets
+  30 seconds input rate 1014120 bits/sec, 671 packets/sec
+  30 seconds output rate 510736 bits/sec, 371 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 1.11 Mbps, 751 pps; output rate 915.43 Kbps, 432 pps
+  RX
+    2300506709 unicast packets  344539 multicast packets  10079 broadcast packets
+    2300861327 input packets  394330806655 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    2728311849 unicast packets  3666950 multicast packets  169402 broadcast packets
+    2732148201 output packets  678227445945 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel612 is up
+
+ vPC Status: Up, vPC number: 612
+  Hardware: Port-Channel, address: 547f.ee04.8efa (bia 547f.ee04.8efa)
+  Description: TRUNK vdic-hv2161h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/19
+  Last clearing of "show interface" counters never
+  8 interface resets
+  30 seconds input rate 690552 bits/sec, 578 packets/sec
+  30 seconds output rate 825352 bits/sec, 556 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 811.30 Kbps, 575 pps; output rate 1.16 Mbps, 624 pps
+  RX
+    1758563193 unicast packets  344750 multicast packets  7937 broadcast packets
+    1758915880 input packets  290675741774 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  58 input discard
+    0 Rx pause
+  TX
+    2260080880 unicast packets  3672358 multicast packets  174053 broadcast packets
+    2263927291 output packets  585935259380 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel613 is up
+
+ vPC Status: Up, vPC number: 613
+  Hardware: Port-Channel, address: 547f.ee04.8ef8 (bia 547f.ee04.8ef8)
+  Description: TRUNK vdic-hv2162h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/17
+  Last clearing of "show interface" counters never
+  11 interface resets
+  30 seconds input rate 680176 bits/sec, 434 packets/sec
+  30 seconds output rate 699080 bits/sec, 558 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 787.06 Kbps, 478 pps; output rate 1.11 Mbps, 603 pps
+  RX
+    1880375648 unicast packets  342175 multicast packets  7412 broadcast packets
+    1880725235 input packets  314579615623 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  33 input discard
+    0 Rx pause
+  TX
+    1936367244 unicast packets  3648453 multicast packets  169372 broadcast packets
+    1940185069 output packets  553799474421 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel614 is up
+
+ vPC Status: Up, vPC number: 614
+  Hardware: Port-Channel, address: 547f.ee04.8ef6 (bia 547f.ee04.8ef6)
+  Description: TRUNK vdic-hv2163h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/15
+  Last clearing of "show interface" counters never
+  7 interface resets
+  30 seconds input rate 1363600 bits/sec, 823 packets/sec
+  30 seconds output rate 1003608 bits/sec, 825 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 3.40 Mbps, 1.05 Kpps; output rate 1.53 Mbps, 925 pps
+  RX
+    2351731009 unicast packets  344962 multicast packets  11324 broadcast packets
+    2352087295 input packets  618672210213 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    2420450130 unicast packets  3670117 multicast packets  172273 broadcast packets
+    2424292520 output packets  610233996268 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel615 is up
+
+ vPC Status: Up, vPC number: 615
+  Hardware: Port-Channel, address: 547f.ee04.8ef4 (bia 547f.ee04.8ef4)
+  Description: TRUNK vdic-hv2164h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/13
+  Last clearing of "show interface" counters never
+  7 interface resets
+  30 seconds input rate 931920 bits/sec, 651 packets/sec
+  30 seconds output rate 874824 bits/sec, 699 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 3.39 Mbps, 907 pps; output rate 1.15 Mbps, 765 pps
+  RX
+    3292310830 unicast packets  344489 multicast packets  9915 broadcast packets
+    3292665234 input packets  1962750556621 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    2604727203 unicast packets  3666868 multicast packets  171566 broadcast packets
+    2608565637 output packets  510998596240 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel616 is up
+
+ vPC Status: Up, vPC number: 616
+  Hardware: Port-Channel, address: 547f.ee04.8ef2 (bia 547f.ee04.8ef2)
+  Description: TRUNK vdic-hv2165h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/11
+  Last clearing of "show interface" counters never
+  8 interface resets
+  30 seconds input rate 875472 bits/sec, 695 packets/sec
+  30 seconds output rate 962528 bits/sec, 755 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 951.42 Kbps, 699 pps; output rate 1.38 Mbps, 734 pps
+  RX
+    1959312451 unicast packets  343654 multicast packets  3754 broadcast packets
+    1959659859 input packets  401596856117 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    2510827696 unicast packets  3669281 multicast packets  171378 broadcast packets
+    2514668355 output packets  677576850343 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel617 is up
+
+ vPC Status: Up, vPC number: 617
+  Hardware: Port-Channel, address: 547f.ee04.8ef0 (bia 547f.ee04.8ef0)
+  Description: TRUNK vdic-hv2166h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/9
+  Last clearing of "show interface" counters never
+  6 interface resets
+  30 seconds input rate 1029784 bits/sec, 672 packets/sec
+  30 seconds output rate 1080168 bits/sec, 688 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 1.14 Mbps, 655 pps; output rate 1.40 Mbps, 741 pps
+  RX
+    2207818339 unicast packets  344687 multicast packets  11365 broadcast packets
+    2208174391 input packets  381966074530 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    2525865504 unicast packets  3667105 multicast packets  170824 broadcast packets
+    2529703433 output packets  648584579642 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel618 is up
+
+ vPC Status: Up, vPC number: 618
+  Hardware: Port-Channel, address: 547f.ee04.8eee (bia 547f.ee04.8eee)
+  Description: TRUNK vdic-hv2167h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/7
+  Last clearing of "show interface" counters never
+  5 interface resets
+  30 seconds input rate 931584 bits/sec, 606 packets/sec
+  30 seconds output rate 1477328 bits/sec, 906 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 965.97 Kbps, 574 pps; output rate 1.71 Mbps, 942 pps
+  RX
+    1857757230 unicast packets  343710 multicast packets  10166 broadcast packets
+    1858111106 input packets  349339116056 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  410 input discard
+    0 Rx pause
+  TX
+    2199283863 unicast packets  3667259 multicast packets  164261 broadcast packets
+    2203115383 output packets  611132903747 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel619 is up
+
+ vPC Status: Up, vPC number: 619
+  Hardware: Port-Channel, address: 547f.ee04.8eec (bia 547f.ee04.8eec)
+  Description: TRUNK vdic-hv2168h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/5
+  Last clearing of "show interface" counters never
+  12 interface resets
+  30 seconds input rate 805016 bits/sec, 626 packets/sec
+  30 seconds output rate 848464 bits/sec, 652 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 1.53 Mbps, 705 pps; output rate 1.28 Mbps, 713 pps
+  RX
+    1955566733 unicast packets  342435 multicast packets  7467 broadcast packets
+    1955916635 input packets  422462923222 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    2361538624 unicast packets  3648756 multicast packets  169507 broadcast packets
+    2365356887 output packets  607866011715 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel700 is up
+
+ vPC Status: Up, vPC number: 700
+  Hardware: Port-Channel, address: 0005.73de.c94f (bia 0005.73de.c94f)
+  Description: TRUNK vdic-hv2149h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth2/16
+  Last clearing of "show interface" counters never
+  3 interface resets
+  30 seconds input rate 80 bits/sec, 0 packets/sec
+  30 seconds output rate 1480 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.03 Kbps, 1 pps
+  RX
+    0 unicast packets  343726 multicast packets  22 broadcast packets
+    343748 input packets  39736751 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6535757 multicast packets  708 broadcast packets
+    6536465 output packets  615970023 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel701 is up
+
+ vPC Status: Up, vPC number: 701
+  Hardware: Port-Channel, address: 0005.73de.c94d (bia 0005.73de.c94d)
+  Description: TRUNK vdic-hv2150h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth2/14
+  Last clearing of "show interface" counters never
+  2 interface resets
+  30 seconds input rate 48 bits/sec, 0 packets/sec
+  30 seconds output rate 1368 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.06 Kbps, 1 pps
+  RX
+    0 unicast packets  343003 multicast packets  0 broadcast packets
+    343003 input packets  39827715 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6528344 multicast packets  708 broadcast packets
+    6529052 output packets  615343987 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel702 is up
+
+ vPC Status: Up, vPC number: 702
+  Hardware: Port-Channel, address: 0005.73de.c94b (bia 0005.73de.c94b)
+  Description: TRUNK vdic-hv2151h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth2/12
+  Last clearing of "show interface" counters never
+  3 interface resets
+  30 seconds input rate 32 bits/sec, 0 packets/sec
+  30 seconds output rate 1472 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.06 Kbps, 1 pps
+  RX
+    0 unicast packets  343748 multicast packets  20 broadcast packets
+    343768 input packets  39742323 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6529365 multicast packets  708 broadcast packets
+    6530073 output packets  614855225 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel703 is up
+
+ vPC Status: Up, vPC number: 703
+  Hardware: Port-Channel, address: 0005.73de.c949 (bia 0005.73de.c949)
+  Description: TRUNK vdic-hv2152h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth2/10
+  Last clearing of "show interface" counters never
+  5 interface resets
+  30 seconds input rate 8 bits/sec, 0 packets/sec
+  30 seconds output rate 1400 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.04 Kbps, 1 pps
+  RX
+    0 unicast packets  341215 multicast packets  73 broadcast packets
+    341288 input packets  39444955 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6511892 multicast packets  708 broadcast packets
+    6512600 output packets  613002247 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel704 is up
+
+ vPC Status: Up, vPC number: 704
+  Hardware: Port-Channel, address: 0005.73de.c947 (bia 0005.73de.c947)
+  Description: TRUNK vdic-hv2153h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth2/8
+  Last clearing of "show interface" counters never
+  2 interface resets
+  30 seconds input rate 8 bits/sec, 0 packets/sec
+  30 seconds output rate 1424 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.09 Kbps, 1 pps
+  RX
+    0 unicast packets  344789 multicast packets  7868 broadcast packets
+    352657 input packets  40466069 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6537565 multicast packets  708 broadcast packets
+    6538273 output packets  615371826 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel705 is up
+
+ vPC Status: Up, vPC number: 705
+  Hardware: Port-Channel, address: 0005.73de.c945 (bia 0005.73de.c945)
+  Description: TRUNK vdic-hv2154h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth2/6
+  Last clearing of "show interface" counters never
+  3 interface resets
+  30 seconds input rate 80 bits/sec, 0 packets/sec
+  30 seconds output rate 1456 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.05 Kbps, 1 pps
+  RX
+    0 unicast packets  344729 multicast packets  7341 broadcast packets
+    352070 input packets  40418712 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6561732 multicast packets  708 broadcast packets
+    6562440 output packets  617408076 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel706 is up
+
+ vPC Status: Up, vPC number: 706
+  Hardware: Port-Channel, address: 547f.ee04.8f07 (bia 547f.ee04.8f07)
+  Description: TRUNK vdic-hv2155h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/32
+  Last clearing of "show interface" counters never
+  3 interface resets
+  30 seconds input rate 8 bits/sec, 0 packets/sec
+  30 seconds output rate 1456 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.06 Kbps, 1 pps
+  RX
+    0 unicast packets  344753 multicast packets  7610 broadcast packets
+    352363 input packets  40435516 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6538461 multicast packets  708 broadcast packets
+    6539169 output packets  616238630 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel707 is up
+
+ vPC Status: Up, vPC number: 707
+  Hardware: Port-Channel, address: 547f.ee04.8f05 (bia 547f.ee04.8f05)
+  Description: TRUNK vdic-hv2156h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/30
+  Last clearing of "show interface" counters never
+  3 interface resets
+  30 seconds input rate 8 bits/sec, 0 packets/sec
+  30 seconds output rate 1432 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.06 Kbps, 1 pps
+  RX
+    0 unicast packets  343745 multicast packets  0 broadcast packets
+    343745 input packets  39739143 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6530456 multicast packets  708 broadcast packets
+    6531164 output packets  614948900 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel708 is up
+
+ vPC Status: Up, vPC number: 708
+  Hardware: Port-Channel, address: 547f.ee04.8f03 (bia 547f.ee04.8f03)
+  Description: TRUNK vdic-hv2157h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/28
+  Last clearing of "show interface" counters never
+  3 interface resets
+  30 seconds input rate 48 bits/sec, 0 packets/sec
+  30 seconds output rate 1408 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.06 Kbps, 1 pps
+  RX
+    0 unicast packets  344812 multicast packets  7328 broadcast packets
+    352140 input packets  40433942 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6538151 multicast packets  708 broadcast packets
+    6538859 output packets  616216002 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel709 is up
+
+ vPC Status: Up, vPC number: 709
+  Hardware: Port-Channel, address: 547f.ee04.8f01 (bia 547f.ee04.8f01)
+  Description: TRUNK vdic-hv2158h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/26
+  Last clearing of "show interface" counters never
+  3 interface resets
+  30 seconds input rate 88 bits/sec, 0 packets/sec
+  30 seconds output rate 1496 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.06 Kbps, 1 pps
+  RX
+    0 unicast packets  344610 multicast packets  8171 broadcast packets
+    352781 input packets  40442795 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6538885 multicast packets  708 broadcast packets
+    6539593 output packets  616279300 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel710 is up
+
+ vPC Status: Up, vPC number: 710
+  Hardware: Port-Channel, address: 547f.ee04.8eff (bia 547f.ee04.8eff)
+  Description: TRUNK vdic-hv2159h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/24
+  Last clearing of "show interface" counters never
+  3 interface resets
+  30 seconds input rate 88 bits/sec, 0 packets/sec
+  30 seconds output rate 1576 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.02 Kbps, 1 pps
+  RX
+    0 unicast packets  343526 multicast packets  21 broadcast packets
+    343547 input packets  39701271 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6530512 multicast packets  708 broadcast packets
+    6531220 output packets  614917384 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel711 is up
+
+ vPC Status: Up, vPC number: 711
+  Hardware: Port-Channel, address: 547f.ee04.8efd (bia 547f.ee04.8efd)
+  Description: TRUNK vdic-hv2160h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/22
+  Last clearing of "show interface" counters never
+  2 interface resets
+  30 seconds input rate 144 bits/sec, 0 packets/sec
+  30 seconds output rate 1408 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.06 Kbps, 1 pps
+  RX
+    0 unicast packets  344572 multicast packets  7987 broadcast packets
+    352559 input packets  40435108 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6545682 multicast packets  708 broadcast packets
+    6546390 output packets  616817564 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel712 is up
+
+ vPC Status: Up, vPC number: 712
+  Hardware: Port-Channel, address: 547f.ee04.8efb (bia 547f.ee04.8efb)
+  Description: TRUNK vdic-hv2161h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/20
+  Last clearing of "show interface" counters never
+  3 interface resets
+  30 seconds input rate 88 bits/sec, 0 packets/sec
+  30 seconds output rate 1352 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.02 Kbps, 1 pps
+  RX
+    0 unicast packets  344734 multicast packets  7329 broadcast packets
+    352063 input packets  40413138 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6548241 multicast packets  708 broadcast packets
+    6548949 output packets  617066804 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel713 is up
+
+ vPC Status: Up, vPC number: 713
+  Hardware: Port-Channel, address: 547f.ee04.8ef9 (bia 547f.ee04.8ef9)
+  Description: TRUNK vdic-hv2162h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/18
+  Last clearing of "show interface" counters never
+  3 interface resets
+  30 seconds input rate 24 bits/sec, 0 packets/sec
+  30 seconds output rate 1424 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.05 Kbps, 1 pps
+  RX
+    0 unicast packets  342233 multicast packets  8936 broadcast packets
+    351169 input packets  40236632 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6519037 multicast packets  708 broadcast packets
+    6519745 output packets  614176710 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel714 is up
+
+ vPC Status: Up, vPC number: 714
+  Hardware: Port-Channel, address: 547f.ee04.8ef7 (bia 547f.ee04.8ef7)
+  Description: TRUNK vdic-hv2163h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/16
+  Last clearing of "show interface" counters never
+  3 interface resets
+  30 seconds input rate 48 bits/sec, 0 packets/sec
+  30 seconds output rate 1376 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 984 bps, 1 pps
+  RX
+    0 unicast packets  344788 multicast packets  7162 broadcast packets
+    351950 input packets  40417701 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6544461 multicast packets  708 broadcast packets
+    6545169 output packets  616744726 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel715 is up
+
+ vPC Status: Up, vPC number: 715
+  Hardware: Port-Channel, address: 547f.ee04.8ef5 (bia 547f.ee04.8ef5)
+  Description: TRUNK vdic-hv2164h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/14
+  Last clearing of "show interface" counters never
+  4 interface resets
+  30 seconds input rate 72 bits/sec, 0 packets/sec
+  30 seconds output rate 1360 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.04 Kbps, 1 pps
+  RX
+    0 unicast packets  344511 multicast packets  6925 broadcast packets
+    351436 input packets  40348019 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6542616 multicast packets  708 broadcast packets
+    6543324 output packets  616557562 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel716 is up
+
+ vPC Status: Up, vPC number: 716
+  Hardware: Port-Channel, address: 547f.ee04.8ef3 (bia 547f.ee04.8ef3)
+  Description: TRUNK vdic-hv2165h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/12
+  Last clearing of "show interface" counters never
+  3 interface resets
+  30 seconds input rate 40 bits/sec, 0 packets/sec
+  30 seconds output rate 1392 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.02 Kbps, 1 pps
+  RX
+    0 unicast packets  343424 multicast packets  325 broadcast packets
+    343749 input packets  39692008 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6539381 multicast packets  708 broadcast packets
+    6540089 output packets  616189027 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel717 is up
+
+ vPC Status: Up, vPC number: 717
+  Hardware: Port-Channel, address: 547f.ee04.8ef1 (bia 547f.ee04.8ef1)
+  Description: TRUNK vdic-hv2166h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/10
+  Last clearing of "show interface" counters never
+  3 interface resets
+  30 seconds input rate 88 bits/sec, 0 packets/sec
+  30 seconds output rate 1408 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.10 Kbps, 1 pps
+  RX
+    0 unicast packets  344732 multicast packets  8271 broadcast packets
+    353003 input packets  40482968 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6540503 multicast packets  708 broadcast packets
+    6541211 output packets  616401593 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel718 is up
+
+ vPC Status: Up, vPC number: 718
+  Hardware: Port-Channel, address: 547f.ee04.8eef (bia 547f.ee04.8eef)
+  Description: TRUNK vdic-hv2167h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/8
+  Last clearing of "show interface" counters never
+  3 interface resets
+  30 seconds input rate 88 bits/sec, 0 packets/sec
+  30 seconds output rate 1296 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 976 bps, 1 pps
+  RX
+    0 unicast packets  343615 multicast packets  22 broadcast packets
+    343637 input packets  39716139 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6531870 multicast packets  708 broadcast packets
+    6532578 output packets  614271131 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel719 is up
+
+ vPC Status: Up, vPC number: 719
+  Hardware: Port-Channel, address: 547f.ee04.8eed (bia 547f.ee04.8eed)
+  Description: TRUNK vdic-hv2168h:ae RF-002010738
+  MTU 1500 bytes,  BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/6
+  Last clearing of "show interface" counters never
+  5 interface resets
+  30 seconds input rate 120 bits/sec, 0 packets/sec
+  30 seconds output rate 1448 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 88 bps, 0 pps; output rate 1.02 Kbps, 1 pps
+  RX
+    0 unicast packets  342377 multicast packets  7046 broadcast packets
+    349423 input packets  40127949 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  6525021 multicast packets  708 broadcast packets
+    6525729 output packets  613916052 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel1000 is up
+
+  Hardware: Port-Channel, address: 547f.ee04.8eea (bia 547f.ee04.8eea)
+  Description: peer-link !!! DO NOT ALLOW VLAN ID 2806 !!!
+  MTU 1500 bytes,  BW 20000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, auto-speed
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/3, Eth2/3
+  Last clearing of "show interface" counters never
+  1 interface resets
+  30 seconds input rate 5704 bits/sec, 5 packets/sec
+  30 seconds output rate 5712 bits/sec, 4 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 4.57 Kbps, 4 pps; output rate 3.85 Kbps, 3 pps
+  RX
+    3587657586 unicast packets  18868349 multicast packets  1553801 broadcast packets
+    3608079736 input packets  1082380228208 bytes
+    332851283 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  235 input discard
+    0 Rx pause
+  TX
+    222938 unicast packets  18543635 multicast packets  1265323 broadcast packets
+    20031896 output packets  3539240366 bytes
+    877280 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+port-channel1001 is up
+
+  Hardware: Port-Channel, address: 547f.ee04.8eeb (bia 547f.ee04.8eeb)
+  Description: [TRUNK] peer-keepalive
+  MTU 1500 bytes,  BW 20000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, auto-speed
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/4, Eth2/4
+  Last clearing of "show interface" counters never
+  2 interface resets
+  30 seconds input rate 928 bits/sec, 0 packets/sec
+  30 seconds output rate 1192 bits/sec, 1 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 912 bps, 0 pps; output rate 1.15 Kbps, 1 pps
+  RX
+    3566643 unicast packets  1091807 multicast packets  5 broadcast packets
+    4658455 input packets  527268285 bytes
+    0 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    3567687 unicast packets  2856051 multicast packets  1446 broadcast packets
+    6425184 output packets  653590447 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+
+mgmt0 is up
+
+  Hardware: GigabitEthernet, address: 547f.ee04.8ee1 (bia 547f.ee04.8ee1)
+  Internet Address is 10.76.65.18/21
+  MTU 1500 bytes,  BW 1000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  full-duplex, auto-speed
+  EtherType is 0x0000 
+  Rx
+    97055282 input packets 7411693317 bytes
+    47672 unicast packets 11264236 multicast packets
+    85743374 broadcast packets  25 packets/sec
+    1 minute input rate 16256 bits/sec
+  Tx
+    221523 output packets 52117502 bytes
+    39048 unicast packets 181775 multicast packets
+    700 broadcast packets  0 packets/sec
+    1 minute output rate 104 bits/sec
+Vlan1 is down (Administratively down), line protocol is down
+  Hardware is EtherSVI, address is  547f.ee04.8e3c
+  MTU 1500 bytes, BW 1000000 Kbit, DLY 10 usec
+
+
+Vlan2806 is up, line protocol is up
+  Hardware is EtherSVI, address is  547f.ee04.8e3c
+  Description: vPC KeepAlive Net
+  Internet Address is 10.150.255.185/30
+  MTU 1500 bytes, BW 1000000 Kbit, DLY 10 usec
+
+
+Vlan3799 is up, line protocol is up
+  Hardware is EtherSVI, address is  547f.ee04.8e3c
+  Description: Management
+  Internet Address is 10.150.255.97/26
+  MTU 2000 bytes, BW 1000000 Kbit, DLY 10 usec
+
+

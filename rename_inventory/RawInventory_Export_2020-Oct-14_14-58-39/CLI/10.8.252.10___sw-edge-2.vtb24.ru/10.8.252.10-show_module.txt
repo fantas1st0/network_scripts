@@ -1,0 +1,66 @@
+
+Mod  Ports  Module-Type                         Model              Status
+---  -----  ----------------------------------- ------------------ ----------
+1    0      Supervisor Module-2                 N7K-SUP2E          active *
+2    0      Supervisor Module-2                 N7K-SUP2E          ha-standby
+3    24     10 Gbps Ethernet Module             N7K-M224XP-23L     ok
+4    24     10 Gbps Ethernet Module             N7K-M224XP-23L     ok
+5    48     1/10 Gbps Ethernet Module           N7K-F248XP-25E     ok
+6    48     1/10 Gbps Ethernet Module           N7K-F248XP-25E     ok
+
+Mod  Sw               Hw
+---  ---------------  ------
+1    7.3(3)D1(1)      6.1     
+2    7.3(3)D1(1)      6.1     
+3    7.3(3)D1(1)      2.2     
+4    7.3(3)D1(1)      2.2     
+5    7.3(3)D1(1)      1.2     
+6    7.3(3)D1(1)      1.2     
+
+
+
+Mod  MAC-Address(es)                         Serial-Num
+---  --------------------------------------  ----------
+1    80-e0-1d-89-1b-71 to 80-e0-1d-89-1b-83  JAE191702FJ
+2    d8-b1-90-85-6b-68 to d8-b1-90-85-6b-7a  JAE192302CR
+3    80-e0-1d-89-ff-18 to 80-e0-1d-89-ff-33  JAE192208ZN
+4    80-e0-1d-8a-03-cc to 80-e0-1d-8a-03-e7  JAE192302R3
+5    80-e0-1d-89-2a-88 to 80-e0-1d-89-2a-bb  JAE192403XS
+6    80-e0-1d-89-2a-f0 to 80-e0-1d-89-2b-23  JAE192403Y6
+
+Mod  Online Diag Status
+---  ------------------
+1    Pass
+2    Pass
+3    Pass
+4    Pass
+5    Pass
+6    Pass
+
+Xbar Ports  Module-Type                         Model              Status
+---  -----  ----------------------------------- ------------------ ----------
+1    0      Fabric Module 2                     N7K-C7009-FAB-2    ok
+2    0      Fabric Module 2                     N7K-C7009-FAB-2    ok
+3    0      Fabric Module 2                     N7K-C7009-FAB-2    ok
+4    0      Fabric Module 2                     N7K-C7009-FAB-2    ok
+5    0      Fabric Module 2                     N7K-C7009-FAB-2    ok
+
+Xbar Sw               Hw
+---  ---------------  ------
+1    NA               3.2     
+2    NA               3.2     
+3    NA               3.2     
+4    NA               3.2     
+5    NA               3.2     
+
+
+
+Xbar MAC-Address(es)                         Serial-Num
+---  --------------------------------------  ----------
+1    NA                                      JAE192106R6
+2    NA                                      JAE192106QX
+3    NA                                      JAF1841AFHL
+4    NA                                      JAF1841AFDJ
+5    NA                                      JAE1921029Q
+
+* this terminal session 

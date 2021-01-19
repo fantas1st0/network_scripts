@@ -1,0 +1,580 @@
+
+Legend:
+                (*) - local vPC is down, forwarding via vPC peer-link
+
+vPC domain id                   : 54  
+Peer status                     : peer adjacency formed ok      
+vPC keep-alive status           : peer is alive                 
+Configuration consistency status: success 
+Per-vlan consistency status     : success                       
+Type-2 consistency status       : success 
+vPC role                        : secondary, operational primary
+Number of vPCs configured       : 326 
+Peer Gateway                    : Disabled
+Dual-active excluded VLANs      : -
+Graceful Consistency Check      : Enabled
+
+vPC Peer-link status
+---------------------------------------------------------------------
+id   Port   Status Active vlans    
+--   ----   ------ --------------------------------------------------
+1    Po1000 up     1,10,107,110,129,139,145,167-169,171-172,174-180,1       
+                   83-184,187-191,193-194,199,294-295,701-702,711,300       
+                   0,3042,3128,3130-3131,3136-3139,3141,3143-3145,314       
+                   7,3150-3152,3160,3163,3172-3173,3183,3642,3965,405       
+                   0-4051                                                   
+
+vPC status
+----------------------------------------------------------------------------
+id     Port        Status Consistency Reason                     Active vlans
+------ ----------- ------ ----------- -------------------------- -----------
+7      Po7         up     success     success                    1,10,107,11
+                                                                 0,129,139,1
+                                                                 45,167-169,
+                                                                 171-172,174
+                                                                 -180,18....
+103    Po103       up     success     success                    -          
+104    Po104       up     success     success                    -          
+105    Po105       up     success     success                    -          
+106    Po106       up     success     success                    -          
+107    Po107       up     success     success                    -          
+108    Po108       up     success     success                    -          
+201    Po201       up     success     success                    110,169,174
+                                                                 ,190,194,29
+                                                                 5,3130,3136
+                                                                 -3137,3144 
+202    Po202       up     success     success                    110,169,174
+                                                                 ,190,295,31
+                                                                 30,3141    
+203    Po203       down*  success     success                    -          
+204    Po204       down*  success     success                    -          
+205    Po205       up     success     success                    110,174,177
+                                                                 ,190,194,31
+                                                                 30,3136-313
+                                                                 7,4050-4051
+206    Po206       up     success     success                    110,190,194
+                                                                 ,295,3172  
+207    Po207       up     success     success                    3163       
+323    Po323       up     success     success                    177,187,199
+                                                                 ,294,711,30
+                                                                 42,3128,364
+                                                                 2          
+104448 Eth103/1/1  up     success     success                    3131       
+                                                                            
+104449 Eth103/1/2  down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104450 Eth103/1/3  down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104451 Eth103/1/4  down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104452 Eth103/1/5  down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104453 Eth103/1/6  up     success     success                    3130       
+                                                                            
+104454 Eth103/1/7  up     success     success                    3131       
+                                                                            
+104455 Eth103/1/8  down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104456 Eth103/1/9  down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104457 Eth103/1/10 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104458 Eth103/1/11 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104459 Eth103/1/12 up     success     success                    190        
+                                                                            
+104460 Eth103/1/13 up     success     success                    3131       
+                                                                            
+104461 Eth103/1/14 up     success     success                    3965       
+                                                                            
+104462 Eth103/1/15 up     success     success                    3183       
+                                                                            
+104463 Eth103/1/16 up     success     success                    3130       
+                                                                            
+104464 Eth103/1/17 up     success     success                    3183       
+                                                                            
+104465 Eth103/1/18 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104466 Eth103/1/19 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104467 Eth103/1/20 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104468 Eth103/1/21 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104469 Eth103/1/22 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104470 Eth103/1/23 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104471 Eth103/1/24 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104472 Eth103/1/25 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104473 Eth103/1/26 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104474 Eth103/1/27 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104475 Eth103/1/28 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104476 Eth103/1/29 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104477 Eth103/1/30 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104478 Eth103/1/31 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104479 Eth103/1/32 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104480 Eth103/1/33 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104481 Eth103/1/34 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104482 Eth103/1/35 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104483 Eth103/1/36 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104484 Eth103/1/37 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104485 Eth103/1/38 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104486 Eth103/1/39 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104487 Eth103/1/40 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104488 Eth103/1/41 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104489 Eth103/1/42 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104490 Eth103/1/43 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104491 Eth103/1/44 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104492 Eth103/1/45 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104493 Eth103/1/46 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104494 Eth103/1/47 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+104495 Eth103/1/48 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105472 Eth104/1/1  up     success     success                    3131       
+                                                                            
+105473 Eth104/1/2  up     success     success                    3130       
+                                                                            
+105474 Eth104/1/3  up     success     success                    3136       
+                                                                            
+105475 Eth104/1/4  down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105476 Eth104/1/5  down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105477 Eth104/1/6  up     success     success                    178        
+                                                                            
+105478 Eth104/1/7  down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105479 Eth104/1/8  down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105480 Eth104/1/9  down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105481 Eth104/1/10 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105482 Eth104/1/11 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105483 Eth104/1/12 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105484 Eth104/1/13 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105485 Eth104/1/14 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105486 Eth104/1/15 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105487 Eth104/1/16 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105488 Eth104/1/17 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105489 Eth104/1/18 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105490 Eth104/1/19 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105491 Eth104/1/20 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105492 Eth104/1/21 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105493 Eth104/1/22 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105494 Eth104/1/23 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105495 Eth104/1/24 up     success     success                    190        
+                                                                            
+105496 Eth104/1/25 up     success     success                    3131       
+                                                                            
+105497 Eth104/1/26 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105498 Eth104/1/27 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105499 Eth104/1/28 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105500 Eth104/1/29 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105501 Eth104/1/30 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105502 Eth104/1/31 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105503 Eth104/1/32 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105504 Eth104/1/33 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105509 Eth104/1/38 up     success     success                    3136       
+                                                                            
+105510 Eth104/1/39 up     success     success                    3136       
+                                                                            
+105511 Eth104/1/40 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105512 Eth104/1/41 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105513 Eth104/1/42 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105514 Eth104/1/43 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105515 Eth104/1/44 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105516 Eth104/1/45 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105517 Eth104/1/46 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105518 Eth104/1/47 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+105519 Eth104/1/48 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106498 Eth105/1/3  down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106501 Eth105/1/6  down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106502 Eth105/1/7  down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106503 Eth105/1/8  down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106504 Eth105/1/9  down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106505 Eth105/1/10 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106506 Eth105/1/11 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106507 Eth105/1/12 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106508 Eth105/1/13 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106509 Eth105/1/14 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106510 Eth105/1/15 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106511 Eth105/1/16 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106512 Eth105/1/17 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106513 Eth105/1/18 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106514 Eth105/1/19 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106515 Eth105/1/20 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106516 Eth105/1/21 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106517 Eth105/1/22 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106518 Eth105/1/23 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106519 Eth105/1/24 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106520 Eth105/1/25 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106521 Eth105/1/26 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106522 Eth105/1/27 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106523 Eth105/1/28 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106524 Eth105/1/29 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106525 Eth105/1/30 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106526 Eth105/1/31 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106527 Eth105/1/32 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106528 Eth105/1/33 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106529 Eth105/1/34 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106530 Eth105/1/35 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106531 Eth105/1/36 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106532 Eth105/1/37 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106533 Eth105/1/38 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106534 Eth105/1/39 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106535 Eth105/1/40 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106536 Eth105/1/41 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106537 Eth105/1/42 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106538 Eth105/1/43 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106539 Eth105/1/44 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106540 Eth105/1/45 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106541 Eth105/1/46 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106542 Eth105/1/47 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+106543 Eth105/1/48 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107520 Eth106/1/1  up     success     success                    188        
+                                                                            
+107521 Eth106/1/2  up     success     success                    188        
+                                                                            
+107522 Eth106/1/3  down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107523 Eth106/1/4  down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107524 Eth106/1/5  up     success     success                    188        
+                                                                            
+107525 Eth106/1/6  up     success     success                    188        
+                                                                            
+107526 Eth106/1/7  up     success     success                    188        
+                                                                            
+107527 Eth106/1/8  down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107528 Eth106/1/9  down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107529 Eth106/1/10 up     success     success                    188        
+                                                                            
+107546 Eth106/1/27 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107547 Eth106/1/28 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107548 Eth106/1/29 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107549 Eth106/1/30 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107550 Eth106/1/31 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107551 Eth106/1/32 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107552 Eth106/1/33 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107553 Eth106/1/34 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107554 Eth106/1/35 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107555 Eth106/1/36 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107556 Eth106/1/37 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107557 Eth106/1/38 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107558 Eth106/1/39 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107559 Eth106/1/40 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107560 Eth106/1/41 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107561 Eth106/1/42 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107562 Eth106/1/43 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107563 Eth106/1/44 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107564 Eth106/1/45 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107565 Eth106/1/46 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107566 Eth106/1/47 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+107567 Eth106/1/48 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+108548 Eth107/1/5  up     success     success                    188        
+                                                                            
+108553 Eth107/1/10 up     success     success                    188        
+                                                                            
+108554 Eth107/1/11 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+108555 Eth107/1/12 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+108556 Eth107/1/13 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+108557 Eth107/1/14 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+108558 Eth107/1/15 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+108559 Eth107/1/16 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+108560 Eth107/1/17 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+108577 Eth107/1/34 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+108578 Eth107/1/35 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+108579 Eth107/1/36 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+108580 Eth107/1/37 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+108581 Eth107/1/38 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+108582 Eth107/1/39 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+108583 Eth107/1/40 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+108584 Eth107/1/41 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+108585 Eth107/1/42 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+108586 Eth107/1/43 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+108587 Eth107/1/44 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+108588 Eth107/1/45 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+108589 Eth107/1/46 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+108590 Eth107/1/47 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+108591 Eth107/1/48 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+109568 Eth108/1/1  down*  failed      Consistency Check Not      -          
+                                      Performed                             
+109569 Eth108/1/2  down*  failed      Consistency Check Not      -          
+                                      Performed                             
+109570 Eth108/1/3  up     success     success                    3131       
+                                                                            
+109571 Eth108/1/4  up     success     success                    174        
+                                                                            
+109572 Eth108/1/5  up     success     success                    3131       
+                                                                            
+109573 Eth108/1/6  up     success     success                    295        
+                                                                            
+109574 Eth108/1/7  up     success     success                    190        
+                                                                            
+109575 Eth108/1/8  up     success     success                    190        
+                                                                            
+109576 Eth108/1/9  up     success     success                    190        
+                                                                            
+109577 Eth108/1/10 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+109578 Eth108/1/11 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+109579 Eth108/1/12 up     success     success                    169        
+                                                                            
+109580 Eth108/1/13 up     success     success                    295        
+                                                                            
+109581 Eth108/1/14 up     success     success                    190        
+                                                                            
+109582 Eth108/1/15 up     success     success                    190        
+                                                                            
+109583 Eth108/1/16 up     success     success                    190        
+                                                                            
+109584 Eth108/1/17 up     success     success                    190        
+                                                                            
+109585 Eth108/1/18 up     success     success                    3131       
+                                                                            
+109586 Eth108/1/19 up     success     success                    3131       
+                                                                            
+109587 Eth108/1/20 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+109588 Eth108/1/21 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+109589 Eth108/1/22 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+109590 Eth108/1/23 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+109591 Eth108/1/24 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+109592 Eth108/1/25 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+109593 Eth108/1/26 up     success     success                    3183       
+                                                                            
+109594 Eth108/1/27 up     success     success                    3183       
+                                                                            
+109595 Eth108/1/28 up     success     success                    3183       
+                                                                            
+109596 Eth108/1/29 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+109597 Eth108/1/30 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+109598 Eth108/1/31 up     success     success                    3141       
+                                                                            
+109603 Eth108/1/36 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+109604 Eth108/1/37 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+109605 Eth108/1/38 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+109606 Eth108/1/39 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+109607 Eth108/1/40 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+109608 Eth108/1/41 up     success     success                    3141       
+                                                                            
+109609 Eth108/1/42 up     success     success                    3141       
+                                                                            
+109610 Eth108/1/43 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+109611 Eth108/1/44 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+109612 Eth108/1/45 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+109613 Eth108/1/46 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+109614 Eth108/1/47 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+109615 Eth108/1/48 down*  failed      Consistency Check Not      -          
+                                      Performed                             
+262444 Po301       down*  failed      Consistency Check Not      -          
+                                      Performed                             
+262445 Po302       down*  failed      Consistency Check Not      -          
+                                      Performed                             
+262446 Po303       down*  failed      Consistency Check Not      -          
+                                      Performed                             
+262447 Po304       down*  failed      Consistency Check Not      -          
+                                      Performed                             
+262448 Po305       up     success     success                    3136,3150  
+                                                                            
+262449 Po306       up     success     success                    3136,3150  
+                                                                            
+262450 Po307       down*  failed      Consistency Check Not      -          
+                                      Performed                             
+262451 Po308       down*  failed      Consistency Check Not      -          
+                                      Performed                             
+262452 Po309       down*  failed      Consistency Check Not      -          
+                                      Performed                             
+262453 Po310       down*  failed      Consistency Check Not      -          
+                                      Performed                             
+262454 Po311       down*  failed      Consistency Check Not      -          
+                                      Performed                             
+262455 Po312       down*  failed      Consistency Check Not      -          
+                                      Performed                             
+262456 Po313       down*  failed      Consistency Check Not      -          
+                                      Performed                             
+262457 Po314       down*  failed      Consistency Check Not      -          
+                                      Performed                             
+262458 Po315       down*  failed      Consistency Check Not      -          
+                                      Performed                             
+262459 Po316       down*  failed      Consistency Check Not      -          
+                                      Performed                             
+262460 Po317       down*  failed      Consistency Check Not      -          
+                                      Performed                             
+262461 Po318       down*  failed      Consistency Check Not      -          
+                                      Performed                             
+262462 Po319       down*  failed      Consistency Check Not      -          
+                                      Performed                             
+262463 Po320       down*  failed      Consistency Check Not      -          
+                                      Performed                             
+262464 Po321       down*  failed      Consistency Check Not      -          
+                                      Performed                             
+262465 Po322       down*  failed      Consistency Check Not      -          
+                                      Performed                             
+262467 Po324       up     success     success                    3128       
+                                                                            
+

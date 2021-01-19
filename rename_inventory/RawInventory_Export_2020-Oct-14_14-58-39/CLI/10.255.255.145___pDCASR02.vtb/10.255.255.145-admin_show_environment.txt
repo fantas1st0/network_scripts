@@ -1,0 +1,301 @@
+
+Tue Oct 13 20:14:40.256 MSK
+
+Temperature Information
+---------------------------------------------
+
+R/S/I 	Modules	Sensor			(deg C)
+0/RSP0/*
+	host	die_CPU			27.0
+	host	die_FabArbiter0		38.0
+	host	die_FabArbiter1		40.0
+	host	die_FIA			35.0
+	host	die_FabSwitch0		40.0
+	host	die_FabSwitch1		40.0
+	host	temp_u275		23.5
+	host	temp_u276		31.0
+	host	temp_u278		34.7
+	host	temp_u277		30.6
+	host	temp_u279		32.8
+	host	temp_u280		41.0
+	host	temp_u281		32.6
+	host	temp_u282		42.2
+	host	Inlet0			23.5
+	host	Hotspot0		31.0
+                              
+
+0/0/*
+	ep0	Inlet0			25.8
+	ep0	Hotspot0		34.1
+                              
+	ep1	Inlet0			25.3
+	ep1	Hotspot0		32.3
+                              
+	host	die_NP0			56.0
+	host	die_NP1			54.0
+	host	die_NP2			58.0
+	host	die_NP3			58.0
+	host	die_FIA0		51.5
+	host	die_FIA1		44.0
+	host	die_FIA2		49.0
+	host	die_FIA3		48.0
+	host	die_FabSwitch		52.0
+	host	Inlet0			25.8
+	host	Hotspot0		44.1
+                              
+
+
+
+0/FT0/*
+	host	Inlet0			25.1
+	host	Hotspot0		23.9
+                              
+0/FT1/*
+	host	Inlet0			26.9
+	host	Hotspot0		24.1
+                              
+
+
+
+
+
+
+Active temperature Alarms
+---------------------------------------------
+
+R/S/I	Sensor          Alarm    			Raised at (time) 
+
+Voltage Information
+---------------------------------------------
+
+R/S/I 	Modules	Sensor			 (mV)	Margin
+0/RSP0/*
+	host	VP3P3_CAN		 3299	n/a
+	host	VP2P5			 2499	n/a
+	host	VP3P3			 3299	n/a
+	host	VP1P2			 1199	n/a
+	host	VP1P5			 1500	n/a
+	host	VP1P8			 1800	n/a
+	host	VP5P0			 4999	n/a
+	host	VP7P0			 6999	n/a
+	host	VP2P5_DB		 2500	n/a
+	host	VP1P8_DB		 1800	n/a
+	host	VP1P5_DB		 1499	n/a
+	host	VP1P2_DB		 1200	n/a
+	host	VP0P75_DB		  752	n/a
+	host	VP1P05_DB		 1050	n/a
+	host	VP1P8_ENSO		 1799	n/a
+	host	VP1P0_SAC0_VDDA		 1000	n/a
+	host	VP1P0_SAC0_VDDD_VDDACM	 1000	n/a
+	host	VP1P2_SERDES_PLL_LGN	 1200	n/a
+	host	VP1P0_SAC1_VDDD_VDDACM	 1000	n/a
+	host	VP1P0_SAC1_VDDA		 1000	n/a
+	host	VP1P0_SAC1_VDD		 1000	n/a
+	host	VP1P0_SAC0_VDD		 1000	n/a
+	host	VP1P0_DAO		 1000	n/a
+	host	VP1P0_KAW_LDO		 1000	n/a
+	host	VP1P0_MGTVCC_DAO	 1000	n/a
+	host	VP1P2_SERDES_PLL_DAO	 1199	n/a
+	host	VP1P0_SKT_IO		 1000	n/a
+	host	VP1P0_SKT_CORE		 1000	n/a
+	host	VP1P9_LDO		 1900	n/a
+	host	VP1P8_10GPHY_LDO	 1800	n/a
+	host	VP1P2_10GPHY_01		 1200	n/a
+	host	VP0P75_TMX_VTT		  747	n/a
+	host	VP3P3_OCXO		 3299	n/a
+	host	VP1P8_OCXO		 1800	n/a
+	host	VP1P0_ARB		 1000	n/a
+
+
+0/0/*
+	ep0	VP2P5			 2499	n/a
+	ep0	VP3P3			 3299	n/a
+	ep0	VP1P2			 1200	n/a
+	ep0	VP0P9_HEXP0		  900	n/a
+	ep0	VP0P9_LDO		  899	n/a
+                              
+	ep1	VP2P5			 2499	n/a
+	ep1	VP3P3			 3299	n/a
+	ep1	VP1P2			 1199	n/a
+	ep1	VP0P9_HEXP0		  900	n/a
+	ep1	VP0P9_LDO		  900	n/a
+                              
+	host	VP3P3_CAN		 3301	n/a
+	host	VP3.3V_CAN_DB		 3277	n/a
+	host	VP1P0_SAC_CORE		 1000	n/a
+	host	VP1P0_SAC_VDDA		 1000	n/a
+	host	VP1P0_SAC_VDDD		 1000	n/a
+	host	VP1P2_SAC_VDDT		 1199	n/a
+	host	VP1P8_SAC_VDDR		 1800	n/a
+	host	VP1P0_LAN		 1000	n/a
+	host	VP1P0_SKT1_CORE		 1000	n/a
+	host	VP1P0_SKT1_IO		  999	n/a
+	host	VP1P5_SKT1_IO		 1500	n/a
+	host	VP2P5_SKT1_IO		 2500	n/a
+	host	VP1P0_SKT2_CORE		  999	n/a
+	host	VP1P0_SKT2_IO		  999	n/a
+	host	VP1P5_SKT2_IO		 1500	n/a
+	host	VP2P5_SKT2_IO		 2499	n/a
+	host	VP1P0_CPU_CORE		 1000	n/a
+	host	VP1P0_CPU_PLAT		 1020	n/a
+	host	VTT_0P75_CPU		  750	n/a
+	host	VP2P5			 2499	n/a
+	host	VP3P3			 3299	n/a
+	host	VP1P2			 1200	n/a
+	host	VP1P5			 1500	n/a
+	host	VP1P8			 1799	n/a
+	host	VP5P0			 5000	n/a
+	host	VP7P0			 6998	n/a
+	host	VP3P3_ZL_VDD		 3299	n/a
+	host	1.0_N0_CORE_DB		 1050	n/a
+	host	1.5_N0_IO_DB		 1500	n/a
+	host	0.75_N0_VTT_DB		  751	n/a
+	host	1.0_N1_CORE_DB		 1050	n/a
+	host	1.5_N1_IO_DB		 1500	n/a
+	host	0.75_N1_VTT_DB		  748	n/a
+	host	0.9_T01_CORE_DB		  900	n/a
+	host	1.8_N01_IO_DB		 1800	n/a
+	host	VP1P0_SKT0_CORE		 1000	n/a
+	host	VP1P0_SKT0_IO		 1000	n/a
+	host	VP1P5_SKT0_IO		 1499	n/a
+	host	VP2P5_SKT0_IO		 2499	n/a
+	host	VP1P8_ZL_VCORE		 1800	n/a
+	host	VP1P0_N2_CORE_DB	 1050	n/a
+	host	VP1P5_N2_IO_DB		 1499	n/a
+	host	VP0P75_N2_VTT_DB	  751	n/a
+	host	VP1P8_N23_IO_DB		 1799	n/a
+	host	VP5P0_DB		 4999	n/a
+	host	VP1P0_N3_CORE_DB	 1050	n/a
+	host	VP1P5_N3_IO_DB		 1499	n/a
+	host	VP0P75_N3_VTT_DB	  744	n/a
+	host	VP7P0_DB		 6999	n/a
+	host	VP1P0_SKT3_CORE_DB	 1000	n/a
+	host	VP1P0_SKT3_IO_DB	  999	n/a
+	host	VP1P5_SKT3_IO_DB	 1500	n/a
+	host	VP3P3_DB		 3300	n/a
+	host	VP2P5_DB		 2500	n/a
+	host	VP1P2_STARKAD		 1200	n/a
+	host	VP1P0_PEX_1		  999	n/a
+	host	VP1P0_PEX_2		  999	n/a
+	host	VP1P2_LDO_LANCER	 1197	n/a
+	host	VP1P2_RAGNAR_CORE_DB	 1199	n/a
+	host	VP1P5_RAGNAR_IO_DB	 1500	n/a
+	host	VP1P8_RAGNAR_IO_DB	 1800	n/a
+	host	0.9_T23_CORE_DB		  900	n/a
+	host	VP2P5_SKT3_IO_DB	 2500	n/a
+	host	VP2P5_N01_IO_DB		 2500	n/a
+	host	VP2P5_N23_IO_DB		 2500	n/a
+
+
+
+
+0/FT0/*
+
+0/FT1/*
+
+0/BPID0/*
+
+
+LED Information
+---------------------------------------------
+
+R/S/I 	Modules	LED		Status
+0/RSP0/*
+	host	Critical-Alarm	Off
+	host	Major-Alarm	Off
+	host	Minor-Alarm	Off
+	host	ACO		Off
+	host	Fail		Off
+
+BMC  Information
+---------------------------------------------
+
+
+Fan Information
+---------------------------------------------
+
+  Fan speed (rpm) and run time (in hours) :
+  	FAN0	FAN1	FAN2	FAN3	FAN4	FAN5
+
+0/FT0/* (Speed) 
+	6720	6840	6840	6810	6780	6900
+0/FT0/* (Run Time) 
+	N/A	N/A	N/A	N/A	N/A	N/A
+0/FT1/* (Speed) 
+	6810	6840	6810	6870	6780	6840
+0/FT1/* (Run Time) 
+	N/A	N/A	N/A	N/A	N/A	N/A
+Power Supply Information
+---------------------------------------------
+
+R/S/I 	Modules		Capacity	Status
+			(W)
+0/PS0/M0/*
+	host	PM	3000		Ok
+
+0/PS0/M1/*
+	host	PM	3000		Ok
+
+
+R/S/I 		Power Supply	Voltage		Current
+		(W)		(V)		(A)
+0/PS0/M0/*  	 392.6		55.3		 7.1
+0/PS0/M1/*  	 376.0		55.3		 6.8
+--------------
+Total:	768.6
+
+
+R/S/I 		Power Draw	Voltage		Current
+		(W)		(V)		(A)
+ 0/FT0/*  	 275 **
+ 0/FT1/*  	 275 **
+--------------
+Total:	550.0
+
+
+R/S/I 		Power Draw	Voltage		Current
+		(W)		(V)		(A)
+0/RSP0/*  	 170.5		55.0		 3.1
+--------------
+Total:	170.5
+
+
+R/S/I 		Power Draw	Voltage		Current
+		(W)		(V)		(A)
+   0/0/*  	 533.5		55.0		 9.7
+--------------
+Total:	533.5
+** Indicates worst case power draw (No power measuring sensor)
+
+Chassis Power Draw for rack 0: 768.6 (W)
+
+Power Budget Summary for Rack 0
+--------------------------------
+
+
+Power Shelves Type: AC
+Power Budget Strict Mode: Disabled 
+
+Total Power Capacity:				6000W
+Usable Power Capacity:				6000W
+N+1 Supply Failure Protected Capacity:		3000W
+Worst Case Power Used:				1840W
+
+ Slot							   Max Watts
+ ----							   ---------
+ 0/RSP0/CPU0							 350
+ 0/RSP1/CPU0							 350  (default)
+ 0/0/CPU0							 590
+ 0/FT0/SP							 275
+ 0/FT1/SP							 275
+
+Worst Case Power Available:		4160W
+N+1 Supply Protected Capacity Available:	1160W
+
+
+Altitude Information
+---------------------------------------------
+
+Altitude: 
+*0/**/*
+ 23 meters below sea level

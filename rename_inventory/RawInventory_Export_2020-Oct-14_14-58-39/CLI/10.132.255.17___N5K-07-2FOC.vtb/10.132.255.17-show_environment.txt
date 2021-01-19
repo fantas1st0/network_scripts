@@ -1,0 +1,62 @@
+
+
+
+Fan:
+------------------------------------------------------
+Fan             Model                Hw         Status
+------------------------------------------------------
+Chassis-1       N5548P-FAN           --         ok
+Chassis-2       N5548P-FAN           --         ok
+PS-1            N55-PAC-750W         --         ok
+PS-2            N55-PAC-750W         --         ok
+
+
+Temperature
+-----------------------------------------------------------------
+Module   Sensor     MajorThresh   MinorThres   CurTemp     Status
+                    (Celsius)     (Celsius)    (Celsius)         
+-----------------------------------------------------------------
+1        Fan side   100           90           20          ok             
+1        Outlet-1   100           90           48          ok             
+1        Intake-0   100           90           39          ok             
+1        Intake-1   100           90           43          ok             
+1        Sunnyvale  125           100          34          ok             
+1        Carmel-0   125           100          36          ok             
+1        Carmel-1   125           100          30          ok             
+1        Carmel-2   125           100          27          ok             
+1        Port side  100           90           36          ok             
+1        Control    58            53           20          ok             
+
+
+Power Supply:
+Voltage: 12 Volts
+-----------------------------------------------------------
+PS  Model                Input Power       Current   Status
+                         Type  (Watts)     (Amps)          
+-----------------------------------------------------------
+1   N55-PAC-750W         AC     780.00     65.00     ok                  
+2   N55-PAC-750W         AC     780.00     65.00     ok                  
+
+
+Mod Model                   Power     Current     Power     Current     Status
+                            Requested Requested   Allocated Allocated         
+                            (Watts)   (Amps)      (Watts)   (Amps)              
+--- ----------------------  -------   ----------  --------- ----------  ----------
+1    N5K-C5548UP-SUP        492.00    41.00       492.00    41.00       powered-up
+2    N55-M16UP              90.00     7.50        90.00     7.50        powered-up
+3    N55-DL2                24.00     2.00        24.00     2.00        powered-up
+
+
+Power Usage Summary:
+--------------------
+Power Supply redundancy mode:                 Redundant
+Power Supply redundancy operational mode:     Redundant
+
+Total Power Capacity                             1560.00 W
+
+Power reserved for Supervisor(s)                  492.00 W
+Power currently used by Modules                   114.00 W
+
+                                                -------------
+Total Power Available                             954.00 W
+                                                -------------

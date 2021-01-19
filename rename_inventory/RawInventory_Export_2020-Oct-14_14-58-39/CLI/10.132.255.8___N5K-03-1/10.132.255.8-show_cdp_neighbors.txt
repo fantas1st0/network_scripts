@@ -1,0 +1,34 @@
+
+Capability Codes: R - Router, T - Trans-Bridge, B - Source-Route-Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater,
+                  V - VoIP-Phone, D - Remotely-Managed-Device,
+                  s - Supports-STP-Dispute, M - Two-port Mac Relay
+
+
+Device ID              Local Intrfce   Hldtme  Capability  Platform      Port ID
+vDCSwitch01.vtb        mgmt0           139     S I         WS-C2960X-48T Gig1/0/9     
+VrnBSrvCat-1           Eth1/17         140     S I         WS-CBS3020-HP Gig0/17      
+VrnBSrvCat-2           Eth1/18         156     S I         WS-CBS3020-HP Gig0/17      
+VrnBSrvCat-3           Eth1/19         152     S I         WS-CBS3020-HP Gig0/17      
+VrnBSrvCat-4.vtb       Eth1/20         128     S I         WS-CBS3020-HP Gig0/17      
+VrnBSrvCat-5           Eth1/21         155     S I         WS-CBS3020-HP Gig0/17      
+VrnBSrvCat-6           Eth1/22         147     S I         WS-CBS3020-HP Gig0/17      
+nmlnvv03               Eth1/23         144     S           VMware ESX    vmnic5       
+N5K-03-2(SSI1523080M)  Eth1/29         139     S I s       N5K-C5548UP   Eth1/29      
+N5K-03-2(SSI1523080M)  Eth1/30         139     S I s       N5K-C5548UP   Eth1/30      
+vN77-1-vN7K1(JPG205200 Eth1/31         138     R S I s     N77-C7710     Eth1/2/1     
+vN77-2-vN7K2(JPG205200 Eth1/32         149     R S I s     N77-C7710     Eth1/2/1     
+vN77-1-vN7K1(JPG205200 Eth2/1          138     R S I s     N77-C7710     Eth1/2/2     
+vN77-2-vN7K2(JPG205200 Eth2/2          149     R S I s     N77-C7710     Eth1/2/2     
+N5K-03-2(SSI1523080M)  Eth2/3          139     S I s       N5K-C5548UP   Eth2/3       
+N5K-03-2(SSI1523080M)  Eth2/4          139     S I s       N5K-C5548UP   Eth2/4       
+na62801-node1          Eth2/5          143     H           FAS6280       e0f          
+na62801-node2          Eth2/6          151     H           FAS6280       e0f          
+CA-PM-DR02             Eth101/1/10     154     H           Red Hat Enter eth2         
+CA-PM-DR02             Eth101/1/11     154     H           Red Hat Enter eth4         
+CA-PM-DR02             Eth101/1/12     154     H           Red Hat Enter eth3         
+CA-PM-DR03             Eth101/1/13     169     H           Red Hat Enter eth5         
+CA-PM-DR03             Eth101/1/14     169     H           Red Hat Enter eth4         
+CA-PM-DR03             Eth101/1/15     169     H           Red Hat Enter eth2         
+CA-PM-DR03             Eth101/1/16     169     H           Red Hat Enter eth3         
+CA-PM-DR02             Eth101/1/18     154     H           Red Hat Enter eth5         

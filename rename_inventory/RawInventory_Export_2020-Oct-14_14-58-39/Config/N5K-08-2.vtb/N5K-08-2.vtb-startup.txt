@@ -1,0 +1,2373 @@
+
+
+!Command: show startup-config
+!Time: Fri Oct  2 00:24:41 2020
+!Startup config saved at: Wed Sep  9 12:29:03 2020
+
+version 7.1(3)N1(2)
+hostname N5K-08-2
+
+feature privilege
+feature telnet
+feature tacacs+
+cfs eth distribute
+feature udld
+feature interface-vlan
+feature lacp
+feature vpc
+feature lldp
+feature fex
+
+logging level vpc 7
+username xxxxxxx password 5 xxxxxxx role network-admin
+no password strength-check
+no ip domain-lookup
+ip domain-name vtb
+tacacs-server host 10.128.128.11 key 7  xxxxxxxx 
+tacacs-server host 10.164.140.150 key 7  xxxxxxxx 
+aaa group server tacacs+ MSK-TAC
+  server 10.128.128.11
+  server 10.164.140.150
+crypto key param rsa label N5K-08-2FOC.vtb modulus 2048
+ip access-list 111
+  10 permit ip 10.64.0.111/32 any
+ip access-list Snmp-Enable
+  10 permit ip 10.132.128.0/24 any
+  20 permit ip 10.150.128.0/24 any
+  50 permit ip 10.164.147.0/24 any
+control-plane
+  service-policy input copp-system-policy-customized
+policy-map type control-plane copp-system-policy-customized
+  class copp-system-class-default
+    police cir 2048 kbps bc 6400000 bytes
+fex 102
+  pinning max-links 1
+  description "2K-08-102"
+fex 104
+  pinning max-links 1
+  description "2K-08-104"
+fex 106
+  pinning max-links 1
+  description "2K-08-106"
+fex 108
+  pinning max-links 1
+  description "2K-08-108"
+fex 110
+  pinning max-links 1
+  description "2K-08-110"
+fex 116
+  pinning max-links 1
+  description "2K-08-116"
+fex 118
+  pinning max-links 1
+  description "FEX0118"
+fex 120
+  pinning max-links 1
+  description "FEX0120"
+snmp-server user xxxxxxxx network-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server host 10.132.128.21 traps version 2c xxxxxxxx 
+snmp-server host 10.132.128.21 use-vrf default
+snmp-server host 10.164.147.100 traps version 2c xxxxxxxx 
+snmp-server host 10.164.147.100 use-vrf default
+snmp-server host 10.150.128.100 traps version 2c xxxxxxxx 
+snmp-server host 10.150.128.100 use-vrf default
+rmon event 1 log trap public description FATAL(1) owner PMON@FATAL
+rmon event 2 log trap public description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 log trap public description ERROR(3) owner PMON@ERROR
+rmon event 4 log trap public description WARNING(4) owner PMON@WARNING
+rmon event 5 log trap public description INFORMATION(5) owner PMON@INFO
+snmp-server enable traps cfs state-change-notif
+snmp-server enable traps cfs merge-failure
+snmp-server enable traps feature-control FeatureOpStatusChange
+snmp-server enable traps sysmgr cseFailSwCoreNotifyExtended
+snmp-server enable traps config ccmCLIRunningConfigChanged
+snmp-server enable traps feature-control ciscoFeatOpStatusChange
+snmp-server community xxxxxxxx group network-operator
+snmp-server community xxxxxxxx group network-operator
+snmp-server community xxxxxxxx group network-admin
+snmp-server community xxxxxxxx use-acl Snmp-ReadOnly
+snmp-server community xxxxxxxx use-acl 111
+snmp-server community xxxxxxxx use-acl Snmp-Enable
+ntp server 10.130.255.100
+ntp server 10.164.0.200
+ntp source-interface Vlan3000
+aaa authentication login default group MSK-TAC
+aaa accounting default group MSK-TAC
+
+ip route 0.0.0.0/0 10.132.255.1
+vlan 1, 169
+vlan 172
+  name VipInet
+vlan 174
+  name nInet-SRV-Servers
+vlan 177
+  name vVrnInetServers
+vlan 179
+  name Somib_Servers
+vlan 180
+vlan 188
+  name VTB_Servers_R502
+vlan 190
+  name SERVER_VORON
+vlan 193
+vlan 194
+  name Vrn_DevCorp_Servers
+vlan 431
+  name Test_STerra
+vlan 3000
+  name MNG
+vlan 3006
+  name peer-keepalive
+vlan 3128
+  name Netadmin_Servers
+vlan 3130
+  name VTB-Core-SRV
+vlan 3131
+  name mng_SRV_VTB-Core
+vlan 3136
+  name ILO_2
+vlan 3138
+  name VIRT_APP_VTB
+vlan 3139
+vlan 3141
+  name cons-2
+vlan 3151
+  name RSRV_252.64/26
+vlan 3153
+vlan 3155
+  name VDI-SRV2
+vlan 3157
+  name VDI-SRV3
+vlan 3167
+  name ILO
+vlan 3168
+  name NS_Balance_VDI
+vlan 3183
+  name VTB-SRV-Consoles
+vlan 3196
+  name Local_Nutanix_VDI
+vlan 3197
+  name GroupVTB
+vlan 3258
+vlan 3300
+  name VTB-VDI-TEST
+vlan 3301
+  name VDI-hosts2
+vlan 3302
+  name VDI-hosts3
+vlan 3303
+  name VDI-hosts4
+vlan 3304
+  name VDI-hosts5
+vlan 3305
+  name VDI-hosts6
+vlan 3306
+  name VDI-hosts7
+vlan 3307
+  name VDI-hosts8
+vlan 3308
+  name VTB-DEV_VDI
+vlan 3313
+  name VDI-30
+vlan 3315
+  name VipInet_VDI_2
+vlan 3316
+  name HPCloud-TEST
+vlan 3324
+  name VDI-9
+vlan 3325
+  name VDI-10
+vlan 3326
+  name VDI-11
+vlan 3327
+  name VDI-12
+vlan 3328
+  name VDI-13
+vlan 3329
+  name VDI-14
+vlan 3330
+  name VDI-15
+vlan 3331
+  name VDI-16
+vlan 3332
+  name VDI-17
+vlan 3333
+  name VDI-18
+vlan 3334
+  name VDI-19
+vlan 3335
+  name VDI-20
+vlan 3336
+  name VDI-21
+vlan 3337
+  name VDI-22
+vlan 3338
+  name VDI-23
+vlan 3339
+  name VDI-24
+vlan 3340
+  name VDI-25
+vlan 3341
+  name VDI-26
+vlan 3342
+  name VDI-27
+vlan 3343
+  name VDI-28
+vlan 3344
+  name VDI-29
+vlan 3408
+  name VTB-GW
+vlan 3428
+  name VipInet_VdiSRV
+vlan 3429
+  name VipInet_VdivMotion
+vlan 3430
+  name VipInet_VDI
+vlan 3442
+  name CitrixSDX-VipInet
+vlan 3444
+  name STerra-Link
+vlan 3450
+  name vdi-32
+vlan 3451
+  name vdi-33
+vlan 3452
+  name vdi-34
+vlan 3453
+  name VDI-ADMIN
+vlan 3467
+  name vdi_3467
+vlan 3493
+  name link_nInet-SRV
+
+no spanning-tree vlan 3006
+spanning-tree vlan 1-3967, 4048-4093 priority 57344
+vrf context management
+vpc domain 58
+  role priority 200
+  peer-keepalive destination 10.132.253.157 source 10.132.253.158 vrf default
+  delay restore 150
+
+
+interface Vlan1
+
+interface Vlan3000
+  no shutdown
+  ip address 10.132.255.19/25
+
+interface Vlan3006
+  no shutdown
+  ip address 10.132.253.158/30
+
+interface port-channel7
+  switchport mode trunk
+  switchport trunk allowed vlan 1-3005,3007-3967,4048-4093
+  vpc 7
+
+interface port-channel102
+  description 2K-08-102
+  switchport mode fex-fabric
+  no lacp suspend-individual
+  fex associate 102
+
+interface port-channel104
+  description 2K-08-104
+  switchport mode fex-fabric
+  no lacp suspend-individual
+  fex associate 104
+
+interface port-channel106
+  description 2K-08-106
+  switchport mode fex-fabric
+  no lacp suspend-individual
+  fex associate 106
+
+interface port-channel108
+  description 2K-08-108
+  switchport mode fex-fabric
+  no lacp suspend-individual
+  fex associate 108
+
+interface port-channel110
+  description 2K-08-110
+  switchport mode fex-fabric
+  no lacp suspend-individual
+  fex associate 110
+
+interface port-channel116
+  description 2K-08-116
+  switchport mode fex-fabric
+  fex associate 116
+
+interface port-channel301
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 301
+
+interface port-channel302
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 302
+
+interface port-channel303
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 303
+
+interface port-channel304
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 304
+
+interface port-channel305
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 305
+
+interface port-channel306
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 306
+
+interface port-channel307
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 307
+
+interface port-channel308
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 308
+
+interface port-channel309
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 309
+
+interface port-channel310
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 310
+
+interface port-channel311
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 311
+
+interface port-channel312
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 312
+
+interface port-channel313
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 313
+
+interface port-channel314
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 314
+
+interface port-channel315
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 315
+
+interface port-channel316
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 316
+
+interface port-channel317
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 317
+
+interface port-channel318
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 318
+
+interface port-channel319
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 319
+
+interface port-channel320
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 320
+
+interface port-channel321
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 321
+
+interface port-channel322
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 322
+
+interface port-channel323
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 323
+
+interface port-channel324
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 324
+
+interface port-channel325
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 325
+
+interface port-channel326
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 326
+
+interface port-channel327
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 327
+
+interface port-channel328
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 328
+
+interface port-channel329
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 329
+
+interface port-channel330
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 330
+
+interface port-channel331
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 331
+
+interface port-channel332
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 332
+
+interface port-channel333
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 333
+
+interface port-channel334
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 334
+
+interface port-channel335
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 335
+
+interface port-channel336
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 336
+
+interface port-channel337
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 337
+
+interface port-channel338
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 338
+
+interface port-channel339
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 339
+
+interface port-channel340
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 340
+
+interface port-channel341
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 341
+
+interface port-channel342
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 342
+
+interface port-channel343
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 343
+
+interface port-channel344
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 344
+
+interface port-channel345
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 345
+
+interface port-channel346
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 346
+
+interface port-channel347
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 347
+
+interface port-channel348
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 348
+
+interface port-channel349
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 349
+
+interface port-channel350
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 350
+
+interface port-channel351
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 351
+
+interface port-channel352
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 352
+
+interface port-channel353
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 353
+
+interface port-channel354
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 354
+
+interface port-channel355
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 355
+
+interface port-channel356
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 356
+
+interface port-channel357
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 357
+
+interface port-channel358
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 358
+
+interface port-channel359
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 359
+
+interface port-channel360
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 360
+
+interface port-channel361
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 361
+
+interface port-channel362
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 362
+
+interface port-channel363
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 363
+
+interface port-channel364
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 364
+
+interface port-channel365
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 365
+
+interface port-channel366
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 366
+
+interface port-channel367
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 367
+
+interface port-channel368
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 368
+
+interface port-channel369
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3315,3324-3344,3428-3430,3450-3453,3467
+  speed 10000
+  vpc 369
+
+interface port-channel370
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3315,3324-3344,3428-3430,3450-3453,3467
+  speed 10000
+  vpc 370
+
+interface port-channel371
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3315,3324-3344,3428-3430,3450-3453,3467
+  speed 10000
+  vpc 371
+
+interface port-channel372
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 372
+
+interface port-channel373
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 373
+
+interface port-channel374
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 374
+
+interface port-channel375
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 375
+
+interface port-channel376
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 376
+
+interface port-channel377
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 377
+
+interface port-channel378
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 378
+
+interface port-channel379
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 379
+
+interface port-channel380
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 380
+
+interface port-channel381
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 381
+
+interface port-channel382
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 382
+
+interface port-channel383
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 383
+
+interface port-channel384
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 384
+
+interface port-channel385
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 385
+
+interface port-channel386
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 386
+
+interface port-channel387
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 387
+
+interface port-channel388
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 388
+
+interface port-channel389
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 389
+
+interface port-channel390
+  description Citrix SDX
+  switchport mode trunk
+  switchport trunk allowed vlan 3155,3168,3197,3428,3442
+  speed 10000
+  vpc 390
+
+interface port-channel391
+  description Citrix SDX
+  switchport mode trunk
+  switchport trunk allowed vlan 3155,3168,3197,3428,3442
+  speed 10000
+  vpc 391
+
+interface port-channel392
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 392
+
+interface port-channel393
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 393
+
+interface port-channel394
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 394
+
+interface port-channel395
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 395
+
+interface port-channel396
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 396
+
+interface port-channel397
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 397
+
+interface port-channel398
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 398
+
+interface port-channel399
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 399
+
+interface port-channel400
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 400
+
+interface port-channel401
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 401
+
+interface port-channel402
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 402
+
+interface port-channel403
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 403
+
+interface port-channel404
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 404
+
+interface port-channel405
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 405
+
+interface port-channel406
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 406
+
+interface port-channel407
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 407
+
+interface port-channel408
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 408
+
+interface port-channel409
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 409
+
+interface port-channel410
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 410
+
+interface port-channel411
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 411
+
+interface port-channel412
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 412
+
+interface port-channel413
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 413
+
+interface port-channel414
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 414
+
+interface port-channel415
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 415
+
+interface port-channel416
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 416
+
+interface port-channel417
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 417
+
+interface port-channel418
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 418
+
+interface port-channel419
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 419
+
+interface port-channel420
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 420
+
+interface port-channel421
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  speed 10000
+  vpc 421
+
+interface port-channel422
+
+interface port-channel423
+
+interface port-channel424
+  switchport mode trunk
+  switchport trunk allowed vlan 3138-3139,3183
+  speed 10000
+  flowcontrol send on
+
+interface port-channel425
+  switchport mode trunk
+  switchport trunk allowed vlan 3138-3139,3183
+  flowcontrol send on
+
+interface port-channel426
+  description [vNETTEST]
+  switchport access vlan 3128
+  vpc 426
+
+interface port-channel427
+  description [vRPTMGR]
+  switchport access vlan 3128
+  vpc 427
+
+interface port-channel428
+  description Nutanix-SRV1
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3324-3344,3450-3453
+  speed 10000
+  vpc 428
+
+interface port-channel429
+  description Nutanix-SRV2
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3324-3344,3450-3453
+  speed 10000
+  vpc 429
+
+interface port-channel430
+  description Nutanix-SRV3
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3324-3344,3450-3453
+  speed 10000
+  vpc 430
+
+interface port-channel431
+  description Nutanix-SRV4
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3324-3344,3450-3453
+  speed 10000
+  vpc 431
+
+interface port-channel1000
+  description --- 5K5 peer-link ---
+  switchport mode trunk
+  switchport trunk allowed vlan 1-3005,3007-3967,4048-4093
+  spanning-tree port type network
+  vpc peer-link
+
+interface port-channel1001
+  description --- 5K5 peer-keepalive ---
+  switchport mode trunk
+  switchport trunk allowed vlan 3006
+
+interface Ethernet1/1
+  description 2K-08-102
+  switchport mode fex-fabric
+  fex associate 102
+  channel-group 102
+
+interface Ethernet1/2
+  description 2K-08-102
+  switchport mode fex-fabric
+  fex associate 102
+  channel-group 102
+
+interface Ethernet1/3
+  description 2K-08-102
+  switchport mode fex-fabric
+  fex associate 102
+  channel-group 102
+
+interface Ethernet1/4
+  description 2K-08-102
+  switchport mode fex-fabric
+  fex associate 102
+  channel-group 102
+
+interface Ethernet1/5
+  description 2K-08-104
+  switchport mode fex-fabric
+  fex associate 104
+  channel-group 104
+
+interface Ethernet1/6
+  description 2K-08-104
+  switchport mode fex-fabric
+  fex associate 104
+  channel-group 104
+
+interface Ethernet1/7
+  description 2K-08-104
+  switchport mode fex-fabric
+  fex associate 104
+  channel-group 104
+
+interface Ethernet1/8
+  description 2K-08-104
+  switchport mode fex-fabric
+  fex associate 104
+  channel-group 104
+
+interface Ethernet1/9
+  description 2K-08-106
+  switchport mode fex-fabric
+  fex associate 106
+  channel-group 106
+
+interface Ethernet1/10
+  description 2K-08-106
+  switchport mode fex-fabric
+  fex associate 106
+  channel-group 106
+
+interface Ethernet1/11
+  description 2K-08-106
+  switchport mode fex-fabric
+  fex associate 106
+  channel-group 106
+
+interface Ethernet1/12
+  description 2K-08-106
+  switchport mode fex-fabric
+  fex associate 106
+  channel-group 106
+
+interface Ethernet1/13
+  description 2K-08-108
+  switchport mode fex-fabric
+  fex associate 108
+  channel-group 108
+
+interface Ethernet1/14
+  description 2K-08-108
+  switchport mode fex-fabric
+  fex associate 108
+  channel-group 108
+
+interface Ethernet1/15
+  description 2K-08-108
+  switchport mode fex-fabric
+  fex associate 108
+  channel-group 108
+
+interface Ethernet1/16
+  description 2K-08-108
+  switchport mode fex-fabric
+  fex associate 108
+  channel-group 108
+
+interface Ethernet1/17
+  description 2K-08-110
+  switchport mode fex-fabric
+  fex associate 110
+  channel-group 110
+
+interface Ethernet1/18
+  description 2K-08-110
+  switchport mode fex-fabric
+  fex associate 110
+  channel-group 110
+
+interface Ethernet1/19
+  description 2K-08-110
+  switchport mode fex-fabric
+  fex associate 110
+  channel-group 110
+
+interface Ethernet1/20
+  description 2K-08-110
+  switchport mode fex-fabric
+  fex associate 110
+  channel-group 110
+
+interface Ethernet1/21
+  switchport mode fex-fabric
+
+interface Ethernet1/22
+  switchport mode fex-fabric
+
+interface Ethernet1/23
+  switchport mode fex-fabric
+
+interface Ethernet1/24
+  switchport mode fex-fabric
+
+interface Ethernet1/25
+  description 2K-08-116
+  switchport mode fex-fabric
+  fex associate 116
+  channel-group 116
+
+interface Ethernet1/26
+  description 2K-08-116
+  switchport mode fex-fabric
+  fex associate 116
+  channel-group 116
+
+interface Ethernet1/27
+
+interface Ethernet1/28
+
+interface Ethernet1/29
+  description keepalive channel
+  switchport mode trunk
+  switchport trunk allowed vlan 3006
+  udld aggressive
+  channel-group 1001 mode active
+
+interface Ethernet1/30
+  switchport mode trunk
+  switchport trunk allowed vlan 1-3005,3007-3967,4048-4093
+  udld aggressive
+  channel-group 1000 mode active
+
+interface Ethernet1/31
+  switchport mode trunk
+  switchport trunk allowed vlan 1-3005,3007-3967,4048-4093
+  udld aggressive
+  channel-group 7 mode active
+
+interface Ethernet1/32
+  switchport mode trunk
+  switchport trunk allowed vlan 1-3005,3007-3967,4048-4093
+  udld aggressive
+  channel-group 7 mode active
+
+interface Ethernet1/33
+  switchport mode trunk
+  switchport trunk allowed vlan 1-3005,3007-3967,4048-4093
+  udld aggressive
+  channel-group 7 mode active
+
+interface Ethernet1/34
+  switchport mode trunk
+  switchport trunk allowed vlan 1-3005,3007-3967,4048-4093
+  udld aggressive
+  channel-group 7 mode active
+
+interface Ethernet1/35
+  switchport mode trunk
+  switchport trunk allowed vlan 1-3005,3007-3967,4048-4093
+  udld aggressive
+  channel-group 1000 mode active
+
+interface Ethernet1/36
+  description keepalive channel
+  switchport mode trunk
+  switchport trunk allowed vlan 3006
+  udld aggressive
+  channel-group 1001 mode active
+
+interface Ethernet1/37
+
+interface Ethernet1/38
+
+interface Ethernet1/39
+  switchport mode trunk
+  switchport trunk allowed vlan 3155,3168,3197,3428,3442
+  channel-group 390 mode active
+
+interface Ethernet1/40
+  switchport mode trunk
+  switchport trunk allowed vlan 3155,3168,3197,3428,3442
+  channel-group 390 mode active
+
+interface Ethernet1/41
+  switchport mode trunk
+  switchport trunk allowed vlan 3155,3168,3197,3428,3442
+  channel-group 391 mode active
+
+interface Ethernet1/42
+  switchport mode trunk
+  switchport trunk allowed vlan 3155,3168,3197,3428,3442
+  channel-group 391 mode active
+
+interface Ethernet1/43
+  description --- 2K08-118 ---
+  switchport mode fex-fabric
+  fex associate 118
+
+interface Ethernet1/44
+  description --- 2K08-118 ---
+  switchport mode fex-fabric
+  fex associate 118
+
+interface Ethernet1/45
+
+interface Ethernet1/46
+
+interface Ethernet1/47
+  description --- 2K08-120 ---
+  switchport mode fex-fabric
+  fex associate 120
+
+interface Ethernet1/48
+  description --- 2K08-120 ---
+  switchport mode fex-fabric
+  fex associate 120
+
+interface Ethernet2/1
+
+interface Ethernet2/2
+
+interface Ethernet2/3
+
+interface Ethernet2/4
+
+interface Ethernet2/5
+
+interface Ethernet2/6
+
+interface mgmt0
+  vrf member management
+
+interface Ethernet102/1/1
+  switchport access vlan 3130
+
+interface Ethernet102/1/2
+  switchport access vlan 188
+  speed 1000
+
+interface Ethernet102/1/3
+  switchport access vlan 172
+  speed 1000
+
+interface Ethernet102/1/4
+  switchport access vlan 194
+  speed 1000
+
+interface Ethernet102/1/5
+  switchport access vlan 3130
+  speed 1000
+
+interface Ethernet102/1/6
+  switchport access vlan 3130
+  speed 1000
+
+interface Ethernet102/1/7
+  switchport access vlan 188
+  speed 1000
+
+interface Ethernet102/1/8
+  shutdown
+  switchport access vlan 188
+  speed 1000
+
+interface Ethernet102/1/9
+  switchport access vlan 194
+  speed 1000
+
+interface Ethernet102/1/10
+  switchport access vlan 3183
+  speed 1000
+
+interface Ethernet102/1/11
+  switchport access vlan 3130
+
+interface Ethernet102/1/12
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3324-3344,3450-3453
+
+interface Ethernet102/1/13
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3324-3344,3450-3453
+
+interface Ethernet102/1/14
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3324-3344,3450-3453
+
+interface Ethernet102/1/15
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3324-3344,3450-3453
+
+interface Ethernet102/1/16
+  shutdown
+  speed 1000
+
+interface Ethernet102/1/17
+  description Nutanix 05-08
+  switchport mode trunk
+  switchport trunk allowed vlan 3155,3167,3300-3307,3324-3344,3450-3453
+
+interface Ethernet102/1/18
+  description Nutanix 05-08
+  switchport mode trunk
+  switchport trunk allowed vlan 3155,3167,3300-3307,3324-3344,3450-3453
+
+interface Ethernet102/1/19
+  description Nutanix 05-08
+  switchport mode trunk
+  switchport trunk allowed vlan 3155,3167,3300-3307,3324-3344,3450-3453
+
+interface Ethernet102/1/20
+  description Nutanix 05-08
+  switchport mode trunk
+  switchport trunk allowed vlan 3155,3167,3300-3307,3324-3344,3450-3453
+
+interface Ethernet102/1/21
+  shutdown
+
+interface Ethernet102/1/22
+  shutdown
+
+interface Ethernet102/1/23
+
+interface Ethernet102/1/24
+
+interface Ethernet102/1/25
+
+interface Ethernet102/1/26
+
+interface Ethernet102/1/27
+
+interface Ethernet102/1/28
+
+interface Ethernet102/1/29
+
+interface Ethernet102/1/30
+
+interface Ethernet102/1/31
+
+interface Ethernet102/1/32
+
+interface Ethernet104/1/1
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 392 mode active
+
+interface Ethernet104/1/2
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 393 mode active
+
+interface Ethernet104/1/3
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 394 mode active
+
+interface Ethernet104/1/4
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 395 mode active
+
+interface Ethernet104/1/5
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 396 mode active
+
+interface Ethernet104/1/6
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 397 mode active
+
+interface Ethernet104/1/7
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 398 mode active
+
+interface Ethernet104/1/8
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 399 mode active
+
+interface Ethernet104/1/9
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 400 mode active
+
+interface Ethernet104/1/10
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 401 mode active
+
+interface Ethernet104/1/11
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 402 mode active
+
+interface Ethernet104/1/12
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 403 mode active
+
+interface Ethernet104/1/13
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 404 mode active
+
+interface Ethernet104/1/14
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 405 mode active
+
+interface Ethernet104/1/15
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 406 mode active
+
+interface Ethernet104/1/16
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 407 mode active
+
+interface Ethernet104/1/17
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 408 mode active
+
+interface Ethernet104/1/18
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 409 mode active
+
+interface Ethernet104/1/19
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 410 mode active
+
+interface Ethernet104/1/20
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 411 mode active
+
+interface Ethernet104/1/21
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 412 mode active
+
+interface Ethernet104/1/22
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 413 mode active
+
+interface Ethernet104/1/23
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 414 mode active
+
+interface Ethernet104/1/24
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 415 mode active
+
+interface Ethernet104/1/25
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 416 mode active
+
+interface Ethernet104/1/26
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 417 mode active
+
+interface Ethernet104/1/27
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 418 mode active
+
+interface Ethernet104/1/28
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 419 mode active
+
+interface Ethernet104/1/29
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 420 mode active
+
+interface Ethernet104/1/30
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 421 mode active
+
+interface Ethernet104/1/31
+
+interface Ethernet104/1/32
+
+interface Ethernet106/1/1
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 301 mode active
+
+interface Ethernet106/1/2
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 302 mode active
+
+interface Ethernet106/1/3
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 303 mode active
+
+interface Ethernet106/1/4
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 304 mode active
+
+interface Ethernet106/1/5
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 305 mode active
+
+interface Ethernet106/1/6
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 306 mode active
+
+interface Ethernet106/1/7
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 307 mode active
+
+interface Ethernet106/1/8
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 308 mode active
+
+interface Ethernet106/1/9
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 309 mode active
+
+interface Ethernet106/1/10
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 310 mode active
+
+interface Ethernet106/1/11
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 311 mode active
+
+interface Ethernet106/1/12
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 312 mode active
+
+interface Ethernet106/1/13
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 313 mode active
+
+interface Ethernet106/1/14
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 314 mode active
+
+interface Ethernet106/1/15
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 315 mode active
+
+interface Ethernet106/1/16
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 316 mode active
+
+interface Ethernet106/1/17
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 317 mode active
+
+interface Ethernet106/1/18
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 318 mode active
+
+interface Ethernet106/1/19
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 319 mode active
+
+interface Ethernet106/1/20
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 320 mode active
+
+interface Ethernet106/1/21
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 321 mode active
+
+interface Ethernet106/1/22
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 322 mode active
+
+interface Ethernet106/1/23
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 323 mode active
+
+interface Ethernet106/1/24
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 324 mode active
+
+interface Ethernet106/1/25
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 325 mode active
+
+interface Ethernet106/1/26
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 326 mode active
+
+interface Ethernet106/1/27
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 327 mode active
+
+interface Ethernet106/1/28
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 328 mode active
+
+interface Ethernet106/1/29
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 329 mode active
+
+interface Ethernet106/1/30
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 330 mode active
+
+interface Ethernet106/1/31
+
+interface Ethernet106/1/32
+
+interface Ethernet108/1/1
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 331 mode active
+
+interface Ethernet108/1/2
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 332 mode active
+
+interface Ethernet108/1/3
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 333 mode active
+
+interface Ethernet108/1/4
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3324-3344,3450-3453
+
+interface Ethernet108/1/5
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3324-3344,3450-3453
+
+interface Ethernet108/1/6
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3324-3344,3450-3453
+
+interface Ethernet108/1/7
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 337 mode active
+
+interface Ethernet108/1/8
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 338 mode active
+
+interface Ethernet108/1/9
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 339 mode active
+
+interface Ethernet108/1/10
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 340 mode active
+
+interface Ethernet108/1/11
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 341 mode active
+
+interface Ethernet108/1/12
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 342 mode active
+
+interface Ethernet108/1/13
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 343 mode active
+
+interface Ethernet108/1/14
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 344 mode active
+
+interface Ethernet108/1/15
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 345 mode active
+
+interface Ethernet108/1/16
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 346 mode active
+
+interface Ethernet108/1/17
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 347 mode active
+
+interface Ethernet108/1/18
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 348 mode active
+
+interface Ethernet108/1/19
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 349 mode active
+
+interface Ethernet108/1/20
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 350 mode active
+
+interface Ethernet108/1/21
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 351 mode active
+
+interface Ethernet108/1/22
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 352 mode active
+
+interface Ethernet108/1/23
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 353 mode active
+
+interface Ethernet108/1/24
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 354 mode active
+
+interface Ethernet108/1/25
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 355 mode active
+
+interface Ethernet108/1/26
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 356 mode active
+
+interface Ethernet108/1/27
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 357 mode active
+
+interface Ethernet108/1/28
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 358 mode active
+
+interface Ethernet108/1/29
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 359 mode active
+
+interface Ethernet108/1/30
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 360 mode active
+
+interface Ethernet108/1/31
+
+interface Ethernet108/1/32
+
+interface Ethernet110/1/1
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 361 mode active
+
+interface Ethernet110/1/2
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 362 mode active
+
+interface Ethernet110/1/3
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 363 mode active
+
+interface Ethernet110/1/4
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 364 mode active
+
+interface Ethernet110/1/5
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 365 mode active
+
+interface Ethernet110/1/6
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 366 mode active
+
+interface Ethernet110/1/7
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 367 mode active
+
+interface Ethernet110/1/8
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 368 mode active
+
+interface Ethernet110/1/9
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3315,3324-3344,3428-3430,3450-3453,3467
+  channel-group 369 mode active
+
+interface Ethernet110/1/10
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3315,3324-3344,3428-3430,3450-3453,3467
+  channel-group 370 mode active
+
+interface Ethernet110/1/11
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3315,3324-3344,3428-3430,3450-3453,3467
+  channel-group 371 mode active
+
+interface Ethernet110/1/12
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 372 mode active
+
+interface Ethernet110/1/13
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 373 mode active
+
+interface Ethernet110/1/14
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 374 mode active
+
+interface Ethernet110/1/15
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 375 mode active
+
+interface Ethernet110/1/16
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 376 mode active
+
+interface Ethernet110/1/17
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 377 mode active
+
+interface Ethernet110/1/18
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 378 mode active
+
+interface Ethernet110/1/19
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 379 mode active
+
+interface Ethernet110/1/20
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 380 mode active
+
+interface Ethernet110/1/21
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 381 mode active
+
+interface Ethernet110/1/22
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 382 mode active
+
+interface Ethernet110/1/23
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 383 mode active
+
+interface Ethernet110/1/24
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 384 mode active
+
+interface Ethernet110/1/25
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 385 mode active
+
+interface Ethernet110/1/26
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 386 mode active
+
+interface Ethernet110/1/27
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 387 mode active
+
+interface Ethernet110/1/28
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 388 mode active
+
+interface Ethernet110/1/29
+  switchport mode trunk
+  switchport trunk allowed vlan 3138,3155,3157,3300-3307,3313,3324-3344,3450-3453,3467
+  channel-group 389 mode active
+
+interface Ethernet110/1/30
+
+interface Ethernet110/1/31
+
+interface Ethernet110/1/32
+
+interface Ethernet116/1/1
+  switchport access vlan 3167
+
+interface Ethernet116/1/2
+  switchport access vlan 3167
+
+interface Ethernet116/1/3
+  switchport access vlan 3167
+
+interface Ethernet116/1/4
+  switchport access vlan 3167
+
+interface Ethernet116/1/5
+  switchport access vlan 3167
+
+interface Ethernet116/1/6
+  switchport access vlan 3167
+
+interface Ethernet116/1/7
+  switchport access vlan 3167
+
+interface Ethernet116/1/8
+  switchport access vlan 3167
+
+interface Ethernet116/1/9
+  switchport access vlan 3167
+
+interface Ethernet116/1/10
+  switchport access vlan 3167
+
+interface Ethernet116/1/11
+  switchport access vlan 3167
+
+interface Ethernet116/1/12
+  switchport access vlan 3167
+
+interface Ethernet116/1/13
+  switchport access vlan 3167
+
+interface Ethernet116/1/14
+  switchport access vlan 3167
+
+interface Ethernet116/1/15
+  switchport access vlan 3167
+
+interface Ethernet116/1/16
+  switchport access vlan 3167
+
+interface Ethernet116/1/17
+  switchport access vlan 3167
+
+interface Ethernet116/1/18
+  switchport access vlan 3167
+
+interface Ethernet116/1/19
+  switchport access vlan 3167
+
+interface Ethernet116/1/20
+  switchport access vlan 3167
+
+interface Ethernet116/1/21
+  switchport access vlan 3167
+
+interface Ethernet116/1/22
+  switchport access vlan 3167
+
+interface Ethernet116/1/23
+  switchport access vlan 3167
+
+interface Ethernet116/1/24
+  switchport access vlan 3167
+
+interface Ethernet116/1/25
+  switchport access vlan 3167
+
+interface Ethernet116/1/26
+  switchport access vlan 3167
+
+interface Ethernet116/1/27
+  switchport access vlan 3167
+
+interface Ethernet116/1/28
+  switchport access vlan 3167
+
+interface Ethernet116/1/29
+  switchport access vlan 3167
+
+interface Ethernet116/1/30
+  switchport access vlan 3141
+
+interface Ethernet116/1/31
+  switchport access vlan 3141
+
+interface Ethernet116/1/32
+
+interface Ethernet116/1/33
+
+interface Ethernet116/1/34
+
+interface Ethernet116/1/35
+
+interface Ethernet116/1/36
+
+interface Ethernet116/1/37
+
+interface Ethernet116/1/38
+
+interface Ethernet116/1/39
+
+interface Ethernet116/1/40
+
+interface Ethernet116/1/41
+
+interface Ethernet116/1/42
+
+interface Ethernet116/1/43
+
+interface Ethernet116/1/44
+
+interface Ethernet116/1/45
+
+interface Ethernet116/1/46
+
+interface Ethernet116/1/47
+
+interface Ethernet116/1/48
+
+interface Ethernet118/1/1
+  switchport access vlan 3136
+
+interface Ethernet118/1/2
+  switchport access vlan 3136
+
+interface Ethernet118/1/3
+  switchport access vlan 3183
+
+interface Ethernet118/1/4
+  switchport access vlan 3183
+
+interface Ethernet118/1/5
+  switchport access vlan 190
+
+interface Ethernet118/1/6
+  switchport access vlan 3136
+
+interface Ethernet118/1/7
+  switchport access vlan 3128
+  channel-group 426 mode active
+
+interface Ethernet118/1/8
+  switchport access vlan 3128
+  channel-group 427 mode active
+
+interface Ethernet118/1/9
+  switchport access vlan 177
+
+interface Ethernet118/1/10
+  switchport access vlan 174
+
+interface Ethernet118/1/11
+  switchport access vlan 179
+
+interface Ethernet118/1/12
+  switchport access vlan 3183
+
+interface Ethernet118/1/13
+  description NTNX-AHV-9 RF-000937142
+  switchport access vlan 3167
+
+interface Ethernet118/1/14
+  description NTNX-AHV-10  RF-000937142
+  switchport access vlan 3167
+
+interface Ethernet118/1/15
+  description NTNX-AHV-11  RF-000937142
+  switchport access vlan 3167
+
+interface Ethernet118/1/16
+  description NTNX-AHV-12 RF-000937142
+  switchport access vlan 3167
+
+interface Ethernet118/1/17
+
+interface Ethernet118/1/18
+
+interface Ethernet118/1/19
+
+interface Ethernet118/1/20
+
+interface Ethernet118/1/21
+
+interface Ethernet118/1/22
+
+interface Ethernet118/1/23
+
+interface Ethernet118/1/24
+
+interface Ethernet118/1/25
+
+interface Ethernet118/1/26
+
+interface Ethernet118/1/27
+
+interface Ethernet118/1/28
+
+interface Ethernet118/1/29
+
+interface Ethernet118/1/30
+
+interface Ethernet118/1/31
+
+interface Ethernet118/1/32
+
+interface Ethernet118/1/33
+
+interface Ethernet118/1/34
+
+interface Ethernet118/1/35
+
+interface Ethernet118/1/36
+
+interface Ethernet118/1/37
+
+interface Ethernet118/1/38
+
+interface Ethernet118/1/39
+
+interface Ethernet118/1/40
+
+interface Ethernet118/1/41
+
+interface Ethernet118/1/42
+
+interface Ethernet118/1/43
+
+interface Ethernet118/1/44
+
+interface Ethernet118/1/45
+
+interface Ethernet118/1/46
+
+interface Ethernet118/1/47
+  description -= STERRA VTB-CS-GW-2(New)_ G0/0 =-
+  switchport access vlan 3408
+
+interface Ethernet118/1/48
+  description -= STERRA VTB-CS-GW-2(New)_ G0/1 =-
+  switchport mode trunk
+  switchport trunk allowed vlan 3444,3493
+
+interface Ethernet120/1/1
+  switchport mode trunk
+  switchport trunk allowed vlan 3141,3151
+
+interface Ethernet120/1/2
+  switchport mode trunk
+  switchport trunk allowed vlan 3141,3151
+
+interface Ethernet120/1/3
+
+interface Ethernet120/1/4
+
+interface Ethernet120/1/5
+
+interface Ethernet120/1/6
+
+interface Ethernet120/1/7
+
+interface Ethernet120/1/8
+
+interface Ethernet120/1/9
+
+interface Ethernet120/1/10
+
+interface Ethernet120/1/11
+  switchport access vlan 3153
+
+interface Ethernet120/1/12
+
+interface Ethernet120/1/13
+  switchport access vlan 180
+
+interface Ethernet120/1/14
+  switchport access vlan 180
+
+interface Ethernet120/1/15
+  switchport access vlan 3153
+
+interface Ethernet120/1/16
+  switchport access vlan 3153
+clock timezone MSK 3 0
+cli alias name wr copy running startup
+line console
+line vty
+boot kickstart bootflash:/n6000-uk9-kickstart.7.1.3.N1.2.bin
+boot system bootflash:/n6000-uk9.7.1.3.N1.2.bin
+poap transit
+
+

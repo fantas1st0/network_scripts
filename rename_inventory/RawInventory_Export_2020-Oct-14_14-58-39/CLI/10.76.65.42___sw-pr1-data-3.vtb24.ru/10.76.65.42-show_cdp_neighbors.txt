@@ -1,0 +1,64 @@
+
+Capability Codes: R - Router, T - Trans-Bridge, B - Source-Route-Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater,
+                  V - VoIP-Phone, D - Remotely-Managed-Device,
+                  s - Supports-STP-Dispute
+
+
+Device-ID             Local Intrfce Hldtme Capability  Platform         Port ID
+sw-pr1-data-1.vtb24.ru(JAF1645AKHJ)
+                    Eth1/1         149    R S I s   N7K-C7010          Eth7/42       
+sw-pr1-data-1.vtb24.ru(JAF1645AKHJ)
+                    Eth1/2         160    R S I s   N7K-C7010          Eth8/42       
+sw-pr1-data-2.vtb24.ru(JAF1648AMJD)
+                    Eth1/5         179    R S I s   N7K-C7010          Eth7/42       
+sw-pr1-data-2.vtb24.ru(JAF1648AMJD)
+                    Eth1/6         175    R S I s   N7K-C7010          Eth8/42       
+ntnx-tst-22120      Eth1/7         98     S H       Linux              eth3          
+ntnx-tst-22120      Eth1/8         98     S H       Linux              eth4          
+sw-pr1-data-4.vtb24.ru(FOX1813GTB0)
+                    Eth1/9         176    S I s     N5K-C5596UP        Eth1/9        
+sw-pr1-data-4.vtb24.ru(FOX1813GTB0)
+                    Eth1/10        149    S I s     N5K-C5596UP        Eth1/10       
+sw-pr1-data-4.vtb24.ru(FOX1813GTB0)
+                    Eth1/13        149    S I s     N5K-C5596UP        Eth1/13       
+sw-pr1-data-4.vtb24.ru(FOX1813GTB0)
+                    Eth1/14        149    S I s     N5K-C5596UP        Eth1/14       
+svr-hv2010h         Eth1/29        107    S H       Linux              eth1          
+svr-hv2010h         Eth1/30        107    S H       Linux              eth2          
+svr-hv2011h         Eth1/33        107    S H       Linux              eth1          
+svr-hv2011h         Eth1/34        107    S H       Linux              eth2          
+ntnx-dso-17         Eth1/39        106    S H       Linux              eth6          
+ntnx-dso-17         Eth1/40        106    S H       Linux              eth5          
+test-ntnx-33        Eth1/45        108    S H       Linux              eth3          
+test-ntnx-33        Eth1/46        108    S H       Linux              eth4          
+test-ntnx-32        Eth1/47        104    S H       Linux              eth3          
+test-ntnx-32        Eth1/48        104    S H       Linux              eth4          
+svr-hv2005h         Eth2/9         114    S H       Linux              eth1          
+svr-hv2005h         Eth2/10        114    S H       Linux              eth2          
+svr-hv2006h         Eth2/11        113    S H       Linux              eth1          
+svr-hv2006h         Eth2/12        113    S H       Linux              eth2          
+ntnx-ahv-52         Eth3/3         91     S H       Linux              eth3          
+ntnx-ahv-52         Eth3/4         91     S H       Linux              eth4          
+ntnx-ahv-54         Eth3/5         106    S H       Linux              eth3          
+ntnx-ahv-54         Eth3/6         106    S H       Linux              eth4          
+ntnx-ahv-51         Eth3/13        91     S H       Linux              eth3          
+ntnx-ahv-51         Eth3/14        91     S H       Linux              eth4          
+ntnx-ahv-53         Eth3/15        98     S H       Linux              eth3          
+ntnx-ahv-53         Eth3/16        98     S H       Linux              eth4          
+test-ntnx-34        Eth4/1         95     S H       Linux              eth3          
+test-ntnx-34        Eth4/2         95     S H       Linux              eth4          
+svr-hv2007h         Eth4/3         113    S H       Linux              eth1          
+svr-hv2007h         Eth4/4         113    S H       Linux              eth2          
+svr-hv2008h         Eth4/5         116    S H       Linux              eth1          
+svr-hv2008h         Eth4/6         116    S H       Linux              eth2          
+svr-hv2009h         Eth4/7         108    S H       Linux              eth1          
+svr-hv2009h         Eth4/8         108    S H       Linux              eth2          
+test-ntnx-28        Eth4/9         91     S H       Linux              eth3          
+test-ntnx-28        Eth4/10        91     S H       Linux              eth4          
+test-ntnx-29        Eth4/11        116    S H       Linux              eth3          
+test-ntnx-29        Eth4/12        116    S H       Linux              eth4          
+test-ntnx-30        Eth4/13        94     S H       Linux              eth3          
+test-ntnx-30        Eth4/14        94     S H       Linux              eth4          
+test-ntnx-31        Eth4/15        105    S H       Linux              eth3          
+test-ntnx-31        Eth4/16        105    S H       Linux              eth4          

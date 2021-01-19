@@ -1,0 +1,121 @@
+Buffer elements:
+     1968 in free list 
+     164549930 hits, 0 misses, 1242 created
+
+Public buffer pools:
+Small buffers, 104 bytes (total 1024, permanent 1024):
+     1007 in free list (128 min, 2048 max allowed)
+     3429667874 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+Medium buffers, 256 bytes (total 3000, permanent 3000):
+     2999 in free list (64 min, 3000 max allowed)
+     3860583995 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+Middle buffers, 600 bytes (total 512, permanent 512):
+     499 in free list (64 min, 1024 max allowed)
+     354317482 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+Big buffers, 1536 bytes (total 1000, permanent 1000):
+     1000 in free list (64 min, 1000 max allowed)
+     2442713649 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+VeryBig buffers, 4520 bytes (total 10, permanent 10, peak 24 @ 7w0d):
+     10 in free list (0 min, 300 max allowed)
+     45390 hits, 30 misses, 60 trims, 60 created
+     0 failures (0 no memory)
+Large buffers, 9240 bytes (total 8, permanent 8):
+     8 in free list (0 min, 10 max allowed)
+     17727518 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+Huge buffers, 18024 bytes (total 2, permanent 2, peak 4 @ 7w0d):
+     2 in free list (0 min, 4 max allowed)
+     223 hits, 1 misses, 2 trims, 2 created
+     0 failures (0 no memory)
+
+Interface buffer pools:
+CF Small buffers, 104 bytes (total 101, permanent 100, peak 101 @ 7w0d):
+     101 in free list (100 min, 200 max allowed)
+     0 hits, 0 misses, 10494 trims, 10495 created
+     0 failures (0 no memory)
+Generic ED Pool buffers, 512 bytes (total 101, permanent 100, peak 101 @ 7w0d):
+     101 in free list (100 min, 100 max allowed)
+     0 hits, 0 misses
+CF Middle buffers, 600 bytes (total 101, permanent 100, peak 101 @ 7w0d):
+     101 in free list (100 min, 200 max allowed)
+     0 hits, 0 misses, 10494 trims, 10495 created
+     0 failures (0 no memory)
+Syslog ED Pool buffers, 600 bytes (total 289, permanent 288, peak 289 @ 7w0d):
+     257 in free list (288 min, 288 max allowed)
+     1081 hits, 0 misses
+DMA-2 buffers, 1536 bytes (total 1024, permanent 1024):
+     512 in free list (0 min, 1024 max allowed)
+     512 hits, 0 misses
+     512 max cache size, 512 in cache
+     0 hits in cache, 0 misses in cache
+CF Big buffers, 1536 bytes (total 26, permanent 25, peak 26 @ 7w0d):
+     26 in free list (25 min, 50 max allowed)
+     0 hits, 0 misses, 10494 trims, 10495 created
+     0 failures (0 no memory)
+EOBC0/0 buffers, 2198 bytes (total 6144, permanent 6144):
+     3072 in free list (0 min, 6144 max allowed)
+     3072 hits, 0 fallbacks
+     3072 max cache size, 2560 in cache
+     1599833343 hits in cache, 0 misses in cache
+EOBC0/2 buffers, 2198 bytes (total 6144, permanent 6144):
+     3072 in free list (0 min, 6144 max allowed)
+     3072 hits, 0 fallbacks
+     3072 max cache size, 2816 in cache
+     495113356 hits in cache, 0 misses in cache
+IPC buffers, 4096 bytes (total 1008, permanent 1008):
+     966 in free list (224 min, 2240 max allowed)
+     551829146 hits, 0 fallbacks, 0 trims, 0 created
+     0 failures (0 no memory)
+CF VeryBig buffers, 4520 bytes (total 3, permanent 2, peak 3 @ 7w0d):
+     3 in free list (2 min, 4 max allowed)
+     0 hits, 0 misses, 10494 trims, 10495 created
+     0 failures (0 no memory)
+CF Large buffers, 5024 bytes (total 2, permanent 1, peak 2 @ 7w0d):
+     2 in free list (1 min, 2 max allowed)
+     0 hits, 0 misses, 10494 trims, 10495 created
+     0 failures (0 no memory)
+IPC Medium buffers, 16384 bytes (total 2, permanent 2):
+     2 in free list (1 min, 8 max allowed)
+     44615 hits, 0 fallbacks, 0 trims, 0 created
+     0 failures (0 no memory)
+Private Huge IPC buffers, 18024 bytes (total 2, permanent 2):
+     2 in free list (1 min, 4 max allowed)
+     0 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+Private Huge buffers, 65280 bytes (total 2, permanent 2):
+     2 in free list (1 min, 4 max allowed)
+     11 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+IPC Large buffers, 65535 bytes (total 17, permanent 16, peak 17 @ 7w0d):
+     17 in free list (16 min, 16 max allowed)
+     14721 hits, 0 misses, 1700044 trims, 1700045 created
+     0 failures (0 no memory)
+
+Header pools:
+
+Particle Clones:
+     1024 clones, 0 hits, 0 misses
+
+Public particle pools:
+F/S buffers, 1590 bytes (total 512, permanent 512):
+     0 in free list (0 min, 512 max allowed)
+     512 hits, 0 misses
+     512 max cache size, 512 in cache
+     0 hits in cache, 0 misses in cache
+Normal buffers, 2184 bytes (total 1024, permanent 1024):
+     1024 in free list (512 min, 2048 max allowed)
+     0 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+
+Private particle pools:
+IBC0/0 buffers, 2184 bytes (total 512, permanent 512):
+     0 in free list (0 min, 512 max allowed)
+     512 hits, 0 fallbacks
+     512 max cache size, 256 in cache
+     4088907448 hits in cache, 0 misses in cache
+
+

@@ -1,0 +1,37 @@
+
+Capability Codes: R - Router, T - Trans-Bridge, B - Source-Route-Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater,
+                  V - VoIP-Phone, D - Remotely-Managed-Device,
+                  s - Supports-STP-Dispute, M - Two-port Mac Relay
+
+
+Device ID              Local Intrfce   Hldtme  Capability  Platform      Port ID
+vDCSwitch01.vtb        mgmt0           148     S I         WS-C2960X-48T Gig1/0/4     
+vdic-hv101h            Eth1/17         116     S H         Linux         eth5         
+vdic-hv101h            Eth1/18         116     S H         Linux         eth6         
+vdic-hv102h            Eth1/23         116     S H         Linux         eth5         
+vdic-hv102h            Eth1/24         116     S H         Linux         eth6         
+vdic-hv103h            Eth1/25         116     S H         Linux         eth5         
+vdic-hv103h            Eth1/26         116     S H         Linux         eth6         
+vdic-hv104h            Eth1/27         116     S H         Linux         eth5         
+vdic-hv104h            Eth1/28         116     S H         Linux         eth6         
+5K-01-1.vtb(SSI152307Y Eth1/29         134     S I s       N5K-C5548UP   Eth1/29      
+5K-01-1.vtb(SSI152307Y Eth1/30         134     S I s       N5K-C5548UP   Eth1/30      
+vN77-1-vN7K1(JPG205200 Eth1/31         163     R S I s     N77-C7710     Eth2/1/1     
+vN77-2-vN7K2(JPG205200 Eth1/32         174     R S I s     N77-C7710     Eth2/1/1     
+vN77-1-vN7K1(JPG205200 Eth2/1          163     R S I s     N77-C7710     Eth2/1/2     
+vN77-2-vN7K2(JPG205200 Eth2/2          174     R S I s     N77-C7710     Eth2/1/2     
+5K-01-1.vtb(SSI152307Y Eth2/3          122     S I s       N5K-C5548UP   Eth2/3       
+5K-01-1.vtb(SSI152307Y Eth2/4          128     S I s       N5K-C5548UP   Eth2/4       
+vdic-hv105h            Eth2/5          116     S H         Linux         eth5         
+vdic-hv105h            Eth2/6          116     S H         Linux         eth6         
+vdic-hv106h            Eth2/7          116     S H         Linux         eth5         
+vdic-hv106h            Eth2/8          116     S H         Linux         eth6         
+vdic-hv107h            Eth2/9          116     S H         Linux         eth5         
+vdic-hv107h            Eth2/10         116     S H         Linux         eth6         
+vdic-hv108h            Eth2/11         116     S H         Linux         eth5         
+vdic-hv108h            Eth2/12         116     S H         Linux         eth6         
+vdic-hv109h            Eth2/13         116     S H         Linux         eth5         
+vdic-hv109h            Eth2/14         116     S H         Linux         eth6         
+vdic-hv110h            Eth2/15         116     S H         Linux         eth5         
+vdic-hv110h            Eth2/16         116     S H         Linux         eth6         

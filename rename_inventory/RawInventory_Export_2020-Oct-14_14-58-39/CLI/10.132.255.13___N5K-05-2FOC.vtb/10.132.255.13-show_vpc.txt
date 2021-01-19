@@ -1,0 +1,52 @@
+
+Legend:
+                (*) - local vPC is down, forwarding via vPC peer-link
+
+vPC domain id                     : 55  
+Peer status                       : peer adjacency formed ok      
+vPC keep-alive status             : peer is alive                 
+Configuration consistency status  : success 
+Per-vlan consistency status       : success                       
+Type-2 consistency status         : success 
+vPC role                          : secondary, operational primary
+Number of vPCs configured         : 13  
+Peer Gateway                      : Disabled
+Dual-active excluded VLANs        : -
+Graceful Consistency Check        : Enabled
+Auto-recovery status              : Enabled (timeout = 240 seconds)
+
+vPC Peer-link status
+---------------------------------------------------------------------
+id   Port   Status Active vlans    
+--   ----   ------ --------------------------------------------------
+1    Po1000 up     1,10,107,110,129,139,145,167-169,171-172,174-180,1        
+                   83-184,187-191,193-194,199,293-295,446-447,557,701        
+                   -702,3000,3128,3130-3131,3136-3138,3140-3141,3143-        
+                   3145,3147-3152,3161-3166,3169-3170,3178,3180-3185,        
+                   3198,3200-3207,3300,3308,3316,3318,3401-3402,3408,    ....
+
+vPC status
+----------------------------------------------------------------------------
+id     Port        Status Consistency Reason                     Active vlans
+------ ----------- ------ ----------- -------------------------- -----------
+7      Po7         up     success     success                    1,10,107,11 
+                                                                 0,129,139,1 
+                                                                 45,167-169, 
+                                                                 171-172,174 
+                                                                 -180,183....
+203    Po203       up     success     success                    194,294-295 
+                                                                 ,3150,3162, 
+                                                                 3183,3318   
+204    Po204       up     success     success                    194,294-295 
+                                                                 ,3150,3162, 
+                                                                 3183,3318   
+205    Po205       down*  success     success                    -           
+206    Po206       down*  success     success                    -           
+331    Po331       down*  success     success                    -           
+332    Po332       down*  success     success                    -           
+333    Po333       down*  success     success                    -           
+334    Po334       down*  success     success                    -           
+335    Po335       down*  success     success                    -           
+336    Po336       down*  success     success                    -           
+337    Po337       down*  success     success                    -           
+340    Po340       up     success     success                    3318        

@@ -1,0 +1,570 @@
+
+FEX: 102 Description: vN2K11-102   state: Online
+  FEX version: 7.3(1)N1(1) [Switch version: 7.3(1)N1(1)]
+  FEX Interim version: 7.3(1)N1(1)
+  Switch Interim version: 7.3(1)N1(1)
+  Extender Serial: FOC2024R2DK
+  Extender Model: N2K-C2348UPQ-10GE,  Part No: 73-15489-04
+  Card Id: 265, Mac Addr: 00:5f:86:57:b4:82, Num Macs: 96
+  Module Sw Gen: 12594  [Switch Sw Gen: 21]
+  Post level: complete
+  Pinning-mode: static    Max-links: 1
+  Fabric port for control traffic: Eth1/9
+  FCoE Admin: false
+  FCoE Oper: true
+  FCoE FEX AA Configured: false
+  Fabric interface state:
+    Po102 - Interface Up. State: Active
+    Eth1/9 - Interface Up. State: Active
+    Eth2/9 - Interface Up. State: Active
+  Fex Port        State  Fabric Port
+       Eth102/1/1    Up       Po102
+       Eth102/1/2    Up       Po102
+       Eth102/1/3    Up       Po102
+       Eth102/1/4    Up       Po102
+       Eth102/1/5    Up       Po102
+       Eth102/1/6  Down       Po102
+       Eth102/1/7    Up       Po102
+       Eth102/1/8    Up       Po102
+       Eth102/1/9  Down        None
+      Eth102/1/10    Up       Po102
+      Eth102/1/11    Up       Po102
+      Eth102/1/12    Up       Po102
+      Eth102/1/13    Up       Po102
+      Eth102/1/14    Up       Po102
+      Eth102/1/15    Up       Po102
+      Eth102/1/16    Up       Po102
+      Eth102/1/17  Down        None
+      Eth102/1/18  Down        None
+      Eth102/1/19    Up       Po102
+      Eth102/1/20    Up       Po102
+      Eth102/1/21    Up       Po102
+      Eth102/1/22    Up       Po102
+      Eth102/1/23    Up       Po102
+      Eth102/1/24    Up       Po102
+      Eth102/1/25    Up       Po102
+      Eth102/1/26    Up       Po102
+      Eth102/1/27    Up       Po102
+      Eth102/1/28    Up       Po102
+      Eth102/1/29    Up       Po102
+      Eth102/1/30    Up       Po102
+      Eth102/1/31    Up       Po102
+      Eth102/1/32    Up       Po102
+      Eth102/1/33    Up       Po102
+      Eth102/1/34    Up       Po102
+      Eth102/1/35    Up       Po102
+      Eth102/1/36    Up       Po102
+      Eth102/1/37    Up       Po102
+      Eth102/1/38    Up       Po102
+      Eth102/1/39    Up       Po102
+      Eth102/1/40    Up       Po102
+      Eth102/1/41    Up       Po102
+      Eth102/1/42    Up       Po102
+      Eth102/1/43    Up       Po102
+      Eth102/1/44    Up       Po102
+      Eth102/1/45    Up       Po102
+      Eth102/1/46    Up       Po102
+      Eth102/1/47    Up       Po102
+      Eth102/1/48    Up       Po102
+Logs:
+02/17/2001 16:06:36.948946: Module register received
+02/17/2001 16:06:36.950869: Image Version Mismatch
+02/17/2001 16:06:36.952146: Registration response sent
+02/17/2001 16:06:36.952420: Requesting satellite to download image
+02/17/2001 16:12:03.452511: Image preload successful.
+02/17/2001 16:12:04.956869: Deleting route to FEX
+02/17/2001 16:12:04.964549: Module disconnected
+02/17/2001 16:12:04.966100: Module Offline
+02/17/2001 16:12:05.001995: Deleting route to FEX
+02/17/2001 16:12:05.009390: Module disconnected
+02/17/2001 16:12:05.011508: Offlining Module
+02/17/2001 16:12:05.050377: Deleting route to FEX
+02/17/2001 16:12:05.058013: Module disconnected
+02/17/2001 16:12:05.060129: Offlining Module
+02/17/2001 16:15:17.641828: Module register received
+02/17/2001 16:15:17.645895: Registration response sent
+02/17/2001 16:15:17.689502: create module inserted event.
+02/17/2001 16:15:17.690464: Module Online Sequence
+02/17/2001 16:15:26.110604: Module Online
+
+FEX: 104 Description: vN2K11-104 660c15GDF   state: Online
+  FEX version: 7.3(1)N1(1) [Switch version: 7.3(1)N1(1)]
+  FEX Interim version: 7.3(1)N1(1)
+  Switch Interim version: 7.3(1)N1(1)
+  Extender Serial: FOC2039R128
+  Extender Model: N2K-B22HP-P,  Part No: 73-13780-05
+  Bay: 2
+  Rack: UnnamedRack
+  Enclosure: VOR_660_CZ270405XH
+  Enclosure Serial: CZ270405XH
+  Rack Id: Default RUID
+  Card Id: 145, Mac Addr: 00:a2:ee:3d:a1:82, Num Macs: 131136
+  Module Sw Gen: 12594  [Switch Sw Gen: 21]
+  Post level: complete
+  Pinning-mode: static    Max-links: 1
+  Fabric port for control traffic: Eth2/1/4
+  FCoE Admin: false
+  FCoE Oper: true
+  FCoE FEX AA Configured: false
+  Fabric interface state:
+    Po104 - Interface Up. State: Active
+    Eth1/1/1 - Interface Up. State: Active
+    Eth1/1/2 - Interface Up. State: Active
+    Eth1/1/3 - Interface Up. State: Active
+    Eth1/1/4 - Interface Up. State: Active
+    Eth2/1/1 - Interface Up. State: Active
+    Eth2/1/2 - Interface Up. State: Active
+    Eth2/1/3 - Interface Up. State: Active
+    Eth2/1/4 - Interface Up. State: Active
+  Fex Port        State  Fabric Port
+       Eth104/1/1    Up       Po104
+       Eth104/1/2    Up       Po104
+       Eth104/1/3    Up       Po104
+       Eth104/1/4    Up       Po104
+       Eth104/1/5  Down       Po104
+       Eth104/1/6    Up       Po104
+       Eth104/1/7  Down       Po104
+       Eth104/1/8    Up       Po104
+       Eth104/1/9    Up       Po104
+      Eth104/1/10    Up       Po104
+      Eth104/1/11    Up       Po104
+      Eth104/1/12    Up       Po104
+      Eth104/1/13  Down       Po104
+      Eth104/1/14    Up       Po104
+      Eth104/1/15  Down       Po104
+      Eth104/1/16    Up       Po104
+Logs:
+05/27/2017 13:02:42.268285: Module register received
+05/27/2017 13:02:42.269519: Image Version Mismatch
+05/27/2017 13:02:42.269793: Registration response sent
+05/27/2017 13:02:42.269950: Requesting satellite to download image
+05/27/2017 13:10:40.803208: Image preload successful.
+05/27/2017 13:10:42.377793: Deleting route to FEX
+05/27/2017 13:10:42.385519: Module disconnected
+05/27/2017 13:10:42.386378: Module Offline
+05/27/2017 13:10:42.610125: Deleting route to FEX
+05/27/2017 13:10:42.618048: Module disconnected
+05/27/2017 13:10:42.618913: Offlining Module
+05/27/2017 13:10:42.657706: Deleting route to FEX
+05/27/2017 13:10:42.665701: Module disconnected
+05/27/2017 13:10:42.666580: Offlining Module
+05/27/2017 13:10:43.048983: Deleting route to FEX
+05/27/2017 13:10:43.057202: Module disconnected
+05/27/2017 13:10:43.058295: Offlining Module
+05/27/2017 13:12:18.783840: Module register received
+05/27/2017 13:12:18.785135: Registration response sent
+05/27/2017 13:12:18.843722: create module inserted event.
+05/27/2017 13:12:18.844078: Module Online Sequence
+05/27/2017 13:12:21.204311: Module Online
+05/29/2017 17:04:12.949918: Deleting route to FEX
+05/29/2017 17:04:12.957620: Module disconnected
+05/29/2017 17:04:12.958236: Deleting route to FEX
+05/29/2017 17:04:12.965566: Module disconnected
+05/29/2017 17:04:12.965941: Offlining Module
+05/29/2017 17:04:12.966374: Module Offline Sequence
+05/29/2017 17:04:13.325177: Module Offline
+05/29/2017 17:06:34.009342: Module register received
+05/29/2017 17:06:34.010620: Registration response sent
+05/29/2017 17:06:35.137414: create module inserted event.
+05/29/2017 17:06:35.137826: Module Online Sequence
+05/29/2017 17:06:37.113783: Module Online
+
+FEX: 106 Description: vN2K11-106 460c25GDF   state: Online
+  FEX version: 7.3(1)N1(1) [Switch version: 7.3(1)N1(1)]
+  FEX Interim version: 7.3(1)N1(1)
+  Switch Interim version: 7.3(1)N1(1)
+  Extender Serial: FOC2045R09M
+  Extender Model: N2K-B22HP-P,  Part No: 73-13780-05
+  Bay: 2
+  Rack: UnnamedRack
+  Enclosure: VOR_460_CZ270405X0_5G-DF
+  Enclosure Serial: CZ270405X0
+  Rack Id: Default RUID
+  Card Id: 145, Mac Addr: 00:a2:ee:3d:8f:42, Num Macs: 131136
+  Module Sw Gen: 12594  [Switch Sw Gen: 21]
+  Post level: complete
+  Pinning-mode: static    Max-links: 1
+  Fabric port for control traffic: Eth1/2/3
+  FCoE Admin: false
+  FCoE Oper: true
+  FCoE FEX AA Configured: false
+  Fabric interface state:
+    Po106 - Interface Up. State: Active
+    Eth1/2/1 - Interface Up. State: Active
+    Eth1/2/2 - Interface Up. State: Active
+    Eth1/2/3 - Interface Up. State: Active
+    Eth1/2/4 - Interface Up. State: Active
+  Fex Port        State  Fabric Port
+       Eth106/1/1    Up       Po106
+       Eth106/1/2    Up       Po106
+       Eth106/1/3    Up       Po106
+       Eth106/1/4    Up       Po106
+       Eth106/1/5    Up       Po106
+       Eth106/1/6    Up       Po106
+       Eth106/1/7    Up       Po106
+       Eth106/1/8    Up       Po106
+       Eth106/1/9    Up       Po106
+      Eth106/1/10    Up       Po106
+      Eth106/1/11    Up       Po106
+      Eth106/1/12    Up       Po106
+      Eth106/1/13    Up       Po106
+      Eth106/1/14    Up       Po106
+      Eth106/1/15    Up       Po106
+      Eth106/1/16    Up       Po106
+Logs:
+05/27/2017 12:29:10.236759: Module register received
+05/27/2017 12:29:10.237997: Image Version Mismatch
+05/27/2017 12:29:10.238258: Registration response sent
+05/27/2017 12:29:10.238410: Requesting satellite to download image
+05/27/2017 12:36:53.126783: Image preload successful.
+05/27/2017 12:36:54.500552: Deleting route to FEX
+05/27/2017 12:36:54.508377: Module disconnected
+05/27/2017 12:36:54.509233: Module Offline
+05/27/2017 12:36:54.533707: Deleting route to FEX
+05/27/2017 12:36:54.541360: Module disconnected
+05/27/2017 12:36:54.542177: Offlining Module
+05/27/2017 12:36:54.584560: Deleting route to FEX
+05/27/2017 12:36:54.592444: Module disconnected
+05/27/2017 12:36:54.593273: Offlining Module
+05/27/2017 12:36:54.630958: Deleting route to FEX
+05/27/2017 12:36:54.638839: Module disconnected
+05/27/2017 12:36:54.639665: Offlining Module
+05/27/2017 12:36:54.699140: Deleting route to FEX
+05/27/2017 12:36:54.706936: Module disconnected
+05/27/2017 12:36:54.707778: Offlining Module
+05/27/2017 12:38:33.117825: Module register received
+05/27/2017 12:38:33.119227: Registration response sent
+05/27/2017 12:38:33.156294: create module inserted event.
+05/27/2017 12:38:33.156679: Module Online Sequence
+05/27/2017 12:38:35.523964: Module Online
+05/29/2017 17:03:54.877517: Deleting route to FEX
+05/29/2017 17:03:54.885668: Module disconnected
+05/29/2017 17:03:54.886246: Deleting route to FEX
+05/29/2017 17:03:54.895383: Module disconnected
+05/29/2017 17:03:54.896308: Offlining Module
+05/29/2017 17:03:54.896727: Module Offline Sequence
+05/29/2017 17:03:55.097453: Module Offline
+05/29/2017 17:06:59.618909: Module register received
+05/29/2017 17:06:59.620181: Registration response sent
+05/29/2017 17:06:59.653403: create module inserted event.
+05/29/2017 17:06:59.653776: Module Online Sequence
+05/29/2017 17:07:01.253657: Module Online
+
+FEX: 108 Description: vN2K11-108 460c25GDF   state: Online
+  FEX version: 7.3(1)N1(1) [Switch version: 7.3(1)N1(1)]
+  FEX Interim version: 7.3(1)N1(1)
+  Switch Interim version: 7.3(1)N1(1)
+  Extender Serial: FOC2045R09T
+  Extender Model: N2K-B22HP-P,  Part No: 73-13780-05
+  Bay: 6
+  Rack: UnnamedRack
+  Enclosure: VOR_460_CZ270405X0_5G-DF
+  Enclosure Serial: CZ270405X0
+  Rack Id: Default RUID
+  Card Id: 145, Mac Addr: 00:a2:ee:3d:91:02, Num Macs: 393280
+  Module Sw Gen: 12594  [Switch Sw Gen: 21]
+  Post level: complete
+  Pinning-mode: static    Max-links: 1
+  Fabric port for control traffic: Eth2/2/3
+  FCoE Admin: false
+  FCoE Oper: true
+  FCoE FEX AA Configured: false
+  Fabric interface state:
+    Po108 - Interface Up. State: Active
+    Eth2/2/1 - Interface Up. State: Active
+    Eth2/2/2 - Interface Up. State: Active
+    Eth2/2/3 - Interface Up. State: Active
+    Eth2/2/4 - Interface Up. State: Active
+  Fex Port        State  Fabric Port
+       Eth108/1/1    Up       Po108
+       Eth108/1/2    Up       Po108
+       Eth108/1/3    Up       Po108
+       Eth108/1/4    Up       Po108
+       Eth108/1/5  Down       Po108
+       Eth108/1/6  Down       Po108
+       Eth108/1/7  Down       Po108
+       Eth108/1/8  Down       Po108
+       Eth108/1/9    Up       Po108
+      Eth108/1/10  Down       Po108
+      Eth108/1/11  Down       Po108
+      Eth108/1/12    Up       Po108
+      Eth108/1/13    Up       Po108
+      Eth108/1/14    Up       Po108
+      Eth108/1/15    Up       Po108
+      Eth108/1/16    Up       Po108
+Logs:
+05/31/2017 15:36:54.472722: Module register received
+05/31/2017 15:36:54.473494: Image Version Mismatch
+05/31/2017 15:36:54.473775: Registration response sent
+05/31/2017 15:36:54.473947: Requesting satellite to download image
+05/31/2017 15:44:53.470652: Image preload successful.
+05/31/2017 15:44:54.679638: Deleting route to FEX
+05/31/2017 15:44:54.689345: Module disconnected
+05/31/2017 15:44:54.689940: Module Offline
+05/31/2017 15:44:54.704541: Deleting route to FEX
+05/31/2017 15:44:54.711721: Module disconnected
+05/31/2017 15:44:54.712547: Offlining Module
+05/31/2017 15:44:54.751664: Deleting route to FEX
+05/31/2017 15:44:54.759074: Module disconnected
+05/31/2017 15:44:54.759897: Offlining Module
+05/31/2017 15:44:54.795881: Deleting route to FEX
+05/31/2017 15:44:54.803358: Module disconnected
+05/31/2017 15:44:54.804220: Offlining Module
+05/31/2017 15:44:54.855127: Deleting route to FEX
+05/31/2017 15:44:54.862549: Module disconnected
+05/31/2017 15:44:54.863392: Offlining Module
+05/31/2017 15:46:32.443427: Module register received
+05/31/2017 15:46:32.444827: Registration response sent
+05/31/2017 15:46:32.513796: create module inserted event.
+05/31/2017 15:46:32.514250: Module Online Sequence
+05/31/2017 15:46:33.387740: Module Online
+
+FEX: 110 Description: vN2K11-110 660c15GDE   state: Online
+  FEX version: 7.3(1)N1(1) [Switch version: 7.3(1)N1(1)]
+  FEX Interim version: 7.3(1)N1(1)
+  Switch Interim version: 7.3(1)N1(1)
+  Extender Serial: FOC2044R162
+  Extender Model: N2K-B22HP-P,  Part No: 73-13780-05
+  Bay: 2
+  Rack: UnnamedRack
+  Enclosure: VOR_660_CZ270405X8
+  Enclosure Serial: CZ270405X8
+  Rack Id: Default RUID
+  Card Id: 145, Mac Addr: 00:a2:ee:3d:b3:02, Num Macs: 131136
+  Module Sw Gen: 12594  [Switch Sw Gen: 21]
+  Post level: complete
+  Pinning-mode: static    Max-links: 1
+  Fabric port for control traffic: Eth2/4/1
+  FCoE Admin: false
+  FCoE Oper: true
+  FCoE FEX AA Configured: false
+  Fabric interface state:
+    Po110 - Interface Up. State: Active
+    Eth1/4/1 - Interface Up. State: Active
+    Eth1/4/2 - Interface Up. State: Active
+    Eth1/4/3 - Interface Up. State: Active
+    Eth1/4/4 - Interface Up. State: Active
+    Eth2/4/1 - Interface Up. State: Active
+    Eth2/4/2 - Interface Up. State: Active
+    Eth2/4/3 - Interface Up. State: Active
+    Eth2/4/4 - Interface Up. State: Active
+  Fex Port        State  Fabric Port
+       Eth110/1/1    Up       Po110
+       Eth110/1/2    Up       Po110
+       Eth110/1/3    Up       Po110
+       Eth110/1/4  Down       Po110
+       Eth110/1/5    Up       Po110
+       Eth110/1/6    Up       Po110
+       Eth110/1/7  Down       Po110
+       Eth110/1/8  Down       Po110
+       Eth110/1/9    Up       Po110
+      Eth110/1/10    Up       Po110
+      Eth110/1/11    Up       Po110
+      Eth110/1/12  Down       Po110
+      Eth110/1/13    Up       Po110
+      Eth110/1/14    Up       Po110
+      Eth110/1/15  Down       Po110
+      Eth110/1/16  Down       Po110
+Logs:
+05/27/2017 13:15:31.465406: Module register received
+05/27/2017 13:15:31.466191: Image Version Mismatch
+05/27/2017 13:15:31.466467: Registration response sent
+05/27/2017 13:15:31.466618: Requesting satellite to download image
+05/27/2017 13:23:18.339778: Image preload successful.
+05/27/2017 13:23:19.801967: Deleting route to FEX
+05/27/2017 13:23:19.810217: Module disconnected
+05/27/2017 13:23:19.810797: Module Offline
+05/27/2017 13:23:19.827473: Deleting route to FEX
+05/27/2017 13:23:19.834648: Module disconnected
+05/27/2017 13:23:19.835473: Offlining Module
+05/27/2017 13:23:19.901463: Deleting route to FEX
+05/27/2017 13:23:19.908989: Module disconnected
+05/27/2017 13:23:19.909848: Offlining Module
+05/27/2017 13:23:19.969680: Deleting route to FEX
+05/27/2017 13:23:19.985626: Module disconnected
+05/27/2017 13:23:19.986500: Offlining Module
+05/27/2017 13:23:20.042070: Deleting route to FEX
+05/27/2017 13:23:20.049749: Module disconnected
+05/27/2017 13:23:20.050643: Offlining Module
+05/27/2017 13:23:20.099938: Deleting route to FEX
+05/27/2017 13:23:20.107545: Module disconnected
+05/27/2017 13:23:20.108461: Offlining Module
+05/27/2017 13:23:20.156420: Deleting route to FEX
+05/27/2017 13:23:20.164038: Module disconnected
+05/27/2017 13:23:20.164921: Offlining Module
+05/27/2017 13:23:20.220060: Deleting route to FEX
+05/27/2017 13:23:20.227711: Module disconnected
+05/27/2017 13:23:20.228591: Offlining Module
+05/27/2017 13:23:20.278544: Deleting route to FEX
+05/27/2017 13:23:20.286456: Module disconnected
+05/27/2017 13:23:20.287349: Offlining Module
+05/27/2017 13:24:57.306769: Module register received
+05/27/2017 13:24:57.308052: Registration response sent
+05/27/2017 13:25:02.226991: create module inserted event.
+05/27/2017 13:25:02.227419: Module Online Sequence
+05/27/2017 13:25:04.255395: Module Online
+
+FEX: 112 Description: vN2K11-112   state: Online
+  FEX version: 7.3(1)N1(1) [Switch version: 7.3(1)N1(1)]
+  FEX Interim version: 7.3(1)N1(1)
+  Switch Interim version: 7.3(1)N1(1)
+  Extender Serial: FOC1617R0UK
+  Extender Model: N2K-B22HP-P,  Part No: 73-13780-05
+  Bay: 2
+  Rack: 5G-DB
+  Enclosure: VOR_460_GB8924TDTC_5G-DB
+  Enclosure Serial: GB8924TDTC
+  Rack Id: Default RUID
+  Card Id: 145, Mac Addr: 50:57:a8:12:d7:42, Num Macs: 131136
+  Module Sw Gen: 12594  [Switch Sw Gen: 21]
+  Post level: complete
+  Pinning-mode: static    Max-links: 1
+  Fabric port for control traffic: Eth1/5/1
+  FCoE Admin: false
+  FCoE Oper: true
+  FCoE FEX AA Configured: false
+  Fabric interface state:
+    Po112 - Interface Up. State: Active
+    Eth1/5/1 - Interface Up. State: Active
+    Eth1/5/2 - Interface Up. State: Active
+    Eth1/5/3 - Interface Up. State: Active
+    Eth1/5/4 - Interface Up. State: Active
+  Fex Port        State  Fabric Port
+       Eth112/1/1    Up       Po112
+       Eth112/1/2    Up       Po112
+       Eth112/1/3    Up       Po112
+       Eth112/1/4    Up       Po112
+       Eth112/1/5    Up       Po112
+       Eth112/1/6    Up       Po112
+       Eth112/1/7    Up       Po112
+       Eth112/1/8    Up       Po112
+       Eth112/1/9    Up       Po112
+      Eth112/1/10    Up       Po112
+      Eth112/1/11    Up       Po112
+      Eth112/1/12  Down       Po112
+      Eth112/1/13    Up       Po112
+      Eth112/1/14    Up       Po112
+      Eth112/1/15    Up       Po112
+      Eth112/1/16    Up       Po112
+Logs:
+11/08/2018 13:30:51.385210: Module register received
+11/08/2018 13:30:51.385973: Image Version Mismatch
+11/08/2018 13:30:51.386250: Registration response sent
+11/08/2018 13:30:51.386484: Requesting satellite to download image
+11/08/2018 13:35:02.725502: Image preload successful.
+11/08/2018 13:35:04.051306: Deleting route to FEX
+11/08/2018 13:35:04.058850: Module disconnected
+11/08/2018 13:35:04.059476: Module Offline
+11/08/2018 13:35:04.079931: Deleting route to FEX
+11/08/2018 13:35:04.087272: Module disconnected
+11/08/2018 13:35:04.088104: Offlining Module
+11/08/2018 13:35:04.128379: Deleting route to FEX
+11/08/2018 13:35:04.136230: Module disconnected
+11/08/2018 13:35:04.137081: Offlining Module
+11/08/2018 13:35:04.173429: Deleting route to FEX
+11/08/2018 13:35:04.181568: Module disconnected
+11/08/2018 13:35:04.182633: Offlining Module
+11/08/2018 13:35:04.247534: Deleting route to FEX
+11/08/2018 13:35:04.255968: Module disconnected
+11/08/2018 13:35:04.256825: Offlining Module
+11/08/2018 13:36:42.480927: Module register received
+11/08/2018 13:36:42.482312: Registration response sent
+11/08/2018 13:36:42.521893: create module inserted event.
+11/08/2018 13:36:42.522275: Module Online Sequence
+11/08/2018 13:36:44.864086: Module Online
+11/09/2018 16:59:55.731730: Deleting route to FEX
+11/09/2018 16:59:55.741491: Module disconnected
+11/09/2018 16:59:55.742137: Offlining Module
+11/09/2018 16:59:55.742530: Module Offline Sequence
+11/09/2018 16:59:55.925175: Module Offline
+11/09/2018 16:59:55.979778: Deleting route to FEX
+11/09/2018 16:59:55.987243: Module disconnected
+11/09/2018 16:59:55.988174: Offlining Module
+11/09/2018 16:59:56.042027: Deleting route to FEX
+11/09/2018 16:59:56.049529: Module disconnected
+11/09/2018 16:59:56.050416: Offlining Module
+11/09/2018 17:03:53.409882: Module register received
+11/09/2018 17:03:53.411172: Registration response sent
+11/09/2018 17:03:53.451058: create module inserted event.
+11/09/2018 17:03:53.451437: Module Online Sequence
+11/09/2018 17:03:56.063073: Module Online
+11/12/2018 11:51:29.705758: Deleting route to FEX
+11/12/2018 11:51:29.714749: Module disconnected
+11/12/2018 11:51:29.715344: Offlining Module
+11/12/2018 11:51:29.715746: Module Offline Sequence
+11/12/2018 11:51:29.867028: Module Offline
+11/12/2018 11:51:29.889427: Deleting route to FEX
+11/12/2018 11:51:29.897268: Module disconnected
+11/12/2018 11:51:29.898173: Offlining Module
+11/12/2018 11:51:29.944338: Deleting route to FEX
+11/12/2018 11:51:29.954765: Module disconnected
+11/12/2018 11:51:29.955642: Offlining Module
+11/12/2018 11:53:11.190802: Module register received
+11/12/2018 11:53:11.192147: Registration response sent
+11/12/2018 11:53:11.231874: create module inserted event.
+11/12/2018 11:53:11.232251: Module Online Sequence
+11/12/2018 11:53:14.443263: Module Online
+
+FEX: 114 Description: vN2K11-114   state: Online
+  FEX version: 7.3(1)N1(1) [Switch version: 7.3(1)N1(1)]
+  FEX Interim version: 7.3(1)N1(1)
+  Switch Interim version: 7.3(1)N1(1)
+  Extender Serial: FOC1617R0UM
+  Extender Model: N2K-B22HP-P,  Part No: 73-13780-05
+  Bay: 2
+  Rack: 5G-DJ
+  Enclosure: VOR_460_CZ3242YNF1_5G-DJ
+  Enclosure Serial: CZ3242YNF1
+  Rack Id: Default RUID
+  Card Id: 145, Mac Addr: 50:57:a8:12:d6:82, Num Macs: 131136
+  Module Sw Gen: 12594  [Switch Sw Gen: 21]
+  Post level: complete
+  Pinning-mode: static    Max-links: 1
+  Fabric port for control traffic: Eth1/3/3
+  FCoE Admin: false
+  FCoE Oper: true
+  FCoE FEX AA Configured: false
+  Fabric interface state:
+    Po114 - Interface Up. State: Active
+    Eth1/3/1 - Interface Up. State: Active
+    Eth1/3/2 - Interface Up. State: Active
+    Eth1/3/3 - Interface Up. State: Active
+    Eth1/3/4 - Interface Up. State: Active
+  Fex Port        State  Fabric Port
+       Eth114/1/1    Up       Po114
+       Eth114/1/2    Up       Po114
+       Eth114/1/3    Up       Po114
+       Eth114/1/4    Up       Po114
+       Eth114/1/5    Up       Po114
+       Eth114/1/6    Up       Po114
+       Eth114/1/7    Up       Po114
+       Eth114/1/8    Up       Po114
+       Eth114/1/9    Up       Po114
+      Eth114/1/10    Up       Po114
+      Eth114/1/11    Up       Po114
+      Eth114/1/12    Up       Po114
+      Eth114/1/13    Up       Po114
+      Eth114/1/14    Up       Po114
+      Eth114/1/15    Up       Po114
+      Eth114/1/16    Up       Po114
+Logs:
+11/20/2018 18:23:59.428994: Module register received
+11/20/2018 18:23:59.429765: Image Version Mismatch
+11/20/2018 18:23:59.430066: Registration response sent
+11/20/2018 18:23:59.430277: Requesting satellite to download image
+11/20/2018 18:28:41.454497: Image preload successful.
+11/20/2018 18:28:42.842634: Deleting route to FEX
+11/20/2018 18:28:42.850979: Module disconnected
+11/20/2018 18:28:42.851628: Module Offline
+11/20/2018 18:28:42.868273: Deleting route to FEX
+11/20/2018 18:28:42.876174: Module disconnected
+11/20/2018 18:28:42.877024: Offlining Module
+11/20/2018 18:28:42.916164: Deleting route to FEX
+11/20/2018 18:28:42.923592: Module disconnected
+11/20/2018 18:28:42.924441: Offlining Module
+11/20/2018 18:30:20.369026: Module register received
+11/20/2018 18:30:20.370328: Registration response sent
+11/20/2018 18:30:20.407028: create module inserted event.
+11/20/2018 18:30:20.407393: Module Online Sequence
+11/20/2018 18:30:22.766207: Module Online
+

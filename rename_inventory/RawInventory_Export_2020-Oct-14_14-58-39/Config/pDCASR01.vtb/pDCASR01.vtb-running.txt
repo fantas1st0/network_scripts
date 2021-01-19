@@ -1,0 +1,4442 @@
+Fri Oct  2 00:22:45.251 MSK
+Building configuration...
+!! IOS XR Configuration 6.0.2
+!! Last configuration change at Thu Oct  1 19:44:53 2020 by eugenuru
+!
+service unsupported-transceiver
+hostname pDCASR01
+clock timezone MSK 3
+banner login ^
+=========================================================
+==               pDCASR01  via Tacacs, local           ==
+==                                                     ==
+==               VTB Network Infrastructure            ==
+=========================================================
+^
+logging history size 100
+logging buffered debugging
+service timestamps log datetime localtime show-timezone
+service timestamps debug datetime localtime show-timezone
+telnet vrf default ipv4 server max-servers 15
+telnet vrf Management ipv4 server max-servers 15
+domain name vtb
+domain lookup disable
+username xxxxxxxx
+ group netadmin
+ password 7 xxxxxxxx
+!
+aaa group server tacacs+ MSK-TACACS
+ vrf Management
+ server-private 10.128.128.11 port 49
+  key 7 xxxxxxxx
+ !
+ server-private 10.164.140.150 port 49
+  key 7 xxxxxxxx
+ !
+!
+aaa authentication login MSK-ACS group MSK-TACACS local
+cdp
+vrf ATM
+ description description ATM transport ex24
+ address-family ipv4 unicast
+  import route-target
+   10.8.252.13:5030
+  !
+  export route-target
+   10.8.252.13:5030
+  !
+ !
+!
+vrf nInet
+ address-family ipv4 unicast
+  import route-target
+   65535:4000
+  !
+  export route-target
+   65535:4000
+  !
+ !
+!
+vrf M-BANK
+ address-family ipv4 unicast
+  import route-target
+   65535:65400
+  !
+  export route-target
+   65535:65400
+  !
+ !
+!
+vrf VTB-24
+ address-family ipv4 unicast
+  import route-target
+   65535:1005
+  !
+  export route-target
+   65535:1005
+  !
+ !
+!
+vrf VTB-GW
+ address-family ipv4 unicast
+  import route-target
+   65535:4600
+  !
+  export route-target
+   65535:4600
+  !
+ !
+!
+vrf VTB-MM
+ address-family ipv4 unicast
+  import route-target
+   65535:2500
+  !
+  export route-target
+   65535:2500
+  !
+ !
+!
+vrf VTB-RF
+ address-family ipv4 unicast
+  import route-target
+   65535:250
+  !
+  export route-target
+   65535:250
+  !
+ !
+!
+vrf VTB-RK
+ address-family ipv4 unicast
+  import route-target
+   65535:2000
+  !
+  export route-target
+   65535:2000
+  !
+ !
+!
+vrf OutSide
+ address-family ipv4 unicast
+  import route-target
+   65535:10
+  !
+  export route-target
+   65535:10
+  !
+ !
+!
+vrf VTB-CTR
+ address-family ipv4 unicast
+  import route-target
+   65535:1603
+   65535:1605
+  !
+  export route-target
+   65535:1601
+  !
+ !
+!
+vrf VTB-DEV
+ address-family ipv4 unicast
+  import route-target
+   65535:100
+  !
+  export route-target
+   65535:100
+  !
+ !
+!
+vrf VTB-EFX
+ address-family ipv4 unicast
+  import route-target
+   65535:194
+  !
+  export route-target
+   65535:194
+  !
+ !
+!
+vrf VTB-FBS
+ address-family ipv4 unicast
+  import route-target
+   65535:300
+  !
+  export route-target
+   65535:300
+  !
+ !
+!
+vrf VTB-FIN
+ address-family ipv4 unicast
+  import route-target
+   65535:700
+  !
+  export route-target
+   65535:700
+  !
+ !
+!
+vrf VTB-FXT
+ address-family ipv4 unicast
+  import route-target
+   65535:190
+  !
+  export route-target
+   65535:190
+  !
+ !
+!
+vrf VTB-GTR
+ address-family ipv4 unicast
+  import route-target
+   65535:1500
+  !
+  export route-target
+   65535:1500
+  !
+ !
+!
+vrf VTB-IRB
+ address-family ipv4 unicast
+  import route-target
+   65535:450
+  !
+  export route-target
+   65535:450
+  !
+ !
+!
+vrf VTB-KBR
+ address-family ipv4 unicast
+  import route-target
+   65535:790
+  !
+  export route-target
+   65535:790
+  !
+ !
+!
+vrf VTB-MON
+ address-family ipv4 unicast
+  import route-target
+   65535:50
+  !
+  export route-target
+   65535:50
+  !
+ !
+!
+vrf VTB-OTV
+ address-family ipv4 unicast
+  import route-target
+   65535:6500
+  !
+  export route-target
+   65535:6500
+  !
+ !
+!
+vrf VTB-SEC
+ address-family ipv4 unicast
+  import route-target
+   65535:5000
+  !
+  export route-target
+   65535:5000
+  !
+ !
+!
+vrf VTB-STR
+ address-family ipv4 unicast
+  import route-target
+   65535:1700
+  !
+  export route-target
+   65535:1700
+  !
+ !
+!
+vrf VipInet
+ address-family ipv4 unicast
+  import route-target
+   65535:4100
+  !
+  export route-target
+   65535:4100
+  !
+ !
+!
+vrf DBO_PROM
+ address-family ipv4 unicast
+  import route-target
+   65535:9100
+  !
+  export route-target
+   65535:9100
+  !
+ !
+!
+vrf DBO_TEST
+ address-family ipv4 unicast
+  import route-target
+   65535:9150
+  !
+  export route-target
+   65535:9150
+  !
+ !
+!
+vrf GROUPVTB
+ address-family ipv4 unicast
+  import route-target
+   65535:200
+  !
+  export route-target
+   65535:200
+  !
+ !
+!
+vrf Internet
+ address-family ipv4 unicast
+  import route-target
+   65535:7100
+  !
+  export route-target
+   65535:7100
+  !
+ !
+!
+vrf RF-TR-24
+ address-family ipv4 unicast
+  import route-target
+   65535:8100
+  !
+  export route-target
+   65535:8100
+  !
+ !
+!
+vrf RF-TR-BM
+ address-family ipv4 unicast
+  import route-target
+   65535:8120
+  !
+  export route-target
+   65535:8120
+  !
+ !
+!
+vrf VTB-Core
+ address-family ipv4 unicast
+  import route-target
+   65535:1
+  !
+  export route-target
+   65535:1
+  !
+ !
+!
+vrf VTB-RSRV
+ address-family ipv4 unicast
+  import route-target
+   65535:6000
+  !
+  export route-target
+   65535:6000
+  !
+ !
+!
+vrf nInet-BE
+ address-family ipv4 unicast
+  import route-target
+   65535:4501
+  !
+  export route-target
+   65535:4501
+  !
+ !
+!
+vrf M-BANK-DC
+ address-family ipv4 unicast
+  import route-target
+   65535:65401
+  !
+  export route-target
+   65535:65401
+  !
+ !
+!
+vrf RF-TR-CAP
+ address-family ipv4 unicast
+  import route-target
+   65535:8110
+  !
+  export route-target
+   65535:8110
+  !
+ !
+!
+vrf VTB-RF-24
+ address-family ipv4 unicast
+  import route-target
+   65535:8000
+  !
+  export route-policy RP_EXPORT-RF-24
+  export route-target
+   65535:8000
+  !
+ !
+!
+vrf VTB-RF-BM
+ address-family ipv4 unicast
+  import route-target
+   65535:8020
+  !
+  export route-target
+   65535:8020
+  !
+ !
+!
+vrf VTB-Somib
+ address-family ipv4 unicast
+  import route-target
+   65535:600
+  !
+  export route-target
+   65535:600
+  !
+ !
+!
+vrf VTB-USERS
+ address-family ipv4 unicast
+  import route-target
+   65535:16000
+  !
+  export route-target
+   65535:16000
+  !
+ !
+!
+vrf nInet-SRV
+ address-family ipv4 unicast
+  import route-target
+   65535:4500
+  !
+  export route-target
+   65535:4500
+  !
+ !
+!
+vrf BANKMOSCOW
+ address-family ipv4 unicast
+  import route-target
+   65535:3
+  !
+  export route-target
+   65535:3
+  !
+ !
+!
+vrf Management
+ address-family ipv4 unicast
+ !
+!
+vrf VTB-RF-CAP
+ address-family ipv4 unicast
+  import route-target
+   65535:8010
+  !
+  export route-target
+   65535:8010
+  !
+ !
+!
+vrf VTB-VCS-GW
+ address-family ipv4 unicast
+  import route-target
+   65535:65501
+  !
+  export route-target
+   65535:65501
+  !
+ !
+!
+vrf VTB24_ALIEN
+ address-family ipv4 unicast
+  import route-target
+   65535:3210
+  !
+  export route-target
+   65535:3210
+  !
+ !
+!
+vrf WIFI-VTBCOM
+ address-family ipv4 unicast
+  import route-target
+   65535:1006
+  !
+  export route-target
+   65535:1006
+  !
+ !
+!
+vrf nInet-Proxy
+ address-family ipv4 unicast
+  import route-target
+   65535:4250
+  !
+  export route-target
+   65535:4250
+  !
+ !
+!
+vrf WIFI-VTB-AIR
+ address-family ipv4 unicast
+  import route-target
+   24823:3270
+  !
+  export route-target
+   24823:3270
+  !
+ !
+!
+vrf VTB-DEV-USERS
+ description VTB-DEV-USERS ex24
+ address-family ipv4 unicast
+  import route-target
+   24823:2330
+  !
+  export route-target
+   24823:2330
+  !
+ !
+!
+vrf VTB24-MSK-AUX-VPN
+ address-family ipv4 unicast
+  import route-target
+   10.8.252.66:14060
+  !
+  export route-target
+   10.8.252.66:14060
+  !
+ !
+!
+vrf VTB24_SUPPORT-INF
+ description USERS-DEFAULT ex24
+ address-family ipv4 unicast
+  import route-target
+   24823:3100
+  !
+  export route-target
+   24823:3100
+  !
+ !
+!
+vrf VTB-24-USERS-DEFAULT
+ description USERS-DEFAULT ex24
+ address-family ipv4 unicast
+  import route-target
+   24823:3080
+  !
+  export route-target
+   24823:3080
+  !
+ !
+!
+line template vty
+ login authentication MSK-ACS
+!
+line console
+ stopbits 1
+!
+line default
+ login authentication MSK-ACS
+ exec-timeout 360 0
+ session-timeout 360
+!
+snmp-server ifmib ifalias long
+snmp-server ifindex persist
+snmp-server ifmib ipsubscriber
+snmp-server mibs cbqosmib persist
+snmp-server vrf Management
+ host 10.132.128.21 traps encrypted 094F411F1C1D
+ host 10.150.128.100 traps covex
+ host 10.164.147.100 traps encrypted 011009125E13
+!
+snmp-server host 10.132.128.21 traps version 2c xxxxxxxx 050809192454
+snmp-server host 10.150.128.100 traps xxxxxxxx 
+snmp-server host 10.164.147.100 traps version 2c xxxxxxxx 14141D1D091C
+snmp-server community xxxxxxxx RO IPv4 CiscoAudit2020
+snmp-server community xxxxxxxx 00071C100143 RW IPv4 Snmp-Managers
+snmp-server traps bfd
+snmp-server traps snmp linkup
+snmp-server traps snmp linkdown
+snmp-server traps snmp coldstart
+snmp-server traps snmp warmstart
+snmp-server traps config
+snmp-server traps entity
+snmp-server traps system
+snmp-server traps entity-state operstatus
+snmp-server traps entity-state switchover
+snmp-server traps performance traffic
+snmp-server location PEROVO-DC
+snmp-server context aaa
+snmp-server context VTB-GTR
+snmp-server context mapping VTB-GTR feature vrf vrf VTB-GTR
+snmp-server trap-source IPv4 Loopback0
+ftp client source-interface Loopback0
+ntp
+ server 10.255.255.133 source Loopback0
+ server 10.255.255.160 source Loopback0
+ server vrf Management 10.128.128.50
+ server vrf Management 10.130.255.100
+ server vrf Management 10.164.0.200
+!
+alias mgmint MgmtEth0/RSP0/CPU0/0
+service cli history size 1024
+service cli submode-exit enable
+tftp client source-interface Loopback0
+ipv4 access-list Snmp-Managers
+ 10 permit ipv4 10.132.128.0/24 any
+ 20 permit ipv4 10.164.147.0/24 any
+ 30 permit ipv4 10.150.128.0/24 any
+!
+ipv4 access-list CiscoAudit2020
+ 10 permit ipv4 host 10.64.0.111 any
+!
+interface Bundle-Ether1
+ mtu 9216
+ ipv4 address 10.255.254.205 255.255.255.252
+ load-interval 30
+!
+interface Bundle-Ether2
+ mtu 9216
+!
+interface Bundle-Ether2.3798
+ vrf VTB-OTV
+ ipv4 address 10.255.247.17 255.255.255.252
+ encapsulation dot1q 3798
+!
+interface Bundle-Ether3
+ mtu 9216
+ load-interval 30
+!
+interface Bundle-Ether3.2626
+ vrf WIFI-VTB-AIR
+ ipv4 address 10.67.49.65 255.255.255.252
+ encapsulation dot1q 2626
+!
+interface Bundle-Ether3.3069
+ vrf VTB-USERS
+ ipv4 address 10.255.128.85 255.255.255.252
+ encapsulation dot1q 3069
+!
+interface Bundle-Ether3.3075
+ vrf VTB-GW
+ ipv4 address 172.17.255.69 255.255.255.252
+ encapsulation dot1q 3075
+!
+interface Bundle-Ether3.3088
+ vrf VTB-VCS-GW
+ ipv4 address 10.106.133.121 255.255.255.252
+ encapsulation dot1q 3088
+!
+interface Bundle-Ether3.3224
+ vrf DBO_PROM
+ ipv4 address 10.150.252.1 255.255.255.252
+ encapsulation dot1q 3224
+!
+interface Bundle-Ether3.3230
+ vrf DBO_TEST
+ ipv4 address 10.150.252.25 255.255.255.252
+ encapsulation dot1q 3230
+!
+interface Bundle-Ether3.3239
+ vrf nInet-Proxy
+ ipv4 address 10.150.252.61 255.255.255.252
+ encapsulation dot1q 3239
+!
+interface Bundle-Ether3.3246
+ vrf VTB-MM
+ ipv4 address 10.106.170.49 255.255.255.252
+ encapsulation dot1q 3246
+!
+interface Bundle-Ether3.3273
+ vrf VTB-KBR
+ ipv4 address 10.148.252.17 255.255.255.252
+ encapsulation dot1q 3273
+!
+interface Bundle-Ether3.3287
+ vrf VTB-FBS
+ ipv4 address 10.0.251.197 255.255.255.252
+ encapsulation dot1q 3287
+!
+interface Bundle-Ether3.3295
+ vrf nInet-BE
+ ipv4 address 172.16.35.197 255.255.255.252
+ encapsulation dot1q 3295
+!
+interface Bundle-Ether3.3548
+ vrf VTB24_ALIEN
+ ipv4 address 10.67.250.33 255.255.255.252
+ encapsulation dot1q 3548
+!
+interface Bundle-Ether3.3569
+ vrf VTB24_SUPPORT-INF
+ ipv4 address 10.84.252.5 255.255.255.252
+ encapsulation dot1q 3569
+!
+interface Bundle-Ether3.3578
+ vrf VTB-EFX
+ ipv4 address 172.16.39.157 255.255.255.252
+ encapsulation dot1q 3578
+!
+interface Bundle-Ether3.3593
+ vrf VTB-Somib
+ ipv4 address 172.16.247.229 255.255.255.252
+ encapsulation dot1q 3593
+!
+interface Bundle-Ether3.3658
+ vrf VTB-RF-24
+ ipv4 address 10.194.254.133 255.255.255.252
+ encapsulation dot1q 3658
+!
+interface Bundle-Ether3.3664
+ vrf VTB-RF-CAP
+ ipv4 address 10.194.254.153 255.255.255.252
+ encapsulation dot1q 3664
+!
+interface Bundle-Ether3.3670
+ vrf VTB-RF-BM
+ ipv4 address 10.194.254.173 255.255.255.252
+ encapsulation dot1q 3670
+!
+interface Bundle-Ether3.3676
+ vrf VTB-RF
+ ipv4 address 10.194.254.193 255.255.255.252
+ encapsulation dot1q 3676
+!
+interface Bundle-Ether3.3680
+ description RF <-> RF-24
+ vrf VTB-RF
+ ipv4 address 10.194.254.209 255.255.255.252
+ shutdown
+ encapsulation dot1q 3680
+!
+interface Bundle-Ether3.3684
+ description link RF <-> RF-CAP
+ vrf VTB-RF
+ ipv4 address 10.194.254.225 255.255.255.252
+ encapsulation dot1q 3684
+!
+interface Bundle-Ether3.3688
+ description RF <-> RF-BM
+ vrf VTB-RF
+ ipv4 address 10.194.254.241 255.255.255.252
+ shutdown
+ encapsulation dot1q 3688
+!
+interface Bundle-Ether3.3694
+ vrf M-BANK-DC
+ ipv4 address 10.208.255.249 255.255.255.252
+ encapsulation dot1q 3694
+!
+interface Bundle-Ether3.3701
+ vrf VTB-Core
+ ipv4 address 10.150.252.249 255.255.255.252
+ encapsulation dot1q 3701
+!
+interface Bundle-Ether3.3706
+ vrf VTB-DEV
+ ipv4 address 10.144.250.249 255.255.255.252
+ encapsulation dot1q 3706
+!
+interface Bundle-Ether3.3711
+ vrf VTB-FIN
+ ipv4 address 10.148.253.249 255.255.255.252
+ encapsulation dot1q 3711
+!
+interface Bundle-Ether3.3716
+ vrf nInet-SRV
+ ipv4 address 172.16.231.121 255.255.255.252
+ encapsulation dot1q 3716
+!
+interface Bundle-Ether3.3721
+ vrf nInet
+ ipv4 address 172.16.241.109 255.255.255.252
+ encapsulation dot1q 3721
+!
+interface Bundle-Ether3.3726
+ vrf VipInet
+ ipv4 address 172.16.103.121 255.255.255.252
+ encapsulation dot1q 3726
+!
+interface Bundle-Ether3.3731
+ vrf GROUPVTB
+ ipv4 address 10.193.255.169 255.255.255.252
+ encapsulation dot1q 3731
+!
+interface Bundle-Ether3.3736
+ vrf VTB-RSRV
+ ipv4 address 10.0.248.97 255.255.255.252
+ encapsulation dot1q 3736
+!
+interface Bundle-Ether3.3741
+ vrf VTB-STR
+ ipv4 address 10.149.255.45 255.255.255.252
+ encapsulation dot1q 3741
+!
+interface Bundle-Ether4
+ mtu 9216
+ load-interval 30
+!
+interface Bundle-Ether4.2628
+ vrf WIFI-VTB-AIR
+ ipv4 address 10.67.49.73 255.255.255.252
+ encapsulation dot1q 2628
+!
+interface Bundle-Ether4.3071
+ vrf VTB-USERS
+ ipv4 address 10.255.128.93 255.255.255.252
+ encapsulation dot1q 3071
+!
+interface Bundle-Ether4.3077
+ vrf VTB-GW
+ ipv4 address 172.17.255.77 255.255.255.252
+ encapsulation dot1q 3077
+!
+interface Bundle-Ether4.3090
+ vrf VTB-VCS-GW
+ ipv4 address 10.106.133.113 255.255.255.252
+ encapsulation dot1q 3090
+!
+interface Bundle-Ether4.3226
+ vrf DBO_PROM
+ ipv4 address 10.150.252.9 255.255.255.252
+ encapsulation dot1q 3226
+!
+interface Bundle-Ether4.3232
+ vrf DBO_TEST
+ ipv4 address 10.150.252.33 255.255.255.252
+ encapsulation dot1q 3232
+!
+interface Bundle-Ether4.3241
+ vrf nInet-Proxy
+ ipv4 address 10.150.252.69 255.255.255.252
+ encapsulation dot1q 3241
+!
+interface Bundle-Ether4.3248
+ vrf VTB-MM
+ ipv4 address 10.106.170.37 255.255.255.252
+ encapsulation dot1q 3248
+!
+interface Bundle-Ether4.3275
+ vrf VTB-KBR
+ ipv4 address 10.148.252.25 255.255.255.252
+ encapsulation dot1q 3275
+!
+interface Bundle-Ether4.3289
+ vrf VTB-FBS
+ ipv4 address 10.0.251.205 255.255.255.252
+ encapsulation dot1q 3289
+!
+interface Bundle-Ether4.3297
+ vrf nInet-BE
+ ipv4 address 172.16.35.205 255.255.255.252
+ encapsulation dot1q 3297
+!
+interface Bundle-Ether4.3550
+ vrf VTB24_ALIEN
+ ipv4 address 10.67.250.41 255.255.255.252
+ encapsulation dot1q 3550
+!
+interface Bundle-Ether4.3571
+ vrf VTB24_SUPPORT-INF
+ ipv4 address 10.84.252.13 255.255.255.252
+ encapsulation dot1q 3571
+!
+interface Bundle-Ether4.3580
+ vrf VTB-EFX
+ ipv4 address 172.16.39.165 255.255.255.252
+ encapsulation dot1q 3580
+!
+interface Bundle-Ether4.3595
+ vrf VTB-Somib
+ ipv4 address 172.16.247.237 255.255.255.252
+ encapsulation dot1q 3595
+!
+interface Bundle-Ether4.3660
+ vrf VTB-RF-24
+ ipv4 address 10.194.254.141 255.255.255.252
+ encapsulation dot1q 3660
+!
+interface Bundle-Ether4.3666
+ vrf VTB-RF-CAP
+ ipv4 address 10.194.254.161 255.255.255.252
+ encapsulation dot1q 3666
+!
+interface Bundle-Ether4.3672
+ vrf VTB-RF-BM
+ ipv4 address 10.194.254.181 255.255.255.252
+ encapsulation dot1q 3672
+!
+interface Bundle-Ether4.3678
+ vrf VTB-RF
+ ipv4 address 10.194.254.201 255.255.255.252
+ encapsulation dot1q 3678
+!
+interface Bundle-Ether4.3682
+ description RF <-> RF-24
+ vrf VTB-RF
+ ipv4 address 10.194.254.217 255.255.255.252
+ shutdown
+ encapsulation dot1q 3682
+!
+interface Bundle-Ether4.3686
+ description link RF <-> RF-CAP
+ vrf VTB-RF
+ ipv4 address 10.194.254.233 255.255.255.252
+ encapsulation dot1q 3686
+!
+interface Bundle-Ether4.3690
+ description RF <-> RF-BM
+ vrf VTB-RF
+ ipv4 address 10.194.254.249 255.255.255.252
+ shutdown
+ encapsulation dot1q 3690
+!
+interface Bundle-Ether4.3696
+ vrf M-BANK-DC
+ ipv4 address 10.208.255.241 255.255.255.252
+ encapsulation dot1q 3696
+!
+interface Bundle-Ether4.3703
+ vrf VTB-Core
+ ipv4 address 10.150.252.241 255.255.255.252
+ encapsulation dot1q 3703
+!
+interface Bundle-Ether4.3708
+ vrf VTB-DEV
+ ipv4 address 10.144.250.241 255.255.255.252
+ encapsulation dot1q 3708
+!
+interface Bundle-Ether4.3713
+ vrf VTB-FIN
+ ipv4 address 10.148.253.241 255.255.255.252
+ encapsulation dot1q 3713
+!
+interface Bundle-Ether4.3718
+ vrf nInet-SRV
+ ipv4 address 172.16.231.113 255.255.255.252
+ encapsulation dot1q 3718
+!
+interface Bundle-Ether4.3723
+ vrf nInet
+ ipv4 address 172.16.241.101 255.255.255.252
+ encapsulation dot1q 3723
+!
+interface Bundle-Ether4.3728
+ vrf VipInet
+ ipv4 address 172.16.103.113 255.255.255.252
+ encapsulation dot1q 3728
+!
+interface Bundle-Ether4.3733
+ vrf GROUPVTB
+ ipv4 address 10.193.255.177 255.255.255.252
+ encapsulation dot1q 3733
+!
+interface Bundle-Ether4.3738
+ vrf VTB-RSRV
+ ipv4 address 10.0.248.105 255.255.255.252
+ encapsulation dot1q 3738
+!
+interface Bundle-Ether4.3743
+ vrf VTB-STR
+ ipv4 address 10.149.255.53 255.255.255.252
+ encapsulation dot1q 3743
+!
+interface Bundle-Ether5
+ mtu 9170
+!
+interface Bundle-Ether5.3260
+ description XVOZROZHDENYE
+ vrf VTB-GTR
+ ipv4 address 10.193.255.29 255.255.255.252
+ encapsulation dot1q 3260
+!
+interface Bundle-Ether5.3795
+ vrf VTB-Core
+ ipv4 address 10.150.252.225 255.255.255.252
+ encapsulation dot1q 3795
+!
+interface Bundle-Ether6
+ description VTB24
+ mtu 9170
+!
+interface Bundle-Ether6.2695
+ !description VTB24 OutSide
+ vrf OutSide
+ ipv4 address 10.92.255.237 255.255.255.252
+ encapsulation dot1q 2695
+!
+interface Bundle-Ether6.3262
+ !description VTB-24-USERS-DEFAULT
+ vrf VTB-24-USERS-DEFAULT
+ ipv4 address 10.67.251.101 255.255.255.252
+ encapsulation dot1q 3262
+!
+interface Bundle-Ether6.3264
+ !description VTB24_SUPPORT-INF
+ vrf VTB24_SUPPORT-INF
+ ipv4 address 10.67.251.129 255.255.255.252
+ encapsulation dot1q 3264
+!
+interface Bundle-Ether6.3270
+ !description VTB-DEV-USERS
+ vrf VTB-DEV-USERS
+ ipv4 address 10.203.103.5 255.255.255.252
+ encapsulation dot1q 3270
+!
+interface Bundle-Ether6.3281
+ !description VTB24 nInet-SRV
+ vrf nInet-SRV
+ ipv4 address 172.16.239.21 255.255.255.252
+ encapsulation dot1q 3281
+!
+interface Bundle-Ether6.3444
+ description VTB24 VTB-IRB
+ !description VTB24 VTB-IRB
+ vrf VTB-IRB
+ ipv4 address 10.192.249.1 255.255.255.252
+ encapsulation dot1q 3444
+!
+interface Bundle-Ether6.3460
+ vrf VTB-MM
+ ipv4 address 10.106.169.37 255.255.255.252
+ encapsulation dot1q 3460
+!
+interface Bundle-Ether6.3462
+ !description VTB24 M-BANK
+ vrf M-BANK
+ ipv4 address 10.99.128.21 255.255.255.252
+ encapsulation dot1q 3462
+!
+interface Bundle-Ether6.3474
+ description Link from VTB-24 to WIFI-VTBCOM on site VTB
+ vrf WIFI-VTBCOM
+ ipv4 address 10.67.49.1 255.255.255.252
+ encapsulation dot1q 3474
+!
+interface Bundle-Ether6.3489
+ !description VTB24 VTB-FXT
+ vrf VTB-FXT
+ ipv4 address 10.192.254.229 255.255.255.252
+ encapsulation dot1q 3489
+!
+interface Bundle-Ether6.3529
+ description VTB24 WIFI-VTB-AIR
+ vrf WIFI-VTB-AIR
+ ipv4 address 10.67.49.18 255.255.255.252
+ encapsulation dot1q 3529
+!
+interface Bundle-Ether6.3553
+ description VTB24 VTB24_ALIEN
+ vrf VTB24_ALIEN
+ ipv4 address 10.67.250.21 255.255.255.252
+ encapsulation dot1q 3553
+!
+interface Bundle-Ether6.3614
+ !description VTB24 VTB-MON
+ vrf VTB-MON
+ ipv4 address 10.210.79.17 255.255.255.252
+ encapsulation dot1q 3614
+!
+interface Bundle-Ether6.3624
+ vrf VTB-Core
+ ipv4 address 10.192.251.245 255.255.255.252
+ encapsulation dot1q 3624
+!
+interface Bundle-Ether6.3626
+ vrf VTB-24
+ ipv4 address 10.67.251.37 255.255.255.252
+ encapsulation dot1q 3626
+!
+interface Bundle-Ether6.3698
+ vrf RF-TR-24
+ ipv4 address 10.194.255.81 255.255.255.252
+ encapsulation dot1q 3698
+!
+interface Bundle-Ether6.3745
+ vrf nInet
+ ipv4 address 172.16.62.5 255.255.255.252
+ encapsulation dot1q 3745
+!
+interface Bundle-Ether6.3747
+ vrf VipInet
+ ipv4 address 172.16.98.249 255.255.255.252
+ encapsulation dot1q 3747
+!
+interface Bundle-Ether6.3749
+ !description VTB24 VTB-SEC
+ vrf VTB-SEC
+ ipv4 address 10.192.111.5 255.255.255.252
+ encapsulation dot1q 3749
+!
+interface Bundle-Ether6.3751
+ !description VTB24 VTB24-MSK-AUX-VPN
+ vrf VTB24-MSK-AUX-VPN
+ ipv4 address 10.67.251.49 255.255.255.252
+ encapsulation dot1q 3751
+!
+interface Bundle-Ether6.3755
+ !description VTB24 VTB-USERS
+ vrf VTB-USERS
+ ipv4 address 10.255.128.21 255.255.255.252
+ encapsulation dot1q 3755
+!
+interface Bundle-Ether6.3757
+ !description VTB24 ATM
+ vrf ATM
+ ipv4 address 10.67.251.89 255.255.255.252
+ encapsulation dot1q 3757
+!
+interface Bundle-Ether6.3759
+ !description VTB24 VTB-DEV
+ vrf VTB-DEV
+ ipv4 address 10.144.250.233 255.255.255.252
+ encapsulation dot1q 3759
+!
+interface Bundle-Ether7
+ description // mpls link to pASA-HUB //
+ mtu 9216
+ ipv4 address 10.255.255.69 255.255.255.252
+ load-interval 30
+!
+interface Loopback0
+ ipv4 address 10.255.255.144 255.255.255.255
+!
+interface MgmtEth0/RSP0/CPU0/0
+ vrf Management
+ ipv4 address 10.128.254.243 255.255.255.0
+!
+interface MgmtEth0/RSP0/CPU0/1
+ shutdown
+!
+interface TenGigE0/0/0/0
+ cdp
+ mtu 9216
+ ipv4 address 10.255.255.2 255.255.255.252
+!
+interface TenGigE0/0/0/1
+ description P-MPLS-P-1 ETH 2/1
+ cdp
+ mtu 9216
+ ipv4 address 10.255.254.105 255.255.255.252
+!
+interface TenGigE0/0/0/2
+ description === Bank of Moscow ===
+ cdp
+ mtu 9216
+ transceiver permit pid all
+!
+interface TenGigE0/0/0/2.3097
+ !description VTB-CTR-EXBM side
+ vrf VTB-CTR
+ ipv4 address 10.77.147.213 255.255.255.252
+ encapsulation dot1q 3097
+!
+interface TenGigE0/0/0/2.3243
+ !description VTB-USERS to xBM
+ vrf VTB-USERS
+ ipv4 address 10.255.128.33 255.255.255.252
+ encapsulation dot1q 3243
+!
+interface TenGigE0/0/0/2.3267
+ !description VTB24_SUPPORT-INF EXBM side
+ vrf VTB24_SUPPORT-INF
+ ipv4 address 10.67.251.141 255.255.255.252
+ encapsulation dot1q 3267
+!
+interface TenGigE0/0/0/2.3269
+ !description VTB-DEV-USERS EXBM side
+ vrf VTB-DEV-USERS
+ ipv4 address 10.203.103.21 255.255.255.252
+ encapsulation dot1q 3269
+!
+interface TenGigE0/0/0/2.3277
+ !description connect Internet public AS on exBM 
+ vrf Internet
+ ipv4 address 172.31.5.10 255.255.255.252
+ encapsulation dot1q 3277
+!
+interface TenGigE0/0/0/2.3279
+ !description connect nInet-SRV for migration services from exBM 
+ vrf nInet-SRV
+ ipv4 address 172.16.239.2 255.255.255.252
+ encapsulation dot1q 3279
+!
+interface TenGigE0/0/0/2.3455
+ !description VTB-24-EXBM side
+ vrf VTB-24
+ ipv4 address 10.86.255.5 255.255.255.252
+ encapsulation dot1q 3455
+!
+interface TenGigE0/0/0/2.3457
+ !description VTB-SEC-EXBM side
+ vrf VTB-SEC
+ ipv4 address 10.192.106.5 255.255.255.252
+ encapsulation dot1q 3457
+!
+interface TenGigE0/0/0/2.3459
+ !description nInet on exBM location
+ vrf nInet
+ ipv4 address 172.16.63.5 255.255.255.252
+ encapsulation dot1q 3459
+!
+interface TenGigE0/0/0/2.3465
+ !description M-BANK side
+ vrf M-BANK
+ ipv4 address 10.99.128.6 255.255.255.252
+ encapsulation dot1q 3465
+!
+interface TenGigE0/0/0/2.3473
+ vrf M-BANK-DC
+ ipv4 address 10.208.255.14 255.255.255.252
+ encapsulation dot1q 3473
+!
+interface TenGigE0/0/0/2.3477
+ !description RF-TR TO M-BANK side
+ vrf RF-TR-BM
+ ipv4 address 10.194.255.213 255.255.255.252
+ encapsulation dot1q 3477
+!
+interface TenGigE0/0/0/2.3479
+ !description VTBRK
+ vrf VTB-RK
+ ipv4 address 10.192.144.157 255.255.255.252
+ encapsulation dot1q 3479
+!
+interface TenGigE0/0/0/2.3481
+ !description native VTB-Core on exBM location
+ vrf VTB-Core
+ ipv4 address 10.150.253.33 255.255.255.248
+ encapsulation dot1q 3481
+!
+interface TenGigE0/0/0/2.3483
+ !description native VTB-Core on exBM location
+ vrf VTB-DEV
+ ipv4 address 10.144.192.9 255.255.255.248
+ encapsulation dot1q 3483
+!
+interface TenGigE0/0/0/2.3485
+ !description VipInet EXBM
+ vrf VipInet
+ ipv4 address 172.16.103.137 255.255.255.252
+ encapsulation dot1q 3485
+!
+interface TenGigE0/0/0/2.3487
+ !description VTB-MM EXBM
+ vrf VTB-MM
+ ipv4 address 10.106.140.25 255.255.255.252
+ encapsulation dot1q 3487
+!
+interface TenGigE0/0/0/2.3497
+ !description VTB 10.209/BM 10.208
+ vrf BANKMOSCOW
+ ipv4 address 10.172.255.69 255.255.255.252
+ encapsulation dot1q 3497
+!
+interface TenGigE0/0/0/2.3617
+ !description xBM VTB-MON
+ vrf VTB-MON
+ ipv4 address 10.210.79.5 255.255.255.252
+ encapsulation dot1q 3617
+!
+interface TenGigE0/0/0/2.3753
+ !description VTB24-MSK-AUX-VPN-EXBM side
+ vrf VTB24-MSK-AUX-VPN
+ ipv4 address 10.67.251.61 255.255.255.252
+ encapsulation dot1q 3753
+!
+interface TenGigE0/0/0/2.3761
+ !description VTB-IRB on exBM location
+ vrf VTB-IRB
+ ipv4 address 10.192.105.165 255.255.255.252
+ encapsulation dot1q 3761
+!
+interface TenGigE0/0/0/3
+ bundle id 1 mode active
+ cdp
+!
+interface TenGigE0/0/0/4
+ bundle id 3 mode active
+ cdp
+!
+interface TenGigE0/0/0/5
+ bundle id 4 mode active
+ cdp
+!
+interface TenGigE0/0/0/6
+ cdp
+ mtu 9216
+!
+interface TenGigE0/0/0/7
+ bundle id 5 mode active
+ cdp
+!
+interface TenGigE0/0/1/0
+ bundle id 3 mode active
+ cdp
+!
+interface TenGigE0/0/1/1
+ bundle id 4 mode active
+ cdp
+!
+interface TenGigE0/0/1/2
+ cdp
+ mtu 9216
+!
+interface TenGigE0/0/1/3
+ bundle id 5 mode active
+ cdp
+!
+interface TenGigE0/0/1/4
+ bundle id 7 mode active
+ cdp
+!
+interface TenGigE0/0/1/5
+ description VTB24
+ bundle id 6 mode active
+ cdp
+!
+interface TenGigE0/0/1/6
+ bundle id 2 mode active
+ cdp
+!
+interface TenGigE0/0/1/7
+ bundle id 1 mode active
+ cdp
+!
+interface PTP0/RSP0/CPU0/0
+ shutdown
+!
+rd-set 65535:8010
+end-set
+!
+prefix-set pl-RF
+  10.194.0.0/16
+end-set
+!
+prefix-set VTB-RF
+  10.194.130.0/24,
+  10.194.162.0/24,
+  10.194.170.0/24
+end-set
+!
+prefix-set VTB-DEV
+  10.0.0.0/8
+end-set
+!
+prefix-set VTB-MCore
+  10.0.0.0/8
+end-set
+!
+prefix-set NINET-EXBM
+  172.16.0.0/16 le 32
+end-set
+!
+prefix-set default_RF
+  0.0.0.0/0
+end-set
+!
+prefix-set M-BANK-VTB24
+  0.0.0.0/0,
+  0.0.0.0/0 le 30
+end-set
+!
+prefix-set VTB-DEV-EXBM
+  10.0.0.0/8 le 32
+end-set
+!
+prefix-set NINET-TO-EXBM
+  0.0.0.0/0
+end-set
+!
+prefix-set default_VTBRF
+  10.0.0.0/8,
+  0.0.0.0/0
+end-set
+!
+prefix-set PREFIX-TO-EXBM
+  0.0.0.0/0 le 32
+end-set
+!
+prefix-set PS_RF-24-LOCAL
+  10.194.162.0/24
+end-set
+!
+prefix-set VTB-24-TO-EXBM
+  0.0.0.0/0
+end-set
+!
+prefix-set VTB-MCore-EXBM
+  10.0.0.0/8 le 32
+end-set
+!
+prefix-set VTB-RK-TO-EXBM
+  10.0.0.0/8,
+  10.128.0.0/9
+end-set
+!
+prefix-set VTB-CTR-TO-EXBM
+  0.0.0.0/0 le 30
+end-set
+!
+prefix-set VTB-MM-EXBM-OUT
+  10.0.0.0/8
+end-set
+!
+prefix-set VTB-SEC-TO-EXBM
+  10.0.0.0/8 ge 24,
+  10.0.0.0/8
+end-set
+!
+prefix-set VTBMM-VTB24-OUT
+  10.0.0.0/8
+end-set
+!
+prefix-set NINET-FROM-VTB24
+  172.16.0.0/16 le 32
+end-set
+!
+prefix-set PREFIX-FROM-EXBM
+  0.0.0.0/0,
+  10.65.32.0/19
+end-set
+!
+prefix-set VIPINET-EXBM-OUT
+  0.0.0.0/0
+end-set
+!
+prefix-set VTB-24-FROM-EXBM
+  0.0.0.0/0 le 30
+end-set
+!
+prefix-set VTB-MM-FROM-EXBM
+  10.0.0.0/8 le 32
+end-set
+!
+prefix-set VTB-RK-FROM-EXBM
+  10.0.0.0/8 le 32
+end-set
+!
+prefix-set VTBMM-FROM-VTB24
+  10.0.0.0/8 ge 24
+end-set
+!
+prefix-set pl-V43-VTB-RF-24
+  10.194.160.0/24
+end-set
+!
+prefix-set pl-V43-VTB-RF-BM
+  10.194.168.0/24
+end-set
+!
+prefix-set VIPINET-FROM-EXBM
+  0.0.0.0/0 le 32
+end-set
+!
+prefix-set VTB-CTR-FROM-EXBM
+  0.0.0.0/0 le 30
+end-set
+!
+prefix-set VTB-SEC-FROM-EXBM
+  10.0.0.0/8 ge 24
+end-set
+!
+prefix-set pl-V43-VTB-RF-CAP
+  10.194.164.0/24
+end-set
+!
+prefix-set BANKMOSCOW-TO_EXBM
+  10.209.0.0/16,
+  10.209.0.0/17,
+  10.209.128.0/17,
+  10.172.255.96/28,
+  10.200.192.0/24,
+  10.128.0.0/16,
+  10.130.0.0/16,
+  10.132.0.0/16,
+  10.134.0.0/16,
+  10.136.0.0/16,
+  10.144.0.0/16,
+  10.145.0.0/16,
+  10.148.0.0/16,
+  10.150.0.0/16,
+  10.151.0.0/16,
+  10.164.0.0/16,
+  10.166.0.0/16,
+  10.168.0.0/16,
+  10.178.0.0/16,
+  10.200.0.0/16,
+  10.0.240.0/20,
+  10.3.0.0/18,
+  10.10.64.0/19,
+  10.29.0.0/19,
+  10.39.0.0/19,
+  10.39.32.0/19,
+  10.43.0.0/19,
+  10.46.0.0/19,
+  10.47.0.0/19,
+  10.51.0.0/19,
+  10.52.0.0/18,
+  10.53.0.0/19,
+  10.60.0.0/19,
+  10.66.0.0/19,
+  10.83.0.0/19,
+  10.36.0.0/18,
+  10.24.0.0/19,
+  10.27.0.0/19,
+  10.172.25.192/27,
+  10.177.0.0/16,
+  10.190.0.0/16,
+  10.192.0.0/16,
+  10.240.0.0/14,
+  10.165.0.0/16,
+  10.2.0.0/19,
+  10.14.0.0/19,
+  10.16.0.0/19,
+  10.18.0.0/19,
+  10.21.0.0/19,
+  10.22.0.0/19,
+  10.23.0.0/19,
+  10.23.32.0/19,
+  10.23.64.0/19,
+  10.24.64.0/19,
+  10.25.0.0/19,
+  10.25.32.0/19,
+  10.26.0.0/19,
+  10.28.0.0/19,
+  10.31.0.0/21,
+  10.31.30.0/24,
+  10.32.0.0/21,
+  10.33.0.0/21,
+  10.34.0.0/21,
+  10.35.56.0/21,
+  10.36.0.0/19,
+  10.36.32.0/19,
+  10.38.0.0/19,
+  10.40.0.0/19,
+  10.41.0.0/19,
+  10.42.0.0/19,
+  10.44.0.0/19,
+  10.48.0.0/19,
+  10.49.0.0/19,
+  10.54.0.0/19,
+  10.55.0.0/19,
+  10.56.0.0/19,
+  10.59.0.0/19,
+  10.61.0.0/19,
+  10.62.0.0/19,
+  10.63.0.0/19,
+  10.70.0.0/21,
+  10.71.0.0/19,
+  10.72.0.0/19,
+  10.73.0.0/19,
+  10.75.0.0/19,
+  10.105.0.0/19,
+  10.111.0.0/16,
+  10.112.0.0/16,
+  10.105.0.0/19,
+  10.117.0.0/16,
+  10.118.0.0/16,
+  10.254.226.0/25,
+  10.191.207.0/24,
+  10.106.0.0/16,
+  10.107.0.0/16,
+  10.108.0.0/16,
+  10.109.0.0/16,
+  10.126.0.0/16,
+  10.236.0.0/16,
+  10.5.0.0/17,
+  10.5.128.0/18,
+  10.8.36.0/23,
+  10.8.40.128/25,
+  10.8.41.0/25
+end-set
+!
+prefix-set NINET-TO-VTB24-OUT
+  0.0.0.0/0
+end-set
+!
+prefix-set VIPINET-FROM-VTB24
+  172.16.0.0/16 le 32
+end-set
+!
+prefix-set pl-V43-VTB-RF-24-fw
+  10.194.136.0/22,
+  10.194.140.0/24,
+  10.194.141.0/24
+end-set
+!
+prefix-set pl-V43-VTB-RF-BM-fw
+  10.194.152.0/22,
+  10.194.156.0/24,
+  10.194.157.0/24
+end-set
+!
+prefix-set BANKMOSCOW-FROM_EXBM
+  0.0.0.0/0 le 32
+end-set
+!
+prefix-set PREFIX-ATM-TO-VTB-24
+  172.31.0.0/16 le 32
+end-set
+!
+prefix-set PREFIX-VTB24-TO-EXBM
+  0.0.0.0/0 le 32
+end-set
+!
+prefix-set VIPINET-TO-VTB24-OUT
+  0.0.0.0/0
+end-set
+!
+prefix-set pl-V43-VTB-RF-CAP-fw
+  10.194.144.0/22,
+  10.194.148.0/24,
+  10.194.149.0/24
+end-set
+!
+prefix-set PREFIX-FOR-BM-FROM-RF
+  10.194.0.0/16 le 32
+end-set
+!
+prefix-set PREFIX-FOR-RF-FROM-BM
+  0.0.0.0/0,
+  10.194.152.0/22 le 32,
+  10.194.156.0/22 le 32,
+  10.194.255.192/26 le 30
+end-set
+!
+prefix-set Prefix-for-24-from-RF
+  10.194.0.0/16 le 32
+end-set
+!
+prefix-set Prefix-for-RF-from-24
+  0.0.0.0/0,
+  10.194.136.0/22 le 32,
+  10.194.140.0/22 le 32
+end-set
+!
+prefix-set VTB-DEV-USERS-TO-EXBM
+  0.0.0.0/0
+end-set
+!
+prefix-set PREFIX-ATM-FROM-VTB-24
+  0.0.0.0/0
+end-set
+!
+prefix-set PREFIX-VTB-IRB-TO-EXBM
+  0.0.0.0/0
+end-set
+!
+prefix-set VTB-DEV-USERS-FROM-EXBM
+  10.203.96.0/19 le 32,
+  10.203.128.0/19 le 32
+end-set
+!
+prefix-set PREFIX-OUTSIDE-TO-VTB-24
+  10.0.0.0/8
+end-set
+!
+prefix-set PREFIX-VTB-DEV-TO-VTB-24
+  10.0.0.0/8
+end-set
+!
+prefix-set PREFIX-VTB-FXT-TO-VTB-24
+  0.0.0.0/0
+end-set
+!
+prefix-set PREFIX-VTB-IRB-FROM-EXBM
+  10.0.0.0/8 le 32
+end-set
+!
+prefix-set PREFIX-VTB-IRB-TO-VTB-24
+  0.0.0.0/0
+end-set
+!
+prefix-set PREFIX-VTB-SEC-TO-VTB-24
+  10.0.0.0/8 ge 24,
+  10.0.0.0/8
+end-set
+!
+prefix-set PREFIX-VTB-USERS-TO-EXBM
+  0.0.0.0/0
+end-set
+!
+prefix-set VTB-GTR-TO_XVOZROZHDENYE
+  10.193.128.0/23,
+  10.193.255.48/29,
+  10.193.120.0/24,
+  10.193.125.0/24
+end-set
+!
+prefix-set VTB24-MSK-AUX-VPN-TO-EXBM
+  0.0.0.0/0
+end-set
+!
+prefix-set VTB24_SUPPORT-INF-TO-EXBM
+  0.0.0.0/0
+end-set
+!
+prefix-set pl-Perovo-VTB-RF-24-LOCAL
+  10.194.162.0/24
+end-set
+!
+prefix-set pl-Perovo-VTB-RF-BM-LOCAL
+  10.194.170.0/24
+end-set
+!
+prefix-set PREFIX-OUTSIDE-FROM-VTB-24
+  10.0.0.0/8 ge 16 le 32
+end-set
+!
+prefix-set PREFIX-VTB-DEV-FROM-VTB-24
+  10.255.128.128/28,
+  10.203.32.0/19,
+  10.203.64.0/19,
+  10.203.96.0/21,
+  10.194.136.0/22,
+  10.64.0.0/16,
+  10.69.0.0/16,
+  10.144.197.0/24,
+  10.68.235.0/24,
+  10.203.96.0/19,
+  10.203.128.0/19,
+  10.65.0.0/20,
+  10.79.0.0/20,
+  10.84.0.0/20,
+  10.85.0.0/16,
+  10.86.0.0/16,
+  10.87.0.0/16,
+  10.96.0.0/20,
+  10.97.0.0/20,
+  10.98.0.0/20,
+  10.254.0.0/20,
+  10.254.16.0/20,
+  10.254.32.0/20,
+  10.70.16.0/20,
+  10.70.32.0/19,
+  10.70.64.0/18,
+  10.70.128.0/17,
+  10.74.56.0/21,
+  217.14.50.0/24,
+  10.76.123.0/24,
+  10.76.124.0/23,
+  10.203.224.0/22,
+  10.74.208.0/21
+end-set
+!
+prefix-set PREFIX-VTB-FXT-FROM-VTB-24
+  10.0.0.0/8 ge 24
+end-set
+!
+prefix-set PREFIX-VTB-IRB-FROM-VTB-24
+  10.192.105.64/27,
+  10.192.105.128/27,
+  10.192.105.208/28
+end-set
+!
+prefix-set PREFIX-VTB-SEC-FROM-VTB-24
+  10.0.0.0/8 ge 24
+end-set
+!
+prefix-set PREFIX-VTB-USERS-FROM-EXBM
+  0.0.0.0/0 le 30,
+  0.0.0.0/0 le 32
+end-set
+!
+prefix-set PREFIX-VTB-USERS-TO-VTB-24
+  0.0.0.0/0 le 30,
+  0.0.0.0/0 le 32
+end-set
+!
+prefix-set PREFIX-nInet-SRV-TO-VTB-24
+  0.0.0.0/0
+end-set
+!
+prefix-set PREFIX-vrfInternet-TO-EXBM
+  172.31.5.228/32,
+  172.31.5.232/32
+end-set
+!
+prefix-set VTB-GTR-FROM_XVOZROZHDENYE
+  10.193.106.64/26
+end-set
+!
+prefix-set pl-Perovo-VTB-RF-CAP-LOCAL
+  10.194.166.0/24
+end-set
+!
+prefix-set PREFIX-FOR-VTB-MON-FROM-XBM
+  10.0.0.0/8 le 30
+end-set
+!
+prefix-set PREFIX-FOR-XBM-FROM-VTB-MON
+  10.0.0.0/8
+end-set
+!
+prefix-set PREFIX-vrfnInet-SRV-TO-EXBM
+  172.16.239.0/30,
+  172.16.239.4/30,
+  172.16.239.8/30,
+  172.16.239.12/30,
+  172.16.224.0/24,
+  172.16.225.0/24,
+  172.16.227.0/26,
+  172.16.227.192/27,
+  172.16.228.128/25,
+  172.16.230.128/26,
+  172.16.230.192/26,
+  172.16.248.0/24,
+  172.16.254.128/25,
+  172.16.255.0/25
+end-set
+!
+prefix-set VTB24-MSK-AUX-VPN-FROM-EXBM
+  0.0.0.0/0 le 32
+end-set
+!
+prefix-set VTB24_SUPPORT-INF-FROM-EXBM
+  10.67.251.0/24 le 32,
+  10.254.224.0/19 le 32
+end-set
+!
+prefix-set PREFIX-VTB-USERS-FROM-VTB-24
+  0.0.0.0/0 le 32,
+  10.133.176.0/22,
+  10.133.180.0/22,
+  10.254.0.255/32,
+  10.254.48.0/20,
+  10.254.64.0/20,
+  10.254.101.0/24,
+  10.255.128.16/30,
+  10.255.128.20/30,
+  10.255.128.24/30,
+  10.255.128.96/28,
+  10.255.128.112/28
+end-set
+!
+prefix-set PREFIX-VTB24_ALIEN-TO-VTB-24
+  10.0.0.0/8 le 32
+end-set
+!
+prefix-set PREFIX-nInet-SRV-FROM-VTB-24
+  172.16.238.0/24
+end-set
+!
+prefix-set PREFIX-vrfInternet-FROM-EXBM
+  172.31.5.227/32,
+  172.31.5.231/32
+end-set
+!
+prefix-set PREFIX-FOR-VTB-MON-FROM-VTB24
+  10.0.0.0/8 le 30
+end-set
+!
+prefix-set PREFIX-vrfnInet-SRV-FROM-EXBM
+  172.16.239.32/29,
+  172.16.239.40/29,
+  10.249.19.0/24,
+  10.250.19.0/24,
+  10.1.1.1/32,
+  10.1.1.10/32,
+  10.46.32.0/19,
+  10.58.19.0/27,
+  10.58.19.32/27,
+  10.58.64.0/19 le 29,
+  10.58.68.0/24,
+  10.58.72.0/24,
+  10.58.73.0/24,
+  10.58.78.0/24,
+  10.58.84.0/24,
+  10.58.85.0/24,
+  10.58.86.0/24,
+  10.58.87.0/24,
+  10.58.88.0/24,
+  10.58.99.0/24,
+  10.58.101.0/24,
+  10.58.103.0/24,
+  10.99.66.0/24 le 26,
+  10.99.160.0/19,
+  10.172.2.0/24 le 26,
+  10.172.3.0/24 le 26,
+  10.172.6.0/24 le 26,
+  10.201.64.0/18 le 27,
+  10.201.68.0/24,
+  10.201.72.0/24,
+  10.201.73.0/24,
+  10.201.75.0/24,
+  10.201.78.0/24,
+  10.201.80.0/24,
+  10.201.85.0/24,
+  10.201.86.0/24,
+  10.201.87.0/24,
+  10.201.88.0/24,
+  10.202.118.0/24,
+  10.202.121.0/24,
+  10.208.4.0/24,
+  10.208.6.0/24,
+  10.208.38.0/24,
+  10.208.70.0/24,
+  10.208.193.0/24,
+  10.210.203.0/24 le 27,
+  10.213.30.0/24,
+  10.238.2.0/24,
+  10.238.9.0/24,
+  10.238.224.0/24,
+  10.238.128.0/20 le 32,
+  10.246.1.0/24 le 32,
+  10.246.2.0/24 le 32,
+  10.246.5.0/24 le 32,
+  10.246.241.0/24 le 26,
+  10.247.8.0/24 le 32,
+  10.247.14.0/24 le 32,
+  10.247.19.0/24 le 32,
+  10.247.20.0/24 le 32,
+  10.247.21.0/24 le 32,
+  10.249.8.0/24 le 26,
+  10.249.14.0/24 le 25,
+  10.249.19.0/24 le 25,
+  10.249.20.0/24 le 27,
+  10.249.21.0/24 le 25,
+  10.250.8.0/24 le 25,
+  10.250.14.0/24 le 25,
+  10.250.19.0/24 le 25,
+  10.250.20.0/24 le 27,
+  10.250.21.0/24 le 25,
+  172.31.23.0/24 le 32,
+  172.31.64.0/24 le 30,
+  172.31.65.0/24 le 29,
+  172.31.66.0/24 le 29,
+  172.31.144.0/24 le 29,
+  172.31.145.0/24 le 29,
+  172.31.146.0/24 le 28,
+  172.31.147.0/24 le 28,
+  172.31.148.0/24 le 29,
+  172.31.149.0/24 le 28,
+  172.31.150.0/24 le 29,
+  172.31.151.0/24 le 28,
+  172.31.152.0/24 le 28,
+  10.219.0.0/19,
+  172.31.20.160/29,
+  172.31.64.80/28,
+  172.31.144.0/28,
+  10.172.26.0/24 le 26,
+  10.1.1.2/32,
+  172.31.20.56/29 le 32,
+  10.248.2.0/24,
+  172.31.20.24/29 le 32,
+  10.58.97.0/24,
+  10.202.122.0/24,
+  10.1.0.0/19,
+  10.2.32.0/19,
+  10.15.0.0/19,
+  10.16.32.0/19,
+  10.23.96.0/19,
+  10.24.32.0/19,
+  10.26.32.0/19 le 24,
+  10.42.32.0/19,
+  10.42.64.0/19,
+  10.52.64.0/19,
+  10.54.32.0/19,
+  10.56.32.0/19,
+  10.56.64.0/19,
+  10.56.96.0/19,
+  10.59.32.0/19,
+  10.61.32.0/19,
+  10.65.32.0/19,
+  10.66.32.0/19,
+  10.78.32.0/19,
+  10.78.64.0/19,
+  10.93.0.0/19,
+  10.99.0.0/16 le 29,
+  10.172.0.0/16 le 28,
+  10.173.0.0/16 le 28,
+  10.174.0.0/16 le 28,
+  10.175.0.0/16 le 28
+end-set
+!
+prefix-set pl-V43-VTB-RF-24-FULLVIEW-X24
+  10.8.0.0/16,
+  10.9.0.0/24,
+  10.9.8.0/24,
+  10.9.13.0/24,
+  10.10.0.0/19,
+  10.10.34.0/24,
+  10.10.36.0/24,
+  10.10.37.0/24,
+  10.11.0.0/16,
+  10.12.0.0/16,
+  10.13.0.0/16,
+  10.15.48.0/20,
+  10.31.32.0/19,
+  10.31.64.0/18,
+  10.31.128.0/17,
+  10.32.32.0/19,
+  10.32.64.0/18,
+  10.32.128.0/17,
+  10.33.0.0/16,
+  10.34.0.0/16,
+  10.35.0.0/19,
+  10.35.64.0/18,
+  10.35.128.0/17,
+  10.64.0.0/16,
+  10.65.0.0/19,
+  10.65.128.0/17,
+  10.67.0.0/16,
+  10.68.0.0/16,
+  10.69.0.0/16,
+  10.70.8.0/21,
+  10.70.16.0/20,
+  10.70.32.0/19,
+  10.70.64.0/18,
+  10.70.128.0/17,
+  10.72.240.0/23,
+  10.73.128.0/17,
+  10.74.0.0/16,
+  10.75.128.0/17,
+  10.76.64.0/21,
+  10.76.80.0/21,
+  10.76.216.0/21,
+  10.76.248.0/21,
+  10.79.0.0/16,
+  10.80.0.0/18,
+  10.81.48.0/21,
+  10.81.64.0/21,
+  10.81.80.0/21,
+  10.81.255.1/32,
+  10.84.0.0/16,
+  10.85.0.0/16,
+  10.86.0.0/16,
+  10.87.0.0/16,
+  10.88.0.0/16,
+  10.89.0.0/16,
+  10.96.0.0/16,
+  10.97.0.0/16,
+  10.98.0.0/16,
+  10.135.0.0/16,
+  10.191.208.0/20,
+  10.237.0.0/16,
+  10.254.0.0/20,
+  10.254.16.0/20,
+  10.254.32.0/20,
+  217.14.48.0/26,
+  217.14.49.0/24,
+  217.14.50.0/24,
+  217.14.51.0/24,
+  217.14.52.0/24,
+  217.14.53.0/24,
+  217.14.54.0/24,
+  217.14.55.0/24,
+  172.16.96.0/19,
+  172.16.201.0/24,
+  172.16.216.0/21,
+  172.18.0.0/16,
+  172.19.0.0/16,
+  172.20.0.0/15,
+  172.22.0.0/16,
+  172.23.0.0/16,
+  172.24.0.0/16,
+  172.25.0.0/16,
+  172.26.0.0/16,
+  172.27.0.0/16,
+  172.28.0.0/16,
+  172.30.0.0/17,
+  172.30.128.0/17,
+  192.168.6.0/24,
+  192.168.7.0/24,
+  192.168.8.0/24,
+  192.168.33.0/24,
+  192.168.37.0/24,
+  192.168.38.0/23,
+  192.168.40.0/23,
+  192.168.42.0/23,
+  192.168.44.0/23,
+  192.168.46.0/24,
+  192.168.47.0/24,
+  192.168.48.0/21,
+  192.168.57.0/24,
+  192.168.58.0/24,
+  192.168.60.0/24,
+  192.168.62.0/24,
+  192.168.70.0/24,
+  192.168.74.0/24,
+  192.168.76.0/24,
+  192.168.78.0/24,
+  192.168.79.0/24,
+  192.168.93.0/24,
+  192.168.95.0/24,
+  192.168.97.0/24,
+  192.168.103.0/24,
+  192.168.104.0/24,
+  192.168.201.0/24,
+  192.168.202.0/24,
+  192.168.216.0/22,
+  192.168.222.0/24,
+  192.168.224.0/24,
+  192.168.225.0/24,
+  192.168.226.0/24,
+  192.168.227.0/24,
+  192.168.228.0/23,
+  192.168.230.0/23,
+  192.168.232.0/23,
+  192.168.234.0/23,
+  192.168.236.0/24,
+  192.168.238.0/23,
+  192.168.240.0/24,
+  192.168.242.0/24,
+  192.168.243.0/24,
+  192.168.244.0/22,
+  192.168.248.0/23,
+  192.168.253.0/24,
+  10.254.224.0/24,
+  10.254.225.0/24,
+  10.254.226.0/25,
+  10.254.227.0/24,
+  10.254.228.0/24
+end-set
+!
+prefix-set pl-V43-VTB-RF-BM-FULLVIEW-XBM
+  1.1.1.0/30,
+  10.0.0.255/32,
+  10.1.0.0/23,
+  10.1.5.0/24,
+  10.1.6.0/24,
+  10.2.11.0/24,
+  10.2.32.0/19,
+  10.15.0.0/19,
+  10.16.32.0/19,
+  10.23.96.0/19,
+  10.23.120.0/21,
+  10.24.32.0/19,
+  10.24.72.0/23,
+  10.25.225.0/24,
+  10.26.32.0/21,
+  10.26.32.0/23,
+  10.26.56.244/30,
+  10.26.58.0/23,
+  10.42.32.0/19,
+  10.42.64.0/19,
+  10.46.32.0/19,
+  10.52.64.0/19,
+  10.54.32.0/19,
+  10.56.32.0/19,
+  10.56.64.0/19,
+  10.56.96.0/19,
+  10.58.0.0/16,
+  10.59.32.0/19,
+  10.61.32.0/19,
+  10.65.32.0/19,
+  10.66.32.0/19,
+  10.78.32.0/19,
+  10.78.64.0/19,
+  10.93.0.0/19,
+  10.99.0.0/17,
+  10.99.128.0/18,
+  10.99.192.0/24,
+  10.99.254.0/24,
+  10.172.0.0/16,
+  10.173.0.0/16,
+  10.174.0.0/16,
+  10.175.0.0/16,
+  10.197.41.192/29,
+  10.200.32.0/24,
+  10.200.33.0/24,
+  10.200.39.0/24,
+  10.201.0.0/16,
+  10.202.0.0/16,
+  10.203.0.0/24,
+  10.203.1.0/24,
+  10.203.26.0/24,
+  10.203.27.0/24,
+  10.203.31.0/24,
+  10.208.0.0/16,
+  10.210.0.0/16,
+  10.211.0.0/16,
+  10.212.0.0/16,
+  10.213.30.0/24,
+  10.220.0.0/23,
+  10.225.251.0/24,
+  10.225.253.0/24,
+  10.246.0.0/21,
+  10.246.240.0/20,
+  10.247.0.0/19,
+  10.248.0.0/19,
+  10.249.0.0/19,
+  10.250.0.0/19,
+  172.16.1.0/26,
+  172.16.32.0/24,
+  172.16.33.0/24,
+  172.16.34.0/24,
+  172.16.62.0/24,
+  172.16.64.0/24,
+  172.16.69.0/24,
+  172.16.73.0/24,
+  172.16.74.0/24,
+  172.16.76.0/24,
+  172.16.78.0/24,
+  172.16.82.0/24,
+  172.16.83.0/24,
+  172.16.84.0/24,
+  172.16.90.0/24,
+  172.16.252.0/25,
+  172.17.125.0/24,
+  172.17.128.0/23,
+  172.17.252.0/24,
+  172.17.254.0/24,
+  172.20.3.12/32,
+  172.31.20.0/22,
+  172.31.64.0/24,
+  172.31.65.0/24,
+  172.31.66.0/24,
+  172.31.67.0/24,
+  172.31.140.0/24,
+  172.31.141.0/24,
+  172.31.144.0/24,
+  172.31.145.0/24,
+  172.31.146.0/24,
+  172.31.147.0/24,
+  172.31.148.0/24,
+  172.31.149.0/24,
+  172.31.150.0/24,
+  172.31.151.0/24,
+  192.168.19.0/24,
+  192.168.21.0/24,
+  192.168.53.5/32,
+  192.168.123.0/24
+end-set
+!
+prefix-set PREFIX-FOR-VTB-24-FROM-VTB-MON
+  10.0.0.0/8
+end-set
+!
+prefix-set PREFIX-TO-MAIN24-VTB-DEV-USERS
+  10.203.96.0/19 le 32,
+  10.203.128.0/19 le 32
+end-set
+!
+prefix-set PREFIX-VTB24_ALIEN-FROM-VTB-24
+  0.0.0.0/0
+end-set
+!
+prefix-set Prefix-for-VTB-Core-from-VTB24
+  10.192.251.0/28,
+  10.190.0.0/20,
+  10.190.16.0/20,
+  10.190.32.0/20,
+  10.190.48.0/20,
+  10.190.64.0/20,
+  10.190.80.0/20,
+  10.190.96.0/27,
+  10.190.255.0/27,
+  10.190.100.0/22 le 24,
+  10.15.48.0/20,
+  10.15.64.0/23,
+  10.64.0.0/15,
+  10.68.0.0/15,
+  10.74.0.0/16,
+  10.76.0.0/16,
+  10.67.0.0/16,
+  10.70.16.0/20,
+  10.70.32.0/19,
+  10.70.64.0/18,
+  10.70.128.0/17,
+  10.75.32.0/19,
+  10.75.64.0/18,
+  10.75.128.0/17,
+  10.79.0.0/16,
+  10.84.0.0/14,
+  172.20.0.0/15,
+  172.18.0.0/15,
+  172.23.0.0/16,
+  172.22.0.0/15 le 16,
+  172.24.0.0/14,
+  172.28.0.0/16,
+  172.30.0.0/16,
+  10.20.0.0/16,
+  192.168.32.0/24,
+  192.168.46.0/23,
+  192.168.57.0/24,
+  192.168.58.0/24,
+  192.168.60.0/24,
+  192.168.62.0/24,
+  192.168.74.0/24,
+  192.168.78.0/23,
+  192.168.93.0/24,
+  192.168.37.0/24,
+  10.135.0.0/16,
+  10.96.0.0/15,
+  10.98.0.0/16,
+  10.73.128.0/17,
+  10.86.0.0/16,
+  10.87.0.0/16,
+  10.96.0.0/16,
+  10.97.0.0/16,
+  192.168.52.0/23,
+  192.168.48.0/22,
+  10.10.0.0/18,
+  10.14.48.0/20,
+  10.12.0.0/16,
+  10.31.129.0/24,
+  10.88.0.0/16,
+  10.192.192.0/28,
+  10.192.192.16/28,
+  10.239.64.0/20,
+  10.239.0.0/18,
+  10.251.0.0/16,
+  10.252.0.0/16,
+  10.253.0.0/16,
+  10.254.0.0/16,
+  10.133.0.0/16,
+  10.235.0.0/16,
+  10.132.252.80/28,
+  10.150.252.80/28,
+  10.132.252.64/28,
+  10.191.208.0/20,
+  10.191.128.0/18,
+  10.191.207.0/24,
+  10.132.252.128/28,
+  10.191.64.0/18,
+  10.160.0.0/18,
+  10.160.64.0/19,
+  10.160.192.0/18,
+  10.132.252.112/28,
+  10.132.252.160/27,
+  10.132.252.192/27,
+  10.152.253.0/30,
+  10.152.253.4/30,
+  10.192.139.6/32,
+  10.191.200.0/24,
+  10.203.64.0/19
+end-set
+!
+prefix-set Prefix-for-VTB-from-main-VTB24
+  0.0.0.0/0
+end-set
+!
+prefix-set Prefix-for-DataCenter-from-exBM
+  0.0.0.0/0
+end-set
+!
+prefix-set Prefix-for-VTB-24-from-VTB-Core
+  10.0.0.0/8
+end-set
+!
+prefix-set Prefix-for-exBM-from-DataCenter
+  10.208.0.0/16 le 32
+end-set
+!
+prefix-set PREFIX-FROM-MAIN24-VTB-DEV-USERS
+  0.0.0.0/0
+end-set
+!
+prefix-set PREFIX-TO-MAIN-VTB24_SUPPORT-INF
+  10.67.251.0/24 le 32,
+  10.254.224.0/19 le 32,
+  10.84.196.0/22
+end-set
+!
+prefix-set PREFIX-TO-VTB24-FROM-WIFI-VTBCOM
+  10.67.49.0/24 ge 30,
+  10.80.32.0/19 le 24
+end-set
+!
+prefix-set PREFIX-FOR-WIFI-VTBCOM-FROM-VTB24
+  0.0.0.0/0
+end-set
+!
+prefix-set PREFIX-FOR-WIFI-VTB-AIR-FROM-VTB24
+  0.0.0.0/0
+end-set
+!
+prefix-set PREFIX-FROM-MAIN-VTB24_SUPPORT-INF
+  0.0.0.0/0
+end-set
+!
+prefix-set PREFIX-VTB24-MSK-AUX-VPN-TO-VTB-24
+  0.0.0.0/0 le 32
+end-set
+!
+prefix-set Prefix-to-main-VTB24-from-site-VTB
+  0.0.0.0/0 le 30,
+  192.168.19.0/24,
+  192.168.21.0/24,
+  10.67.48.64/26
+end-set
+!
+prefix-set PREFIX-VTB24-MSK-AUX-VPN-FROM-VTB-24
+  0.0.0.0/0
+end-set
+!
+prefix-set PREFIX-FOR-WIFI-VTB-AIR-VTB24-FROM-VTB
+  10.0.0.0/8 le 30
+end-set
+!
+prefix-set PREFIX-TO-MAIN-VTB24-USERS-DEFAULT-FROM-VTB
+  10.89.0.0/16 ge 22
+end-set
+!
+prefix-set PREFIX-FOR-VTB-FROM-MAIN-VTB24-USERS-DEFAULT
+  0.0.0.0/0
+end-set
+!
+route-policy VTB-DEV
+  if destination in VTB-DEV then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VTB-MCore
+  if destination in VTB-MCore then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy NINET-EXBM
+  if destination in NINET-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy ROUTES-MARK
+  set tag 200
+end-policy
+!
+route-policy M-BANK-VTB24
+  if destination in M-BANK-VTB24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VTB-DEV-EXBM
+  if destination in VTB-DEV-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy NINET-TO-EXBM
+  if destination in NINET-TO-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy ROUTES-PERMIT
+  if tag eq 200 then
+    drop
+  else
+    pass
+  endif
+end-policy
+!
+route-policy PREFIX-TO-EXBM
+  if destination in PREFIX-TO-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VTB-24-TO-EXBM
+  if destination in VTB-24-TO-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VTB-MCore-EXBM
+  if destination in VTB-MCore-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VTB-RK-TO-EXBM
+  if destination in VTB-RK-TO-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy RP_EXPORT-RF-24
+  if destination in PS_RF-24-LOCAL then
+    set extcommunity rt (1000:2000) additive
+  endif
+end-policy
+!
+route-policy VTB-CTR-TO-EXBM
+  if destination in VTB-CTR-TO-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VTB-IRB-TO-EXBM
+  if destination in PREFIX-VTB-IRB-TO-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VTB-MM-EXBM-OUT
+  if destination in VTB-MM-EXBM-OUT then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VTB-SEC-TO-EXBM
+  if destination in VTB-SEC-TO-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VTBMM-VTB24-OUT
+  if destination in VTBMM-VTB24-OUT then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy BGP-REDISTRIBUTE
+  set eigrp-metric 10000000 100 250 100 1500
+  set tag 200
+end-policy
+!
+route-policy NINET-FROM-VTB24
+  if destination in NINET-FROM-VTB24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-FROM-EXBM
+  if destination in PREFIX-FROM-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VIPINET-EXBM-OUT
+  if destination in VIPINET-EXBM-OUT then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VTB-24-FROM-EXBM
+  if destination in VTB-24-FROM-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VTB-MM-FROM-EXBM
+  if destination in VTB-MM-FROM-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VTB-RK-FROM-EXBM
+  if destination in VTB-RK-FROM-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VTBMM-FROM-VTB24
+  if destination in VTBMM-FROM-VTB24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VIPINET-FROM-EXBM
+  if destination in VIPINET-FROM-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VTB-CTR-FROM-EXBM
+  if destination in VTB-CTR-FROM-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VTB-IRB-FROM-EXBM
+  if destination in PREFIX-VTB-IRB-FROM-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VTB-SEC-FROM-EXBM
+  if destination in VTB-SEC-FROM-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy BANKMOSCOW-TO_EXBM
+  if destination in BANKMOSCOW-TO_EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy From_MPLS-RF-to-RF
+  if destination in default_VTBRF then
+    set tag 200
+  else
+    drop
+  endif
+end-policy
+!
+route-policy NINET-TO-VTB24-OUT
+  if destination in NINET-TO-VTB24-OUT then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VIPINET-FROM-VTB24
+  if destination in VIPINET-FROM-VTB24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy BANKMOSCOW-FROM-EXBM
+  if destination in BANKMOSCOW-FROM_EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-ATM-TO-VTB-24
+  if destination in PREFIX-ATM-TO-VTB-24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-VTB24-TO-EXBM
+  if destination in PREFIX-VTB24-TO-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VIPINET-TO-VTB24-OUT
+  if destination in VIPINET-TO-VTB24-OUT then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy Filtr-to-MPLS-from-RF
+  if destination in VTB-RF then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy Filtr-to-RF-from-RF24
+  if destination in pl-Perovo-VTB-RF-24-LOCAL then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy Filtr-to-RF-from-RFBM
+  if destination in pl-Perovo-VTB-RF-BM-LOCAL then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-FOR-BM-FROM-RF
+  if destination in PREFIX-FOR-BM-FROM-RF then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-FOR-RF-FROM-BM
+  if destination in PREFIX-FOR-RF-FROM-BM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy Prefix-for-24-from-RF
+  if destination in Prefix-for-24-from-RF then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy Prefix-for-RF-from-24
+  if destination in Prefix-for-RF-from-24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VTB-DEV-USERS-TO-EXBM
+  if destination in VTB-DEV-USERS-TO-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy Filtr-to-RF-from-RFCAP
+  if destination in pl-Perovo-VTB-RF-CAP-LOCAL then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy From_MPLS-RF24-to-RF24
+  if destination in default_RF or destination in pl-V43-VTB-RF-24-fw or destination in pl-V43-VTB-RF-24 or destination in pl-V43-VTB-RF-24-FULLVIEW-X24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy From_MPLS-RFBM-to-RFBM
+  if destination in default_RF or destination in pl-V43-VTB-RF-BM-fw or destination in pl-V43-VTB-RF-BM or destination in pl-V43-VTB-RF-BM-FULLVIEW-XBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-ATM-FROM-VTB-24
+  if destination in PREFIX-ATM-FROM-VTB-24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VTB-DEV-USERS-FROM-EXBM
+  if destination in VTB-DEV-USERS-FROM-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy Filtr-to-MPLS-from-RF-24
+  if destination in pl-Perovo-VTB-RF-24-LOCAL then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy Filtr-to-MPLS-from-RF-BM
+  if destination in pl-Perovo-VTB-RF-BM-LOCAL then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy From_MPLS-RFCAP-to-RFCAP
+  if destination in default_RF or destination in pl-V43-VTB-RF-CAP-fw or destination in pl-V43-VTB-RF-CAP then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-OUTSIDE-TO-VTB-24
+  if destination in PREFIX-OUTSIDE-TO-VTB-24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-VTB-DEV-TO-VTB-24
+  if destination in PREFIX-VTB-DEV-TO-VTB-24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-VTB-FXT-TO-VTB-24
+  if destination in PREFIX-VTB-FXT-TO-VTB-24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-VTB-IRB-TO-VTB-24
+  if destination in PREFIX-VTB-IRB-TO-VTB-24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-VTB-SEC-TO-VTB-24
+  if destination in PREFIX-VTB-SEC-TO-VTB-24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-VTB-USERS-TO-EXBM
+  if destination in PREFIX-VTB-USERS-TO-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VTB-GTR-TO_XVOZROZHDENYE
+  if destination in VTB-GTR-TO_XVOZROZHDENYE then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy Filtr-to-MPLS-from-RF-CAP
+  if destination in pl-Perovo-VTB-RF-CAP-LOCAL then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy From_MPLS-RF-to-Companies
+  if destination in pl-RF then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VTB24-MSK-AUX-VPN-TO-EXBM
+  if destination in VTB24-MSK-AUX-VPN-TO-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VTB24_SUPPORT-INF-TO-EXBM
+  if destination in VTB24_SUPPORT-INF-TO-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-OUTSIDE-FROM-VTB-24
+  if destination in PREFIX-OUTSIDE-FROM-VTB-24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-VTB-DEV-FROM-VTB-24
+  if destination in PREFIX-VTB-DEV-FROM-VTB-24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-VTB-FXT-FROM-VTB-24
+  if destination in PREFIX-VTB-FXT-FROM-VTB-24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-VTB-IRB-FROM-VTB-24
+  if destination in PREFIX-VTB-IRB-FROM-VTB-24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-VTB-SEC-FROM-VTB-24
+  if destination in PREFIX-VTB-SEC-FROM-VTB-24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-VTB-USERS-FROM-EXBM
+  if destination in PREFIX-VTB-USERS-FROM-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-VTB-USERS-TO-VTB-24
+  if destination in PREFIX-VTB-USERS-TO-VTB-24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-nInet-SRV-TO-VTB-24
+  if destination in PREFIX-nInet-SRV-TO-VTB-24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-vrfInternet-TO-EXBM
+  if destination in PREFIX-vrfInternet-TO-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VTB-GTR-FROM_XVOZROZHDENYE
+  if destination in VTB-GTR-FROM_XVOZROZHDENYE then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-FOR-VTB-MON-FROM-XBM
+  if destination in PREFIX-FOR-VTB-MON-FROM-XBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-FOR-XBM-FROM-VTB-MON
+  if destination in PREFIX-FOR-XBM-FROM-VTB-MON then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-vrfnInet-SRV-TO-EXBM
+  if destination in PREFIX-vrfnInet-SRV-TO-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VTB24-MSK-AUX-VPN-FROM-EXBM
+  if destination in VTB24-MSK-AUX-VPN-FROM-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy VTB24_SUPPORT-INF-FROM-EXBM
+  if destination in VTB24_SUPPORT-INF-FROM-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-VTB-USERS-FROM-VTB-24
+  if destination in PREFIX-VTB-USERS-FROM-VTB-24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-VTB24_ALIEN-TO-VTB-24
+  if destination in PREFIX-VTB24_ALIEN-TO-VTB-24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-nInet-SRV-FROM-VTB-24
+  if destination in PREFIX-nInet-SRV-FROM-VTB-24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-vrfInternet-FROM-EXBM
+  if destination in PREFIX-vrfInternet-FROM-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-FOR-VTB-MON-FROM-VTB24
+  if destination in PREFIX-FOR-VTB-MON-FROM-VTB24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-vrfnInet-SRV-FROM-EXBM
+  if destination in PREFIX-vrfnInet-SRV-FROM-EXBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-FOR-VTB-24-FROM-VTB-MON
+  if destination in PREFIX-FOR-VTB-24-FROM-VTB-MON then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-TO-MAIN24-VTB-DEV-USERS
+  if destination in PREFIX-TO-MAIN24-VTB-DEV-USERS then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-VTB24_ALIEN-FROM-VTB-24
+  if destination in PREFIX-VTB24_ALIEN-FROM-VTB-24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy Prefix-for-VTB-Core-from-VTB24
+  if destination in Prefix-for-VTB-Core-from-VTB24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy Prefix-for-VTB-from-main-VTB24
+  if destination in Prefix-for-VTB-from-main-VTB24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy Prefix-for-DataCenter-from-exBM
+  if destination in Prefix-for-DataCenter-from-exBM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy Prefix-for-VTB-24-from-VTB-Core
+  if destination in Prefix-for-VTB-24-from-VTB-Core then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy Prefix-for-exBM-from-DataCenter
+  if destination in Prefix-for-exBM-from-DataCenter then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-FROM-MAIN24-VTB-DEV-USERS
+  if destination in PREFIX-FROM-MAIN24-VTB-DEV-USERS then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-TO-MAIN-VTB24_SUPPORT-INF
+  if destination in PREFIX-TO-MAIN-VTB24_SUPPORT-INF then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-TO-VTB24-FROM-WIFI-VTBCOM
+  if destination in PREFIX-TO-VTB24-FROM-WIFI-VTBCOM then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-FOR-WIFI-VTBCOM-FROM-VTB24
+  if destination in PREFIX-FOR-WIFI-VTBCOM-FROM-VTB24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-FOR-WIFI-VTB-AIR-FROM-VTB24
+  if destination in PREFIX-FOR-WIFI-VTB-AIR-FROM-VTB24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-FROM-MAIN-VTB24_SUPPORT-INF
+  if destination in PREFIX-FROM-MAIN-VTB24_SUPPORT-INF then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-VTB24-MSK-AUX-VPN-TO-VTB-24
+  if destination in PREFIX-VTB24-MSK-AUX-VPN-TO-VTB-24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy Prefix-to-main-VTB24-from-site-VTB
+  if destination in Prefix-to-main-VTB24-from-site-VTB then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-VTB24-MSK-AUX-VPN-FROM-VTB-24
+  if destination in PREFIX-VTB24-MSK-AUX-VPN-FROM-VTB-24 then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-FOR-WIFI-VTB-AIR-VTB24-FROM-VTB
+  if destination in PREFIX-FOR-WIFI-VTB-AIR-VTB24-FROM-VTB then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-TO-MAIN-VTB24-USERS-DEFAULT-FROM-VTB
+  if destination in PREFIX-TO-MAIN-VTB24-USERS-DEFAULT-FROM-VTB then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy PREFIX-FOR-VTB-FROM-MAIN-VTB24-USERS-DEFAULT
+  if destination in PREFIX-FOR-VTB-FROM-MAIN-VTB24-USERS-DEFAULT then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+router static
+ vrf Management
+  address-family ipv4 unicast
+   10.0.0.0/8 10.128.254.1
+  !
+ !
+!
+router ospf 1
+ router-id 10.255.255.144
+ mpls ldp sync
+ mtu-ignore enable
+ auto-cost reference-bandwidth 10000
+ redistribute connected
+ area 0
+  interface Bundle-Ether1
+  !
+  interface Bundle-Ether7
+  !
+  interface Loopback0
+  !
+  interface TenGigE0/0/0/0
+   mtu-ignore enable
+  !
+  interface TenGigE0/0/0/1
+   mtu-ignore enable
+  !
+  interface TenGigE0/0/1/4
+   mtu-ignore enable
+  !
+ !
+!
+snmp-server traps bgp cbgp2 updown
+snmp-server traps bgp updown
+router bgp 65535
+ bgp router-id 10.255.255.144
+ address-family vpnv4 unicast
+ !
+ neighbor 10.255.255.128
+  remote-as 65535
+  shutdown
+  update-source Loopback0
+  address-family vpnv4 unicast
+  !
+ !
+ neighbor 10.255.255.133
+  remote-as 65535
+  update-source Loopback0
+  address-family vpnv4 unicast
+  !
+ !
+ neighbor 10.255.255.160
+  remote-as 65535
+  update-source Loopback0
+  address-family vpnv4 unicast
+  !
+ !
+ vrf ATM
+  rd 10.8.252.13:5030
+  address-family ipv4 unicast
+   redistribute connected
+  !
+  neighbor 10.67.251.90
+   remote-as 24823
+   address-family ipv4 unicast
+    route-policy PREFIX-ATM-FROM-VTB-24 in
+    route-policy PREFIX-ATM-TO-VTB-24 out
+   !
+  !
+ !
+ vrf nInet
+  rd 65535:4000
+  address-family ipv4 unicast
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+  neighbor 172.16.62.6
+   remote-as 24823
+   address-family ipv4 unicast
+    route-policy NINET-FROM-VTB24 in
+    route-policy NINET-TO-VTB24-OUT out
+   !
+  !
+  neighbor 172.16.63.6
+   remote-as 65101
+   address-family ipv4 unicast
+    route-policy NINET-EXBM in
+    route-policy NINET-TO-EXBM out
+   !
+  !
+ !
+ vrf M-BANK
+  rd 65535:65400
+  address-family ipv4 unicast
+   redistribute connected
+  !
+  neighbor 10.99.128.5
+   remote-as 34662
+   address-family ipv4 unicast
+    route-policy PREFIX-FROM-EXBM in
+    route-policy PREFIX-TO-EXBM out
+    soft-reconfiguration inbound always
+   !
+  !
+  neighbor 10.99.128.22
+   remote-as 24823
+   address-family ipv4 unicast
+    route-policy PREFIX-VTB24-TO-EXBM in
+    route-policy M-BANK-VTB24 out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf VTB-24
+  rd 65535:1005
+  address-family ipv4 unicast
+   redistribute connected
+  !
+  neighbor 10.86.255.6
+   remote-as 65101
+   address-family ipv4 unicast
+    route-policy VTB-24-FROM-EXBM in
+    route-policy VTB-24-TO-EXBM out
+   !
+  !
+  neighbor 10.67.251.38
+   remote-as 24823
+   address-family ipv4 unicast
+    route-policy Prefix-for-VTB-from-main-VTB24 in
+    route-policy Prefix-to-main-VTB24-from-site-VTB out
+   !
+  !
+ !
+ vrf VTB-GW
+  rd 65535:4600
+  address-family ipv4 unicast
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+ !
+ vrf VTB-MM
+  rd 65535:2500
+  address-family ipv4 unicast
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+  neighbor 10.106.140.26
+   remote-as 65101
+   address-family ipv4 unicast
+    route-policy VTB-MM-FROM-EXBM in
+    route-policy VTB-MM-EXBM-OUT out
+    soft-reconfiguration inbound always
+   !
+  !
+  neighbor 10.106.169.38
+   remote-as 24823
+   address-family ipv4 unicast
+    route-policy VTBMM-FROM-VTB24 in
+    route-policy VTBMM-VTB24-OUT out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf VTB-RF
+  rd 65535:250
+  address-family ipv4 unicast
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+ !
+ vrf VTB-RK
+  rd 65535:2000
+  address-family ipv4 unicast
+   redistribute connected
+  !
+  neighbor 10.192.144.158
+   remote-as 65101
+   address-family ipv4 unicast
+    route-policy VTB-RK-FROM-EXBM in
+    route-policy VTB-RK-TO-EXBM out
+   !
+  !
+ !
+ vrf OutSide
+  rd 65535:10
+  address-family ipv4 unicast
+   network 10.92.255.236/30
+   redistribute connected
+  !
+  neighbor 10.92.255.238
+   remote-as 24823
+   address-family ipv4 unicast
+    route-policy PREFIX-OUTSIDE-FROM-VTB-24 in
+    route-policy PREFIX-OUTSIDE-TO-VTB-24 out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf VTB-CTR
+  rd 65535:1600
+  address-family ipv4 unicast
+   network 10.77.147.212/30
+  !
+  neighbor 10.77.147.214
+   remote-as 65101
+   address-family ipv4 unicast
+    route-policy VTB-CTR-FROM-EXBM in
+    route-policy VTB-CTR-TO-EXBM out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf VTB-DEV
+  rd 65535:100
+  address-family ipv4 unicast
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+  neighbor 10.144.192.10
+   remote-as 65101
+   address-family ipv4 unicast
+    route-policy VTB-DEV-EXBM in
+    route-policy VTB-DEV out
+   !
+  !
+  neighbor 10.144.250.234
+   remote-as 24823
+   address-family ipv4 unicast
+    route-policy PREFIX-VTB-DEV-FROM-VTB-24 in
+    route-policy PREFIX-VTB-DEV-TO-VTB-24 out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf VTB-EFX
+  rd 65535:194
+  address-family ipv4 unicast
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+ !
+ vrf VTB-FBS
+  rd 65535:300
+  address-family ipv4 unicast
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+ !
+ vrf VTB-FIN
+  rd 65535:700
+  address-family ipv4 unicast
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+ !
+ vrf VTB-FXT
+  rd 65535:190
+  address-family ipv4 unicast
+   redistribute connected
+  !
+  neighbor 10.192.254.230
+   remote-as 24823
+   address-family ipv4 unicast
+    route-policy PREFIX-VTB-FXT-FROM-VTB-24 in
+    route-policy PREFIX-VTB-FXT-TO-VTB-24 out
+   !
+  !
+ !
+ vrf VTB-GTR
+  rd 65535:1500
+  address-family ipv4 unicast
+   redistribute connected
+  !
+  neighbor 10.193.255.30
+   remote-as 64514
+   timers 5 15
+   address-family ipv4 unicast
+    route-policy VTB-GTR-FROM_XVOZROZHDENYE in
+    route-policy VTB-GTR-TO_XVOZROZHDENYE out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf VTB-IRB
+  rd 65535:450
+  address-family ipv4 unicast
+   redistribute connected
+  !
+  neighbor 10.192.249.2
+   remote-as 24823
+   address-family ipv4 unicast
+    route-policy PREFIX-VTB-IRB-FROM-VTB-24 in
+    route-policy PREFIX-VTB-IRB-TO-VTB-24 out
+   !
+  !
+  neighbor 10.192.105.166
+   remote-as 65101
+   address-family ipv4 unicast
+    route-policy VTB-IRB-FROM-EXBM in
+    route-policy VTB-IRB-TO-EXBM out
+   !
+  !
+ !
+ vrf VTB-KBR
+  rd 65535:790
+  address-family ipv4 unicast
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+ !
+ vrf VTB-MON
+  rd 65535:50
+  address-family ipv4 unicast
+   redistribute connected
+  !
+  neighbor 10.210.79.6
+   remote-as 65101
+   address-family ipv4 unicast
+    route-policy PREFIX-FOR-VTB-MON-FROM-XBM in
+    route-policy PREFIX-FOR-XBM-FROM-VTB-MON out
+   !
+  !
+  neighbor 10.210.79.18
+   remote-as 24823
+   address-family ipv4 unicast
+    route-policy PREFIX-FOR-VTB-MON-FROM-VTB24 in
+    route-policy PREFIX-FOR-VTB-24-FROM-VTB-MON out
+   !
+  !
+ !
+ vrf VTB-OTV
+  rd 65535:6500
+  address-family ipv4 unicast
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+ !
+ vrf VTB-SEC
+  rd 65535:5000
+  address-family ipv4 unicast
+   network 10.192.106.4/30
+   redistribute connected
+  !
+  neighbor 10.192.106.6
+   remote-as 65101
+   address-family ipv4 unicast
+    route-policy VTB-SEC-FROM-EXBM in
+    route-policy VTB-SEC-TO-EXBM out
+   !
+  !
+  neighbor 10.192.111.6
+   remote-as 24823
+   address-family ipv4 unicast
+    route-policy PREFIX-VTB-SEC-FROM-VTB-24 in
+    route-policy PREFIX-VTB-SEC-TO-VTB-24 out
+   !
+  !
+ !
+ vrf VTB-STR
+  rd 65535:1700
+  address-family ipv4 unicast
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+ !
+ vrf VipInet
+  rd 65535:4100
+  address-family ipv4 unicast
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+  neighbor 172.16.98.250
+   remote-as 24823
+   address-family ipv4 unicast
+    route-policy VIPINET-FROM-VTB24 in
+    route-policy VIPINET-TO-VTB24-OUT out
+   !
+  !
+  neighbor 172.16.103.138
+   remote-as 65101
+   address-family ipv4 unicast
+    route-policy VIPINET-FROM-EXBM in
+    route-policy VIPINET-EXBM-OUT out
+   !
+  !
+ !
+ vrf DBO_PROM
+  rd 65535:9100
+  address-family ipv4 unicast
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+ !
+ vrf DBO_TEST
+  rd 65535:9150
+  address-family ipv4 unicast
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+ !
+ vrf GROUPVTB
+  rd 65535:200
+  address-family ipv4 unicast
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+ !
+ vrf Internet
+  rd 65535:7100
+  address-family ipv4 unicast
+   network 172.31.5.8/30
+  !
+  neighbor 172.31.5.9
+   remote-as 65101
+   address-family ipv4 unicast
+    route-policy PREFIX-vrfInternet-FROM-EXBM in
+    route-policy PREFIX-vrfInternet-TO-EXBM out
+   !
+  !
+ !
+ vrf RF-TR-24
+  rd 65535:8100
+  address-family ipv4 unicast
+   redistribute connected
+  !
+  neighbor 10.194.255.82
+   remote-as 24823
+   address-family ipv4 unicast
+    route-policy Prefix-for-RF-from-24 in
+    route-policy Prefix-for-24-from-RF out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf RF-TR-BM
+  rd 65535:8120
+  address-family ipv4 unicast
+   redistribute connected
+  !
+  neighbor 10.194.255.214
+   remote-as 34662
+   address-family ipv4 unicast
+    route-policy PREFIX-FOR-RF-FROM-BM in
+    route-policy PREFIX-FOR-BM-FROM-RF out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf VTB-Core
+  rd 65535:1
+  address-family ipv4 unicast
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+  neighbor 10.150.253.34
+   remote-as 65101
+   address-family ipv4 unicast
+    route-policy VTB-MCore-EXBM in
+    route-policy VTB-MCore out
+    soft-reconfiguration inbound always
+   !
+  !
+  neighbor 10.192.251.246
+   remote-as 24823
+   address-family ipv4 unicast
+    route-policy Prefix-for-VTB-Core-from-VTB24 in
+    route-policy Prefix-for-VTB-24-from-VTB-Core out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf VTB-RSRV
+  rd 65535:6000
+  address-family ipv4 unicast
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+ !
+ vrf nInet-BE
+  rd 65535:4501
+  address-family ipv4 unicast
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+ !
+ vrf M-BANK-DC
+  rd 65535:65401
+  address-family ipv4 unicast
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+  neighbor 10.208.255.13
+   remote-as 34662
+   address-family ipv4 unicast
+    route-policy Prefix-for-DataCenter-from-exBM in
+    route-policy Prefix-for-exBM-from-DataCenter out
+   !
+  !
+ !
+ vrf VTB-RF-24
+  rd 65535:8000
+  address-family ipv4 unicast
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+ !
+ vrf VTB-RF-BM
+  rd 65535:8020
+  address-family ipv4 unicast
+   network 10.194.170.0/24
+   redistribute connected
+  !
+ !
+ vrf VTB-Somib
+  rd 65535:600
+  address-family ipv4 unicast
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+ !
+ vrf VTB-USERS
+  rd 10.255.255.144:16000
+  address-family ipv4 unicast
+   network 10.255.128.20/30
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+  neighbor 10.255.128.22
+   remote-as 24823
+   address-family ipv4 unicast
+    route-policy PREFIX-VTB-USERS-FROM-VTB-24 in
+    route-policy PREFIX-VTB-USERS-TO-VTB-24 out
+    soft-reconfiguration inbound always
+   !
+  !
+  neighbor 10.255.128.34
+   remote-as 65101
+   address-family ipv4 unicast
+    route-policy PREFIX-VTB-USERS-FROM-EXBM in
+    route-policy PREFIX-VTB-USERS-TO-EXBM out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf nInet-SRV
+  rd 65535:4500
+  address-family ipv4 unicast
+   network 172.16.239.20/30
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+  neighbor 172.16.239.1
+   remote-as 65101
+   address-family ipv4 unicast
+    route-policy PREFIX-vrfnInet-SRV-FROM-EXBM in
+    route-policy PREFIX-vrfnInet-SRV-TO-EXBM out
+    soft-reconfiguration inbound always
+   !
+  !
+  neighbor 172.16.239.22
+   remote-as 24823
+   address-family ipv4 unicast
+    route-policy PREFIX-nInet-SRV-FROM-VTB-24 in
+    route-policy PREFIX-nInet-SRV-TO-VTB-24 out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf BANKMOSCOW
+  rd 65535:3
+  address-family ipv4 unicast
+   redistribute connected
+  !
+  neighbor 10.172.255.70
+   remote-as 34662
+   address-family ipv4 unicast
+    route-policy BANKMOSCOW-FROM-EXBM in
+    route-policy BANKMOSCOW-TO_EXBM out
+   !
+  !
+ !
+ vrf VTB-RF-CAP
+  rd 65535:8010
+  address-family ipv4 unicast
+   network 10.194.166.0/24
+   redistribute connected
+  !
+ !
+ vrf VTB-VCS-GW
+  rd 65535:65501
+  address-family ipv4 unicast
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+ !
+ vrf VTB24_ALIEN
+  rd 10.255.255.144:3210
+  address-family ipv4 unicast
+   network 10.67.250.20/30
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+  neighbor 10.67.250.22
+   remote-as 24823
+   address-family ipv4 unicast
+    route-policy PREFIX-VTB24_ALIEN-FROM-VTB-24 in
+    route-policy PREFIX-VTB24_ALIEN-TO-VTB-24 out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf WIFI-VTBCOM
+  rd 65535:1006
+  address-family ipv4 unicast
+   redistribute connected
+  !
+  neighbor 10.67.49.2
+   remote-as 24823
+   address-family ipv4 unicast
+    route-policy PREFIX-FOR-WIFI-VTBCOM-FROM-VTB24 in
+    route-policy PREFIX-TO-VTB24-FROM-WIFI-VTBCOM out
+   !
+  !
+ !
+ vrf nInet-Proxy
+  rd 65535:4250
+  address-family ipv4 unicast
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+ !
+ vrf WIFI-VTB-AIR
+  rd 10.255.255.144:3270
+  address-family ipv4 unicast
+   network 10.67.49.16/30
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+  neighbor 10.67.49.17
+   remote-as 24823
+   address-family ipv4 unicast
+    route-policy PREFIX-FOR-WIFI-VTB-AIR-FROM-VTB24 in
+    route-policy PREFIX-FOR-WIFI-VTB-AIR-VTB24-FROM-VTB out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf VTB-DEV-USERS
+  rd 24823:2330
+  address-family ipv4 unicast
+   redistribute connected
+  !
+  neighbor 10.203.103.6
+   remote-as 24823
+   address-family ipv4 unicast
+    route-policy PREFIX-FROM-MAIN24-VTB-DEV-USERS in
+    route-policy PREFIX-TO-MAIN24-VTB-DEV-USERS out
+    soft-reconfiguration inbound always
+   !
+  !
+  neighbor 10.203.103.22
+   remote-as 65101
+   address-family ipv4 unicast
+    route-policy VTB-DEV-USERS-FROM-EXBM in
+    route-policy VTB-DEV-USERS-TO-EXBM out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf VTB24-MSK-AUX-VPN
+  rd 10.8.252.66:14060
+  address-family ipv4 unicast
+   network 10.67.251.60/30
+   redistribute connected
+  !
+  neighbor 10.67.251.50
+   remote-as 24823
+   address-family ipv4 unicast
+    route-policy PREFIX-VTB24-MSK-AUX-VPN-FROM-VTB-24 in
+    route-policy PREFIX-VTB24-MSK-AUX-VPN-TO-VTB-24 out
+   !
+  !
+  neighbor 10.67.251.62
+   remote-as 65101
+   address-family ipv4 unicast
+    route-policy VTB24-MSK-AUX-VPN-FROM-EXBM in
+    route-policy VTB24-MSK-AUX-VPN-TO-EXBM out
+   !
+  !
+ !
+ vrf VTB24_SUPPORT-INF
+  rd 24823:3100
+  address-family ipv4 unicast
+   redistribute connected
+   redistribute eigrp 65535 route-policy ROUTES-PERMIT
+  !
+  neighbor 10.67.251.130
+   remote-as 24823
+   address-family ipv4 unicast
+    route-policy PREFIX-FROM-MAIN-VTB24_SUPPORT-INF in
+    route-policy PREFIX-TO-MAIN-VTB24_SUPPORT-INF out
+    soft-reconfiguration inbound always
+   !
+  !
+  neighbor 10.67.251.142
+   remote-as 65101
+   address-family ipv4 unicast
+    route-policy VTB24_SUPPORT-INF-FROM-EXBM in
+    route-policy VTB24_SUPPORT-INF-TO-EXBM out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf VTB-24-USERS-DEFAULT
+  rd 24823:3080
+  address-family ipv4 unicast
+   redistribute connected
+  !
+  neighbor 10.67.251.102
+   remote-as 24823
+   address-family ipv4 unicast
+    route-policy PREFIX-FOR-VTB-FROM-MAIN-VTB24-USERS-DEFAULT in
+    route-policy PREFIX-TO-MAIN-VTB24-USERS-DEFAULT-FROM-VTB out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+!
+snmp-server traps vrrp events
+snmp-server traps mpls ldp up
+snmp-server traps mpls ldp down
+snmp-server traps mpls l3vpn all
+mpls ldp
+ router-id 10.255.255.144
+ interface Bundle-Ether1
+ !
+ interface Bundle-Ether7
+ !
+ interface TenGigE0/0/0/0
+ !
+ interface TenGigE0/0/0/1
+ !
+!
+snmp-server traps sensor
+ssh server v2
+ssh server vrf default
+ssh server vrf Management
+router eigrp DC-03
+ vrf nInet
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3721
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether4.3723
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+ vrf VTB-GW
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3075
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether4.3077
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+ vrf VTB-MM
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3246
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether4.3248
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+ vrf VTB-RF
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3676
+    route-policy Filtr-to-MPLS-from-RF in
+    route-policy From_MPLS-RF-to-RF out
+   !
+   interface Bundle-Ether3.3680
+    route-policy Filtr-to-RF-from-RF24 in
+    route-policy From_MPLS-RF-to-Companies out
+   !
+   interface Bundle-Ether3.3684
+    route-policy Filtr-to-RF-from-RFCAP in
+    route-policy From_MPLS-RF-to-Companies out
+   !
+   interface Bundle-Ether3.3688
+    route-policy Filtr-to-RF-from-RFBM in
+    route-policy From_MPLS-RF-to-Companies out
+   !
+   interface Bundle-Ether4.3678
+    route-policy Filtr-to-MPLS-from-RF in
+    route-policy From_MPLS-RF-to-RF out
+   !
+   interface Bundle-Ether4.3682
+    route-policy Filtr-to-RF-from-RF24 in
+    route-policy From_MPLS-RF-to-Companies out
+   !
+   interface Bundle-Ether4.3686
+    route-policy Filtr-to-RF-from-RFCAP in
+    route-policy From_MPLS-RF-to-Companies out
+   !
+   interface Bundle-Ether4.3690
+    route-policy Filtr-to-RF-from-RFBM in
+    route-policy From_MPLS-RF-to-Companies out
+   !
+  !
+ !
+ vrf VTB-DEV
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3706
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether4.3708
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+ vrf VTB-EFX
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3578
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether4.3580
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+ vrf VTB-FBS
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3287
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether4.3289
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+ vrf VTB-FIN
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3711
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether4.3713
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+ vrf VTB-KBR
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3273
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether4.3275
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+ vrf VTB-OTV
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether2.3798
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+ vrf VTB-STR
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3741
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether4.3743
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+ vrf VipInet
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3726
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether4.3728
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+ vrf DBO_PROM
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3224
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether4.3226
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+ vrf DBO_TEST
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3230
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether4.3232
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+ vrf GROUPVTB
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3731
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether4.3733
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+ vrf VTB-Core
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3701
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether4.3703
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether5.3795
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+ vrf VTB-RSRV
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3736
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether4.3738
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+ vrf nInet-BE
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3295
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether4.3297
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+ vrf M-BANK-DC
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3694
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether4.3696
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+ vrf VTB-RF-24
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3658
+    route-policy Filtr-to-MPLS-from-RF-24 in
+    route-policy From_MPLS-RF24-to-RF24 out
+   !
+   interface Bundle-Ether4.3660
+    route-policy Filtr-to-MPLS-from-RF-24 in
+    route-policy From_MPLS-RF24-to-RF24 out
+   !
+  !
+ !
+ vrf VTB-RF-BM
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3670
+    route-policy Filtr-to-MPLS-from-RF-BM in
+    route-policy From_MPLS-RFBM-to-RFBM out
+   !
+   interface Bundle-Ether4.3672
+    route-policy Filtr-to-MPLS-from-RF-BM in
+    route-policy From_MPLS-RFBM-to-RFBM out
+   !
+  !
+ !
+ vrf VTB-Somib
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3593
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether4.3595
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+ vrf VTB-USERS
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3069
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether4.3071
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+ vrf nInet-SRV
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3716
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether4.3718
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+ vrf VTB-RF-CAP
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3664
+    route-policy Filtr-to-MPLS-from-RF-CAP in
+    route-policy From_MPLS-RFCAP-to-RFCAP out
+   !
+   interface Bundle-Ether4.3666
+    route-policy Filtr-to-MPLS-from-RF-CAP in
+    route-policy From_MPLS-RFCAP-to-RFCAP out
+   !
+  !
+ !
+ vrf VTB-VCS-GW
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3088
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether4.3090
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+ vrf VTB24_ALIEN
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3548
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether4.3550
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+ vrf nInet-Proxy
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3239
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether4.3241
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+ vrf WIFI-VTB-AIR
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.2626
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether4.2628
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+ vrf VTB24_SUPPORT-INF
+  address-family ipv4
+   autonomous-system 65535
+   redistribute bgp 65535 route-policy BGP-REDISTRIBUTE
+   interface Bundle-Ether3.3569
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+   interface Bundle-Ether4.3571
+    route-policy ROUTES-PERMIT in
+    route-policy ROUTES-MARK out
+   !
+  !
+ !
+!
+snmp-server traps ospf lsa lsa-maxage
+snmp-server traps ospf lsa lsa-originate
+snmp-server traps ospf errors bad-packet
+snmp-server traps ospf errors authentication-failure
+snmp-server traps ospf errors config-error
+snmp-server traps ospf errors virt-bad-packet
+snmp-server traps ospf errors virt-authentication-failure
+snmp-server traps ospf errors virt-config-error
+snmp-server traps ospf state-change if-state-change
+snmp-server traps ospf state-change neighbor-state-change
+snmp-server traps ospf state-change virtif-state-change
+snmp-server traps ospf state-change virtneighbor-state-change
+snmp-server traps performance traffic
+end
+

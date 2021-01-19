@@ -1,0 +1,83 @@
+
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Po7, Po1000, Eth1/51, Eth1/52
+                                                Eth1/53, Eth1/54
+2806 vpc-keepalive                    active    Po7, Po1001, Eth1/24, Eth1/48
+                                                Eth1/51, Eth1/52
+2901 new_Mail_PROD                    active    Po7, Po301, Po1000, Eth1/1
+                                                Eth1/51, Eth1/52, Eth1/53
+                                                Eth1/54
+2951 new_Mail_mgmt                    active    Po7, Po1000, Eth1/51, Eth1/52
+                                                Eth1/53, Eth1/54
+3126 SDX_VDI                          active    Po7, Po308, Po309, Po1000
+                                                Eth1/39, Eth1/40, Eth1/41
+                                                Eth1/42, Eth1/51, Eth1/52
+                                                Eth1/53, Eth1/54
+3155 VDI_SRV                          active    Po7, Po308, Po309, Po1000
+                                                Eth1/39, Eth1/40, Eth1/41
+                                                Eth1/42, Eth1/51, Eth1/52
+                                                Eth1/53, Eth1/54
+3779 CitrixSDX-VipInet                active    Po7, Po308, Po309, Po1000
+                                                Eth1/39, Eth1/40, Eth1/41
+                                                Eth1/42, Eth1/51, Eth1/52
+                                                Eth1/53, Eth1/54
+3781 GROUPVTB                         active    Po7, Po308, Po309, Po1000
+                                                Eth1/39, Eth1/40, Eth1/41
+                                                Eth1/42, Eth1/51, Eth1/52
+                                                Eth1/53, Eth1/54
+3792 ilo_vdi                          active    Po7, Po1000, Eth1/51, Eth1/52
+                                                Eth1/53, Eth1/54
+3799 inbound_MNG_pN9K                 active    Po7, Po1000, Eth1/51, Eth1/52
+                                                Eth1/53, Eth1/54
+3801 cloud_3801                       active    Po7, Po1000, Eth1/16, Eth1/17
+                                                Eth1/51, Eth1/52, Eth1/53
+                                                Eth1/54
+3807 cloud_3807                       active    Po7, Po303, Po304, Po306, Po307
+                                                Po1000, Eth1/4, Eth1/6, Eth1/7
+                                                Eth1/51, Eth1/52, Eth1/53
+                                                Eth1/54
+3808 cloud_3808                       active    Po7, Po302, Po305, Po1000
+                                                Eth1/2, Eth1/3, Eth1/51, Eth1/52
+                                                Eth1/53, Eth1/54
+3852 cloud_3852                       active    Po7, Po1000, Eth1/16, Eth1/17
+                                                Eth1/51, Eth1/52, Eth1/53
+                                                Eth1/54
+3853 cloud_3853                       active    Po7, Po1000, Eth1/16, Eth1/17
+                                                Eth1/51, Eth1/52, Eth1/53
+                                                Eth1/54
+3854 cloud_3854                       active    Po7, Po1000, Eth1/51, Eth1/52
+                                                Eth1/53, Eth1/54
+3926 Cloud_3926                       active    Po7, Po1000, Eth1/16, Eth1/17
+                                                Eth1/51, Eth1/52, Eth1/53
+                                                Eth1/54
+
+VLAN Type         Vlan-mode
+---- -----        ----------
+1    enet         CE     
+2806 enet         CE     
+2901 enet         CE     
+2951 enet         CE     
+3126 enet         CE     
+3155 enet         CE     
+3779 enet         CE     
+3781 enet         CE     
+3792 enet         CE     
+3799 enet         CE     
+3801 enet         CE     
+3807 enet         CE     
+3808 enet         CE     
+3852 enet         CE     
+3853 enet         CE     
+3854 enet         CE     
+3926 enet         CE     
+
+Remote SPAN VLANs
+-------------------------------------------------------------------------------
+
+Primary  Secondary  Type             Ports
+-------  ---------  ---------------  -------------------------------------------
+
+
+

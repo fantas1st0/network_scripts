@@ -1,0 +1,67 @@
+
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Po4000, Eth3/3, Eth4/3, Eth7/1
+                                                Eth7/2, Eth7/4, Eth8/1, Eth8/2
+                                                Eth8/3, Eth8/4
+512  FW-CPEDGE-VTB                    active    Po63, Po64, Po4000, Eth3/5
+                                                Eth3/6, Eth3/7, Eth3/8, Eth4/5
+                                                Eth4/6, Eth4/7, Eth4/8, Eth7/1
+                                                Eth7/2, Eth8/1, Eth8/2
+513  FW-CPEDGE-24                     active    Po63, Po64, Po4000, Eth3/5
+                                                Eth3/6, Eth3/7, Eth3/8, Eth4/5
+                                                Eth4/6, Eth4/7, Eth4/8, Eth7/1
+                                                Eth7/2, Eth8/1, Eth8/2
+514  FW-CPEDGE-BM                     active    Po63, Po64, Po4000, Eth3/5
+                                                Eth3/6, Eth3/7, Eth3/8, Eth4/5
+                                                Eth4/6, Eth4/7, Eth4/8, Eth7/1
+                                                Eth7/2, Eth8/1, Eth8/2
+515  FW-CPEDGE-USERS                  active    Po63, Po64, Po4000, Eth3/5
+                                                Eth3/6, Eth3/7, Eth3/8, Eth4/5
+                                                Eth4/6, Eth4/7, Eth4/8, Eth7/1
+                                                Eth7/2, Eth8/1, Eth8/2
+953  FW-DSO-INT                       active    Po63, Po64, Po4000, Eth3/5
+                                                Eth3/6, Eth3/7, Eth3/8, Eth4/5
+                                                Eth4/6, Eth4/7, Eth4/8, Eth7/1
+                                                Eth7/2, Eth8/1, Eth8/2
+954  FW-DSO-VTB-DEV                   active    Po63, Po64, Po4000, Eth3/5
+                                                Eth3/6, Eth3/7, Eth3/8, Eth4/5
+                                                Eth4/6, Eth4/7, Eth4/8, Eth7/1
+                                                Eth7/2, Eth8/1, Eth8/2
+958  FW-DSO-VTB-DEV-USERS             active    Po63, Po64, Po4000, Eth3/5
+                                                Eth3/6, Eth3/7, Eth3/8, Eth4/5
+                                                Eth4/6, Eth4/7, Eth4/8, Eth7/1
+                                                Eth7/2, Eth8/1, Eth8/2
+1002 fddi-default                     act/lshut Po4000, Eth7/1, Eth7/2, Eth8/1
+                                                Eth8/2
+1003 trcrf-default                    act/lshut Po4000, Eth7/1, Eth7/2, Eth8/1
+                                                Eth8/2
+1004 fddinet-default                  act/lshut Po4000, Eth7/1, Eth7/2, Eth8/1
+                                                Eth8/2
+1005 trbrf-default                    act/lshut Po4000, Eth7/1, Eth7/2, Eth8/1
+                                                Eth8/2
+
+VLAN Type         Vlan-mode
+---- -----        ----------
+1    enet         CE     
+512  enet         CE     
+513  enet         CE     
+514  enet         CE     
+515  enet         CE     
+953  enet         CE     
+954  enet         CE     
+958  enet         CE     
+1002 fddi         CE     
+1003 token-ring   CE     
+1004 fddinet      CE     
+1005 trnet        CE     
+
+Remote SPAN VLANs
+-------------------------------------------------------------------------------
+
+Primary  Secondary  Type             Ports
+-------  ---------  ---------------  -------------------------------------------
+
+
+

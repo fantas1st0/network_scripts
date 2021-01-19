@@ -1,0 +1,1974 @@
+
+
+!Command: show running-config
+!Time: Thu Oct  1 21:23:33 2020
+
+version 7.3(5)N1(1)
+hostname sw-dp4-data-27
+
+feature telnet
+feature tacacs+
+cfs eth distribute
+feature udld
+feature interface-vlan
+feature lacp
+feature vpc
+feature lldp
+feature fex
+
+username xxxxxxx password 5 xxxxxxx role network-admin
+username xxxxxxx password 5 xxxxxxx role network-admin
+username xxxxxxxx passphrase  lifetime 99999 warntime 14 gracetime 3
+
+banner motd ^[TACACS]^
+
+no ip domain-lookup
+ip domain-name vtb24.ru
+tacacs-server timeout 10
+tacacs-server host 10.64.0.68 key 7  xxxxxxxx 
+tacacs-server host 10.64.0.69 key 7  xxxxxxxx 
+aaa group server tacacs+ TACACS+
+  server 10.64.0.68
+  server 10.64.0.69
+  source-interface Vlan634
+system default switchport shutdown
+logging event link-status default
+service unsupported-transceiver
+errdisable recovery interval 60
+errdisable recovery cause link-flap
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause loopback
+errdisable recovery cause security-violation
+errdisable recovery cause psecure-violation
+errdisable recovery cause pause-rate-limit
+errdisable recovery cause miscabling
+ip access-list 1
+  20 permit ip 10.64.0.0/21 any
+  30 permit ip 10.68.0.0/21 any
+  40 permit ip 10.74.57.7/32 any
+  50 permit ip 10.194.162.33/32 any
+  60 permit ip 10.194.160.71/32 any
+ip access-list 111
+  10 permit ip 10.64.0.111/32 any
+fex 151
+  pinning max-links 1
+  description "FEX0151"
+snmp-server contact VTB24 NOC, noc@vtb24.ru
+snmp-server location MSK, Dnepropetrovskiy pr-d 4, room DC4, rack __
+snmp-server source-interface informs Vlan634
+snmp-server user xxxxxxxx network-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server user xxxxxxxx network-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server host 10.194.160.71 traps version 2c xxxxxxxx 
+snmp-server host 10.194.162.33 traps version 2c xxxxxxxx 
+rmon event 1 log description FATAL(1) owner PMON@FATAL
+rmon event 2 log description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 log description ERROR(3) owner PMON@ERROR
+rmon event 4 log description WARNING(4) owner PMON@WARNING
+rmon event 5 log description INFORMATION(5) owner PMON@INFO
+snmp-server enable traps callhome event-notify
+snmp-server enable traps callhome smtp-send-fail
+snmp-server enable traps cfs state-change-notif
+snmp-server enable traps lldp lldpRemTablesChange
+snmp-server enable traps cfs merge-failure
+snmp-server enable traps aaa server-state-change
+snmp-server enable traps feature-control FeatureOpStatusChange
+snmp-server enable traps sysmgr cseFailSwCoreNotifyExtended
+snmp-server enable traps config ccmCLIRunningConfigChanged
+snmp-server enable traps link cisco-xcvr-mon-status-chg
+snmp-server enable traps vtp notifs
+snmp-server enable traps vtp vlancreate
+snmp-server enable traps vtp vlandelete
+snmp-server enable traps bridge newroot
+snmp-server enable traps bridge topologychange
+snmp-server enable traps stpx inconsistency
+snmp-server enable traps stpx root-inconsistency
+snmp-server enable traps stpx loop-inconsistency
+snmp-server enable traps system Clock-change-notification
+snmp-server enable traps feature-control ciscoFeatOpStatusChange
+snmp-server community xxxxxxxx group vdc-operator
+snmp-server community xxxxxxxx group vdc-operator
+snmp-server community xxxxxxxx group network-operator
+snmp-server community xxxxxxxx use-acl 1
+snmp-server community xxxxxxxx use-acl 1
+snmp-server community xxxxxxxx use-acl 111
+ntp server 10.9.0.3
+ntp server 10.9.0.4
+ntp source-interface Vlan634
+ntp authentication-key 1 md5 xxxxxxxx 7
+ntp trusted-key 1
+aaa authentication login default group TACACS+ local
+aaa authentication login console local
+aaa authorization config-commands default group TACACS+ local
+policy-map type network-qos jumbo
+  class type network-qos class-default
+    mtu 9216
+    multicast-optimize
+
+ip route 0.0.0.0/0 10.64.128.1
+vlan 1
+vlan 4
+  name TRADE_DMZ
+vlan 586
+  name DATA-KT-176
+vlan 600
+  name DATA-MGMT
+vlan 601
+  name DATA-BIS-HQ
+vlan 602
+  name DATA-BIS-BRANCH
+vlan 603
+  name DATA-PLC
+vlan 604
+  name DATA-SRV-INF
+vlan 605
+  name DATA-SRV-INET
+vlan 606
+  name DATA-SRV-APP
+vlan 608
+  name ~DATA-CONSOLE
+vlan 609
+  name DATA-VMWARE
+vlan 625
+  name DATA-BM
+vlan 628
+  name DATA-SRV-APP2
+vlan 629
+  name DATA-VMWARE2
+vlan 632
+  name DATA-PBX-VOIP
+vlan 633
+  name DATA-PBX-APP
+vlan 634
+  name DATA-CONSOLE2
+vlan 637
+  name DATA-CC-APP
+vlan 640
+  name DATA-VC-VCS-VTB
+vlan 652
+  name DATA-SRV-EXTRANET
+vlan 654
+  name DATA-BACKUP
+vlan 655
+  name DATA-PLC-OCTOPUS
+vlan 656
+  name DATA-PLC-TEST
+vlan 657
+  name DATA-SWIFT
+vlan 658
+  name DATA-CRONOS
+vlan 666
+  name DATA-BPIPE
+vlan 667
+  name DATA-VTM
+vlan 668
+  name DATA-VTB-RF
+vlan 674
+  name DATA-VIEW-VTB-USERS-4
+vlan 679
+  name DATA-RTS-SPB
+vlan 681
+  name ~DATA-VIEW-CC
+vlan 687
+  name DATA-VIEW-VTB-USERS-3
+vlan 690
+  name DATA-DMZ-COLO-BC
+vlan 692
+  name DATA-DMZ-COLO
+vlan 693
+  name DATA-DMZ-LOCAL
+vlan 4093
+  name VPC-PEER-KEEPALIVE
+
+spanning-tree port type edge default
+spanning-tree port type edge bpduguard default
+spanning-tree loopguard default
+udld aggressive
+vrf context management
+  ip route 0.0.0.0/0 10.64.128.1
+vrf context vpc-keepalive
+vpc domain 17
+  role priority 1
+  peer-keepalive destination 192.168.1.2 source 192.168.1.1 vrf vpc-keepalive
+
+
+interface Vlan1
+
+interface Vlan634
+  description mgmt
+  no shutdown
+  no ip redirects
+  ip address 10.64.129.74/21
+
+interface Vlan4093
+  description [L3] peer-keepalive
+  no shutdown
+  vrf member vpc-keepalive
+  ip address 192.168.1.1/24
+
+interface port-channel10
+  description [VPC][TRUNK] sw-dp4-data-11/12
+  switchport mode trunk
+  switchport trunk allowed vlan 4,586,600-606,608-609,625,628-629,632-634,637,640,652,654-658,666-668,674,679,681,687,690,692-693
+  vpc 10
+
+interface port-channel151
+  description [FEX] sw-dp4-data-27-fex151
+  switchport mode fex-fabric
+  fex associate 151
+
+interface port-channel601
+  description TRUNK svr-hv407h:Int Port 1 RF-001852946
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 601
+
+interface port-channel602
+  description TRUNK svr-hv409h:Int Port 1 RF-001852946
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 602
+
+interface port-channel603
+  description TRUNK svr-hv411h:Int Port 1 RF-001852946
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 603
+
+interface port-channel604
+  description TRUNK svr-hv413h:ae RF-001820082
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 604
+
+interface port-channel605
+  description TRUNK svr-hv415h:ae RF-001820082
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 605
+
+interface port-channel606
+  description TRUNK svr-hv417h:ae RF-001820082
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 606
+
+interface port-channel607
+  description TRUNK svr-hv421h:ae RF-001820105
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 607
+
+interface port-channel608
+  description TRUNK svr-hv423h:ae RF-001820105
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 608
+
+interface port-channel609
+  description TRUNK svr-hv425h:ae RF-001820105
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 609
+
+interface port-channel610
+  description TRUNK vdic-hv471h:Int Port 1 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 610
+
+interface port-channel611
+  description TRUNK vdic-hv473h:Int Port 1 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 611
+
+interface port-channel612
+  description TRUNK vdic-hv475h:Int Port 1 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 612
+
+interface port-channel613
+  description TRUNK vdic-hv477h:Int Port 1 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 613
+
+interface port-channel614
+  description TRUNK vdic-hv479h:Int Port 1 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 614
+
+interface port-channel615
+  description TRUNK vdic-hv481h:Int Port 1 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 615
+
+interface port-channel616
+  description TRUNK vdic-hv483h:Int Port 1 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 616
+
+interface port-channel617
+  description TRUNK vdic-hv485h:Int Port 1 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 617
+
+interface port-channel618
+  description TRUNK vdic-hv487h:Int Port 1 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 618
+
+interface port-channel625
+  description TRUNK svr-hv408h:Int Port 1 RF-001852946
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 625
+
+interface port-channel626
+  description TRUNK svr-hv410h:Int Port 1 RF-001852946
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 626
+
+interface port-channel627
+  description TRUNK svr-hv412h:Int Port 1 RF-001852946
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 627
+
+interface port-channel628
+  description TRUNK svr-hv414h:ae RF-001820082
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 628
+
+interface port-channel629
+  description TRUNK svr-hv416h:ae RF-001820082
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 629
+
+interface port-channel630
+  description TRUNK svr-hv418h:ae RF-001820082
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 630
+
+interface port-channel631
+  description TRUNK svr-hv422h:ae RF-001820105
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 631
+
+interface port-channel632
+  description TRUNK svr-hv424h:ae RF-001820105
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 632
+
+interface port-channel633
+  description TRUNK vdic-hv470h:Int Port 1 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 633
+
+interface port-channel634
+  description TRUNK vdic-hv472h:Int Port 1 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 634
+
+interface port-channel635
+  description TRUNK vdic-hv474h:Int Port 1 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 635
+
+interface port-channel636
+  description TRUNK vdic-hv476h:Int Port 1 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 636
+
+interface port-channel637
+  description TRUNK vdic-hv478h:Int Port 1 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 637
+
+interface port-channel638
+  description TRUNK vdic-hv480h:Int Port 1 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 638
+
+interface port-channel639
+  description TRUNK vdic-hv482h:Int Port 1 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 639
+
+interface port-channel640
+  description TRUNK vdic-hv484h:Int Port 1 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 640
+
+interface port-channel641
+  description TRUNK vdic-hv486h:Int Port 1 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 641
+
+interface port-channel642
+  description TRUNK vdic-hv488h:Int Port 1 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 642
+
+interface port-channel701
+  description TRUNK svr-hv407h:Int Port 2 RF-001852946
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 540,600-606,608-609,625,632-633,637,640,652,655,657-658,666-668,679
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 701
+
+interface port-channel702
+  description TRUNK svr-hv409h:Int Port 2 RF-001852946
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 540,600-606,608-609,625,632-633,637,640,652,655,657-658,666-668,679
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 702
+
+interface port-channel703
+  description TRUNK svr-hv411h:Int Port 2 RF-001852946
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 540,600-606,608-609,625,632-633,637,640,652,655,657-658,666-668,679
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 703
+
+interface port-channel704
+  description TRUNK svr-hv413h:Int Port 2 RF-001920511
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 4,690-693
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 704
+
+interface port-channel705
+  description TRUNK svr-hv415h:Int Port 2 RF-001920511
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 4,690-693
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 705
+
+interface port-channel706
+  description TRUNK svr-hv417h:Int Port 2 RF-001920511
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 4,690-693
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 706
+
+interface port-channel707
+  description TRUNK svr-hv421h:ae RF-001820105
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 586,600-606,608-609,625,628,632-633,637,640,652,654-658,666-668,679
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 707
+
+interface port-channel708
+  description TRUNK svr-hv423h:ae RF-001820105
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 586,600-606,608-609,625,628,632-633,637,640,652,654-658,666-668,679
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 708
+
+interface port-channel709
+  description TRUNK svr-hv425h:ae RF-001820105
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 586,600-606,608-609,625,628,632-633,637,640,652,654-658,666-668,679
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 709
+
+interface port-channel710
+  description TRUNK vdic-hv471h:Int Port 2 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 710
+
+interface port-channel711
+  description TRUNK vdic-hv473h:Int Port 2 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 711
+
+interface port-channel712
+  description TRUNK vdic-hv475h:Int Port 2 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 712
+
+interface port-channel713
+  description TRUNK vdic-hv477h:Int Port 2 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 713
+
+interface port-channel714
+  description TRUNK vdic-hv479h:Int Port 2 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 714
+
+interface port-channel715
+  description TRUNK vdic-hv481h:Int Port 2 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 715
+
+interface port-channel716
+  description TRUNK vdic-hv483h:Int Port 2 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 716
+
+interface port-channel717
+  description TRUNK vdic-hv485h:Int Port 2 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 717
+
+interface port-channel718
+  description TRUNK vdic-hv487h:Int Port 2 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 718
+
+interface port-channel725
+  description TRUNK svr-hv408h:Int Port 2 RF-001852946
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 540,600-606,608-609,625,632-633,637,640,652,655,657-658,666-668,679
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 725
+
+interface port-channel726
+  description TRUNK svr-hv410h:Int Port 2 RF-001852946
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 540,600-606,608-609,625,632-633,637,640,652,655,657-658,666-668,679
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 726
+
+interface port-channel727
+  description TRUNK svr-hv412h:Int Port 2 RF-001852946
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 540,600-606,608-609,625,632-633,637,640,652,655,657-658,666-668,679
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 727
+
+interface port-channel728
+  description TRUNK svr-hv414h:Int Port 2 RF-001920511
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 4,690-693
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 728
+
+interface port-channel729
+  description TRUNK svr-hv416h:Int Port 2 RF-001920511
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 4,690-693
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 729
+
+interface port-channel730
+  description TRUNK svr-hv418h:Int Port 2 RF-001920511
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 4,690-693
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 730
+
+interface port-channel731
+  description TRUNK svr-hv422h:ae RF-001820105
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 586,600-606,608-609,625,628,632-633,637,640,652,654-658,666-668,679
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 731
+
+interface port-channel732
+  description TRUNK svr-hv424h:ae RF-001820105
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 586,600-606,608-609,625,628,632-633,637,640,652,654-658,666-668,679
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 732
+
+interface port-channel733
+  description TRUNK vdic-hv470h:Int Port 2 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 733
+
+interface port-channel734
+  description TRUNK vdic-hv472h:Int Port 2 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 734
+
+interface port-channel735
+  description TRUNK vdic-hv474h:Int Port 2 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 735
+
+interface port-channel736
+  description TRUNK vdic-hv476h:Int Port 2 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 736
+
+interface port-channel737
+  description TRUNK vdic-hv478h:Int Port 2 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 737
+
+interface port-channel738
+  description TRUNK vdic-hv480h:Int Port 2 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 738
+
+interface port-channel739
+  description TRUNK vdic-hv482h:Int Port 2 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 739
+
+interface port-channel740
+  description TRUNK vdic-hv484h:Int Port 2 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 740
+
+interface port-channel741
+  description TRUNK vdic-hv486h:Int Port 2 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 741
+
+interface port-channel742
+  description TRUNK vdic-hv488h:Int Port 2 RF-001852995
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 742
+
+interface port-channel4000
+  description [TRUNK] peer-link
+  switchport mode trunk
+  switchport trunk allowed vlan 1-4092
+  spanning-tree port type network
+  vpc peer-link
+
+interface port-channel4001
+  description [TRUNK] peer-keepalive
+  switchport mode trunk
+  switchport trunk allowed vlan 4093
+
+interface Ethernet1/1
+  description TRUNK svr-hv407h:Int Port 1 RF-001819978
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 601 mode active
+  no shutdown
+
+interface Ethernet1/2
+  description TRUNK svr-hv409h:Int Port 1 RF-001819978
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 602 mode active
+  no shutdown
+
+interface Ethernet1/3
+  description TRUNK svr-hv411h:Int Port 1 RF-001819978
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 603 mode active
+  no shutdown
+
+interface Ethernet1/4
+  description TRUNK svr-hv413h:Int Port 1 RF-001820082
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 604 mode active
+  no shutdown
+
+interface Ethernet1/5
+  description TRUNK svr-hv415h:Int Port 1 RF-001820082
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 605 mode active
+  no shutdown
+
+interface Ethernet1/6
+  description TRUNK svr-hv417h:Int Port 1 RF-001820082
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 606 mode active
+  no shutdown
+
+interface Ethernet1/7
+  description TRUNK svr-hv421h:Int Port 1 RF-001820105
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 607 mode active
+  no shutdown
+
+interface Ethernet1/8
+  description TRUNK svr-hv423h:Int Port 1 RF-001820105
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 608 mode active
+  no shutdown
+
+interface Ethernet1/9
+  description TRUNK svr-hv425h:Int Port 1 RF-001820105
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 609 mode active
+  no shutdown
+
+interface Ethernet1/10
+  description TRUNK vdic-hv471h:Int Port 1 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 610 mode active
+  no shutdown
+
+interface Ethernet1/11
+  description TRUNK vdic-hv473h:Int Port 1 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 611 mode active
+  no shutdown
+
+interface Ethernet1/12
+  description TRUNK vdic-hv475h:Int Port 1 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 612 mode active
+  no shutdown
+
+interface Ethernet1/13
+  description TRUNK vdic-hv477h:Int Port 1 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 613 mode active
+  no shutdown
+
+interface Ethernet1/14
+  description TRUNK vdic-hv479h:Int Port 1 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 614 mode active
+  no shutdown
+
+interface Ethernet1/15
+  description TRUNK vdic-hv481h:Int Port 1 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 615 mode active
+  no shutdown
+
+interface Ethernet1/16
+  description TRUNK vdic-hv483h:Int Port 1 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 616 mode active
+  no shutdown
+
+interface Ethernet1/17
+  description TRUNK vdic-hv485h:Int Port 1 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 617 mode active
+  no shutdown
+
+interface Ethernet1/18
+  description TRUNK vdic-hv487h:Int Port 1 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 618 mode active
+  no shutdown
+
+interface Ethernet1/19
+
+interface Ethernet1/20
+
+interface Ethernet1/21
+
+interface Ethernet1/22
+
+interface Ethernet1/23
+
+interface Ethernet1/24
+
+interface Ethernet1/25
+  description TRUNK svr-hv408h:Int Port 1 RF-001819978
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 625 mode active
+  no shutdown
+
+interface Ethernet1/26
+  description TRUNK svr-hv410h:Int Port 1 RF-001819978
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 626 mode active
+  no shutdown
+
+interface Ethernet1/27
+  description TRUNK svr-hv412h:Int Port 1 RF-001819978
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 627 mode active
+  no shutdown
+
+interface Ethernet1/28
+  description TRUNK svr-hv414h:Int Port 1 RF-001820082
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 628 mode active
+  no shutdown
+
+interface Ethernet1/29
+  description TRUNK svr-hv416h:Int Port 1 RF-001820082
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 629 mode active
+  no shutdown
+
+interface Ethernet1/30
+  description TRUNK svr-hv418h:Int Port 1 RF-001820082
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 630 mode active
+  no shutdown
+
+interface Ethernet1/31
+  description TRUNK svr-hv422h:Int Port 1 RF-001820105
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 631 mode active
+  no shutdown
+
+interface Ethernet1/32
+  description TRUNK svr-hv424h:Int Port 1 RF-001820105
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,654
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 632 mode active
+  no shutdown
+
+interface Ethernet1/33
+  description TRUNK vdic-hv470h:Int Port 1 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 633 mode active
+  no shutdown
+
+interface Ethernet1/34
+  description TRUNK vdic-hv472h:Int Port 1 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 634 mode active
+  no shutdown
+
+interface Ethernet1/35
+  description TRUNK vdic-hv474h:Int Port 1 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 635 mode active
+  no shutdown
+
+interface Ethernet1/36
+  description TRUNK vdic-hv476h:Int Port 1 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 636 mode active
+  no shutdown
+
+interface Ethernet1/37
+  description TRUNK vdic-hv478h:Int Port 1 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 637 mode active
+  no shutdown
+
+interface Ethernet1/38
+  description TRUNK vdic-hv480h:Int Port 1 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 638 mode active
+  no shutdown
+
+interface Ethernet1/39
+  description TRUNK vdic-hv482h:Int Port 1 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 639 mode active
+  no shutdown
+
+interface Ethernet1/40
+  description TRUNK vdic-hv484h:Int Port 1 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 640 mode active
+  no shutdown
+
+interface Ethernet1/41
+  description TRUNK vdic-hv486h:Int Port 1 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 641 mode active
+  no shutdown
+
+interface Ethernet1/42
+  description TRUNK vdic-hv488h:Int Port 1 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 642 mode active
+  no shutdown
+
+interface Ethernet1/43
+
+interface Ethernet1/44
+
+interface Ethernet1/45
+
+interface Ethernet1/46
+
+interface Ethernet1/47
+
+interface Ethernet1/48
+
+interface Ethernet1/49
+  description [FEX] sw-dp4-data-27-fex151
+  switchport mode fex-fabric
+  fex associate 151
+  channel-group 151
+  no shutdown
+
+interface Ethernet1/50
+  description [FEX] sw-dp4-data-27-fex151
+  switchport mode fex-fabric
+  fex associate 151
+  channel-group 151
+  no shutdown
+
+interface Ethernet1/51
+  description [PC] sw-dp4-data-11
+  switchport mode trunk
+  switchport trunk allowed vlan 4,586,600-606,608-609,625,628-629,632-634,637,640,652,654-658,666-668,674,679,681,687,690,692-693
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet1/52
+  description [PC] peer-link
+  switchport mode trunk
+  switchport trunk allowed vlan 1-4092
+  channel-group 4000 mode active
+  no shutdown
+
+interface Ethernet2/1
+
+interface Ethernet2/2
+
+interface Ethernet2/3
+
+interface Ethernet2/4
+
+interface Ethernet2/5
+
+interface Ethernet2/6
+
+interface Ethernet2/7
+
+interface Ethernet2/8
+
+interface Ethernet2/9
+
+interface Ethernet2/10
+
+interface Ethernet2/11
+
+interface Ethernet2/12
+
+interface Ethernet2/13
+
+interface Ethernet2/14
+
+interface Ethernet2/15
+
+interface Ethernet2/16
+
+interface Ethernet2/17
+
+interface Ethernet2/18
+
+interface Ethernet2/19
+
+interface Ethernet2/20
+
+interface Ethernet2/21
+
+interface Ethernet2/22
+
+interface Ethernet2/23
+  description [PC] peer-keepalive
+  switchport mode trunk
+  switchport trunk allowed vlan 4093
+  channel-group 4001 mode active
+  no shutdown
+
+interface Ethernet2/24
+  description [PC] peer-keepalive
+  switchport mode trunk
+  switchport trunk allowed vlan 4093
+  channel-group 4001 mode active
+  no shutdown
+
+interface Ethernet2/25
+  description [PC] sw-dp4-data-12
+  switchport mode trunk
+  switchport trunk allowed vlan 4,586,600-606,608-609,625,628-629,632-634,637,640,652,654-658,666-668,674,679,681,687,690,692-693
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet2/26
+  description [PC] peer-link
+  switchport mode trunk
+  switchport trunk allowed vlan 1-4092
+  channel-group 4000 mode active
+  no shutdown
+
+interface mgmt0
+  vrf member management
+  ip address 10.64.129.72/21
+
+interface Ethernet151/1/1
+  description TRUNK svr-hv407h:Int Port 2 RF-001819978
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 540,600-606,608-609,625,632-633,637,640,652,655,657-658,666-668,679
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 701 mode active
+  no shutdown
+
+interface Ethernet151/1/2
+  description TRUNK svr-hv409h:Int Port 2 RF-001819978
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 540,600-606,608-609,625,632-633,637,640,652,655,657-658,666-668,679
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 702 mode active
+  no shutdown
+
+interface Ethernet151/1/3
+  description TRUNK svr-hv411h:Int Port 2 RF-001819978
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 540,600-606,608-609,625,632-633,637,640,652,655,657-658,666-668,679
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 703 mode active
+  no shutdown
+
+interface Ethernet151/1/4
+  description TRUNK svr-hv413h:Int Port 2 RF-001920511
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 4,690-693
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 704 mode active
+  no shutdown
+
+interface Ethernet151/1/5
+  description TRUNK svr-hv415h:Int Port 2 RF-001920511
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 4,690-693
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 705 mode active
+  no shutdown
+
+interface Ethernet151/1/6
+  description TRUNK svr-hv417h:Int Port 2 RF-001920511
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 4,690-693
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 706 mode active
+  no shutdown
+
+interface Ethernet151/1/7
+  description TRUNK svr-hv421h:Int Port 2 RF-001820105
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 586,600-606,608-609,625,628,632-633,637,640,652,654-658,666-668,679
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 707 mode active
+  no shutdown
+
+interface Ethernet151/1/8
+  description TRUNK svr-hv423h:Int Port 2 RF-001820105
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 586,600-606,608-609,625,628,632-633,637,640,652,654-658,666-668,679
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 708 mode active
+  no shutdown
+
+interface Ethernet151/1/9
+  description TRUNK svr-hv425h:Int Port 2 RF-001820105
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 586,600-606,608-609,625,628,632-633,637,640,652,654-658,666-668,679
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 709 mode active
+  no shutdown
+
+interface Ethernet151/1/10
+  description TRUNK vdic-hv471h:Int Port 2 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 710 mode active
+  no shutdown
+
+interface Ethernet151/1/11
+  description TRUNK vdic-hv473h:Int Port 2 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 711 mode active
+  no shutdown
+
+interface Ethernet151/1/12
+  description TRUNK vdic-hv475h:Int Port 2 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 712 mode active
+  no shutdown
+
+interface Ethernet151/1/13
+  description TRUNK vdic-hv477h:Int Port 2 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 713 mode active
+  no shutdown
+
+interface Ethernet151/1/14
+  description TRUNK vdic-hv479h:Int Port 2 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 714 mode active
+  no shutdown
+
+interface Ethernet151/1/15
+  description TRUNK vdic-hv481h:Int Port 2 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 715 mode active
+  no shutdown
+
+interface Ethernet151/1/16
+  description TRUNK vdic-hv483h:Int Port 2 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 716 mode active
+  no shutdown
+
+interface Ethernet151/1/17
+  description TRUNK vdic-hv485h:Int Port 2 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 717 mode active
+  no shutdown
+
+interface Ethernet151/1/18
+  description TRUNK vdic-hv487h:Int Port 2 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 718 mode active
+  no shutdown
+
+interface Ethernet151/1/19
+
+interface Ethernet151/1/20
+
+interface Ethernet151/1/21
+
+interface Ethernet151/1/22
+
+interface Ethernet151/1/23
+
+interface Ethernet151/1/24
+
+interface Ethernet151/1/25
+  description TRUNK svr-hv408h:Int Port 2 RF-001819978
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 540,600-606,608-609,625,632-633,637,640,652,655,657-658,666-668,679
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 725 mode active
+  no shutdown
+
+interface Ethernet151/1/26
+  description TRUNK svr-hv410h:Int Port 2 RF-001819978
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 540,600-606,608-609,625,632-633,637,640,652,655,657-658,666-668,679
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 726 mode active
+  no shutdown
+
+interface Ethernet151/1/27
+  description TRUNK svr-hv412h:Int Port 2 RF-001819978
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 540,600-606,608-609,625,632-633,637,640,652,655,657-658,666-668,679
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 727 mode active
+  no shutdown
+
+interface Ethernet151/1/28
+  description TRUNK svr-hv414h:Int Port 2 RF-001920511
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 4,690-693
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 728 mode active
+  no shutdown
+
+interface Ethernet151/1/29
+  description TRUNK svr-hv416h:Int Port 2 RF-001920511
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 4,690-693
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 729 mode active
+  no shutdown
+
+interface Ethernet151/1/30
+  description TRUNK svr-hv418h:Int Port 2 RF-001920511
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 4,690-693
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 730 mode active
+  no shutdown
+
+interface Ethernet151/1/31
+  description TRUNK svr-hv422h:Int Port 2 RF-001820105
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 586,600-606,608-609,625,628,632-633,637,640,652,654-658,666-668,679
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 731 mode active
+  no shutdown
+
+interface Ethernet151/1/32
+  description TRUNK svr-hv424h:Int Port 2 RF-001820105
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 586,600-606,608-609,625,628,632-633,637,640,652,654-658,666-668,679
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 732 mode active
+  no shutdown
+
+interface Ethernet151/1/33
+  description TRUNK vdic-hv470h:Int Port 2 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 733 mode active
+  no shutdown
+
+interface Ethernet151/1/34
+  description TRUNK vdic-hv472h:Int Port 2 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 734 mode active
+  no shutdown
+
+interface Ethernet151/1/35
+  description TRUNK vdic-hv474h:Int Port 2 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 735 mode active
+  no shutdown
+
+interface Ethernet151/1/36
+  description TRUNK vdic-hv476h:Int Port 2 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 736 mode active
+  no shutdown
+
+interface Ethernet151/1/37
+  description TRUNK vdic-hv478h:Int Port 2 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 737 mode active
+  no shutdown
+
+interface Ethernet151/1/38
+  description TRUNK vdic-hv480h:Int Port 2 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 738 mode active
+  no shutdown
+
+interface Ethernet151/1/39
+  description TRUNK vdic-hv482h:Int Port 2 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 739 mode active
+  no shutdown
+
+interface Ethernet151/1/40
+  description TRUNK vdic-hv484h:Int Port 2 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 740 mode active
+  no shutdown
+
+interface Ethernet151/1/41
+  description TRUNK vdic-hv486h:Int Port 2 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 741 mode active
+  no shutdown
+
+interface Ethernet151/1/42
+  description TRUNK vdic-hv488h:Int Port 2 RF-001819943
+  switchport mode trunk
+  switchport trunk native vlan 609
+  switchport trunk allowed vlan 609,674,681,687
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 742 mode active
+  no shutdown
+
+interface Ethernet151/1/43
+
+interface Ethernet151/1/44
+
+interface Ethernet151/1/45
+
+interface Ethernet151/1/46
+
+interface Ethernet151/1/47
+
+interface Ethernet151/1/48
+cli alias name wr copy running-config startup-config
+line console
+line vty
+boot kickstart bootflash:/n6000-uk9-kickstart.7.3.5.N1.1.bin
+boot system bootflash:/n6000-uk9.7.3.5.N1.1.bin
+poap transit
+
+

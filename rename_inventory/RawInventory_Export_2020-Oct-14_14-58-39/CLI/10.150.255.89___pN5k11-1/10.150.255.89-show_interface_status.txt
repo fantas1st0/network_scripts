@@ -1,0 +1,607 @@
+
+
+--------------------------------------------------------------------------------
+Port          Name               Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------
+Eth1/1/1      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth1/1/2      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth1/1/3      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth1/1/4      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth1/2/1      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth1/2/2      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth1/2/3      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth1/2/4      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth1/3/1      --- 2K11-117 ---   connected 1         full    10G     QSFP-40G-CS
+Eth1/3/2      --- 2K11-117 ---   connected 1         full    10G     QSFP-40G-CS
+Eth1/3/3      --- 2K11-117 ---   connected 1         full    10G     QSFP-40G-CS
+Eth1/3/4      --- 2K11-117 ---   connected 1         full    10G     QSFP-40G-CS
+Eth1/4/1      --- 2K11-121 ---   connected 1         full    10G     QSFP-40G-CS
+Eth1/4/2      --- 2K11-121 ---   connected 1         full    10G     QSFP-40G-CS
+Eth1/4/3      --- 2K11-121 ---   connected 1         full    10G     QSFP-40G-CS
+Eth1/4/4      --- 2K11-121 ---   connected 1         full    10G     QSFP-40G-CS
+Eth1/5/1      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth1/5/2      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth1/5/3      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth1/5/4      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth1/6/1      --- 2K11-127 ---   connected 1         full    10G     QSFP-40G-CS
+Eth1/6/2      --- 2K11-127 ---   connected 1         full    10G     QSFP-40G-CS
+Eth1/6/3      --- 2K11-127 ---   connected 1         full    10G     QSFP-40G-CS
+Eth1/6/4      --- 2K11-127 ---   connected 1         full    10G     QSFP-40G-CS
+Eth1/7        --                 disabled  1         half    40G     QSFP-40G-SR
+Eth1/8        --                 disabled  1         half    40G     QSFP-40G-SR
+Eth1/9        --- 2K11-105 ---   connected 1         full    40G     QSFP-40G-SR
+Eth1/10       peer-keepalive     connected routed    full    40G     QSFP-40G-SR
+Eth1/11       pN77-1-switch1     connected trunk     full    40G     QSFP-40G-SR
+Eth1/12       peer-link          connected trunk     full    40G     QSFP-40G-SR
+Eth2/1/1      --- pN2K11-101 --- connected 1         full    10G     QSFP-40G-CS
+Eth2/1/2      --- pN2K11-101 --- connected 1         full    10G     QSFP-40G-CS
+Eth2/1/3      --- pN2K11-101 --- connected 1         full    10G     QSFP-40G-CS
+Eth2/1/4      --- pN2K11-101 --- connected 1         full    10G     QSFP-40G-CS
+Eth2/2/1      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth2/2/2      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth2/2/3      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth2/2/4      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth2/3/1      --- 2K11-119 ---   connected 1         full    10G     QSFP-40G-CS
+Eth2/3/2      --- 2K11-119 ---   connected 1         full    10G     QSFP-40G-CS
+Eth2/3/3      --- 2K11-119 ---   connected 1         full    10G     QSFP-40G-CS
+Eth2/3/4      --- 2K11-119 ---   connected 1         full    10G     QSFP-40G-CS
+Eth2/4        --                 disabled  1         half    40G     QSFP-40G-SR
+Eth2/5        --                 disabled  1         half    40G     QSFP-40G-SR
+Eth2/6        --                 sfpAbsent 1         half    40G     --         
+Eth2/7        --                 disabled  1         half    40G     QSFP-40G-SR
+Eth2/8        --                 sfpAbsent 1         half    40G     --         
+Eth2/9        --- 2K11-105 ---   connected 1         full    40G     QSFP-40G-SR
+Eth2/10       peer-keepalive     connected routed    full    40G     QSFP-40G-SR
+Eth2/11       pN77-2-switch2     connected trunk     full    40G     QSFP-40G-SR
+Eth2/12       peer-link          connected trunk     full    40G     QSFP-40G-SR
+Eth3/1/1      --- 2K11-103 660c1 connected 1         full    10G     QSFP-40G-CS
+Eth3/1/2      --- 2K11-103 660c1 connected 1         full    10G     QSFP-40G-CS
+Eth3/1/3      --- 2K11-103 660c1 connected 1         full    10G     QSFP-40G-CS
+Eth3/1/4      --- 2K11-103 660c1 connected 1         full    10G     QSFP-40G-CS
+Eth3/2/1      --- 2K11-107 ---   connected 1         full    10G     QSFP-40G-CS
+Eth3/2/2      --- 2K11-107 ---   connected 1         full    10G     QSFP-40G-CS
+Eth3/2/3      --- 2K11-107 ---   connected 1         full    10G     QSFP-40G-CS
+Eth3/2/4      --- 2K11-107 ---   connected 1         full    10G     QSFP-40G-CS
+Eth3/3/1      --- 2K11-109 ---   connected 1         full    10G     QSFP-40G-CS
+Eth3/3/2      --- 2K11-109 ---   connected 1         full    10G     QSFP-40G-CS
+Eth3/3/3      --- 2K11-109 ---   connected 1         full    10G     QSFP-40G-CS
+Eth3/3/4      --- 2K11-109 ---   connected 1         full    10G     QSFP-40G-CS
+Eth3/4/1      --- 2K11-113 ---   connected 1         full    10G     QSFP-40G-CS
+Eth3/4/2      --- 2K11-113 ---   connected 1         full    10G     QSFP-40G-CS
+Eth3/4/3      --- 2K11-113 ---   connected 1         full    10G     QSFP-40G-CS
+Eth3/4/4      --- 2K11-113 ---   connected 1         full    10G     QSFP-40G-CS
+Eth3/5/1      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth3/5/2      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth3/5/3      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth3/5/4      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth3/6/1      --- 2K11-127 ---   connected 1         full    10G     QSFP-40G-CS
+Eth3/6/2      --- 2K11-127 ---   connected 1         full    10G     QSFP-40G-CS
+Eth3/6/3      --- 2K11-127 ---   connected 1         full    10G     QSFP-40G-CS
+Eth3/6/4      --- 2K11-127 ---   connected 1         full    10G     QSFP-40G-CS
+Eth3/7        --                 sfpAbsent 1         half    40G     --         
+Eth3/8        --- 2K11-123 ---   connected 1         full    40G     QSFP-40G-SR
+Eth3/9        --                 sfpAbsent 1         half    40G     --         
+Eth3/10       --                 sfpAbsent 1         half    40G     --         
+Eth3/11       pN77-1-switch1     connected trunk     full    40G     QSFP-40G-SR
+Eth3/12       --                 disabled  1         half    40G     QSFP-40G-SR
+Eth4/1/1      --- 2K11-103 660c1 connected 1         full    10G     QSFP-40G-CS
+Eth4/1/2      --- 2K11-103 660c1 connected 1         full    10G     QSFP-40G-CS
+Eth4/1/3      --- 2K11-103 660c1 connected 1         full    10G     QSFP-40G-CS
+Eth4/1/4      --- 2K11-103 660c1 connected 1         full    10G     QSFP-40G-CS
+Eth4/2/1      --- 2K11-107 ---   connected 1         full    10G     QSFP-40G-CS
+Eth4/2/2      --- 2K11-107 ---   connected 1         full    10G     QSFP-40G-CS
+Eth4/2/3      --- 2K11-107 ---   connected 1         full    10G     QSFP-40G-CS
+Eth4/2/4      --- 2K11-107 ---   connected 1         full    10G     QSFP-40G-CS
+Eth4/3/1      --- 2K11-111 ---   connected 1         full    10G     QSFP-40G-CS
+Eth4/3/2      --- 2K11-111 ---   connected 1         full    10G     QSFP-40G-CS
+Eth4/3/3      --- 2K11-111 ---   connected 1         full    10G     QSFP-40G-CS
+Eth4/3/4      --- 2K11-111 ---   connected 1         full    10G     QSFP-40G-CS
+Eth4/4/1      --- 2K11-115 ---   connected 1         full    10G     QSFP-40G-CS
+Eth4/4/2      --- 2K11-115 ---   connected 1         full    10G     QSFP-40G-CS
+Eth4/4/3      --- 2K11-115 ---   connected 1         full    10G     QSFP-40G-CS
+Eth4/4/4      --- 2K11-115 ---   connected 1         full    10G     QSFP-40G-CS
+Eth4/5/1      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth4/5/2      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth4/5/3      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth4/5/4      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth4/6/1      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth4/6/2      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth4/6/3      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth4/6/4      --                 notconnec 1         full    10G     QSFP-40G-SR
+Eth4/7        --                 sfpAbsent 1         half    40G     --         
+Eth4/8        --- 2K11-123 ---   connected 1         full    40G     QSFP-40G-SR
+Eth4/9        --                 sfpAbsent 1         half    40G     --         
+Eth4/10       --                 sfpAbsent 1         half    40G     --         
+Eth4/11       pN77-2-switch2     connected trunk     full    40G     QSFP-40G-SR
+Eth4/12       --                 notconnec 1         half    40G     QSFP-40G-SR
+Po7           pN77K              connected trunk     full    a-40G   --         
+Po101         --- pN2K11-101 --- connected 1         full    a-10G   --         
+Po103         --- 2K11-103 660c1 connected 1         full    a-10G   --         
+Po105         --- 2K11-105 ---   connected 1         full    a-40G   --         
+Po107         --- 2K11-107 ---   connected 1         full    a-10G   --         
+Po109         --- 2K11-109 ---   connected 1         full    a-10G   --         
+Po111         --- 2K11-111 ---   connected 1         full    a-10G   --         
+Po113         --- 2K11-113 ---   connected 1         full    a-10G   --         
+Po115         --- 2K11-115 ---   connected 1         full    a-10G   --         
+Po117         --- 2K11-117 ---   connected 1         full    a-10G   --         
+Po119         --- 2K11-119 ---   connected 1         full    a-10G   --         
+Po121         --- 2K11-121 ---   connected 1         full    a-10G   --         
+Po123         --- 2K11-123 ---   connected 1         full    a-40G   --         
+Po127         --- 2K11-127 ---   connected 1         full    10G     --         
+Po200         TRUNK mpc202e.regi connected trunk     full    a-10G   --         
+Po201         TRUNK mpc202e.regi connected trunk     full    a-10G   --         
+Po202         TRUNK mpc201e.regi connected trunk     full    a-10G   --         
+Po203         TRUNK mpc201e.regi connected trunk     full    a-10G   --         
+Po204         TRUNK pc201e.regio connected trunk     full    a-10G   --         
+Po205         TRUNK pc201e.regio connected trunk     full    a-10G   --         
+Po206         TRUNK pc202e.regio connected trunk     full    a-10G   --         
+Po207         TRUNK pc202e.regio connected trunk     full    a-10G   --         
+Po208         TRUNK pc203e.regio connected trunk     full    a-10G   --         
+Po209         TRUNK pc203e.regio connected trunk     full    a-10G   --         
+Po210         TRUNK pc204e.regio connected trunk     full    a-10G   --         
+Po211         TRUNK pc204e.regio connected trunk     full    a-10G   --         
+Po212         TRUNK pc205e.regio connected trunk     full    a-10G   --         
+Po213         TRUNK pc205e.regio connected trunk     full    a-10G   --         
+Po214         TRUNK pc206e.regio connected trunk     full    a-10G   --         
+Po215         TRUNK pc206e.regio connected trunk     full    a-10G   --         
+Po220         TRUNK mpc203e.regi connected trunk     full    a-10G   --         
+Po221         TRUNK mpc203e.regi connected trunk     full    a-10G   --         
+Po222         TRUNK mpc204e.regi connected trunk     full    a-10G   --         
+Po223         TRUNK mpc204e.regi connected trunk     full    a-10G   --         
+Po226         Mskregex21 DL360   connected 3776      full    a-10G   --         
+Po227         Mskregex23 DL360   noOperMem 3776      full    auto    --         
+Po228         TRUNK pc209e.regio connected trunk     full    a-10G   --         
+Po229         TRUNK pc209e.regio connected trunk     full    a-10G   --         
+Po230         TRUNK pc210e.regio connected trunk     full    a-10G   --         
+Po231         TRUNK pc210e.regio connected trunk     full    a-10G   --         
+Po232         TRUNK pc211e.regio connected trunk     full    a-10G   --         
+Po233         TRUNK pc211e.regio connected trunk     full    a-10G   --         
+Po234         TRUNK mpc205e.regi connected trunk     full    a-10G   --         
+Po235         TRUNK mpc205e.regi connected trunk     full    a-10G   --         
+Po236         TRUNK pc212e.regio connected trunk     full    a-10G   --         
+Po237         TRUNK pc212e.regio connected trunk     full    a-10G   --         
+Po238         TRUNK pc213e.regio connected trunk     full    a-10G   --         
+Po239         TRUNK pc213e.regio connected trunk     full    a-10G   --         
+Po240         TRUNK pc214e.regio connected trunk     full    a-10G   --         
+Po241         TRUNK pc214e.regio connected trunk     full    a-10G   --         
+Po242         TRUNK mpc206e.regi connected trunk     full    a-10G   --         
+Po243         TRUNK mpc206e.regi connected trunk     full    a-10G   --         
+Po252         TRUNK pc218e.regio connected trunk     full    a-10G   --         
+Po253         TRUNK pc218e.regio connected trunk     full    a-10G   --         
+Po254         TRUNK pc219e.regio connected trunk     full    a-10G   --         
+Po255         TRUNK pc219e.regio connected trunk     full    a-10G   --         
+Po256         TRUNK pc220e.regio connected trunk     full    a-10G   --         
+Po257         TRUNK pc220e.regio connected trunk     full    a-10G   --         
+Po260         CLD_A 10.151.3.35  connected 3803      full    a-10G   --         
+Po269         TRUNK pc225e.regio connected trunk     full    a-10G   --         
+Po270         TRUNK pc225e.regio connected trunk     full    a-10G   --         
+Po271         TRUNK pc226e.regio connected trunk     full    a-10G   --         
+Po272         TRUNK pc226e.regio connected trunk     full    a-10G   --         
+Po273         ESXi_evhcpesxi03   noOperMem trunk     auto    10G     --         
+Po274         ESXi_evhcpesxi02   connected trunk     full    10G     --         
+Po275         ESXi_evhcpesxi01   connected trunk     full    10G     --         
+Po276         oradb206l          connected 3773      full    10G     --         
+Po278         etlinf217l         connected 3802      full    10G     --         
+Po279         shodapp201l        connected 3805      full    10G     --         
+Po280         shodapp202l        connected 3805      full    10G     --         
+Po281         --                 connected 3805      full    a-10G   --         
+Po282         --                 connected 3805      full    a-10G   --         
+Po283         --                 connected 3805      full    a-10G   --         
+Po284         fxlora201v         connected 3805      full    a-10G   --         
+Po285         --                 connected 3805      full    a-10G   --         
+Po286         [VTB_Core_VMs] ptd connected 3808      full    a-10G   --         
+Po288         [VTB_Core_VMs] ptd connected 3808      full    a-10G   --         
+Po292         [DBO_PROM_SRV2] db connected 3770      full    a-10G   --         
+Po293         [DBO_PROM_SRV2] db connected 3770      full    a-10G   --         
+Po299         msfoapp203l        connected 3803      full    1000    --         
+Po301         msfoapp202l        connected 3803      full    1000    --         
+Po302         shoddb201l         connected 3806      full    10G     --         
+Po303         cpora201l          connected 3806      full    10G     --         
+Po352         CLD_A 10.151.9.230 connected 3809      full    a-10G   --         
+Po357         CLD_A 10.151.6.67  connected 3806      full    a-10G   --         
+Po359         TRUNK pc240e.regio connected trunk     full    a-10G   --         
+Po360         TRUNK pc240e.regio connected trunk     full    a-10G   --         
+Po361         CLD_A 10.151.52.13 connected trunk     full    a-10G   --         
+Po362         TRUNK pc239e.regio connected trunk     full    a-10G   --         
+Po365         TRUNK tpc201e.regi connected trunk     full    a-10G   --         
+Po366         TRUNK tpc201e.regi connected trunk     full    a-10G   --         
+Po367         CLD_A 10.151.52.50 noOperMem trunk     auto    auto    --         
+Po368         CLD_A 10.151.52.50 noOperMem trunk     auto    auto    --         
+Po369         CLD_A 10.151.52.51 connected trunk     full    a-10G   --         
+Po370         TRUNK tpc203e.regi connected trunk     full    a-10G   --         
+Po371         kbrn201            connected 3821      full    1000    --         
+Po373         [VTB_Core_VMs_3806 noOperMem 2951      full    1000    --         
+Po374         [VTB_Core_VMs_3806 connected 3806      full    1000    --         
+Po375         [VTB_Core_VMs_3806 noOperMem 2951      full    1000    --         
+Po376         [VTB_Core_VMs_3806 connected 3806      full    1000    --         
+Po384         TRUNK pc228e.regio connected trunk     full    a-10G   --         
+Po385         TRUNK pc228e.regio connected trunk     full    a-10G   --         
+Po386         RF-000744199       connected 3806      full    a-10G   --         
+Po387         TRUNK pc239e.regio connected trunk     full    a-10G   --         
+Po388         TRUNK pc229e.regio connected trunk     full    a-10G   --         
+Po389         TRUNK pc229e.regio connected trunk     full    a-10G   --         
+Po390         TRUNK pc230e.regio connected trunk     full    a-10G   --         
+Po391         TRUNK pc230e.regio connected trunk     full    a-10G   --         
+Po392         TRUNK pc232e.regio connected trunk     full    a-10G   --         
+Po393         TRUNK pc232e.regio connected trunk     full    a-10G   --         
+Po394         TRUNK pc233e.regio connected trunk     full    a-10G   --         
+Po395         TRUNK pc233e.regio connected trunk     full    a-10G   --         
+Po398         TRUNK pc234e.regio connected trunk     full    a-10G   --         
+Po399         TRUNK pc234e.regio connected trunk     full    a-10G   --         
+Po400         TRUNK pc235e.regio connected trunk     full    a-10G   --         
+Po401         TRUNK pc235e.regio connected trunk     full    a-10G   --         
+Po402         TRUNK pc236e.regio connected trunk     full    a-10G   --         
+Po403         TRUNK pc236e.regio connected trunk     full    a-10G   --         
+Po404         TRUNK pc237e.regio connected trunk     full    a-10G   --         
+Po405         TRUNK pc237e.regio connected trunk     full    a-10G   --         
+Po406         TRUNK pc238e.regio connected trunk     full    a-10G   --         
+Po407         TRUNK pc238e.regio connected trunk     full    a-10G   --         
+Po408         [planora203l] PER_ connected 3807      full    a-10G   --         
+Po413         [TRUNK] CLOD201:ae connected trunk     full    a-10G   --         
+Po414         CLD_A 10.151.52.13 connected trunk     full    a-10G   --         
+Po417         TRUNK pc250e.regio connected trunk     full    10G     --         
+Po418         TRUNK pc250e.regio connected trunk     full    10G     --         
+Po419         TRUNK pc251e.regio connected trunk     full    10G     --         
+Po420         TRUNK pc251e.regio connected trunk     full    10G     --         
+Po421         TRUNK pc252e.regio connected trunk     full    10G     --         
+Po422         TRUNK pc252e.regio connected trunk     full    10G     --         
+Po423         TRUNK pc253e.regio connected trunk     full    10G     --         
+Po424         TRUNK pc253e.regio connected trunk     full    10G     --         
+Po425         TRUNK pc254e.regio connected trunk     full    10G     --         
+Po426         TRUNK pc254e.regio connected trunk     full    10G     --         
+Po427         TRUNK pc255e.regio connected trunk     full    10G     --         
+Po428         TRUNK pc255e.regio connected trunk     full    10G     --         
+Po429         [VTB_Core_VMs_3807 connected 3807      full    a-10G   --         
+Po430         [VTB_Core_VMs] egg connected 3808      full    a-10G   --         
+Po431         [VTB_Core_VMs] dga connected 3808      full    a-10G   --         
+Po432         [VTB_Core_VMs] dga connected 3808      full    a-10G   --         
+Po433         [VTB_Core_VMs] dge connected 3808      full    a-10G   --         
+Po434         [VTB_Core_VMs_3808 connected 3808      full    a-10G   --         
+Po435         [VTB_Core_VMs_3808 connected 3808      full    a-10G   --         
+Po436         [VTB_Core_VMs_3808 connected 3808      full    a-10G   --         
+Po437         TRUNK pc269:ae RF- connected trunk     full    10G     --         
+Po438         TRUNK pc269:ae RF- connected trunk     full    10G     --         
+Po439         TRUNK pc270:ae RF- connected trunk     full    10G     --         
+Po440         TRUNK pc270:ae RF- connected trunk     full    10G     --         
+Po441         TRUNK pc271:ae RF- connected trunk     full    10G     --         
+Po442         TRUNK pc271:ae RF- connected trunk     full    10G     --         
+Po443         TRUNK pc272:ae RF- connected trunk     full    10G     --         
+Po444         TRUNK pc272:ae RF- connected trunk     full    10G     --         
+Po445         [VTB_Core_VMs_3808 connected 3808      full    a-10G   --         
+Po446         [edkdb202l] int1 R connected 3808      full    10G     --         
+Po447         None ukkdb201l:ae  connected 3808      full    a-10G   --         
+Po449         TRUNK pc273e.regio connected trunk     full    10G     --         
+Po450         TRUNK pc273e.regio connected trunk     full    10G     --         
+Po451         TRUNK pc274e.regio connected trunk     full    10G     --         
+Po452         TRUNK pc274e.regio connected trunk     full    10G     --         
+Po453         TRUNK   tps284e:ae connected trunk     full    a-10G   --         
+Po454         TRUNK   tps282e:ae connected trunk     full    a-10G   --         
+Po455         TRUNK   tps283e:ae connected trunk     full    a-10G   --         
+Po456         TRUNK   tps284e:ae connected trunk     full    a-10G   --         
+Po457         TRUNK   tps282e:ae connected trunk     full    a-10G   --         
+Po458         TRUNK   tps283e:ae connected trunk     full    a-10G   --         
+Po534         [LCL_hrtbit_VERTIC connected 3545      full    a-10G   --         
+Po535         [LCL_hrtbit_VERTIC connected 3545      full    a-10G   --         
+Po536         [LCL_hrtbit_VERTIC connected 3545      full    a-10G   --         
+Po601         TRUNK pc207e.regio connected trunk     full    a-10G   --         
+Po602         TRUNK pc208e.regio connected trunk     full    a-10G   --         
+Po603         TRUNK mpc208e.regi connected trunk     full    a-10G   --         
+Po604         TRUNK pc223e.regio connected trunk     full    a-10G   --         
+Po605         TRUNK pc224e.regio connected trunk     full    a-10G   --         
+Po606         TRUNK tpc281e:2 RF connected trunk     full    a-10G   --         
+Po607         TRUNK tpc285e:2 RF connected trunk     full    a-10G   --         
+Po608         TRUNK tpc202e.regi connected trunk     full    a-10G   --         
+Po701         TRUNK pc207e.regio connected trunk     full    a-10G   --         
+Po702         TRUNK pc208e.regio connected trunk     full    a-10G   --         
+Po703         TRUNK mpc208e.regi connected trunk     full    a-10G   --         
+Po704         TRUNK pc223e.regio connected trunk     full    a-10G   --         
+Po705         TRUNK pc224e.regio connected trunk     full    a-10G   --         
+Po706         TRUNK tpc281e:4 RF connected trunk     full    a-10G   --         
+Po707         TRUNK tpc285e:4 RF connected trunk     full    a-10G   --         
+Po708         TRUNK tpc202e.regi connected trunk     full    a-10G   --         
+Po801         TRUNK pc215e.regio connected trunk     full    a-10G   --         
+Po802         TRUNK pc215e.regio connected trunk     full    a-10G   --         
+Po803         TRUNK pc216e.regio connected trunk     full    a-10G   --         
+Po804         TRUNK pc216e.regio connected trunk     full    a-10G   --         
+Po805         TRUNK pc217e.regio connected trunk     full    a-10G   --         
+Po806         TRUNK pc217e.regio connected trunk     full    a-10G   --         
+Po807         TRUNK mpc207e.regi connected trunk     full    a-10G   --         
+Po808         TRUNK mpc207e.regi connected trunk     full    a-10G   --         
+Po809         TRUNK pc221e.regio connected trunk     full    a-10G   --         
+Po810         TRUNK pc221e.regio connected trunk     full    a-10G   --         
+Po811         TRUNK pc222e.regio connected trunk     full    a-10G   --         
+Po812         TRUNK pc222e.regio connected trunk     full    a-10G   --         
+Po983         TRUNK pc264e.regio connected trunk     full    10G     --         
+Po984         TRUNK pc265e.regio connected trunk     full    10G     --         
+Po985         TRUNK pc267e.regio connected trunk     full    10G     --         
+Po986         TRUNK pc264e.regio connected trunk     full    10G     --         
+Po987         TRUNK pc268e.regio connected trunk     full    10G     --         
+Po988         TRUNK pc268e.regio connected trunk     full    10G     --         
+Po989         TRUNK pc267e.regio connected trunk     full    10G     --         
+Po990         TRUNK pc265e.regio connected trunk     full    10G     --         
+Po991         TRUNK pc266e.regio connected trunk     full    10G     --         
+Po992         TRUNK pc266e.regio connected trunk     full    10G     --         
+Po993         TRUNK pc263e.regio connected trunk     full    10G     --         
+Po994         TRUNK pc263e.regio connected trunk     full    10G     --         
+Po995         TRUNK pc262e.regio connected trunk     full    10G     --         
+Po996         TRUNK pc262e.regio connected trunk     full    10G     --         
+Po997         msfoapp203l        connected 3803      full    1000    --         
+Po998         VGATE01            noOperMem trunk     full    1000    --         
+Po999         VGATE02            noOperMem trunk     full    1000    --         
+Po1000        Peer link VPC pair connected trunk     full    a-40G   --         
+Po1001        keepalive link     connected routed    full    a-40G   --         
+mgmt0         --                 connected routed    full    a-1000  --         
+Vlan1         --                 down      routed    auto    auto    --
+Vlan3799      Management         connected routed    auto    auto    --
+Eth101/1/1    TRUNK pc207e.regio connected trunk     full    a-10G   1G/10G     
+Eth101/1/2    TRUNK pc208e.regio connected trunk     full    a-10G   1G/10G     
+Eth101/1/3    TRUNK mpc208e.regi connected trunk     full    a-10G   1G/10G     
+Eth101/1/4    TRUNK pc223e.regio connected trunk     full    a-10G   1G/10G     
+Eth101/1/5    TRUNK pc224e.regio connected trunk     full    a-10G   1G/10G     
+Eth101/1/6    TRUNK tpc281e:1 RF connected trunk     full    a-10G   1G/10G     
+Eth101/1/7    TRUNK tpc285e:1 RF connected trunk     full    a-10G   1G/10G     
+Eth101/1/8    TRUNK tpc202e.regi connected trunk     full    a-10G   1G/10G     
+Eth101/1/9    TRUNK pc207e.regio connected trunk     full    a-10G   1G/10G     
+Eth101/1/10   TRUNK pc208e.regio connected trunk     full    a-10G   1G/10G     
+Eth101/1/11   TRUNK mpc208e.regi connected trunk     full    a-10G   1G/10G     
+Eth101/1/12   TRUNK pc223e.regio connected trunk     full    a-10G   1G/10G     
+Eth101/1/13   TRUNK pc224e.regio connected trunk     full    a-10G   1G/10G     
+Eth101/1/14   TRUNK tpc281e:3 RF connected trunk     full    a-10G   1G/10G     
+Eth101/1/15   TRUNK tpc285e:3 RF connected trunk     full    a-10G   1G/10G     
+Eth101/1/16   TRUNK tpc202e.regi connected trunk     full    a-10G   1G/10G     
+Eth103/1/1    vtb-core  tpc205e: connected trunk     full    a-10G   1G/10G     
+Eth103/1/2    TRUNK pc215e.regio connected trunk     full    a-10G   1G/10G     
+Eth103/1/3    TRUNK pc216e.regio connected trunk     full    a-10G   1G/10G     
+Eth103/1/4    TRUNK pc217e.regio connected trunk     full    a-10G   1G/10G     
+Eth103/1/5    TRUNK mpc207e.regi connected trunk     full    a-10G   1G/10G     
+Eth103/1/6    TRUNK pc221e.regio connected trunk     full    a-10G   1G/10G     
+Eth103/1/7    TRUNK pc222e.regio connected trunk     full    a-10G   1G/10G     
+Eth103/1/8    vtb-core N/A tpc20 connected trunk     full    a-10G   1G/10G     
+Eth103/1/9    vtb-core N/A tpc20 connected trunk     full    a-10G   1G/10G     
+Eth103/1/10   TRUNK pc215e.regio connected trunk     full    a-10G   1G/10G     
+Eth103/1/11   TRUNK pc216e.regio connected trunk     full    a-10G   1G/10G     
+Eth103/1/12   TRUNK pc217e.regio connected trunk     full    a-10G   1G/10G     
+Eth103/1/13   TRUNK mpc207e.regi connected trunk     full    a-10G   1G/10G     
+Eth103/1/14   TRUNK pc221e.regio connected trunk     full    a-10G   1G/10G     
+Eth103/1/15   TRUNK pc222e.regio connected trunk     full    a-10G   1G/10G     
+Eth103/1/16   vtb-core N/A tpc20 connected trunk     full    a-10G   1G/10G     
+Eth105/1/1    HMC ER1-6/04 port  connected 3850      full    1000    1000base-T 
+Eth105/1/2    HMC ER1-6/04 port  disabled  3854      full    10G     1000base-T 
+Eth105/1/3    --                 sfpAbsent 1         full    10G     --         
+Eth105/1/4    --                 sfpAbsent 1         full    10G     --         
+Eth105/1/5    --                 sfpAbsent 1         full    10G     --         
+Eth105/1/6    --                 sfpAbsent 1         full    10G     --         
+Eth105/1/7    --                 sfpAbsent 1         full    10G     --         
+Eth105/1/8    --                 sfpAbsent 1         full    10G     --         
+Eth105/1/9    [VTB_Core_VMs_3806 notconnec 2951      full    1000    1000base-T 
+Eth105/1/10   [VTB_Core_VMs_3806 connected 3806      full    1000    1000base-T 
+Eth105/1/11   [VTB_Core_VMs_3806 connected 3806      full    1000    1000base-T 
+Eth105/1/12   [VTB_Core_VMs_3806 notconnec 2951      full    1000    1000base-T 
+Eth105/1/13   [MGMT] PER_660_CZ2 connected 3854      full    1000    1000base-T 
+Eth105/1/14   [MGMT] PER_660_CZ2 connected 3854      full    1000    1000base-T 
+Eth105/1/15   --                 sfpAbsent 1         full    10G     --         
+Eth105/1/16   C7000 BL460 ER1-6/ connected 3854      full    1000    1000base-T 
+Eth105/1/17   PER_460_CZ3603XFKR connected 3855      full    1000    1000base-T 
+Eth105/1/18   PER_460_CZ270405X3 connected 3854      full    1000    1000base-T 
+Eth105/1/19   --                 sfpAbsent 1         full    10G     --         
+Eth105/1/20   CZ324208PM_OA_int  connected 3854      full    1000    1000base-T 
+Eth105/1/21   --                 sfpAbsent 1         full    10G     --         
+Eth105/1/22   --                 sfpAbsent 1         full    10G     --         
+Eth105/1/23   --                 sfpAbsent 1         full    10G     --         
+Eth105/1/24   --                 sfpAbsent 1         full    10G     --         
+Eth105/1/25   TRUNK pc262e.regio connected trunk     full    10G     10Gbase-SR 
+Eth105/1/26   TRUNK pc262e.regio connected trunk     full    10G     10Gbase-SR 
+Eth105/1/27   TRUNK pc263e.regio connected trunk     full    10G     10Gbase-SR 
+Eth105/1/28   TRUNK pc263e.regio connected trunk     full    10G     10Gbase-SR 
+Eth105/1/29   TRUNK pc266e.regio connected trunk     full    10G     10Gbase-SR 
+Eth105/1/30   TRUNK pc266e.regio connected trunk     full    10G     10Gbase-SR 
+Eth105/1/31   TRUNK pc267e.regio connected trunk     full    10G     10Gbase-SR 
+Eth105/1/32   TRUNK pc267e.regio connected trunk     full    10G     10Gbase-SR 
+Eth105/1/33   TRUNK pc268e.regio connected trunk     full    10G     10Gbase-SR 
+Eth105/1/34   TRUNK pc268e.regio connected trunk     full    10G     10Gbase-SR 
+Eth105/1/35   TRUNK pc264e.regio connected trunk     full    10G     10Gbase-SR 
+Eth105/1/36   TRUNK pc264e.regio connected trunk     full    10G     10Gbase-SR 
+Eth105/1/37   TRUNK pc265e.regio connected trunk     full    10G     10Gbase-SR 
+Eth105/1/38   TRUNK pc265e.regio connected trunk     full    10G     10Gbase-SR 
+Eth105/1/39   --                 sfpAbsent 1         full    10G     --         
+Eth105/1/40   [VTB-Core] rootdc2 connected 3805      full    1000    1000base-T 
+Eth105/1/41   [VTB-Core] regdc21 connected 3805      full    1000    1000base-T 
+Eth105/1/42   [VTB-Core] corpdc2 connected 3805      full    1000    1000base-T 
+Eth105/1/43   --                 sfpAbsent 1         full    10G     --         
+Eth105/1/44   --                 sfpAbsent 1         full    10G     --         
+Eth105/1/45   mgmt_console_KY-1_ connected 3855      full    1000    1000base-T 
+Eth105/1/46   ESXi_evhcpesxi02   connected trunk     full    10G     10Gbase-SR 
+Eth105/1/47   ESXi_evhcpesxi01   connected trunk     full    10G     10Gbase-SR 
+Eth105/1/48   ESXi_evhcpesxi03   notconnec trunk     full    10G     10Gbase-SR 
+Eth107/1/1    TRUNK mpc203e.regi connected trunk     full    a-10G   1G/10G     
+Eth107/1/2    TRUNK mpc204e.regi connected trunk     full    a-10G   1G/10G     
+Eth107/1/3    CLD_A 10.151.52.50 ServDisab trunk     auto    auto    1G/10G     
+Eth107/1/4    CLD_A 10.151.52.51 connected trunk     full    a-10G   1G/10G     
+Eth107/1/5    CLD_A 10.151.52.13 connected trunk     full    a-10G   1G/10G     
+Eth107/1/6    CLD_A 10.151.52.49 connected trunk     full    a-10G   1G/10G     
+Eth107/1/7    TRUNK tpc206e.regi connected trunk     full    a-10G   1G/10G     
+Eth107/1/8    CLD_A 10.151.3.35  connected 3803      full    a-10G   1G/10G     
+Eth107/1/9    TRUNK mpc203e.regi connected trunk     full    a-10G   1G/10G     
+Eth107/1/10   TRUNK mpc204e.regi connected trunk     full    a-10G   1G/10G     
+Eth107/1/11   CLD_A 10.151.52.50 ServDisab trunk     auto    auto    1G/10G     
+Eth107/1/12   CLD_A 10.151.52.51 connected trunk     full    a-10G   1G/10G     
+Eth107/1/13   CLD_A 10.151.52.13 connected trunk     full    a-10G   1G/10G     
+Eth107/1/14   CLD_A 10.151.52.49 connected trunk     full    a-10G   1G/10G     
+Eth107/1/15   TRUNK tpc206e.regi connected trunk     full    a-10G   1G/10G     
+Eth107/1/16   CLD_A_SHUT 10.151. disabled  1         auto    auto    1G/10G     
+Eth109/1/1    TRUNK mpc202e.regi connected trunk     full    a-10G   1G/10G     
+Eth109/1/2    TRUNK pc204e.regio connected trunk     full    a-10G   1G/10G     
+Eth109/1/3    TRUNK pc205e.regio connected trunk     full    a-10G   1G/10G     
+Eth109/1/4    TRUNK pc206e.regio connected trunk     full    a-10G   1G/10G     
+Eth109/1/5    shodapp202l        connected 3805      full    10G     1G/10G     
+Eth109/1/6    etlinf217l         connected 3802      full    10G     1G/10G     
+Eth109/1/7    CLD_A 10.151.6.67  connected 3806      full    a-10G   1G/10G     
+Eth109/1/8    shoddb201l         connected 3806      full    10G     1G/10G     
+Eth109/1/9    TRUNK pc240e.regio connected trunk     full    a-10G   1G/10G     
+Eth109/1/10   TRUNK pc229e.regio connected trunk     full    a-10G   1G/10G     
+Eth109/1/11   TRUNK pc228e.regio connected trunk     full    a-10G   1G/10G     
+Eth109/1/12   TRUNK pc230e.regio connected trunk     full    a-10G   1G/10G     
+Eth109/1/13   TRUNK pc209e.regio connected trunk     full    a-10G   1G/10G     
+Eth109/1/14   TRUNK pc210e.regio connected trunk     full    a-10G   1G/10G     
+Eth109/1/15   TRUNK pc211e.regio connected trunk     full    a-10G   1G/10G     
+Eth109/1/16   TRUNK mpc205e.regi connected trunk     full    a-10G   1G/10G     
+Eth111/1/1    TRUNK mpc202e.regi connected trunk     full    a-10G   1G/10G     
+Eth111/1/2    TRUNK pc204e.regio connected trunk     full    a-10G   1G/10G     
+Eth111/1/3    TRUNK pc205e.regio connected trunk     full    a-10G   1G/10G     
+Eth111/1/4    TRUNK pc206e.regio connected trunk     full    a-10G   1G/10G     
+Eth111/1/5    UNCONFIGURED       ServDisab 3857      auto    auto    1G/10G     
+Eth111/1/6    UNCONFIGURED       ServDisab 3857      auto    auto    1G/10G     
+Eth111/1/7    UNCONFIGURED       ServDisab 3857      auto    auto    1G/10G     
+Eth111/1/8    UNCONFIGURED       ServDisab 3857      auto    auto    1G/10G     
+Eth111/1/9    TRUNK pc240e.regio connected trunk     full    a-10G   1G/10G     
+Eth111/1/10   TRUNK pc229e.regio connected trunk     full    a-10G   1G/10G     
+Eth111/1/11   TRUNK pc228e.regio connected trunk     full    a-10G   1G/10G     
+Eth111/1/12   TRUNK pc230e.regio connected trunk     full    a-10G   1G/10G     
+Eth111/1/13   TRUNK pc209e.regio connected trunk     full    a-10G   1G/10G     
+Eth111/1/14   TRUNK pc210e.regio connected trunk     full    a-10G   1G/10G     
+Eth111/1/15   TRUNK pc211e.regio connected trunk     full    a-10G   1G/10G     
+Eth111/1/16   TRUNK mpc205e.regi connected trunk     full    a-10G   1G/10G     
+Eth113/1/1    [VTB_Core_VMs_3808 connected 3808      full    a-10G   1G/10G     
+Eth113/1/2    --                 notconnec 1         auto    auto    1G/10G     
+Eth113/1/3    TRUNK pc234e.regio connected trunk     full    a-10G   1G/10G     
+Eth113/1/4    TRUNK pc235e.regio connected trunk     full    a-10G   1G/10G     
+Eth113/1/5    TRUNK pc236e.regio connected trunk     full    a-10G   1G/10G     
+Eth113/1/6    TRUNK pc237e.regio connected trunk     full    a-10G   1G/10G     
+Eth113/1/7    TRUNK pc238e.regio connected trunk     full    a-10G   1G/10G     
+Eth113/1/8    [VTB_Core_VMs_3808 connected 3808      full    a-10G   1G/10G     
+Eth113/1/9    planapp202l        connected 3807      full    a-10G   1G/10G     
+Eth113/1/10   [planora203l] PER_ connected 3807      full    a-10G   1G/10G     
+Eth113/1/11   qlikcdapp203 RF-00 connected 3807      full    a-10G   1G/10G     
+Eth113/1/12   [VTB_Core_VMs_3806 connected 3806      full    a-10G   1G/10G     
+Eth113/1/13   [VTB_Core_VMs] qvs connected 3808      full    a-10G   1G/10G     
+Eth113/1/14   [VTB_Core_VMs] egg connected 3808      full    a-10G   1G/10G     
+Eth113/1/15   [VTB_Core_VMs] dge connected 3808      full    a-10G   1G/10G     
+Eth113/1/16   [VTB_Core_VMs_3808 connected 3808      full    a-10G   1G/10G     
+Eth115/1/1    [LCL_hrtbit_VERTIC connected 3545      full    a-10G   1G/10G     
+Eth115/1/2    --                 notconnec 1         auto    auto    1G/10G     
+Eth115/1/3    TRUNK pc234e.regio connected trunk     full    a-10G   1G/10G     
+Eth115/1/4    TRUNK pc235e.regio connected trunk     full    a-10G   1G/10G     
+Eth115/1/5    TRUNK pc236e.regio connected trunk     full    a-10G   1G/10G     
+Eth115/1/6    TRUNK pc237e.regio connected trunk     full    a-10G   1G/10G     
+Eth115/1/7    TRUNK pc238e.regio connected trunk     full    a-10G   1G/10G     
+Eth115/1/8    [LCL_hrtbit_VERTIC connected 3545      full    a-10G   1G/10G     
+Eth115/1/9    --                 ServDisab 1         auto    auto    1G/10G     
+Eth115/1/10   planapp203l        ServDisab 3807      auto    auto    1G/10G     
+Eth115/1/11   --                 ServDisab 1         auto    auto    1G/10G     
+Eth115/1/12   --                 ServDisab 1         auto    auto    1G/10G     
+Eth115/1/13   --                 ServDisab 1         auto    auto    1G/10G     
+Eth115/1/14   --                 ServDisab 1         auto    auto    1G/10G     
+Eth115/1/15   --                 ServDisab 1         auto    auto    1G/10G     
+Eth115/1/16   [LCL_hrtbit_VERTIC connected 3545      full    a-10G   1G/10G     
+Eth117/1/1    TRUNK mpc201e.regi connected trunk     full    a-10G   1G/10G     
+Eth117/1/2    TRUNK pc201e.regio connected trunk     full    a-10G   1G/10G     
+Eth117/1/3    TRUNK pc202e.regio connected trunk     full    a-10G   1G/10G     
+Eth117/1/4    TRUNK pc203e.regio connected trunk     full    a-10G   1G/10G     
+Eth117/1/5    shodapp201l        connected 3805      full    10G     1G/10G     
+Eth117/1/6    oradb203l          connected 3805      full    a-10G   1G/10G     
+Eth117/1/7    oradb206l          connected 3773      full    10G     1G/10G     
+Eth117/1/8    oradb204l          connected 3839      full    10G     1G/10G     
+Eth117/1/9    cpora201l          connected 3806      full    10G     1G/10G     
+Eth117/1/10   TRUNK pc239e.regio connected trunk     full    a-10G   1G/10G     
+Eth117/1/11   TRUNK pc233e.regio connected trunk     full    a-10G   1G/10G     
+Eth117/1/12   TRUNK pc232e.regio connected trunk     full    a-10G   1G/10G     
+Eth117/1/13   TRUNK pc212e.regio connected trunk     full    a-10G   1G/10G     
+Eth117/1/14   TRUNK pc213e.regio connected trunk     full    a-10G   1G/10G     
+Eth117/1/15   TRUNK pc214e.regio connected trunk     full    a-10G   1G/10G     
+Eth117/1/16   TRUNK mpc206e.regi connected trunk     full    a-10G   1G/10G     
+Eth119/1/1    TRUNK mpc201e.regi connected trunk     full    a-10G   1G/10G     
+Eth119/1/2    TRUNK pc201e.regio connected trunk     full    a-10G   1G/10G     
+Eth119/1/3    TRUNK pc202e.regio connected trunk     full    a-10G   1G/10G     
+Eth119/1/4    TRUNK pc203e.regio connected trunk     full    a-10G   1G/10G     
+Eth119/1/5    --                 ServDisab 1         auto    auto    1G/10G     
+Eth119/1/6    --                 ServDisab 1         auto    auto    1G/10G     
+Eth119/1/7    --                 ServDisab 1         auto    auto    1G/10G     
+Eth119/1/8    --                 ServDisab 1         auto    auto    1G/10G     
+Eth119/1/9    UNCONFIGURED       connected 3857      full    a-10G   1G/10G     
+Eth119/1/10   TRUNK pc239e.regio connected trunk     full    a-10G   1G/10G     
+Eth119/1/11   TRUNK pc233e.regio connected trunk     full    a-10G   1G/10G     
+Eth119/1/12   TRUNK pc232e.regio connected trunk     full    a-10G   1G/10G     
+Eth119/1/13   TRUNK pc212e.regio connected trunk     full    a-10G   1G/10G     
+Eth119/1/14   TRUNK pc213e.regio connected trunk     full    a-10G   1G/10G     
+Eth119/1/15   TRUNK pc214e.regio connected trunk     full    a-10G   1G/10G     
+Eth119/1/16   TRUNK mpc206e.regi connected trunk     full    a-10G   1G/10G     
+Eth121/1/1    --                 connected 3805      full    a-10G   1G/10G     
+Eth121/1/2    --                 connected 3805      full    a-10G   1G/10G     
+Eth121/1/3    --                 connected 3805      full    a-10G   1G/10G     
+Eth121/1/4    --                 connected 3805      full    a-10G   1G/10G     
+Eth121/1/5    --                 connected 3805      full    a-10G   1G/10G     
+Eth121/1/6    [VTB_Core_VMs] ptd connected 3808      full    a-10G   1G/10G     
+Eth121/1/7    [VTB_Core_VMs_3808 connected 3808      full    a-10G   1G/10G     
+Eth121/1/8    [VTB_Core_VMs] ptd connected 3808      full    a-10G   1G/10G     
+Eth121/1/9    None ukkdb201l:1 R connected 3808      full    a-10G   1G/10G     
+Eth121/1/10   [VTB_Core_VMs_3807 connected 3807      full    a-10G   1G/10G     
+Eth121/1/11   RF-000744199       connected 3806      full    a-10G   1G/10G     
+Eth121/1/12   [DBO_PROM_SRV2] db connected 3770      full    a-10G   1G/10G     
+Eth121/1/13   [DBO_PROM_SRV2] db connected 3770      full    a-10G   1G/10G     
+Eth121/1/14   [TRUNK] CLOD201:1  connected trunk     full    a-10G   1G/10G     
+Eth121/1/15   [VTB_Core_VMs] dga connected 3808      full    a-10G   1G/10G     
+Eth121/1/16   [VTB_Core_VMs] dga connected 3808      full    a-10G   1G/10G     
+Eth123/1/1    TRUNK pc250e.regio connected trunk     full    10G     10Gbase-SR 
+Eth123/1/2    TRUNK pc250e.regio connected trunk     full    10G     10Gbase-SR 
+Eth123/1/3    TRUNK pc251e.regio connected trunk     full    10G     10Gbase-SR 
+Eth123/1/4    TRUNK pc251e.regio connected trunk     full    10G     10Gbase-SR 
+Eth123/1/5    TRUNK pc252e.regio connected trunk     full    10G     10Gbase-SR 
+Eth123/1/6    TRUNK pc252e.regio connected trunk     full    10G     10Gbase-SR 
+Eth123/1/7    TRUNK pc253e.regio connected trunk     full    10G     10Gbase-SR 
+Eth123/1/8    TRUNK pc253e.regio connected trunk     full    10G     10Gbase-SR 
+Eth123/1/9    TRUNK pc254e.regio connected trunk     full    10G     10Gbase-SR 
+Eth123/1/10   TRUNK pc254e.regio connected trunk     full    10G     10Gbase-SR 
+Eth123/1/11   TRUNK pc255e.regio connected trunk     full    10G     10Gbase-SR 
+Eth123/1/12   TRUNK pc255e.regio connected trunk     full    10G     10Gbase-SR 
+Eth123/1/13   TRUNK pc269:Int Po connected trunk     full    10G     10Gbase-SR 
+Eth123/1/14   TRUNK pc269:Int Po connected trunk     full    10G     10Gbase-SR 
+Eth123/1/15   TRUNK pc270:Int Po connected trunk     full    10G     10Gbase-SR 
+Eth123/1/16   TRUNK pc270:Int Po connected trunk     full    10G     10Gbase-SR 
+Eth123/1/17   TRUNK pc271:Int Po connected trunk     full    10G     10Gbase-SR 
+Eth123/1/18   TRUNK pc271:Int Po connected trunk     full    10G     10Gbase-SR 
+Eth123/1/19   TRUNK pc272:Int Po connected trunk     full    10G     10Gbase-SR 
+Eth123/1/20   TRUNK pc272:Int Po connected trunk     full    10G     10Gbase-SR 
+Eth123/1/21   [edkdb202l] int1 R connected 3808      full    10G     10Gbase-SR 
+Eth123/1/22   TRUNK pc273e.regio connected trunk     full    10G     10Gbase-SR 
+Eth123/1/23   TRUNK pc273e.regio connected trunk     full    10G     10Gbase-SR 
+Eth123/1/24   TRUNK pc274e.regio connected trunk     full    10G     10Gbase-SR 
+Eth123/1/25   TRUNK pc274e.regio connected trunk     full    10G     10Gbase-SR 
+Eth123/1/26   DL360 type 3 ER1-5 connected 3801      full    10G     10Gbase-SR 
+Eth123/1/27   TRUNK is203e.regio connected trunk     full    10G     10Gbase-SR 
+Eth123/1/28   TRUNK is204e.regio connected trunk     full    10G     10Gbase-SR 
+Eth123/1/29   VGATE02            sfpAbsent trunk     full    1000    --         
+Eth123/1/30   VGATE01            sfpAbsent trunk     full    1000    --         
+Eth123/1/31   DL360 type 1 ER1-6 connected 3776      full    10G     10Gbase-SR 
+Eth123/1/32   --                 sfpAbsent 1         full    10G     --         
+Eth123/1/33   tmddei208l_eth0    connected 3774      full    1000    1000base-T 
+Eth123/1/34   tmddei208l         connected 3597      full    1000    1000base-T 
+Eth123/1/35   tmddei209l_eth0    connected 3774      full    1000    1000base-T 
+Eth123/1/36   tmddei209l         connected 3597      full    1000    1000base-T 
+Eth123/1/37   tmddei210l_eth0    connected 3774      full    1000    1000base-T 
+Eth123/1/38   tmddei210l         connected 3597      full    1000    1000base-T 
+Eth123/1/39   DL360 type 3 ER1-5 connected 3801      full    10G     10Gbase-SR 
+Eth123/1/40   msfoapp203l        connected 3803      full    1000    1000base-T 
+Eth123/1/41   msfoapp203l        connected 3803      full    1000    1000base-T 
+Eth123/1/42   msfoapp202l        connected 3803      full    1000    1000base-T 
+Eth123/1/43   kbrn201            connected 3821      full    1000    1000base-T 
+Eth123/1/44   CLD_A 10.151.9.230 connected 3809      full    10G     10Gbase-SR 
+Eth123/1/45   DL360 type 3 ER1-5 connected 3801      full    10G     10Gbase-SR 
+Eth123/1/46   --                 sfpAbsent 1         full    10G     --         
+Eth123/1/47   --                 sfpAbsent 1         full    10G     --         
+Eth123/1/48   --                 sfpAbsent 1         full    10G     --         
+Eth127/1/1    TRUNK pc218e.regio connected trunk     full    a-10G   1G/10G     
+Eth127/1/2    TRUNK pc219e.regio connected trunk     full    a-10G   1G/10G     
+Eth127/1/3    TRUNK pc220e.regio connected trunk     full    a-10G   1G/10G     
+Eth127/1/4    TRUNK   tps284e:1  connected trunk     full    a-10G   1G/10G     
+Eth127/1/5    TRUNK pc225e.regio connected trunk     full    a-10G   1G/10G     
+Eth127/1/6    TRUNK pc226e.regio connected trunk     full    a-10G   1G/10G     
+Eth127/1/7    TRUNK   tps282e:1  connected trunk     full    a-10G   1G/10G     
+Eth127/1/8    TRUNK   tpc283e:1  connected trunk     full    a-10G   1G/10G     
+Eth127/1/9    TRUNK pc218e.regio connected trunk     full    a-10G   1G/10G     
+Eth127/1/10   TRUNK pc219e.regio connected trunk     full    a-10G   1G/10G     
+Eth127/1/11   TRUNK pc220e.regio connected trunk     full    a-10G   1G/10G     
+Eth127/1/12   TRUNK   tps284e:3  connected trunk     full    a-10G   1G/10G     
+Eth127/1/13   TRUNK pc225e.regio connected trunk     full    a-10G   1G/10G     
+Eth127/1/14   TRUNK pc226e.regio connected trunk     full    a-10G   1G/10G     
+Eth127/1/15   TRUNK   tps282e:3  connected trunk     full    a-10G   1G/10G     
+Eth127/1/16   vtb-core TRUNK   t connected trunk     full    a-10G   1G/10G     

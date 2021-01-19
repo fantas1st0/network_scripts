@@ -1,0 +1,232 @@
+
+
+--------------------------------------------------------------------------------
+Port          Name               Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------
+Eth1/1        [PC] sw-dp4-data-1 connected trunk     full    10G     10Gbase-SR 
+Eth1/2        [PC] sw-dp4-data-1 connected trunk     full    10G     10Gbase-SR 
+Eth1/3        [PC] sw-dp4-data-1 connected trunk     full    10G     10Gbase-SR 
+Eth1/4        [PC] sw-dp4-data-1 connected trunk     full    10G     10Gbase-SR 
+Eth1/5        [PC] sw-dp4-data-1 connected trunk     full    10G     10Gbase-SR 
+Eth1/6        [PC] sw-dp4-data-1 connected trunk     full    10G     10Gbase-SR 
+Eth1/7        [PC] sw-dp4-data-1 connected trunk     full    10G     10Gbase-SR 
+Eth1/8        [PC] sw-dp4-data-1 connected trunk     full    10G     10Gbase-SR 
+Eth1/9        [PC] peer-link     connected trunk     full    10G     10Gbase-SR 
+Eth1/10       [PC] peer-link     connected trunk     full    10G     10Gbase-SR 
+Eth1/11       [PC] peer-link     connected trunk     full    10G     10Gbase-SR 
+Eth1/12       [PC] peer-link     connected trunk     full    10G     10Gbase-SR 
+Eth1/13       [PC] peer-keepaliv connected trunk     full    10G     10Gbase-SR 
+Eth1/14       [PC] peer-keepaliv connected trunk     full    10G     10Gbase-SR 
+Eth1/15       [FEX] sw-dp4-data- connected 1         full    10G     Fabric Exte
+Eth1/16       [FEX] sw-dp4-data- connected 1         full    10G     Fabric Exte
+Eth1/17       [TRUNK] view-ntnx- connected trunk     full    10G     10Gbase-SR 
+Eth1/18       [TRUNK] view-ntnx- connected trunk     full    10G     10Gbase-SR 
+Eth1/19       [TRUNK] view-ntnx- connected trunk     full    10G     10Gbase-SR 
+Eth1/20       [TRUNK] view-ntnx- connected trunk     full    10G     10Gbase-SR 
+Eth1/21       [TRUNK] view-ntnx- connected trunk     full    10G     10Gbase-SR 
+Eth1/22       [TRUNK] view-ntnx- connected trunk     full    10G     10Gbase-SR 
+Eth1/23       [TRUNK] view-ntnx- connected trunk     full    10G     10Gbase-SR 
+Eth1/24       [TRUNK] view-ntnx- connected trunk     full    10G     10Gbase-SR 
+Eth1/25       [TRUNK] view-ntnx- connected trunk     full    10G     10Gbase-SR 
+Eth1/26       [TRUNK] view-ntnx- connected trunk     full    10G     10Gbase-SR 
+Eth1/27       [MGMT] ntnx-201 RF connected trunk     full    10G     10Gbase-SR 
+Eth1/28       [PROD] ntnx-201 RF connected trunk     full    10G     10Gbase-SR 
+Eth1/29       [MGMT] ntnx-203 RF connected trunk     full    10G     10Gbase-SR 
+Eth1/30       [PROD] ntnx-203 RF connected trunk     full    10G     10Gbase-SR 
+Eth1/31       [MGMT] ntnx-205 RF connected trunk     full    10G     10Gbase-SR 
+Eth1/32       [PROD] ntnx-205 RF connected trunk     full    10G     10Gbase-SR 
+Eth1/33       [MGMT] ntnx-207 RF connected trunk     full    10G     10Gbase-SR 
+Eth1/34       [PROD] ntnx-207 RF connected trunk     full    10G     10Gbase-SR 
+Eth1/35       [MGMT] ntnx-209 RF connected trunk     full    10G     10Gbase-SR 
+Eth1/36       [PROD] ntnx-209 RF connected trunk     full    10G     10Gbase-SR 
+Eth1/37       [MGMT] ntnx-211 RF connected trunk     full    10G     10Gbase-SR 
+Eth1/38       [PROD] ntnx-211 RF connected trunk     full    10G     10Gbase-SR 
+Eth1/39       [MGMT] view-ntnx-1 connected trunk     full    10G     10Gbase-SR 
+Eth1/40       [VIEW] view-ntnx-1 connected trunk     full    10G     10Gbase-SR 
+Eth1/41       [MGMT] view-ntnx-1 connected trunk     full    10G     10Gbase-SR 
+Eth1/42       [VIEW] view-ntnx-1 connected trunk     full    10G     10Gbase-SR 
+Eth1/43       [MGMT] view-ntnx-2 connected trunk     full    10G     10Gbase-SR 
+Eth1/44       [VIEW] view-ntnx-2 connected trunk     full    10G     10Gbase-SR 
+Eth1/45       TRUNK test-ntnx-25 connected trunk     full    10G     10Gbase-SR 
+Eth1/46       TRUNK test-ntnx-25 connected trunk     full    10G     10Gbase-SR 
+Eth1/47       TRUNK test-ntnx-24 connected trunk     full    10G     10Gbase-SR 
+Eth1/48       TRUNK test-ntnx-24 connected trunk     full    10G     10Gbase-SR 
+Eth2/1        TRUNK test-ntnx-23 connected trunk     full    10G     10Gbase-SR 
+Eth2/2        TRUNK test-ntnx-23 connected trunk     full    10G     10Gbase-SR 
+Eth2/3        [TRUNK] view-ntnx- connected trunk     full    10G     10Gbase-SR 
+Eth2/4        [TRUNK] view-ntnx- connected trunk     full    10G     10Gbase-SR 
+Eth2/5        [TRUNK] view-ntnx- connected trunk     full    10G     10Gbase-SR 
+Eth2/6        [TRUNK] view-ntnx- connected trunk     full    10G     10Gbase-SR 
+Eth2/7        [TRUNK] view-ntnx- connected trunk     full    10G     10Gbase-SR 
+Eth2/8        [TRUNK] view-ntnx- connected trunk     full    10G     10Gbase-SR 
+Eth2/9        [TRUNK] view-ntnx- connected trunk     full    10G     10Gbase-SR 
+Eth2/10       [TRUNK] view-ntnx- connected trunk     full    10G     10Gbase-SR 
+Eth2/11       [MGMT] ntnx-202 RF connected trunk     full    10G     10Gbase-SR 
+Eth2/12       [PROD] ntnx-202 RF connected trunk     full    10G     10Gbase-SR 
+Eth2/13       [MGMT] ntnx-204 RF connected trunk     full    10G     10Gbase-SR 
+Eth2/14       [PROD] ntnx-204 RF connected trunk     full    10G     10Gbase-SR 
+Eth2/15       [MGMT] ntnx-206 RF connected trunk     full    10G     10Gbase-SR 
+Eth2/16       [PROD] ntnx-206 RF connected trunk     full    10G     10Gbase-SR 
+Eth3/1        [MGMT] ntnx-208 RF connected trunk     full    10G     10Gbase-SR 
+Eth3/2        [PROD] ntnx-208 RF connected trunk     full    10G     10Gbase-SR 
+Eth3/3        [MGMT] ntnx-210 RF connected trunk     full    10G     10Gbase-SR 
+Eth3/4        [PROD] ntnx-210 RF connected trunk     full    10G     10Gbase-SR 
+Eth3/5        [MGMT] ntnx-212 RF connected trunk     full    10G     10Gbase-SR 
+Eth3/6        [PROD] ntnx-212 RF connected trunk     full    10G     10Gbase-SR 
+Eth3/7        [MGMT] view-ntnx-1 connected trunk     full    10G     10Gbase-SR 
+Eth3/8        [VIEW] view-ntnx-1 connected trunk     full    10G     10Gbase-SR 
+Eth3/9        [MGMT] view-ntnx-2 connected trunk     full    10G     10Gbase-SR 
+Eth3/10       [VIEW] view-ntnx-2 connected trunk     full    10G     10Gbase-SR 
+Eth3/11       [MGMT] view-ntnx-2 connected trunk     full    10G     10Gbase-SR 
+Eth3/12       [VIEW] view-ntnx-2 connected trunk     full    10G     10Gbase-SR 
+Eth3/13       TRUNK test-ntnx-26 connected trunk     full    10G     10Gbase-SR 
+Eth3/14       TRUNK test-ntnx-26 connected trunk     full    10G     10Gbase-SR 
+Eth3/15       TRUNK test-ntnx-27 connected trunk     full    10G     10Gbase-SR 
+Eth3/16       TRUNK test-ntnx-27 connected trunk     full    10G     10Gbase-SR 
+Eth4/1        [MGMT] ntnx-ahv-18 connected trunk     full    10G     10Gbase-SR 
+Eth4/2        [PROD] ntnx-ahv-18 connected trunk     full    10G     10Gbase-SR 
+Eth4/3        [MGMT] ntnx-ahv-20 connected trunk     full    10G     10Gbase-SR 
+Eth4/4        [PROD] ntnx-ahv-20 connected trunk     full    10G     10Gbase-SR 
+Eth4/5        [TRUNK] view-ntnx- connected trunk     full    10G     10Gbase-SR 
+Eth4/6        [TRUNK] view-ntnx- connected trunk     full    10G     10Gbase-SR 
+Eth4/7        [DATA-BACKUP] VM-P notconnec 654       full    10G     10Gbase-SR 
+Eth4/8        [DATA-BACKUP] VM-P connected 654       full    10G     10Gbase-SR 
+Eth4/9        [MGMT] ntnx-ahv-17 connected trunk     full    10G     10Gbase-SR 
+Eth4/10       [PROD] ntnx-ahv-17 connected trunk     full    10G     10Gbase-SR 
+Eth4/11       [MGMT] ntnx-ahv-19 connected trunk     full    10G     10Gbase-SR 
+Eth4/12       [PROD] ntnx-ahv-19 connected trunk     full    10G     10Gbase-SR 
+Eth4/13       --                 disabled  1         full    10G     10Gbase-SR 
+Eth4/14       --                 disabled  1         full    10G     10Gbase-SR 
+Eth4/15       [TRUNK] view-ntnx- connected trunk     full    10G     10Gbase-SR 
+Eth4/16       [TRUNK] view-ntnx- connected trunk     full    10G     10Gbase-SR 
+Po10          [VPC][TRUNK] sw-dp connected trunk     full    a-10G   --         
+Po101         [FEX] sw-dp4-data- connected 1         full    a-10G   --         
+Po601         [TRUNK] view-ntnx- connected trunk     full    a-10G   --         
+Po602         [MGMT] ntnx-102 RF noOperMem trunk     full    auto    --         
+Po603         [TRUNK] view-ntnx- connected trunk     full    10G     --         
+Po604         [TRUNK] view-ntnx- connected trunk     full    10G     --         
+Po605         [TRUNK] view-ntnx- connected trunk     full    10G     --         
+Po606         [TRUNK] view-ntnx- connected trunk     full    10G     --         
+Po607         [TRUNK] view-ntnx- connected trunk     full    10G     --         
+Po608         [TRUNK] view-ntnx- connected trunk     full    10G     --         
+Po609         [TRUNK] view-ntnx- connected trunk     full    10G     --         
+Po610         [TRUNK] view-ntnx- connected trunk     full    10G     --         
+Po611         TRUNK ntnx-201:vmn connected trunk     full    a-10G   --         
+Po612         TRUNK ntnx-202:vmn connected trunk     full    a-10G   --         
+Po613         TRUNK ntnx-203:vmn connected trunk     full    a-10G   --         
+Po614         TRUNK ntnx-204:vmn connected trunk     full    a-10G   --         
+Po615         TRUNK ntnx-205:vmn connected trunk     full    a-10G   --         
+Po616         TRUNK ntnx-206:vmn connected trunk     full    a-10G   --         
+Po617         TRUNK ntnx-207:vmn connected trunk     full    a-10G   --         
+Po618         TRUNK ntnx-208:vmn connected trunk     full    a-10G   --         
+Po619         TRUNK ntnx-209:vmn connected trunk     full    a-10G   --         
+Po620         TRUNK ntnx-210:vmn connected trunk     full    a-10G   --         
+Po621         TRUNK ntnx-211:vmn connected trunk     full    a-10G   --         
+Po622         TRUNK ntnx-212:vmn connected trunk     full    a-10G   --         
+Po623         [MGMT] view-ntnx-1 connected trunk     full    a-10G   --         
+Po624         [MGMT] view-ntnx-1 connected trunk     full    a-10G   --         
+Po625         [MGMT] view-ntnx-1 connected trunk     full    a-10G   --         
+Po626         [MGMT] view-ntnx-2 connected trunk     full    a-10G   --         
+Po627         [MGMT] view-ntnx-2 connected trunk     full    a-10G   --         
+Po628         [MGMT] view-ntnx-2 connected trunk     full    a-10G   --         
+Po629         [TRUNK] view-ntnx- connected trunk     full    10G     --         
+Po630         [TRUNK] view-ntnx- connected trunk     full    10G     --         
+Po631         [MGMT] ntnx-17 RFT connected trunk     full    a-10G   --         
+Po632         [MGMT] ntnx-18 RFT connected trunk     full    a-10G   --         
+Po633         [MGMT] ntnx-19 RFT connected trunk     full    a-10G   --         
+Po634         [MGMT] ntnx-20 RFT connected trunk     full    a-10G   --         
+Po635         TRUNK test-ntnx-23 connected trunk     full    10G     --         
+Po636         TRUNK test-ntnx-24 connected trunk     full    10G     --         
+Po637         TRUNK test-ntnx-25 connected trunk     full    10G     --         
+Po638         TRUNK test-ntnx-26 connected trunk     full    10G     --         
+Po639         TRUNK test-ntnx-27 connected trunk     full    10G     --         
+Po701         [TRUNK] view-ntnx- connected trunk     full    a-10G   --         
+Po702         [PROD] ntnx-102 RF noOperMem trunk     full    auto    --         
+Po703         [TRUNK] view-ntnx- connected trunk     full    10G     --         
+Po704         [TRUNK] view-ntnx- connected trunk     full    10G     --         
+Po705         [TRUNK] view-ntnx- connected trunk     full    10G     --         
+Po706         [TRUNK] view-ntnx- connected trunk     full    10G     --         
+Po707         [TRUNK] view-ntnx- connected trunk     full    10G     --         
+Po708         [TRUNK] view-ntnx- connected trunk     full    10G     --         
+Po709         [TRUNK] view-ntnx- connected trunk     full    10G     --         
+Po710         [TRUNK] view-ntnx- connected trunk     full    10G     --         
+Po711         TRUNK ntnx-201.msk connected trunk     full    a-10G   --         
+Po712         TRUNK ntnx-202.msk connected trunk     full    a-10G   --         
+Po713         TRUNK ntnx-203.msk connected trunk     full    a-10G   --         
+Po714         TRUNK ntnx-204.msk connected trunk     full    a-10G   --         
+Po715         TRUNK ntnx-205.msk connected trunk     full    a-10G   --         
+Po716         TRUNK ntnx-206.msk connected trunk     full    a-10G   --         
+Po717         TRUNK ntnx-207.msk connected trunk     full    a-10G   --         
+Po718         TRUNK ntnx-208.msk connected trunk     full    a-10G   --         
+Po719         TRUNK ntnx-209.msk connected trunk     full    a-10G   --         
+Po720         TRUNK ntnx-210.msk connected trunk     full    a-10G   --         
+Po721         TRUNK ntnx-211.msk connected trunk     full    a-10G   --         
+Po722         TRUNK ntnx-212.msk connected trunk     full    a-10G   --         
+Po723         [VIEW] view-ntnx-1 connected trunk     full    a-10G   --         
+Po724         [VIEW] view-ntnx-1 connected trunk     full    a-10G   --         
+Po725         [VIEW] view-ntnx-1 connected trunk     full    a-10G   --         
+Po726         [VIEW] view-ntnx-2 connected trunk     full    a-10G   --         
+Po727         [VIEW] view-ntnx-2 connected trunk     full    a-10G   --         
+Po728         [VIEW] view-ntnx-2 connected trunk     full    a-10G   --         
+Po729         [TRUNK] view-ntnx- connected trunk     full    10G     --         
+Po730         [TRUNK] view-ntnx- connected trunk     full    10G     --         
+Po731         [PROD] ntnx-17 RFT connected trunk     full    a-10G   --         
+Po732         [PROD] ntnx-18 RFT connected trunk     full    a-10G   --         
+Po733         [PROD] ntnx-19 RFT connected trunk     full    a-10G   --         
+Po734         [PROD] ntnx-20 RFT connected trunk     full    a-10G   --         
+Po735         TRUNK test-ntnx-23 connected trunk     full    10G     --         
+Po736         TRUNK test-ntnx-24 connected trunk     full    10G     --         
+Po737         TRUNK test-ntnx-25 connected trunk     full    10G     --         
+Po738         TRUNK test-ntnx-26 connected trunk     full    10G     --         
+Po739         TRUNK test-ntnx-27 connected trunk     full    10G     --         
+Po4000        [TRUNK] peer-link  connected trunk     full    10G     --         
+Po4001        [TRUNK] peer-keepa connected trunk     full    10G     --         
+mgmt0         --                 connected routed    full    a-1000  --         
+Eth101/1/1    [DATA-CONSOLE] ntn connected 608       full    a-1000             
+Eth101/1/2    [DATA-CONSOLE] ntn connected 608       full    a-1000             
+Eth101/1/3    [DATA-CONSOLE] ntn connected 608       full    a-1000             
+Eth101/1/4    [DATA-CONSOLE] ntn connected 608       full    a-1000             
+Eth101/1/5    [DATA-CONSOLE] ntn connected 608       full    a-1000             
+Eth101/1/6    [DATA-CONSOLE] ntn connected 608       full    a-1000             
+Eth101/1/7    [DATA-CONSOLE] ntn connected 608       full    a-1000             
+Eth101/1/8    [DATA-CONSOLE] ntn connected 608       full    a-1000             
+Eth101/1/9    [DATA-CONSOLE] ntn connected 608       full    a-1000             
+Eth101/1/10   [DATA-CONSOLE] ntn connected 608       full    a-1000             
+Eth101/1/11   [DATA-CONSOLE] ntn connected 608       full    a-1000             
+Eth101/1/12   [DATA-CONSOLE] ntn connected 608       full    a-1000             
+Eth101/1/13   [DATA-CONSOLE] ntn connected 608       full    a-1000             
+Eth101/1/14   [DATA-CONSOLE] ntn connected 608       full    a-1000             
+Eth101/1/15   [DATA-CONSOLE] tes connected 608       full    a-1000             
+Eth101/1/16   [DATA-CONSOLE] tes connected 608       full    a-1000             
+Eth101/1/17   [DATA-CONSOLE] ntn connected 608       full    a-1000             
+Eth101/1/18   [DATA-CONSOLE] ntn connected 608       full    a-1000             
+Eth101/1/19   [DATA-CONSOLE] NTN notconnec 608       auto    auto               
+Eth101/1/20   [DATA-CONSOLE] ntn connected 608       full    a-1000             
+Eth101/1/21   [DATA-CONSOLE] VM- connected 608       full    a-1000             
+Eth101/1/22   [DATA-CONSOLE] tes connected 608       full    a-1000             
+Eth101/1/23   [DATA-CONSOL] view connected 608       full    a-1000             
+Eth101/1/24   [DATA-CONSOL] view connected 608       full    a-1000             
+Eth101/1/25   [DATA-CONSOL] view connected 608       full    a-1000             
+Eth101/1/26   [DATA-CONSOL] view connected 608       full    a-1000             
+Eth101/1/27   [DATA-CONSOL] view connected 608       full    a-1000             
+Eth101/1/28   --                 disabled  1         full    auto               
+Eth101/1/29   [DATA-CONSOLE] NTN connected 608       full    a-1000             
+Eth101/1/30   [DATA-CONSOLE] NTN connected 608       full    a-1000             
+Eth101/1/31   [DATA-CONSOLE] NTN connected 608       full    a-1000             
+Eth101/1/32   [DATA-CONSOLE] NTN connected 608       full    a-1000             
+Eth101/1/33   [DATA-CONSOLE] vie connected 608       full    a-1000             
+Eth101/1/34   [DATA-CONSOLE] vie connected 608       full    a-1000             
+Eth101/1/35   [DATA-CONSOLE] vie connected 608       full    a-1000             
+Eth101/1/36   [DATA-CONSOLE] vie connected 608       full    a-1000             
+Eth101/1/37   [DATA-CONSOLE] vie connected 608       full    a-1000             
+Eth101/1/38   [DATA-CONSOLE] vie connected 608       full    a-1000             
+Eth101/1/39   [DATA-CONSOLE] ntn connected 608       full    a-1000             
+Eth101/1/40   [DATA-CONSOLE] ntn connected 608       full    a-1000             
+Eth101/1/41   [DATA-CONSOLE] ntn connected 608       full    a-1000             
+Eth101/1/42   [DATA-CONSOLE] ntn connected 608       full    a-1000             
+Eth101/1/43   [DATA-CONSOLE] ntn connected 608       full    a-1000             
+Eth101/1/44   [DATA-CONSOLE] ntn connected 608       full    a-1000             
+Eth101/1/45   [DATA-CONSOLE] dp4 connected 608       full    a-1000             
+Eth101/1/46   [DATA-CONSOLE] RF- connected 608       full    a-1000             
+Eth101/1/47   [DATA-CONSOLE] dp4 connected 608       full    a-1000             
+Eth101/1/48   [DATA-CONSOLE2] sv connected 634       full    a-1000             

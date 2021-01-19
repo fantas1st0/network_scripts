@@ -1,0 +1,2210 @@
+
+
+!Command: show startup-config
+!Time: Fri Oct  2 00:23:47 2020
+!Startup config saved at: Thu Oct  1 20:27:33 2020
+
+version 7.3(5)N1(1)
+hostname sw-pr1-data-5
+
+feature telnet
+feature tacacs+
+cfs eth distribute
+feature udld
+feature interface-vlan
+feature lacp
+feature vpc
+feature lldp
+feature fex
+
+username xxxxxxx password 5 xxxxxxx role network-admin
+username xxxxxxx password 5 xxxxxxx role network-admin
+username xxxxxxxx passphrase  lifetime 99999 warntime 14 gracetime 3
+
+banner motd #Nexus 6000 Switch
+#
+
+no ip domain-lookup
+ip domain-name vtb24.ru
+tacacs-server host 10.64.0.68 key 7  xxxxxxxx 
+tacacs-server host 10.64.0.69 key 7  xxxxxxxx 
+aaa group server tacacs+ TACACS+
+  server 10.64.0.68
+  server 10.64.0.69
+  source-interface Vlan608
+system default switchport shutdown
+logging event link-status default
+service unsupported-transceiver
+errdisable recovery interval 60
+errdisable recovery cause link-flap
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause loopback
+errdisable recovery cause security-violation
+errdisable recovery cause psecure-violation
+errdisable recovery cause pause-rate-limit
+errdisable recovery cause miscabling
+ip access-list 1
+  20 permit ip 10.64.0.0/21 any
+  30 permit ip 10.68.0.0/21 any
+  40 permit ip 10.74.57.7/32 any
+  50 permit ip 10.194.160.71/32 any
+  60 permit ip 10.194.62.33/32 any
+  70 permit ip 10.69.240.20/32 any
+  80 permit ip 10.194.162.33/32 any
+ip access-list 111
+  10 permit ip 10.64.0.111/32 any
+fex 101
+  pinning max-links 1
+  description "FEX101"
+fex 151
+  pinning max-links 1
+  description "FEX0151"
+snmp-server contact VTB24 NOC, noc@vtb24.ru
+snmp-server location MSK, Perovskoe sh. 1, room MZ_3, rack ER3-2/01
+snmp-server user xxxxxxxx network-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server user xxxxxxxx network-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server host 10.194.160.71 traps version 2c xxxxxxxx 
+snmp-server host 10.194.162.33 traps version 2c xxxxxxxx 
+snmp-server host 10.64.1.75 traps version 2c xxxxxxxx 
+snmp-server host 10.64.1.75 use-vrf default
+snmp-server enable traps callhome event-notify
+snmp-server enable traps callhome smtp-send-fail
+snmp-server enable traps cfs state-change-notif
+snmp-server enable traps lldp lldpRemTablesChange
+snmp-server enable traps cfs merge-failure
+snmp-server enable traps aaa server-state-change
+snmp-server enable traps feature-control FeatureOpStatusChange
+snmp-server enable traps sysmgr cseFailSwCoreNotifyExtended
+snmp-server enable traps config ccmCLIRunningConfigChanged
+snmp-server enable traps snmp authentication
+snmp-server enable traps link cisco-xcvr-mon-status-chg
+snmp-server enable traps vtp notifs
+snmp-server enable traps vtp vlancreate
+snmp-server enable traps vtp vlandelete
+snmp-server enable traps bridge newroot
+snmp-server enable traps bridge topologychange
+snmp-server enable traps stpx inconsistency
+snmp-server enable traps stpx root-inconsistency
+snmp-server enable traps stpx loop-inconsistency
+snmp-server enable traps system Clock-change-notification
+snmp-server enable traps feature-control ciscoFeatOpStatusChange
+snmp-server enable traps syslog message-generated
+snmp-server community xxxxxxxx group network-operator
+snmp-server community xxxxxxxx group vdc-operator
+snmp-server community xxxxxxxx group network-operator
+snmp-server community xxxxxxxx use-acl 1
+snmp-server community xxxxxxxx use-acl 111
+snmp-server community xxxxxxxx use-ipv4acl 1
+ntp server 10.9.0.3
+ntp server 10.9.0.4
+ntp authentication-key 1 md5 xxxxxxxx 7
+ntp trusted-key 1
+aaa authentication login default group TACACS+
+aaa authentication login console local
+aaa authorization config-commands default group TACACS+ local
+aaa authorization commands default group TACACS+ local
+aaa accounting default group TACACS+
+aaa authentication login error-enable
+policy-map type network-qos jumbo
+  class type network-qos class-default
+    mtu 9216
+    multicast-optimize
+
+ip route 0.0.0.0/0 10.76.64.1
+vlan 1
+vlan 556
+  name ~DATA-DOS-CLOUD-TEST-OPENSHIFT
+vlan 557
+  name ~DATA-DOS-ENV-AGENTS
+vlan 558
+  name ~DATA-DOS-AS1
+vlan 559
+  name ~DATA-DOS-NTNX-FLOW
+vlan 560
+  name DATA-DSO-DEB
+vlan 561
+  name DATA-DSO-DEC
+vlan 562
+  name DATA-DSO-DEF
+vlan 563
+  name DATA-DSO-DEH
+vlan 564
+  name DATA-DSO-ENV
+vlan 566
+  name DATA-DSO-NTNX-MGMT
+vlan 568
+  name DATA-DSO-CONSOLE
+vlan 571-574
+vlan 575
+  name ~DATA-DOS-DEV
+vlan 576
+  name ~DATA-DOS-CS
+vlan 577
+  name ~DATA-DOS-INT
+vlan 578
+  name ~DATA-DOS-MON
+vlan 579
+  name ~DATA-DOS-OPENSHIFT
+vlan 588
+  name ~DATA-KT-LABVIRT
+vlan 608
+  name DATA-CONSOLE
+vlan 609
+  name DATA-VMWARE
+vlan 629
+  name DATA-VMWARE2
+
+spanning-tree port type edge default
+spanning-tree port type edge bpduguard default
+spanning-tree loopguard default
+udld aggressive
+vrf context management
+  ip route 0.0.0.0/0 10.76.64.1
+vrf context vpc-keepalive
+vpc domain 22
+  role priority 1
+  peer-keepalive destination 192.168.1.2 source 192.168.1.1 vrf vpc-keepalive
+port-profile type ethernet ETH-TRUNK-EDGEPORT
+  switchport mode trunk
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  state enabled
+port-profile type port-channel PC-TRUNK-EDGEPORT
+  switchport mode trunk
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  state enabled
+
+
+interface Vlan1
+
+interface Vlan608
+  description mgmt
+  no shutdown
+  no ip redirects
+  ip address 10.76.65.46/21
+
+interface port-channel10
+  description [VPC][TRUNK] sw-pr1-data-1/2
+  switchport mode trunk
+  switchport trunk allowed vlan 556-568,571-579,588,608-609,629
+  vpc 10
+
+interface port-channel101
+  description [FEX] sw-pr1-data-3-fex101
+  switchport mode fex-fabric
+  fex associate 101
+
+interface port-channel151
+  description [FEX] sw-pr1-data-5-fex151
+  switchport mode fex-fabric
+  fex associate 151
+
+interface port-channel601
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-20:C2MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 601
+
+interface port-channel602
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-21:D3MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 602
+
+interface port-channel603
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-22:62MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 603
+
+interface port-channel604
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-23:43MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 604
+
+interface port-channel605
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-24:G2MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 605
+
+interface port-channel606
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-25:H1MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 606
+
+interface port-channel607
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-26:D1MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 607
+
+interface port-channel608
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-27:33MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 608
+
+interface port-channel609
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-28:B2MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 609
+
+interface port-channel610
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-29:83MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 610
+
+interface port-channel611
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-30:63MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 611
+
+interface port-channel612
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-31:G1MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 612
+
+interface port-channel613
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-32:D2MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 613
+
+interface port-channel614
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-33:73MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 614
+
+interface port-channel615
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-34:F2MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 615
+
+interface port-channel616
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-35:72MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 616
+
+interface port-channel617
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-36:13MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 617
+
+interface port-channel618
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-37:82MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 618
+
+interface port-channel619
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-38:52MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 619
+
+interface port-channel620
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-39:C3MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 620
+
+interface port-channel621
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-40:J1MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 621
+
+interface port-channel622
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-41:F1MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 622
+
+interface port-channel623
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-42:23MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 623
+
+interface port-channel624
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-43:92MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 624
+
+interface port-channel625
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-44:53MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 625
+
+interface port-channel626
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-45:93MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 626
+
+interface port-channel627
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-46:B3MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 627
+
+interface port-channel628
+  description [DATA-DSO-NTNX-MGMT]ntnx-dso-47:J2MLYW2 RF-000970492
+  switchport access vlan 566
+  speed 10000
+  vpc 628
+
+interface port-channel629
+  description [DATA-DSO-NTNX-MGMT] ntnx-dso-19(J2MLYW2):ae RF-001236008
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 629
+
+interface port-channel630
+  description [DATA-DSO-NTNX-MGMT] ntnx-dso-18(B3MLYW2):ae RF-001236008
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 630
+
+interface port-channel631
+  description TRUNK ntnx-dso-48:ae RF-001412162
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  speed 10000
+  vpc 631
+
+interface port-channel632
+  description TRUNK ntnx-dso-49:ae RF-001412162
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  speed 10000
+  vpc 632
+
+interface port-channel633
+  description TRUNK ntnx-dso-50  B1MLYW2:int 1 RF-001928037
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 633
+
+interface port-channel634
+  description TRUNK ntnx-dso-51  12MLYW2:int 1 RF-001928037
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 634
+
+interface port-channel635
+  description TRUNK ntnx-dso-52  42MLYW2:int 1 RF-001928037
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 635
+
+interface port-channel636
+  description TRUNK ntnx-dso-53  22MLYW2:int 1 RF-001928037
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 636
+
+interface port-channel637
+  description TRUNK ntnx-dso-54:32MLYW2:ae RF-001572887
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 637
+
+interface port-channel638
+  description TRUNK ntnx-dso-55:C1MLYW2:ae RF-001572887
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 638
+
+interface port-channel639
+  description DATA-DSO-NTNX-MGMT ntnx-dso-22051:ae RF-001678388
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 639
+
+interface port-channel640
+  description TRUNK ntnx-dso-56 1DFTS33:ae RF-001769103
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 640
+
+interface port-channel641
+  description TRUNK ntnx-dso-57 2DFTS33:ae RF-001769103
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 641
+
+interface port-channel642
+  description TRUNK ntnx-dso-58 5DFTS33:ae RF-001769103
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 642
+
+interface port-channel643
+  description TRUNK ntnx-dso-59 6DFTS33:ae RF-001769103
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 643
+
+interface port-channel644
+  description TRUNK ntnx-dso-60 7DFTS33:ae RF-001769103
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 644
+
+interface port-channel645
+  description TRUNK ntnx-dso-61 8DFTS33:ae RF-001769103
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 645
+
+interface port-channel646
+  description TRUNK ntnx-dso-62 9DFTS33:ae RF-001769103
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 646
+
+interface port-channel701
+  description TRUNK ntnx-dso-20:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 701
+
+interface port-channel702
+  description TRUNK ntnx-dso-21:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 702
+
+interface port-channel703
+  description TRUNK ntnx-dso-22:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 703
+
+interface port-channel704
+  description TRUNK ntnx-dso-23:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 704
+
+interface port-channel705
+  description TRUNK ntnx-dso-24:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 705
+
+interface port-channel706
+  description TRUNK ntnx-dso-25:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 706
+
+interface port-channel707
+  description TRUNK ntnx-dso-26:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 707
+
+interface port-channel708
+  description TRUNK ntnx-dso-27:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 708
+
+interface port-channel709
+  description TRUNK ntnx-dso-28:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 709
+
+interface port-channel710
+  description TRUNK ntnx-dso-29:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 710
+
+interface port-channel711
+  description TRUNK ntnx-dso-30:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 711
+
+interface port-channel712
+  description TRUNK ntnx-dso-31:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 712
+
+interface port-channel713
+  description TRUNK ntnx-dso-32:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 713
+
+interface port-channel714
+  description TRUNK ntnx-dso-33:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 714
+
+interface port-channel715
+  description TRUNK ntnx-dso-34:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 715
+
+interface port-channel716
+  description TRUNK ntnx-dso-35:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 716
+
+interface port-channel717
+  description TRUNK ntnx-dso-36:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 717
+
+interface port-channel718
+  description TRUNK ntnx-dso-37:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 718
+
+interface port-channel719
+  description TRUNK ntnx-dso-38:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 719
+
+interface port-channel720
+  description TRUNK ntnx-dso-39:int2 RF-001334978
+  switchport mode trunk
+  switchport access vlan 566
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 720
+
+interface port-channel721
+  description TRUNK ntnx-dso-40:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 721
+
+interface port-channel722
+  description TRUNK ntnx-dso-41:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 722
+
+interface port-channel723
+  description TRUNK ntnx-dso-42:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 723
+
+interface port-channel724
+  description TRUNK ntnx-dso-43:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 724
+
+interface port-channel725
+  description TRUNK ntnx-dso-44:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 725
+
+interface port-channel726
+  description TRUNK ntnx-dso-45:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 726
+
+interface port-channel727
+  description TRUNK ntnx-dso-46:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 727
+
+interface port-channel728
+  description TRUNK ntnx-dso-47:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 728
+
+interface port-channel729
+  description TRUNK ntnx-dso-19:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 729
+
+interface port-channel730
+  description TRUNK ntnx-dso-18:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  speed 10000
+  vpc 730
+
+interface port-channel731
+  description TRUNK ntnx-dso-48:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  speed 10000
+  vpc 731
+
+interface port-channel732
+  description TRUNK ntnx-dso-49:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  speed 10000
+  vpc 732
+
+interface port-channel733
+  description TRUNK ntnx-dso-50:int2 RF-001334978
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,566,571-576
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 733
+
+interface port-channel734
+  description TRUNK ntnx-dso-51:int2 RF-001334978
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,566,571-576
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 734
+
+interface port-channel735
+  description TRUNK ntnx-dso-52:int2 RF-001334978
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,566,571-576
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 735
+
+interface port-channel736
+  description TRUNK ntnx-dso-53:int2 RF-001334978
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,566,571-576
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 736
+
+interface port-channel737
+  description TRUNK ntnx-dso-54:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,571-576
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 737
+
+interface port-channel738
+  description TRUNK ntnx-dso-55:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,571-576
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 738
+
+interface port-channel739
+  description TRUNK ntnx-dso-22051:int2 RF-001334978
+  switchport mode trunk
+  no lacp suspend-individual
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-578,777
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  speed 10000
+  vpc 739
+
+interface port-channel740
+  description TRUNK ntnx-dso-56:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,571-576
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 740
+
+interface port-channel741
+  description TRUNK ntnx-dso-57:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,571-576
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 741
+
+interface port-channel742
+  description TRUNK ntnx-dso-58:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,571-576
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 742
+
+interface port-channel743
+  description TRUNK ntnx-dso-59:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,571-576
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 743
+
+interface port-channel744
+  description TRUNK ntnx-dso-60:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,571-576
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 744
+
+interface port-channel745
+  description TRUNK ntnx-dso-61:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,571-576
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 745
+
+interface port-channel746
+  description TRUNK ntnx-dso-62:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,571-576
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  speed 10000
+  vpc 746
+
+interface port-channel4000
+  description [TRUNK] peer-link
+  switchport mode trunk
+  switchport trunk allowed vlan 1-4092
+  spanning-tree port type network
+  vpc peer-link
+
+interface port-channel4001
+  description peer-keepalive
+  no switchport
+  vrf member vpc-keepalive
+  ip address 192.168.1.1/24
+
+interface Ethernet1/1
+  description [PC] sw-pr1-data-1
+  switchport mode trunk
+  switchport trunk allowed vlan 556-568,571-579,588,608-609,629
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet1/2
+  description [PC] sw-pr1-data-1
+  switchport mode trunk
+  switchport trunk allowed vlan 556-568,571-579,588,608-609,629
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet1/3
+  description [RESERVED] Nutanix 150620
+  no shutdown
+
+interface Ethernet1/4
+  description [RESERVED] Nutanix 150620
+  no shutdown
+
+interface Ethernet1/5
+  description [RESERVED] Nutanix 150620
+  switchport mode trunk
+  switchport trunk allowed vlan 556-568,571-579,588,608-609,629
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet1/6
+  description [RESERVED] Nutanix 150620
+  switchport mode trunk
+  switchport trunk allowed vlan 556-568,571-579,588,608-609,629
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet1/7
+  description [RESERVED] Nutanix 150620
+  no shutdown
+
+interface Ethernet1/8
+  description TRUNK ntnx-dso-62 9DFTS33:Int Port 1 RF-001769103
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 646 mode active
+  no shutdown
+
+interface Ethernet1/9
+  description peer-keepalive
+  no switchport
+  udld aggressive
+  channel-group 4001 mode active
+
+interface Ethernet1/10
+  description peer-keepalive
+  no switchport
+  udld aggressive
+  channel-group 4001 mode active
+
+interface Ethernet1/11
+  description [FEX] sw-pr1-data-5-fex101
+  switchport mode fex-fabric
+  fex associate 101
+  channel-group 101
+  no shutdown
+
+interface Ethernet1/12
+  description [FEX] sw-pr1-data-5-fex101
+  switchport mode fex-fabric
+  fex associate 101
+  channel-group 101
+  no shutdown
+
+interface Ethernet1/13
+  description [DATA-DSO-NTNX-MGMT] ntnx-dso-19(J2MLYW2):eth3 RF-001236008
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  no snmp trap link-status
+  channel-group 629 mode active
+  no shutdown
+
+interface Ethernet1/14
+  description TRUNK ntnx-dso-19:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 729 mode active
+  no shutdown
+
+interface Ethernet1/15
+  description [DATA-DSO-NTNX-MGMT] ntnx-dso-18(B3MLYW2):eth3 RF-001236008
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  no snmp trap link-status
+  channel-group 630 mode active
+  no shutdown
+
+interface Ethernet1/16
+  description TRUNK ntnx-dso-18:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 730 mode active
+  no shutdown
+
+interface Ethernet1/17
+  description ntnx-dso-20:C2MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 601 mode active
+  no shutdown
+
+interface Ethernet1/18
+  description TRUNK ntnx-dso-20:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 701 mode active
+  no shutdown
+
+interface Ethernet1/19
+  description ntnx-dso-21:D3MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 602 mode active
+  no shutdown
+
+interface Ethernet1/20
+  description TRUNK ntnx-dso-21:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 702 mode active
+  no shutdown
+
+interface Ethernet1/21
+  description ntnx-dso-22:62MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 603 mode active
+  no shutdown
+
+interface Ethernet1/22
+  description TRUNK ntnx-dso-22:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 703 mode active
+  no shutdown
+
+interface Ethernet1/23
+  description ntnx-dso-23:43MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 604 mode active
+  no shutdown
+
+interface Ethernet1/24
+  description TRUNK ntnx-dso-23:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 704 mode active
+  no shutdown
+
+interface Ethernet1/25
+  description ntnx-dso-24:G2MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 605 mode active
+  no shutdown
+
+interface Ethernet1/26
+  description TRUNK ntnx-dso-24:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 705 mode active
+  no shutdown
+
+interface Ethernet1/27
+  description ntnx-dso-25:H1MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 606 mode active
+  no shutdown
+
+interface Ethernet1/28
+  description TRUNK ntnx-dso-25:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 706 mode active
+  no shutdown
+
+interface Ethernet1/29
+  description ntnx-dso-26:D1MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 607 mode active
+  no shutdown
+
+interface Ethernet1/30
+  description TRUNK ntnx-dso-26:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 707 mode active
+  no shutdown
+
+interface Ethernet1/31
+  description ntnx-dso-27:33MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 608 mode active
+  no shutdown
+
+interface Ethernet1/32
+  description TRUNK ntnx-dso-27:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 708 mode active
+  no shutdown
+
+interface Ethernet1/33
+  description ntnx-dso-28:B2MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 609 mode active
+  no shutdown
+
+interface Ethernet1/34
+  description TRUNK ntnx-dso-28:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 709 mode active
+  no shutdown
+
+interface Ethernet1/35
+  description ntnx-dso-29:83MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 610 mode active
+  no shutdown
+
+interface Ethernet1/36
+  description TRUNK ntnx-dso-29:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 710 mode active
+  no shutdown
+
+interface Ethernet1/37
+  description ntnx-dso-30:63MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 611 mode active
+  no shutdown
+
+interface Ethernet1/38
+  description TRUNK ntnx-dso-30:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 711 mode active
+  no shutdown
+
+interface Ethernet1/39
+  description ntnx-dso-31:G1MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 612 mode active
+  no shutdown
+
+interface Ethernet1/40
+  description TRUNK ntnx-dso-31:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 712 mode active
+  no shutdown
+
+interface Ethernet1/41
+  description ntnx-dso-32:D2MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 613 mode active
+  no shutdown
+
+interface Ethernet1/42
+  description TRUNK ntnx-dso-32:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 713 mode active
+  no shutdown
+
+interface Ethernet1/43
+  description ntnx-dso-33:73MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 614 mode active
+  no shutdown
+
+interface Ethernet1/44
+  description TRUNK ntnx-dso-33:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 714 mode active
+  no shutdown
+
+interface Ethernet1/45
+  description ntnx-dso-34:F2MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 615 mode active
+  no shutdown
+
+interface Ethernet1/46
+  description TRUNK ntnx-dso-34:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 715 mode active
+  no shutdown
+
+interface Ethernet1/47
+  description ntnx-dso-35:72MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 616 mode active
+  no shutdown
+
+interface Ethernet1/48
+  description TRUNK ntnx-dso-35:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 716 mode active
+  no shutdown
+
+interface Ethernet1/49
+  description [RESERVED] Nutanix 150620
+
+interface Ethernet1/50
+  description [FEX] sw-pr1-data-5-fex151
+  switchport mode fex-fabric
+  fex associate 151
+  channel-group 151
+  no shutdown
+
+interface Ethernet1/51
+  description [PC] peer-link
+  switchport mode trunk
+  switchport trunk allowed vlan 1-4092
+  channel-group 4000 mode active
+  no shutdown
+
+interface Ethernet1/52
+  description [PC] peer-link
+  switchport mode trunk
+  switchport trunk allowed vlan 1-4092
+  channel-group 4000 mode active
+  no shutdown
+
+interface Ethernet2/1
+  description ntnx-dso-36:13MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 617 mode active
+  no shutdown
+
+interface Ethernet2/2
+  description TRUNK ntnx-dso-36:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 717 mode active
+  no shutdown
+
+interface Ethernet2/3
+  description ntnx-dso-37:82MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 618 mode active
+  no shutdown
+
+interface Ethernet2/4
+  description TRUNK ntnx-dso-37:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 718 mode active
+  no shutdown
+
+interface Ethernet2/5
+  description ntnx-dso-38:52MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 619 mode active
+  no shutdown
+
+interface Ethernet2/6
+  description TRUNK ntnx-dso-38:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 719 mode active
+  no shutdown
+
+interface Ethernet2/7
+  description ntnx-dso-39:C3MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 620 mode active
+  no shutdown
+
+interface Ethernet2/8
+  description TRUNK ntnx-dso-39:int2 RF-001334978
+  switchport mode trunk
+  switchport access vlan 566
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 720 mode active
+  no shutdown
+
+interface Ethernet2/9
+  description ntnx-dso-40:J1MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 621 mode active
+  no shutdown
+
+interface Ethernet2/10
+  description TRUNK ntnx-dso-40:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 721 mode active
+  no shutdown
+
+interface Ethernet2/11
+  description ntnx-dso-41:F1MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 622 mode active
+  no shutdown
+
+interface Ethernet2/12
+  description TRUNK ntnx-dso-41:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 722 mode active
+  no shutdown
+
+interface Ethernet2/13
+  description ntnx-dso-42:23MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 623 mode active
+  no shutdown
+
+interface Ethernet2/14
+  description TRUNK ntnx-dso-42:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 723 mode active
+  no shutdown
+
+interface Ethernet2/15
+  description ntnx-dso-43:92MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 624 mode active
+  no shutdown
+
+interface Ethernet2/16
+  description TRUNK ntnx-dso-43:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 724 mode active
+  no shutdown
+
+interface Ethernet2/17
+  description ntnx-dso-44:53MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 625 mode active
+  no shutdown
+
+interface Ethernet2/18
+  description TRUNK ntnx-dso-44:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 725 mode active
+  no shutdown
+
+interface Ethernet2/19
+  description ntnx-dso-45:93MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 626 mode active
+  no shutdown
+
+interface Ethernet2/20
+  description TRUNK ntnx-dso-45:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 726 mode active
+  no shutdown
+
+interface Ethernet2/21
+  description ntnx-dso-46:B3MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 627 mode active
+  no shutdown
+
+interface Ethernet2/22
+  description TRUNK ntnx-dso-46:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 727 mode active
+  no shutdown
+
+interface Ethernet2/23
+  description ntnx-dso-47:J2MLYW2 RF-000970492
+  switchport access vlan 566
+  no snmp trap link-status
+  channel-group 628 mode active
+  no shutdown
+
+interface Ethernet2/24
+  description TRUNK ntnx-dso-47:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 728 mode active
+  no shutdown
+
+interface Ethernet2/25
+  description [RESERVED] Nutanix 150620
+  no shutdown
+
+interface Ethernet2/26
+  description [RESERVED] fex-151
+
+interface Ethernet3/1
+  description TRUNK ntnx-dso-49:eth3 RF-001412162
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  no snmp trap link-status
+  channel-group 632 mode active
+  no shutdown
+
+interface Ethernet3/2
+  description TRUNK ntnx-dso-49:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 732 mode active
+  no shutdown
+
+interface Ethernet3/3
+  description TRUNK ntnx-dso-48:eth3 RF-001412162
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  no snmp trap link-status
+  channel-group 631 mode active
+  no shutdown
+
+interface Ethernet3/4
+  description TRUNK ntnx-dso-48:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-577
+  no snmp trap link-status
+  channel-group 731 mode active
+  no shutdown
+
+interface Ethernet3/5
+  description DATA-DSO-NTNX-MGMT ntnx-dso-22051:IP1 RF-001678388
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 639 mode active
+  no shutdown
+
+interface Ethernet3/6
+  description TRUNK ntnx-dso-22051:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-564,571-578,777
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 739 mode active
+  no shutdown
+
+interface Ethernet3/7
+  description TRUNK ntnx-dso-50  B1MLYW2:int 1 RF-001928037
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 633 mode active
+  no shutdown
+
+interface Ethernet3/8
+  description TRUNK ntnx-dso-50:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,566,571-576
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 733 mode active
+  no shutdown
+
+interface Ethernet3/9
+  description TRUNK ntnx-dso-51  12MLYW2:int 1 RF-001928037
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 634 mode active
+  no shutdown
+
+interface Ethernet3/10
+  description TRUNK ntnx-dso-51:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,566,571-576
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 734 mode active
+  no shutdown
+
+interface Ethernet3/11
+  description TRUNK ntnx-dso-52  42MLYW2:int 1 RF-001928037
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 635 mode active
+  no shutdown
+
+interface Ethernet3/12
+  description TRUNK ntnx-dso-52:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,566,571-576
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 735 mode active
+  no shutdown
+
+interface Ethernet3/13
+  description TRUNK ntnx-dso-53  22MLYW2:int 1 RF-001928037
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 636 mode active
+  no shutdown
+
+interface Ethernet3/14
+  description TRUNK ntnx-dso-53:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,566,571-576
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 736 mode active
+  no shutdown
+
+interface Ethernet3/15
+  description vtb-core TRUNK ntnx-dso-54:32MLYW2:int 1 RF-001572887
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 637 mode active
+  no shutdown
+
+interface Ethernet3/16
+  description TRUNK ntnx-dso-54:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,571-576
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 737 mode active
+  no shutdown
+
+interface Ethernet3/17
+  description vtb-core TRUNK ntnx-dso-55:C1MLYW2:int 1 RF-001572887
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 638 mode active
+  no shutdown
+
+interface Ethernet3/18
+  description TRUNK ntnx-dso-55:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,571-576
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 738 mode active
+  no shutdown
+
+interface Ethernet3/19
+  description TRUNK ntnx-dso-56 1DFTS33:Int Port 1 RF-001769103
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 640 mode active
+  no shutdown
+
+interface Ethernet3/20
+  description TRUNK ntnx-dso-57 2DFTS33:Int Port 1 RF-001769103
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 641 mode active
+  no shutdown
+
+interface Ethernet3/21
+  description TRUNK ntnx-dso-58 5DFTS33:Int Port 1 RF-001769103
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 642 mode active
+  no shutdown
+
+interface Ethernet3/22
+  description TRUNK ntnx-dso-59 6DFTS33:Int Port 1 RF-001769103
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 643 mode active
+  no shutdown
+
+interface Ethernet3/23
+  description TRUNK ntnx-dso-60 7DFTS33:Int Port 1 RF-001769103
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 644 mode active
+  no shutdown
+
+interface Ethernet3/24
+  description TRUNK ntnx-dso-61 8DFTS33:Int Port 1 RF-001769103
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 566
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  spanning-tree guard root
+  channel-group 645 mode active
+  no shutdown
+
+interface Ethernet3/25
+
+interface Ethernet3/26
+
+interface mgmt0
+  vrf member management
+  ip address 10.76.65.48/21
+
+interface Ethernet101/1/1
+
+interface Ethernet101/1/2
+
+interface Ethernet101/1/3
+
+interface Ethernet101/1/4
+
+interface Ethernet101/1/5
+
+interface Ethernet101/1/6
+
+interface Ethernet101/1/7
+
+interface Ethernet101/1/8
+
+interface Ethernet101/1/9
+
+interface Ethernet101/1/10
+
+interface Ethernet101/1/11
+
+interface Ethernet101/1/12
+
+interface Ethernet101/1/13
+
+interface Ethernet101/1/14
+
+interface Ethernet101/1/15
+
+interface Ethernet101/1/16
+
+interface Ethernet101/1/17
+
+interface Ethernet101/1/18
+
+interface Ethernet101/1/19
+
+interface Ethernet101/1/20
+
+interface Ethernet101/1/21
+
+interface Ethernet101/1/22
+
+interface Ethernet101/1/23
+
+interface Ethernet101/1/24
+
+interface Ethernet101/1/25
+  description [DATA-DSO-CONSOLE] ntnx-dso-21:D3MLYW2 RF-000954079
+  switchport access vlan 568
+  no shutdown
+
+interface Ethernet101/1/26
+  description [DATA-DSO-CONSOLE] ntnx-dso-23:43MLYW2 RF-000954079
+  switchport access vlan 568
+  no shutdown
+
+interface Ethernet101/1/27
+  description [DATA-DSO-CONSOLE] ntnx-dso-25:H1MLYW2 RF-000954079
+  switchport access vlan 568
+  no shutdown
+
+interface Ethernet101/1/28
+  description [DATA-DSO-CONSOLE] ntnx-dso-27:33MLYW2 RF-000954079
+  switchport access vlan 568
+  no shutdown
+
+interface Ethernet101/1/29
+  description [DATA-DSO-CONSOLE] ntnx-dso-29:83MLYW2 RF-000954079
+  switchport access vlan 568
+  no shutdown
+
+interface Ethernet101/1/30
+  description [DATA-DSO-CONSOLE] ntnx-dso-31:G1MLYW2 RF-000954079
+  switchport access vlan 568
+  no shutdown
+
+interface Ethernet101/1/31
+  description [DATA-DSO-CONSOLE] ntnx-dso-33:73MLYW2 RF-000954079
+  switchport access vlan 568
+  no shutdown
+
+interface Ethernet101/1/32
+  description [DATA-DSO-CONSOLE] ntnx-dso-35:72MLYW2 RF-000954079
+  switchport access vlan 568
+  no shutdown
+
+interface Ethernet101/1/33
+  description [DATA-DSO-CONSOLE] ntnx-dso-37:82MLYW2 RF-000954079
+  switchport access vlan 568
+  no shutdown
+
+interface Ethernet101/1/34
+  description [DATA-DSO-CONSOLE] ntnx-dso-39:C3MLYW2 RF-000954079
+  switchport access vlan 568
+  no shutdown
+
+interface Ethernet101/1/35
+  description [DATA-DSO-CONSOLE] ntnx-dso-41:F1MLYW2 RF-000954079
+  switchport access vlan 568
+  no shutdown
+
+interface Ethernet101/1/36
+  description [DATA-DSO-CONSOLE] ntnx-dso-43:92MLYW2 RF-000954079
+  switchport access vlan 568
+  no shutdown
+
+interface Ethernet101/1/37
+  description [DATA-DSO-CONSOLE] ntnx-dso-45:93MLYW2 RF-000954079
+  switchport access vlan 568
+  no shutdown
+
+interface Ethernet101/1/38
+  description [DATA-DSO-CONSOLE] ntnx-dso-47:J2MLYW2 RF-000954079
+  switchport access vlan 568
+  no shutdown
+
+interface Ethernet101/1/39
+  description [DATA-DSO-CONSOLE] ntnx-dso-18:iDrac RF-001236008
+  switchport access vlan 568
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet101/1/40
+  description [DATA-DSO-CONSOLE] ntnx-dso-49:iDrac RF-001376648
+  switchport access vlan 568
+  no snmp trap link-status
+  no shutdown
+
+interface Ethernet101/1/41
+  description [DATA-DSO-CONSOLE] ntnx-dso-51 12MLYW2:mgmt
+  switchport access vlan 568
+  no shutdown
+
+interface Ethernet101/1/42
+  description [DATA-DSO-CONSOLE] ntnx-dso-53 22MLYW2:mgmt
+  switchport access vlan 568
+  no shutdown
+
+interface Ethernet101/1/43
+  description [DATA-DSO-CONSOLE] ntnx-dso-55 C1MLYW2:mgmt
+  switchport access vlan 568
+  no shutdown
+
+interface Ethernet101/1/44
+  description [DATA-DSO-CONSOLE] ntnx-dso-57 2DFTS33:iDrac RF-001769103
+  switchport access vlan 568
+  no shutdown
+
+interface Ethernet101/1/45
+  description [DATA-DSO-CONSOLE] ntnx-dso-59 6DFTS33:iDrac RF-001769103
+  switchport access vlan 568
+  no shutdown
+
+interface Ethernet101/1/46
+  description [DATA-DSO-CONSOLE] ntnx-dso-61 8DFTS33:iDrac RF-001769103
+  switchport access vlan 568
+  no shutdown
+
+interface Ethernet101/1/47
+
+interface Ethernet101/1/48
+
+interface Ethernet151/1/1
+  description TRUNK ntnx-dso-56:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,571-576
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 740 mode active
+  no shutdown
+
+interface Ethernet151/1/2
+  description TRUNK ntnx-dso-57:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,571-576
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 741 mode active
+  no shutdown
+
+interface Ethernet151/1/3
+  description TRUNK ntnx-dso-58:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,571-576
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 742 mode active
+  no shutdown
+
+interface Ethernet151/1/4
+  description TRUNK ntnx-dso-59:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,571-576
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 743 mode active
+  no shutdown
+
+interface Ethernet151/1/5
+  description TRUNK ntnx-dso-60:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,571-576
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 744 mode active
+  no shutdown
+
+interface Ethernet151/1/6
+  description TRUNK ntnx-dso-61:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,571-576
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 745 mode active
+  no shutdown
+
+interface Ethernet151/1/7
+  description TRUNK ntnx-dso-62:int2 RF-001334978
+  switchport mode trunk
+  switchport trunk native vlan 566
+  switchport trunk allowed vlan 556-558,560-564,571-576
+  spanning-tree port type edge trunk
+  spanning-tree guard root
+  channel-group 746 mode active
+  no shutdown
+
+interface Ethernet151/1/8
+
+interface Ethernet151/1/9
+
+interface Ethernet151/1/10
+
+interface Ethernet151/1/11
+
+interface Ethernet151/1/12
+
+interface Ethernet151/1/13
+
+interface Ethernet151/1/14
+
+interface Ethernet151/1/15
+
+interface Ethernet151/1/16
+
+interface Ethernet151/1/17
+
+interface Ethernet151/1/18
+
+interface Ethernet151/1/19
+
+interface Ethernet151/1/20
+
+interface Ethernet151/1/21
+
+interface Ethernet151/1/22
+
+interface Ethernet151/1/23
+
+interface Ethernet151/1/24
+
+interface Ethernet151/1/25
+
+interface Ethernet151/1/26
+
+interface Ethernet151/1/27
+
+interface Ethernet151/1/28
+
+interface Ethernet151/1/29
+
+interface Ethernet151/1/30
+
+interface Ethernet151/1/31
+
+interface Ethernet151/1/32
+
+interface Ethernet151/1/33
+
+interface Ethernet151/1/34
+
+interface Ethernet151/1/35
+
+interface Ethernet151/1/36
+
+interface Ethernet151/1/37
+
+interface Ethernet151/1/38
+
+interface Ethernet151/1/39
+
+interface Ethernet151/1/40
+
+interface Ethernet151/1/41
+
+interface Ethernet151/1/42
+
+interface Ethernet151/1/43
+
+interface Ethernet151/1/44
+
+interface Ethernet151/1/45
+
+interface Ethernet151/1/46
+
+interface Ethernet151/1/47
+
+interface Ethernet151/1/48
+clock timezone MSK 3 0
+cli alias name wr copy running-config startup-config
+cli alias name q exit
+line console
+line vty
+boot kickstart bootflash:/n6000-uk9-kickstart.7.3.5.N1.1.bin
+boot system bootflash:/n6000-uk9.7.3.5.N1.1.bin
+poap transit
+logging logfile device.log 7 size 1000000
+logging server 10.64.0.93
+logging timestamp milliseconds
+logging monitor 7
+
+

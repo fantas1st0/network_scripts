@@ -1,0 +1,30 @@
+
+Capability Codes: R - Router, T - Trans-Bridge, B - Source-Route-Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater,
+                  V - VoIP-Phone, D - Remotely-Managed-Device,
+                  s - Supports-STP-Dispute
+
+
+Device-ID             Local Intrfce Hldtme Capability  Platform         Port ID
+vDCSwitch02.vtb     mgmt0          175    S I       WS-C2960X-48TD-L   Gig1/0/3      
+VrnSrvCat-UF-1      Eth1/19        134    S I       WS-C3750G-24TS     Gig1/0/25     
+VrnSrvCat-UF-1      Eth1/20        134    S I       WS-C3750G-24TS     Gig1/0/26     
+N5K-06-2FOC.vtb(SSI17150J06)
+                    Eth1/29        159    R S I s   N5K-C5548UP        Eth1/29       
+N5K-06-2FOC.vtb(SSI17150J06)
+                    Eth1/30        120    R S I s   N5K-C5548UP        Eth1/30       
+vN77-1-vN7K1(JPG205200FQ)
+                    Eth1/31        139    R S I s   N77-C7710          Eth1/3/3      
+vN77-2-vN7K2(JPG205200BG)
+                    Eth1/32        150    R S I s   N77-C7710          Eth1/3/3      
+vN77-1-vN7K1(JPG205200FQ)
+                    Eth2/1         139    R S I s   N77-C7710          Eth1/3/4      
+vN77-2-vN7K2(JPG205200BG)
+                    Eth2/2         150    R S I s   N77-C7710          Eth1/3/4      
+N5K-06-2FOC.vtb(SSI17150J06)
+                    Eth2/3         150    R S I s   N5K-C5548UP        Eth2/3        
+N5K-06-2FOC.vtb(SSI17150J06)
+                    Eth2/4         159    R S I s   N5K-C5548UP        Eth2/4        
+netappfs03-01       Eth2/10        164    H         FAS3250            e1b           
+netappfs03-02       Eth2/11        163    H         FAS3250            e1b           
+NM-ESXI-VC-04       Eth117/1/9     134    S         VMware ESX         vmnic0        

@@ -1,0 +1,284 @@
+
+Capability codes:
+  (R) Router, (B) Bridge, (T) Telephone, (C) DOCSIS Cable Device
+  (W) WLAN Access Point, (P) Repeater, (S) Station, (O) Other
+Device ID                         Local Intf          Hold-time   Capability  Port ID     
+sw-dp4-data-19.vtb24.ru           Eth8/5              120         B           Eth2/5            
+sw-dp4-data-23.vtb24.ru           Eth8/8              120         B           Eth2/5            
+sw-dp4-data-25.vtb24.ru           Eth8/9              120         B           Eth2/5            
+sw-dp4-data-27.vtb24.ru           Eth8/10             120         B           Eth1/51           
+sw-dp4-data-31.vtb24.ru           Eth8/12             120         BR          Ethernet1/1       
+sw-dp4-data-33.vtb24.ru           Eth8/13             120         B           Eth1/49           
+sw-dp4-core-1.vtb24.ru            Eth8/20             120         BR          Eth7/3            
+sw-dp4-data-20.vtb24.ru           Eth11/5             120         B           Eth2/5            
+sw-dp4-data-24.vtb24.ru           Eth11/8             120         B           Eth2/5            
+sw-dp4-data-26.vtb24.ru           Eth11/9             120         B           Eth2/5            
+sw-dp4-data-28.vtb24.ru           Eth11/10            120         B           Eth1/51           
+sw-dp4-data-32.vtb24.ru           Eth11/12            120         BR          Ethernet1/1       
+sw-dp4-data-34.vtb24.ru           Eth11/13            120         B           Eth1/49           
+sw-dp4-data-12                    Eth11/24            120         BR          Eth11/24          
+sw-dp4-core-2.vtb24.ru            Eth12/20            120         BR          Eth7/3            
+sw-dp4-data-12                    Eth12/24            120         BR          Eth12/24          
+sw-dp4-data-12                    Eth13/23            120         BR          Eth13/23          
+sw-dp4-data-12                    Eth13/24            120         BR          Eth13/24          
+sw-dp4-data-12                    Eth14/23            120         BR          Eth14/23          
+sw-dp4-data-12                    Eth14/24            120         BR          Eth14/24          
+sw-dp4-data-12                    Eth15/23            120         BR          Eth15/23          
+sw-dp4-data-12                    Eth15/24            120         BR          Eth15/24          
+sw-dp4-data-12                    Eth16/23            120         BR          Eth16/23          
+sw-dp4-data-12                    Eth16/24            120         BR          Eth16/24          
+sw-dp4-data-12                    Eth17/23            120         BR          Eth17/23          
+sw-dp4-data-12                    Eth17/24            120         BR          Eth17/24          
+sw-dp4-data-12                    Eth18/23            120         BR          Eth18/23          
+sw-dp4-data-12                    Eth18/24            120         BR          Eth18/24          
+IPBS2                             Eth107/1/16         120         BT          0001.3e13.55bc    
+r-dp4-sla-1.vtb24.ru              Eth109/1/1          120         R           Gi0/0/0.628       
+sw-dp4-data-19.vtb24.ru           Eth109/1/2          120         B           mgmt0             
+vms                               Eth109/1/25         120         S           eth4              
+sw-dp4-data-13.vtb24.ru           Eth109/1/28         120         B           mgmt0             
+r-dp4-sla-1.vtb24.ru              Eth109/1/29         120         R           Gi0               
+ac1f.6b76.dac6                    Eth109/1/30         3601                    ac1f.6b76.dac6    
+sw-dp4-con-bda5.vtb24.ru          Eth111/1/1          120         BR          Ethernet1/1       
+sw-dp4-e62-1.vtb24.ru             Eth111/1/16         120         B           Gi1/0/23          
+sw-dp4-e62-2.vtb24.ru             Eth111/1/17         120         B           Gi1/0/23          
+sw-dp4-data-21.vtb24.ru           Eth112/1/15         120         B           mgmt0             
+e443.4b00.c192                    Eth113/1/34         121                     e443.4b00.c192    
+a4bf.0165.8622                    Eth113/1/36         121                     a4bf.0165.8622    
+a8f9.4b8a.6bfd                    Eth116/1/32         120                     front-port 1/0    
+a8f9.4b8a.630f                    Eth116/1/35         120                     front-port 1/0    
+a400.e2c5.dd6f                    Eth118/1/25         121                     a400.e2c5.dd6f    
+a400.e290.ca7a                    Eth118/1/26         121                     a400.e290.ca7a    
+a400.e26a.bfd8                    Eth118/1/27         121                     a400.e26a.bfd8    
+a400.e2c5.fcf4                    Eth118/1/28         121                     a400.e2c5.fcf4    
+c8a7.7693.47ba                    Eth118/1/29         121                     c8a7.7693.47ba    
+cc64.a6ef.07c5                    Eth118/1/30         121                     cc64.a6ef.07c5    
+cc64.a656.492f                    Eth118/1/31         121                     cc64.a656.492f    
+cc64.a656.496e                    Eth118/1/32         121                     cc64.a656.496e    
+a400.e2c5.f465                    Eth118/1/33         121                     a400.e2c5.f465    
+a400.e2c5.e0be                    Eth118/1/34         121                     a400.e2c5.e0be    
+cc64.a6d4.ffe6                    Eth118/1/35         121                     cc64.a6d4.ffe6    
+sw-dp4-l2dci-1.vtb24.ru           Eth119/1/10         120         BR          mgmt0             
+a400.e2c5.e00f                    Eth119/1/25         121                     a400.e2c5.e00f    
+cc64.a6ef.09a1                    Eth119/1/26         121                     cc64.a6ef.09a1    
+a400.e2c5.e19e                    Eth119/1/28         121                     a400.e2c5.e19e    
+cc64.a6ef.035e                    Eth119/1/29         121                     cc64.a6ef.035e    
+a400.e2c5.e04e                    Eth119/1/31         121                     a400.e2c5.e04e    
+cc64.a6d4.fe3b                    Eth119/1/32         121                     cc64.a6d4.fe3b    
+cc64.a656.4991                    Eth119/1/33         121                     cc64.a656.4991    
+cc64.a656.4983                    Eth119/1/34         121                     cc64.a656.4983    
+c8a7.7693.47f2                    Eth119/1/35         121                     c8a7.7693.47f2    
+dpN5K-AGG01-1                     Eth120/1/1          120         B           mgmt0             
+dPN5K01-1                         Eth120/1/2          120         B           mgmt0             
+a400.e2c5.dfc2                    Eth120/1/34         121                     a400.e2c5.dfc2    
+ac1f.6b78.465e                    Eth121/1/4          3601                    ac1f.6b78.465e    
+a400.e249.5caa                    Eth151/1/3          121                     a400.e249.5caa    
+a400.e249.5b37                    Eth151/1/4          121                     a400.e249.5b37    
+cc64.a6ee.fff8                    Eth151/1/5          121                     cc64.a6ee.fff8    
+a400.e249.598c                    Eth151/1/6          121                     a400.e249.598c    
+d0ef.c13a.acca                    Eth151/1/7          121                     d0ef.c13a.acca    
+a400.e2ef.533e                    Eth151/1/8          121                     a400.e2ef.533e    
+18cf.24fa.bf6b                    Eth151/1/10         121                     18cf.24fa.bf6b    
+a400.e2c5.e037                    Eth151/1/13         121                     a400.e2c5.e037    
+cc64.a656.4950                    Eth151/1/14         121                     cc64.a656.4950    
+e000.8444.96aa                    Eth151/1/18         121                     e000.8444.96aa    
+e000.8444.9798                    Eth151/1/19         121                     e000.8444.9798    
+e000.8444.95bc                    Eth151/1/20         121                     e000.8444.95bc    
+cc64.a6e7.6c9f                    Eth151/1/23         121                     cc64.a6e7.6c9f    
+a400.e249.5bed                    Eth151/1/24         121                     a400.e249.5bed    
+a400.e249.5ab9                    Eth151/1/25         121                     a400.e249.5ab9    
+a400.e249.58eb                    Eth151/1/26         121                     a400.e249.58eb    
+a400.e26a.c5b0                    Eth151/1/27         121                     a400.e26a.c5b0    
+a400.e26a.be2b                    Eth151/1/28         121                     a400.e26a.be2b    
+a400.e2c5.e030                    Eth151/1/33         121                     a400.e2c5.e030    
+e000.8444.99fa                    Eth151/1/35         121                     e000.8444.99fa    
+e000.8444.9ca1                    Eth151/1/36         121                     e000.8444.9ca1    
+a4bf.016b.917e                    Eth152/1/1          121                     a4bf.016b.917e    
+a4bf.016a.8c5d                    Eth152/1/9          121                     a4bf.016a.8c5d    
+a4bf.016a.8b6f                    Eth152/1/10         121                     a4bf.016a.8b6f    
+a4bf.016a.8bc3                    Eth152/1/11         121                     a4bf.016a.8bc3    
+a4bf.016b.8f5c                    Eth152/1/12         121                     a4bf.016b.8f5c    
+a4bf.016a.8cf7                    Eth152/1/13         121                     a4bf.016a.8cf7    
+a4bf.016b.8cfb                    Eth152/1/14         121                     a4bf.016b.8cfb    
+a4bf.016a.8e2b                    Eth152/1/15         121                     a4bf.016a.8e2b    
+a4bf.016b.8e9f                    Eth152/1/16         121                     a4bf.016b.8e9f    
+a4bf.016b.8d25                    Eth152/1/17         121                     a4bf.016b.8d25    
+a4bf.016b.8dbf                    Eth152/1/18         121                     a4bf.016b.8dbf    
+a4bf.016a.8f04                    Eth152/1/19         121                     a4bf.016a.8f04    
+a4bf.016b.9ed0                    Eth152/1/20         121                     a4bf.016b.9ed0    
+a4bf.016b.8c7d                    Eth152/1/21         121                     a4bf.016b.8c7d    
+a4bf.016b.9e8a                    Eth152/1/22         121                     a4bf.016b.9e8a    
+a4bf.016a.9157                    Eth152/1/23         121                     a4bf.016a.9157    
+a4bf.016a.8e8d                    Eth152/1/24         121                     a4bf.016a.8e8d    
+a4bf.016a.8e7f                    Eth152/1/26         121                     a4bf.016a.8e7f    
+e443.4b01.9bac                    Eth152/1/27         121                     e443.4b01.9bac    
+Oracle Dual Port 10Gb/25Gb SFP28 Ethernet Controller fw_version:Eth153/1/1          120         S           0000.0000.0000    
+Oracle Dual Port 10Gb/25Gb SFP28 Ethernet Controller fw_version:Eth153/1/2          120         S           0000.0000.0000    
+Oracle Dual Port 10Gb/25Gb SFP28 Ethernet Controller fw_version:Eth153/1/3          120         S           0010.e0f1.ec4e    
+Oracle Dual Port 10Gb/25Gb SFP28 Ethernet Controller fw_version:Eth153/1/4          120         S           0010.e0e7.72ac    
+Oracle Dual Port 10Gb/25Gb SFP28 Ethernet Controller fw_version:Eth153/1/5          120         S           0010.e0f1.d4f6    
+Oracle Dual Port 10Gb/25Gb SFP28 Ethernet Controller fw_version:Eth153/1/6          120         S           0010.e0f3.4374    
+sw-dp4-con-cft5d.vtb24.ru         Eth8/2/1            120         BR          Ethernet1/51      
+sw-dp4-data-17.vtb24.ru           Eth8/3/1            120         BR          Eth3/37           
+sw-dp4-data-17.vtb24.ru           Eth8/3/2            120         BR          Eth3/38           
+sw-dp4-lpa-data-1                 Eth8/3/3            120         PBR         ethernet1/1/53    
+sw-dp4-data-117.vtb24.ru          Eth8/6/1            120         BR          Eth3/13           
+sw-dp4-data-117.vtb24.ru          Eth8/6/2            120         BR          Eth3/14           
+sw-dp4-data-117.vtb24.ru          Eth8/6/3            120         BR          Eth3/15           
+sw-dp4-data-117.vtb24.ru          Eth8/6/4            120         BR          Eth3/16           
+sw-dp4-data-21.vtb24.ru           Eth8/7/1            120         B           Eth1/1            
+sw-dp4-data-21.vtb24.ru           Eth8/7/2            120         B           Eth1/2            
+sw-dp4-data-21.vtb24.ru           Eth8/7/3            120         B           Eth1/3            
+sw-dp4-data-21.vtb24.ru           Eth8/7/4            120         B           Eth1/4            
+sw-dp4-data-18.vtb24.ru           Eth11/3/1           120         BR          Eth3/37           
+sw-dp4-data-18.vtb24.ru           Eth11/3/2           120         BR          Eth3/38           
+sw-dp4-lpa-data-2                 Eth11/3/3           120         PBR         ethernet1/1/53    
+sw-dp4-data-118.vtb24.ru          Eth11/6/1           120         BR          Eth3/13           
+sw-dp4-data-118.vtb24.ru          Eth11/6/2           120         BR          Eth3/14           
+sw-dp4-data-118.vtb24.ru          Eth11/6/3           120         BR          Eth3/15           
+sw-dp4-data-118.vtb24.ru          Eth11/6/4           120         BR          Eth3/16           
+sw-dp4-data-22.vtb24.ru           Eth11/7/1           120         B           Eth1/1            
+sw-dp4-data-22.vtb24.ru           Eth11/7/2           120         B           Eth1/2            
+sw-dp4-data-22.vtb24.ru           Eth11/7/3           120         B           Eth1/3            
+sw-dp4-data-22.vtb24.ru           Eth11/7/4           120         B           Eth1/4            
+blade107-vc-1                     Eth13/3/1           120                     X5                
+blade124-vc-1                     Eth13/5/1           120                     X5                
+VCEFX7C9816001M                   Eth13/6/1           120                     X5                
+VCEFX7C98160032                   Eth13/6/2           120                     X5                
+blade172-vc-1                     Eth13/6/4           120                     X5                
+VCEFX7C98260056                   Eth13/7/1           120                     X1                
+blade171-vc-1                     Eth13/7/2           120                     X5                
+blade167-vc-1                     Eth13/16/1          120                     X5                
+blade168-vc-1                     Eth13/16/2          120                     X5                
+d8c4.97a4.c3f6                    Eth14/1/1           121                     d8c4.97a4.c3f6    
+d8c4.97a4.c3f8                    Eth14/1/2           121                     d8c4.97a4.c3f8    
+d8c4.9789.f59e                    Eth14/1/3           121                     d8c4.9789.f59e    
+d8c4.9789.f5a0                    Eth14/1/4           121                     d8c4.9789.f5a0    
+d8c4.9789.f55d                    Eth14/2/1           121                     d8c4.9789.f55d    
+d8c4.9789.f55f                    Eth14/2/2           121                     d8c4.9789.f55f    
+b4a9.fc08.7f47                    Eth14/2/3           121                     b4a9.fc08.7f47    
+b4a9.fc08.7f49                    Eth14/2/4           121                     b4a9.fc08.7f49    
+b4a9.fc08.7eed                    Eth14/3/1           121                     b4a9.fc08.7eed    
+b4a9.fc08.7eef                    Eth14/3/2           121                     b4a9.fc08.7eef    
+b4a9.fc08.7ee8                    Eth14/3/3           121                     b4a9.fc08.7ee8    
+b4a9.fc08.7eea                    Eth14/3/4           121                     b4a9.fc08.7eea    
+blade45-vc-1                      Eth14/5/2           120                     X5                
+0010.9b34.f338                    Eth14/6/3           120         S           0010.9b34.f338    
+a0d3.c1c6.82d5                    Eth15/2/1           120         S           a0d3.c1c6.82d5    
+a048.1ce3.b93d                    Eth15/2/2           120         S           a048.1ce3.b93d    
+blade163-vc-1                     Eth15/6/1           120                     X5                
+blade164-vc-1                     Eth15/6/2           120                     X5                
+blade165-vc-1                     Eth15/6/3           120                     X5                
+blade166-vc-1                     Eth15/6/4           120                     X5                
+d8c4.97e9.264b                    Eth15/9/1           121                     d8c4.97e9.264b    
+d8c4.97e9.264d                    Eth15/9/2           121                     d8c4.97e9.264d    
+b4a9.fc08.7ede                    Eth15/9/3           121                     b4a9.fc08.7ede    
+b4a9.fc08.7ee0                    Eth15/9/4           121                     b4a9.fc08.7ee0    
+d8c4.97a4.c3ab                    Eth15/10/1          121                     d8c4.97a4.c3ab    
+d8c4.97a4.c3ad                    Eth15/10/2          121                     d8c4.97a4.c3ad    
+d8c4.97a4.c478                    Eth15/10/3          121                     d8c4.97a4.c478    
+d8c4.97a4.c47a                    Eth15/10/4          121                     d8c4.97a4.c47a    
+0010.9b3b.4e64                    Eth15/11/1          120         S           0010.9b3b.4e64    
+blade114-vc-1                     Eth15/13/1          120                     X5                
+blade121-vc-1                     Eth15/13/2          120                     X5                
+blade128-vc-1                     Eth15/13/3          120                     X5                
+blade135-vc-1                     Eth15/13/4          120                     X5                
+blade115-vc-1                     Eth15/14/1          120                     X5                
+blade122-vc-1                     Eth15/14/2          120                     X5                
+blade129-vc-1                     Eth15/14/3          120                     X5                
+blade136-vc-1                     Eth15/14/4          120                     X5                
+blade116-vc-1                     Eth15/15/1          120                     X5                
+blade123-vc-1                     Eth15/15/2          120                     X5                
+blade130-vc-1                     Eth15/15/3          120                     X5                
+blade137-vc-1                     Eth15/15/4          120                     X5                
+blade117-vc-1                     Eth15/16/1          120                     X5                
+blade131-vc-1                     Eth15/16/3          120                     X5                
+blade138-vc-1                     Eth15/16/4          120                     X5                
+blade118-vc-1                     Eth15/17/1          120                     X5                
+blade125-vc-1                     Eth15/17/2          120                     X5                
+blade132-vc-1                     Eth15/17/3          120                     X5                
+blade139-vc-1                     Eth15/17/4          120                     X5                
+blade119-vc-1                     Eth15/18/1          120                     X5                
+blade126-vc-1                     Eth15/18/2          120                     X5                
+blade133-vc-1                     Eth15/18/3          120                     X5                
+blade140-vc-1                     Eth15/18/4          120                     X5                
+blade120-vc-1                     Eth15/19/1          120                     X5                
+blade127-vc-1                     Eth15/19/2          120                     X5                
+blade134-vc-1                     Eth15/19/3          120                     X5                
+blade141-vc-1                     Eth15/19/4          120                     X5                
+blade39-vc-1 SERIAL NO:3C425200TB BAY:1Eth16/9/1           120                     X5                
+blade38-vc-1 SERIAL NO:3C425200TY BAY:1Eth16/9/2           120                     X5                
+blade53-vc-1 SERIAL NO:3C431600CG BAY:1Eth16/9/3           120                     X5                
+blade76-vc-1 SERIAL NO:3C431600DW BAY:1Eth16/9/4           120                     X5                
+blade77-vc-1 SERIAL NO:3C431600DV BAY:1Eth16/10/1          120                     X5                
+blade78-vc-1 SERIAL NO:3C432800N7 BAY:1Eth16/10/2          120                     X5                
+blade78-vc-1 SERIAL NO:3C431900GK BAY:1Eth16/10/3          120                     X5                
+blade80-vc-1 SERIAL NO:3C431900GS BAY:1Eth16/10/4          120                     X5                
+37383638-3330-5A43-3237-343730365A4AEth16/11/4          121                     PCI-E Slot 1      
+blade101-vc-1                     Eth16/12/1          120                     X5                
+blade33-vc-1 SERIAL NO:3C431600FF BAY:1Eth16/12/2          120                     X5                
+blade102-vc-1                     Eth16/12/3          120                     X5                
+blade81-vc-1 SERIAL NO:3C432300PA BAY:1Eth16/12/4          120                     X5                
+blade103-vc-1                     Eth16/13/1          120                     X5                
+blade82-vc-1 SERIAL NO:3C425200T2 BAY:1Eth16/13/2          120                     X5                
+blade104-vc-1                     Eth16/13/3          120                     X5                
+blade83-vc-1 SERIAL NO:7C934101NX BAY:1Eth16/13/4          120                     X5                
+blade97-vc-1 SERIAL NO:7C94260029 BAY:1Eth16/14/2          120                     X5                
+blade108-vc-1                     Eth16/14/3          120                     X5                
+blade98-vc-1                      Eth16/14/4          120                     X5                
+blade109-vc-1                     Eth16/15/1          120                     X5                
+blade99-vc-1                      Eth16/15/2          120                     X5                
+blade75-vc-1                      Eth16/15/3          120                     X5                
+blade100-vc-1                     Eth16/15/4          120                     X5                
+blade89-vc-1 SERIAL NO:7C940301T2 BAY:1Eth16/16/1          120                     X5                
+blade90-vc-1                      Eth16/16/2          120                     X5                
+blade91-vc-1                      Eth16/16/3          120                     X5                
+blade92-vc-1 SERIAL NO:7C934101N7 BAY:1Eth16/16/4          120                     X5                
+blade93-vc-1                      Eth16/17/1          120                     X5                
+blade94-vc-1 SERIAL NO:7C94260039 BAY:1Eth16/17/2          120                     X5                
+blade95-vc-1 SERIAL NO:7C9426002P BAY:1Eth16/17/3          120                     X5                
+blade96-vc-1 SERIAL NO:7C9426002A BAY:1Eth16/17/4          120                     X5                
+sw-dp4-core-1.vtb24.ru            Eth17/1/1           120         BR          Eth1/21           
+sw-dp4-core-1.vtb24.ru            Eth17/1/2           120         BR          Eth1/22           
+sw-dp4-core-1.vtb24.ru            Eth17/1/3           120         BR          Eth1/23           
+sw-dp4-core-1.vtb24.ru            Eth17/1/4           120         BR          Eth1/24           
+9c1d.36dc.f0b3                    Eth17/2/1           121                     9c1d.36dc.f0b3    
+9c1d.36dc.f0cf                    Eth17/2/2           121                     9c1d.36dc.f0cf    
+b4a9.fc08.7e8e                    Eth17/5/1           121                     b4a9.fc08.7e8e    
+b4a9.fc08.7e90                    Eth17/5/2           121                     b4a9.fc08.7e90    
+d8c4.97e9.26c3                    Eth17/5/3           121                     d8c4.97e9.26c3    
+d8c4.97e9.26c5                    Eth17/5/4           121                     d8c4.97e9.26c5    
+d8c4.97cf.1ad2                    Eth17/6/1           121                     d8c4.97cf.1ad2    
+d8c4.97cf.1ad4                    Eth17/6/2           121                     d8c4.97cf.1ad4    
+0000.0000.0314                    Eth17/6/3           121                     0000.0000.0314    
+0000.0000.0316                    Eth17/6/4           121                     0000.0000.0316    
+d8c4.97e9.2853                    Eth17/7/1           121                     d8c4.97e9.2853    
+d8c4.97e9.2855                    Eth17/7/2           121                     d8c4.97e9.2855    
+a400.e2c5.dfc0                    Eth17/7/3           121                     a400.e2c5.dfc0    
+sw-dp4-data-13.vtb24.ru           Eth17/13/1          120         B           Eth1/1            
+sw-dp4-data-13.vtb24.ru           Eth17/13/2          120         B           Eth1/2            
+sw-dp4-data-13.vtb24.ru           Eth17/13/3          120         B           Eth1/3            
+sw-dp4-data-13.vtb24.ru           Eth17/13/4          120         B           Eth1/4            
+b4a9.fc08.7f06                    Eth17/18/1          121                     b4a9.fc08.7f06    
+b4a9.fc08.7f08                    Eth17/18/2          121                     b4a9.fc08.7f08    
+b4a9.fc08.7f7e                    Eth17/18/3          121                     b4a9.fc08.7f7e    
+b4a9.fc08.7f80                    Eth17/18/4          121                     b4a9.fc08.7f80    
+sw-dp4-core-2.vtb24.ru            Eth18/1/1           120         BR          Eth1/21           
+sw-dp4-core-2.vtb24.ru            Eth18/1/2           120         BR          Eth1/22           
+sw-dp4-core-2.vtb24.ru            Eth18/1/3           120         BR          Eth1/23           
+sw-dp4-core-2.vtb24.ru            Eth18/1/4           120         BR          Eth1/24           
+sw-dp4-data-11                    Eth18/2/2           120         BR          Eth18/2/1         
+f5-dp4-ltm-1.vtb24.ru             Eth18/4/2           120         BR          1.1               
+0090.faec.b27a                    Eth18/10/1          120         S           0090.faec.b27a    
+0090.faec.b28f                    Eth18/10/2          120         S           0090.faec.b28f    
+0090.faec.b23b                    Eth18/10/3          120         S           0090.faec.b23b    
+0010.9b66.6704                    Eth18/10/4          120         S           0010.9b66.6704    
+0010.9b66.685e                    Eth18/12/1          120         S           0010.9b66.685e    
+sw-dp4-data-14.vtb24.ru           Eth18/13/1          120         B           Eth1/1            
+sw-dp4-data-14.vtb24.ru           Eth18/13/2          120         B           Eth1/2            
+sw-dp4-data-14.vtb24.ru           Eth18/13/3          120         B           Eth1/3            
+sw-dp4-data-14.vtb24.ru           Eth18/13/4          120         B           Eth1/4            
+sw-dp4-data-15.vtb24.ru           Eth18/15/1          120         B           Eth1/1            
+sw-dp4-data-15.vtb24.ru           Eth18/15/2          120         B           Eth1/2            
+sw-dp4-data-16.vtb24.ru           Eth18/15/3          120         B           Eth1/1            
+sw-dp4-data-16.vtb24.ru           Eth18/15/4          120         B           Eth1/2            
+Total entries displayed: 278

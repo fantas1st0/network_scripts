@@ -1,0 +1,222 @@
+
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Po4000, Eth1/53, Eth1/54
+531  DATA-HB-ANY                      active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+540  SERVERS-MGMT-MONITORING-NET-INF  active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+557  ~DATA-DOS-ENV-AGENTS             active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+560  ~DATA-DSO-DEB                    active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+564  ~DATA-DSO-ENV                    active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+566  ~DATA-DSO-NTNX-MGMT              active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+576  ~DATA-DOS-CS                     active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+577  ~DATA-DOS-INT                    active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+578  ~DATA-DOS-MON                    active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+600  DATA-MGMT                        active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+601  DATA-BIS-HQ                      active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+602  DATA-BIS-BRANCH                  active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+603  DATA-PLC                         active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+604  DATA-SRV-INF                     active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+605  DATA-SRV-INET                    active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+606  DATA-SRV-APP                     active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+608  data-console                     active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+609  DATA-VMWARE                      active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+625  DATA-BM                          active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+626  DATA-CES-INF                     active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+628  DATA-SRV-APP2                    active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+629  DATA-VMWARE2                     active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+632  DATA-PBX-VOIP                    active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+633  DATA-PBX-APP                     active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+637  DATA-CC-APP                      active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+640  DATA-VC-VCS-VTB                  active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+652  DATA-SRV-EXTRANET                active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+654  DATA-BACKUP                      active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+655  DATA-PLC-OCTOPUS                 active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+657  DATA-SWIFT                       active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+658  DATA-CRONOS                      active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+667  DATA-VTM                         active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+668  DATA-VTB-RF                      active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+678  ~DATA-GLOBAL-OPENSHIFT           active    Po10, Po700, Po4000, Eth1/51
+                                                Eth1/52, Eth1/53, Eth1/54
+                                                Eth1/49/1, Eth1/49/2, Eth1/49/3
+                                                Eth1/49/4, Eth1/50/1, Eth1/50/2
+                                                Eth1/50/3, Eth1/50/4
+
+VLAN Type         Vlan-mode
+---- -----        ----------
+1    enet         CE     
+531  enet         CE     
+540  enet         CE     
+557  enet         CE     
+560  enet         CE     
+564  enet         CE     
+566  enet         CE     
+576  enet         CE     
+577  enet         CE     
+578  enet         CE     
+600  enet         CE     
+601  enet         CE     
+602  enet         CE     
+603  enet         CE     
+604  enet         CE     
+605  enet         CE     
+606  enet         CE     
+608  enet         CE     
+609  enet         CE     
+625  enet         CE     
+626  enet         CE     
+628  enet         CE     
+629  enet         CE     
+632  enet         CE     
+633  enet         CE     
+637  enet         CE     
+640  enet         CE     
+652  enet         CE     
+654  enet         CE     
+655  enet         CE     
+657  enet         CE     
+658  enet         CE     
+667  enet         CE     
+668  enet         CE     
+678  enet         CE     
+
+Remote SPAN VLANs
+-------------------------------------------------------------------------------
+
+Primary  Secondary  Type             Ports
+-------  ---------  ---------------  -------------------------------------------
+
+
+

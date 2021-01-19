@@ -1,0 +1,995 @@
+
+
+VLAN0001
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    36865
+             Address     00de.fb2c.3101
+             Cost        1
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    36865  (priority 36864 sys-id-ext 1)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Desg BKN*1         128.4102 (vPC) P2p *BA_Inc
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN2901
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    35669
+             Address     00de.fb1a.5242
+             Cost        3
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    39765  (priority 36864 sys-id-ext 2901)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+Eth102/1/6       Desg FWD 4         128.1286 Edge P2p 
+Eth102/1/10      Desg FWD 4         128.1290 Edge P2p 
+Eth102/1/11      Desg FWD 4         128.1291 Edge P2p 
+Eth102/1/12      Desg FWD 4         128.1292 Edge P2p 
+Eth102/1/13      Desg FWD 4         128.1293 Edge P2p 
+Eth102/1/35      Desg FWD 2         128.1315 Edge P2p 
+Eth106/1/5       Desg FWD 4         128.1797 Edge P2p 
+Eth106/1/6       Desg FWD 4         128.1798 Edge P2p 
+Eth106/1/15      Desg FWD 4         128.1807 Edge P2p 
+Eth130/1/1       Desg FWD 2         128.1921 Edge P2p 
+Eth130/1/2       Desg FWD 2         128.1922 Edge P2p 
+
+
+VLAN2903
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    39767
+             Address     00de.fb2c.3101
+             Cost        1
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    39767  (priority 36864 sys-id-ext 2903)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Desg BKN*1         128.4102 (vPC) P2p *BA_Inc
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN2904
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    39768
+             Address     00de.fb2c.3101
+             Cost        1
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    39768  (priority 36864 sys-id-ext 2904)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Desg BKN*1         128.4102 (vPC) P2p *BA_Inc
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN2905
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    39769
+             Address     00de.fb2c.3101
+             Cost        1
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    39769  (priority 36864 sys-id-ext 2905)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Desg BKN*1         128.4102 (vPC) P2p *BA_Inc
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN2906
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    39770
+             Address     00de.fb2c.3101
+             Cost        1
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    39770  (priority 36864 sys-id-ext 2906)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Desg BKN*1         128.4102 (vPC) P2p *BA_Inc
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN2907
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    39771
+             Address     00de.fb2c.3101
+             Cost        1
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    39771  (priority 36864 sys-id-ext 2907)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Desg BKN*1         128.4102 (vPC) P2p *BA_Inc
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN2951
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    35719
+             Address     00de.fb1a.5242
+             Cost        3
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    39815  (priority 36864 sys-id-ext 2951)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po99             Desg FWD 1         128.4194 (vPC) P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+Eth102/1/39      Desg FWD 4         128.1319 Edge P2p 
+Eth102/1/40      Desg FWD 4         128.1320 Edge P2p 
+Eth102/1/42      Desg FWD 4         128.1322 Edge P2p 
+Eth102/1/43      Desg FWD 4         128.1323 Edge P2p 
+Eth102/1/44      Desg FWD 4         128.1324 Edge P2p 
+Eth102/1/45      Desg FWD 4         128.1325 Edge P2p 
+Eth104/1/3       Desg FWD 4         128.1539 Edge P2p 
+Eth104/1/18      Desg FWD 4         128.1554 Edge P2p 
+Eth104/1/19      Desg FWD 4         128.1555 Edge P2p 
+Eth104/1/20      Desg FWD 4         128.1556 Edge P2p 
+Eth104/1/21      Desg FWD 4         128.1557 Edge P2p 
+Eth106/1/9       Desg FWD 4         128.1801 Edge P2p 
+Eth106/1/12      Desg FWD 4         128.1804 Edge P2p 
+Eth106/1/14      Desg FWD 4         128.1806 Edge P2p 
+
+
+VLAN2954
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    35722
+             Address     00de.fb1a.5242
+             Cost        3
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    39818  (priority 36864 sys-id-ext 2954)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po315            Desg FWD 1         128.4410 (vPC) Edge P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+Eth102/1/6       Desg FWD 4         128.1286 Edge P2p 
+Eth102/1/7       Desg FWD 4         128.1287 Edge P2p 
+Eth102/1/8       Desg FWD 4         128.1288 Edge P2p 
+Eth102/1/9       Desg FWD 4         128.1289 Edge P2p 
+Eth102/1/10      Desg FWD 4         128.1290 Edge P2p 
+Eth102/1/11      Desg FWD 4         128.1291 Edge P2p 
+Eth102/1/12      Desg FWD 4         128.1292 Edge P2p 
+Eth102/1/13      Desg FWD 4         128.1293 Edge P2p 
+Eth102/1/14      Desg FWD 4         128.1294 Edge P2p 
+Eth102/1/15      Desg FWD 4         128.1295 Edge P2p 
+Eth102/1/16      Desg FWD 4         128.1296 Edge P2p 
+Eth102/1/17      Desg FWD 4         128.1297 Edge P2p 
+Eth106/1/5       Desg FWD 4         128.1797 Edge P2p 
+Eth106/1/7       Desg FWD 4         128.1799 Edge P2p 
+Eth106/1/8       Desg FWD 4         128.1800 Edge P2p 
+Eth106/1/10      Desg FWD 4         128.1802 Edge P2p 
+Eth106/1/13      Desg FWD 4         128.1805 Edge P2p 
+Eth106/1/17      Desg FWD 4         128.1809 Edge P2p 
+
+
+VLAN3061
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    35829
+             Address     00de.fb1a.5242
+             Cost        3
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    39925  (priority 36864 sys-id-ext 3061)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN3104
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    35872
+             Address     00de.fb1a.5242
+             Cost        3
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    39968  (priority 36864 sys-id-ext 3104)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+Eth102/1/10      Desg FWD 4         128.1290 Edge P2p 
+Eth102/1/11      Desg FWD 4         128.1291 Edge P2p 
+Eth102/1/12      Desg FWD 4         128.1292 Edge P2p 
+Eth102/1/13      Desg FWD 4         128.1293 Edge P2p 
+Eth106/1/5       Desg FWD 4         128.1797 Edge P2p 
+
+
+VLAN3105
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    35873
+             Address     00de.fb1a.5242
+             Cost        3
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    39969  (priority 36864 sys-id-ext 3105)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+Eth102/1/10      Desg FWD 4         128.1290 Edge P2p 
+Eth102/1/11      Desg FWD 4         128.1291 Edge P2p 
+Eth102/1/12      Desg FWD 4         128.1292 Edge P2p 
+Eth102/1/13      Desg FWD 4         128.1293 Edge P2p 
+Eth106/1/5       Desg FWD 4         128.1797 Edge P2p 
+Eth106/1/11      Desg FWD 4         128.1803 Edge P2p 
+
+
+VLAN3155
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    35923
+             Address     00de.fb1a.5242
+             Cost        3
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40019  (priority 36864 sys-id-ext 3155)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po421            Desg FWD 1         128.4516 (vPC) Edge P2p 
+Po422            Desg FWD 1         128.4517 (vPC) Edge P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+Eth102/1/36      Desg FWD 4         128.1316 Edge P2p 
+
+
+VLAN3283
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    36051
+             Address     00de.fb1a.5242
+             Cost        3
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40147  (priority 36864 sys-id-ext 3283)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+Eth102/1/10      Desg FWD 4         128.1290 Edge P2p 
+Eth102/1/11      Desg FWD 4         128.1291 Edge P2p 
+Eth102/1/12      Desg FWD 4         128.1292 Edge P2p 
+Eth102/1/13      Desg FWD 4         128.1293 Edge P2p 
+Eth106/1/5       Desg FWD 4         128.1797 Edge P2p 
+
+
+VLAN3285
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    36053
+             Address     00de.fb1a.5242
+             Cost        3
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40149  (priority 36864 sys-id-ext 3285)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN3292
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    36060
+             Address     00de.fb1a.5242
+             Cost        3
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40156  (priority 36864 sys-id-ext 3292)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN3293
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    40157
+             Address     00de.fb2c.3101
+             Cost        1
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40157  (priority 36864 sys-id-ext 3293)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Desg BKN*1         128.4102 (vPC) P2p *BA_Inc
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+Eth104/1/27      Desg FWD 4         128.1563 Edge P2p 
+
+
+VLAN3347
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    36115
+             Address     00de.fb1a.5242
+             Cost        3
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40211  (priority 36864 sys-id-ext 3347)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po421            Desg FWD 1         128.4516 (vPC) Edge P2p 
+Po422            Desg FWD 1         128.4517 (vPC) Edge P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN3519
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    36287
+             Address     00de.fb1a.5242
+             Cost        3
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40383  (priority 36864 sys-id-ext 3519)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po312            Desg FWD 1         128.4407 (vPC) Edge P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN3521
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    36289
+             Address     00de.fb1a.5242
+             Cost        3
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40385  (priority 36864 sys-id-ext 3521)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN3523
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    36291
+             Address     00de.fb1a.5242
+             Cost        3
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40387  (priority 36864 sys-id-ext 3523)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po312            Desg FWD 1         128.4407 (vPC) Edge P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN3529
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    36297
+             Address     00de.fb1a.5242
+             Cost        3
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40393  (priority 36864 sys-id-ext 3529)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po201            Desg FWD 1         128.4296 (vPC) Edge P2p 
+Po202            Desg FWD 1         128.4297 (vPC) Edge P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN3530
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    36298
+             Address     00de.fb1a.5242
+             Cost        3
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40394  (priority 36864 sys-id-ext 3530)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po201            Desg FWD 1         128.4296 (vPC) Edge P2p 
+Po202            Desg FWD 1         128.4297 (vPC) Edge P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN3542
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    36310
+             Address     00de.fb1a.5242
+             Cost        3
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40406  (priority 36864 sys-id-ext 3542)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po312            Desg FWD 1         128.4407 (vPC) Edge P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN3543
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    36311
+             Address     00de.fb1a.5242
+             Cost        3
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40407  (priority 36864 sys-id-ext 3543)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po312            Desg FWD 1         128.4407 (vPC) Edge P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN3544
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    36312
+             Address     00de.fb1a.5242
+             Cost        3
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40408  (priority 36864 sys-id-ext 3544)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po312            Desg FWD 1         128.4407 (vPC) Edge P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN3557
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    36325
+             Address     00de.fb1a.5242
+             Cost        3
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40421  (priority 36864 sys-id-ext 3557)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+Eth102/1/6       Desg FWD 4         128.1286 Edge P2p 
+Eth102/1/7       Desg FWD 4         128.1287 Edge P2p 
+Eth102/1/8       Desg FWD 4         128.1288 Edge P2p 
+Eth102/1/9       Desg FWD 4         128.1289 Edge P2p 
+Eth102/1/10      Desg FWD 4         128.1290 Edge P2p 
+Eth102/1/11      Desg FWD 4         128.1291 Edge P2p 
+Eth102/1/12      Desg FWD 4         128.1292 Edge P2p 
+Eth102/1/13      Desg FWD 4         128.1293 Edge P2p 
+Eth102/1/14      Desg FWD 4         128.1294 Edge P2p 
+Eth102/1/15      Desg FWD 4         128.1295 Edge P2p 
+Eth102/1/16      Desg FWD 4         128.1296 Edge P2p 
+Eth102/1/17      Desg FWD 4         128.1297 Edge P2p 
+Eth106/1/5       Desg FWD 4         128.1797 Edge P2p 
+Eth106/1/8       Desg FWD 4         128.1800 Edge P2p 
+Eth106/1/10      Desg FWD 4         128.1802 Edge P2p 
+
+
+VLAN3558
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    36326
+             Address     00de.fb1a.5242
+             Cost        3
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40422  (priority 36864 sys-id-ext 3558)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+Eth102/1/6       Desg FWD 4         128.1286 Edge P2p 
+Eth102/1/7       Desg FWD 4         128.1287 Edge P2p 
+Eth102/1/8       Desg FWD 4         128.1288 Edge P2p 
+Eth102/1/9       Desg FWD 4         128.1289 Edge P2p 
+Eth102/1/10      Desg FWD 4         128.1290 Edge P2p 
+Eth102/1/11      Desg FWD 4         128.1291 Edge P2p 
+Eth102/1/12      Desg FWD 4         128.1292 Edge P2p 
+Eth102/1/13      Desg FWD 4         128.1293 Edge P2p 
+Eth102/1/14      Desg FWD 4         128.1294 Edge P2p 
+Eth102/1/15      Desg FWD 4         128.1295 Edge P2p 
+Eth102/1/16      Desg FWD 4         128.1296 Edge P2p 
+Eth102/1/17      Desg FWD 4         128.1297 Edge P2p 
+Eth106/1/5       Desg FWD 4         128.1797 Edge P2p 
+Eth106/1/8       Desg FWD 4         128.1800 Edge P2p 
+Eth106/1/10      Desg FWD 4         128.1802 Edge P2p 
+
+
+VLAN3573
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    36341
+             Address     00de.fb1a.5242
+             Cost        3
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40437  (priority 36864 sys-id-ext 3573)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po315            Desg FWD 1         128.4410 (vPC) Edge P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN3597
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    36365
+             Address     00de.fb1a.5242
+             Cost        3
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40461  (priority 36864 sys-id-ext 3597)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+Eth104/1/11      Desg FWD 4         128.1547 Edge P2p 
+
+
+VLAN3656
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    36424
+             Address     00de.fb1a.5242
+             Cost        3
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40520  (priority 36864 sys-id-ext 3656)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po316            Desg FWD 1         128.4411 (vPC) Edge P2p 
+Po317            Desg FWD 1         128.4412 (vPC) Edge P2p 
+Po318            Desg FWD 1         128.4413 (vPC) Edge P2p 
+Po319            Desg FWD 1         128.4414 (vPC) Edge P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN3773
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    7869
+             Address     00de.fb1a.5c42
+             Cost        2
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40637  (priority 36864 sys-id-ext 3773)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN3774
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    7870
+             Address     00de.fb1a.5c42
+             Cost        2
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40638  (priority 36864 sys-id-ext 3774)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po316            Desg FWD 1         128.4411 (vPC) Edge P2p 
+Po317            Desg FWD 1         128.4412 (vPC) Edge P2p 
+Po318            Desg FWD 1         128.4413 (vPC) Edge P2p 
+Po319            Desg FWD 1         128.4414 (vPC) Edge P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN3777
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    7873
+             Address     00de.fb1a.5c42
+             Cost        2
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40641  (priority 36864 sys-id-ext 3777)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po201            Desg FWD 1         128.4296 (vPC) Edge P2p 
+Po202            Desg FWD 1         128.4297 (vPC) Edge P2p 
+Po316            Desg FWD 1         128.4411 (vPC) Edge P2p 
+Po317            Desg FWD 1         128.4412 (vPC) Edge P2p 
+Po318            Desg FWD 1         128.4413 (vPC) Edge P2p 
+Po319            Desg FWD 1         128.4414 (vPC) Edge P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN3791
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    7887
+             Address     00de.fb1a.5c42
+             Cost        2
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40655  (priority 36864 sys-id-ext 3791)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+Eth104/1/6       Desg FWD 4         128.1542 Edge P2p 
+Eth104/1/7       Desg FWD 4         128.1543 Edge P2p 
+Eth104/1/8       Desg FWD 4         128.1544 Edge P2p 
+Eth106/1/1       Desg FWD 4         128.1793 Edge P2p 
+Eth106/1/2       Desg FWD 4         128.1794 Edge P2p 
+Eth106/1/3       Desg FWD 4         128.1795 Edge P2p 
+
+
+VLAN3799
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    7895
+             Address     00de.fb1a.5c42
+             Cost        2
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40663  (priority 36864 sys-id-ext 3799)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po316            Desg FWD 1         128.4411 (vPC) Edge P2p 
+Po317            Desg FWD 1         128.4412 (vPC) Edge P2p 
+Po318            Desg FWD 1         128.4413 (vPC) Edge P2p 
+Po319            Desg FWD 1         128.4414 (vPC) Edge P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+Eth104/1/32      Desg FWD 4         128.1568 Edge P2p 
+Eth104/1/40      Desg FWD 4         128.1576 Edge P2p 
+
+
+VLAN3805
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    7901
+             Address     00de.fb1a.5c42
+             Cost        2
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40669  (priority 36864 sys-id-ext 3805)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+Eth106/1/13      Desg FWD 4         128.1805 Edge P2p 
+
+
+VLAN3806
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    7902
+             Address     00de.fb1a.5c42
+             Cost        2
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40670  (priority 36864 sys-id-ext 3806)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po322            Desg FWD 1         128.4417 (vPC) Edge P2p 
+Po324            Desg FWD 1         128.4419 (vPC) Edge P2p 
+Po325            Desg FWD 1         128.4420 (vPC) Edge P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN3807
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    7903
+             Address     00de.fb1a.5c42
+             Cost        2
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40671  (priority 36864 sys-id-ext 3807)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN3808
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    7904
+             Address     00de.fb1a.5c42
+             Cost        2
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40672  (priority 36864 sys-id-ext 3808)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po307            Desg FWD 1         128.4402 (vPC) Edge P2p 
+Po308            Desg FWD 1         128.4403 (vPC) Edge P2p 
+Po309            Desg FWD 1         128.4404 (vPC) Edge P2p 
+Po310            Desg FWD 1         128.4405 (vPC) Edge P2p 
+Po311            Desg FWD 1         128.4406 (vPC) Edge P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+Eth104/1/25      Desg FWD 2         128.1561 Edge P2p 
+Eth104/1/26      Desg FWD 2         128.1562 Edge P2p 
+
+
+VLAN3824
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    7920
+             Address     00de.fb1a.5c42
+             Cost        2
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40688  (priority 36864 sys-id-ext 3824)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+Eth102/1/10      Desg FWD 4         128.1290 Edge P2p 
+Eth102/1/11      Desg FWD 4         128.1291 Edge P2p 
+Eth102/1/12      Desg FWD 4         128.1292 Edge P2p 
+Eth102/1/13      Desg FWD 4         128.1293 Edge P2p 
+Eth106/1/5       Desg FWD 4         128.1797 Edge P2p 
+
+
+VLAN3829
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    7925
+             Address     00de.fb1a.5c42
+             Cost        2
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40693  (priority 36864 sys-id-ext 3829)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+Eth104/1/47      Desg FWD 4         128.1583 Edge P2p 
+
+
+VLAN3830
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    7926
+             Address     00de.fb1a.5c42
+             Cost        2
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40694  (priority 36864 sys-id-ext 3830)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po313            Desg FWD 1         128.4408 (vPC) Edge P2p 
+Po314            Desg FWD 1         128.4409 (vPC) Edge P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN3854
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    7950
+             Address     00de.fb1a.5c42
+             Cost        2
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40718  (priority 36864 sys-id-ext 3854)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+Eth102/1/47      Desg FWD 4         128.1327 Edge P2p 
+Eth102/1/48      Desg FWD 4         128.1328 Edge P2p 
+Eth104/1/17      Desg FWD 4         128.1553 Edge P2p 
+Eth104/1/22      Desg FWD 4         128.1558 Edge P2p 
+Eth104/1/23      Desg FWD 4         128.1559 Edge P2p 
+Eth104/1/24      Desg FWD 4         128.1560 Edge P2p 
+Eth104/1/29      Desg FWD 4         128.1565 Edge P2p 
+Eth104/1/35      Desg FWD 4         128.1571 Edge P2p 
+
+
+VLAN3868
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    7964
+             Address     00de.fb1a.5c42
+             Cost        2
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40732  (priority 36864 sys-id-ext 3868)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+Eth104/1/13      Desg FWD 4         128.1549 Edge P2p 
+Eth104/1/15      Desg FWD 4         128.1551 Edge P2p 
+
+
+VLAN3926
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    8022
+             Address     00de.fb1a.5c42
+             Cost        2
+             Port        5095 (port-channel1000)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40790  (priority 36864 sys-id-ext 3926)
+             Address     00de.fb2c.ba3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po1000           Root FWD 1         128.5095 (vPC peer-link) P2p 
+Eth104/1/12      Desg FWD 4         128.1548 Edge P2p 
+Eth104/1/14      Desg FWD 4         128.1550 Edge P2p 
+Eth104/1/16      Desg FWD 4         128.1552 Edge P2p 
+

@@ -1,0 +1,481 @@
+
+
+--------------------------------------------------------------------------------
+Port          Native  Status        Port
+              Vlan                  Channel
+--------------------------------------------------------------------------------
+Eth1/1        1       trnk-bndl     Po7
+Eth1/2        1       trnk-bndl     Po7
+Eth1/3        1       trnk-bndl     Po1000
+Eth1/4        1       trnk-bndl     Po1001
+Eth1/5        3533    trnk-bndl     Po619
+Eth1/6        3533    trnk-bndl     Po719
+Eth1/7        3533    trnk-bndl     Po618
+Eth1/8        3533    trnk-bndl     Po718
+Eth1/9        3533    trnk-bndl     Po617
+Eth1/10       3533    trnk-bndl     Po717
+Eth1/11       3533    trnk-bndl     Po616
+Eth1/12       3533    trnk-bndl     Po716
+Eth1/13       3533    trnk-bndl     Po615
+Eth1/14       3533    trnk-bndl     Po715
+Eth1/15       3533    trnk-bndl     Po614
+Eth1/16       3533    trnk-bndl     Po714
+Eth1/17       3533    trnk-bndl     Po613
+Eth1/18       3533    trnk-bndl     Po713
+Eth1/19       3533    trnk-bndl     Po612
+Eth1/20       3533    trnk-bndl     Po712
+Eth1/21       3533    trnk-bndl     Po611
+Eth1/22       3533    trnk-bndl     Po711
+Eth1/23       3533    trnk-bndl     Po610
+Eth1/24       3533    trnk-bndl     Po710
+Eth1/25       3533    trnk-bndl     Po609
+Eth1/26       3533    trnk-bndl     Po709
+Eth1/27       3533    trnk-bndl     Po608
+Eth1/28       3533    trnk-bndl     Po708
+Eth1/29       3533    trnk-bndl     Po607
+Eth1/30       3533    trnk-bndl     Po707
+Eth1/31       3533    trnk-bndl     Po606
+Eth1/32       3533    trnk-bndl     Po706
+Eth2/1        1       trnk-bndl     Po7
+Eth2/2        1       trnk-bndl     Po7
+Eth2/3        1       trnk-bndl     Po1000
+Eth2/4        1       trnk-bndl     Po1001
+Eth2/5        3533    trnk-bndl     Po605
+Eth2/6        3533    trnk-bndl     Po705
+Eth2/7        3533    trnk-bndl     Po604
+Eth2/8        3533    trnk-bndl     Po704
+Eth2/9        3533    trnk-bndl     Po603
+Eth2/10       3533    trnk-bndl     Po703
+Eth2/11       3533    trnk-bndl     Po602
+Eth2/12       3533    trnk-bndl     Po702
+Eth2/13       3533    trnk-bndl     Po601
+Eth2/14       3533    trnk-bndl     Po701
+Eth2/15       3533    trnk-bndl     Po600
+Eth2/16       3533    trnk-bndl     Po700
+Po7           1       trunking      --
+Po600         3533    trunking      --
+Po601         3533    trunking      --
+Po602         3533    trunking      --
+Po603         3533    trunking      --
+Po604         3533    trunking      --
+Po605         3533    trunking      --
+Po606         3533    trunking      --
+Po607         3533    trunking      --
+Po608         3533    trunking      --
+Po609         3533    trunking      --
+Po610         3533    trunking      --
+Po611         3533    trunking      --
+Po612         3533    trunking      --
+Po613         3533    trunking      --
+Po614         3533    trunking      --
+Po615         3533    trunking      --
+Po616         3533    trunking      --
+Po617         3533    trunking      --
+Po618         3533    trunking      --
+Po619         3533    trunking      --
+Po700         3533    trunking      --
+Po701         3533    trunking      --
+Po702         3533    trunking      --
+Po703         3533    trunking      --
+Po704         3533    trunking      --
+Po705         3533    trunking      --
+Po706         3533    trunking      --
+Po707         3533    trunking      --
+Po708         3533    trunking      --
+Po709         3533    trunking      --
+Po710         3533    trunking      --
+Po711         3533    trunking      --
+Po712         3533    trunking      --
+Po713         3533    trunking      --
+Po714         3533    trunking      --
+Po715         3533    trunking      --
+Po716         3533    trunking      --
+Po717         3533    trunking      --
+Po718         3533    trunking      --
+Po719         3533    trunking      --
+Po1000        1       trunking      --
+Po1001        1       trunking      --
+
+--------------------------------------------------------------------------------
+Port          Vlans Allowed on Trunk
+--------------------------------------------------------------------------------
+Eth1/1        2913-2914,3533,3799
+Eth1/2        2913-2914,3533,3799
+Eth1/3        1-2805,2807-3967
+Eth1/4        2806
+Eth1/5        3533
+Eth1/6        2913-2914
+Eth1/7        3533
+Eth1/8        2913-2914
+Eth1/9        3533
+Eth1/10       2913-2914
+Eth1/11       3533
+Eth1/12       2913-2914
+Eth1/13       3533
+Eth1/14       2913-2914
+Eth1/15       3533
+Eth1/16       2913-2914
+Eth1/17       3533
+Eth1/18       2913-2914
+Eth1/19       3533
+Eth1/20       2913-2914
+Eth1/21       3533
+Eth1/22       2913-2914
+Eth1/23       3533
+Eth1/24       2913-2914
+Eth1/25       3533
+Eth1/26       2913-2914
+Eth1/27       3533
+Eth1/28       2913-2914
+Eth1/29       3533
+Eth1/30       2913-2914
+Eth1/31       3533
+Eth1/32       2913-2914
+Eth2/1        2913-2914,3533,3799
+Eth2/2        2913-2914,3533,3799
+Eth2/3        1-2805,2807-3967
+Eth2/4        2806
+Eth2/5        3533
+Eth2/6        2913-2914
+Eth2/7        3533
+Eth2/8        2913-2914
+Eth2/9        3533
+Eth2/10       2913-2914
+Eth2/11       3533
+Eth2/12       2913-2914
+Eth2/13       3533
+Eth2/14       2913-2914
+Eth2/15       3533
+Eth2/16       2913-2914
+Po7           2913-2914,3533,3799
+Po600         3533
+Po601         3533
+Po602         3533
+Po603         3533
+Po604         3533
+Po605         3533
+Po606         3533
+Po607         3533
+Po608         3533
+Po609         3533
+Po610         3533
+Po611         3533
+Po612         3533
+Po613         3533
+Po614         3533
+Po615         3533
+Po616         3533
+Po617         3533
+Po618         3533
+Po619         3533
+Po700         2913-2914
+Po701         2913-2914
+Po702         2913-2914
+Po703         2913-2914
+Po704         2913-2914
+Po705         2913-2914
+Po706         2913-2914
+Po707         2913-2914
+Po708         2913-2914
+Po709         2913-2914
+Po710         2913-2914
+Po711         2913-2914
+Po712         2913-2914
+Po713         2913-2914
+Po714         2913-2914
+Po715         2913-2914
+Po716         2913-2914
+Po717         2913-2914
+Po718         2913-2914
+Po719         2913-2914
+Po1000        1-2805,2807-3967
+Po1001        2806
+
+--------------------------------------------------------------------------------
+Port          Vlans Err-disabled on Trunk
+--------------------------------------------------------------------------------
+Eth1/1        none
+Eth1/2        none
+Eth1/3        none
+Eth1/4        none
+Eth1/5        none
+Eth1/6        none
+Eth1/7        none
+Eth1/8        none
+Eth1/9        none
+Eth1/10       none
+Eth1/11       none
+Eth1/12       none
+Eth1/13       none
+Eth1/14       none
+Eth1/15       none
+Eth1/16       none
+Eth1/17       none
+Eth1/18       none
+Eth1/19       none
+Eth1/20       none
+Eth1/21       none
+Eth1/22       none
+Eth1/23       none
+Eth1/24       none
+Eth1/25       none
+Eth1/26       none
+Eth1/27       none
+Eth1/28       none
+Eth1/29       none
+Eth1/30       none
+Eth1/31       none
+Eth1/32       none
+Eth2/1        none
+Eth2/2        none
+Eth2/3        none
+Eth2/4        none
+Eth2/5        none
+Eth2/6        none
+Eth2/7        none
+Eth2/8        none
+Eth2/9        none
+Eth2/10       none
+Eth2/11       none
+Eth2/12       none
+Eth2/13       none
+Eth2/14       none
+Eth2/15       none
+Eth2/16       none
+Po7           none
+Po600         none
+Po601         none
+Po602         none
+Po603         none
+Po604         none
+Po605         none
+Po606         none
+Po607         none
+Po608         none
+Po609         none
+Po610         none
+Po611         none
+Po612         none
+Po613         none
+Po614         none
+Po615         none
+Po616         none
+Po617         none
+Po618         none
+Po619         none
+Po700         none
+Po701         none
+Po702         none
+Po703         none
+Po704         none
+Po705         none
+Po706         none
+Po707         none
+Po708         none
+Po709         none
+Po710         none
+Po711         none
+Po712         none
+Po713         none
+Po714         none
+Po715         none
+Po716         none
+Po717         none
+Po718         none
+Po719         none
+Po1000        none
+Po1001        none
+
+--------------------------------------------------------------------------------
+Port          STP Forwarding
+--------------------------------------------------------------------------------
+Eth1/1        2913-2914,3533,3799
+Eth1/2        2913-2914,3533,3799
+Eth1/3        1,2913-2914,3533,3799
+Eth1/4        2806
+Eth1/5        3533
+Eth1/6        2913-2914
+Eth1/7        3533
+Eth1/8        2913-2914
+Eth1/9        3533
+Eth1/10       2913-2914
+Eth1/11       3533
+Eth1/12       2913-2914
+Eth1/13       3533
+Eth1/14       2913-2914
+Eth1/15       3533
+Eth1/16       2913-2914
+Eth1/17       3533
+Eth1/18       2913-2914
+Eth1/19       3533
+Eth1/20       2913-2914
+Eth1/21       3533
+Eth1/22       2913-2914
+Eth1/23       3533
+Eth1/24       2913-2914
+Eth1/25       3533
+Eth1/26       2913-2914
+Eth1/27       3533
+Eth1/28       2913-2914
+Eth1/29       3533
+Eth1/30       2913-2914
+Eth1/31       3533
+Eth1/32       2913-2914
+Eth2/1        2913-2914,3533,3799
+Eth2/2        2913-2914,3533,3799
+Eth2/3        1,2913-2914,3533,3799
+Eth2/4        2806
+Eth2/5        3533
+Eth2/6        2913-2914
+Eth2/7        3533
+Eth2/8        2913-2914
+Eth2/9        3533
+Eth2/10       2913-2914
+Eth2/11       3533
+Eth2/12       2913-2914
+Eth2/13       3533
+Eth2/14       2913-2914
+Eth2/15       3533
+Eth2/16       2913-2914
+Po7           2913-2914,3533,3799
+Po600         3533
+Po601         3533
+Po602         3533
+Po603         3533
+Po604         3533
+Po605         3533
+Po606         3533
+Po607         3533
+Po608         3533
+Po609         3533
+Po610         3533
+Po611         3533
+Po612         3533
+Po613         3533
+Po614         3533
+Po615         3533
+Po616         3533
+Po617         3533
+Po618         3533
+Po619         3533
+Po700         2913-2914
+Po701         2913-2914
+Po702         2913-2914
+Po703         2913-2914
+Po704         2913-2914
+Po705         2913-2914
+Po706         2913-2914
+Po707         2913-2914
+Po708         2913-2914
+Po709         2913-2914
+Po710         2913-2914
+Po711         2913-2914
+Po712         2913-2914
+Po713         2913-2914
+Po714         2913-2914
+Po715         2913-2914
+Po716         2913-2914
+Po717         2913-2914
+Po718         2913-2914
+Po719         2913-2914
+Po1000        1,2913-2914,3533,3799
+Po1001        2806
+
+--------------------------------------------------------------------------------
+Port          Vlans in spanning tree forwarding state and not pruned
+--------------------------------------------------------------------------------
+Eth1/1        2913-2914,3533,3799
+Eth1/2        2913-2914,3533,3799
+Eth1/3        1,2913-2914,3533,3799
+Eth1/4        2806
+Eth1/5        3533
+Eth1/6        2913-2914
+Eth1/7        3533
+Eth1/8        2913-2914
+Eth1/9        3533
+Eth1/10       2913-2914
+Eth1/11       3533
+Eth1/12       2913-2914
+Eth1/13       3533
+Eth1/14       2913-2914
+Eth1/15       3533
+Eth1/16       2913-2914
+Eth1/17       3533
+Eth1/18       2913-2914
+Eth1/19       3533
+Eth1/20       2913-2914
+Eth1/21       3533
+Eth1/22       2913-2914
+Eth1/23       3533
+Eth1/24       2913-2914
+Eth1/25       3533
+Eth1/26       2913-2914
+Eth1/27       3533
+Eth1/28       2913-2914
+Eth1/29       3533
+Eth1/30       2913-2914
+Eth1/31       3533
+Eth1/32       2913-2914
+Eth2/1        2913-2914,3533,3799
+Eth2/2        2913-2914,3533,3799
+Eth2/3        1,2913-2914,3533,3799
+Eth2/4        2806
+Eth2/5        3533
+Eth2/6        2913-2914
+Eth2/7        3533
+Eth2/8        2913-2914
+Eth2/9        3533
+Eth2/10       2913-2914
+Eth2/11       3533
+Eth2/12       2913-2914
+Eth2/13       3533
+Eth2/14       2913-2914
+Eth2/15       3533
+Eth2/16       2913-2914
+Po7           2913-2914,3533,3799
+Po600         3533
+Po601         3533
+Po602         3533
+Po603         3533
+Po604         3533
+Po605         3533
+Po606         3533
+Po607         3533
+Po608         3533
+Po609         3533
+Po610         3533
+Po611         3533
+Po612         3533
+Po613         3533
+Po614         3533
+Po615         3533
+Po616         3533
+Po617         3533
+Po618         3533
+Po619         3533
+Po700         2913-2914
+Po701         2913-2914
+Po702         2913-2914
+Po703         2913-2914
+Po704         2913-2914
+Po705         2913-2914
+Po706         2913-2914
+Po707         2913-2914
+Po708         2913-2914
+Po709         2913-2914
+Po710         2913-2914
+Po711         2913-2914
+Po712         2913-2914
+Po713         2913-2914
+Po714         2913-2914
+Po715         2913-2914
+Po716         2913-2914
+Po717         2913-2914
+Po718         2913-2914
+Po719         2913-2914
+Po1000        1,2913-2914,3533,3799
+Po1001        2806
+
+--------------------------------------------------------------------------------
+Port          Vlans Forwarding on FabricPath
+--------------------------------------------------------------------------------

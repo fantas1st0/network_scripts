@@ -1,0 +1,59 @@
+
+
+Total number of tcp sockets: 7
+Active connections (including servers)
+        Protocol State/       Recv-Q/   Local Address(port)/
+                 Context      Send-Q    Remote Address(port)
+[host]: tcp(4/6) LISTEN       0         *(22)
+                 Wildcard     0         *(*) 
+
+[host]: tcp(4/6) LISTEN       0         *(23)
+                 Wildcard     0         *(*) 
+
+[host]: tcp      LISTEN       0         *(161)
+                 Wildcard     0         *(*) 
+
+[host]: tcp(4/6) LISTEN       0         *(161)
+                 Wildcard     0         *(*) 
+
+[host]: tcp      ESTABLISHED  0         10.64.65.82(22)
+                 management   0         10.64.0.111(38292) 
+
+[host]: tcp      TIME_WAIT    0         10.64.65.82(29246)
+                 management   0         10.64.0.68(49) 
+
+[host]: tcp      TIME_WAIT    0         10.64.65.82(29436)
+                 management   0         10.64.0.68(49) 
+
+
+Total number of udp sockets: 12
+Active connections (including servers)
+        Protocol State/       Recv-Q/   Local Address(port)/
+                 Context      Send-Q    Remote Address(port)
+[host]: udp                   0         *(123)
+                 Wildcard     0         *(*) 
+
+[host]: udp6                  0         *(123)
+                 Wildcard     0         *(*) 
+
+[host]: udp6                  0         *(161)
+                 Wildcard     0         *(*) 
+
+[host]: udp                   0         *(161)
+                 Wildcard     0         *(*) 
+
+[host]: udp                   0         *(61334)
+                 Wildcard     0         *(*) 
+
+[host]: udp                   0         *(61425)
+                 Wildcard     0         *(*) 
+
+[host]: udp                   0         127.0.0.1(130)
+                 Wildcard     0         *(*) 
+
+[host]: udp                   0         192.168.1.1(3200)
+                 Wildcard     0         *(*) 
+
+
+Total number of raw sockets: 0
+

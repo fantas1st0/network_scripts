@@ -1,0 +1,41 @@
+
+ OSPF Process ID 5 VRF T2MVNO
+ Total number of neighbors: 1
+ Neighbor ID     Pri State            Up Time  Address         Interface
+ 10.67.255.66    200 FULL/DR          1y14w    10.67.255.66    Vlan891 
+ OSPF Process ID 4 VRF B2B-VPN-S1
+ Total number of neighbors: 2
+ Neighbor ID     Pri State            Up Time  Address         Interface
+ 10.67.84.2        0 FULL/DROTHER     19w0d    10.67.255.62    Vlan887 
+ 10.67.255.59    100 FULL/DR          19w0d    10.67.255.59    Vlan887 
+ OSPF Process ID 3 VRF STERRA-MGMT
+ Total number of neighbors: 3
+ Neighbor ID     Pri State            Up Time  Address         Interface
+ 10.67.255.51    100 FULL/DR          1y14w    10.67.255.51    Vlan846 
+ 217.14.48.8       0 FULL/DROTHER     11w6d    10.67.255.53    Vlan846 
+ 217.14.48.9       0 FULL/DROTHER     27w6d    10.67.255.54    Vlan846 
+ OSPF Process ID 2 VRF FW-UIB-INT
+ Total number of neighbors: 2
+ Neighbor ID     Pri State            Up Time  Address         Interface
+ 10.67.13.3      180 FULL/DR          14w2d    10.67.13.3      Vlan787 
+ 10.67.13.4        0 FULL/DROTHER     1w5d     10.67.13.4      Vlan787 
+ OSPF Process ID 1 VRF default
+ Total number of neighbors: 7
+ Neighbor ID     Pri State            Up Time  Address         Interface
+ 10.8.252.10       1 FULL/ -          14w2d    10.8.1.118      Vlan700 
+ 10.8.252.1        1 FULL/ -          1w1d     10.8.1.209      Po1 
+ 10.8.252.2        1 FULL/ -          2w3d     10.8.1.213      Po2 
+ 10.8.252.60       1 FULL/ -          1y14w    10.8.9.34       Eth3/5 
+ 10.8.252.36       1 FULL/ -          1y14w    10.8.9.2        Eth3/8 
+ 10.8.252.60       1 FULL/ -          1y14w    10.8.9.38       Eth4/5 
+ 10.8.252.36       1 FULL/ -          1y14w    10.8.9.10       Eth4/8 
+ OSPF Process ID 6 VRF VTB-MM
+ Total number of neighbors: 2
+ Neighbor ID     Pri State            Up Time  Address         Interface
+ 10.107.146.253    1 FULL/DR          8w6d     10.107.146.10   Vlan1016 
+ 10.107.146.253    1 FULL/DR          8w6d     10.107.146.14   Vlan1017 
+ OSPF Process ID 6 VRF VTB-PC
+ Total number of neighbors: 2
+ Neighbor ID     Pri State            Up Time  Address         Interface
+ 10.192.139.6      1 FULL/DR          8w6d     10.152.253.2    Vlan1018 
+ 10.192.139.6      1 FULL/DR          8w6d     10.152.253.6    Vlan1019 

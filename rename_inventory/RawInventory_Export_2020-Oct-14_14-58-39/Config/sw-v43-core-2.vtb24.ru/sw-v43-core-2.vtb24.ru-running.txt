@@ -1,0 +1,443 @@
+
+
+!Command: show running-config
+!Time: Fri Oct  2 00:22:27 2020
+
+version 6.2(16)
+poweroff module 7
+power redundancy-mode ps-redundant
+
+hostname sw-v43-core-2
+no system admin-vdc
+install feature-set fex
+install feature-set mpls
+no vdc combined-hostname
+vdc sw-v43-core-2 id 1
+  limit-resource module-type m2xl 
+  allow feature-set mpls
+  allow feature-set fex
+  cpu-share 5
+  allocate interface Ethernet3/1-10
+  allocate interface Ethernet4/1-10
+  limit-resource vlan minimum 16 maximum 4094
+  limit-resource monitor-session minimum 0 maximum 2
+  limit-resource monitor-session-erspan-dst minimum 0 maximum 23
+  limit-resource vrf minimum 2 maximum 4096
+  limit-resource port-channel minimum 0 maximum 768
+  limit-resource u4route-mem minimum 96 maximum 96
+  limit-resource u6route-mem minimum 24 maximum 24
+  limit-resource m4route-mem minimum 58 maximum 58
+  limit-resource m6route-mem minimum 8 maximum 8
+  limit-resource monitor-session-inband-src minimum 0 maximum 1
+  limit-resource anycast_bundleid minimum 0 maximum 16
+  limit-resource monitor-session-mx-exception-src minimum 0 maximum 1
+  limit-resource monitor-session-extended minimum 0 maximum 12
+vdc sw-v43-data-2 id 2
+  limit-resource module-type m2xl f2e 
+  allow feature-set mpls
+  allow feature-set fex
+  cpu-share 5
+  allocate interface Ethernet3/13-17,Ethernet3/19-20
+  allocate interface Ethernet4/13-17,Ethernet4/19-20
+  allocate interface Ethernet5/1-40,Ethernet5/45-48
+  allocate interface Ethernet6/1-40,Ethernet6/45-48
+  boot-order 1
+  limit-resource vlan minimum 16 maximum 4094
+  limit-resource monitor-session minimum 0 maximum 2
+  limit-resource monitor-session-erspan-dst minimum 0 maximum 23
+  limit-resource vrf minimum 2 maximum 4096
+  limit-resource port-channel minimum 0 maximum 768
+  limit-resource u4route-mem minimum 8 maximum 8
+  limit-resource u6route-mem minimum 4 maximum 4
+  limit-resource m4route-mem minimum 8 maximum 8
+  limit-resource m6route-mem minimum 5 maximum 5
+  limit-resource monitor-session-inband-src minimum 0 maximum 1
+  limit-resource anycast_bundleid minimum 0 maximum 16
+  limit-resource monitor-session-mx-exception-src minimum 0 maximum 1
+  limit-resource monitor-session-extended minimum 0 maximum 12
+vdc sw-v43-edge-2 id 3
+  limit-resource module-type m2xl f2e 
+  allow feature-set mpls
+  allow feature-set fex
+  cpu-share 2
+  ha-policy dual-sup restart
+  allocate interface Ethernet3/11-12,Ethernet3/18,Ethernet3/21-24
+  allocate interface Ethernet4/11-12,Ethernet4/18,Ethernet4/21-24
+  allocate interface Ethernet5/41-44
+  allocate interface Ethernet6/41-44
+  boot-order 5
+  limit-resource vlan minimum 16 maximum 4094
+  limit-resource monitor-session minimum 0 maximum 2
+  limit-resource monitor-session-erspan-dst minimum 0 maximum 23
+  limit-resource vrf minimum 2 maximum 4096
+  limit-resource port-channel minimum 0 maximum 768
+  limit-resource u4route-mem minimum 8 maximum 8
+  limit-resource u6route-mem minimum 4 maximum 4
+  limit-resource m4route-mem minimum 8 maximum 8
+  limit-resource m6route-mem minimum 5 maximum 5
+  limit-resource monitor-session-inband-src minimum 0 maximum 1
+  limit-resource anycast_bundleid minimum 0 maximum 16
+  limit-resource monitor-session-mx-exception-src minimum 0 maximum 1
+  limit-resource monitor-session-extended minimum 0 maximum 12
+feature-set fex
+feature-set mpls
+
+feature tacacs+
+feature ospf
+feature mpls ldp
+feature udld
+feature dot1x
+feature lacp
+feature tunnel
+feature cts
+feature bfd
+
+username xxxxxxx password 5 xxxxxxx role network-admin
+username xxxxxxx password 5 xxxxxxx role network-admin
+no password strength-check
+
+banner motd ^sw-v43-core-2 - NEXUS switch^
+
+no ip domain-lookup
+ip domain-name vtb24.ru
+ip tacacs source-interface loopback0
+tacacs-server timeout 10
+tacacs-server host 10.64.0.69 key 7  xxxxxxxx  
+tacacs-server host 10.64.0.68 key 7  xxxxxxxx  
+aaa group server tacacs+ TACACS+ 
+    server 10.64.0.68 
+    server 10.64.0.69 
+    source-interface loopback0
+aaa group server radius aaa-private-sg 
+errdisable recovery interval 60
+errdisable recovery cause link-flap
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause loopback
+errdisable recovery cause storm-control
+errdisable recovery cause security-violation
+errdisable recovery cause psecure-violation
+errdisable recovery cause vpc-peerlink
+errdisable recovery cause failed-port-state
+ip access-list 1
+  10 permit ip 192.168.1.0/24 any 
+  20 permit ip 10.64.0.0/21 any 
+  30 permit ip 10.68.0.0/21 any 
+  40 permit ip 10.69.240.0/24 any 
+  50 permit ip 10.194.160.71/32 any 
+  60 permit ip 10.194.162.33/32 any 
+ip access-list 111
+  10 permit ip 10.64.0.111/32 any 
+diagnostic bootup level bypass
+copp profile strict
+snmp-server contact VTB24 NOC, noc@vtb24.ru
+snmp-server location MSK, Vorontsovskaya 43, Room 503A, Rack 5A-BB, Units 15-29
+snmp-server source-interface trap loopback0
+snmp-server source-interface inform loopback0
+snmp-server user xxxxxxxx network-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server user xxxxxxxx network-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server host 10.194.160.71 traps version 2c xxxxxxxx 
+snmp-server host 10.194.162.33 traps version 2c xxxxxxxx 
+snmp-server host 10.64.1.75 traps version 2c xxxxxxxx 
+snmp-server host 10.64.1.75 use-vrf default
+rmon event 1 log trap public description FATAL(1) owner PMON@FATAL
+rmon event 2 log trap public description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 log trap public description ERROR(3) owner PMON@ERROR
+rmon event 4 log trap public description WARNING(4) owner PMON@WARNING
+rmon event 5 log trap public description INFORMATION(5) owner PMON@INFO
+snmp-server enable traps switchfabric fabric-crc
+snmp-server enable traps callhome event-notify
+snmp-server enable traps callhome smtp-send-fail
+snmp-server enable traps cfs state-change-notif
+snmp-server enable traps cfs merge-failure
+snmp-server enable traps aaa server-state-change
+snmp-server enable traps feature-control FeatureOpStatusChange
+snmp-server enable traps sysmgr cseFailSwCoreNotifyExtended
+snmp-server enable traps config ccmCLIRunningConfigChanged
+snmp-server enable traps snmp authentication
+snmp-server enable traps mpls ldp session-up
+snmp-server enable traps mpls ldp session-down
+snmp-server enable traps link cisco-xcvr-mon-status-chg
+snmp-server enable traps vtp notifs
+snmp-server enable traps vtp vlancreate
+snmp-server enable traps vtp vlandelete
+snmp-server enable traps bridge newroot
+snmp-server enable traps bridge topologychange
+snmp-server enable traps stpx inconsistency
+snmp-server enable traps stpx root-inconsistency
+snmp-server enable traps stpx loop-inconsistency
+snmp-server enable traps system Clock-change-notification
+snmp-server enable traps feature-control ciscoFeatOpStatusChange
+snmp-server community xxxxxxxx group network-admin
+snmp-server community xxxxxxxx group network-operator
+snmp-server community xxxxxxxx group network-operator
+snmp-server community xxxxxxxx use-ipv4acl 1
+snmp-server community xxxxxxxx use-ipv4acl acl1
+snmp-server community xxxxxxxx use-ipv4acl 111
+ntp server 10.9.0.3 key 1
+ntp server 10.9.0.4 key 1
+ntp source-interface  loopback0
+ntp authenticate
+ntp authentication-key 1 md5 xxxxxxxx 7
+ntp trusted-key 1
+aaa authentication login default group TACACS+ 
+aaa authentication login console local 
+aaa authorization config-commands default group TACACS+ local 
+aaa authorization commands default group TACACS+ local 
+aaa accounting default group TACACS+ 
+aaa authentication login invalid-username-log 
+aaa authentication login error-enable 
+tacacs-server directed-request 
+
+vlan 1
+
+udld aggressive
+vrf context management
+  ip route 0.0.0.0/0 10.1.1.1
+port-channel load-balance src-dst ip-l4port   
+
+
+interface mgmt0
+  vrf member management
+
+interface port-channel9
+  description sw-v43-edge-1 [L3][MPLS]
+  mpls ip
+  mtu 9216
+  ip address 10.8.10.53/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+
+interface port-channel10
+  description sw-v43-edge-2 [L3][MPLS]
+  mpls ip
+  mtu 9216
+  ip address 10.8.10.57/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+
+interface port-channel21
+  description sw-v43-core-1 [L3][MPLS]
+  mpls ip
+  mtu 9216
+  ip address 10.8.255.98/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+
+interface port-channel23
+  description sw-v43-data-1 [L3][MPLS]
+  mpls ip
+  mtu 9216
+  ip address 10.8.10.25/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+
+interface port-channel24
+  description sw-v43-data-2 [L3][MPLS]
+  mpls ip
+  mtu 9216
+  ip address 10.8.10.29/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+
+interface Ethernet3/1
+  description sw-m35-core-1 [L3][MPLS]
+  cts manual
+    no propagate-sgt
+    sap pmk 409612e6208007eb0dd9bc62f9dc2bb2882ee2d135188ef524c88e68d7c36c7c
+  mpls ip
+  mtu 9216
+  ip address 10.8.255.86/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet3/2
+  description sw-dp4-core-1 [L3][MPLS]
+  cts manual
+    no propagate-sgt
+    sap pmk 409612e6208007eb0dd9bc62f9dc2bb2882ee2d135188ef524c88e68d7c36c7c
+  mpls ip
+  mtu 9216
+  ip address 10.8.255.106/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet3/3
+  description sw-v43-core-1 [TEC]
+  mtu 9216
+  channel-group 21 mode active
+  no shutdown
+
+interface Ethernet3/4
+  description sw-v43-data-1 [TEC]
+  mtu 9216
+  channel-group 23 mode active
+  no shutdown
+
+interface Ethernet3/5
+  description sw-v43-data-2 [TEC]
+  mtu 9216
+  channel-group 24 mode active
+  no shutdown
+
+interface Ethernet3/6
+  description r-v43-edge-1 [L3][MPLS]
+  mpls ip
+  mtu 9216
+  ip address 10.8.10.41/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet3/7
+  ip ospf passive-interface
+
+interface Ethernet3/8
+
+interface Ethernet3/9
+  description sw-v43-edge-1 [TEC]
+  mtu 9216
+  channel-group 9 mode active
+  no shutdown
+
+interface Ethernet3/10
+  description sw-v43-edge-2 [TEC]
+  mtu 9216
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet4/1
+  description sw-m35-core-2 [L3][MPLS]
+  cts manual
+    no propagate-sgt
+    sap pmk 409612e6208007eb0dd9bc62f9dc2bb2882ee2d135188ef524c88e68d7c36c7c
+  mpls ip
+  mtu 9216
+  ip address 10.8.255.94/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet4/2
+  description sw-dp4-core-2 [L3][MPLS]
+  cts manual
+    no propagate-sgt
+    sap pmk 409612e6208007eb0dd9bc62f9dc2bb2882ee2d135188ef524c88e68d7c36c7c
+  mpls ip
+  mtu 9216
+  ip address 10.8.255.114/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet4/3
+  description sw-v43-core-1 [TEC]
+  mtu 9216
+  channel-group 21 mode active
+  no shutdown
+
+interface Ethernet4/4
+  description sw-v43-data-1 [TEC]
+  mtu 9216
+  channel-group 23 mode active
+  no shutdown
+
+interface Ethernet4/5
+  description sw-v43-data-2 [TEC]
+  mtu 9216
+  channel-group 24 mode active
+  no shutdown
+
+interface Ethernet4/6
+
+interface Ethernet4/7
+  description sw-bnn-lan-2 [L3][MPLS]
+  cts manual
+    no propagate-sgt
+    sap pmk 409612e6208007eb0dd9bc62f9dc2bb2882ee2d135188ef524c88e68d7c36c7c
+  mpls ip
+  mtu 9154
+  ip address 10.8.10.69/30
+  ip ospf dead-interval 4
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet4/8
+
+interface Ethernet4/9
+  description sw-v43-edge-1 [TEC]
+  mtu 9216
+  channel-group 9 mode active
+  no shutdown
+
+interface Ethernet4/10
+  description sw-v43-edge-2 [TEC]
+  mtu 9216
+  channel-group 10 mode active
+  no shutdown
+
+interface loopback0
+  description router-id [L3]
+  ip address 10.8.252.50/32
+  ip router ospf 1 area 0.0.0.0
+clock timezone MSK 3 0
+cli alias name wr copy running-config startup-config
+line console
+line vty
+boot kickstart bootflash:/n7000-s2-kickstart.6.2.16.bin sup-1
+boot system bootflash:/n7000-s2-dk9.6.2.16.bin sup-1
+boot kickstart bootflash:/n7000-s2-kickstart.6.2.16.bin sup-2
+boot system bootflash:/n7000-s2-dk9.6.2.16.bin sup-2
+mpls ldp configuration
+  router-id Lo0 force
+
+monitor erspan origin ip-address 10.8.252.50 global
+no system auto-upgrade epld
+logging logfile device.log 7 size 1000000
+logging server 10.64.0.93
+logging source-interface loopback 0
+logging timestamp milliseconds
+router ospf 1
+  router-id 10.8.252.50
+  log-adjacency-changes
+  timers throttle spf 10 100 5000
+  timers lsa-arrival 80
+  timers throttle lsa 10 100 5000
+  passive-interface default
+
+

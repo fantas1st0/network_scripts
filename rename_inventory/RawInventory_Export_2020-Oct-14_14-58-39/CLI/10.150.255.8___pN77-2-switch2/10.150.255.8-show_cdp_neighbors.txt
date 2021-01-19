@@ -1,0 +1,98 @@
+
+Capability Codes: R - Router, T - Trans-Bridge, B - Source-Route-Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater,
+                  V - VoIP-Phone, D - Remotely-Managed-Device,
+                  s - Supports-STP-Dispute
+
+Device-ID          Local Intrfce  Hldtme Capability  Platform      Port ID
+pDCRoot.vtb         mgmt0          179    R S I     WS-C4500X-32  Ten2/1/28     
+pN5K01-1(FOC2024R0X5)
+                    Eth1/1         153    R S I s   N5K-C5648Q    Eth3/11       
+pN5K01-2(FOC2024R153)
+                    Eth1/2         153    R S I s   N5K-C5648Q    Eth3/11       
+pN5k11-1(FOC2127R1M6)
+                    Eth1/3         165    R S I s   N5K-C5648Q    Eth2/11       
+pN5k11-2(FOC2120R3CM)
+                    Eth1/4         165    R S I s   N5K-C5648Q    Eth2/11       
+pn5K12-1(FOC2409R2HP)
+                    Eth1/5         159    R S I s   N5K-C56128P   Eth1/50       
+pN5K07-1.vtb(FOC2105R17S)
+                    Eth1/9         126    R S I s   N5K-C5648Q    Eth2/11       
+pN9K13-1(FDO24151Q9G)
+                    Eth1/10        136    R S I s   N9K-C93180YC- Eth1/52       
+pN5K09-1(FOC2221R1PK)
+                    Eth1/12        166    R S I s   N5K-C56128P   Eth1/50       
+pN77-2-switch2(JPG203100NQ)
+                    Eth1/17        159    R S s     N77-C7710     Eth1/18       
+pN77-2-switch2(JPG203100NQ)
+                    Eth1/18        159    R S s     N77-C7710     Eth1/17       
+pN77-1-switch1(JPG203100LV)
+                    Eth1/23        160    R S I s   N77-C7710     Eth1/23       
+pN77-1-switch1(JPG203100LV)
+                    Eth1/24        144    R S s     N77-C7710     Eth1/24       
+pN5K01-1(FOC2024R0X5)
+                    Eth2/1         153    R S I s   N5K-C5648Q    Eth4/11       
+pN5K01-2(FOC2024R153)
+                    Eth2/2         153    R S I s   N5K-C5648Q    Eth4/11       
+pn5K12-2(FOC2411R0P6)
+                    Eth2/5         159    R S I s   N5K-C56128P   Eth1/50       
+pN5K07-2.vtb(FOC2053R0SN)
+                    Eth2/9         126    R S I s   N5K-C5648Q    Eth2/11       
+pN9K13-2(FDO24160U5H)
+                    Eth2/10        144    R S I s   N9K-C93180YC- Eth1/52       
+pN5K09-2(FOC2221R1NV)
+                    Eth2/12        130    R S I s   N5K-C56128P   Eth1/50       
+pN5k10-1(FOC1921R05G)
+                    Eth2/13        163    R S I s   N5K-C56128P   Eth1/50       
+pN77-2-otv2(JPG203100NQ)
+                    Eth2/19        168    R S s     N77-C7710     Eth3/20       
+pN77-2-otv2(JPG203100NQ)
+                    Eth2/22        127    R S I s   N77-C7710     Eth3/22       
+pN77-1-switch1(JPG203100LV)
+                    Eth2/23        156    R S I s   N77-C7710     Eth2/23       
+pN77-1-switch1(JPG203100LV)
+                    Eth2/24        144    R S s     N77-C7710     Eth2/24       
+pN5k11-1(FOC2127R1M6)
+                    Eth3/1         165    R S I s   N5K-C5648Q    Eth4/11       
+pN5k11-2(FOC2120R3CM)
+                    Eth3/2         165    R S I s   N5K-C5648Q    Eth4/11       
+pN5k10-2(FOC1841R1J7)
+                    Eth3/13        169    R S I s   N5K-C56128P   Eth1/50       
+pN77-1-switch1(JPG203100LV)
+                    Eth3/18        144    R S s     N77-C7710     Eth3/18       
+pN5k04-1.vtb(SSI17130CA1)
+                    Eth1/6/3       142    S I s     N5K-C5548UP   Eth2/1        
+pN5k04-1.vtb(SSI17130CA1)
+                    Eth1/6/4       142    S I s     N5K-C5548UP   Eth2/2        
+pN5K08-1.vtb(SSI172000M0)
+                    Eth1/13/1      168    R S I s   N5K-C5548UP   Eth1/32       
+pN5K08-1.vtb(SSI172000M0)
+                    Eth1/13/2      172    R S I s   N5K-C5548UP   Eth2/2        
+pN5K08-2.vtb(SSI172000MN)
+                    Eth1/13/3      123    R S I s   N5K-C5548UP   Eth1/32       
+pN5K08-2.vtb(SSI172000MN)
+                    Eth1/13/4      142    R S I s   N5K-C5548UP   Eth2/2        
+pN5k15-2(SSI152403YK)
+                    Eth1/19/1      158    R S I s   N5K-C5548UP   Eth1/1        
+pN5k15-2(SSI152403YK)
+                    Eth1/19/2      158    R S I s   N5K-C5548UP   Eth1/2        
+pN5k15-1(SSI15180DX0)
+                    Eth1/19/3      147    R S I s   N5K-C5548UP   Eth2/1        
+pN5k15-1(SSI15180DX0)
+                    Eth1/19/4      147    R S I s   N5K-C5548UP   Eth2/2        
+pN5k04-2.vtb(SSI17130CAY)
+                    Eth2/6/3       144    S I s     N5K-C5548UP   Eth2/1        
+pN5k04-2.vtb(SSI17130CAY)
+                    Eth2/6/4       144    S I s     N5K-C5548UP   Eth2/2        
+pDCASR01.vtb        Eth2/21/1      144    R         ASR9K Series  Ten0/0/1/2    
+pDCASR02.vtb        Eth2/21/2      175    R         ASR9K Series  Ten0/0/1/2    
+vN77-2-vN7K2(JPG205200BG)
+                    Eth3/16/1      125    R S s     N77-C7710     Eth3/15/1     
+vN77-2-vN7K2(JPG205200BG)
+                    Eth3/16/3      125    R S s     N77-C7710     Eth3/15/3     
+pDCASR01.vtb        Eth3/23/1      163    R         ASR9K Series  Ten0/0/0/5    
+pDCASR01.vtb        Eth3/23/2      166    R         ASR9K Series  Ten0/0/1/1    
+pDCASR02.vtb        Eth3/23/3      156    R         ASR9K Series  Ten0/0/0/5    
+pDCASR02.vtb        Eth3/23/4      160    R         ASR9K Series  Ten0/0/1/1    
+
+Total entries displayed: 48

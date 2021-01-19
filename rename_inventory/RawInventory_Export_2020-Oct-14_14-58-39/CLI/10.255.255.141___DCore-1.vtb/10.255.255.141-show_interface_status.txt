@@ -1,0 +1,15 @@
+
+Port           Name             Status       Vlan         Duplex  Speed Type
+Te2/1        To DCore-2 (TE2/1) connected    trunk        full    10G 10Gbase-LX4
+Te2/2        OTV vN7K2-vOTV-2 3 connected    routed       full    10G 10Gbase-SR
+Te2/3        To ASA-5585 (TE0/9 connected    trunk        full    10G 10Gbase-SR
+Te2/4        pDCASR01.vtb Te0/0 connected    routed       full    10G 10Gbase-LR
+Te4/1                           connected    routed       full    10G 10Gbase-LRM
+Te4/2        V43-MPLS-1-P-1 ETH connected    routed       full    10G 10Gbase-SR
+Te4/3        N77K-01 1/20/1 (ol connected    routed       full    10G 10Gbase-SR
+Te4/4        N77K-02 1/20/1 (ol connected    routed       full    10G 10Gbase-SR
+Gi5/1        vDCRoot            connected    routed       full   1000 1000BaseT
+Gi5/2                           disabled     1            auto   auto 10/100/1000BaseT
+Po2          vN77-1-vOTV-1 Po1  connected    routed     a-full    10G 
+Po10         to DCore-2         connected    trunk      a-full    10G 
+Po30         to DC-MPLS-ASA     connected    trunk      a-full    10G 

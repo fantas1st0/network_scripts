@@ -1,0 +1,809 @@
+
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Po4000, Eth2/3, Eth2/4
+                                                Eth151/1/47
+586  DATA-KT-176                      active    Po10, Po701, Po702, Po712
+                                                Po713, Po714, Po715, Po716
+                                                Po717, Po718, Po719, Po720
+                                                Po721, Po722, Po723, Po724
+                                                Po725, Po726, Po727, Po728
+                                                Po729, Po730, Po731, Po754
+                                                Po755, Po4000, Eth2/3, Eth2/4
+                                                Eth2/5, Eth2/6, Eth151/1/1
+                                                Eth151/1/2, Eth151/1/12
+                                                Eth151/1/13, Eth151/1/14
+                                                Eth151/1/15, Eth151/1/16
+                                                Eth151/1/17, Eth151/1/18
+                                                Eth151/1/19, Eth151/1/20
+                                                Eth151/1/21, Eth151/1/22
+                                                Eth151/1/23, Eth151/1/24
+                                                Eth151/1/25, Eth151/1/26
+                                                Eth151/1/27, Eth151/1/28
+                                                Eth151/1/42, Eth151/1/43
+                                                Eth151/1/44, Eth151/1/45
+                                                Eth151/1/46
+600  DATA-MGMT                        active    Po10, Po701, Po702, Po712
+                                                Po713, Po714, Po715, Po716
+                                                Po717, Po718, Po719, Po720
+                                                Po721, Po722, Po723, Po724
+                                                Po725, Po726, Po727, Po728
+                                                Po729, Po730, Po731, Po732
+                                                Po733, Po754, Po755, Po4000
+                                                Eth2/3, Eth2/4, Eth2/5, Eth2/6
+                                                Eth151/1/1, Eth151/1/2
+                                                Eth151/1/3, Eth151/1/4
+                                                Eth151/1/12, Eth151/1/13
+                                                Eth151/1/14, Eth151/1/15
+                                                Eth151/1/16, Eth151/1/17
+                                                Eth151/1/18, Eth151/1/19
+                                                Eth151/1/20, Eth151/1/21
+                                                Eth151/1/22, Eth151/1/23
+                                                Eth151/1/24, Eth151/1/25
+                                                Eth151/1/26, Eth151/1/27
+                                                Eth151/1/28, Eth151/1/42
+                                                Eth151/1/43, Eth151/1/44
+                                                Eth151/1/45, Eth151/1/46
+601  DATA-BIS-HQ                      active    Po10, Po701, Po702, Po712
+                                                Po713, Po714, Po715, Po716
+                                                Po717, Po718, Po719, Po720
+                                                Po721, Po722, Po723, Po724
+                                                Po725, Po726, Po727, Po728
+                                                Po729, Po730, Po731, Po732
+                                                Po733, Po754, Po755, Po4000
+                                                Eth2/3, Eth2/4, Eth2/5, Eth2/6
+                                                Eth151/1/1, Eth151/1/2
+                                                Eth151/1/3, Eth151/1/4
+                                                Eth151/1/12, Eth151/1/13
+                                                Eth151/1/14, Eth151/1/15
+                                                Eth151/1/16, Eth151/1/17
+                                                Eth151/1/18, Eth151/1/19
+                                                Eth151/1/20, Eth151/1/21
+                                                Eth151/1/22, Eth151/1/23
+                                                Eth151/1/24, Eth151/1/25
+                                                Eth151/1/26, Eth151/1/27
+                                                Eth151/1/28, Eth151/1/42
+                                                Eth151/1/43, Eth151/1/44
+                                                Eth151/1/45, Eth151/1/46
+602  DATA-BIS-BRANCH                  active    Po10, Po701, Po702, Po712
+                                                Po713, Po714, Po715, Po716
+                                                Po717, Po718, Po719, Po720
+                                                Po721, Po722, Po723, Po724
+                                                Po725, Po726, Po727, Po728
+                                                Po729, Po730, Po731, Po732
+                                                Po733, Po754, Po755, Po4000
+                                                Eth2/3, Eth2/4, Eth2/5, Eth2/6
+                                                Eth151/1/1, Eth151/1/2
+                                                Eth151/1/3, Eth151/1/4
+                                                Eth151/1/12, Eth151/1/13
+                                                Eth151/1/14, Eth151/1/15
+                                                Eth151/1/16, Eth151/1/17
+                                                Eth151/1/18, Eth151/1/19
+                                                Eth151/1/20, Eth151/1/21
+                                                Eth151/1/22, Eth151/1/23
+                                                Eth151/1/24, Eth151/1/25
+                                                Eth151/1/26, Eth151/1/27
+                                                Eth151/1/28, Eth151/1/42
+                                                Eth151/1/43, Eth151/1/44
+                                                Eth151/1/45, Eth151/1/46
+603  DATA-PLC                         active    Po10, Po701, Po702, Po712
+                                                Po713, Po714, Po715, Po716
+                                                Po717, Po718, Po719, Po720
+                                                Po721, Po722, Po723, Po724
+                                                Po725, Po726, Po727, Po728
+                                                Po729, Po730, Po731, Po732
+                                                Po733, Po754, Po755, Po4000
+                                                Eth2/3, Eth2/4, Eth2/5, Eth2/6
+                                                Eth151/1/1, Eth151/1/2
+                                                Eth151/1/3, Eth151/1/4
+                                                Eth151/1/12, Eth151/1/13
+                                                Eth151/1/14, Eth151/1/15
+                                                Eth151/1/16, Eth151/1/17
+                                                Eth151/1/18, Eth151/1/19
+                                                Eth151/1/20, Eth151/1/21
+                                                Eth151/1/22, Eth151/1/23
+                                                Eth151/1/24, Eth151/1/25
+                                                Eth151/1/26, Eth151/1/27
+                                                Eth151/1/28, Eth151/1/42
+                                                Eth151/1/43, Eth151/1/44
+                                                Eth151/1/45, Eth151/1/46
+604  DATA-SRV-INF                     active    Po10, Po701, Po702, Po712
+                                                Po713, Po714, Po715, Po716
+                                                Po717, Po718, Po719, Po720
+                                                Po721, Po722, Po723, Po724
+                                                Po725, Po726, Po727, Po728
+                                                Po729, Po730, Po731, Po732
+                                                Po733, Po754, Po755, Po4000
+                                                Eth2/3, Eth2/4, Eth2/5, Eth2/6
+                                                Eth151/1/1, Eth151/1/2
+                                                Eth151/1/3, Eth151/1/4
+                                                Eth151/1/12, Eth151/1/13
+                                                Eth151/1/14, Eth151/1/15
+                                                Eth151/1/16, Eth151/1/17
+                                                Eth151/1/18, Eth151/1/19
+                                                Eth151/1/20, Eth151/1/21
+                                                Eth151/1/22, Eth151/1/23
+                                                Eth151/1/24, Eth151/1/25
+                                                Eth151/1/26, Eth151/1/27
+                                                Eth151/1/28, Eth151/1/42
+                                                Eth151/1/43, Eth151/1/44
+                                                Eth151/1/45, Eth151/1/46
+605  DATA-SRV-INET                    active    Po10, Po701, Po702, Po712
+                                                Po713, Po714, Po715, Po716
+                                                Po717, Po718, Po719, Po720
+                                                Po721, Po722, Po723, Po724
+                                                Po725, Po726, Po727, Po728
+                                                Po729, Po730, Po731, Po732
+                                                Po733, Po754, Po755, Po4000
+                                                Eth2/3, Eth2/4, Eth2/5, Eth2/6
+                                                Eth151/1/1, Eth151/1/2
+                                                Eth151/1/3, Eth151/1/4
+                                                Eth151/1/12, Eth151/1/13
+                                                Eth151/1/14, Eth151/1/15
+                                                Eth151/1/16, Eth151/1/17
+                                                Eth151/1/18, Eth151/1/19
+                                                Eth151/1/20, Eth151/1/21
+                                                Eth151/1/22, Eth151/1/23
+                                                Eth151/1/24, Eth151/1/25
+                                                Eth151/1/26, Eth151/1/27
+                                                Eth151/1/28, Eth151/1/42
+                                                Eth151/1/43, Eth151/1/44
+                                                Eth151/1/45, Eth151/1/46
+606  DATA-SRV-APP                     active    Po10, Po701, Po702, Po712
+                                                Po713, Po714, Po715, Po716
+                                                Po717, Po718, Po719, Po720
+                                                Po721, Po722, Po723, Po724
+                                                Po725, Po726, Po727, Po728
+                                                Po729, Po730, Po731, Po732
+                                                Po733, Po754, Po755, Po4000
+                                                Eth2/3, Eth2/4, Eth2/5, Eth2/6
+                                                Eth151/1/1, Eth151/1/2
+                                                Eth151/1/3, Eth151/1/4
+                                                Eth151/1/12, Eth151/1/13
+                                                Eth151/1/14, Eth151/1/15
+                                                Eth151/1/16, Eth151/1/17
+                                                Eth151/1/18, Eth151/1/19
+                                                Eth151/1/20, Eth151/1/21
+                                                Eth151/1/22, Eth151/1/23
+                                                Eth151/1/24, Eth151/1/25
+                                                Eth151/1/26, Eth151/1/27
+                                                Eth151/1/28, Eth151/1/42
+                                                Eth151/1/43, Eth151/1/44
+                                                Eth151/1/45, Eth151/1/46
+608  ~DATA-CONSOLE                    active    Po10, Po701, Po702, Po712
+                                                Po713, Po714, Po715, Po716
+                                                Po717, Po718, Po719, Po720
+                                                Po721, Po722, Po723, Po724
+                                                Po725, Po726, Po727, Po728
+                                                Po729, Po730, Po731, Po732
+                                                Po733, Po754, Po755, Po4000
+                                                Eth2/3, Eth2/4, Eth2/5, Eth2/6
+                                                Eth151/1/1, Eth151/1/2
+                                                Eth151/1/3, Eth151/1/4
+                                                Eth151/1/12, Eth151/1/13
+                                                Eth151/1/14, Eth151/1/15
+                                                Eth151/1/16, Eth151/1/17
+                                                Eth151/1/18, Eth151/1/19
+                                                Eth151/1/20, Eth151/1/21
+                                                Eth151/1/22, Eth151/1/23
+                                                Eth151/1/24, Eth151/1/25
+                                                Eth151/1/26, Eth151/1/27
+                                                Eth151/1/28, Eth151/1/42
+                                                Eth151/1/43, Eth151/1/44
+                                                Eth151/1/45, Eth151/1/46
+609  DATA-VMWARE                      active    Po10, Po601, Po602, Po612
+                                                Po613, Po614, Po615, Po616
+                                                Po617, Po618, Po619, Po620
+                                                Po621, Po622, Po623, Po624
+                                                Po625, Po626, Po627, Po628
+                                                Po629, Po630, Po631, Po632
+                                                Po633, Po634, Po635, Po636
+                                                Po637, Po638, Po639, Po640
+                                                Po641, Po642, Po643, Po644
+                                                Po645, Po646, Po647, Po648
+                                                Po649, Po650, Po651, Po652
+                                                Po653, Po654, Po655, Po701
+                                                Po702, Po712, Po713, Po714
+                                                Po715, Po716, Po717, Po718
+                                                Po719, Po720, Po721, Po722
+                                                Po723, Po724, Po725, Po726
+                                                Po727, Po728, Po729, Po730
+                                                Po731, Po732, Po733, Po734
+                                                Po735, Po736, Po737, Po738
+                                                Po739, Po740, Po741, Po742
+                                                Po743, Po744, Po745, Po746
+                                                Po747, Po748, Po749, Po750
+                                                Po751, Po752, Po753, Po754
+                                                Po755, Po4000, Eth1/1, Eth1/2
+                                                Eth1/3, Eth1/4, Eth1/5, Eth1/6
+                                                Eth1/7, Eth1/8, Eth1/9, Eth1/10
+                                                Eth1/11, Eth1/12, Eth1/13
+                                                Eth1/14, Eth1/15, Eth1/16
+                                                Eth1/17, Eth1/18, Eth1/19
+                                                Eth1/20, Eth1/21, Eth1/22
+                                                Eth1/23, Eth1/24, Eth1/25
+                                                Eth1/26, Eth1/27, Eth1/28
+                                                Eth1/29, Eth1/30, Eth1/31
+                                                Eth1/32, Eth1/33, Eth1/34
+                                                Eth1/35, Eth1/36, Eth1/37
+                                                Eth1/38, Eth1/39, Eth1/40
+                                                Eth1/41, Eth1/42, Eth1/43
+                                                Eth1/44, Eth1/45, Eth1/46
+                                                Eth2/3, Eth2/4, Eth2/5, Eth2/6
+                                                Eth151/1/1, Eth151/1/2
+                                                Eth151/1/3, Eth151/1/4
+                                                Eth151/1/5, Eth151/1/6
+                                                Eth151/1/7, Eth151/1/8
+                                                Eth151/1/9, Eth151/1/10
+                                                Eth151/1/11, Eth151/1/12
+                                                Eth151/1/13, Eth151/1/14
+                                                Eth151/1/15, Eth151/1/16
+                                                Eth151/1/17, Eth151/1/18
+                                                Eth151/1/19, Eth151/1/20
+                                                Eth151/1/21, Eth151/1/22
+                                                Eth151/1/23, Eth151/1/24
+                                                Eth151/1/25, Eth151/1/26
+                                                Eth151/1/27, Eth151/1/28
+                                                Eth151/1/29, Eth151/1/30
+                                                Eth151/1/31, Eth151/1/32
+                                                Eth151/1/33, Eth151/1/34
+                                                Eth151/1/35, Eth151/1/36
+                                                Eth151/1/37, Eth151/1/38
+                                                Eth151/1/39, Eth151/1/40
+                                                Eth151/1/41, Eth151/1/42
+                                                Eth151/1/43, Eth151/1/44
+                                                Eth151/1/45, Eth151/1/46
+625  DATA-BM                          active    Po10, Po701, Po702, Po712
+                                                Po713, Po714, Po715, Po716
+                                                Po717, Po718, Po719, Po720
+                                                Po721, Po722, Po723, Po724
+                                                Po725, Po726, Po727, Po728
+                                                Po729, Po730, Po731, Po732
+                                                Po733, Po754, Po755, Po4000
+                                                Eth2/3, Eth2/4, Eth2/5, Eth2/6
+                                                Eth151/1/1, Eth151/1/2
+                                                Eth151/1/3, Eth151/1/4
+                                                Eth151/1/12, Eth151/1/13
+                                                Eth151/1/14, Eth151/1/15
+                                                Eth151/1/16, Eth151/1/17
+                                                Eth151/1/18, Eth151/1/19
+                                                Eth151/1/20, Eth151/1/21
+                                                Eth151/1/22, Eth151/1/23
+                                                Eth151/1/24, Eth151/1/25
+                                                Eth151/1/26, Eth151/1/27
+                                                Eth151/1/28, Eth151/1/42
+                                                Eth151/1/43, Eth151/1/44
+                                                Eth151/1/45, Eth151/1/46
+628  DATA-SRV-APP2                    active    Po10, Po701, Po702, Po712
+                                                Po713, Po714, Po715, Po716
+                                                Po717, Po718, Po719, Po720
+                                                Po721, Po722, Po723, Po724
+                                                Po725, Po726, Po727, Po728
+                                                Po729, Po730, Po731, Po732
+                                                Po733, Po754, Po755, Po4000
+                                                Eth2/3, Eth2/4, Eth2/5, Eth2/6
+                                                Eth151/1/1, Eth151/1/2
+                                                Eth151/1/3, Eth151/1/4
+                                                Eth151/1/12, Eth151/1/13
+                                                Eth151/1/14, Eth151/1/15
+                                                Eth151/1/16, Eth151/1/17
+                                                Eth151/1/18, Eth151/1/19
+                                                Eth151/1/20, Eth151/1/21
+                                                Eth151/1/22, Eth151/1/23
+                                                Eth151/1/24, Eth151/1/25
+                                                Eth151/1/26, Eth151/1/27
+                                                Eth151/1/28, Eth151/1/42
+                                                Eth151/1/43, Eth151/1/44
+                                                Eth151/1/45, Eth151/1/46
+629  DATA-VMWARE2                     active    Po10, Po601, Po602, Po612
+                                                Po613, Po614, Po615, Po616
+                                                Po617, Po618, Po619, Po620
+                                                Po621, Po622, Po623, Po624
+                                                Po625, Po626, Po627, Po628
+                                                Po629, Po630, Po631, Po632
+                                                Po633, Po634, Po635, Po636
+                                                Po637, Po638, Po639, Po640
+                                                Po641, Po642, Po643, Po644
+                                                Po645, Po646, Po647, Po648
+                                                Po649, Po650, Po651, Po652
+                                                Po653, Po701, Po702, Po712
+                                                Po713, Po714, Po715, Po716
+                                                Po717, Po718, Po719, Po720
+                                                Po721, Po722, Po723, Po724
+                                                Po725, Po726, Po727, Po728
+                                                Po729, Po730, Po731, Po732
+                                                Po733, Po734, Po735, Po736
+                                                Po737, Po738, Po739, Po740
+                                                Po741, Po742, Po743, Po744
+                                                Po745, Po746, Po747, Po748
+                                                Po749, Po750, Po751, Po752
+                                                Po753, Po4000, Eth1/1, Eth1/2
+                                                Eth1/3, Eth1/4, Eth1/5, Eth1/6
+                                                Eth1/7, Eth1/8, Eth1/9, Eth1/10
+                                                Eth1/11, Eth1/14, Eth1/15
+                                                Eth1/16, Eth1/17, Eth1/18
+                                                Eth1/19, Eth1/20, Eth1/21
+                                                Eth1/22, Eth1/23, Eth1/24
+                                                Eth1/25, Eth1/26, Eth1/27
+                                                Eth1/28, Eth1/29, Eth1/30
+                                                Eth1/31, Eth1/32, Eth1/33
+                                                Eth1/34, Eth1/35, Eth1/36
+                                                Eth1/37, Eth1/38, Eth1/39
+                                                Eth1/40, Eth1/41, Eth1/42
+                                                Eth1/43, Eth1/44, Eth1/45
+                                                Eth1/46, Eth2/3, Eth2/4, Eth2/5
+                                                Eth2/6, Eth151/1/1, Eth151/1/2
+                                                Eth151/1/3, Eth151/1/4
+                                                Eth151/1/5, Eth151/1/6
+                                                Eth151/1/7, Eth151/1/8
+                                                Eth151/1/9, Eth151/1/10
+                                                Eth151/1/11, Eth151/1/14
+                                                Eth151/1/15, Eth151/1/16
+                                                Eth151/1/17, Eth151/1/18
+                                                Eth151/1/19, Eth151/1/20
+                                                Eth151/1/21, Eth151/1/22
+                                                Eth151/1/23, Eth151/1/24
+                                                Eth151/1/25, Eth151/1/26
+                                                Eth151/1/27, Eth151/1/28
+                                                Eth151/1/29, Eth151/1/30
+                                                Eth151/1/31, Eth151/1/32
+                                                Eth151/1/33, Eth151/1/34
+                                                Eth151/1/35, Eth151/1/36
+                                                Eth151/1/37, Eth151/1/38
+                                                Eth151/1/39, Eth151/1/40
+                                                Eth151/1/41, Eth151/1/42
+                                                Eth151/1/43, Eth151/1/44
+                                                Eth151/1/45, Eth151/1/46
+632  DATA-PBX-VOIP                    active    Po10, Po701, Po702, Po712
+                                                Po713, Po714, Po715, Po716
+                                                Po717, Po718, Po719, Po720
+                                                Po721, Po722, Po723, Po724
+                                                Po725, Po726, Po727, Po728
+                                                Po729, Po730, Po731, Po732
+                                                Po733, Po754, Po755, Po4000
+                                                Eth2/3, Eth2/4, Eth2/5, Eth2/6
+                                                Eth151/1/1, Eth151/1/2
+                                                Eth151/1/3, Eth151/1/4
+                                                Eth151/1/12, Eth151/1/13
+                                                Eth151/1/14, Eth151/1/15
+                                                Eth151/1/16, Eth151/1/17
+                                                Eth151/1/18, Eth151/1/19
+                                                Eth151/1/20, Eth151/1/21
+                                                Eth151/1/22, Eth151/1/23
+                                                Eth151/1/24, Eth151/1/25
+                                                Eth151/1/26, Eth151/1/27
+                                                Eth151/1/28, Eth151/1/42
+                                                Eth151/1/43, Eth151/1/44
+                                                Eth151/1/45, Eth151/1/46
+633  DATA-PBX-APP                     active    Po10, Po701, Po702, Po712
+                                                Po713, Po714, Po715, Po716
+                                                Po717, Po718, Po719, Po720
+                                                Po721, Po722, Po723, Po724
+                                                Po725, Po726, Po727, Po728
+                                                Po729, Po730, Po731, Po732
+                                                Po733, Po754, Po755, Po4000
+                                                Eth2/3, Eth2/4, Eth2/5, Eth2/6
+                                                Eth151/1/1, Eth151/1/2
+                                                Eth151/1/3, Eth151/1/4
+                                                Eth151/1/12, Eth151/1/13
+                                                Eth151/1/14, Eth151/1/15
+                                                Eth151/1/16, Eth151/1/17
+                                                Eth151/1/18, Eth151/1/19
+                                                Eth151/1/20, Eth151/1/21
+                                                Eth151/1/22, Eth151/1/23
+                                                Eth151/1/24, Eth151/1/25
+                                                Eth151/1/26, Eth151/1/27
+                                                Eth151/1/28, Eth151/1/42
+                                                Eth151/1/43, Eth151/1/44
+                                                Eth151/1/45, Eth151/1/46
+634  DATA-CONSOLE2                    active    Po10, Po701, Po702, Po712
+                                                Po713, Po714, Po715, Po716
+                                                Po717, Po718, Po719, Po720
+                                                Po721, Po722, Po723, Po724
+                                                Po725, Po726, Po727, Po728
+                                                Po729, Po730, Po731, Po732
+                                                Po733, Po4000, Eth2/3, Eth2/4
+                                                Eth2/5, Eth2/6, Eth151/1/1
+                                                Eth151/1/2, Eth151/1/3
+                                                Eth151/1/4, Eth151/1/14
+                                                Eth151/1/15, Eth151/1/16
+                                                Eth151/1/17, Eth151/1/18
+                                                Eth151/1/19, Eth151/1/20
+                                                Eth151/1/21, Eth151/1/22
+                                                Eth151/1/23, Eth151/1/24
+                                                Eth151/1/25, Eth151/1/26
+                                                Eth151/1/27, Eth151/1/28
+                                                Eth151/1/42, Eth151/1/43
+                                                Eth151/1/44, Eth151/1/45
+                                                Eth151/1/46
+637  DATA-CC-APP                      active    Po10, Po701, Po702, Po712
+                                                Po713, Po714, Po715, Po716
+                                                Po717, Po718, Po719, Po720
+                                                Po721, Po722, Po723, Po724
+                                                Po725, Po726, Po727, Po728
+                                                Po729, Po730, Po731, Po732
+                                                Po733, Po754, Po755, Po4000
+                                                Eth2/3, Eth2/4, Eth2/5, Eth2/6
+                                                Eth151/1/1, Eth151/1/2
+                                                Eth151/1/3, Eth151/1/4
+                                                Eth151/1/12, Eth151/1/13
+                                                Eth151/1/14, Eth151/1/15
+                                                Eth151/1/16, Eth151/1/17
+                                                Eth151/1/18, Eth151/1/19
+                                                Eth151/1/20, Eth151/1/21
+                                                Eth151/1/22, Eth151/1/23
+                                                Eth151/1/24, Eth151/1/25
+                                                Eth151/1/26, Eth151/1/27
+                                                Eth151/1/28, Eth151/1/42
+                                                Eth151/1/43, Eth151/1/44
+                                                Eth151/1/45, Eth151/1/46
+640  DATA-VC-VCS-VTB                  active    Po10, Po701, Po702, Po712
+                                                Po713, Po714, Po715, Po716
+                                                Po717, Po718, Po719, Po720
+                                                Po721, Po722, Po723, Po724
+                                                Po725, Po726, Po727, Po728
+                                                Po729, Po730, Po731, Po732
+                                                Po733, Po754, Po755, Po4000
+                                                Eth2/3, Eth2/4, Eth2/5, Eth2/6
+                                                Eth151/1/1, Eth151/1/2
+                                                Eth151/1/3, Eth151/1/4
+                                                Eth151/1/12, Eth151/1/13
+                                                Eth151/1/14, Eth151/1/15
+                                                Eth151/1/16, Eth151/1/17
+                                                Eth151/1/18, Eth151/1/19
+                                                Eth151/1/20, Eth151/1/21
+                                                Eth151/1/22, Eth151/1/23
+                                                Eth151/1/24, Eth151/1/25
+                                                Eth151/1/26, Eth151/1/27
+                                                Eth151/1/28, Eth151/1/42
+                                                Eth151/1/43, Eth151/1/44
+                                                Eth151/1/45, Eth151/1/46
+652  DATA-SRV-EXTRANET                active    Po10, Po701, Po702, Po712
+                                                Po713, Po714, Po715, Po716
+                                                Po717, Po718, Po719, Po720
+                                                Po721, Po722, Po723, Po724
+                                                Po725, Po726, Po727, Po728
+                                                Po729, Po730, Po731, Po732
+                                                Po733, Po754, Po755, Po4000
+                                                Eth2/3, Eth2/4, Eth2/5, Eth2/6
+                                                Eth151/1/1, Eth151/1/2
+                                                Eth151/1/3, Eth151/1/4
+                                                Eth151/1/12, Eth151/1/13
+                                                Eth151/1/14, Eth151/1/15
+                                                Eth151/1/16, Eth151/1/17
+                                                Eth151/1/18, Eth151/1/19
+                                                Eth151/1/20, Eth151/1/21
+                                                Eth151/1/22, Eth151/1/23
+                                                Eth151/1/24, Eth151/1/25
+                                                Eth151/1/26, Eth151/1/27
+                                                Eth151/1/28, Eth151/1/42
+                                                Eth151/1/43, Eth151/1/44
+                                                Eth151/1/45, Eth151/1/46
+654  DATA-BACKUP                      active    Po10, Po601, Po602, Po612
+                                                Po613, Po614, Po615, Po616
+                                                Po617, Po618, Po619, Po620
+                                                Po621, Po622, Po623, Po624
+                                                Po625, Po626, Po627, Po628
+                                                Po629, Po630, Po631, Po632
+                                                Po633, Po634, Po635, Po636
+                                                Po637, Po638, Po639, Po640
+                                                Po641, Po642, Po643, Po644
+                                                Po645, Po646, Po647, Po648
+                                                Po649, Po650, Po651, Po652
+                                                Po653, Po654, Po655, Po701
+                                                Po702, Po712, Po713, Po714
+                                                Po715, Po716, Po717, Po718
+                                                Po719, Po720, Po721, Po722
+                                                Po723, Po724, Po725, Po726
+                                                Po727, Po728, Po729, Po730
+                                                Po731, Po732, Po733, Po754
+                                                Po755, Po4000, Eth1/1, Eth1/2
+                                                Eth1/3, Eth1/4, Eth1/5, Eth1/6
+                                                Eth1/7, Eth1/8, Eth1/9, Eth1/10
+                                                Eth1/11, Eth1/12, Eth1/13
+                                                Eth1/14, Eth1/15, Eth1/16
+                                                Eth1/17, Eth1/18, Eth1/19
+                                                Eth1/20, Eth1/21, Eth1/22
+                                                Eth1/23, Eth1/24, Eth1/25
+                                                Eth1/26, Eth1/27, Eth1/28
+                                                Eth1/29, Eth1/30, Eth1/31
+                                                Eth1/32, Eth1/33, Eth1/34
+                                                Eth1/35, Eth1/36, Eth1/37
+                                                Eth1/38, Eth1/39, Eth1/40
+                                                Eth1/41, Eth1/42, Eth1/43
+                                                Eth1/44, Eth1/45, Eth1/46
+                                                Eth2/3, Eth2/4, Eth2/5, Eth2/6
+                                                Eth151/1/1, Eth151/1/2
+                                                Eth151/1/3, Eth151/1/4
+                                                Eth151/1/12, Eth151/1/13
+                                                Eth151/1/14, Eth151/1/15
+                                                Eth151/1/16, Eth151/1/17
+                                                Eth151/1/18, Eth151/1/19
+                                                Eth151/1/20, Eth151/1/21
+                                                Eth151/1/22, Eth151/1/23
+                                                Eth151/1/24, Eth151/1/25
+                                                Eth151/1/26, Eth151/1/27
+                                                Eth151/1/28, Eth151/1/42
+                                                Eth151/1/43, Eth151/1/44
+                                                Eth151/1/45, Eth151/1/46
+                                                Eth151/1/48
+655  DATA-PLC-OCTOPUS                 active    Po10, Po701, Po702, Po712
+                                                Po713, Po714, Po715, Po716
+                                                Po717, Po718, Po719, Po720
+                                                Po721, Po722, Po723, Po724
+                                                Po725, Po726, Po727, Po728
+                                                Po729, Po730, Po731, Po732
+                                                Po733, Po754, Po755, Po4000
+                                                Eth2/3, Eth2/4, Eth2/5, Eth2/6
+                                                Eth151/1/1, Eth151/1/2
+                                                Eth151/1/3, Eth151/1/4
+                                                Eth151/1/12, Eth151/1/13
+                                                Eth151/1/14, Eth151/1/15
+                                                Eth151/1/16, Eth151/1/17
+                                                Eth151/1/18, Eth151/1/19
+                                                Eth151/1/20, Eth151/1/21
+                                                Eth151/1/22, Eth151/1/23
+                                                Eth151/1/24, Eth151/1/25
+                                                Eth151/1/26, Eth151/1/27
+                                                Eth151/1/28, Eth151/1/42
+                                                Eth151/1/43, Eth151/1/44
+                                                Eth151/1/45, Eth151/1/46
+656  DATA-PLC-TEST                    active    Po10, Po754, Po755, Po4000
+                                                Eth2/3, Eth2/4, Eth2/5, Eth2/6
+                                                Eth151/1/12, Eth151/1/13
+657  DATA-SWIFT                       active    Po10, Po701, Po702, Po712
+                                                Po713, Po714, Po715, Po716
+                                                Po717, Po718, Po719, Po720
+                                                Po721, Po722, Po723, Po724
+                                                Po725, Po726, Po727, Po728
+                                                Po729, Po730, Po731, Po732
+                                                Po733, Po754, Po755, Po4000
+                                                Eth2/3, Eth2/4, Eth2/5, Eth2/6
+                                                Eth151/1/1, Eth151/1/2
+                                                Eth151/1/3, Eth151/1/4
+                                                Eth151/1/12, Eth151/1/13
+                                                Eth151/1/14, Eth151/1/15
+                                                Eth151/1/16, Eth151/1/17
+                                                Eth151/1/18, Eth151/1/19
+                                                Eth151/1/20, Eth151/1/21
+                                                Eth151/1/22, Eth151/1/23
+                                                Eth151/1/24, Eth151/1/25
+                                                Eth151/1/26, Eth151/1/27
+                                                Eth151/1/28, Eth151/1/42
+                                                Eth151/1/43, Eth151/1/44
+                                                Eth151/1/45, Eth151/1/46
+658  DATA-CRONOS                      active    Po10, Po701, Po702, Po712
+                                                Po713, Po714, Po715, Po716
+                                                Po717, Po718, Po719, Po720
+                                                Po721, Po722, Po723, Po724
+                                                Po725, Po726, Po727, Po728
+                                                Po729, Po730, Po731, Po732
+                                                Po733, Po754, Po755, Po4000
+                                                Eth2/3, Eth2/4, Eth2/5, Eth2/6
+                                                Eth151/1/1, Eth151/1/2
+                                                Eth151/1/3, Eth151/1/4
+                                                Eth151/1/12, Eth151/1/13
+                                                Eth151/1/14, Eth151/1/15
+                                                Eth151/1/16, Eth151/1/17
+                                                Eth151/1/18, Eth151/1/19
+                                                Eth151/1/20, Eth151/1/21
+                                                Eth151/1/22, Eth151/1/23
+                                                Eth151/1/24, Eth151/1/25
+                                                Eth151/1/26, Eth151/1/27
+                                                Eth151/1/28, Eth151/1/42
+                                                Eth151/1/43, Eth151/1/44
+                                                Eth151/1/45, Eth151/1/46
+666  DATA-BPIPE                       active    Po10, Po712, Po713, Po714
+                                                Po715, Po716, Po717, Po718
+                                                Po719, Po730, Po731, Po732
+                                                Po733, Po754, Po755, Po4000
+                                                Eth2/3, Eth2/4, Eth2/5, Eth2/6
+                                                Eth151/1/1, Eth151/1/2
+                                                Eth151/1/3, Eth151/1/4
+                                                Eth151/1/12, Eth151/1/13
+                                                Eth151/1/16, Eth151/1/17
+                                                Eth151/1/18, Eth151/1/42
+                                                Eth151/1/43, Eth151/1/44
+                                                Eth151/1/45, Eth151/1/46
+667  DATA-VTM                         active    Po10, Po701, Po702, Po712
+                                                Po713, Po714, Po715, Po716
+                                                Po717, Po718, Po719, Po720
+                                                Po721, Po722, Po723, Po724
+                                                Po725, Po726, Po727, Po728
+                                                Po729, Po730, Po731, Po732
+                                                Po733, Po754, Po755, Po4000
+                                                Eth2/3, Eth2/4, Eth2/5, Eth2/6
+                                                Eth151/1/1, Eth151/1/2
+                                                Eth151/1/3, Eth151/1/4
+                                                Eth151/1/12, Eth151/1/13
+                                                Eth151/1/14, Eth151/1/15
+                                                Eth151/1/16, Eth151/1/17
+                                                Eth151/1/18, Eth151/1/19
+                                                Eth151/1/20, Eth151/1/21
+                                                Eth151/1/22, Eth151/1/23
+                                                Eth151/1/24, Eth151/1/25
+                                                Eth151/1/26, Eth151/1/27
+                                                Eth151/1/28, Eth151/1/42
+                                                Eth151/1/43, Eth151/1/44
+                                                Eth151/1/45, Eth151/1/46
+668  DATA-VTB-RF                      active    Po10, Po701, Po702, Po712
+                                                Po713, Po714, Po715, Po716
+                                                Po717, Po718, Po719, Po720
+                                                Po721, Po722, Po723, Po724
+                                                Po725, Po726, Po727, Po728
+                                                Po729, Po730, Po731, Po732
+                                                Po733, Po754, Po755, Po4000
+                                                Eth2/3, Eth2/4, Eth2/5, Eth2/6
+                                                Eth151/1/1, Eth151/1/2
+                                                Eth151/1/3, Eth151/1/4
+                                                Eth151/1/12, Eth151/1/13
+                                                Eth151/1/14, Eth151/1/15
+                                                Eth151/1/16, Eth151/1/17
+                                                Eth151/1/18, Eth151/1/19
+                                                Eth151/1/20, Eth151/1/21
+                                                Eth151/1/22, Eth151/1/23
+                                                Eth151/1/24, Eth151/1/25
+                                                Eth151/1/26, Eth151/1/27
+                                                Eth151/1/28, Eth151/1/42
+                                                Eth151/1/43, Eth151/1/44
+                                                Eth151/1/45, Eth151/1/46
+674  DATA-VIEW-VTB-USERS-4            active    Po10, Po730, Po731, Po732
+                                                Po733, Po734, Po735, Po736
+                                                Po737, Po738, Po739, Po740
+                                                Po741, Po742, Po743, Po744
+                                                Po745, Po746, Po747, Po748
+                                                Po749, Po750, Po751, Po752
+                                                Po753, Po4000, Eth2/3, Eth2/4
+                                                Eth2/5, Eth2/6, Eth151/1/1
+                                                Eth151/1/2, Eth151/1/3
+                                                Eth151/1/4, Eth151/1/5
+                                                Eth151/1/6, Eth151/1/7
+                                                Eth151/1/8, Eth151/1/9
+                                                Eth151/1/10, Eth151/1/11
+                                                Eth151/1/29, Eth151/1/30
+                                                Eth151/1/31, Eth151/1/32
+                                                Eth151/1/33, Eth151/1/34
+                                                Eth151/1/35, Eth151/1/36
+                                                Eth151/1/37, Eth151/1/38
+                                                Eth151/1/39, Eth151/1/40
+                                                Eth151/1/41
+679  DATA-RTS-SPB                     active    Po10, Po712, Po713, Po714
+                                                Po715, Po716, Po717, Po718
+                                                Po719, Po730, Po731, Po732
+                                                Po733, Po754, Po755, Po4000
+                                                Eth2/3, Eth2/4, Eth2/5, Eth2/6
+                                                Eth151/1/1, Eth151/1/2
+                                                Eth151/1/3, Eth151/1/4
+                                                Eth151/1/12, Eth151/1/13
+                                                Eth151/1/16, Eth151/1/17
+                                                Eth151/1/18, Eth151/1/42
+                                                Eth151/1/43, Eth151/1/44
+                                                Eth151/1/45, Eth151/1/46
+680  ~DATA-VIEW-ADMIN                 active    Po10, Po701, Po702, Po720
+                                                Po721, Po722, Po723, Po724
+                                                Po725, Po726, Po727, Po728
+                                                Po729, Po4000, Eth2/3, Eth2/4
+                                                Eth2/5, Eth2/6, Eth151/1/14
+                                                Eth151/1/15, Eth151/1/19
+                                                Eth151/1/20, Eth151/1/21
+                                                Eth151/1/22, Eth151/1/23
+                                                Eth151/1/24, Eth151/1/25
+                                                Eth151/1/26, Eth151/1/27
+                                                Eth151/1/28
+682  ~DATA-VIEW-MISC                  active    Po10, Po701, Po702, Po720
+                                                Po721, Po722, Po723, Po724
+                                                Po725, Po726, Po727, Po728
+                                                Po729, Po4000, Eth2/3, Eth2/4
+                                                Eth2/5, Eth2/6, Eth151/1/14
+                                                Eth151/1/15, Eth151/1/19
+                                                Eth151/1/20, Eth151/1/21
+                                                Eth151/1/22, Eth151/1/23
+                                                Eth151/1/24, Eth151/1/25
+                                                Eth151/1/26, Eth151/1/27
+                                                Eth151/1/28
+687  DATA-VIEW-VTB-USERS-3            active    Po10, Po730, Po731, Po732
+                                                Po733, Po734, Po735, Po736
+                                                Po737, Po738, Po739, Po740
+                                                Po741, Po742, Po743, Po744
+                                                Po745, Po746, Po747, Po748
+                                                Po749, Po750, Po751, Po752
+                                                Po753, Po4000, Eth2/3, Eth2/4
+                                                Eth2/5, Eth2/6, Eth151/1/1
+                                                Eth151/1/2, Eth151/1/3
+                                                Eth151/1/4, Eth151/1/5
+                                                Eth151/1/6, Eth151/1/7
+                                                Eth151/1/8, Eth151/1/9
+                                                Eth151/1/10, Eth151/1/11
+                                                Eth151/1/29, Eth151/1/30
+                                                Eth151/1/31, Eth151/1/32
+                                                Eth151/1/33, Eth151/1/34
+                                                Eth151/1/35, Eth151/1/36
+                                                Eth151/1/37, Eth151/1/38
+                                                Eth151/1/39, Eth151/1/40
+                                                Eth151/1/41
+688  DATA-VIEW-VTB-USERS-1            active    Po10, Po730, Po731, Po732
+                                                Po733, Po734, Po735, Po736
+                                                Po737, Po738, Po739, Po740
+                                                Po741, Po742, Po743, Po744
+                                                Po745, Po746, Po747, Po748
+                                                Po749, Po750, Po751, Po752
+                                                Po753, Po4000, Eth2/3, Eth2/4
+                                                Eth2/5, Eth2/6, Eth151/1/1
+                                                Eth151/1/2, Eth151/1/3
+                                                Eth151/1/4, Eth151/1/5
+                                                Eth151/1/6, Eth151/1/7
+                                                Eth151/1/8, Eth151/1/9
+                                                Eth151/1/10, Eth151/1/11
+                                                Eth151/1/29, Eth151/1/30
+                                                Eth151/1/31, Eth151/1/32
+                                                Eth151/1/33, Eth151/1/34
+                                                Eth151/1/35, Eth151/1/36
+                                                Eth151/1/37, Eth151/1/38
+                                                Eth151/1/39, Eth151/1/40
+                                                Eth151/1/41
+689  DATA-VIEW-VTB-USERS-2            active    Po10, Po730, Po731, Po732
+                                                Po733, Po734, Po735, Po736
+                                                Po737, Po738, Po739, Po740
+                                                Po741, Po742, Po743, Po744
+                                                Po745, Po746, Po747, Po748
+                                                Po749, Po750, Po751, Po752
+                                                Po753, Po4000, Eth2/3, Eth2/4
+                                                Eth2/5, Eth2/6, Eth151/1/1
+                                                Eth151/1/2, Eth151/1/3
+                                                Eth151/1/4, Eth151/1/5
+                                                Eth151/1/6, Eth151/1/7
+                                                Eth151/1/8, Eth151/1/9
+                                                Eth151/1/10, Eth151/1/11
+                                                Eth151/1/29, Eth151/1/30
+                                                Eth151/1/31, Eth151/1/32
+                                                Eth151/1/33, Eth151/1/34
+                                                Eth151/1/35, Eth151/1/36
+                                                Eth151/1/37, Eth151/1/38
+                                                Eth151/1/39, Eth151/1/40
+                                                Eth151/1/41
+4093 VPC-PEER-KEEPALIVE               active    Po4001, Eth1/47, Eth1/48
+
+VLAN Type  Vlan-mode
+---- ----- ----------
+1    enet  CE     
+586  enet  CE     
+600  enet  CE     
+601  enet  CE     
+602  enet  CE     
+603  enet  CE     
+604  enet  CE     
+605  enet  CE     
+606  enet  CE     
+608  enet  CE     
+609  enet  CE     
+625  enet  CE     
+628  enet  CE     
+629  enet  CE     
+632  enet  CE     
+633  enet  CE     
+634  enet  CE     
+637  enet  CE     
+640  enet  CE     
+652  enet  CE     
+654  enet  CE     
+655  enet  CE     
+656  enet  CE     
+657  enet  CE     
+658  enet  CE     
+666  enet  CE     
+667  enet  CE     
+668  enet  CE     
+674  enet  CE     
+679  enet  CE     
+680  enet  CE     
+682  enet  CE     
+687  enet  CE     
+688  enet  CE     
+689  enet  CE     
+4093 enet  CE     
+Primary  Secondary  Type             Ports
+-------  ---------  ---------------  -------------------------------------------
+
+
+

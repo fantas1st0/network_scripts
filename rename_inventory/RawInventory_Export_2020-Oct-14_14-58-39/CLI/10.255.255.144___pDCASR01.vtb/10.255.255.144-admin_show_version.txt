@@ -1,0 +1,370 @@
+
+Tue Oct 13 20:14:33.280 MSK
+
+Cisco IOS XR Software, Version 6.0.2[Default]
+Copyright (c) 2016 by Cisco Systems, Inc.
+
+ROM: System Bootstrap, Version 0.73(c) 1994-2012 by Cisco Systems,  Inc.
+
+
+pDCASR01 uptime is 4 years, 1 day, 8 hours, 33 minutes
+System image file is "disk0:asr9k-os-mbi-6.0.2/0x100305/mbiasr9k-rsp3.vm"
+
+cisco ASR9K Series (Intel 686 F6M14S4) processor with 8388608K bytes of memory.
+Intel 686 F6M14S4 processor at 1729MHz, Revision 2.174
+ASR 9006 4 Line Card Slot Chassis with V2 AC PEM
+
+2 Management Ethernet
+1 FastEthernet
+16 TenGigE
+16 DWDM controller(s)
+16 WANPHY controller(s)
+503k bytes of non-volatile configuration memory.
+6271M bytes of hard disk.
+12510192k bytes of disk0: (Sector size 512 bytes).
+
+Configuration register on node 0/RSP0/CPU0 is 0x2102
+Boot device on node 0/RSP0/CPU0 is disk0:
+Package active on node 0/RSP0/CPU0:
+iosxr-adv-video, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-adv-video-6.0.2
+    Built on Sun Jul 10 16:22:10 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-adv-video-supp, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-adv-video-supp-6.0.2
+    Built on Sun Jul 10 16:22:10 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-video-px, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-video-px-6.0.2
+    Built on Sun Jul 10 16:22:13 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-service, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-service-6.0.2
+    Built on Sun Jul 10 16:22:15 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-service-supp, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-service-supp-6.0.2
+    Built on Sun Jul 10 16:22:15 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-services-px, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-services-px-6.0.2
+    Built on Sun Jul 10 16:22:20 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-optics-supp, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-optics-supp-6.0.2
+    Built on Sun Jul 10 16:22:08 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-optic-px, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-optic-px-6.0.2
+    Built on Sun Jul 10 16:22:09 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-mpls, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-mpls-6.0.2
+    Built on Sun Jul 10 15:17:27 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-mpls-px, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-mpls-px-6.0.2
+    Built on Sun Jul 10 15:17:45 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-infra, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-infra-6.0.2
+    Built on Sun Jul 10 15:11:49 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-fwding, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-fwding-6.0.2
+    Built on Sun Jul 10 15:11:51 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-routing, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-routing-6.0.2
+    Built on Sun Jul 10 15:11:52 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-diags, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-diags-6.0.2
+    Built on Sun Jul 10 15:11:52 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-ce, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-ce-6.0.2
+    Built on Sun Jul 10 15:11:53 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-gcp-fwding, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-gcp-fwding-6.0.2
+    Built on Sun Jul 10 15:12:04 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-common-pd-fib, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-common-pd-fib-6.0.2
+    Built on Sun Jul 10 15:11:53 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-os-mbi, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-os-mbi-6.0.2
+    Built on Sun Jul 10 15:13:22 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-base, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-base-6.0.2
+    Built on Sun Jul 10 15:12:06 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-fwding, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-fwding-6.0.2
+    Built on Sun Jul 10 15:12:09 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-diags-supp, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-diags-supp-6.0.2
+    Built on Sun Jul 10 15:12:15 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-scfclient, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-scfclient-6.0.2
+    Built on Sun Jul 10 15:12:17 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-cpp, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-cpp-6.0.2
+    Built on Sun Jul 10 15:11:53 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-ce, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-ce-6.0.2
+    Built on Sun Jul 10 15:12:13 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-mini-px, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-mini-px-6.0.2
+    Built on Sun Jul 10 15:17:11 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-mgbl, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-mgbl-6.0.2
+    Built on Sun Jul 10 15:18:07 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-mgbl-supp, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-mgbl-supp-6.0.2
+    Built on Sun Jul 10 15:18:07 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-mgbl-px, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-mgbl-px-6.0.2
+    Built on Sun Jul 10 15:18:24 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-mcast, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-mcast-6.0.2
+    Built on Sun Jul 10 15:17:47 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-mcast-supp, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-mcast-supp-6.0.2
+    Built on Sun Jul 10 15:17:47 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-mcast-px, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-mcast-px-6.0.2
+    Built on Sun Jul 10 15:18:05 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-li, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-li-6.0.2
+    Built on Sun Jul 10 17:59:42 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-li, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-li-6.0.2
+    Built on Sun Jul 10 17:59:42 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-li-px, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-li-px-6.0.2
+    Built on Sun Jul 10 17:59:44 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-security, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-security-6.0.2
+    Built on Sun Jul 10 17:31:00 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-k9sec-supp, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-k9sec-supp-6.0.2
+    Built on Sun Jul 10 17:31:00 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-k9sec-px, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-k9sec-px-6.0.2
+    Built on Sun Jul 10 17:31:10 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-fpd, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-fpd-6.0.2
+    Built on Sun Jul 10 16:21:19 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-fpd-px, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-fpd-px-6.0.2
+    Built on Sun Jul 10 16:22:01 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9K-doc-supp, V 6.0.2[Default], Cisco Systems, at disk0:asr9K-doc-supp-6.0.2
+    Built on Sun Jul 10 16:21:12 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-doc-px, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-doc-px-6.0.2
+    Built on Sun Jul 10 16:21:18 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-bng, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-bng-6.0.2
+    Built on Sun Jul 10 16:21:00 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-bng, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-bng-6.0.2
+    Built on Sun Jul 10 16:21:00 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-bng-px, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-bng-px-6.0.2
+    Built on Sun Jul 10 16:21:11 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-9000v-nV-supp, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-9000v-nV-supp-6.0.2
+    Built on Sun Jul 10 16:22:21 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-9000v-nV-px, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-9000v-nV-px-6.0.2
+    Built on Sun Jul 10 16:22:27 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-services-infra, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-services-infra-6.0.2
+    Built on Sun Jul 10 19:29:47 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+Boot device on node 0/0/CPU0 is mem:
+Package active on node 0/0/CPU0:
+iosxr-adv-video, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-adv-video-6.0.2
+    Built on Sun Jul 10 16:22:10 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-adv-video-supp, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-adv-video-supp-6.0.2
+    Built on Sun Jul 10 16:22:10 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-video-px, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-video-px-6.0.2
+    Built on Sun Jul 10 16:22:13 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-service, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-service-6.0.2
+    Built on Sun Jul 10 16:22:15 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-service-supp, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-service-supp-6.0.2
+    Built on Sun Jul 10 16:22:15 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-services-px, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-services-px-6.0.2
+    Built on Sun Jul 10 16:22:20 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-optics-supp, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-optics-supp-6.0.2
+    Built on Sun Jul 10 16:22:08 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-optic-px, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-optic-px-6.0.2
+    Built on Sun Jul 10 16:22:09 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-mpls, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-mpls-6.0.2
+    Built on Sun Jul 10 15:17:27 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-mpls-px, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-mpls-px-6.0.2
+    Built on Sun Jul 10 15:17:45 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-infra, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-infra-6.0.2
+    Built on Sun Jul 10 15:11:49 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-fwding, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-fwding-6.0.2
+    Built on Sun Jul 10 15:11:51 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-routing, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-routing-6.0.2
+    Built on Sun Jul 10 15:11:52 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-diags, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-diags-6.0.2
+    Built on Sun Jul 10 15:11:52 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-ce, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-ce-6.0.2
+    Built on Sun Jul 10 15:11:53 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-gcp-fwding, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-gcp-fwding-6.0.2
+    Built on Sun Jul 10 15:12:04 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-common-pd-fib, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-common-pd-fib-6.0.2
+    Built on Sun Jul 10 15:11:53 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-os-mbi, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-os-mbi-6.0.2
+    Built on Sun Jul 10 15:13:22 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-base, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-base-6.0.2
+    Built on Sun Jul 10 15:12:06 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-fwding, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-fwding-6.0.2
+    Built on Sun Jul 10 15:12:09 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-diags-supp, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-diags-supp-6.0.2
+    Built on Sun Jul 10 15:12:15 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-scfclient, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-scfclient-6.0.2
+    Built on Sun Jul 10 15:12:17 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-cpp, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-cpp-6.0.2
+    Built on Sun Jul 10 15:11:53 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-ce, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-ce-6.0.2
+    Built on Sun Jul 10 15:12:13 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-mini-px, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-mini-px-6.0.2
+    Built on Sun Jul 10 15:17:11 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-mcast, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-mcast-6.0.2
+    Built on Sun Jul 10 15:17:47 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-mcast-supp, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-mcast-supp-6.0.2
+    Built on Sun Jul 10 15:17:47 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-mcast-px, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-mcast-px-6.0.2
+    Built on Sun Jul 10 15:18:05 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-li, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-li-6.0.2
+    Built on Sun Jul 10 17:59:42 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-li, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-li-6.0.2
+    Built on Sun Jul 10 17:59:42 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-li-px, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-li-px-6.0.2
+    Built on Sun Jul 10 17:59:44 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-security, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-security-6.0.2
+    Built on Sun Jul 10 17:31:00 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-k9sec-supp, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-k9sec-supp-6.0.2
+    Built on Sun Jul 10 17:31:00 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-k9sec-px, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-k9sec-px-6.0.2
+    Built on Sun Jul 10 17:31:10 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+iosxr-bng, V 6.0.2[Default], Cisco Systems, at disk0:iosxr-bng-6.0.2
+    Built on Sun Jul 10 16:21:00 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-bng, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-bng-6.0.2
+    Built on Sun Jul 10 16:21:00 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-bng-px, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-bng-px-6.0.2
+    Built on Sun Jul 10 16:21:11 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+
+asr9k-services-infra, V 6.0.2[Default], Cisco Systems, at disk0:asr9k-services-infra-6.0.2
+    Built on Sun Jul 10 19:29:47 MSK 2016
+    By iox-lnx-005 in /auto/srcarchive12/production/6.0.2/asr9k-px/workspace for pie
+

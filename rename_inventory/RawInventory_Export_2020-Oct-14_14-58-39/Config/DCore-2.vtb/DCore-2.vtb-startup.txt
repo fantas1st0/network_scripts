@@ -1,0 +1,4051 @@
+Using 189982 out of 4059328 bytes
+!
+! Last configuration change at 14:17:46 MSK Thu Oct 1 2020 by klimanov
+! NVRAM config last updated at 14:17:47 MSK Thu Oct 1 2020 by klimanov
+!
+version 15.5
+service tcp-keepalives-in
+service tcp-keepalives-out
+service timestamps debug datetime localtime show-timezone
+service timestamps log datetime localtime
+service counters max age 10
+!
+hostname DCore-2
+!
+boot-start-marker
+boot system flash sup-bootdisk:c7600rsp72043-adventerprisek9-mz.155-3.S5.bin
+boot-end-marker
+!
+!
+vrf definition BANKMOSCOW
+ description OLD Bank Moscow
+ rd 65535:3
+ !
+ address-family ipv4
+  route-target export 65535:3
+  route-target import 65535:3
+ exit-address-family
+!
+vrf definition DBO_PROM
+ rd 65535:9100
+ !
+ address-family ipv4
+  route-target export 65535:9100
+  route-target import 65535:9100
+ exit-address-family
+!
+vrf definition DBO_TEST
+ rd 65535:9150
+ !
+ address-family ipv4
+  route-target export 65535:9150
+  route-target import 65535:9150
+ exit-address-family
+!
+vrf definition DEMO
+ rd 65535:4599
+ !
+ address-family ipv4
+  route-target export 65535:4599
+  route-target import 65535:4599
+ exit-address-family
+!
+vrf definition GROUPVTB
+ rd 65535:200
+ !
+ address-family ipv4
+  route-target export 65535:200
+  route-target import 65535:200
+ exit-address-family
+!
+vrf definition M-BANK-DC
+ rd 65535:65401
+ !
+ address-family ipv4
+  route-target export 65535:65401
+  route-target import 65535:65401
+ exit-address-family
+!
+vrf definition RF-TR-24
+ rd 65535:8100
+ !
+ address-family ipv4
+  route-target export 65535:8100
+  route-target import 65535:8100
+ exit-address-family
+!
+vrf definition RF-TR-BM
+ rd 65535:8120
+ !
+ address-family ipv4
+  route-target export 65535:8120
+  route-target import 65535:8120
+ exit-address-family
+!
+vrf definition RF-TR-CAP
+ rd 65535:8110
+ !
+ address-family ipv4
+  route-target export 65535:8110
+  route-target import 65535:8110
+ exit-address-family
+!
+vrf definition Reuters
+ rd 65535:192
+ !
+ address-family ipv4
+  route-target export 65535:192
+  route-target import 65535:192
+ exit-address-family
+!
+vrf definition TTKINET
+ rd 65535:4150
+ !
+ address-family ipv4
+  route-target export 65535:4150
+  route-target import 65535:4150
+ exit-address-family
+!
+vrf definition VTB-Core
+ rd 65535:1
+ !
+ address-family ipv4
+  route-target export 65535:1
+  route-target import 65535:1
+ exit-address-family
+!
+vrf definition VTB-Courier-EXT
+ rd 65535:65530
+ !
+ address-family ipv4
+  route-target export 65535:65530
+  route-target import 65535:65530
+ exit-address-family
+!
+vrf definition VTB-DEV
+ rd 65535:100
+ !
+ address-family ipv4
+  route-target export 65535:100
+  route-target import 65535:100
+ exit-address-family
+!
+vrf definition VTB-EFX
+ rd 65535:194
+ !
+ address-family ipv4
+  route-target export 65535:194
+  route-target import 65535:194
+ exit-address-family
+!
+vrf definition VTB-FBS
+ rd 65535:300
+ !
+ address-family ipv4
+  route-target export 65535:300
+  route-target import 65535:300
+ exit-address-family
+!
+vrf definition VTB-FGW
+ rd 65535:770
+ !
+ address-family ipv4
+  route-target export 65535:770
+  route-target import 65535:770
+ exit-address-family
+!
+vrf definition VTB-FGWTR
+ rd 65535:780
+ !
+ address-family ipv4
+  route-target export 65535:780
+  route-target import 65535:780
+  route-target import 65535:781
+  route-target import 65535:782
+ exit-address-family
+!
+vrf definition VTB-FIN
+ rd 65535:700
+ !
+ address-family ipv4
+  route-target export 65535:700
+  route-target import 65535:700
+ exit-address-family
+!
+vrf definition VTB-FTR
+ rd 65535:750
+ !
+ address-family ipv4
+  route-target export 65535:750
+  route-target import 65535:750
+ exit-address-family
+!
+vrf definition VTB-FXT-B
+ rd 65535:189
+ !
+ address-family ipv4
+  route-target export 65535:189
+  route-target import 65535:189
+ exit-address-family
+!
+vrf definition VTB-GTR
+ rd 65535:1500
+ !
+ address-family ipv4
+  route-target export 65535:1500
+  route-target import 65535:1501
+  route-target import 65535:1502
+  route-target import 65535:1509
+  route-target import 65535:1507
+  route-target import 65535:1530
+  route-target import 65535:1528
+  route-target import 65535:1531
+  route-target import 65535:1532
+  route-target import 65535:1518
+  route-target import 65535:1533
+  route-target import 65535:1513
+  route-target import 65535:1525
+  route-target import 65535:1535
+  route-target import 65535:1500
+  route-target import 65535:1540
+ exit-address-family
+!
+vrf definition VTB-GW
+ description VTB-GW
+ rd 65535:4600
+ !
+ address-family ipv4
+  route-target export 65535:4600
+  route-target import 65535:4600
+ exit-address-family
+!
+vrf definition VTB-GW-RW
+ description Transport VTB-GW RusRailWay transport
+ rd 65535:4601
+ !
+ address-family ipv4
+  route-target export 65535:4601
+  route-target import 65535:4601
+ exit-address-family
+!
+vrf definition VTB-KBR
+ rd 65535:790
+ !
+ address-family ipv4
+  route-target export 65535:790
+  route-target import 65535:790
+ exit-address-family
+!
+vrf definition VTB-MM
+ rd 65535:2500
+ !
+ address-family ipv4
+  route-target export 65535:2500
+  route-target import 65535:2500
+ exit-address-family
+!
+vrf definition VTB-MON
+ rd 65535:50
+ !
+ address-family ipv4
+  route-target export 65535:50
+  route-target import 65535:50
+ exit-address-family
+!
+vrf definition VTB-OTV
+ description DC l2 interconnect
+ rd 65535:6500
+ !
+ address-family ipv4
+  route-target export 65535:6500
+  route-target import 65535:6500
+ exit-address-family
+!
+vrf definition VTB-RF
+ rd 65535:250
+ !
+ address-family ipv4
+  export map Export-VTB-RF
+  route-target export 65535:250
+  route-target import 65535:250
+ exit-address-family
+!
+vrf definition VTB-RF-24
+ rd 65535:8000
+ !
+ address-family ipv4
+  route-target export 65535:8000
+  route-target import 65535:8000
+ exit-address-family
+!
+vrf definition VTB-RF-BM
+ rd 65535:8020
+ !
+ address-family ipv4
+  route-target export 65535:8020
+  route-target import 65535:8020
+ exit-address-family
+!
+vrf definition VTB-RF-CAP
+ rd 65535:8010
+ !
+ address-family ipv4
+  route-target export 65535:8010
+  route-target import 65535:8010
+ exit-address-family
+!
+vrf definition VTB-RSRV
+ rd 65535:6000
+ !
+ address-family ipv4
+  route-target export 65535:6000
+  route-target import 65535:6000
+ exit-address-family
+!
+vrf definition VTB-SEC
+ description VTB Security
+ rd 65535:5000
+ !
+ address-family ipv4
+  route-target export 65535:5000
+  route-target import 65535:5000
+ exit-address-family
+!
+vrf definition VTB-Somib
+ rd 65535:600
+ !
+ address-family ipv4
+  route-target export 65535:600
+  route-target import 65535:600
+ exit-address-family
+!
+vrf definition VTB-TESTCLOUD
+ rd 65535:101
+ !
+ address-family ipv4
+  route-target export 65535:101
+  route-target import 65535:101
+ exit-address-family
+!
+vrf definition VTB-USERS
+ rd 10.255.255.142:16000
+ !
+ address-family ipv4
+  route-target export 65535:16000
+  route-target import 65535:16000
+ exit-address-family
+!
+vrf definition VTB-VCS-GW
+ rd 65535:65501
+ !
+ address-family ipv4
+  route-target export 65535:65501
+  route-target import 65535:65501
+ exit-address-family
+!
+vrf definition VipInet
+ rd 65535:4100
+ !
+ address-family ipv4
+  route-target export 65535:4100
+  route-target import 65535:4100
+ exit-address-family
+!
+vrf definition WIFI-VTB-AIR
+ rd 10.255.255.142:3270
+ !
+ address-family ipv4
+  route-target export 24823:3270
+  route-target import 24823:3270
+ exit-address-family
+!
+vrf definition nInet
+ rd 65535:4000
+ !
+ address-family ipv4
+  route-target export 65535:4000
+  route-target import 65535:4000
+ exit-address-family
+!
+vrf definition nInet-BE
+ rd 65535:4501
+ !
+ address-family ipv4
+  route-target export 65535:4501
+  route-target import 65535:4501
+ exit-address-family
+!
+vrf definition nInet-Proxy
+ description Core User`s Inet access over Citrix
+ rd 65535:4250
+ !
+ address-family ipv4
+  route-target export 65535:4250
+  route-target import 65535:4250
+ exit-address-family
+!
+vrf definition nInet-SRV
+ rd 65535:4500
+ !
+ address-family ipv4
+  route-target export 65535:4500
+  route-target import 65535:4500
+ exit-address-family
+!
+logging buffered 1024000
+enable secret 4 xxxxxxxx
+!
+aaa new-model
+!
+!
+aaa group server tacacs+ ACS-MSK
+ server-private 10.128.128.11 key 7 xxxxxxxx 
+ server-private 10.164.140.150 key xxxxxxxx 
+ ip tacacs source-interface Loopback0
+!
+aaa authentication login NoAAA line
+aaa authentication login MSK-Tacacs group ACS-MSK line
+aaa authentication enable default enable
+aaa authorization exec MSK-Tacacs group ACS-MSK if-authenticated 
+aaa accounting exec MSK-Tacacs start-stop group ACS-MSK
+aaa accounting commands 15 MSK-Tacacs start-stop group ACS-MSK
+aaa accounting commands 15 TELNET start-stop group tacacs+
+!
+!
+!
+!
+!
+aaa session-id common
+!
+!
+!
+clock timezone MSK 3 0
+!
+ip host pSpectrum 10.144.130.136
+
+no ip domain lookup
+ip domain name vtb
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+vtp mode transparent
+mpls label protocol ldp
+mls flow ip interface-full
+no mls flow ipv6
+mls cef error action reset
+multilink bundle-name authenticated
+!
+!
+!
+!
+no hw-module slot 2 oversubscription
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+diagnostic bootup level minimal
+!
+redundancy
+ main-cpu
+  auto-sync running-config
+ mode sso
+!
+!
+!
+!
+vlan internal allocation policy descending
+vlan access-log ratelimit 2000
+!
+vlan 414
+ name link-vMPLS-ASA-VipNet
+!
+vlan 917
+ name GISGMP-inside
+!
+vlan 2501
+ name link-ASA-VTB-Core
+!
+vlan 2505
+ name lnk-VTB-Core-ASA-ctx-VTB-GROUP
+!
+vlan 2506
+ name lnk-vtb-reuters-ASA-ctx-VTB-GROU
+!
+vlan 2507
+ name lnk-vtb-gtr-ASA-ctx-VTB-GROUP
+!
+vlan 2508
+ name lnk-group-vtb-ASA-ctx-VTB-GROUP
+!
+vlan 2509
+ name lnk-vtb-mm-ASA-ctx-VTB-GROUP
+!
+vlan 2601
+ name link-ASA-bus
+!
+vlan 2607
+ name DEMO
+!
+vlan 3213
+ name nInet-BE
+!
+vlan 3234
+ name DBO_PROM
+!
+vlan 3235
+ name DBO_TEST
+!
+vlan 3345
+ name lnk-VTB-GROUP-ASA-ctx-nInet-SRV
+!
+vlan 3346
+ name lnk-VTB-Core-ASA-ctx-nInet-SRV
+!
+vlan 3348
+ name lnk-nInet-SRV-ASA-ctx-nInet-SRV
+!
+vlan 3349
+ name lnk-VTB-PROXY-ASA-ctx-nInet
+!
+vlan 3350
+ name lnk-VTB-Core-ASA-ctx-Thin-Client
+!
+vlan 3351
+ name lnk-Thin-Client-ASA-ctx-Thin-Cli
+!
+vlan 3352
+ name lnk-VTB-Core-ASA-ctx-VTB-SEC
+!
+vlan 3353
+ name lnk-VTB-SEC-ASA-ctx-VTB-SEC
+!
+vlan 3354
+ name lnk-VTB-Core-ASA-ctx-VTB-DEV
+!
+vlan 3355
+ name lnk-VTB-DEV-ASA-ctx-VTB-DEV
+!
+vlan 3356
+ name lnk-VTB-Core-ASA-ctx-VTB-MON
+!
+vlan 3357
+ name lnk-VTB-MON-ASA-ctx-VTB-MON
+!
+vlan 3358
+ name lnk-VTB-GW-ASA-ctx-RZD-TR
+!
+vlan 3359
+ name lnk-VTB-GW-RW-ASA-ctx-RZD-TR
+!
+vlan 3372
+ name VTB-FTR-vDcASA
+!
+vlan 3373
+ name VTB-FIN-vDcASA
+!
+vlan 3374
+ name VTB-Core-VTB-FIN
+!
+vlan 3426
+ name lnk-VTB-Core-ASA-ctx-BM-ASA
+!
+vlan 3427
+ name lnk-BANKMOSCOW-ASA-ctx-BM-ASA
+!
+vlan 3435
+ name lnk-VTB-KBR-ctx-FIN
+!
+vlan 3648
+ name lnk-VTB-RF-24--ASA-ctx-VTB-RF-24
+!
+vlan 3649
+ name lnk-rf-tr-24--ASA-ctx-VTB-RF-24
+!
+vlan 3650
+ name lnk-VTB-RF-CAP--ASA-ctx-VTB-RF-C
+!
+vlan 3651
+ name lnk-rf-tr-cap--ASA--ctx-VTB-RF-C
+!
+vlan 3652
+ name lnk-VTB-RF-BM--ASA-ctx-VTB-RF-BM
+!
+vlan 3653
+ name lnk-rf-tr-bm--ASA-ctx-VTB-RF-BM
+!
+vlan 3654
+ name lnk-rf-rf-ASA-ctx-VTB-RF
+!
+vlan 3655
+ name lnk-vtbcore--ASA-ctx-VTB-RF
+!
+!
+track 300 ip route 10.100.111.100 255.255.255.255 reachability
+ ip vrf VTB-Core
+ delay down 180 up 60
+!
+track 302 ip route 10.100.111.102 255.255.255.255 reachability
+ ip vrf VTB-RF
+ delay down 180 up 60
+!
+track 304 ip route 10.100.111.104 255.255.255.255 reachability
+ ip vrf VTB-Core
+ delay down 180 up 60
+!
+track 306 ip route 10.100.111.106 255.255.255.255 reachability
+ ip vrf VTB-DEV
+ delay down 180 up 60
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 10.255.255.142 255.255.255.255
+!
+interface Port-channel2
+ description vN77-2-vOTV-2 Po1 (OTV)
+ mtu 9216
+ no ip address
+!
+interface Port-channel2.3431
+ encapsulation dot1Q 3431
+ vrf forwarding VTB-OTV
+ ip address 10.255.247.5 255.255.255.252
+!
+interface Port-channel10
+ description DCore-1 Po10
+ switchport
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 414,917,2501,2505-2509,2601,2607,3213,3234,3235
+ switchport trunk allowed vlan add 3345,3346,3348-3361,3372-3374,3426,3427,3435
+ switchport trunk allowed vlan add 3648-3655
+ switchport mode trunk
+!
+interface Port-channel30
+ description DC-MPLS-ASA-FO
+ switchport
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 414,917,2501,2505-2509,2601,2607,3213,3234,3235
+ switchport trunk allowed vlan add 3345,3346,3348-3361,3372-3374,3426,3427,3435
+ switchport trunk allowed vlan add 3648-3655
+ switchport mode trunk
+!
+interface TenGigabitEthernet2/1
+ description DCore-1 Te2/1
+ switchport
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 414,917,2501,2505-2509,2601,2607,3213,3234,3235
+ switchport trunk allowed vlan add 3345,3346,3348-3361,3372-3374,3426,3427,3435
+ switchport trunk allowed vlan add 3648-3655
+ switchport mode trunk
+ load-interval 30
+ channel-group 10 mode active
+!
+interface TenGigabitEthernet2/2
+ description vN7K2-vOTV-2 3/24/1
+ mtu 9216
+ no ip address
+ channel-group 2 mode active
+!
+interface TenGigabitEthernet2/3
+ description !!! DO NOT USE !!! 
+ no ip address
+ shutdown
+!
+interface TenGigabitEthernet2/4
+ description !!! DO NOT USE !!! 
+ no ip address
+ shutdown
+!
+interface TenGigabitEthernet2/5
+ description DC-MPLS-ASA-FO
+ switchport
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 414,917,2501,2505-2509,2601,2607,3213,3234,3235
+ switchport trunk allowed vlan add 3345,3346,3348-3361,3372-3374,3426,3427,3435
+ switchport trunk allowed vlan add 3648-3655
+ switchport mode trunk
+ channel-group 30 mode active
+!
+interface TenGigabitEthernet2/6
+ description pDCASR02.vtb Te0/0/0/0
+ mtu 9216
+ ip address 10.255.255.9 255.255.255.252
+ ip ospf mtu-ignore
+ load-interval 30
+ mpls ip
+!
+interface TenGigabitEthernet2/7
+ description !!! DO NOT USE !!! 
+ no ip address
+ shutdown
+!
+interface TenGigabitEthernet2/8
+ description !!! DO NOT USE !!! 
+ no ip address
+ shutdown
+!
+interface TenGigabitEthernet3/1
+ no ip address
+ shutdown
+!
+interface TenGigabitEthernet3/2
+ no ip address
+ shutdown
+!
+interface TenGigabitEthernet3/3
+ no ip address
+ shutdown
+!
+interface TenGigabitEthernet3/4
+ no ip address
+ shutdown
+!
+interface TenGigabitEthernet3/5
+ no ip address
+ shutdown
+!
+interface TenGigabitEthernet3/6
+ no ip address
+ shutdown
+!
+interface TenGigabitEthernet3/7
+ no ip address
+ shutdown
+!
+interface TenGigabitEthernet3/8
+ no ip address
+ shutdown
+!
+interface TenGigabitEthernet4/1
+ mtu 9216
+ ip address 10.255.254.182 255.255.255.252
+ mpls ip
+!
+interface TenGigabitEthernet4/2
+ description --- V43-MPLS-2-P-2 ETH 2/2---
+ mtu 9216
+ ip address 10.255.254.186 255.255.255.252
+ load-interval 30
+ mpls ip
+!
+interface TenGigabitEthernet4/3
+ description N77K-02 2/20/1 (old 2/47)
+ no ip address
+ load-interval 30
+ udld port aggressive
+!
+interface TenGigabitEthernet4/3.554
+ description --- N7K2 Eth2/47 ---
+ encapsulation dot1Q 554
+ vrf forwarding VTB-FXT-B
+ ip address 10.195.254.101 255.255.255.252
+!
+interface TenGigabitEthernet4/3.2624
+ encapsulation dot1Q 2624
+ vrf forwarding WIFI-VTB-AIR
+ ip address 10.67.49.57 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3004
+ encapsulation dot1Q 3004
+ vrf forwarding VTB-Core
+ ip address 10.132.253.225 255.255.255.248
+ ip summary-address eigrp 65535 10.0.0.0 255.0.0.0
+!
+interface TenGigabitEthernet4/3.3009
+ encapsulation dot1Q 3009
+ vrf forwarding nInet
+ ip address 172.16.241.193 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3016
+ encapsulation dot1Q 3016
+ vrf forwarding nInet-SRV
+ ip address 172.16.231.141 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3021
+ encapsulation dot1Q 3021
+ vrf forwarding GROUPVTB
+ ip address 10.193.253.249 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3026
+ encapsulation dot1Q 3026
+ vrf forwarding VTB-RSRV
+ ip address 10.0.255.141 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3031
+ description N7K2 Eth2/47
+ encapsulation dot1Q 3031
+ vrf forwarding VipInet
+ ip address 172.16.103.29 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3041
+ encapsulation dot1Q 3041
+ vrf forwarding VTB-MM
+ ip address 10.106.169.61 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3048
+ encapsulation dot1Q 3048
+ vrf forwarding TTKINET
+ ip address 192.168.255.225 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3067
+ encapsulation dot1Q 3067
+ vrf forwarding VTB-USERS
+ ip address 10.255.128.77 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3085
+ encapsulation dot1Q 3085
+ vrf forwarding VTB-VCS-GW
+ ip address 10.106.133.45 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3211
+ encapsulation dot1Q 3211
+ vrf forwarding nInet-BE
+ ip address 172.16.35.149 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3216
+ encapsulation dot1Q 3216
+ vrf forwarding DBO_PROM
+ ip address 10.132.252.9 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3222
+ encapsulation dot1Q 3222
+ vrf forwarding DBO_TEST
+ ip address 10.132.252.33 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3322
+ description 7K2 2/47
+ encapsulation dot1Q 3322
+ vrf forwarding VTB-TESTCLOUD
+ ip address 10.132.248.121 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3366
+ encapsulation dot1Q 3366
+ vrf forwarding VTB-FBS
+ ip address 10.0.251.253 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3370
+ encapsulation dot1Q 3370
+ vrf forwarding VTB-FIN
+ ip address 10.148.0.37 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3377
+ encapsulation dot1Q 3377
+!
+interface TenGigabitEthernet4/3.3382
+ encapsulation dot1Q 3382
+ vrf forwarding VTB-Courier-EXT
+ ip address 172.16.31.5 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3386
+ description --- N7K2 Eth2/47 ---
+ encapsulation dot1Q 3386
+ vrf forwarding Reuters
+ ip address 10.132.248.221 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3394
+ description --- N7K-2-vN7K2 2/25 ---
+ encapsulation dot1Q 3394
+ vrf forwarding nInet-Proxy
+ ip address 10.132.248.241 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3398
+ encapsulation dot1Q 3398
+ vrf forwarding VTB-DEV
+ ip address 10.133.255.13 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3407
+ encapsulation dot1Q 3407
+ vrf forwarding VTB-FGW
+ ip address 10.148.0.118 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3413
+ encapsulation dot1Q 3413
+ vrf forwarding VTB-GW
+ ip address 172.17.255.46 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3420
+ encapsulation dot1Q 3420
+ vrf forwarding VTB-FGWTR
+ ip address 10.148.254.30 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3439
+ encapsulation dot1Q 3439
+ vrf forwarding VTB-KBR
+ ip address 10.148.0.181 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3586
+ encapsulation dot1Q 3586
+ vrf forwarding VTB-EFX
+ ip address 172.16.39.189 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3591
+ encapsulation dot1Q 3591
+ vrf forwarding VTB-Somib
+ ip address 172.16.247.221 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3604
+ encapsulation dot1Q 3604
+ vrf forwarding VTB-RF
+ ip address 10.194.254.77 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3609
+ description RF <-> RF-24
+ encapsulation dot1Q 3609
+ vrf forwarding VTB-RF
+ ip address 10.194.253.205 255.255.255.252
+ shutdown
+!
+interface TenGigabitEthernet4/3.3613
+ description RF <-> RF-CAP
+ encapsulation dot1Q 3613
+ vrf forwarding VTB-RF
+ ip address 10.194.253.221 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3617
+ description RF <-> RF-BM
+ encapsulation dot1Q 3617
+ vrf forwarding VTB-RF
+ ip address 10.194.253.237 255.255.255.252
+ shutdown
+!
+interface TenGigabitEthernet4/3.3622
+ encapsulation dot1Q 3622
+ vrf forwarding M-BANK-DC
+ ip address 10.208.255.217 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3635
+ encapsulation dot1Q 3635
+ vrf forwarding VTB-RF-BM
+ ip address 10.194.254.57 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3641
+ encapsulation dot1Q 3641
+ vrf forwarding VTB-RF-CAP
+ ip address 10.194.254.37 255.255.255.252
+!
+interface TenGigabitEthernet4/3.3647
+ encapsulation dot1Q 3647
+ vrf forwarding VTB-RF-24
+ ip address 10.194.254.17 255.255.255.252
+!
+interface TenGigabitEthernet4/4
+ description N77K-01 2/20/1 (old 2/47)
+ no ip address
+ udld port aggressive
+!
+interface TenGigabitEthernet4/4.553
+ description --- N7K1 Eth2/47
+ encapsulation dot1Q 553
+ vrf forwarding VTB-FXT-B
+ ip address 10.195.254.97 255.255.255.252
+!
+interface TenGigabitEthernet4/4.2623
+ encapsulation dot1Q 2623
+ vrf forwarding WIFI-VTB-AIR
+ ip address 10.67.49.53 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3002
+ encapsulation dot1Q 3002
+ vrf forwarding VTB-Core
+ ip address 10.132.253.233 255.255.255.248
+ ip summary-address eigrp 65535 10.0.0.0 255.0.0.0
+!
+interface TenGigabitEthernet4/4.3007
+ encapsulation dot1Q 3007
+ vrf forwarding nInet
+ ip address 172.16.241.185 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3014
+ encapsulation dot1Q 3014
+ vrf forwarding nInet-SRV
+ ip address 172.16.231.133 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3019
+ encapsulation dot1Q 3019
+ vrf forwarding GROUPVTB
+ ip address 10.193.253.241 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3024
+ encapsulation dot1Q 3024
+ vrf forwarding VTB-RSRV
+ ip address 10.0.255.133 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3030
+ description N7K1 Eth2/47
+ encapsulation dot1Q 3030
+ vrf forwarding VipInet
+ ip address 172.16.103.25 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3040
+ encapsulation dot1Q 3040
+ vrf forwarding VTB-MM
+ ip address 10.106.169.57 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3047
+ encapsulation dot1Q 3047
+ vrf forwarding TTKINET
+ ip address 192.168.255.221 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3066
+ encapsulation dot1Q 3066
+ vrf forwarding VTB-USERS
+ ip address 10.255.128.73 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3084
+ encapsulation dot1Q 3084
+ vrf forwarding VTB-VCS-GW
+ ip address 10.106.133.49 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3210
+ encapsulation dot1Q 3210
+ vrf forwarding nInet-BE
+ ip address 172.16.35.145 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3217
+ encapsulation dot1Q 3217
+ vrf forwarding DBO_PROM
+ ip address 10.132.252.13 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3221
+ encapsulation dot1Q 3221
+ vrf forwarding DBO_TEST
+ ip address 10.132.252.29 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3321
+ description 7K1 2/47
+ encapsulation dot1Q 3321
+ vrf forwarding VTB-TESTCLOUD
+ ip address 10.132.248.117 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3364
+ encapsulation dot1Q 3364
+ vrf forwarding VTB-FBS
+ ip address 10.0.251.245 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3369
+ encapsulation dot1Q 3369
+ vrf forwarding VTB-FIN
+ ip address 10.148.0.33 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3378
+ encapsulation dot1Q 3378
+!
+interface TenGigabitEthernet4/4.3383
+ encapsulation dot1Q 3383
+ vrf forwarding VTB-Courier-EXT
+ ip address 172.16.31.9 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3387
+ description --- N7K1 Eth 2/47 ---
+ encapsulation dot1Q 3387
+ vrf forwarding Reuters
+ ip address 10.132.248.225 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3393
+ description --- N7K-1-vN7K1 2/25 ---
+ encapsulation dot1Q 3393
+ vrf forwarding nInet-Proxy
+ ip address 10.132.248.245 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3396
+ encapsulation dot1Q 3396
+ vrf forwarding VTB-DEV
+ ip address 10.133.255.5 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3405
+ encapsulation dot1Q 3405
+ vrf forwarding VTB-FGW
+ ip address 10.148.0.110 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3411
+ encapsulation dot1Q 3411
+ vrf forwarding VTB-GW
+ ip address 172.17.255.38 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3418
+ encapsulation dot1Q 3418
+ vrf forwarding VTB-FGWTR
+ ip address 10.148.254.22 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3438
+ encapsulation dot1Q 3438
+ vrf forwarding VTB-KBR
+ ip address 10.148.0.177 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3585
+ encapsulation dot1Q 3585
+ vrf forwarding VTB-EFX
+ ip address 172.16.39.185 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3590
+ encapsulation dot1Q 3590
+ vrf forwarding VTB-Somib
+ ip address 172.16.247.217 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3605
+ encapsulation dot1Q 3605
+ vrf forwarding VTB-RF
+ ip address 10.194.254.69 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3607
+ description RF <-> RF-24
+ encapsulation dot1Q 3607
+ vrf forwarding VTB-RF
+ ip address 10.194.253.197 255.255.255.252
+ shutdown
+!
+interface TenGigabitEthernet4/4.3611
+ description RF <-> RF-CAP
+ encapsulation dot1Q 3611
+ vrf forwarding VTB-RF
+ ip address 10.194.253.213 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3615
+ description RF <-> RF-BM
+ encapsulation dot1Q 3615
+ vrf forwarding VTB-RF
+ ip address 10.194.253.229 255.255.255.252
+ shutdown
+!
+interface TenGigabitEthernet4/4.3620
+ encapsulation dot1Q 3620
+ vrf forwarding M-BANK-DC
+ ip address 10.208.255.225 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3633
+ encapsulation dot1Q 3633
+ vrf forwarding VTB-RF-BM
+ ip address 10.194.254.49 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3639
+ encapsulation dot1Q 3639
+ vrf forwarding VTB-RF-CAP
+ ip address 10.194.254.29 255.255.255.252
+!
+interface TenGigabitEthernet4/4.3645
+ encapsulation dot1Q 3645
+ vrf forwarding VTB-RF-24
+ ip address 10.194.254.9 255.255.255.252
+!
+interface GigabitEthernet5/1
+ description vDCRoot Te2/1/31
+ no ip address
+!
+interface GigabitEthernet5/1.3011
+ description vDCRoot
+ encapsulation dot1Q 3011
+ vrf forwarding VTB-Core
+ ip address 10.132.253.93 255.255.255.252
+!
+interface GigabitEthernet5/2
+ vrf forwarding VTB-Core
+ no ip address
+ shutdown
+ media-type rj45
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan414
+ vrf forwarding VipInet
+ ip address 172.16.241.227 255.255.255.248
+!
+interface Vlan917
+ vrf forwarding nInet-SRV
+ ip address 172.16.231.3 255.255.255.248
+ vrrp 1 ip 172.16.231.1
+ vrrp 1 priority 90
+!
+interface Vlan2501
+ description --- Link DC-MPLS-ASA # nInet
+ vrf forwarding VTB-Core
+ ip address 10.132.248.3 255.255.255.248
+ vrrp 26 ip 10.132.248.1
+ vrrp 26 priority 50
+!
+interface Vlan2505
+ description --- Link DC-MPLS-ASA # VTB-GROUP
+ vrf forwarding VTB-Core
+ ip address 10.132.248.37 255.255.255.248
+ vrrp 2 ip 10.132.248.35
+ vrrp 2 priority 50
+!
+interface Vlan2506
+ vrf forwarding Reuters
+ ip address 10.132.248.43 255.255.255.248
+ vrrp 19 ip 10.132.248.41
+ vrrp 19 priority 90
+!
+interface Vlan2507
+ vrf forwarding VTB-GTR
+ ip address 10.193.255.51 255.255.255.248
+ vrrp 18 ip 10.193.255.49
+ vrrp 18 priority 90
+!
+interface Vlan2508
+ description vDcMPLS-ASA(context VTB-GROUP)
+ vrf forwarding GROUPVTB
+ ip address 10.193.255.3 255.255.255.248
+ vrrp 17 ip 10.193.255.1
+ vrrp 17 priority 99
+!
+interface Vlan2509
+ vrf forwarding VTB-MM
+ ip address 10.106.255.139 255.255.255.248
+ vrrp 16 ip 10.106.255.137
+ vrrp 16 priority 90
+!
+interface Vlan2601
+ description link vrf nInet to context nInet
+ vrf forwarding nInet
+ ip address 172.16.241.252 255.255.255.248
+!
+interface Vlan2607
+ description Connect vrf DEMO to context nInet-SRV
+ vrf forwarding DEMO
+ ip address 10.192.150.245 255.255.255.248
+ vrrp 45 ip 10.192.150.246
+ vrrp 45 priority 101
+!
+interface Vlan3213
+ description --- Link DC-MPLS-ASA # nInet-BE
+ vrf forwarding nInet-BE
+ ip address 172.16.35.131 255.255.255.248
+ vrrp 43 ip 172.16.35.129
+ vrrp 43 priority 90
+!
+interface Vlan3234
+ description --- Link DC-MPLS-ASA # DBO_PROM
+ vrf forwarding DBO_PROM
+ ip address 10.132.252.46 255.255.255.248
+ vrrp 44 ip 10.132.252.43
+ vrrp 44 priority 50
+!
+interface Vlan3235
+ description --- Link vpn DBO_TEST to Context nInet-SRV DC-MPLS-ASA 
+ vrf forwarding DBO_TEST
+ ip address 10.132.252.53 255.255.255.248
+ vrrp 43 ip 10.132.252.51
+ vrrp 43 priority 50
+!
+interface Vlan3345
+ description link GROUPVTB to context nInet-SRV
+ vrf forwarding GROUPVTB
+ ip address 10.193.255.13 255.255.255.248
+ vrrp 20 ip 10.193.255.11
+ vrrp 20 priority 99
+!
+interface Vlan3346
+ description VTB-Core -dcASA- iSRV
+ vrf forwarding VTB-Core
+ ip address 10.132.248.141 255.255.255.248
+ vrrp 21 ip 10.132.248.139
+ vrrp 21 priority 50
+!
+interface Vlan3348
+ description iSRV-dcASA-VTB-Core
+ vrf forwarding nInet-SRV
+ ip address 172.16.231.53 255.255.255.248
+ vrrp 23 ip 172.16.231.51
+ vrrp 23 priority 90
+!
+interface Vlan3349
+ description Link to ASA
+ vrf forwarding nInet-Proxy
+ ip address 10.132.248.148 255.255.255.248
+ vrrp 15 ip 10.132.248.149
+!
+interface Vlan3352
+ description link to ASA ctx VTB-SEC
+ vrf forwarding VTB-Core
+ ip address 10.132.248.157 255.255.255.248
+ vrrp 5 ip 10.132.248.155
+ vrrp 5 priority 50
+!
+interface Vlan3353
+ vrf forwarding VTB-SEC
+ ip address 10.132.248.165 255.255.255.248
+ vrrp 6 ip 10.132.248.163
+ vrrp 6 priority 90
+!
+interface Vlan3354
+ description VTB-Core link for ASA ctx VTB-DEV
+ vrf forwarding VTB-Core
+ ip address 10.132.248.173 255.255.255.248
+ vrrp 11 ip 10.132.248.171
+ vrrp 11 priority 50
+!
+interface Vlan3355
+ description VTB-DEV link for ASA ctx VTB-DEV
+ vrf forwarding VTB-DEV
+ ip address 10.132.248.181 255.255.255.248
+ vrrp 12 ip 10.132.248.179
+ vrrp 12 priority 90
+!
+interface Vlan3356
+ description VTB-Core link for ASA ctx VTB-MON
+ vrf forwarding VTB-Core
+ ip address 10.132.248.189 255.255.255.248
+ vrrp 9 ip 10.132.248.187
+ vrrp 9 priority 50
+!
+interface Vlan3357
+ description VTB-MON link for ASA ctx VTB-MON
+ vrf forwarding VTB-MON
+ ip address 10.132.248.197 255.255.255.248
+ vrrp 10 ip 10.132.248.195
+ vrrp 10 priority 90
+!
+interface Vlan3358
+ description VTB-GW link for ASA ctx RZD-TR
+ vrf forwarding VTB-GW
+ ip address 172.17.255.3 255.255.255.248
+ vrrp 7 ip 172.17.255.1
+ vrrp 7 priority 90
+!
+interface Vlan3359
+ description VTB-GW-RW link for ASA ctx RZD-TR
+ vrf forwarding VTB-GW-RW
+ ip address 172.17.255.11 255.255.255.248
+ vrrp 8 ip 172.17.255.9
+ vrrp 8 priority 110
+!
+interface Vlan3372
+ description --- Link DC-MPLS-ASA # VTB-Finance Transport
+ vrf forwarding VTB-FTR
+ ip address 10.148.0.3 255.255.255.248
+!
+interface Vlan3373
+ description --- Link DC-MPLS-ASA # VTB-Finance 
+ vrf forwarding VTB-FIN
+ ip address 10.148.0.11 255.255.255.248
+ vrrp 73 ip 10.148.0.9
+ vrrp 73 priority 90
+!
+interface Vlan3374
+ description --- Link DC-MPLS-ASA # VTB-Finance 
+ vrf forwarding VTB-Core
+ ip address 10.148.0.19 255.255.255.248
+ vrrp 33 ip 10.148.0.17
+ vrrp 33 priority 50
+!
+interface Vlan3426
+ description --- link to DC-MPLS-ASA(VTB-BM) inside ----
+ vrf forwarding VTB-Core
+ ip address 10.132.253.99 255.255.255.240
+ vrrp 25 ip 10.132.253.97
+ vrrp 25 priority 50
+!
+interface Vlan3427
+ vrf forwarding BANKMOSCOW
+ ip address 10.172.255.99 255.255.255.240
+ vrrp 24 ip 10.172.255.97
+ vrrp 24 priority 90
+!
+interface Vlan3435
+ description VTB-KBR/CTX-FIN
+ vrf forwarding VTB-KBR
+ ip address 10.148.0.162 255.255.255.248
+!
+interface Vlan3648
+ description VTB-RF(-24)-ASA-ctx-VTB-RF-24
+ vrf forwarding VTB-RF
+ ip address 10.194.254.125 255.255.255.248
+ vrrp 34 ip 10.194.254.123
+ vrrp 34 priority 90
+!
+interface Vlan3649
+ vrf forwarding RF-TR-24
+ ip address 10.194.255.69 255.255.255.248
+ vrrp 35 ip 10.194.255.67
+ vrrp 35 priority 90
+!
+interface Vlan3650
+ vrf forwarding VTB-RF-CAP
+ ip address 10.194.254.109 255.255.255.248
+ vrrp 40 ip 10.194.254.107
+ vrrp 40 priority 90
+!
+interface Vlan3651
+ vrf forwarding RF-TR-CAP
+ ip address 10.194.255.101 255.255.255.248
+ vrrp 41 ip 10.194.255.99
+ vrrp 41 priority 90
+!
+interface Vlan3652
+ description VTB-RF(-BM)-ASA-ctx-VTB-RF-BM
+ vrf forwarding VTB-RF
+ ip address 10.194.254.93 255.255.255.248
+ vrrp 36 ip 10.194.254.91
+ vrrp 36 priority 90
+!
+interface Vlan3653
+ vrf forwarding RF-TR-BM
+ ip address 10.194.255.197 255.255.255.248
+ vrrp 37 ip 10.194.255.195
+ vrrp 37 priority 90
+!
+interface Vlan3654
+ vrf forwarding VTB-RF
+ ip address 10.194.254.45 255.255.255.248
+ vrrp 38 ip 10.194.254.43
+ vrrp 38 priority 90
+!
+interface Vlan3655
+ description Link VTB-Core to context VTB-RF
+ vrf forwarding VTB-Core
+ ip address 10.132.248.61 255.255.255.248
+ vrrp 39 ip 10.132.248.59
+ vrrp 39 priority 90
+!
+!
+router eigrp DC-01
+ !
+ address-family ipv4 unicast vrf VTB-FGWTR autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3418
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/4.3418
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3420
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/3.3420
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+   redistribute static metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 10.148.254.20 0.0.0.3
+  network 10.148.254.28 0.0.0.3
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf VTB-Core autonomous-system 65535
+  !
+  af-interface TenGigabitEthernet4/3.3004
+   summary-address 10.0.0.0 255.0.0.0
+   summary-address 10.132.0.0 255.255.0.0
+   summary-address 10.134.0.0 255.255.0.0
+  exit-af-interface
+  !
+  af-interface TenGigabitEthernet4/4.3002
+   summary-address 10.0.0.0 255.0.0.0
+   summary-address 10.132.0.0 255.255.0.0
+   summary-address 10.134.0.0 255.255.0.0
+  exit-af-interface
+  !
+  topology base
+   distribute-list route-map Filtr-to-MPLS in Vlan2501
+   distribute-list route-map ToLocalSite out Vlan2501
+   distribute-list route-map Filtr-to-MPLS in Vlan2505
+   distribute-list route-map ToLocalSite out Vlan2505
+   distribute-list route-map Filtr-to-MPLS in Vlan3346
+   distribute-list route-map ToLocalSite out Vlan3346
+   distribute-list route-map Filtr-to-MPLS in Vlan3352
+   distribute-list route-map ToLocalSite out Vlan3352
+   distribute-list route-map Filtr-to-MPLS in Vlan3354
+   distribute-list route-map ToLocalSite out Vlan3354
+   distribute-list route-map Filtr-to-MPLS in Vlan3356
+   distribute-list route-map ToLocalSite out Vlan3356
+   distribute-list route-map Filtr-to-MPLS in Vlan3374
+   distribute-list route-map ToLocalSite out Vlan3374
+   distribute-list route-map Filtr-to-MPLS in Vlan3426
+   distribute-list route-map ToLocalSite out Vlan3426
+   distribute-list route-map Filtr-to-MPLS in Vlan3655
+   distribute-list route-map ToLocalSite out Vlan3655
+   distribute-list route-map Filtr-to-MPLS in GigabitEthernet5/1.3011
+   distribute-list route-map ToLocalSite out GigabitEthernet5/1.3011
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/4.3002
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3002
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/3.3004
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3004
+   redistribute bgp 65535 metric 10000000 100 255 1 1500
+   redistribute static metric 10000000 0 255 1 1500 route-map ToLocalSite
+   summary-metric 10.0.0.0/8 10000000 100 255 1 1500
+  exit-af-topology
+  network 10.132.253.92 0.0.0.3
+  network 10.132.253.224 0.0.0.7
+  network 10.132.253.232 0.0.0.7
+  eigrp log-neighbor-warnings 3600
+  nsf
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf nInet autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map ToLocalSite out Vlan2601
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/3.3009
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/4.3007
+   distribute-list route-map Filtr-to-MPLS in Vlan2601
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3009
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3007
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map nInet-default
+  exit-af-topology
+  network 172.16.241.184 0.0.0.3
+  network 172.16.241.192 0.0.0.3
+  network 172.16.241.248 0.0.0.7
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf nInet-SRV autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/3.3016
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/4.3014
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3016
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3014
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map nInet-default
+   redistribute static metric 10000000 0 255 1 1500 route-map nInet-default
+  exit-af-topology
+  network 172.16.231.132 0.0.0.3
+  network 172.16.231.140 0.0.0.3
+  nsf
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf GROUPVTB autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map ToLocalSite out Vlan2508
+   distribute-list route-map ToLocalSite out Vlan3345
+   distribute-list route-map Filtr-to-MPLS in Vlan2508
+   distribute-list route-map Filtr-to-MPLS in Vlan3345
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3021
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3019
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/3.3021
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/4.3019
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+   redistribute static metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 10.193.253.240 0.0.0.3
+  network 10.193.253.248 0.0.0.3
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf VTB-RSRV autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3026
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3024
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/3.3026
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/4.3024
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 10.0.255.132 0.0.0.3
+  network 10.0.255.140 0.0.0.3
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf VTB-DEV autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3398
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3396
+   distribute-list route-map Filtr-to-MPLS in Vlan3355
+   distribute-list route-map ToLocalSite out Vlan3355
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+   redistribute static metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 10.133.255.4 0.0.0.3
+  network 10.133.255.12 0.0.0.3
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf nInet-Proxy autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3394
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3393
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/3.3394
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/4.3393
+   distribute-list route-map Filtr-to-MPLS in Vlan3349
+   distribute-list route-map ToLocalSite out Vlan3349
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+   redistribute static metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 10.132.248.240 0.0.0.3
+  network 10.132.248.244 0.0.0.3
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf Reuters autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3386
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3387
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+   redistribute static metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 10.132.248.220 0.0.0.3
+  network 10.132.248.224 0.0.0.3
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf VipInet autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/3.3031
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/4.3030
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3031
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3030
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map nInet-default
+  exit-af-topology
+  neighbor 172.16.241.228 Vlan414
+  network 172.16.103.24 0.0.0.3
+  network 172.16.103.28 0.0.0.3
+  network 172.16.241.224 0.0.0.7
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf VTB-Courier-EXT autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3382
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3383
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/3.3382
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/4.3383
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 172.16.31.4 0.0.0.3
+  network 172.16.31.8 0.0.0.3
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf VTB-FTR autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map Filtr-to-MPLS in Vlan3372
+   distribute-list route-map ToLocalSite out Vlan3372
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+   redistribute static metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 10.148.0.0 0.0.0.7
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf VTB-FIN autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map Filtr-to-MPLS in Vlan3373
+   distribute-list route-map ToLocalSite out Vlan3373
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3370
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3369
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+   redistribute static metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 10.148.0.8 0.0.0.7
+  network 10.148.0.32 0.0.0.3
+  network 10.148.0.36 0.0.0.3
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf VTB-FBS autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3366
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3364
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/3.3366
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/4.3364
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 10.0.251.244 0.0.0.3
+  network 10.0.251.252 0.0.0.3
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf VTB-GW autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3411
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/4.3411
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3413
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/3.3413
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 172.17.255.36 0.0.0.3
+  network 172.17.255.44 0.0.0.3
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf VTB-TESTCLOUD autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3322
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3321
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/3.3322
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/4.3321
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 10.132.248.116 0.0.0.3
+  network 10.132.248.120 0.0.0.3
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf VTB-FGW autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3407
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/3.3407
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3405
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/4.3405
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+   redistribute static metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 10.148.0.108 0.0.0.3
+  network 10.148.0.116 0.0.0.3
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf VTB-RF autonomous-system 65535
+  !
+  af-interface Vlan3648
+   passive-interface
+  exit-af-interface
+  !
+  af-interface Vlan3654
+   passive-interface
+  exit-af-interface
+  !
+  af-interface Vlan3652
+   passive-interface
+  exit-af-interface
+  !
+  topology base
+   distribute-list route-map Filtr-to-MPLS-from-RF in TenGigabitEthernet4/3.3604
+   distribute-list route-map From_MPLS-RF-to-RF out TenGigabitEthernet4/3.3604
+   distribute-list route-map Filtr-to-MPLS-from-RF in TenGigabitEthernet4/4.3605
+   distribute-list route-map From_MPLS-RF-to-RF out TenGigabitEthernet4/4.3605
+   distribute-list route-map Filtr-to-RF-from-RF24 in TenGigabitEthernet4/3.3609
+   distribute-list route-map Filtr-to-RF-from-RF24 in TenGigabitEthernet4/4.3607
+   distribute-list route-map From_MPLS-RF-to-Companies out TenGigabitEthernet4/3.3609
+   distribute-list route-map From_MPLS-RF-to-Companies out TenGigabitEthernet4/4.3607
+   distribute-list route-map Filtr-to-RF-from-RFCAP in TenGigabitEthernet4/4.3611
+   distribute-list route-map Filtr-to-RF-from-RFCAP in TenGigabitEthernet4/3.3613
+   distribute-list route-map From_MPLS-RF-to-Companies out TenGigabitEthernet4/4.3611
+   distribute-list route-map From_MPLS-RF-to-Companies out TenGigabitEthernet4/3.3613
+   distribute-list route-map Filtr-to-RF-from-RFBM in TenGigabitEthernet4/4.3615
+   distribute-list route-map Filtr-to-RF-from-RFBM in TenGigabitEthernet4/3.3617
+   distribute-list route-map From_MPLS-RF-to-Companies out TenGigabitEthernet4/4.3615
+   distribute-list route-map From_MPLS-RF-to-Companies out TenGigabitEthernet4/3.3617
+   redistribute bgp 65535 metric 10000000 0 255 1 1500
+   redistribute static metric 10000000 0 255 1 1500
+  exit-af-topology
+  network 10.194.253.196 0.0.0.3
+  network 10.194.253.204 0.0.0.3
+  network 10.194.253.212 0.0.0.3
+  network 10.194.253.220 0.0.0.3
+  network 10.194.253.228 0.0.0.3
+  network 10.194.253.236 0.0.0.3
+  network 10.194.254.68 0.0.0.3
+  network 10.194.254.76 0.0.0.3
+  network 10.194.255.24 0.0.0.7
+  network 10.194.255.32 0.0.0.7
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf VTB-OTV autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map Filtr-to-MPLS in Port-channel2.3431
+   distribute-list route-map ToLocalSite out Port-channel2.3431
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 10.255.247.4 0.0.0.3
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf VTB-FXT-B autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.554
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.553
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 10.195.254.96 0.0.0.3
+  network 10.195.254.100 0.0.0.3
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf VTB-KBR autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map Filtr-to-MPLS in Vlan3435
+   distribute-list route-map ToLocalSite out Vlan3435
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3438
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3439
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/4.3438
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/3.3439
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+   redistribute static metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 10.148.0.160 0.0.0.7
+  network 10.148.0.176 0.0.0.3
+  network 10.148.0.180 0.0.0.3
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf VTB-RF-24 autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map Filtr-to-MPLS-from-RF-24 in TenGigabitEthernet4/4.3645
+   distribute-list route-map From_MPLS-RF24-to-RF24 out TenGigabitEthernet4/4.3645
+   distribute-list route-map Filtr-to-MPLS-from-RF-24 in TenGigabitEthernet4/3.3647
+   distribute-list route-map From_MPLS-RF24-to-RF24 out TenGigabitEthernet4/3.3647
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+   redistribute static metric 10000000 0 255 1 1500 route-map ToLocalSite
+   redistribute connected metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 10.194.254.8 0.0.0.3
+  network 10.194.254.16 0.0.0.3
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf VTB-RF-CAP autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map Filtr-to-MPLS-from-RF-CAP in TenGigabitEthernet4/4.3639
+   distribute-list route-map From_MPLS-RFCAP-to-RFCAP out TenGigabitEthernet4/4.3639
+   distribute-list route-map Filtr-to-MPLS-from-RF-CAP in TenGigabitEthernet4/3.3641
+   distribute-list route-map From_MPLS-RFCAP-to-RFCAP out TenGigabitEthernet4/3.3641
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+   redistribute static metric 10000000 0 255 1 1500 route-map ToLocalSite
+   redistribute connected metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 10.194.254.28 0.0.0.3
+  network 10.194.254.36 0.0.0.3
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf VTB-RF-BM autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map Filtr-to-MPLS-from-RF-BM in TenGigabitEthernet4/4.3633
+   distribute-list route-map Filtr-to-MPLS-from-RF-BM in TenGigabitEthernet4/3.3635
+   distribute-list route-map From_MPLS-RFBM-to-RFBM out TenGigabitEthernet4/4.3633
+   distribute-list route-map From_MPLS-RFBM-to-RFBM out TenGigabitEthernet4/3.3635
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+   redistribute static metric 10000000 0 255 1 1500 route-map ToLocalSite
+   redistribute connected metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 10.194.254.48 0.0.0.3
+  network 10.194.254.56 0.0.0.3
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf M-BANK-DC autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/3.3622
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/4.3620
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3622
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3620
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 10.208.255.216 0.0.0.3
+  network 10.208.255.224 0.0.0.3
+  nsf
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf nInet-BE autonomous-system 65535
+  !
+  af-interface Vlan3213
+   passive-interface
+  exit-af-interface
+  !
+  topology base
+   distribute-list route-map Filtr-to-MPLS in Vlan3213
+   distribute-list route-map ToLocalSite out Vlan3213
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3211
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/3.3211
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3210
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/4.3210
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+   redistribute static metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 172.16.35.128 0.0.0.7
+  network 172.16.35.144 0.0.0.3
+  network 172.16.35.148 0.0.0.3
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf DBO_PROM autonomous-system 65535
+  !
+  af-interface Vlan3234
+   passive-interface
+  exit-af-interface
+  !
+  topology base
+   distribute-list route-map Filtr-to-MPLS in Vlan3234
+   distribute-list route-map ToLocalSite out Vlan3234
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3216
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/3.3216
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3217
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/4.3217
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+   redistribute static metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 10.132.252.8 0.0.0.3
+  network 10.132.252.12 0.0.0.3
+  network 10.132.252.40 0.0.0.7
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf DBO_TEST autonomous-system 65535
+  !
+  af-interface Vlan3235
+   passive-interface
+  exit-af-interface
+  !
+  topology base
+   distribute-list route-map Filtr-to-MPLS in Vlan3235
+   distribute-list route-map ToLocalSite out Vlan3235
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3222
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/3.3222
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3221
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/4.3221
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+   redistribute static metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 10.132.252.28 0.0.0.3
+  network 10.132.252.32 0.0.0.3
+  network 10.132.252.48 0.0.0.7
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf VTB-MM autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/3.3041
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/4.3040
+   distribute-list route-map ToLocalSite out Vlan2509
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3041
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3040
+   distribute-list route-map Filtr-to-MPLS in Vlan2509
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 10.106.169.56 0.0.0.3
+  network 10.106.169.60 0.0.0.3
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf TTKINET autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/3.3048
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/4.3047
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3048
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3047
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 192.168.255.220 0.0.0.3
+  network 192.168.255.224 0.0.0.3
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf VTB-USERS autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/3.3067
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/4.3066
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3067
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3066
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 10.255.128.72 0.0.0.3
+  network 10.255.128.76 0.0.0.3
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf VTB-VCS-GW autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/3.3085
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/4.3084
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3085
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3084
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 10.106.133.44 0.0.0.3
+  network 10.106.133.48 0.0.0.3
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf VTB-Somib autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/3.3591
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/4.3590
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3591
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3590
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 172.16.247.216 0.0.0.3
+  network 172.16.247.220 0.0.0.3
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf VTB-EFX autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/3.3586
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/4.3585
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.3586
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.3585
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 172.16.39.184 0.0.0.3
+  network 172.16.39.188 0.0.0.3
+ exit-address-family
+ !
+ address-family ipv4 unicast vrf WIFI-VTB-AIR autonomous-system 65535
+  !
+  topology base
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/3.2624
+   distribute-list route-map ToLocalSite out TenGigabitEthernet4/4.2623
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/3.2624
+   distribute-list route-map Filtr-to-MPLS in TenGigabitEthernet4/4.2623
+   redistribute bgp 65535 metric 10000000 0 255 1 1500 route-map ToLocalSite
+  exit-af-topology
+  network 10.67.49.52 0.0.0.3
+  network 10.67.49.56 0.0.0.3
+ exit-address-family
+!
+router ospf 100 vrf VTB-Core
+ network 10.132.253.96 0.0.0.15 area 0
+!
+router ospf 102 vrf VTB-RF
+ network 10.194.254.40 0.0.0.7 area 0
+!
+router ospf 1
+ router-id 10.255.255.142
+ auto-cost reference-bandwidth 10000
+ network 10.255.254.180 0.0.0.3 area 0
+ network 10.255.254.184 0.0.0.3 area 0
+ network 10.255.255.8 0.0.0.3 area 0
+ network 10.255.255.142 0.0.0.0 area 0
+ mpls ldp sync
+!
+router ospf 104 vrf VTB-Core
+ network 10.132.248.152 0.0.0.7 area 0
+!
+router ospf 106 vrf VTB-DEV
+ network 10.132.248.176 0.0.0.7 area 0
+!
+router bgp 65535
+ bgp router-id 10.255.255.142
+ bgp log-neighbor-changes
+ neighbor 10.255.255.133 remote-as 65535
+ neighbor 10.255.255.133 description -- vRef --
+ neighbor 10.255.255.133 update-source Loopback0
+ neighbor 10.255.255.160 remote-as 65535
+ neighbor 10.255.255.160 description - tRef -
+ neighbor 10.255.255.160 update-source Loopback0
+ maximum-paths ibgp 4
+ !
+ address-family vpnv4
+  neighbor 10.255.255.133 activate
+  neighbor 10.255.255.133 send-community extended
+  neighbor 10.255.255.160 activate
+  neighbor 10.255.255.160 send-community extended
+ exit-address-family
+ !
+ address-family ipv4 vrf BANKMOSCOW
+  network 10.172.255.96 mask 255.255.255.240
+  redistribute static
+ exit-address-family
+ !
+ address-family ipv4 vrf DBO_PROM
+  redistribute static
+  redistribute connected
+  redistribute eigrp 65535 route-map Filtr-to-MPLS
+ exit-address-family
+ !
+ address-family ipv4 vrf DBO_TEST
+  redistribute static
+  redistribute connected
+  redistribute eigrp 65535 route-map Filtr-to-MPLS
+  default-information originate
+ exit-address-family
+ !
+ address-family ipv4 vrf DEMO
+  network 10.128.0.0 mask 255.128.0.0
+  network 10.192.150.240 mask 255.255.255.248
+ exit-address-family
+ !
+ address-family ipv4 vrf GROUPVTB
+  redistribute static
+  redistribute connected
+  redistribute eigrp 65535 metric 4 route-map eigrp-internal
+ exit-address-family
+ !
+ address-family ipv4 vrf M-BANK-DC
+  network 10.208.255.216 mask 255.255.255.255
+  network 10.208.255.224 mask 255.255.255.255
+  redistribute eigrp 65535 route-map Filtr-to-MPLS
+ exit-address-family
+ !
+ address-family ipv4 vrf RF-TR-24
+  network 10.194.0.0 mask 255.255.0.0
+  network 10.194.255.64 mask 255.255.255.248
+ exit-address-family
+ !
+ address-family ipv4 vrf RF-TR-BM
+  network 10.194.0.0 mask 255.255.0.0
+ exit-address-family
+ !
+ address-family ipv4 vrf RF-TR-CAP
+  network 10.194.0.0 mask 255.255.0.0
+ exit-address-family
+ !
+ address-family ipv4 vrf Reuters
+  redistribute static
+  redistribute connected
+  redistribute eigrp 65535
+ exit-address-family
+ !
+ address-family ipv4 vrf TTKINET
+  network 192.168.255.220 mask 255.255.255.252
+  network 192.168.255.224 mask 255.255.255.252
+  redistribute eigrp 65535 metric 4
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-Core
+  network 10.100.111.100 mask 255.255.255.255
+  network 10.100.111.104 mask 255.255.255.255
+  network 10.100.111.106 mask 255.255.255.255
+  redistribute static
+  redistribute connected
+  redistribute eigrp 65535 metric 4
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-Courier-EXT
+  redistribute connected
+  redistribute eigrp 65535 route-map Filtr-to-MPLS
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-DEV
+  network 10.0.0.0
+  network 10.100.111.106 mask 255.255.255.255
+  redistribute connected
+  redistribute eigrp 65535
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-EFX
+  network 172.16.39.184 mask 255.255.255.252
+  network 172.16.39.188 mask 255.255.255.252
+  redistribute eigrp 65535 metric 4
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-FBS
+  redistribute connected
+  redistribute eigrp 65535
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-FGW
+  redistribute static
+  redistribute connected
+  redistribute eigrp 65535 metric 4
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-FGWTR
+  redistribute static
+  redistribute connected
+  redistribute eigrp 65535 metric 4
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-FIN
+  redistribute static
+  redistribute connected
+  redistribute eigrp 65535 route-map Filtr-to-MPLS
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-FTR
+  redistribute static
+  redistribute connected
+  redistribute eigrp 65535
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-FXT-B
+  network 10.195.254.96 mask 255.255.255.252
+  network 10.195.254.100 mask 255.255.255.252
+  redistribute eigrp 65535
+  default-information originate
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-GTR
+  network 10.193.128.0 mask 255.255.254.0
+  network 10.193.255.48 mask 255.255.255.248
+  network 10.194.128.0 mask 255.255.255.0
+  maximum-paths 4
+  maximum-paths ibgp 4
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-GW
+  redistribute static
+  redistribute connected
+  redistribute eigrp 65535
+  default-information originate
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-GW-RW
+  redistribute static
+  redistribute connected
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-KBR
+  redistribute static
+  redistribute connected
+  redistribute eigrp 65535 metric 4
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-MM
+  network 10.106.169.56 mask 255.255.255.252
+  network 10.106.169.60 mask 255.255.255.252
+  network 10.106.255.136 mask 255.255.255.248
+  network 10.193.0.0 mask 255.255.0.0
+  redistribute eigrp 65535 metric 4
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-MON
+  network 10.0.0.0
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-OTV
+  redistribute connected
+  redistribute eigrp 65535
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-RF
+  network 10.0.0.0
+  network 10.100.111.102 mask 255.255.255.255
+  network 10.193.0.0 mask 255.255.0.0
+  network 10.194.0.0 mask 255.255.0.0
+  redistribute static
+  redistribute connected
+  redistribute eigrp 65535
+  default-information originate
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-RF-24
+  network 10.8.0.0 mask 255.255.0.0
+  network 10.9.0.0 mask 255.255.255.0
+  network 10.9.8.0 mask 255.255.255.0
+  network 10.9.13.0 mask 255.255.255.0
+  network 10.10.0.0 mask 255.255.224.0
+  network 10.10.34.0 mask 255.255.255.0
+  network 10.10.36.0 mask 255.255.255.0
+  network 10.10.37.0 mask 255.255.255.0
+  network 10.11.0.0 mask 255.255.0.0
+  network 10.12.0.0 mask 255.255.0.0
+  network 10.13.0.0 mask 255.255.0.0
+  network 10.15.48.0 mask 255.255.240.0
+  network 10.31.32.0 mask 255.255.224.0
+  network 10.31.64.0 mask 255.255.192.0
+  network 10.31.128.0 mask 255.255.128.0
+  network 10.32.32.0 mask 255.255.224.0
+  network 10.32.64.0 mask 255.255.192.0
+  network 10.32.128.0 mask 255.255.128.0
+  network 10.33.0.0 mask 255.255.0.0
+  network 10.34.0.0 mask 255.255.0.0
+  network 10.35.0.0 mask 255.255.224.0
+  network 10.35.64.0 mask 255.255.192.0
+  network 10.35.128.0 mask 255.255.128.0
+  network 10.64.0.0 mask 255.255.0.0
+  network 10.65.0.0 mask 255.255.224.0
+  network 10.65.128.0 mask 255.255.128.0
+  network 10.67.0.0 mask 255.255.0.0
+  network 10.68.0.0 mask 255.255.0.0
+  network 10.69.0.0 mask 255.255.0.0
+  network 10.70.8.0 mask 255.255.248.0
+  network 10.70.16.0 mask 255.255.240.0
+  network 10.70.32.0 mask 255.255.224.0
+  network 10.70.64.0 mask 255.255.192.0
+  network 10.70.128.0 mask 255.255.128.0
+  network 10.72.240.0 mask 255.255.254.0
+  network 10.73.128.0 mask 255.255.128.0
+  network 10.74.0.0 mask 255.255.0.0
+  network 10.75.128.0 mask 255.255.128.0
+  network 10.76.64.0 mask 255.255.248.0
+  network 10.76.80.0 mask 255.255.248.0
+  network 10.76.216.0 mask 255.255.248.0
+  network 10.76.248.0 mask 255.255.248.0
+  network 10.79.0.0 mask 255.255.0.0
+  network 10.80.0.0 mask 255.255.192.0
+  network 10.81.48.0 mask 255.255.248.0
+  network 10.81.64.0 mask 255.255.248.0
+  network 10.81.80.0 mask 255.255.248.0
+  network 10.81.255.1 mask 255.255.255.255
+  network 10.84.0.0 mask 255.255.0.0
+  network 10.85.0.0 mask 255.255.0.0
+  network 10.86.0.0 mask 255.255.0.0
+  network 10.87.0.0 mask 255.255.0.0
+  network 10.88.0.0 mask 255.255.0.0
+  network 10.89.0.0 mask 255.255.0.0
+  network 10.96.0.0 mask 255.255.0.0
+  network 10.97.0.0 mask 255.255.0.0
+  network 10.98.0.0 mask 255.255.0.0
+  network 10.135.0.0 mask 255.255.0.0
+  network 10.191.208.0 mask 255.255.240.0
+  network 10.194.136.0 mask 255.255.252.0
+  network 10.194.140.0 mask 255.255.255.0
+  network 10.194.141.0 mask 255.255.255.0
+  network 10.237.0.0 mask 255.255.0.0
+  network 10.254.0.0 mask 255.255.240.0
+  network 10.254.16.0 mask 255.255.240.0
+  network 10.254.32.0 mask 255.255.240.0
+  network 10.254.224.0 mask 255.255.255.0
+  network 10.254.225.0 mask 255.255.255.0
+  network 10.254.226.0 mask 255.255.255.0
+  network 10.254.227.0 mask 255.255.255.0
+  network 10.254.228.0 mask 255.255.255.0
+  network 172.16.96.0 mask 255.255.224.0
+  network 172.16.201.0 mask 255.255.255.0
+  network 172.16.216.0 mask 255.255.248.0
+  network 172.18.0.0
+  network 172.19.0.0
+  network 172.20.0.0 mask 255.254.0.0
+  network 172.22.0.0
+  network 172.23.0.0
+  network 172.24.0.0
+  network 172.25.0.0
+  network 172.26.0.0
+  network 172.27.0.0
+  network 172.28.0.0
+  network 172.30.0.0 mask 255.255.128.0
+  network 172.30.128.0 mask 255.255.128.0
+  network 192.168.6.0
+  network 192.168.7.0
+  network 192.168.8.0
+  network 192.168.33.0
+  network 192.168.37.0
+  network 192.168.38.0 mask 255.255.254.0
+  network 192.168.40.0 mask 255.255.254.0
+  network 192.168.42.0 mask 255.255.254.0
+  network 192.168.44.0 mask 255.255.254.0
+  network 192.168.46.0
+  network 192.168.47.0
+  network 192.168.48.0 mask 255.255.248.0
+  network 192.168.57.0
+  network 192.168.58.0
+  network 192.168.60.0
+  network 192.168.62.0
+  network 192.168.70.0
+  network 192.168.74.0
+  network 192.168.76.0
+  network 192.168.78.0
+  network 192.168.79.0
+  network 192.168.93.0
+  network 192.168.95.0
+  network 192.168.97.0
+  network 192.168.103.0
+  network 192.168.104.0
+  network 192.168.201.0
+  network 192.168.202.0
+  network 192.168.216.0 mask 255.255.252.0
+  network 192.168.222.0
+  network 192.168.224.0
+  network 192.168.225.0
+  network 192.168.226.0
+  network 192.168.227.0
+  network 192.168.228.0 mask 255.255.254.0
+  network 192.168.230.0 mask 255.255.254.0
+  network 192.168.232.0 mask 255.255.254.0
+  network 192.168.234.0 mask 255.255.254.0
+  network 192.168.236.0
+  network 192.168.238.0 mask 255.255.254.0
+  network 192.168.240.0
+  network 192.168.242.0
+  network 192.168.243.0
+  network 192.168.244.0 mask 255.255.252.0
+  network 192.168.248.0 mask 255.255.254.0
+  network 192.168.253.0
+  network 217.14.48.0 mask 255.255.255.192
+  network 217.14.49.0
+  network 217.14.50.0
+  network 217.14.51.0
+  network 217.14.52.0
+  network 217.14.53.0
+  network 217.14.54.0
+  network 217.14.55.0
+  redistribute connected
+  redistribute eigrp 65535 route-map Filtr-to-MPLS-from-RF-24
+  default-information originate
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-RF-BM
+  network 1.1.1.0 mask 255.255.255.252
+  network 10.0.0.255 mask 255.255.255.255
+  network 10.1.0.0 mask 255.255.254.0
+  network 10.1.5.0 mask 255.255.255.0
+  network 10.1.6.0 mask 255.255.255.0
+  network 10.2.11.0 mask 255.255.255.0
+  network 10.2.32.0 mask 255.255.224.0
+  network 10.15.0.0 mask 255.255.224.0
+  network 10.16.32.0 mask 255.255.224.0
+  network 10.23.96.0 mask 255.255.224.0
+  network 10.23.120.0 mask 255.255.248.0
+  network 10.24.32.0 mask 255.255.224.0
+  network 10.24.72.0 mask 255.255.254.0
+  network 10.25.225.0 mask 255.255.255.0
+  network 10.26.32.0 mask 255.255.248.0
+  network 10.26.32.0 mask 255.255.254.0
+  network 10.26.56.244 mask 255.255.255.252
+  network 10.26.58.0 mask 255.255.254.0
+  network 10.42.32.0 mask 255.255.224.0
+  network 10.42.64.0 mask 255.255.224.0
+  network 10.46.32.0 mask 255.255.224.0
+  network 10.52.64.0 mask 255.255.224.0
+  network 10.54.32.0 mask 255.255.224.0
+  network 10.56.32.0 mask 255.255.224.0
+  network 10.56.64.0 mask 255.255.224.0
+  network 10.56.96.0 mask 255.255.224.0
+  network 10.58.0.0 mask 255.255.0.0
+  network 10.59.32.0 mask 255.255.224.0
+  network 10.61.32.0 mask 255.255.224.0
+  network 10.65.32.0 mask 255.255.224.0
+  network 10.66.32.0 mask 255.255.224.0
+  network 10.78.32.0 mask 255.255.224.0
+  network 10.78.64.0 mask 255.255.224.0
+  network 10.93.0.0 mask 255.255.224.0
+  network 10.99.0.0 mask 255.255.128.0
+  network 10.99.128.0 mask 255.255.192.0
+  network 10.99.192.0 mask 255.255.255.0
+  network 10.99.254.0 mask 255.255.255.0
+  network 10.172.0.0 mask 255.255.0.0
+  network 10.173.0.0 mask 255.255.0.0
+  network 10.174.0.0 mask 255.255.0.0
+  network 10.175.0.0 mask 255.255.0.0
+  network 10.194.152.0 mask 255.255.252.0
+  network 10.194.156.0 mask 255.255.255.0
+  network 10.194.157.0 mask 255.255.255.0
+  network 10.197.41.192 mask 255.255.255.248
+  network 10.200.32.0 mask 255.255.255.0
+  network 10.200.33.0 mask 255.255.255.0
+  network 10.200.39.0 mask 255.255.255.0
+  network 10.201.0.0 mask 255.255.0.0
+  network 10.202.0.0 mask 255.255.0.0
+  network 10.203.0.0 mask 255.255.255.0
+  network 10.203.1.0 mask 255.255.255.0
+  network 10.203.26.0 mask 255.255.255.0
+  network 10.203.27.0 mask 255.255.255.0
+  network 10.203.31.0 mask 255.255.255.0
+  network 10.208.0.0 mask 255.255.0.0
+  network 10.210.0.0 mask 255.255.0.0
+  network 10.211.0.0 mask 255.255.0.0
+  network 10.212.0.0 mask 255.255.0.0
+  network 10.213.30.0 mask 255.255.255.0
+  network 10.220.0.0 mask 255.255.254.0
+  network 10.225.251.0 mask 255.255.255.0
+  network 10.225.253.0 mask 255.255.255.0
+  network 10.246.0.0 mask 255.255.248.0
+  network 10.246.240.0 mask 255.255.240.0
+  network 10.247.0.0 mask 255.255.224.0
+  network 10.248.0.0 mask 255.255.224.0
+  network 10.249.0.0 mask 255.255.224.0
+  network 10.250.0.0 mask 255.255.224.0
+  network 172.16.1.0 mask 255.255.255.192
+  network 172.16.32.0 mask 255.255.255.0
+  network 172.16.33.0 mask 255.255.255.0
+  network 172.16.34.0 mask 255.255.255.0
+  network 172.16.62.0 mask 255.255.255.0
+  network 172.16.64.0 mask 255.255.255.0
+  network 172.16.69.0 mask 255.255.255.0
+  network 172.16.73.0 mask 255.255.255.0
+  network 172.16.74.0 mask 255.255.255.0
+  network 172.16.76.0 mask 255.255.255.0
+  network 172.16.78.0 mask 255.255.255.0
+  network 172.16.82.0 mask 255.255.255.0
+  network 172.16.83.0 mask 255.255.255.0
+  network 172.16.84.0 mask 255.255.255.0
+  network 172.16.90.0 mask 255.255.255.0
+  network 172.16.252.0 mask 255.255.255.128
+  network 172.17.125.0 mask 255.255.255.0
+  network 172.17.128.0 mask 255.255.254.0
+  network 172.17.252.0 mask 255.255.255.0
+  network 172.17.254.0 mask 255.255.255.0
+  network 172.20.3.12 mask 255.255.255.255
+  network 172.31.20.0 mask 255.255.252.0
+  network 172.31.64.0 mask 255.255.255.0
+  network 172.31.65.0 mask 255.255.255.0
+  network 172.31.66.0 mask 255.255.255.0
+  network 172.31.67.0 mask 255.255.255.0
+  network 172.31.140.0 mask 255.255.255.0
+  network 172.31.141.0 mask 255.255.255.0
+  network 172.31.144.0 mask 255.255.255.0
+  network 172.31.145.0 mask 255.255.255.0
+  network 172.31.146.0 mask 255.255.255.0
+  network 172.31.147.0 mask 255.255.255.0
+  network 172.31.148.0 mask 255.255.255.0
+  network 172.31.149.0 mask 255.255.255.0
+  network 172.31.150.0 mask 255.255.255.0
+  network 172.31.151.0 mask 255.255.255.0
+  network 192.168.19.0
+  network 192.168.21.0
+  network 192.168.53.5 mask 255.255.255.255
+  network 192.168.123.0
+  redistribute connected
+  redistribute eigrp 65535 route-map Filtr-to-MPLS-from-RF-BM
+  default-information originate
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-RF-CAP
+  network 0.0.0.0
+  network 10.194.144.0 mask 255.255.252.0
+  network 10.194.148.0 mask 255.255.255.0
+  network 10.194.149.0 mask 255.255.255.0
+  redistribute connected
+  redistribute eigrp 65535 route-map Filtr-to-MPLS-from-RF-CAP
+  default-information originate
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-RSRV
+  redistribute connected
+  redistribute eigrp 65535 route-map Filtr-to-MPLS
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-SEC
+  network 10.0.0.0
+  network 10.132.130.0 mask 255.255.255.0
+  network 10.132.163.0 mask 255.255.255.0
+  network 10.144.130.0 mask 255.255.255.0
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-Somib
+  network 172.16.247.216 mask 255.255.255.252
+  network 172.16.247.220 mask 255.255.255.252
+  redistribute eigrp 65535 metric 4
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-TESTCLOUD
+  redistribute connected
+  redistribute eigrp 65535 route-map Filtr-to-MPLS
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-USERS
+  network 10.255.128.72 mask 255.255.255.252
+  network 10.255.128.76 mask 255.255.255.252
+  redistribute eigrp 65535 metric 4 route-map Filtr-to-MPLS
+ exit-address-family
+ !
+ address-family ipv4 vrf VTB-VCS-GW
+  network 10.106.133.44 mask 255.255.255.252
+  network 10.106.133.48 mask 255.255.255.252
+  redistribute eigrp 65535 metric 4 route-map Filtr-to-MPLS
+ exit-address-family
+ !
+ address-family ipv4 vrf VipInet
+  redistribute connected
+  redistribute eigrp 65535
+ exit-address-family
+ !
+ address-family ipv4 vrf WIFI-VTB-AIR
+  network 10.67.49.52 mask 255.255.255.252
+  network 10.67.49.56 mask 255.255.255.252
+  redistribute eigrp 65535 metric 4 route-map Filtr-to-MPLS
+ exit-address-family
+ !
+ address-family ipv4 vrf nInet
+  redistribute static
+  redistribute connected
+  redistribute eigrp 65535 route-map Filtr-to-MPLS
+ exit-address-family
+ !
+ address-family ipv4 vrf nInet-BE
+  redistribute static
+  redistribute connected
+  redistribute eigrp 65535 route-map Filtr-to-MPLS
+ exit-address-family
+ !
+ address-family ipv4 vrf nInet-Proxy
+  network 0.0.0.0
+  network 10.132.248.144 mask 255.255.255.248
+  network 10.132.248.240 mask 255.255.255.252
+  network 10.132.248.244 mask 255.255.255.252
+  network 10.191.253.0 mask 255.255.255.0
+  network 172.16.251.57 mask 255.255.255.255
+  redistribute eigrp 65535
+ exit-address-family
+ !
+ address-family ipv4 vrf nInet-SRV
+  network 10.128.128.100 mask 255.255.255.255
+  network 10.128.130.193 mask 255.255.255.255
+  network 10.144.130.57 mask 255.255.255.255
+  network 10.144.130.191 mask 255.255.255.255
+  network 172.16.32.0 mask 255.255.255.0
+  network 172.16.33.0 mask 255.255.255.0
+  network 172.16.34.0 mask 255.255.255.0
+  network 172.16.220.0 mask 255.255.254.0
+  network 172.16.227.0 mask 255.255.255.192
+  network 172.16.227.192 mask 255.255.255.224
+  network 172.16.228.96 mask 255.255.255.240
+  network 172.16.253.0 mask 255.255.255.128
+  network 172.16.253.192 mask 255.255.255.192
+  network 172.17.254.0 mask 255.255.255.224
+  redistribute connected
+  redistribute eigrp 65535 route-map Filtr-to-MPLS
+ exit-address-family
+!
+ip forward-protocol nd
+!
+ip ftp source-interface Loopback0
+no ip http server
+no ip http secure-server
+ip tftp source-interface Loopback0
+ip ssh rsa keypair-name SSH-KEY
+ip route vrf VTB-Core 10.132.162.0 255.255.255.192 10.132.248.33 name Context-VTB-GROUP-Reuters-CODv43_SRV track 300
+ip route vrf VTB-Core 10.144.255.176 255.255.255.248 10.132.248.33 name Context-VTB-GROUP-ReutersVTB-Link-Plu track 300
+ip route vrf VTB-Core 10.164.132.0 255.255.255.0 10.132.248.33 name Context-VTB-GROUP-Reuters-tSRV track 300
+ip route vrf VTB-Core 10.164.135.0 255.255.255.0 10.132.248.33 name Context-VTB-GROUP-ReutersVTB-SRV-TowerFarm-1 track 300
+ip route vrf VTB-Core 10.166.59.0 255.255.255.0 10.132.248.33 name Context-VTB-GROUP-Reuters-User-Tower-SK-1 track 300
+ip route vrf VTB-Core 10.166.60.0 255.255.255.224 10.132.248.33 name Context-VTB-GROUP-Reuters-User-Tower-Cat31-1 track 300
+ip route vrf VTB-Core 10.166.60.32 255.255.255.224 10.132.248.33 name Context-VTB-GROUP-Reuters-User-Tower-Cat27-1 track 300
+ip route vrf VTB-Core 10.166.60.64 255.255.255.224 10.132.248.33 name Context-VTB-GROUP-Reuters-User-Tower-Cat21-1 track 300
+ip route vrf VTB-Core 10.166.252.128 255.255.255.252 10.132.248.33 name Context-VTB-GROUP-TRADE-ASA-INET-PRIME track 300
+ip route vrf VTB-Core 10.166.254.0 255.255.255.248 10.132.248.33 name Context-VTB-GROUP-tReuters_BT_22_port_vrrp track 300
+ip route vrf VTB-Core 10.166.254.112 255.255.255.252 10.132.248.33 name Context-VTB-GROUP-tReuters_RDF1 track 300
+ip route vrf VTB-Core 10.166.254.116 255.255.255.252 10.132.248.33 name Context-VTB-GROUP-tReuters_RDF2 track 300
+ip route vrf VTB-Core 10.166.254.228 255.255.255.252 10.132.248.33 name Context-VTB-GROUP-tReuters_ASA_context_TandH track 300
+ip route vrf VTB-Core 10.166.254.244 255.255.255.252 10.132.248.33 name Context-VTB-GROUP-tReuters_ASA_context_RDF track 300
+ip route vrf VTB-Core 10.192.85.0 255.255.255.0 10.132.248.33 name Context-VTB-GROUP-ReutersVTB-User-LSN track 300
+ip route vrf VTB-Core 10.192.91.0 255.255.255.0 10.132.248.33 name Context-VTB-GROUP-ReutersVTB-PLU track 300
+ip route vrf VTB-Core 10.192.255.8 255.255.255.248 10.132.248.33 name Context-VTB-GROUP-lReutersBT_22leg track 300
+ip route vrf VTB-Core 10.192.255.72 255.255.255.248 10.132.248.33 name Context-VTB-GROUP-lReuters_FW track 300
+ip route vrf VTB-Core 10.192.255.208 255.255.255.248 10.132.248.33 name Context-VTB-GROUP-lReutersRDF track 300
+ip route vrf VTB-Core 10.193.0.0 255.255.0.0 10.132.248.33 name Context-VTB-GROUP track 300
+ip route vrf Reuters 10.0.0.0 255.128.0.0 10.132.248.46 name Context-VTB-GROUP-VTB-Regions track 300
+ip route vrf Reuters 10.128.0.0 255.128.0.0 10.132.248.46 name Context-VTB-GROUP-VTB-Core track 300
+ip route vrf VTB-GTR 10.193.128.0 255.255.254.0 10.193.255.54 name Context-VTB-GROUP-VTB-Service-Pool track 300
+ip route vrf VTB-GTR 10.194.128.0 255.255.255.0 10.193.255.54 name Context-VTB-GROUP-VTB-RF-Service-Pool track 300
+ip route vrf GROUPVTB 10.0.0.0 255.0.0.0 10.193.255.6 name Context-VTB-GROUP-VTB-Core track 300
+ip route vrf VTB-MM 10.193.0.0 255.255.0.0 10.106.255.142 name Context-VTB-GROUP-Service-Pools track 300
+ip route vrf GROUPVTB 10.144.140.0 255.255.255.0 10.193.255.9 name SMTP-GW-CLUSTER track 300
+ip route vrf GROUPVTB 10.193.254.0 255.255.255.0 10.193.255.9 name NAT_POOL_from_nInetSRV track 300
+ip route vrf VTB-Core 10.132.253.128 255.255.255.240 10.132.248.137 name Context-nInet-SRV-VTB-Courier-INT-LINK track 300
+ip route vrf VTB-Core 10.144.133.0 255.255.255.0 10.132.248.137 name Context-nInet-SRV track 300
+ip route vrf nInet-SRV 10.128.128.100 255.255.255.255 172.16.231.49 name Netflow-Server track 300
+ip route vrf nInet-SRV 10.128.130.193 255.255.255.255 172.16.231.49 name BARR03 track 300
+ip route vrf nInet-SRV 10.144.130.57 255.255.255.255 172.16.231.49 name MSKEX1 track 300
+ip route vrf nInet-SRV 10.144.130.191 255.255.255.255 172.16.231.49 name HPOV track 300
+ip route vrf nInet-SRV 172.16.253.0 255.255.255.128 172.16.231.49 name Translated-from-Context-nInet-SRV track 300
+ip route vrf nInet-SRV 172.16.253.192 255.255.255.192 172.16.231.49 name Translated-from-Context-nInet-SRV track 300
+ip route vrf nInet-BE 10.0.0.0 255.0.0.0 172.16.35.133 name VTB-Core track 300
+ip route vrf nInet-BE 172.16.0.0 255.240.0.0 172.16.35.133 name nInet-SRV track 300
+ip route vrf VTB-FIN 149.134.0.0 255.255.0.0 10.148.0.14 name SWIFT-SERVICE-NET track 300
+ip route vrf nInet-SRV 172.16.32.0 255.255.255.0 172.16.231.49 name nInet-BE track 300
+ip route vrf nInet-SRV 172.16.33.0 255.255.255.0 172.16.231.49 name nInet-BE track 300
+ip route vrf nInet-SRV 172.16.34.0 255.255.255.0 172.16.231.49 name nInet-BE track 300
+ip route vrf VTB-Core 10.192.132.0 255.255.255.0 10.132.248.137 name Context-nInet-SRV track 300
+ip route vrf VTB-Core 10.192.133.0 255.255.255.0 10.132.248.137 name Context-nInet-SRV track 300
+ip route vrf VTB-Core 10.192.134.0 255.255.255.0 10.132.248.137 name Context-nInet-SRV track 300
+ip route vrf DBO_PROM 10.0.0.0 255.0.0.0 10.132.252.41 name VTB-Core track 300
+ip route vrf DBO_PROM 172.16.0.0 255.240.0.0 10.132.252.41 name nInet-SRV track 300
+ip route vrf VTB-Core 10.132.146.0 255.255.255.0 10.132.248.137 name Context-nInet-SRV track 300
+ip route vrf VTB-Core 10.132.148.0 255.255.255.0 10.132.248.137 name Context-nInet-SRV track 300
+ip route vrf VTB-Core 10.150.137.0 255.255.255.0 10.132.248.137 name Context-nInet-SRV track 300
+ip route vrf VTB-Core 10.132.147.0 255.255.255.0 10.132.248.137 name Context-nInet-SRV track 300
+ip route vrf VTB-Core 10.150.138.0 255.255.255.0 10.132.248.137 name Context-nInet-SRV track 300
+ip route vrf VTB-Core 10.150.139.0 255.255.255.0 10.132.248.137 name Context-nInet-SRV track 300
+ip route vrf nInet-SRV 172.17.254.0 255.255.255.224 172.16.231.172 name S-Terra-VTB-CS-GW1/2V track 300
+ip route vrf DBO_TEST 10.0.0.0 255.0.0.0 10.132.252.49 name VTB-Core track 300
+ip route vrf DBO_TEST 172.16.0.0 255.240.0.0 10.132.252.49 name nInet-SRV track 300
+ip route vrf DBO_TEST 0.0.0.0 0.0.0.0 10.132.252.49 name PublicIP track 300
+ip route vrf VTB-Core 10.166.251.8 255.255.255.248 10.132.248.33 name Context-VTB-GROUP track 300
+ip route vrf VTB-Core 10.208.0.0 255.255.0.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.201.0.0 255.255.0.0 10.132.253.100 name DC-xBM track 300
+ip route vrf BANKMOSCOW 10.209.0.0 255.255.0.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.200.192.0 255.255.255.0 10.172.255.100 name VTB-Core track 300
+ip route vrf VTB-Core 10.25.225.0 255.255.255.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.59.32.0 255.255.224.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.59.64.0 255.255.224.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.65.32.0 255.255.224.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.202.128.0 255.255.248.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.238.0.0 255.255.0.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.1.0.0 255.255.224.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.2.32.0 255.255.224.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.15.0.0 255.255.224.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.16.32.0 255.255.224.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.23.96.0 255.255.224.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.24.32.0 255.255.224.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.26.32.0 255.255.224.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.42.32.0 255.255.224.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.42.64.0 255.255.224.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.46.32.0 255.255.224.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.52.64.0 255.255.224.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.54.32.0 255.255.224.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.56.32.0 255.255.224.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.56.64.0 255.255.224.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.56.96.0 255.255.224.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.58.0.0 255.255.0.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.61.32.0 255.255.224.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.66.32.0 255.255.224.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.78.32.0 255.255.224.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.78.64.0 255.255.224.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.93.0.0 255.255.224.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.99.0.0 255.255.0.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.172.0.0 255.255.0.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.173.0.0 255.255.0.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.174.0.0 255.255.0.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.175.0.0 255.255.0.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.246.0.0 255.255.0.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.247.0.0 255.255.0.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.248.0.0 255.255.0.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.249.0.0 255.255.0.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.250.0.0 255.255.0.0 10.132.253.100 name DC-xBM track 300
+ip route vrf BANKMOSCOW 10.128.0.0 255.255.0.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.130.0.0 255.255.0.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.132.0.0 255.255.0.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.134.0.0 255.255.0.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.136.0.0 255.255.0.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.144.0.0 255.255.0.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.145.0.0 255.255.0.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.148.0.0 255.255.0.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.150.0.0 255.255.0.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.151.0.0 255.255.0.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.164.0.0 255.255.0.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.166.0.0 255.255.0.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.168.0.0 255.255.0.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.178.0.0 255.255.0.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.200.0.0 255.255.0.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.0.240.0 255.255.240.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.10.64.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.29.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.39.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.39.32.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.43.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.46.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.47.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.51.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.53.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.60.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.66.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.83.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.52.0.0 255.255.192.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.3.0.0 255.255.192.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.36.0.0 255.255.192.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.24.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.27.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.172.25.192 255.255.255.224 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.177.0.0 255.255.0.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.190.0.0 255.255.0.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.192.0.0 255.255.0.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.240.0.0 255.252.0.0 10.172.255.100 name VTB-Core track 300
+ip route vrf VTB-Core 10.211.0.0 255.255.0.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.148.131.0 255.255.255.0 10.148.0.22 name connect-to-VTB-FIN track 300
+ip route vrf VTB-Core 10.192.96.0 255.255.255.240 10.132.248.33 name Context-VTB-GROUP-Reuters-User track 300
+ip route vrf VTB-Core 10.192.96.16 255.255.255.240 10.132.248.33 name Context-VTB-GROUP-Reuters-User track 300
+ip route vrf VTB-Core 10.192.96.32 255.255.255.240 10.132.248.33 name Context-VTB-GROUP-Reuters-User track 300
+ip route vrf nInet-SRV 172.16.220.0 255.255.254.0 172.16.231.49 name Translated-from-Context-nInet-SRV track 300
+ip route vrf VTB-Core 10.202.120.0 255.255.248.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.148.4.0 255.255.255.0 10.148.0.22 name connect-to-VTB-FIN track 300
+ip route vrf VTB-Core 10.148.0.0 255.255.254.0 10.148.0.22 name connect-to-VTB-FIN track 300
+ip route vrf VTB-Core 10.148.3.0 255.255.255.192 10.148.0.22 name VTB-FIN-PEROVO track 300
+ip route vrf VTB-Core 10.148.88.0 255.255.255.248 10.148.0.22 name connect-to-VTB-FIN track 300
+ip route vrf VTB-Core 10.148.130.0 255.255.255.0 10.148.0.22 name connect-to-VTB-KBR track 300
+ip route vrf VTB-Core 10.148.255.0 255.255.255.0 10.148.0.22 name connect-to-VTB-FTR track 300
+ip route vrf VTB-Core 10.148.132.0 255.255.255.0 10.148.0.22 name connect-to-VTB-KBR track 300
+ip route vrf DEMO 10.128.0.0 255.128.0.0 10.192.150.241 name to_VTB-Core_over_Context-nInet-SRV track 300
+ip route vrf VTB-Core 10.192.150.0 255.255.254.0 10.132.248.137 name vrf_DEMO_over_Context-nInet-SRV track 300
+ip route vrf VTB-Core 10.192.119.0 255.255.255.0 10.132.248.33 name Context-VTB-GROUP-Reuters_NAT_NTPro track 300
+ip route vrf VTB-Core 10.200.32.0 255.255.254.0 10.132.253.100 name DC-xBM track 300
+ip route vrf VTB-Core 10.200.39.0 255.255.255.0 10.132.253.100 name DC-xBM track 300
+ip route vrf BANKMOSCOW 10.165.0.0 255.255.0.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.2.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.14.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.16.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.18.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.21.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.22.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.23.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.23.32.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.23.64.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.24.64.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.25.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.25.32.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.26.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.28.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.31.0.0 255.255.248.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.31.30.0 255.255.255.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.32.0.0 255.255.248.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.33.0.0 255.255.248.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.34.0.0 255.255.248.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.35.56.0 255.255.248.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.36.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.36.32.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.38.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.40.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.41.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.42.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.44.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.48.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.49.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.54.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.55.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.56.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.59.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.61.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.62.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.63.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.70.0.0 255.255.248.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.71.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.72.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.73.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.75.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.105.0.0 255.255.224.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.111.0.0 255.255.0.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.112.0.0 255.255.0.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.117.0.0 255.255.0.0 10.172.255.100 name VTB-Core track 300
+ip route vrf BANKMOSCOW 10.118.0.0 255.255.0.0 10.172.255.100 name VTB-Core track 300
+ip route vrf VTB-Core 10.148.2.64 255.255.255.192 10.148.0.22 name connect-to-VTB-FIN track 300
+ip route vrf VTB-Core 10.176.0.0 255.255.128.0 10.132.253.100 name DC-xBM track 300
+ip route vrf BANKMOSCOW 10.254.226.0 255.255.255.128 10.172.255.100 name VTB-Core track 300
+ip route vrf VTB-FIN 10.0.0.0 255.0.0.0 10.148.0.14 name VTB track 300
+ip route vrf VTB-Core 10.144.134.0 255.255.255.0 10.132.248.137 name Context-nInet-SRV track 300
+ip route vrf VTB-Core 10.164.133.96 255.255.255.240 10.132.248.33 name Context-VTB-GROUP-ReutersVTB-NAT-MOEX track 300
+ip route vrf VTB-Core 10.164.159.0 255.255.255.0 10.132.248.137 name Context-nInet-SRV_DBO_PROM track 300
+ip route vrf BANKMOSCOW 10.191.207.0 255.255.255.0 10.172.255.100 name VTB-Core-TEST-NEW-OFFICE track 300
+ip route vrf VTB-Core 10.164.165.0 255.255.255.0 10.132.248.137 name Context-nInet-SRV track 300
+ip route vrf BANKMOSCOW 10.106.0.0 255.255.0.0 10.172.255.100 name VTB-MM-q-00005884 track 300
+ip route vrf BANKMOSCOW 10.107.0.0 255.255.0.0 10.172.255.100 name VTB-MM-q-00005884 track 300
+ip route vrf BANKMOSCOW 10.108.0.0 255.255.0.0 10.172.255.100 name VTB-MM-q-00005884 track 300
+ip route vrf BANKMOSCOW 10.109.0.0 255.255.0.0 10.172.255.100 name VTB-MM-q-00005884 track 300
+ip route vrf BANKMOSCOW 10.126.0.0 255.255.0.0 10.172.255.100 name VTB-MM-q-00005884 track 300
+ip route vrf BANKMOSCOW 10.236.0.0 255.255.0.0 10.172.255.100 name VTB-MM-q-00005884 track 300
+ip route vrf VTB-Core 10.210.254.0 255.255.255.0 10.132.253.100 name xBM-PBX track 300
+ip route vrf BANKMOSCOW 10.5.0.0 255.255.128.0 10.172.255.100 name OOBM_NADEJNOST_C-00008928 track 300
+ip route vrf BANKMOSCOW 10.5.128.0 255.255.192.0 10.172.255.100 name OOBM_NADEJNOST_C-00008928 track 300
+ip route vrf BANKMOSCOW 10.8.36.0 255.255.254.0 10.172.255.100 name OOBM_NADEJNOST_C-00008928 track 300
+ip route vrf BANKMOSCOW 10.8.40.128 255.255.255.128 10.172.255.100 name OOBM_NADEJNOST_C-00008928 track 300
+ip route vrf BANKMOSCOW 10.8.41.0 255.255.255.128 10.172.255.100 name OOBM_NADEJNOST_C-00008928 track 300
+ip route vrf VTB-RF-BM 10.194.157.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_NAT track 302
+ip route vrf VTB-RF-BM 10.194.152.0 255.255.252.0 10.194.254.89 name local_site_servers track 302
+ip route vrf VTB-RF-BM 10.194.156.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_NAT track 302
+ip route vrf RF-TR-BM 10.194.0.0 255.255.0.0 10.194.255.193 name path-to-RF-main-core track 302
+ip route vrf VTB-Core 10.194.0.0 255.255.0.0 10.132.248.57 name Context-VTB-GROUP-RF track 302
+ip route vrf VTB-RF 10.194.0.0 255.255.0.0 10.194.254.41 name Generate_NET-10.194.0.0 track 302
+ip route vrf VTB-RF 10.0.0.0 255.0.0.0 10.194.254.41 track 302
+ip route vrf VTB-RF-24 10.194.136.0 255.255.252.0 10.194.254.121 name VTB-RF-24_local_site_servers track 302
+ip route vrf VTB-RF-24 10.194.140.0 255.255.255.0 10.194.254.121 name VTB-RF-24_NAT track 302
+ip route vrf VTB-RF-24 10.194.141.0 255.255.255.0 10.194.254.121 name VTB-RF-24_NAT track 302
+ip route vrf RF-TR-24 10.194.0.0 255.255.0.0 10.194.255.65 name path-to-RF-main-core track 302
+ip route vrf VTB-RF-CAP 10.194.144.0 255.255.252.0 10.194.254.105 name VTB-RF-CAP_local_site_servers track 302
+ip route vrf VTB-RF-CAP 10.194.148.0 255.255.255.0 10.194.254.105 name VTB-RF-CAP_NAT track 302
+ip route vrf VTB-RF-CAP 10.194.149.0 255.255.255.0 10.194.254.105 name VTB-RF-CAP_NAT track 302
+ip route vrf RF-TR-CAP 10.194.0.0 255.255.0.0 10.194.255.97 name path-to-RF-main-core track 302
+ip route vrf VTB-RF-CAP 0.0.0.0 0.0.0.0 10.194.254.105 name VTB-RF-CAP track 302
+ip route vrf VTB-RF-24 10.8.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.9.0.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.9.8.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.9.13.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.10.0.0 255.255.224.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.10.34.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.10.36.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.10.37.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.11.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.12.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.13.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.15.48.0 255.255.240.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.31.32.0 255.255.224.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.31.64.0 255.255.192.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.31.128.0 255.255.128.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.32.32.0 255.255.224.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.32.64.0 255.255.192.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.32.128.0 255.255.128.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.33.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.34.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.35.0.0 255.255.224.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.35.64.0 255.255.192.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.35.128.0 255.255.128.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.64.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.65.0.0 255.255.224.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.65.128.0 255.255.128.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.67.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.68.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.69.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.70.8.0 255.255.248.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.70.16.0 255.255.240.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.70.32.0 255.255.224.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.70.64.0 255.255.192.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.70.128.0 255.255.128.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.72.240.0 255.255.254.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.73.128.0 255.255.128.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.74.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.75.128.0 255.255.128.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.76.64.0 255.255.248.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.76.80.0 255.255.248.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.76.216.0 255.255.248.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.76.248.0 255.255.248.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.79.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.80.0.0 255.255.192.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.81.48.0 255.255.248.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.81.64.0 255.255.248.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.81.80.0 255.255.248.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.81.255.1 255.255.255.255 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.84.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.85.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.86.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.87.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.88.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.89.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.96.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.97.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.98.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.135.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.191.208.0 255.255.240.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.237.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.254.0.0 255.255.240.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.254.16.0 255.255.240.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.254.32.0 255.255.240.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 217.14.48.0 255.255.255.192 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 217.14.49.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 217.14.50.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 217.14.51.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 217.14.52.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 217.14.53.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 217.14.54.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 217.14.55.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 172.16.96.0 255.255.224.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 172.16.201.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 172.16.216.0 255.255.248.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 172.18.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 172.19.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 172.20.0.0 255.254.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 172.22.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 172.23.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 172.24.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 172.25.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 172.26.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 172.27.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 172.28.0.0 255.255.0.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 172.30.0.0 255.255.128.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 172.30.128.0 255.255.128.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.6.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.7.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.8.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.33.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.37.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.38.0 255.255.254.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.40.0 255.255.254.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.42.0 255.255.254.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.44.0 255.255.254.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.46.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.47.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.48.0 255.255.248.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.57.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.58.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.60.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.62.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.70.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.74.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.76.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.78.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.79.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.93.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.95.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.97.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.103.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.104.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.201.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.202.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.216.0 255.255.252.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.222.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.224.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.225.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.226.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.227.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.228.0 255.255.254.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.230.0 255.255.254.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.232.0 255.255.254.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.234.0 255.255.254.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.236.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.238.0 255.255.254.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.240.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.242.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.243.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.244.0 255.255.252.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.248.0 255.255.254.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 192.168.253.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-BM 10.0.0.255 255.255.255.255 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.1.0.0 255.255.254.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.1.5.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.1.6.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.2.11.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.2.32.0 255.255.224.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.15.0.0 255.255.224.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.16.32.0 255.255.224.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.23.96.0 255.255.224.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.23.120.0 255.255.248.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.24.32.0 255.255.224.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.24.72.0 255.255.254.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.25.225.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.26.32.0 255.255.248.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.26.32.0 255.255.254.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.26.56.244 255.255.255.252 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.26.58.0 255.255.254.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.42.32.0 255.255.224.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.42.64.0 255.255.224.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.46.32.0 255.255.224.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.52.64.0 255.255.224.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.54.32.0 255.255.224.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.56.32.0 255.255.224.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.56.64.0 255.255.224.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.56.96.0 255.255.224.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.58.0.0 255.255.0.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.59.32.0 255.255.224.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.61.32.0 255.255.224.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.65.32.0 255.255.224.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.66.32.0 255.255.224.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.78.32.0 255.255.224.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.78.64.0 255.255.224.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.93.0.0 255.255.224.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.99.128.0 255.255.192.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.99.192.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.99.254.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.172.0.0 255.255.0.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.173.0.0 255.255.0.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.174.0.0 255.255.0.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.175.0.0 255.255.0.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.197.41.192 255.255.255.248 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.200.32.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.200.33.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.200.39.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.201.0.0 255.255.0.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.202.0.0 255.255.0.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.203.0.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.203.1.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.203.26.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.203.27.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.203.31.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.208.0.0 255.255.0.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.210.0.0 255.255.0.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.211.0.0 255.255.0.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.212.0.0 255.255.0.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.213.30.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.220.0.0 255.255.254.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.225.251.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.225.253.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.246.0.0 255.255.248.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.246.240.0 255.255.240.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.247.0.0 255.255.224.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.248.0.0 255.255.224.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.249.0.0 255.255.224.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 10.250.0.0 255.255.224.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.16.1.0 255.255.255.192 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.16.32.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.16.33.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.16.34.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.16.62.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.16.64.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.16.69.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.16.73.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.16.74.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.16.76.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.16.78.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.16.82.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.16.83.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.16.84.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.16.90.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.16.252.0 255.255.255.128 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.17.125.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.17.128.0 255.255.254.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.17.252.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.17.254.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.20.3.12 255.255.255.255 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.31.20.0 255.255.252.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.31.64.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.31.65.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.31.66.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.31.67.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.31.140.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.31.141.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.31.144.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.31.145.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.31.146.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.31.147.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.31.148.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.31.149.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.31.150.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 172.31.151.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 192.168.19.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 192.168.21.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 192.168.53.5 255.255.255.255 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 192.168.123.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-BM 1.1.1.0 255.255.255.252 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF-24 10.254.224.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.254.225.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.254.226.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.254.227.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-24 10.254.228.0 255.255.255.0 10.194.254.121 name VTB-RF-24_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF-BM 10.99.0.0 255.255.128.0 10.194.254.89 name VTB-RF-BM_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 0.0.0.0 0.0.0.0 10.194.254.41 name VTB-RF_DEFAULT track 302
+ip route vrf VTB-RF 10.172.25.192 255.255.255.224 10.194.254.41 name VTB-RF_ADMIN(VTB-Core_on_xBM) track 302
+ip route vrf VTB-RF 10.194.136.0 255.255.252.0 10.194.254.121 name VTB-RF-24_local_site_servers track 302
+ip route vrf VTB-RF 10.194.140.0 255.255.255.0 10.194.254.121 name VTB-RF-24_NAT track 302
+ip route vrf VTB-RF 10.194.141.0 255.255.255.0 10.194.254.121 name VTB-RF-24_NAT track 302
+ip route vrf VTB-RF 10.8.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.9.0.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.9.8.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.9.13.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.10.0.0 255.255.224.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.10.34.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.10.36.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.10.37.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.11.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.12.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.13.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.15.48.0 255.255.240.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.31.32.0 255.255.224.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.31.64.0 255.255.192.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.31.128.0 255.255.128.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.32.32.0 255.255.224.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.32.64.0 255.255.192.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.32.128.0 255.255.128.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.33.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.34.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.35.0.0 255.255.224.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.35.64.0 255.255.192.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.35.128.0 255.255.128.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.64.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.65.0.0 255.255.224.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.65.128.0 255.255.128.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.67.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.68.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.69.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.70.8.0 255.255.248.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.70.16.0 255.255.240.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.70.32.0 255.255.224.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.70.64.0 255.255.192.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.70.128.0 255.255.128.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.72.240.0 255.255.254.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.73.128.0 255.255.128.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.74.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.75.128.0 255.255.128.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.76.64.0 255.255.248.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.76.80.0 255.255.248.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.76.216.0 255.255.248.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.76.248.0 255.255.248.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.79.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.80.0.0 255.255.192.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.81.48.0 255.255.248.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.81.64.0 255.255.248.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.81.80.0 255.255.248.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.81.255.1 255.255.255.255 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.84.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.85.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.86.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.87.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.88.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.89.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.96.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.97.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.98.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.135.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.191.208.0 255.255.240.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.237.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.254.0.0 255.255.240.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.254.16.0 255.255.240.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.254.32.0 255.255.240.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 217.14.48.0 255.255.255.192 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 217.14.49.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 217.14.50.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 217.14.51.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 217.14.52.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 217.14.53.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 217.14.54.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 217.14.55.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 172.16.96.0 255.255.224.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 172.16.201.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 172.16.216.0 255.255.248.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 172.18.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 172.19.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 172.20.0.0 255.254.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 172.22.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 172.23.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 172.24.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 172.25.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 172.26.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 172.27.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 172.28.0.0 255.255.0.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 172.30.0.0 255.255.128.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 172.30.128.0 255.255.128.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.6.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.7.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.8.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.33.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.37.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.38.0 255.255.254.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.40.0 255.255.254.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.42.0 255.255.254.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.44.0 255.255.254.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.46.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.47.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.48.0 255.255.248.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.57.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.58.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.60.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.62.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.70.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.74.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.76.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.78.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.79.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.93.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.95.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.97.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.103.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.104.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.201.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.202.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.216.0 255.255.252.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.222.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.224.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.225.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.226.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.227.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.228.0 255.255.254.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.230.0 255.255.254.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.232.0 255.255.254.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.234.0 255.255.254.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.236.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.238.0 255.255.254.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.240.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.242.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.243.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.244.0 255.255.252.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.248.0 255.255.254.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 192.168.253.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.254.224.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.254.225.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.254.227.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.254.228.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.194.157.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_NAT track 302
+ip route vrf VTB-RF 10.194.152.0 255.255.252.0 10.194.254.89 name local_site_servers track 302
+ip route vrf VTB-RF 10.194.156.0 255.255.255.0 10.194.254.89 name VTB-RF-BM_NAT track 302
+ip route vrf VTB-RF 10.0.0.255 255.255.255.255 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.1.0.0 255.255.254.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.1.5.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.1.6.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.2.11.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.2.32.0 255.255.224.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.15.0.0 255.255.224.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.16.32.0 255.255.224.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.23.96.0 255.255.224.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.23.120.0 255.255.248.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.24.32.0 255.255.224.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.24.72.0 255.255.254.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.25.225.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.26.32.0 255.255.248.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.26.32.0 255.255.254.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.26.56.244 255.255.255.252 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.26.58.0 255.255.254.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.42.32.0 255.255.224.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.42.64.0 255.255.224.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.46.32.0 255.255.224.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.52.64.0 255.255.224.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.54.32.0 255.255.224.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.56.32.0 255.255.224.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.56.64.0 255.255.224.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.56.96.0 255.255.224.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.58.0.0 255.255.0.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.59.32.0 255.255.224.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.61.32.0 255.255.224.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.65.32.0 255.255.224.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.66.32.0 255.255.224.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.78.32.0 255.255.224.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.78.64.0 255.255.224.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.93.0.0 255.255.224.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.99.128.0 255.255.192.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.99.192.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.99.254.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.172.0.0 255.255.0.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.173.0.0 255.255.0.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.174.0.0 255.255.0.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.175.0.0 255.255.0.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.197.41.192 255.255.255.248 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.200.32.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.200.33.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.200.39.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.201.0.0 255.255.0.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.202.0.0 255.255.0.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.203.0.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.203.1.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.203.26.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.203.27.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.203.31.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.208.0.0 255.255.0.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.210.0.0 255.255.0.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.211.0.0 255.255.0.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.212.0.0 255.255.0.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.213.30.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.220.0.0 255.255.254.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.225.251.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.225.253.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.246.0.0 255.255.248.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.246.240.0 255.255.240.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.247.0.0 255.255.224.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.248.0.0 255.255.224.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.249.0.0 255.255.224.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.250.0.0 255.255.224.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.16.1.0 255.255.255.192 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.16.32.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.16.33.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.16.34.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.16.62.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.16.64.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.16.69.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.16.73.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.16.74.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.16.76.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.16.78.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.16.82.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.16.83.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.16.84.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.16.90.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.16.252.0 255.255.255.128 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.17.125.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.17.128.0 255.255.254.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.17.252.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.17.254.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.20.3.12 255.255.255.255 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.31.20.0 255.255.252.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.31.64.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.31.65.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.31.66.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.31.67.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.31.140.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.31.141.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.31.144.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.31.145.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.31.146.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.31.147.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.31.148.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.31.149.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.31.150.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 172.31.151.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 192.168.19.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 192.168.21.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 192.168.53.5 255.255.255.255 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 192.168.123.0 255.255.255.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 1.1.1.0 255.255.255.252 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.99.0.0 255.255.128.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.14.48.0 255.255.240.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24(NATs) track 302
+ip route vrf VTB-RF 10.254.226.0 255.255.255.128 10.194.254.41 name VTB-RF_ADMIN(VTB-Core)_PART-OF-NEXT-SUPPORT-INF track 302
+ip route vrf VTB-RF 10.176.0.0 255.255.128.0 10.194.254.89 name VTB-RF_FULL_VIEW-XBM track 302
+ip route vrf VTB-RF 10.76.95.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.76.136.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.76.161.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.76.162.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-RF 10.76.164.0 255.255.255.0 10.194.254.121 name VTB-RF_FULL_VIEW-X24 track 302
+ip route vrf VTB-Core 10.136.252.0 255.255.254.0 10.132.248.185 name Context-VTB-MON track 304
+ip route vrf VTB-Core 10.144.133.49 255.255.255.255 10.132.248.185 name Context-VTB-MON track 304
+ip route vrf VTB-Core 10.144.255.232 255.255.255.248 10.132.248.185 name Context-VTB-MON track 304
+ip route vrf VTB-Core 10.166.20.0 255.255.252.0 10.132.248.185 name Context-VTB-MON track 304
+ip route vrf VTB-Core 10.166.24.0 255.255.255.0 10.132.248.185 name Context-VTB-MON track 304
+ip route vrf VTB-Core 10.166.25.0 255.255.255.0 10.132.248.185 name Context-VTB-MON track 304
+ip route vrf VTB-Core 10.166.26.0 255.255.255.0 10.132.248.185 name Context-VTB-MON track 304
+ip route vrf VTB-Core 10.166.27.0 255.255.255.224 10.132.248.185 name Context-VTB-MON track 304
+ip route vrf VTB-Core 10.166.27.32 255.255.255.224 10.132.248.185 name Context-VTB-MON track 304
+ip route vrf VTB-Core 10.166.253.0 255.255.255.0 10.132.248.185 name Context-VTB-MON track 304
+ip route vrf VTB-Core 10.168.252.0 255.255.255.0 10.132.248.185 name Context-VTB-MON track 304
+ip route vrf VTB-Core 10.178.120.0 255.255.254.0 10.132.248.185 name Context-VTB-MON track 304
+ip route vrf VTB-MON 10.0.0.0 255.0.0.0 10.132.248.193 name Context-VTB-MON track 304
+ip route vrf VTB-Core 10.161.254.128 255.255.255.128 10.132.248.153 name Context-VTB-SEC track 304
+ip route vrf VTB-Core 10.164.253.150 255.255.255.255 10.132.248.153 name Context-VTB-SEC track 304
+ip route vrf VTB-SEC 10.132.130.0 255.255.255.0 10.132.248.161 name MPLS-ASA-VTB-SEC track 304
+ip route vrf VTB-SEC 10.144.130.0 255.255.255.0 10.132.248.161 name MPLS-ASA-VTB-SEC track 304
+ip route vrf VTB-Core 10.132.153.0 255.255.255.0 10.132.248.5 name vnInet-Proxy-COD track 304
+ip route vrf VTB-Core 10.132.182.0 255.255.255.0 10.132.248.5 name vnInet-Proxy-COD track 304
+ip route vrf VTB-Core 10.132.248.236 255.255.255.252 10.132.248.5 name vnInet-Proxy-COD-TEMP-(LinksNet2) track 304
+ip route vrf VTB-Core 10.132.248.240 255.255.255.240 10.132.248.5 name vnInet-Proxy-COD-TEMP-(LinksNet1) track 304
+ip route vrf VTB-Core 10.164.142.0 255.255.255.192 10.132.248.5 name vnInet-Proxy track 304
+ip route vrf VTB-Core 10.164.142.64 255.255.255.192 10.132.248.5 name vnInet-Proxy track 304
+ip route vrf VTB-Core 10.191.253.0 255.255.255.0 10.132.248.5 track 304
+ip route vrf VTB-Core 10.191.254.0 255.255.254.0 10.132.248.5 track 304
+ip route vrf nInet 172.16.222.0 255.255.255.0 172.16.241.253 track 304
+ip route vrf nInet-Proxy 0.0.0.0 0.0.0.0 10.132.248.145 track 304
+ip route vrf nInet-Proxy 10.191.253.0 255.255.255.0 10.132.248.145 track 304
+ip route vrf nInet-Proxy 172.16.251.57 255.255.255.255 10.132.248.145 track 304
+ip route vrf VTB-Core 10.132.189.0 255.255.255.0 10.132.248.5 name vnInet-Proxy-vCOD track 304
+ip route vrf VTB-Core 10.150.133.0 255.255.255.0 10.132.248.5 name vnInet-Proxy-pCOD track 304
+ip route vrf VTB-Core 10.132.248.176 255.255.255.252 10.132.248.169 name Context-VTB-DEV-LINK track 304
+ip route vrf VTB-Core 10.144.14.0 255.255.255.0 10.132.248.169 name Context-VTB-DEV track 304
+ip route vrf VTB-Core 10.144.66.0 255.255.255.0 10.132.248.169 name Context-VTB-DEV track 304
+ip route vrf VTB-Core 10.144.67.0 255.255.255.0 10.132.248.169 name Context-VTB-DEV track 304
+ip route vrf VTB-Core 10.144.68.0 255.255.255.224 10.132.248.169 name Context-VTB-DEV track 304
+ip route vrf VTB-Core 10.144.68.32 255.255.255.224 10.132.248.169 name Context-VTB-DEV track 304
+ip route vrf VTB-Core 10.144.68.64 255.255.255.224 10.132.248.169 name Context-VTB-DEV track 304
+ip route vrf VTB-Core 10.144.68.96 255.255.255.224 10.132.248.169 name Context-VTB-DEV track 304
+ip route vrf VTB-Core 10.144.68.128 255.255.255.224 10.132.248.169 name Context-VTB-DEV track 304
+ip route vrf VTB-Core 10.144.68.160 255.255.255.224 10.132.248.169 name Context-VTB-DEV track 304
+ip route vrf VTB-Core 10.144.68.192 255.255.255.224 10.132.248.169 name Context-VTB-DEV_tCat10-1 track 304
+ip route vrf VTB-Core 10.144.68.224 255.255.255.224 10.132.248.169 name Context-VTB-DEV_tCat14-1 track 304
+ip route vrf VTB-Core 10.144.70.0 255.255.255.0 10.132.248.169 name VTB-DEV-SZRC_Govorova_52 track 304
+ip route vrf VTB-Core 10.144.71.0 255.255.255.0 10.132.248.169 name Context-VTB-DEV_tCat10-1 track 304
+ip route vrf VTB-Core 10.144.72.0 255.255.255.0 10.132.248.169 name Context-VTB-DEV-TWSTB track 304
+ip route vrf VTB-Core 10.144.131.0 255.255.255.0 10.132.248.169 name Context-VTB-DEV track 304
+ip route vrf VTB-Core 10.144.137.0 255.255.255.0 10.132.248.169 name Context-VTB-DEV track 304
+ip route vrf VTB-Core 10.144.138.0 255.255.255.0 10.132.248.169 name Context-VTB-DEV track 304
+ip route vrf VTB-Core 10.144.143.0 255.255.255.0 10.132.248.169 name Context-VTB-DEV track 304
+ip route vrf VTB-Core 10.144.144.0 255.255.255.0 10.132.248.169 name Context-VTB-DEV-vrnDC track 304
+ip route vrf VTB-Core 10.144.145.0 255.255.255.0 10.132.248.169 name Context-VTB-DEV-vrnDC track 304
+ip route vrf VTB-Core 10.144.146.0 255.255.255.0 10.132.248.169 name Context-VTB-DEV-vrnDC track 304
+ip route vrf VTB-Core 10.144.147.0 255.255.255.0 10.132.248.169 name Context-VTB-DEV-vrnDC track 304
+ip route vrf VTB-Core 10.144.148.0 255.255.252.0 10.132.248.169 name Context-VTB-DEV-VRN41 track 304
+ip route vrf VTB-Core 10.144.152.0 255.255.252.0 10.132.248.169 name Context-VTB-DEV-VRN41 track 304
+ip route vrf VTB-Core 10.144.156.0 255.255.254.0 10.132.248.169 name Context-VTB-DEV-VRN41 track 304
+ip route vrf VTB-Core 10.144.159.0 255.255.255.0 10.132.248.169 name Context-VTB-DEV track 304
+ip route vrf VTB-Core 10.144.160.0 255.255.255.0 10.132.248.169 name Context-VTB-DEV-vrnDC track 304
+ip route vrf VTB-Core 10.144.193.0 255.255.255.0 10.132.248.169 name Context-VTB-DEV-BM track 304
+ip route vrf VTB-Core 10.144.194.0 255.255.255.0 10.132.248.169 name Context-VTB-DEV-BM track 304
+ip route vrf VTB-Core 10.144.195.0 255.255.255.0 10.132.248.169 name Context-VTB-DEV-BM track 304
+ip route vrf VTB-Core 10.144.251.0 255.255.255.224 10.132.248.169 name Context-VTB-DEV-TWR-DC track 304
+ip route vrf VTB-Core 10.144.196.0 255.255.255.0 10.132.248.169 name Context-VTB-DEV-BM track 304
+ip route vrf VTB-DEV 10.0.0.0 255.0.0.0 10.132.248.177 name MPLS-PIX-VTBDEV track 304
+ip route vrf VTB-Core 10.132.192.0 255.255.255.0 10.132.248.5 name vnInet-Proxy-pCOD track 304
+ip route vrf VTB-SEC 10.132.163.0 255.255.255.0 10.132.248.161 name MPLS-ASA-VTB-SEC track 304
+ip route vrf VTB-Core 10.144.197.0 255.255.255.0 10.132.248.169 name Context-VTB-DEV-x24-N.Basmannya track 304
+ip route vrf VTB-Core 10.144.161.0 255.255.255.0 10.132.248.169 name Context-VTB-DEV-vrnDC track 304
+ip route vrf VTB-Core 10.144.163.0 255.255.255.0 10.132.248.169 name Context-VTB-DEV-vrnDC-STEND track 304
+ip route vrf VTB-Core 10.144.73.0 255.255.255.224 10.132.248.169 name Context-VTB-DEV-Perovo track 304
+ip route vrf VTB-Core 10.144.74.0 255.255.255.224 10.132.248.169 name Context-VTB-DEV-DERBENEVSKAYA track 304
+ip route vrf VTB-Core 10.144.74.64 255.255.255.224 10.132.248.169 name Context-VTB-DEV-DERBENEVSKAYA track 304
+ip route vrf VTB-Core 10.144.74.128 255.255.255.224 10.132.248.169 name Context-VTB-DEV-DERBENEVSKAYA track 304
+ip route vrf VTB-Core 10.144.74.192 255.255.255.224 10.132.248.169 name Context-VTB-DEV-DERBENEVSKAYA track 304
+ip route vrf VTB-Core 10.144.75.0 255.255.255.224 10.132.248.169 name Context-VTB-DEV-DERBENEVSKAYA track 304
+ip route vrf VTB-Core 10.144.76.0 255.255.255.0 10.132.248.169 name Context-VTB-DEV track 304
+ip route vrf VTB-Core 10.144.77.0 255.255.255.0 10.132.248.169 name Context-VTB-DEV track 304
+ip route vrf VTB-Core 10.164.253.0 255.255.255.0 10.132.248.153 name Context-VTB-SEC track 304
+ip route vrf VTB-Core 10.192.131.0 255.255.255.0 10.132.248.153 name Context-VTB-SEC-NAT_10.192.119.0/24 track 304
+ip route vrf VTB-SEC 10.0.0.0 255.0.0.0 10.132.248.161 name MPLS-ASA-VTB-SEC track 304
+ip route vrf VTB-Core 10.144.198.0 255.255.255.0 10.132.248.169 name Context-VTB-DEV-BM track 304
+ip route vrf VTB-Core 10.149.207.0 255.255.255.192 10.148.0.22 name connect-to-VTB-FIN
+ip route vrf VTB-Core 10.190.0.0 255.255.252.0 10.132.248.201 name Context-VTB-ThinClient
+ip route vrf VTB-FTR 10.0.0.0 255.0.0.0 10.148.0.6
+ip route vrf VTB-FTR 10.148.0.0 255.255.0.0 10.148.0.6
+ip route vrf VTB-FTR 10.193.114.10 255.255.255.255 10.148.0.6
+ip route vrf VTB-FTR 10.193.116.5 255.255.255.255 10.148.0.6
+ip route vrf VTB-GW 10.144.249.234 255.255.255.255 172.17.255.4 name Old_VPN_Cite_RusRailWay
+ip route vrf VTB-GW 10.250.5.96 255.255.255.252 172.17.255.4 name Old_LastMile_TKB_RRW
+ip route vrf VTB-GW 172.17.255.8 255.255.255.248 172.17.255.4
+ip route vrf VTB-GW 192.168.0.8 255.255.255.248 172.17.255.4 name New_VIPNET_RusRailWay
+ip route vrf VTB-GW 192.168.0.16 255.255.255.252 172.17.255.4 name NewLastMile_TKB_RRW
+ip route vrf VTB-GW 192.168.0.20 255.255.255.252 172.17.255.4 name LastMile_TKB_RRW
+ip route vrf VTB-GW-RW 172.16.92.0 255.255.255.192 172.17.255.12
+ip route vrf VTB-GW-RW 172.17.255.0 255.255.255.248 172.17.255.12
+ip route vrf VTB-GW-RW 193.164.146.111 255.255.255.255 172.17.255.12
+ip route vrf VTB-KBR 10.0.0.0 255.0.0.0 10.148.0.166
+ip route vrf VTB-RF 10.193.0.0 255.255.0.0 10.194.255.6
+ip route vrf nInet-SRV 172.16.228.96 255.255.255.240 172.16.231.4 name NAT_POOL_FOR_GISGMP
+!
+!
+ip prefix-list VIP-INET-PREFIX seq 10 permit 172.16.102.0/24
+ip prefix-list VIP-INET-PREFIX seq 20 permit 172.16.103.24/30
+ip prefix-list VIP-INET-PREFIX seq 30 permit 172.16.103.28/30
+ip prefix-list VIP-INET-PREFIX seq 40 permit 172.16.103.20/30
+ip prefix-list VIP-INET-PREFIX seq 50 permit 172.16.103.16/30
+ip prefix-list VIP-INET-PREFIX seq 60 permit 172.16.103.12/30
+ip prefix-list VIP-INET-PREFIX seq 65 permit 172.16.101.0/24
+ip prefix-list VIP-INET-PREFIX seq 70 permit 172.16.99.0/26
+ip prefix-list VIP-INET-PREFIX seq 75 permit 172.16.99.192/26
+ip prefix-list VIP-INET-PREFIX seq 80 permit 172.16.100.0/23
+!
+ip prefix-list VTB-Core-DC seq 10 permit 10.132.0.0/16 ge 17
+ip prefix-list VTB-Core-DC seq 20 permit 10.133.0.0/24
+ip prefix-list VTB-Core-DC seq 30 permit 10.192.1.0/24
+ip prefix-list VTB-Core-DC seq 35 permit 10.133.16.0/22
+ip prefix-list VTB-Core-DC seq 40 permit 10.133.20.0/22
+ip prefix-list VTB-Core-DC seq 45 permit 10.133.24.0/22
+ip prefix-list VTB-Core-DC seq 50 permit 10.133.28.0/22
+ip prefix-list VTB-Core-DC seq 55 permit 10.133.32.0/22
+ip prefix-list VTB-Core-DC seq 60 permit 10.133.36.0/22
+ip prefix-list VTB-Core-DC seq 65 permit 10.133.40.0/22
+ip prefix-list VTB-Core-DC seq 70 permit 10.133.44.0/22
+ip prefix-list VTB-Core-DC seq 75 permit 10.133.48.0/22
+ip prefix-list VTB-Core-DC seq 80 permit 10.133.52.0/22
+ip prefix-list VTB-Core-DC seq 85 permit 10.133.56.0/22
+ip prefix-list VTB-Core-DC seq 90 permit 10.133.60.0/22
+ip prefix-list VTB-Core-DC seq 95 permit 10.133.64.0/22
+ip prefix-list VTB-Core-DC seq 100 permit 10.133.68.0/22
+ip prefix-list VTB-Core-DC seq 105 permit 10.133.72.0/22
+ip prefix-list VTB-Core-DC seq 110 permit 10.133.76.0/22
+ip prefix-list VTB-Core-DC seq 155 permit 10.133.112.0/22
+ip prefix-list VTB-Core-DC seq 160 permit 10.133.116.0/22
+ip prefix-list VTB-Core-DC seq 165 permit 10.133.120.0/22
+ip prefix-list VTB-Core-DC seq 170 permit 10.133.124.0/22
+ip prefix-list VTB-Core-DC seq 175 permit 10.134.54.0/24
+ip prefix-list VTB-Core-DC seq 180 permit 10.134.1.0/24
+ip prefix-list VTB-Core-DC seq 185 permit 10.134.2.0/24
+ip prefix-list VTB-Core-DC seq 190 permit 10.134.3.0/24
+ip prefix-list VTB-Core-DC seq 195 permit 10.134.9.0/24
+ip prefix-list VTB-Core-DC seq 200 permit 10.134.10.0/24
+ip prefix-list VTB-Core-DC seq 205 permit 10.134.11.0/24
+ip prefix-list VTB-Core-DC seq 210 permit 10.151.15.0/24
+ip prefix-list VTB-Core-DC seq 215 permit 10.134.15.0/24
+ip prefix-list VTB-Core-DC seq 220 permit 10.134.16.0/24
+ip prefix-list VTB-Core-DC seq 225 permit 10.151.26.0/24
+ip prefix-list VTB-Core-DC seq 230 permit 10.134.41.0/24
+ip prefix-list VTB-Core-DC seq 235 permit 10.134.42.0/24
+ip prefix-list VTB-Core-DC seq 240 permit 10.134.43.0/24
+ip prefix-list VTB-Core-DC seq 245 permit 10.134.45.0/24
+ip prefix-list VTB-Core-DC seq 250 permit 10.134.46.0/24
+ip prefix-list VTB-Core-DC seq 255 permit 10.134.47.0/24
+ip prefix-list VTB-Core-DC seq 260 permit 10.151.50.0/24
+ip prefix-list VTB-Core-DC seq 265 permit 10.134.50.0/24
+ip prefix-list VTB-Core-DC seq 270 permit 10.134.52.0/24
+ip prefix-list VTB-Core-DC seq 275 permit 10.134.53.0/24
+ip prefix-list VTB-Core-DC seq 280 permit 10.134.55.0/24
+ip prefix-list VTB-Core-DC seq 285 permit 10.134.56.0/24
+ip prefix-list VTB-Core-DC seq 290 permit 10.134.57.0/24
+ip prefix-list VTB-Core-DC seq 295 permit 10.134.58.0/24
+ip prefix-list VTB-Core-DC seq 300 permit 10.134.59.0/24
+ip prefix-list VTB-Core-DC seq 305 permit 10.134.60.0/24
+ip prefix-list VTB-Core-DC seq 310 permit 10.134.61.0/24
+ip prefix-list VTB-Core-DC seq 315 permit 10.134.62.0/24
+ip prefix-list VTB-Core-DC seq 320 permit 10.151.1.0/24
+ip prefix-list VTB-Core-DC seq 325 permit 10.151.45.0/24
+ip prefix-list VTB-Core-DC seq 330 permit 10.134.4.0/24
+ip prefix-list VTB-Core-DC seq 335 permit 10.134.12.0/24
+ip prefix-list VTB-Core-DC seq 340 permit 10.134.17.0/24
+ip prefix-list VTB-Core-DC seq 360 permit 10.151.4.0/24
+ip prefix-list VTB-Core-DC seq 370 permit 10.151.12.0/24
+ip prefix-list VTB-Core-DC seq 390 permit 10.151.17.0/24
+ip prefix-list VTB-Core-DC seq 432 permit 10.134.5.0/24
+ip prefix-list VTB-Core-DC seq 434 permit 10.134.6.0/24
+ip prefix-list VTB-Core-DC seq 436 permit 10.134.7.0/24
+ip prefix-list VTB-Core-DC seq 438 permit 10.134.8.0/24
+ip prefix-list VTB-Core-DC seq 440 permit 10.134.13.0/24
+ip prefix-list VTB-Core-DC seq 442 permit 10.134.14.0/24
+ip prefix-list VTB-Core-DC seq 444 permit 10.134.18.0/24
+ip prefix-list VTB-Core-DC seq 446 permit 10.134.19.0/24
+ip prefix-list VTB-Core-DC seq 448 permit 10.134.20.0/24
+ip prefix-list VTB-Core-DC seq 450 permit 10.134.21.0/24
+ip prefix-list VTB-Core-DC seq 452 permit 10.134.22.0/24
+ip prefix-list VTB-Core-DC seq 454 permit 10.134.23.0/24
+ip prefix-list VTB-Core-DC seq 456 permit 10.134.24.0/24
+ip prefix-list VTB-Core-DC seq 458 permit 10.134.25.0/24
+ip prefix-list VTB-Core-DC seq 460 permit 10.134.27.0/24
+ip prefix-list VTB-Core-DC seq 462 permit 10.134.28.0/24
+ip prefix-list VTB-Core-DC seq 464 permit 10.134.29.0/24
+ip prefix-list VTB-Core-DC seq 466 permit 10.134.30.0/24
+ip prefix-list VTB-Core-DC seq 468 permit 10.134.31.0/24
+ip prefix-list VTB-Core-DC seq 470 permit 10.134.32.0/24
+ip prefix-list VTB-Core-DC seq 472 permit 10.134.33.0/24
+ip prefix-list VTB-Core-DC seq 474 permit 10.134.34.0/24
+ip prefix-list VTB-Core-DC seq 476 permit 10.134.35.0/24
+ip prefix-list VTB-Core-DC seq 478 permit 10.134.36.0/24
+ip prefix-list VTB-Core-DC seq 480 permit 10.134.37.0/24
+ip prefix-list VTB-Core-DC seq 482 permit 10.134.38.0/24
+ip prefix-list VTB-Core-DC seq 484 permit 10.134.39.0/24
+ip prefix-list VTB-Core-DC seq 486 permit 10.134.40.0/24
+ip prefix-list VTB-Core-DC seq 488 permit 10.134.48.0/24
+ip prefix-list VTB-Core-DC seq 490 permit 10.134.49.0/24
+ip prefix-list VTB-Core-DC seq 492 permit 10.134.51.0/24
+ip prefix-list VTB-Core-DC seq 496 permit 10.134.63.0/24
+ip prefix-list VTB-Core-DC seq 498 permit 10.134.64.0/24
+ip prefix-list VTB-Core-DC seq 499 permit 10.134.65.0/24
+ip prefix-list VTB-Core-DC seq 500 permit 10.133.0.0/16 le 27
+ip prefix-list VTB-Core-DC seq 510 permit 10.134.0.0/16 le 27
+ip prefix-list VTB-Core-DC seq 520 permit 10.151.0.0/16 le 27
+ip prefix-list VTB-Core-DC seq 525 permit 10.194.132.0/24
+ip prefix-list VTB-Core-DC seq 530 permit 10.151.25.0/24
+ip prefix-list VTB-Core-DC seq 535 permit 10.151.48.0/24
+ip prefix-list VTB-Core-DC seq 540 permit 10.151.42.0/24
+ip prefix-list VTB-Core-DC seq 545 permit 10.133.129.0/24
+ip prefix-list VTB-Core-DC seq 550 permit 10.192.126.0/25 le 32
+ip prefix-list VTB-Core-DC seq 555 permit 10.152.255.0/25
+ip prefix-list VTB-Core-DC seq 560 permit 10.152.0.0/16 le 30
+!
+ip prefix-list VTB-NW seq 5 permit 10.200.67.0/24
+ip prefix-list VTB-NW seq 10 permit 10.200.71.0/24
+ip prefix-list VTB-NW seq 15 permit 10.200.72.0/24
+ip prefix-list VTB-NW seq 20 permit 10.200.74.0/24
+ip prefix-list VTB-NW seq 25 permit 10.200.76.0/24
+ip prefix-list VTB-NW seq 30 permit 10.200.79.0/24
+ip prefix-list VTB-NW seq 35 permit 10.200.116.0/24
+ip prefix-list VTB-NW seq 40 permit 10.200.117.0/24
+ip prefix-list VTB-NW seq 45 permit 10.200.118.0/24
+ip prefix-list VTB-NW seq 50 permit 10.200.119.0/24
+ip prefix-list VTB-NW seq 55 permit 10.200.136.0/26
+ip prefix-list VTB-NW seq 60 permit 10.200.136.128/26
+!
+ip prefix-list VTB-RF seq 5 permit 10.194.128.0/24
+ip prefix-list VTB-RF seq 10 permit 10.194.160.0/24
+ip prefix-list VTB-RF seq 15 permit 10.194.168.0/24
+!
+ip prefix-list default_RF seq 5 permit 0.0.0.0/0
+!
+ip prefix-list default_VTBRF seq 5 permit 10.0.0.0/8
+ip prefix-list default_VTBRF seq 10 permit 0.0.0.0/0
+!
+ip prefix-list nInet-default seq 5 permit 0.0.0.0/0
+!
+ip prefix-list pl-Perovo-VTB-RF-24 seq 10 permit 10.194.162.0/24
+!
+ip prefix-list pl-Perovo-VTB-RF-BM seq 10 permit 10.194.170.0/24
+!
+ip prefix-list pl-Perovo-VTB-RF-CAP seq 10 permit 10.194.166.0/24
+!
+ip prefix-list pl-RF seq 10 permit 10.194.0.0/16
+!
+ip prefix-list pl-V43-VTB-RF-24 seq 45 permit 10.194.136.0/22
+!
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 10 permit 10.8.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 20 permit 10.9.0.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 30 permit 10.9.8.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 40 permit 10.9.13.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 50 permit 10.10.0.0/19
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 60 permit 10.10.34.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 70 permit 10.10.36.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 80 permit 10.10.37.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 90 permit 10.11.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 100 permit 10.12.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 110 permit 10.13.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 120 permit 10.15.48.0/20
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 130 permit 10.31.32.0/19
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 140 permit 10.31.64.0/18
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 150 permit 10.31.128.0/17
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 160 permit 10.32.32.0/19
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 170 permit 10.32.64.0/18
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 180 permit 10.32.128.0/17
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 190 permit 10.33.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 200 permit 10.34.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 210 permit 10.35.0.0/19
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 220 permit 10.35.64.0/18
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 230 permit 10.35.128.0/17
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 240 permit 10.64.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 250 permit 10.65.0.0/19
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 260 permit 10.65.128.0/17
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 270 permit 10.67.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 280 permit 10.68.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 290 permit 10.69.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 300 permit 10.70.8.0/21
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 310 permit 10.70.16.0/20
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 320 permit 10.70.32.0/19
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 330 permit 10.70.64.0/18
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 340 permit 10.70.128.0/17
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 350 permit 10.72.240.0/23
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 360 permit 10.73.128.0/17
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 370 permit 10.74.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 380 permit 10.75.128.0/17
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 390 permit 10.76.64.0/21
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 400 permit 10.76.80.0/21
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 410 permit 10.76.216.0/21
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 420 permit 10.76.248.0/21
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 430 permit 10.79.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 440 permit 10.80.0.0/18
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 450 permit 10.81.48.0/21
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 460 permit 10.81.64.0/21
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 470 permit 10.81.80.0/21
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 480 permit 10.81.255.1/32
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 490 permit 10.84.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 500 permit 10.85.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 510 permit 10.86.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 520 permit 10.87.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 530 permit 10.88.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 540 permit 10.89.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 550 permit 10.96.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 560 permit 10.97.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 570 permit 10.98.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 580 permit 10.135.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 590 permit 10.191.208.0/20
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 600 permit 10.237.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 610 permit 10.254.0.0/20
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 620 permit 10.254.16.0/20
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 630 permit 10.254.32.0/20
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 640 permit 217.14.48.0/26
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 650 permit 217.14.49.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 660 permit 217.14.50.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 670 permit 217.14.51.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 680 permit 217.14.52.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 690 permit 217.14.53.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 700 permit 217.14.54.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 710 permit 217.14.55.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 720 permit 172.16.96.0/19
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 730 permit 172.16.201.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 740 permit 172.16.216.0/21
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 750 permit 172.18.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 760 permit 172.19.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 770 permit 172.20.0.0/15
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 780 permit 172.22.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 790 permit 172.23.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 800 permit 172.24.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 810 permit 172.25.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 820 permit 172.26.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 830 permit 172.27.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 840 permit 172.28.0.0/16
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 850 permit 172.30.0.0/17
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 860 permit 172.30.128.0/17
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 870 permit 192.168.6.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 880 permit 192.168.7.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 890 permit 192.168.8.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 900 permit 192.168.33.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 910 permit 192.168.37.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 920 permit 192.168.38.0/23
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 930 permit 192.168.40.0/23
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 940 permit 192.168.42.0/23
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 950 permit 192.168.44.0/23
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 960 permit 192.168.46.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 970 permit 192.168.47.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 980 permit 192.168.48.0/21
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 990 permit 192.168.57.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1000 permit 192.168.58.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1010 permit 192.168.60.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1020 permit 192.168.62.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1030 permit 192.168.70.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1040 permit 192.168.74.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1050 permit 192.168.76.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1060 permit 192.168.78.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1070 permit 192.168.79.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1080 permit 192.168.93.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1090 permit 192.168.95.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1100 permit 192.168.97.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1110 permit 192.168.103.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1120 permit 192.168.104.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1130 permit 192.168.201.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1140 permit 192.168.202.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1150 permit 192.168.216.0/22
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1160 permit 192.168.222.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1170 permit 192.168.224.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1180 permit 192.168.225.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1190 permit 192.168.226.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1200 permit 192.168.227.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1210 permit 192.168.228.0/23
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1220 permit 192.168.230.0/23
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1230 permit 192.168.232.0/23
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1240 permit 192.168.234.0/23
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1250 permit 192.168.236.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1260 permit 192.168.238.0/23
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1270 permit 192.168.240.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1280 permit 192.168.242.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1290 permit 192.168.243.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1300 permit 192.168.244.0/22
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1310 permit 192.168.248.0/23
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1320 permit 192.168.253.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1330 permit 10.254.224.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1340 permit 10.254.225.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1350 permit 10.254.226.0/25
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1360 permit 10.254.227.0/24
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24 seq 1370 permit 10.254.228.0/24
+!
+ip prefix-list pl-V43-VTB-RF-24-FULLVIEW-XBM seq 10 permit 1.1.1.0/30
+!
+ip prefix-list pl-V43-VTB-RF-24-LOCAL seq 10 permit 10.194.160.0/24
+!
+ip prefix-list pl-V43-VTB-RF-24-fw seq 10 permit 10.194.136.0/22
+ip prefix-list pl-V43-VTB-RF-24-fw seq 20 permit 10.194.140.0/24
+ip prefix-list pl-V43-VTB-RF-24-fw seq 30 permit 10.194.141.0/24
+ip prefix-list pl-V43-VTB-RF-24-fw seq 40 permit 10.194.254.120/29
+ip prefix-list pl-V43-VTB-RF-24-fw seq 50 permit 10.194.253.8/29
+!
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 10 permit 1.1.1.0/30
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 20 permit 10.0.0.255/32
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 30 permit 10.1.0.0/23
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 40 permit 10.1.5.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 50 permit 10.1.6.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 60 permit 10.2.11.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 70 permit 10.2.32.0/19
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 80 permit 10.15.0.0/19
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 90 permit 10.16.32.0/19
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 100 permit 10.23.96.0/19
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 110 permit 10.23.120.0/21
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 120 permit 10.24.32.0/19
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 130 permit 10.24.72.0/23
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 140 permit 10.25.225.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 150 permit 10.26.32.0/21
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 160 permit 10.26.32.0/23
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 170 permit 10.26.56.244/30
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 180 permit 10.26.58.0/23
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 190 permit 10.42.32.0/19
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 200 permit 10.42.64.0/19
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 210 permit 10.46.32.0/19
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 220 permit 10.52.64.0/19
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 230 permit 10.54.32.0/19
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 240 permit 10.56.32.0/19
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 250 permit 10.56.64.0/19
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 260 permit 10.56.96.0/19
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 270 permit 10.58.0.0/16
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 280 permit 10.59.32.0/19
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 290 permit 10.61.32.0/19
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 300 permit 10.65.32.0/19
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 310 permit 10.66.32.0/19
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 320 permit 10.78.32.0/19
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 330 permit 10.78.64.0/19
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 340 permit 10.93.0.0/19
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 349 permit 10.99.0.0/17
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 350 permit 10.99.128.0/18
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 360 permit 10.99.192.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 370 permit 10.99.254.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 380 permit 10.172.0.0/16
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 390 permit 10.173.0.0/16
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 400 permit 10.174.0.0/16
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 410 permit 10.175.0.0/16
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 420 permit 10.197.41.192/29
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 430 permit 10.200.32.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 440 permit 10.200.33.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 450 permit 10.200.39.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 460 permit 10.201.0.0/16
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 470 permit 10.202.0.0/16
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 480 permit 10.203.0.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 490 permit 10.203.1.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 500 permit 10.203.26.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 510 permit 10.203.27.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 520 permit 10.203.31.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 530 permit 10.208.0.0/16
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 540 permit 10.210.0.0/16
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 550 permit 10.211.0.0/16
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 560 permit 10.212.0.0/16
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 570 permit 10.213.30.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 580 permit 10.220.0.0/23
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 590 permit 10.225.251.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 600 permit 10.225.253.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 610 permit 10.246.0.0/21
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 620 permit 10.246.240.0/20
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 630 permit 10.247.0.0/19
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 640 permit 10.248.0.0/19
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 650 permit 10.249.0.0/19
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 660 permit 10.250.0.0/19
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 670 permit 172.16.1.0/26
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 680 permit 172.16.32.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 690 permit 172.16.33.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 700 permit 172.16.34.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 710 permit 172.16.62.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 720 permit 172.16.64.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 730 permit 172.16.69.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 740 permit 172.16.73.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 750 permit 172.16.74.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 760 permit 172.16.76.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 770 permit 172.16.78.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 780 permit 172.16.82.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 790 permit 172.16.83.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 800 permit 172.16.84.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 810 permit 172.16.90.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 820 permit 172.16.252.0/25
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 830 permit 172.17.125.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 840 permit 172.17.128.0/23
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 850 permit 172.17.252.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 860 permit 172.17.254.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 870 permit 172.20.3.12/32
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 880 permit 172.31.20.0/22
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 890 permit 172.31.64.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 900 permit 172.31.65.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 910 permit 172.31.66.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 920 permit 172.31.67.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 930 permit 172.31.140.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 940 permit 172.31.141.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 950 permit 172.31.144.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 960 permit 172.31.145.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 970 permit 172.31.146.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 980 permit 172.31.147.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 990 permit 172.31.148.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 1000 permit 172.31.149.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 1010 permit 172.31.150.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 1020 permit 172.31.151.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 1030 permit 192.168.19.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 1040 permit 192.168.21.0/24
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 1050 permit 192.168.53.5/32
+ip prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM seq 1060 permit 192.168.123.0/24
+!
+ip prefix-list pl-V43-VTB-RF-BM-fw seq 10 permit 10.194.152.0/22
+ip prefix-list pl-V43-VTB-RF-BM-fw seq 20 permit 10.194.156.0/24
+ip prefix-list pl-V43-VTB-RF-BM-fw seq 30 permit 10.194.157.0/24
+ip prefix-list pl-V43-VTB-RF-BM-fw seq 40 permit 10.194.254.88/29
+ip prefix-list pl-V43-VTB-RF-BM-fw seq 50 permit 10.194.253.0/29
+!
+ip prefix-list pl-V43-VTB-RF-CAP-fw seq 10 permit 10.194.144.0/22
+ip prefix-list pl-V43-VTB-RF-CAP-fw seq 20 permit 10.194.148.0/24
+ip prefix-list pl-V43-VTB-RF-CAP-fw seq 30 permit 10.194.149.0/24
+ip prefix-list pl-V43-VTB-RF-CAP-fw seq 40 permit 10.194.254.104/29
+ip prefix-list pl-V43-VTB-RF-CAP-fw seq 50 permit 10.194.253.16/29
+!
+ip prefix-list pl-V43-VTB-RF-DM seq 30 permit 10.194.157.0/24
+!
+ip prefix-list pl-V43-VTB-RFBM-LOCAL seq 10 permit 10.194.168.0/24
+!
+ip prefix-list pl-V43-VTB-RFCAP-LOCAL seq 10 permit 10.194.164.0/24
+!
+ip prefix-list pl-exp-VTB-RF seq 5 permit 10.194.128.0/22 le 32
+ip prefix-list pl-exp-VTB-RF seq 10 permit 10.194.132.0/22 le 32
+logging history size 500
+logging history debugging
+logging trap debugging
+logging host 10.144.128.110
+access-list 11 permit 10.64.0.111
+access-list 1300 permit 10.132.128.0 0.0.0.255
+access-list 1300 permit 10.164.147.0 0.0.0.255
+access-list 1300 permit 10.128.48.0 0.0.0.255
+access-list 1300 permit 10.150.128.0 0.0.0.255
+!
+route-map From_MPLS-RF-to-Companies permit 10
+ match ip address prefix-list pl-RF
+!
+route-map Filtr-to-RF-from-RFCAP permit 10
+ match ip address prefix-list pl-V43-VTB-RF-CAP-fw
+!
+route-map Filtr-to-RF-from-RFCAP permit 20
+ match ip address prefix-list pl-V43-VTB-RFCAP-LOCAL
+!
+route-map nInet-default permit 10
+ match ip address prefix-list nInet-default
+ set tag 200
+!
+route-map Filtr-to-MPLS-from-RF-CAP permit 10
+ match ip address prefix-list pl-V43-VTB-RFCAP-LOCAL
+!
+route-map Filtr-to-MPLS-from-RF-CAP permit 20
+ match ip address prefix-list pl-RF
+!
+route-map eigrp-internal permit 10
+ match route-type internal
+!
+route-map Filtr-to-RF-from-RFBM permit 10
+ match ip address prefix-list pl-V43-VTB-RF-BM-fw
+!
+route-map Filtr-to-RF-from-RFBM permit 20
+ match ip address prefix-list pl-V43-VTB-RFBM-LOCAL
+!
+route-map Filtr-to-RF-from-RF24 permit 10
+ match ip address prefix-list pl-V43-VTB-RF-24-fw
+!
+route-map Filtr-to-RF-from-RF24 permit 20
+ match ip address prefix-list pl-V43-VTB-RF-24-LOCAL
+!
+route-map Filtr-to-MPLS deny 4
+ match ip address prefix-list VTB-NW
+!
+route-map Filtr-to-MPLS deny 5
+ match tag 200
+!
+route-map Filtr-to-MPLS deny 10
+ match tag 400
+!
+route-map Filtr-to-MPLS permit 20
+ match route-type internal
+!
+route-map Filtr-to-MPLS permit 30
+ match route-type external
+!
+route-map ToLocalSite permit 10
+ set tag 200
+!
+route-map From_MPLS-RF24-to-RF24 permit 10
+ match ip address prefix-list default_RF
+!
+route-map From_MPLS-RF24-to-RF24 permit 20
+ match ip address prefix-list pl-V43-VTB-RF-24-fw
+!
+route-map From_MPLS-RF24-to-RF24 permit 30
+ match ip address prefix-list pl-Perovo-VTB-RF-24
+!
+route-map From_MPLS-RF24-to-RF24 permit 40
+ match ip address prefix-list pl-V43-VTB-RF-24-FULLVIEW-X24
+!
+route-map From_MPLS-RFCAP-to-RFCAP permit 10
+ match ip address prefix-list default_RF
+!
+route-map From_MPLS-RFCAP-to-RFCAP permit 20
+ match ip address prefix-list pl-V43-VTB-RF-CAP-fw
+!
+route-map From_MPLS-RFCAP-to-RFCAP permit 30
+ match ip address prefix-list pl-Perovo-VTB-RF-CAP
+!
+route-map From_MPLS-RFBM-to-RFBM permit 10
+ match ip address prefix-list default_RF
+!
+route-map From_MPLS-RFBM-to-RFBM permit 20
+ match ip address prefix-list pl-V43-VTB-RF-BM-fw
+!
+route-map From_MPLS-RFBM-to-RFBM permit 30
+ match ip address prefix-list pl-Perovo-VTB-RF-BM
+!
+route-map From_MPLS-RFBM-to-RFBM permit 40
+ match ip address prefix-list pl-V43-VTB-RF-BM-FULLVIEW-XBM
+!
+route-map From_MPLS-RF-to-RF permit 10
+ match ip address prefix-list default_VTBRF
+!
+route-map Filtr-to-MPLS-from-RF permit 10
+ match ip address prefix-list VTB-RF
+!
+route-map Export-VTB-RF permit 20
+ match ip address prefix-list pl-exp-VTB-RF
+ set extcommunity rt 65535:251 additive
+!
+route-map Filtr-to-MPLS-from-RF-24 permit 10
+ match ip address prefix-list pl-V43-VTB-RF-24-LOCAL
+!
+route-map Filtr-to-MPLS-from-RF-24 permit 20
+ match ip address prefix-list pl-RF
+!
+route-map VTB-Core-DC-Networks deny 5
+ match tag 200
+!
+route-map VTB-Core-DC-Networks permit 10
+ match ip address prefix-list VTB-Core-DC
+!
+route-map Filtr-to-MPLS-from-RF-BM permit 10
+ match ip address prefix-list pl-V43-VTB-RFBM-LOCAL
+!
+route-map Filtr-to-MPLS-from-RF-BM permit 20
+ match ip address prefix-list pl-RF
+!
+mpls ldp router-id Loopback0 force
+snmp-server community xxxxxxxx RW 1300
+snmp-server community xxxxxxxx RO 11
+snmp-server trap-source Loopback0
+snmp-server contact uts_noc@vtb.ru, tel. 411-111, ols_uts@vtb.ru, ols_critical
+snmp-server enable traps snmp linkdown linkup coldstart warmstart
+snmp-server enable traps chassis
+snmp-server enable traps module
+snmp-server enable traps transceiver all
+snmp-server enable traps eigrp
+snmp-server enable traps ospf state-change
+snmp-server enable traps ospf errors
+snmp-server enable traps ospf retransmit
+snmp-server enable traps ospf lsa
+snmp-server enable traps bgp
+snmp-server enable traps config-copy
+snmp-server enable traps config
+snmp-server enable traps event-manager
+snmp-server enable traps MAC-Notification move threshold
+snmp-server enable traps ipsla
+snmp-server enable traps bridge newroot topologychange
+snmp-server enable traps flash insertion removal
+snmp-server enable traps memory bufferpeak
+snmp-server enable traps entity
+snmp-server enable traps resource-policy
+snmp-server enable traps cpu threshold
+snmp-server enable traps vlancreate
+snmp-server enable traps vlandelete
+snmp-server enable traps envmon fan shutdown supply temperature status
+snmp-server enable traps mpls rfc ldp
+snmp-server enable traps mpls ldp
+snmp-server enable traps mpls fast-reroute protected
+snmp-server enable traps alarms informational
+snmp-server enable traps mpls vpn
+snmp-server enable traps mpls rfc vpn
+snmp-server host 10.132.128.21 xxxxxxxx 
+snmp-server host 10.150.128.100 xxxxxxxx 
+snmp ifmib ifindex persist
+!
+!
+!
+!
+control-plane
+!
+banner login ^C
+=======================================
+
+DCore-2.vtb via Tacacs,local
+
+=======================================
+^C
+!
+line con 0
+ password xxxxxxxx
+ login authentication NoAAA
+line vty 0 4
+ exec-timeout 3600 0
+ password xxxxxxxx
+ authorization exec MSK-Tacacs
+ accounting commands 15 MSK-Tacacs
+ accounting exec MSK-Tacacs
+ login authentication MSK-Tacacs
+ transport input telnet ssh
+line vty 5 15
+ exec-timeout 3600 0
+ password xxxxxxxx
+ authorization exec MSK-Tacacs
+ accounting commands 15 MSK-Tacacs
+ accounting exec MSK-Tacacs
+ login authentication MSK-Tacacs
+ transport input telnet ssh
+!
+exception crashinfo buffersize 80
+ntp source Loopback0
+ntp server 10.255.255.160
+ntp server 10.255.255.133
+mac-address-table aging-time 480
+!
+!
+end
+

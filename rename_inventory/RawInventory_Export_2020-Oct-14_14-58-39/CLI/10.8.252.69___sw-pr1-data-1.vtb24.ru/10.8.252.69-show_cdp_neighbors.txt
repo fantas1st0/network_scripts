@@ -1,0 +1,161 @@
+
+Capability Codes: R - Router, T - Trans-Bridge, B - Source-Route-Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater,
+                  V - VoIP-Phone, D - Remotely-Managed-Device,
+                  s - Supports-STP-Dispute
+
+Device-ID          Local Intrfce  Hldtme Capability  Platform      Port ID
+sw-pr1-con-er3-3.vtb24.ru
+                    Eth1/16        122    S I       WS-C2960S-24T Gig0/25       
+sw-pr1-con-er3-4.vtb24.ru
+                    Eth1/17        174    S I       WS-C2960S-24T Gig0/25       
+sw-pr1-con-cft6d.vtb24.ru(FDO23021ZUK)
+                    Eth1/18        123    R S I s   N9K-C9348GC-F Eth1/51       
+sw-pr1-data-5.vtb24.ru(FOC2317R11L)
+                    Eth1/25        149    R S I s   N5K-C56128P   Eth1/1        
+sw-pr1-data-6.vtb24.ru(FOC2317R1UP)
+                    Eth1/26        148    R S I s   N5K-C56128P   Eth1/1        
+bda2sw-ip2.vtb24.ru(FDO240805NM)
+                    Eth1/31        141    R S I s   N9K-C9348GC-F Eth1/49       
+sw-pr1-data-11.vtb24.ru(FXS2346Q1QX)
+                    Eth1/33        120    R S s     N77-C7710     Eth7/1        
+sw-pr1-data-11.vtb24.ru(FXS2346Q1QX)
+                    Eth1/34        144    R S s     N77-C7710     Eth7/2        
+sw-pr1-data-11.vtb24.ru(FXS2346Q1QX)
+                    Eth1/35        144    R S s     N77-C7710     Eth7/3        
+sw-pr1-data-11.vtb24.ru(FXS2346Q1QX)
+                    Eth1/36        139    R S s     N77-C7710     Eth7/4        
+sw-pr1-data-9.vtb24.ru(FDO24160U5C)
+                    Eth1/37        176    R S I s   N9K-C93180YC- Eth1/49/1     
+sw-pr1-data-9.vtb24.ru(FDO24160U5C)
+                    Eth1/38        176    R S I s   N9K-C93180YC- Eth1/49/2     
+sw-pr1-data-9.vtb24.ru(FDO24160U5C)
+                    Eth1/39        176    R S I s   N9K-C93180YC- Eth1/49/3     
+sw-pr1-data-9.vtb24.ru(FDO24160U5C)
+                    Eth1/40        176    R S I s   N9K-C93180YC- Eth1/49/4     
+sw-pr1-data-21.vtb24.ru(FOC2024R1BY)
+                    Eth1/41        136    R S I s   N5K-C5648Q    Eth1/11/1     
+sw-pr1-data-21.vtb24.ru(FOC2024R1BY)
+                    Eth1/42        136    R S I s   N5K-C5648Q    Eth1/11/2     
+sw-pr1-data-21.vtb24.ru(FOC2024R1BY)
+                    Eth1/43        136    R S I s   N5K-C5648Q    Eth1/11/3     
+sw-pr1-data-21.vtb24.ru(FOC2024R1BY)
+                    Eth1/44        136    R S I s   N5K-C5648Q    Eth1/11/4     
+sw-pr1-data-22.vtb24.ru(FOC2024R11A)
+                    Eth1/45        132    R S I s   N5K-C5648Q    Eth1/11/1     
+sw-pr1-data-22.vtb24.ru(FOC2024R11A)
+                    Eth1/46        136    R S I s   N5K-C5648Q    Eth1/11/2     
+sw-pr1-data-22.vtb24.ru(FOC2024R11A)
+                    Eth1/47        136    R S I s   N5K-C5648Q    Eth1/11/3     
+sw-pr1-data-22.vtb24.ru(FOC2024R11A)
+                    Eth1/48        136    R S I s   N5K-C5648Q    Eth1/11/4     
+exa12sw-adm0.vtb24.ru(FDO24020P9A)
+                    Eth2/7         143    R S I s   N9K-C9348GC-F Eth1/49       
+sw-pr1-data-5.vtb24.ru(FOC2317R11L)
+                    Eth2/25        149    R S I s   N5K-C56128P   Eth1/2        
+sw-pr1-data-6.vtb24.ru(FOC2317R1UP)
+                    Eth2/26        136    R S I s   N5K-C56128P   Eth1/2        
+sw-pr1-data-12.vtb24.ru(FXS2349Q4AD)
+                    Eth2/33        134    R S s     N77-C7710     Eth7/1        
+sw-pr1-data-12.vtb24.ru(FXS2349Q4AD)
+                    Eth2/34        134    R S s     N77-C7710     Eth7/2        
+sw-pr1-data-12.vtb24.ru(FXS2349Q4AD)
+                    Eth2/35        149    R S s     N77-C7710     Eth7/3        
+sw-pr1-data-12.vtb24.ru(FXS2349Q4AD)
+                    Eth2/36        149    R S s     N77-C7710     Eth7/4        
+sw-pr1-data-10.vtb24.ru(FDO24160U5Z)
+                    Eth2/37        142    R S I s   N9K-C93180YC- Eth1/49/1     
+sw-pr1-data-10.vtb24.ru(FDO24160U5Z)
+                    Eth2/38        142    R S I s   N9K-C93180YC- Eth1/49/2     
+sw-pr1-data-10.vtb24.ru(FDO24160U5Z)
+                    Eth2/39        142    R S I s   N9K-C93180YC- Eth1/49/3     
+sw-pr1-data-10.vtb24.ru(FDO24160U5Z)
+                    Eth2/40        149    R S I s   N9K-C93180YC- Eth1/49/4     
+sw-pr1-data-21.vtb24.ru(FOC2024R1BY)
+                    Eth2/41        136    R S I s   N5K-C5648Q    Eth1/12/1     
+sw-pr1-data-21.vtb24.ru(FOC2024R1BY)
+                    Eth2/42        136    R S I s   N5K-C5648Q    Eth1/12/2     
+sw-pr1-data-21.vtb24.ru(FOC2024R1BY)
+                    Eth2/43        136    R S I s   N5K-C5648Q    Eth1/12/3     
+sw-pr1-data-21.vtb24.ru(FOC2024R1BY)
+                    Eth2/44        136    R S I s   N5K-C5648Q    Eth1/12/4     
+sw-pr1-data-22.vtb24.ru(FOC2024R11A)
+                    Eth2/45        160    R S I s   N5K-C5648Q    Eth1/12/1     
+sw-pr1-data-22.vtb24.ru(FOC2024R11A)
+                    Eth2/46        136    R S I s   N5K-C5648Q    Eth1/12/2     
+sw-pr1-data-22.vtb24.ru(FOC2024R11A)
+                    Eth2/47        136    R S I s   N5K-C5648Q    Eth1/12/3     
+sw-pr1-data-22.vtb24.ru(FOC2024R11A)
+                    Eth2/48        136    R S I s   N5K-C5648Q    Eth1/12/4     
+sw-pr1-otv-1.vtb24.ru(JAF1645AKHJ)
+                    Eth3/14        172    R S s     N7K-C7010     Eth3/9        
+sw-pr1-otv-1.vtb24.ru(JAF1645AKHJ)
+                    Eth3/15        172    R S s     N7K-C7010     Eth3/10       
+sw-pr1-otv-1.vtb24.ru(JAF1645AKHJ)
+                    Eth3/16        175    R S s     N7K-C7010     Eth3/12       
+sw-pr1-data-2.vtb24.ru(JAF1648AMJD)
+                    Eth3/17        136    R S s     N7K-C7010     Eth3/17       
+sw-pr1-data-2.vtb24.ru(JAF1648AMJD)
+                    Eth3/18        136    R S s     N7K-C7010     Eth3/18       
+sw-pr1-otv-1.vtb24.ru(JAF1645AKHJ)
+                    Eth3/20        139    R S s     N7K-C7010     Eth3/13       
+sw-pr1-core-1.vtb24.ru(JAF1648AMEE)
+                    Eth3/21        179    R S s     N7K-C7010     Eth3/21       
+sw-pr1-core-1.vtb24.ru(JAF1648AMEE)
+                    Eth3/22        179    R S s     N7K-C7010     Eth3/22       
+sw-pr1-core-2.vtb24.ru(JAF1648AMJB)
+                    Eth3/23        153    R S s     N7K-C7010     Eth3/21       
+sw-pr1-core-2.vtb24.ru(JAF1648AMJB)
+                    Eth3/24        153    R S s     N7K-C7010     Eth3/22       
+sw-pr1-otv-1.vtb24.ru(JAF1645AKHJ)
+                    Eth4/14        175    R S s     N7K-C7010     Eth4/9        
+sw-pr1-otv-1.vtb24.ru(JAF1645AKHJ)
+                    Eth4/15        175    R S s     N7K-C7010     Eth4/10       
+sw-pr1-otv-1.vtb24.ru(JAF1645AKHJ)
+                    Eth4/16        163    R S s     N7K-C7010     Eth4/12       
+sw-pr1-data-2.vtb24.ru(JAF1648AMJD)
+                    Eth4/17        136    R S s     N7K-C7010     Eth4/17       
+sw-pr1-data-2.vtb24.ru(JAF1648AMJD)
+                    Eth4/18        136    R S s     N7K-C7010     Eth4/18       
+sw-pr1-otv-1.vtb24.ru(JAF1645AKHJ)
+                    Eth4/20        175    R S s     N7K-C7010     Eth4/13       
+sw-pr1-core-1.vtb24.ru(JAF1648AMEE)
+                    Eth4/21        179    R S s     N7K-C7010     Eth4/21       
+sw-pr1-core-1.vtb24.ru(JAF1648AMEE)
+                    Eth4/22        179    R S s     N7K-C7010     Eth4/22       
+sw-pr1-core-2.vtb24.ru(JAF1648AMJB)
+                    Eth4/23        153    R S s     N7K-C7010     Eth4/21       
+sw-pr1-core-2.vtb24.ru(JAF1648AMJB)
+                    Eth4/24        153    R S s     N7K-C7010     Eth4/22       
+sw-pr1-otv-1.vtb24.ru(JAF1645AKHJ)
+                    Eth7/37        132    R S I s   N7K-C7010     Eth2/29       
+sw-pr1-otv-1.vtb24.ru(JAF1645AKHJ)
+                    Eth7/38        139    R S I s   N7K-C7010     Eth2/30       
+sw-pr1-otv-1.vtb24.ru(JAF1645AKHJ)
+                    Eth7/39        139    R S I s   N7K-C7010     Eth7/47       
+sw-pr1-otv-1.vtb24.ru(JAF1645AKHJ)
+                    Eth7/40        139    R S I s   N7K-C7010     Eth7/48       
+sw-pr1-data-3.vtb24.ru(FOX1642G338)
+                    Eth7/42        167    S I s     N5K-C5596UP   Eth1/1        
+sw-pr1-data-4.vtb24.ru(FOX1813GTB0)
+                    Eth7/43        151    S I s     N5K-C5596UP   Eth1/1        
+sw-pr1-otv-2.vtb24.ru(JAF1648AMJD)
+                    Eth8/37        128    R S I s   N7K-C7010     Eth7/45       
+sw-pr1-otv-2.vtb24.ru(JAF1648AMJD)
+                    Eth8/38        128    R S I s   N7K-C7010     Eth7/46       
+sw-pr1-otv-2.vtb24.ru(JAF1648AMJD)
+                    Eth8/39        128    R S I s   N7K-C7010     Eth7/47       
+sw-pr1-otv-2.vtb24.ru(JAF1648AMJD)
+                    Eth8/40        128    R S I s   N7K-C7010     Eth7/48       
+sw-pr1-data-3.vtb24.ru(FOX1642G338)
+                    Eth8/42        120    S I s     N5K-C5596UP   Eth1/2        
+sw-pr1-data-4.vtb24.ru(FOX1813GTB0)
+                    Eth8/43        151    S I s     N5K-C5596UP   Eth1/2        
+sw-pr1-data-2.vtb24.ru(JAF1648AMJD)
+                    Eth9/47        147    R S I s   N7K-C7010     Eth9/47       
+sw-pr1-data-2.vtb24.ru(JAF1648AMJD)
+                    Eth9/48        147    R S I s   N7K-C7010     Eth9/48       
+sw-pr1-data-2.vtb24.ru(JAF1648AMJD)
+                    Eth10/47       147    R S I s   N7K-C7010     Eth10/47      
+sw-pr1-data-2.vtb24.ru(JAF1648AMJD)
+                    Eth10/48       147    R S I s   N7K-C7010     Eth10/48      

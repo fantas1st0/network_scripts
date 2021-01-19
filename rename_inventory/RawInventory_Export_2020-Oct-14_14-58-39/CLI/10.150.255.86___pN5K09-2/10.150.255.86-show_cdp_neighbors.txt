@@ -1,0 +1,104 @@
+
+Capability Codes: R - Router, T - Trans-Bridge, B - Source-Route-Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater,
+                  V - VoIP-Phone, D - Remotely-Managed-Device,
+                  s - Supports-STP-Dispute
+
+
+Device-ID             Local Intrfce Hldtme Capability  Platform         Port ID
+pN5K09-1(FOC2221R1PK)
+                    Eth1/1         150    R S s     N5K-C56128P        Eth1/1        
+pN5K09-1(FOC2221R1PK)
+                    Eth1/2         150    R S s     N5K-C56128P        Eth1/2        
+vdic-hv2171h        Eth1/9         94     S H       Linux              eth2          
+pN77-1-switch1(JPG203100LV)
+                    Eth1/49        179    R S I s   N77-C7710          Eth2/12       
+pN77-2-switch2(JPG203100NQ)
+                    Eth1/50        151    R S I s   N77-C7710          Eth2/12       
+pN5K09-1(FOC2221R1PK)
+                    Eth1/51        150    R S I s   N5K-C56128P        Eth1/51       
+pN5K09-1(FOC2221R1PK)
+                    Eth1/52        150    R S I s   N5K-C56128P        Eth1/52       
+svr-hv2012h         Eth2/5         96     S H       Linux              eth3          
+svr-hv2013h         Eth2/6         96     S H       Linux              eth3          
+svr-hv2016h         Eth2/7         108    S H       Linux              eth3          
+svr-hv2014h         Eth2/8         96     S H       Linux              eth4          
+svr-hv2017h         Eth2/9         96     S H       Linux              eth3          
+svr-hv2015h         Eth2/10        94     S H       Linux              eth4          
+vdic-hv2128h        Eth2/11        108    S H       Linux              eth3          
+vdic-hv2129h        Eth2/12        94     S H       Linux              eth3          
+vdic-hv2130h        Eth2/13        90     S H       Linux              eth3          
+vdic-hv2131h        Eth2/14        108    S H       Linux              eth3          
+vdic-hv2132h        Eth2/15        96     S H       Linux              eth3          
+vdic-hv2133h        Eth2/16        94     S H       Linux              eth3          
+vdic-hv2134h        Eth2/17        108    S H       Linux              eth3          
+vdic-hv2135h        Eth2/18        117    S H       Linux              eth3          
+vdic-hv2136h        Eth2/19        108    S H       Linux              eth3          
+vdic-hv2137h        Eth2/20        96     S H       Linux              eth3          
+vdic-hv2138h        Eth2/21        94     S H       Linux              eth3          
+vdic-hv2139h        Eth2/22        96     S H       Linux              eth3          
+vdic-hv2141h        Eth2/24        94     S H       Linux              eth3          
+vdic-hv247h         Eth3/1         90     S H       Linux              eth3          
+vdic-hv246h         Eth3/2         94     S H       Linux              eth3          
+vdic-hv245h         Eth3/3         108    S H       Linux              eth3          
+vdic-hv244h         Eth3/4         94     S H       Linux              eth3          
+vdic-hv243h         Eth3/5         94     S H       Linux              eth3          
+vdic-hv252h         Eth3/6         96     S H       Linux              eth3          
+vdic-hv251h         Eth3/7         96     S H       Linux              eth3          
+vdic-hv250h         Eth3/8         96     S H       Linux              eth3          
+vdic-hv249h         Eth3/9         94     S H       Linux              eth3          
+vdic-hv248h         Eth3/10        108    S H       Linux              eth3          
+view-ntnx-101       Eth3/11        108    S H       Linux              eth2          
+vdic-hv2142h        Eth3/12        94     S H       Linux              eth3          
+vdic-hv2143h        Eth3/13        94     S H       Linux              eth3          
+vdic-hv2144h        Eth3/14        108    S H       Linux              eth3          
+vdic-hv2145h        Eth3/15        96     S H       Linux              eth3          
+vdic-hv2146h        Eth3/16        108    S H       Linux              eth3          
+vdic-hv2147h        Eth3/17        96     S H       Linux              eth3          
+vdic-hv2148h        Eth3/18        108    S H       Linux              eth3          
+svr-hv2024h         Eth3/21        108    S H       Linux              eth2          
+vdic-hv2172h        Eth3/22        96     S H       Linux              eth2          
+vdic-hv2169h        Eth3/23        108    S H       Linux              eth2          
+vdic-hv2170h        Eth3/24        96     S H       Linux              eth2          
+vdic-hv247h         Eth153/1/1     90     S H       Linux              eth4          
+vdic-hv246h         Eth153/1/2     94     S H       Linux              eth4          
+vdic-hv245h         Eth153/1/3     108    S H       Linux              eth4          
+vdic-hv244h         Eth153/1/4     94     S H       Linux              eth4          
+vdic-hv243h         Eth153/1/5     94     S H       Linux              eth4          
+vdic-hv252h         Eth153/1/6     96     S H       Linux              eth4          
+vdic-hv251h         Eth153/1/7     96     S H       Linux              eth4          
+vdic-hv250h         Eth153/1/8     96     S H       Linux              eth4          
+vdic-hv249h         Eth153/1/9     94     S H       Linux              eth4          
+vdic-hv248h         Eth153/1/10    108    S H       Linux              eth4          
+view-ntnx-101       Eth153/1/11    108    S H       Linux              eth4          
+svr-hv2013h         Eth153/1/14    96     S H       Linux              eth4          
+svr-hv2014h         Eth153/1/15    96     S H       Linux              eth2          
+svr-hv2015h         Eth153/1/16    94     S H       Linux              eth2          
+svr-hv2012h         Eth153/1/17    96     S H       Linux              eth4          
+svr-hv2016h         Eth153/1/18    108    S H       Linux              eth4          
+svr-hv2017h         Eth153/1/19    96     S H       Linux              eth4          
+vdic-hv2128h        Eth153/1/20    108    S H       Linux              eth4          
+vdic-hv2129h        Eth153/1/21    94     S H       Linux              eth4          
+vdic-hv2130h        Eth153/1/22    90     S H       Linux              eth4          
+vdic-hv2131h        Eth153/1/23    108    S H       Linux              eth4          
+vdic-hv2132h        Eth153/1/24    96     S H       Linux              eth4          
+vdic-hv2133h        Eth153/1/25    94     S H       Linux              eth4          
+vdic-hv2134h        Eth153/1/26    108    S H       Linux              eth4          
+vdic-hv2135h        Eth153/1/27    117    S H       Linux              eth4          
+vdic-hv2136h        Eth153/1/28    108    S H       Linux              eth4          
+vdic-hv2137h        Eth153/1/29    96     S H       Linux              eth4          
+vdic-hv2138h        Eth153/1/30    94     S H       Linux              eth4          
+vdic-hv2139h        Eth153/1/31    96     S H       Linux              eth4          
+vdic-hv2141h        Eth153/1/33    94     S H       Linux              eth4          
+vdic-hv2142h        Eth153/1/34    94     S H       Linux              eth4          
+vdic-hv2143h        Eth153/1/35    94     S H       Linux              eth4          
+vdic-hv2144h        Eth153/1/36    108    S H       Linux              eth4          
+vdic-hv2145h        Eth153/1/37    96     S H       Linux              eth4          
+vdic-hv2146h        Eth153/1/38    108    S H       Linux              eth4          
+vdic-hv2147h        Eth153/1/39    96     S H       Linux              eth4          
+vdic-hv2148h        Eth153/1/40    108    S H       Linux              eth4          
+svr-hv2024h         Eth153/1/41    108    S H       Linux              eth4          
+vdic-hv2172h        Eth153/1/42    96     S H       Linux              eth3          
+vdic-hv2169h        Eth153/1/43    108    S H       Linux              eth3          
+vdic-hv2170h        Eth153/1/44    96     S H       Linux              eth3          
+vdic-hv2171h        Eth153/1/45    94     S H       Linux              eth3          

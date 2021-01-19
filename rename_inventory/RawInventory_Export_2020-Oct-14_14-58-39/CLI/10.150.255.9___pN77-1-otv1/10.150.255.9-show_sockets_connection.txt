@@ -1,0 +1,71 @@
+
+
+Total number of tcp sockets: 9
+Active connections (including servers)
+Protocol State/       Recv-Q/   Local Address(port)/
+         Context      Send-Q    Remote Address(port)
+tcp(4/6) LISTEN       0         *(22)
+         Wildcard     0         *(*) 
+
+tcp(4/6) LISTEN       0         *(23)
+         Wildcard     0         *(*) 
+
+tcp      LISTEN       0         *(161)
+         Wildcard     0         *(*) 
+
+tcp(4/6) LISTEN       0         *(161)
+         Wildcard     0         *(*) 
+
+tcp      ESTABLISHED  0         10.150.255.9(22)
+         management   0         10.64.0.111(60384) 
+
+tcp      TIME_WAIT    0         10.150.255.9(30018)
+         management   0         10.128.128.11(49) 
+
+tcp      TIME_WAIT    0         10.150.255.9(30156)
+         management   0         10.128.128.11(49) 
+
+tcp      TIME_WAIT    0         10.150.255.9(30407)
+         management   0         10.128.128.11(49) 
+
+tcp      TIME_WAIT    0         10.150.255.9(30504)
+         management   0         10.128.128.11(49) 
+
+
+Total number of udp sockets: 14
+Active connections (including servers)
+Protocol State/       Recv-Q/   Local Address(port)/
+         Context      Send-Q    Remote Address(port)
+udp6                  0         *(123)
+         Wildcard     0         *(*) 
+
+udp                   0         *(123)
+         Wildcard     0         *(*) 
+
+udp6                  0         *(161)
+         Wildcard     0         *(*) 
+
+udp                   0         *(161)
+         Wildcard     0         *(*) 
+
+udp6                  0         *(8472)
+         default      0         *(*) 
+
+udp                   0         *(8472)
+         Wildcard     0         *(*) 
+
+udp                   0         *(9428)
+         Wildcard     0         *(*) 
+
+udp                   0         *(9676)
+         Wildcard     0         *(*) 
+
+udp                   0         *(9788)
+         Wildcard     0         *(*) 
+
+udp                   0         127.0.0.1(130)
+         Wildcard     0         *(*) 
+
+
+Total number of raw sockets: 0
+

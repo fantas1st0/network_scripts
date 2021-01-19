@@ -1,0 +1,247 @@
+
+
+--------------------------------------------------------------------------------
+Port          Name               Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------
+Eth1/1        --- 2k7-102 ---    connected 1         full    10G     Fabric Exte
+Eth1/2        --- 2k7-102 ---    connected 1         full    10G     Fabric Exte
+Eth1/3        --- 2k7-104 ---    connected 1         full    10G     Fabric Exte
+Eth1/4        --- 2k7-104 ---    connected 1         full    10G     Fabric Exte
+Eth1/5        --                 xcvrInval 1         full    10G     Fabric Exte
+Eth1/6        --                 xcvrInval 1         full    10G     Fabric Exte
+Eth1/7        --- 2k7-108 ---    connected 1         full    10G     Fabric Exte
+Eth1/8        --- 2k7-108 ---    connected 1         full    10G     Fabric Exte
+Eth1/9        --                 xcvrInval 1         full    10G     Fabric Exte
+Eth1/10       TRUNK is104e  :eth xcvrInval trunk     full    10G     Fabric Exte
+Eth1/11       --- 2k7-112 ---    connected 1         full    10G     Fabric Exte
+Eth1/12       --- 2k7-112 ---    connected 1         full    10G     Fabric Exte
+Eth1/13       --- 2K07-114 ---   connected 1         full    10G     Fabric Exte
+Eth1/14       --- 2K07-114 ---   connected 1         full    10G     Fabric Exte
+Eth1/15       TRUNK ntnx-ahv-9.r connected trunk     full    10G     10Gbase-SR 
+Eth1/16       cloud_3952 ntnx-ah connected trunk     full    10G     10Gbase-SR 
+Eth1/17       TRUNK ntnx-ahv-10. connected trunk     full    10G     10Gbase-SR 
+Eth1/18       cloud_3952 ntnx-ah connected trunk     full    10G     10Gbase-SR 
+Eth1/19       TRUNK ntnx-ahv-11. connected trunk     full    10G     10Gbase-SR 
+Eth1/20       cloud_3952 ntnx-ah connected trunk     full    10G     10Gbase-SR 
+Eth1/21       TRUNK ntnx-ahv-12. connected trunk     full    10G     10Gbase-SR 
+Eth1/22       cloud_3952 ntnx-ah connected trunk     full    10G     10Gbase-SR 
+Eth1/23       --                 sfpAbsent 1         full    10G     --         
+Eth1/24       --                 sfpAbsent 1         full    10G     --         
+Eth1/25       --                 xcvrInval 1         full    10G     Fabric Exte
+Eth1/26       --                 xcvrInval 1         full    10G     Fabric Exte
+Eth1/27       --                 sfpAbsent 1         full    10G     --         
+Eth1/28       --                 sfpAbsent 1         full    10G     --         
+Eth1/29       keepalive channel  connected trunk     full    10G     10Gbase-SR 
+Eth1/30       --                 connected trunk     full    10G     10Gbase-SR 
+Eth1/31       --                 connected trunk     full    10G     10Gbase-SR 
+Eth1/32       --                 connected trunk     full    10G     10Gbase-SR 
+Eth2/1        --                 connected trunk     full    10G     10Gbase-SR 
+Eth2/2        --                 connected trunk     full    10G     10Gbase-SR 
+Eth2/3        --                 connected trunk     full    10G     10Gbase-SR 
+Eth2/4        keepalive channel  connected trunk     full    10G     10Gbase-SR 
+Eth2/5        // nmlnvv01 main / connected trunk     full    10G     10Gbase-SR 
+Eth2/6        // nmlnvv02 main / connected trunk     full    10G     10Gbase-SR 
+Eth2/7        MSKREGEX26 RF-0009 connected trunk     full    10G     10Gbase-SR 
+Eth2/8        MSKREGEX24 RF-0009 connected trunk     full    10G     10Gbase-SR 
+Eth2/9        TRUNK is104e.regio connected trunk     full    10G     10Gbase-SR 
+Eth2/10       TRUNK is103e.regio connected trunk     full    10G     10Gbase-SR 
+Eth2/11       --                 sfpAbsent 1         full    10G     --         
+Eth2/12       --                 sfpAbsent 1         full    10G     --         
+Eth2/13       --                 sfpAbsent 1         full    10G     --         
+Eth2/14       --                 sfpAbsent 1         full    10G     --         
+Eth2/15       --                 sfpInvali 1         full    10G     SFP-1000BAS
+Eth2/16       --                 sfpAbsent 1         full    10G     --         
+Po7           --                 connected trunk     full    a-10G   --         
+Po102         --- 2k7-102 ---    connected 1         full    a-10G   --         
+Po104         --- 2k7-104 ---    connected 1         full    a-10G   --         
+Po108         --- 2k7-108 ---    connected 1         full    a-10G   --         
+Po112         --- 2k7-112 ---    connected 1         full    a-10G   --         
+Po301         --                 noOperMem 1         auto    auto    --         
+Po302         --                 noOperMem 1         auto    auto    --         
+Po303         --                 noOperMem 1         auto    auto    --         
+Po304         --                 noOperMem 1         auto    auto    --         
+Po305         --                 noOperMem 1         auto    auto    --         
+Po306         --                 noOperMem 1         auto    auto    --         
+Po307         --                 noOperMem 1         auto    auto    --         
+Po308         --                 noOperMem 1         auto    auto    --         
+Po309         --                 noOperMem 1         auto    auto    --         
+Po310         --                 noOperMem 1         auto    auto    --         
+Po312         == CLOUD E101B4 == noOperMem trunk     full    auto    --         
+Po313         == CLOUD E101B46 = noOperMem trunk     full    auto    --         
+Po314         == CLOUD E101B8 == noOperMem 1         auto    auto    --         
+Po315         // nmlnvv01 bundle connected trunk     full    a-10G   --         
+Po316         // nmlnvv02 bundle connected trunk     full    a-10G   --         
+Po601         [DATA-DSO-NTNX-MGM noOperMem 3952      full    10G     --         
+Po602         [DATA-DSO-NTNX-MGM noOperMem 3952      full    10G     --         
+Po603         [DATA-DSO-NTNX-MGM noOperMem trunk     full    10G     --         
+Po604         [DATA-DSO-NTNX-MGM noOperMem 3952      full    10G     --         
+Po701         [TRUNK]ntnx-ahv-9: noOperMem trunk     full    10G     --         
+Po702         [TRUNK]ntnx-ahv-10 noOperMem trunk     full    10G     --         
+Po703         [TRUNK]ntnx-ahv-11 noOperMem trunk     full    10G     --         
+Po704         [TRUNK]ntnx-ahv-12 noOperMem trunk     full    10G     --         
+Po1000        --- 5K5 peer-link  connected trunk     full    a-10G   --         
+Po1001        --- 5K5 peer-keepa connected trunk     full    a-10G   --         
+mgmt0         --                 notconnec routed    auto    auto    --         
+Vlan1         --                 down      routed    auto    auto    --
+Vlan3000      --                 connected routed    auto    auto    --
+Vlan3006      --                 connected routed    auto    auto    --
+Eth102/1/1    --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/2    --                 disabled  1         auto    auto    1g/10g     
+Eth102/1/3    --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/4    --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/5    --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/6    --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/7    --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/8    --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/9    --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/10   --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/11   --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/12   --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/13   --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/14   --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/15   --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/16   --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/17   --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/18   --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/19   --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/20   --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/21   --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/22   --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/23   --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/24   --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/25   --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/26   --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/27   --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/28   --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/29   --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/30   --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/31   --                 notconnec 1         auto    auto    1g/10g     
+Eth102/1/32   --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/1    --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/2    --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/3    --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/4    --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/5    --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/6    --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/7    --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/8    --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/9    --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/10   --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/11   --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/12   --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/13   --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/14   --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/15   --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/16   --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/17   --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/18   --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/19   --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/20   --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/21   --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/22   --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/23   --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/24   --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/25   --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/26   --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/27   --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/28   --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/29   --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/30   --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/31   --                 notconnec 1         auto    auto    1g/10g     
+Eth104/1/32   --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/1    --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/2    --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/3    --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/4    --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/5    --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/6    --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/7    --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/8    --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/9    --                 disabled  1         auto    auto    1g/10g     
+Eth108/1/10   --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/11   --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/12   --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/13   --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/14   --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/15   --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/16   --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/17   --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/18   --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/19   --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/20   --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/21   --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/22   --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/23   --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/24   --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/25   --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/26   --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/27   --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/28   --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/29   --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/30   --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/31   --                 notconnec 1         auto    auto    1g/10g     
+Eth108/1/32   --                 notconnec 1         auto    auto    1g/10g     
+Eth112/1/1    --                 connected 3141      full    a-1000  10/100/1000
+Eth112/1/2    --                 connected 3141      full    a-1000  10/100/1000
+Eth112/1/3    --                 connected 3141      full    a-1000  10/100/1000
+Eth112/1/4    --                 connected 3141      full    a-1000  10/100/1000
+Eth112/1/5    --                 connected 3141      full    a-1000  10/100/1000
+Eth112/1/6    --                 connected 3141      full    a-1000  10/100/1000
+Eth112/1/7    --                 connected 3141      full    a-1000  10/100/1000
+Eth112/1/8    --                 connected 3141      full    a-1000  10/100/1000
+Eth112/1/9    --                 connected 3141      full    a-1000  10/100/1000
+Eth112/1/10   --                 connected 3141      full    a-1000  10/100/1000
+Eth112/1/11   --                 notconnec 1         auto    auto    10/100/1000
+Eth112/1/12   --                 notconnec 1         auto    auto    10/100/1000
+Eth112/1/13   --                 notconnec trunk     auto    auto    10/100/1000
+Eth112/1/14   --                 notconnec trunk     auto    auto    10/100/1000
+Eth112/1/15   --                 notconnec trunk     auto    auto    10/100/1000
+Eth112/1/16   --                 notconnec trunk     auto    auto    10/100/1000
+Eth112/1/17   --                 notconnec trunk     auto    auto    10/100/1000
+Eth112/1/18   --                 notconnec trunk     auto    auto    10/100/1000
+Eth112/1/19   --                 notconnec trunk     auto    auto    10/100/1000
+Eth112/1/20   --                 notconnec trunk     auto    auto    10/100/1000
+Eth112/1/21   --                 notconnec trunk     auto    auto    10/100/1000
+Eth112/1/22   --                 notconnec trunk     auto    auto    10/100/1000
+Eth112/1/23   --                 notconnec trunk     auto    auto    10/100/1000
+Eth112/1/24   --                 notconnec trunk     auto    auto    10/100/1000
+Eth112/1/25   --                 notconnec trunk     auto    auto    10/100/1000
+Eth112/1/26   --                 notconnec trunk     auto    auto    10/100/1000
+Eth112/1/27   --                 notconnec trunk     auto    auto    10/100/1000
+Eth112/1/28   --                 notconnec trunk     auto    auto    10/100/1000
+Eth112/1/29   --                 notconnec trunk     auto    auto    10/100/1000
+Eth112/1/30   --                 notconnec trunk     auto    auto    10/100/1000
+Eth112/1/31   --                 notconnec trunk     auto    auto    10/100/1000
+Eth112/1/32   --                 notconnec trunk     auto    auto    10/100/1000
+Eth112/1/33   --                 connected 3167      full    a-1000  10/100/1000
+Eth112/1/34   --                 connected 3167      full    a-1000  10/100/1000
+Eth112/1/35   --                 connected 3167      full    a-1000  10/100/1000
+Eth112/1/36   --                 connected 3167      full    a-1000  10/100/1000
+Eth112/1/37   --                 connected 3167      full    a-1000  10/100/1000
+Eth112/1/38   --                 connected 3167      full    a-1000  10/100/1000
+Eth112/1/39   --                 connected 3167      full    a-1000  10/100/1000
+Eth112/1/40   --                 connected 3167      full    a-1000  10/100/1000
+Eth112/1/41   --                 connected 3167      full    a-1000  10/100/1000
+Eth112/1/42   --                 connected 3167      full    a-1000  10/100/1000
+Eth112/1/43   MSKREGEX24_mgmt RF connected 3954      full    a-1000  10/100/1000
+Eth112/1/44   [cloud_3954] is103 connected 3954      full    a-1000  10/100/1000
+Eth112/1/45   --                 notconnec 1         auto    auto    10/100/1000
+Eth112/1/46   --                 notconnec 1         auto    auto    10/100/1000
+Eth112/1/47   --                 notconnec 1         auto    auto    10/100/1000
+Eth112/1/48   --                 notconnec 1         auto    auto    10/100/1000
+Eth114/1/1    --                 ServDisab 1         auto    auto    1G/10G     
+Eth114/1/2    --                 ServDisab 1         auto    auto    1G/10G     
+Eth114/1/3    == CLOUD E101B4 PO ServDisab trunk     auto    auto    1G/10G     
+Eth114/1/4    == CLOUD E101B4 PO ServDisab trunk     auto    auto    1G/10G     
+Eth114/1/5    == CLOUD E101B6 PO ServDisab trunk     auto    auto    1G/10G     
+Eth114/1/6    == CLOUD E101B6 PO ServDisab trunk     auto    auto    1G/10G     
+Eth114/1/7    == CLOUD E101B8 PO ServDisab trunk     auto    auto    1G/10G     
+Eth114/1/8    == CLOUD E101B8 PO ServDisab trunk     auto    auto    1G/10G     
+Eth114/1/9    --                 ServDisab 1         auto    auto    1G/10G     
+Eth114/1/10   --                 ServDisab 1         auto    auto    1G/10G     
+Eth114/1/11   == CLOUD E101B4 PO ServDisab trunk     auto    auto    1G/10G     
+Eth114/1/12   --                 ServDisab 3201      auto    auto    1G/10G     
+Eth114/1/13   == CLOUD E101B6 PO ServDisab trunk     auto    auto    1G/10G     
+Eth114/1/14   --                 ServDisab 3201      auto    auto    1G/10G     
+Eth114/1/15   == CLOUD E101B8 PO ServDisab trunk     auto    auto    1G/10G     
+Eth114/1/16   UNCONFIGURED       disabled  3957      auto    auto    1G/10G     

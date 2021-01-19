@@ -1,0 +1,528 @@
+
+
+--------------------------------------------------------------------------------
+Port             Name            Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------
+mgmt0            --              connected routed    full    a-1000  --         
+Eth1/1           [FEX] MNG-fex-1 connected 1         full    a-10G   Fabric Exte
+Eth1/2           [FEX] MNG-fex-1 connected 1         full    a-10G   Fabric Exte
+Eth1/3           [FEX] fex-105   connected 1         full    a-10G   Fabric Exte
+Eth1/4           [FEX] fex-105   connected 1         full    a-10G   Fabric Exte
+Eth1/5           [FEX] fex-103   connected 1         full    a-10G   Fabric Exte
+Eth1/6           [FEX] fex-103   connected 1         full    a-10G   Fabric Exte
+Eth1/7           [FEX] fex-101   connected 1         full    a-10G   Fabric Exte
+Eth1/8           [FEX] fex-101   connected 1         full    a-10G   Fabric Exte
+Eth1/9           --              sfpAbsent routed    auto    auto    --         
+Eth1/10          --              sfpAbsent routed    auto    auto    --         
+Eth1/11          --              sfpAbsent routed    auto    auto    --         
+Eth1/12          --              sfpAbsent routed    auto    auto    --         
+Eth1/13          --              sfpAbsent routed    auto    auto    --         
+Eth1/14          --              sfpAbsent routed    auto    auto    --         
+Eth1/15          --              sfpAbsent routed    auto    auto    --         
+Eth1/16          --              sfpAbsent routed    auto    auto    --         
+Eth1/17          [FEX] fex-109   connected 1         full    a-10G   Fabric Exte
+Eth1/18          [FEX] fex-109   connected 1         full    a-10G   Fabric Exte
+Eth1/19          [FEX] fex-111   connected 1         full    a-10G   Fabric Exte
+Eth1/20          [FEX] fex-111   connected 1         full    a-10G   Fabric Exte
+Eth1/21          [FEX] fex-113   connected 1         full    a-10G   Fabric Exte
+Eth1/22          [FEX] fex-113   connected 1         full    a-10G   Fabric Exte
+Eth1/23          --              sfpAbsent routed    auto    auto    --         
+Eth1/24          --              sfpAbsent routed    auto    auto    --         
+Eth1/25          --              connected trunk     full    a-10G   10Gbase-SR 
+Eth1/26          --              connected trunk     full    a-10G   10Gbase-SR 
+Eth1/27          --              connected trunk     full    a-10G   10Gbase-SR 
+Eth1/28          --              connected trunk     full    a-10G   10Gbase-SR 
+Eth1/29          --              sfpAbsent routed    auto    auto    --         
+Eth1/30          --              sfpAbsent routed    auto    auto    --         
+Eth1/31          --              sfpAbsent routed    auto    auto    --         
+Eth1/32          --              sfpAbsent routed    auto    auto    --         
+Eth1/33          --              sfpAbsent routed    auto    auto    --         
+Eth1/34          --              sfpAbsent routed    auto    auto    --         
+Eth1/35          --              sfpAbsent routed    auto    auto    --         
+Eth1/36          --              sfpAbsent routed    auto    auto    --         
+Eth1/37          --              sfpAbsent routed    auto    auto    --         
+Eth1/38          --              sfpAbsent routed    auto    auto    --         
+Eth1/39          --              sfpAbsent routed    auto    auto    --         
+Eth1/40          --              sfpAbsent routed    auto    auto    --         
+Eth1/41          --              sfpAbsent routed    auto    auto    --         
+Eth1/42          --              sfpAbsent routed    auto    auto    --         
+Eth1/43          --              sfpAbsent routed    auto    auto    --         
+Eth1/44          --- VPC keepali connected routed    full    a-10G   10Gbase-SR 
+Eth1/45          --              sfpAbsent routed    auto    auto    --         
+Eth1/46          --              sfpAbsent routed    auto    auto    --         
+Eth1/47          link tCore1 2/1 connected routed    full    a-10G   10Gbase-SR 
+Eth1/47.2353     --              connected routed    full    a-10G   10Gbase-SR 
+Eth1/47.2631     --              connected routed    full    a-10G   10Gbase-SR 
+Eth1/47.3501     --              connected routed    full    a-10G   10Gbase-SR 
+Eth1/47.3506     --              connected routed    full    a-10G   10Gbase-SR 
+Eth1/47.3511     --              connected routed    full    a-10G   10Gbase-SR 
+Eth1/47.3516     --              connected routed    full    a-10G   10Gbase-SR 
+Eth1/47.3521     --              connected routed    full    a-10G   10Gbase-SR 
+Eth1/48          --- Peer-Link 1 connected trunk     full    a-10G   10Gbase-SR 
+Eth2/1           --              disabled  routed    auto    auto    10Gbase-SR 
+Eth2/2           --              disabled  routed    auto    auto    10Gbase-SR 
+Eth2/3           [FEX] fex-105   connected 1         full    a-10G   Fabric Exte
+Eth2/4           [FEX] fex-105   connected 1         full    a-10G   Fabric Exte
+Eth2/5           [FEX] fex-103   connected 1         full    a-10G   Fabric Exte
+Eth2/6           [FEX] fex-103   connected 1         full    a-10G   Fabric Exte
+Eth2/7           [FEX] fex-101   connected 1         full    a-10G   Fabric Exte
+Eth2/8           [FEX] fex-101   connected 1         full    a-10G   Fabric Exte
+Eth2/17          [FEX] fex-109   connected 1         full    a-10G   Fabric Exte
+Eth2/18          [FEX] fex-109   connected 1         full    a-10G   Fabric Exte
+Eth2/19          [FEX] fex-111   connected 1         full    a-10G   Fabric Exte
+Eth2/20          [FEX] fex-111   connected 1         full    a-10G   Fabric Exte
+Eth2/21          [FEX] fex-113   connected 1         full    a-10G   Fabric Exte
+Eth2/22          [FEX] fex-113   connected 1         full    a-10G   Fabric Exte
+Eth2/23          --              sfpAbsent routed    auto    auto    --         
+Eth2/24          --              sfpAbsent routed    auto    auto    --         
+Eth2/25          --              connected trunk     full    a-10G   10Gbase-SR 
+Eth2/26          --              connected trunk     full    a-10G   10Gbase-SR 
+Eth2/27          --              connected trunk     full    a-10G   10Gbase-SR 
+Eth2/28          --              connected trunk     full    a-10G   10Gbase-SR 
+Eth2/29          --              disabled  routed    auto    auto    10Gbase-SR 
+Eth2/30          --              disabled  routed    auto    auto    10Gbase-SR 
+Eth2/31          to TF4 2/1      connected trunk     full    a-10G   10Gbase-SR 
+Eth2/32          --              sfpAbsent routed    auto    auto    --         
+Eth2/33          --              sfpAbsent routed    auto    auto    --         
+Eth2/34          --              sfpAbsent routed    auto    auto    --         
+Eth2/35          --              disabled  routed    auto    auto    10Gbase-SR 
+Eth2/36          --              disabled  routed    auto    auto    10Gbase-SR 
+Eth2/36.3525     --              disabled  routed    auto    auto    10Gbase-SR 
+Eth2/37          --              sfpAbsent routed    auto    auto    --         
+Eth2/38          --              sfpAbsent routed    auto    auto    --         
+Eth2/39          --              sfpAbsent routed    auto    auto    --         
+Eth2/40          --              sfpAbsent routed    auto    auto    --         
+Eth2/41          --              sfpAbsent routed    auto    auto    --         
+Eth2/42          --              sfpAbsent routed    auto    auto    --         
+Eth2/43          --              sfpAbsent routed    auto    auto    --         
+Eth2/44          --- VPC keepali connected routed    full    a-10G   10Gbase-SR 
+Eth2/45          --              sfpAbsent routed    auto    auto    --         
+Eth2/46          --              disabled  routed    auto    auto    10Gbase-SR 
+Eth2/47          tCore-2 Te2/1   connected routed    full    a-10G   10Gbase-SR 
+Eth2/47.2355     --              connected routed    full    a-10G   10Gbase-SR 
+Eth2/47.2633     --              connected routed    full    a-10G   10Gbase-SR 
+Eth2/47.3502     --              connected routed    full    a-10G   10Gbase-SR 
+Eth2/47.3507     --              connected routed    full    a-10G   10Gbase-SR 
+Eth2/47.3512     --              connected routed    full    a-10G   10Gbase-SR 
+Eth2/47.3517     --              connected routed    full    a-10G   10Gbase-SR 
+Eth2/47.3522     --              connected routed    full    a-10G   10Gbase-SR 
+Eth2/48          --- Peer-Link 2 connected trunk     full    a-10G   10Gbase-SR 
+Eth3/9           --              sfpAbsent routed    auto    auto    --         
+Eth3/10          --              sfpAbsent routed    auto    auto    --         
+Eth3/11          --              sfpAbsent routed    auto    auto    --         
+Eth3/12          --              sfpAbsent routed    auto    auto    --         
+Eth3/13          --              sfpAbsent routed    auto    auto    --         
+Eth3/14          --              sfpAbsent routed    auto    auto    --         
+Eth3/15          --              sfpAbsent routed    auto    auto    --         
+Eth3/16          to OTV (tN77k1- connected trunk     full    a-10G   10Gbase-SR 
+Po1              --              noOperMem routed    auto    auto    --         
+Po4              to TF4-Po70     connected trunk     full    a-10G   --         
+Po31             to OTV box upli connected trunk     full    a-10G   --         
+Po33             F5-1            connected trunk     full    a-10G   --         
+Po34             F5-2            connected trunk     full    a-10G   --         
+Po53             --              disabled  trunk     auto    auto    --         
+Po101            [FEX] fex-101   connected 1         full    a-10G   --         
+Po103            [FEX] fex-103   connected 1         full    a-10G   --         
+Po105            [FEX] fex-105   connected 1         full    a-10G   --         
+Po107            [FEX] fex-107   connected 1         full    a-10G   --         
+Po109            [FEX] fex-109   connected 1         full    a-10G   --         
+Po111            [FEX] fex-111   connected 1         full    a-10G   --         
+Po113            [FEX] fex-113   connected 1         full    a-10G   --         
+Po201            --              connected trunk     full    10G     --         
+Po202            --              connected trunk     full    10G     --         
+Po203            --              connected trunk     full    10G     --         
+Po204            mskxd7esx23     connected trunk     full    10G     --         
+Po205            mskxd7esx24     connected trunk     full    10G     --         
+Po206            mskxd7esx25     connected trunk     full    10G     --         
+Po207            mskxd7esx26     connected trunk     full    10G     --         
+Po208            mskxd7esx24     connected trunk     full    10G     --         
+Po209            mskxd7esx28     connected trunk     full    10G     --         
+Po210            mskxd7esx29     connected trunk     full    10G     --         
+Po211            mskxd7esx30     connected trunk     full    10G     --         
+Po212            mskxd7esx31     connected trunk     full    10G     --         
+Po213            mskxd7esx32     connected trunk     full    10G     --         
+Po214            mskxd7esx33     connected trunk     full    10G     --         
+Po215            mskxd4esx01     connected trunk     full    10G     --         
+Po216            mskxd4esx02     connected trunk     full    10G     --         
+Po217            mskxd4esx03     connected trunk     full    10G     --         
+Po218            mskxd4esx04     connected trunk     full    10G     --         
+Po219            mskxd4esx05     connected trunk     full    10G     --         
+Po220            mskxd4esx06     connected trunk     full    10G     --         
+Po221            mskxd4esx07     connected trunk     full    10G     --         
+Po222            mskxd4esx08     connected trunk     full    10G     --         
+Po223            mskxd4esx09     connected trunk     full    10G     --         
+Po224            mskxd4esx10     connected trunk     full    10G     --         
+Po225            mskxd4esx11     connected trunk     full    10G     --         
+Po226            mskxd4esx12     connected trunk     full    10G     --         
+Po227            mskxd5esx01     connected trunk     full    10G     --         
+Po228            mskxd5esx02     connected trunk     full    10G     --         
+Po229            mskxd5esx03     connected trunk     full    10G     --         
+Po230            mskxd5esx04     connected trunk     full    10G     --         
+Po231            mskxd5esx05     connected trunk     full    10G     --         
+Po232            mskxd5esx06     connected trunk     full    10G     --         
+Po233            mskxd5esx07     connected trunk     full    10G     --         
+Po234            mskxd5esx08     connected trunk     full    10G     --         
+Po235            mskxd5esx09     connected trunk     full    10G     --         
+Po236            mskxd5esx10     connected trunk     full    10G     --         
+Po237            mskxd5esx11     connected trunk     full    10G     --         
+Po238            mskxd5esx12     connected trunk     full    10G     --         
+Po239            mskxd6esx01     connected trunk     full    10G     --         
+Po240            mskxd6esx02     connected trunk     full    10G     --         
+Po241            mskxd6esx03     connected trunk     full    10G     --         
+Po242            mskxd6esx04     connected trunk     full    10G     --         
+Po243            mskxd6esx05     connected trunk     full    10G     --         
+Po244            mskxd6esx06     connected trunk     full    10G     --         
+Po245            mskxd6esx07     connected trunk     full    10G     --         
+Po246            mskxd6esx08     connected trunk     full    10G     --         
+Po247            mskxd6esx09     connected trunk     full    10G     --         
+Po248            mskxd6esx10     connected trunk     full    10G     --         
+Po249            mskxd6esx11     connected trunk     full    10G     --         
+Po250            mskxd6esx12     connected trunk     full    10G     --         
+Po251            mskxd4esx13     connected trunk     full    a-10G   --         
+Po252            mskxd4esx14     connected trunk     full    a-10G   --         
+Po253            mskxd4esx15     connected trunk     full    a-10G   --         
+Po254            mskxd4esx16     connected trunk     full    a-10G   --         
+Po255            mskxd4esx17     connected trunk     full    a-10G   --         
+Po256            mskxd4esx18     connected trunk     full    a-10G   --         
+Po257            mskxd4esx19     connected trunk     full    a-10G   --         
+Po258            mskxd4esx20     connected trunk     full    a-10G   --         
+Po259            mskxd4esx21     connected trunk     full    a-10G   --         
+Po260            mskxd4esx22     connected trunk     full    a-10G   --         
+Po261            mskxd4esx23     noOperMem trunk     auto    auto    --         
+Po262            mskxd4esx24     connected trunk     full    a-10G   --         
+Po263            mskxd5esx13     connected trunk     full    a-10G   --         
+Po264            mskxd5esx14     connected trunk     full    a-10G   --         
+Po265            mskxd5esx15     connected trunk     full    a-10G   --         
+Po266            mskxd5esx16     connected trunk     full    a-10G   --         
+Po267            mskxd5esx17     connected trunk     full    a-10G   --         
+Po268            mskxd5esx18     connected trunk     full    a-10G   --         
+Po269            mskxd5esx19     connected trunk     full    a-10G   --         
+Po270            mskxd5esx20     connected trunk     full    a-10G   --         
+Po271            mskxd5esx21     connected trunk     full    a-10G   --         
+Po272            mskxd5esx22     connected trunk     full    a-10G   --         
+Po273            mskxd5esx23     connected trunk     full    a-10G   --         
+Po274            mskxd5esx24     connected trunk     full    a-10G   --         
+Po275            mskxd6esx13     connected trunk     full    a-10G   --         
+Po276            mskxd6esx14     connected trunk     full    a-10G   --         
+Po277            mskxd6esx15     connected trunk     full    a-10G   --         
+Po278            mskxd6esx16     connected trunk     full    a-10G   --         
+Po279            mskxd6esx17     connected trunk     full    a-10G   --         
+Po280            mskxd6esx18     connected trunk     full    a-10G   --         
+Po281            mskxd6esx19     connected trunk     full    a-10G   --         
+Po282            mskxd6esx20     connected trunk     full    a-10G   --         
+Po283            mskxd6esx21     connected trunk     full    a-10G   --         
+Po284            mskxd6esx22     connected trunk     full    a-10G   --         
+Po285            mskxd6esx23     connected trunk     full    a-10G   --         
+Po286            mskxd6esx24     connected trunk     full    a-10G   --         
+Po287            mskxd7esx34     connected trunk     full    a-10G   --         
+Po288            mskxd7esx35     connected trunk     full    a-10G   --         
+Po289            mskxd7esx36     connected trunk     full    a-10G   --         
+Po290            mskxd7esx37     connected trunk     full    a-10G   --         
+Po291            mskxd7esx38     connected trunk     full    a-10G   --         
+Po292            mskxd7esx39     connected trunk     full    a-10G   --         
+Po293            mskxd7esx40     connected trunk     full    a-10G   --         
+Po294            mskxd7esx41     connected trunk     full    a-10G   --         
+Po295            mskxd7esx42     connected trunk     full    a-10G   --         
+Po296            mskxd7esx43     connected trunk     full    a-10G   --         
+Po297            mskxd7esx44     connected trunk     full    a-10G   --         
+Po298            mskxdmesx31     connected trunk     full    a-10G   --         
+Po299            mskxdmesx32     connected trunk     full    a-10G   --         
+Po300            mskxdmesx33     connected trunk     full    a-10G   --         
+Po1000           --- VPC peer-li connected trunk     full    a-10G   --         
+Po1001           --- Keepalive-l connected routed    full    a-10G   --         
+Vlan1         --                 down      routed    auto    auto    --
+Vlan1171      --                 connected routed    auto    auto    --
+Vlan1172      --                 connected routed    auto    auto    --
+Vlan1173      --                 connected routed    auto    auto    --
+Vlan1174      --                 connected routed    auto    auto    --
+Vlan1175      --                 connected routed    auto    auto    --
+Vlan1176      --                 connected routed    auto    auto    --
+Vlan1178      --                 connected routed    auto    auto    --
+Vlan1179      --                 connected routed    auto    auto    --
+Vlan1180      --                 connected routed    auto    auto    --
+Vlan1440      --                 connected routed    auto    auto    --
+Vlan2352      t7k1-t7k2 VipInet  connected routed    auto    auto    --
+Vlan2630      t7k1-t7k2 VTB-USER connected routed    auto    auto    --
+Vlan3329      --                 connected routed    auto    auto    --
+Vlan3330      --                 connected routed    auto    auto    --
+Vlan3331      --                 connected routed    auto    auto    --
+Vlan3332      --                 connected routed    auto    auto    --
+Vlan3333      --                 connected routed    auto    auto    --
+Vlan3334      --                 connected routed    auto    auto    --
+Vlan3335      --                 connected routed    auto    auto    --
+Vlan3336      --                 connected routed    auto    auto    --
+Vlan3337      --                 connected routed    auto    auto    --
+Vlan3338      --                 connected routed    auto    auto    --
+Vlan3339      --                 connected routed    auto    auto    --
+Vlan3340      --                 connected routed    auto    auto    --
+Vlan3341      --                 connected routed    auto    auto    --
+Vlan3342      --                 connected routed    auto    auto    --
+Vlan3343      --                 connected routed    auto    auto    --
+Vlan3344      --                 connected routed    auto    auto    --
+Vlan3428      --                 connected routed    auto    auto    --
+Vlan3429      --                 connected routed    auto    auto    --
+Vlan3430      --                 connected routed    auto    auto    --
+Vlan3500      7k-7k VTB-Core lin connected routed    auto    auto    --
+Vlan3505      7k-7k VTB-RSRV lin connected routed    auto    auto    --
+Vlan3510      7k-7k nInet-SRV li connected routed    auto    auto    --
+Vlan3515      7k-7k VTB-DEV link connected routed    auto    auto    --
+Vlan3520      7k-7k GROUPVTB lin connected routed    auto    auto    --
+Vlan3564      --                 connected routed    auto    auto    --
+Vlan3565      --                 connected routed    auto    auto    --
+Vlan3580      --                 connected routed    auto    auto    --
+Eth101/1/1       --              disabled  routed    auto    auto    1g/10g     
+Eth101/1/2       --              disabled  routed    auto    auto    1g/10g     
+Eth101/1/3       F5 MGMT         connected 1178      full    a-1000  1g/10g     
+Eth101/1/4       DWDM MGMT       linkFlapE 1178      auto    auto    1g/10g     
+Eth101/1/5       Nice_Server_ilo notconnec 1178      auto    auto    1g/10g     
+Eth101/1/6       Brocade 6520-0  notconnec 1178      auto    auto    1g/10g     
+Eth101/1/7       mskxdmesx34_ilo connected 1178      full    a-1000  1g/10g     
+Eth101/1/8       mskxdmesx45_ilo connected 1178      full    a-1000  1g/10g     
+Eth101/1/9       mskxd7esx24_ilo connected 1178      full    a-1000  1g/10g     
+Eth101/1/10      mskxd7esx26_ilo connected 1178      full    a-1000  1g/10g     
+Eth101/1/11      mskxd7esx28_ilo connected 1178      full    a-1000  1g/10g     
+Eth101/1/12      mskxd7esx30_ilo connected 1178      full    a-1000  1g/10g     
+Eth101/1/13      mskxd7esx32_ilo connected 1178      full    a-1000  1g/10g     
+Eth101/1/14      mskxd4esx02_ilo connected 1178      full    a-1000  1g/10g     
+Eth101/1/15      mskxd4esx04_ilo connected 1178      full    a-1000  1g/10g     
+Eth101/1/16      mskxd4esx06_ilo connected 1178      full    a-1000  1g/10g     
+Eth101/1/17      mskxd4esx08_ilo connected 1178      full    a-1000  1g/10g     
+Eth101/1/18      mskxd4esx10_ilo connected 1178      full    a-1000  1g/10g     
+Eth101/1/19      mskxd4esx12_ilo connected 1178      full    a-1000  1g/10g     
+Eth101/1/20      mskxd5esx02_ipm connected 1178      full    a-1000  1g/10g     
+Eth101/1/21      mskxd5esx04_ipm connected 1178      full    a-1000  1g/10g     
+Eth101/1/22      mskxd5esx06_ipm connected 1178      full    a-1000  1g/10g     
+Eth101/1/23      mskxd5esx08_ipm connected 1178      full    a-1000  1g/10g     
+Eth101/1/24      mskxd5esx10_ipm connected 1178      full    a-1000  1g/10g     
+Eth101/1/25      mskxd5esx12_ipm connected 1178      full    a-1000  1g/10g     
+Eth101/1/26      --              connected 1178      full    a-1000  1g/10g     
+Eth101/1/27      --              connected 1178      full    a-1000  1g/10g     
+Eth101/1/28      --              connected 1178      full    a-1000  1g/10g     
+Eth101/1/29      --              connected 1178      full    a-1000  1g/10g     
+Eth101/1/30      --              connected 1178      full    a-1000  1g/10g     
+Eth101/1/31      --              connected 1178      full    a-1000  1g/10g     
+Eth101/1/32      --              disabled  routed    auto    auto    1g/10g     
+Eth103/1/1       --              connected 1178      full    a-1000  10/100/1000
+Eth103/1/2       --              connected 1178      full    a-1000  10/100/1000
+Eth103/1/3       --              connected 1178      full    a-100   10/100/1000
+Eth103/1/4       --              connected 1178      full    a-100   10/100/1000
+Eth103/1/5       --              connected 1178      full    a-100   10/100/1000
+Eth103/1/6       --              connected 1178      full    a-100   10/100/1000
+Eth103/1/7       --              connected 1178      full    a-100   10/100/1000
+Eth103/1/8       --              connected 1178      full    a-100   10/100/1000
+Eth103/1/9       --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/10      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/11      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/12      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/13      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/14      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/15      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/16      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/17      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/18      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/19      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/20      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/21      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/22      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/23      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/24      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/25      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/26      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/27      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/28      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/29      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/30      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/31      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/32      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/33      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/34      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/35      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/36      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/37      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/38      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/39      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/40      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/41      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/42      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/43      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/44      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/45      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/46      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/47      --              disabled  routed    auto    auto    10/100/1000
+Eth103/1/48      --              disabled  routed    auto    auto    10/100/1000
+Eth105/1/1       --              sfpAbsent routed    auto    auto    --         
+Eth105/1/2       --              sfpAbsent routed    auto    auto    --         
+Eth105/1/3       mskxdmesx34     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/4       mskxdmesx45     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/5       mskxd4esx24     connected trunk     full    a-10G   10Gbase-SR 
+Eth105/1/6       mskxdmesx46     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/7       mskxd7esx23     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/8       mskxd7esx24     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/9       mskxd7esx25     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/10      mskxd7esx26     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/11      mskxd7esx27     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/12      mskxd7esx28     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/13      mskxd7esx29     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/14      mskxd7esx30     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/15      mskxd7esx31     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/16      mskxd7esx32     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/17      mskxd7esx33     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/18      mskxd5esx01     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/19      mskxd5esx02     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/20      mskxd5esx03     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/21      mskxd5esx04     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/22      mskxd5esx05     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/23      mskxd5esx06     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/24      mskxd5esx07     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/25      mskxd5esx08     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/26      mskxd5esx09     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/27      mskxd5esx10     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/28      mskxd5esx11     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/29      mskxd5esx12     connected trunk     full    10G     10Gbase-SR 
+Eth105/1/30      mskxd4esx21     connected trunk     full    a-10G   10Gbase-SR 
+Eth105/1/31      mskxd4esx22     connected trunk     full    a-10G   10Gbase-SR 
+Eth105/1/32      mskxd4esx23     connected trunk     full    a-10G   10Gbase-SR 
+Eth107/1/1       Brocade_mgmt    notconnec 1178      auto    auto    10/100/1000
+Eth107/1/2       Brocade_mgmt    connected 1178      full    a-100   10/100/1000
+Eth107/1/3       Brocade_mgmt    connected 1178      full    a-100   10/100/1000
+Eth107/1/4       Brocade_mgmt    connected 1178      full    a-1000  10/100/1000
+Eth107/1/5       Brocade_mgmt    connected 1178      full    a-1000  10/100/1000
+Eth107/1/6       Brocade_mgmt    connected 1178      full    a-1000  10/100/1000
+Eth107/1/7       Brocade_mgmt    connected 1178      full    a-100   10/100/1000
+Eth107/1/8       Brocade_mgmt    connected 1178      full    a-100   10/100/1000
+Eth107/1/9       Brocade_mgmt    connected 1178      full    a-100   10/100/1000
+Eth107/1/10      Brocade_mgmt    connected 1178      full    a-100   10/100/1000
+Eth107/1/11      Brocade_mgmt    connected 1178      full    a-100   10/100/1000
+Eth107/1/12      Brocade_mgmt    connected 1178      full    a-100   10/100/1000
+Eth107/1/13      mskxd6esx01_ipm connected 1178      full    a-1000  10/100/1000
+Eth107/1/14      mskxd6esx02_ipm connected 1178      full    a-1000  10/100/1000
+Eth107/1/15      mskxd6esx03_ipm connected 1178      full    a-1000  10/100/1000
+Eth107/1/16      mskxd6esx04_ipm connected 1178      full    a-1000  10/100/1000
+Eth107/1/17      mskxd6esx05_ipm connected 1178      full    a-1000  10/100/1000
+Eth107/1/18      mskxd6esx06_ipm connected 1178      full    a-1000  10/100/1000
+Eth107/1/19      mskxd6esx07_ipm connected 1178      full    a-1000  10/100/1000
+Eth107/1/20      mskxd6esx08_ipm connected 1178      full    a-1000  10/100/1000
+Eth107/1/21      mskxd6esx09_ipm connected 1178      full    a-1000  10/100/1000
+Eth107/1/22      mskxd6esx10_ipm connected 1178      full    a-1000  10/100/1000
+Eth107/1/23      mskxd6esx11_ipm connected 1178      full    a-1000  10/100/1000
+Eth107/1/24      mskxd6esx12_ipm connected 1178      full    a-1000  10/100/1000
+Eth107/1/25      mskxdmesx31     connected 1178      full    a-1000  10/100/1000
+Eth107/1/26      mskxdmesx32     connected 1178      full    a-1000  10/100/1000
+Eth107/1/27      mskxdmesx33     connected 1178      full    a-1000  10/100/1000
+Eth107/1/28      --              disabled  routed    auto    auto    10/100/1000
+Eth107/1/29      --              disabled  routed    auto    auto    10/100/1000
+Eth107/1/30      --              disabled  routed    auto    auto    10/100/1000
+Eth107/1/31      --              disabled  routed    auto    auto    10/100/1000
+Eth107/1/32      --              disabled  routed    auto    auto    10/100/1000
+Eth107/1/33      --              disabled  routed    auto    auto    10/100/1000
+Eth107/1/34      --              disabled  routed    auto    auto    10/100/1000
+Eth107/1/35      --              disabled  routed    auto    auto    10/100/1000
+Eth107/1/36      --              disabled  routed    auto    auto    10/100/1000
+Eth107/1/37      --              disabled  routed    auto    auto    10/100/1000
+Eth107/1/38      --              disabled  routed    auto    auto    10/100/1000
+Eth107/1/39      --              disabled  routed    auto    auto    10/100/1000
+Eth107/1/40      --              disabled  routed    auto    auto    10/100/1000
+Eth107/1/41      --              disabled  routed    auto    auto    10/100/1000
+Eth107/1/42      --              disabled  routed    auto    auto    10/100/1000
+Eth107/1/43      --              disabled  routed    auto    auto    10/100/1000
+Eth107/1/44      --              disabled  routed    auto    auto    10/100/1000
+Eth107/1/45      --              disabled  routed    auto    auto    10/100/1000
+Eth107/1/46      --              disabled  routed    auto    auto    10/100/1000
+Eth107/1/47      --              disabled  routed    auto    auto    10/100/1000
+Eth107/1/48      --              disabled  routed    auto    auto    10/100/1000
+Eth109/1/1       mskxd4esx01     connected trunk     full    10G     10Gbase-SR 
+Eth109/1/2       mskxd4esx02     connected trunk     full    10G     10Gbase-SR 
+Eth109/1/3       mskxd4esx03     connected trunk     full    10G     10Gbase-SR 
+Eth109/1/4       mskxd4esx04     connected trunk     full    10G     10Gbase-SR 
+Eth109/1/5       mskxd4esx05     connected trunk     full    10G     10Gbase-SR 
+Eth109/1/6       mskxd4esx06     connected trunk     full    10G     10Gbase-SR 
+Eth109/1/7       mskxd4esx07     connected trunk     full    10G     10Gbase-SR 
+Eth109/1/8       mskxd4esx08     connected trunk     full    10G     10Gbase-SR 
+Eth109/1/9       mskxd4esx09     connected trunk     full    10G     10Gbase-SR 
+Eth109/1/10      mskxd4esx10     connected trunk     full    10G     10Gbase-SR 
+Eth109/1/11      mskxd4esx11     connected trunk     full    10G     10Gbase-SR 
+Eth109/1/12      mskxd4esx12     connected trunk     full    10G     10Gbase-SR 
+Eth109/1/13      mskxd6esx01     connected trunk     full    10G     10Gbase-SR 
+Eth109/1/14      mskxd6esx02     connected trunk     full    10G     10Gbase-SR 
+Eth109/1/15      mskxd6esx03     connected trunk     full    10G     10Gbase-SR 
+Eth109/1/16      mskxd6esx04     connected trunk     full    10G     10Gbase-SR 
+Eth109/1/17      mskxd6esx05     connected trunk     full    10G     10Gbase-SR 
+Eth109/1/18      mskxd6esx06     connected trunk     full    10G     10Gbase-SR 
+Eth109/1/19      mskxd6esx07     connected trunk     full    10G     10Gbase-SR 
+Eth109/1/20      mskxd6esx08     connected trunk     full    10G     10Gbase-SR 
+Eth109/1/21      mskxd6esx09     connected trunk     full    10G     10Gbase-SR 
+Eth109/1/22      mskxd6esx10     connected trunk     full    10G     10Gbase-SR 
+Eth109/1/23      mskxd6esx11     connected trunk     full    10G     10Gbase-SR 
+Eth109/1/24      mskxd6esx12     connected trunk     full    10G     10Gbase-SR 
+Eth109/1/25      mskxd4esx13     connected trunk     full    a-10G   10Gbase-SR 
+Eth109/1/26      mskxd4esx14     connected trunk     full    a-10G   10Gbase-SR 
+Eth109/1/27      mskxd4esx15     connected trunk     full    a-10G   10Gbase-SR 
+Eth109/1/28      mskxd4esx16     connected trunk     full    a-10G   10Gbase-SR 
+Eth109/1/29      mskxd4esx17     connected trunk     full    a-10G   10Gbase-SR 
+Eth109/1/30      mskxd4esx18     connected trunk     full    a-10G   10Gbase-SR 
+Eth109/1/31      mskxd4esx19     connected trunk     full    a-10G   10Gbase-SR 
+Eth109/1/32      mskxd4esx20     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/1       mskxd5esx13     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/2       mskxd5esx14     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/3       mskxd5esx15     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/4       mskxd5esx16     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/5       mskxd5esx17     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/6       mskxd5esx18     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/7       mskxd5esx19     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/8       mskxd5esx20     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/9       mskxd5esx21     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/10      mskxd5esx22     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/11      mskxd5esx23     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/12      mskxd5esx24     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/13      mskxd6esx13     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/14      mskxd6esx14     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/15      mskxd6esx15     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/16      mskxd6esx16     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/17      mskxd6esx17     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/18      mskxd6esx18     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/19      mskxd6esx19     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/20      mskxd6esx20     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/21      mskxd6esx21     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/22      mskxd6esx22     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/23      mskxd6esx23     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/24      mskxd6esx24     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/25      mskxd7esx34     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/26      mskxd7esx35     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/27      mskxd7esx36     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/28      mskxd7esx37     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/29      mskxd7esx38     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/30      mskxd7esx39     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/31      mskxd7esx40     connected trunk     full    a-10G   10Gbase-SR 
+Eth111/1/32      mskxd7esx41     connected trunk     full    a-10G   10Gbase-SR 
+Eth113/1/1       mskxd7esx42     connected trunk     full    a-10G   10Gbase-SR 
+Eth113/1/2       mskxd7esx43     connected trunk     full    a-10G   10Gbase-SR 
+Eth113/1/3       mskxd7esx44     connected trunk     full    a-10G   10Gbase-SR 
+Eth113/1/4       mskxdmesx31     connected trunk     full    a-10G   10Gbase-SR 
+Eth113/1/5       mskxdmesx32     connected trunk     full    a-10G   10Gbase-SR 
+Eth113/1/6       mskxdmesx33     connected trunk     full    a-10G   10Gbase-SR 
+Eth113/1/7       --              sfpAbsent routed    auto    auto    --         
+Eth113/1/8       --              sfpAbsent routed    auto    auto    --         
+Eth113/1/9       --              sfpAbsent routed    auto    auto    --         
+Eth113/1/10      --              sfpAbsent routed    auto    auto    --         
+Eth113/1/11      --              sfpAbsent routed    auto    auto    --         
+Eth113/1/12      --              sfpAbsent routed    auto    auto    --         
+Eth113/1/13      --              sfpAbsent routed    auto    auto    --         
+Eth113/1/14      --              sfpAbsent routed    auto    auto    --         
+Eth113/1/15      --              sfpAbsent routed    auto    auto    --         
+Eth113/1/16      --              sfpAbsent routed    auto    auto    --         
+Eth113/1/17      --              sfpAbsent routed    auto    auto    --         
+Eth113/1/18      --              sfpAbsent routed    auto    auto    --         
+Eth113/1/19      --              sfpAbsent routed    auto    auto    --         
+Eth113/1/20      --              sfpAbsent routed    auto    auto    --         
+Eth113/1/21      --              sfpAbsent routed    auto    auto    --         
+Eth113/1/22      --              sfpAbsent routed    auto    auto    --         
+Eth113/1/23      --              sfpAbsent routed    auto    auto    --         
+Eth113/1/24      --              sfpAbsent routed    auto    auto    --         
+Eth113/1/25      --              sfpAbsent routed    auto    auto    --         
+Eth113/1/26      --              sfpAbsent routed    auto    auto    --         
+Eth113/1/27      --              sfpAbsent routed    auto    auto    --         
+Eth113/1/28      --              sfpAbsent routed    auto    auto    --         
+Eth113/1/29      --              sfpAbsent routed    auto    auto    --         
+Eth113/1/30      --              sfpAbsent routed    auto    auto    --         
+Eth113/1/31      --              sfpAbsent routed    auto    auto    --         
+Eth113/1/32      --              sfpAbsent routed    auto    auto    --         

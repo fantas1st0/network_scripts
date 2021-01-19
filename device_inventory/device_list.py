@@ -1,15 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Функция get_devices составляет список устройств для анализа. Excel-файл со списком устройств передается как входной аргумент.
+Функция get_data составляет список устройств для анализа. Excel-файл со списком устройств передается как входной аргумент.
 В файле - устройства должны находиться в закладке "devices"
 Возвращается список устройств вида ['dev1', 'dev2']
 """
 from openpyxl import load_workbook
-import os
-from pprint import pprint
 
-def get_devices(device_file):
-	cwd = os.getcwd()
+def get_data(device_file):
 	wb = load_workbook(device_file)
 	sheet = wb["devices"]
 	device_list = []
@@ -19,4 +16,3 @@ def get_devices(device_file):
 
 if __name__ == "__main__":
 	devices = get_devices("device_list.xlsx")
-	pprint(devices)

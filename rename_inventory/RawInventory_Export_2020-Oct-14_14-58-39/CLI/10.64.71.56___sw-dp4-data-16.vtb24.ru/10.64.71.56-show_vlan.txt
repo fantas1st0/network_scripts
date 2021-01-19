@@ -1,0 +1,171 @@
+
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Po4000, Eth1/3, Eth1/8, Eth1/10
+                                                Eth1/11, Eth1/12, Eth1/13
+                                                Eth1/14, Eth1/15, Eth1/16
+                                                Eth1/17, Eth1/18, Eth1/19
+                                                Eth1/20, Eth1/21, Eth1/22
+                                                Eth1/23, Eth1/24, Eth1/25
+                                                Eth1/26, Eth1/27, Eth1/28
+                                                Eth2/3, Eth2/8, Eth2/10, Eth2/11
+                                                Eth2/12, Eth2/13, Eth2/14
+                                                Eth2/15, Eth2/16, Eth102/1/5
+                                                Eth102/1/6, Eth102/1/7
+                                                Eth102/1/8, Eth102/1/9
+                                                Eth102/1/10, Eth102/1/11
+                                                Eth102/1/12, Eth102/1/13
+                                                Eth102/1/14, Eth102/1/15
+                                                Eth102/1/16, Eth102/1/17
+                                                Eth102/1/18, Eth102/1/19
+                                                Eth102/1/20, Eth102/1/37
+                                                Eth102/1/38, Eth102/1/40
+                                                Eth102/1/43, Eth102/1/44
+                                                Eth105/1/1, Eth105/1/6
+                                                Eth105/1/9, Eth105/1/10
+                                                Eth105/1/11, Eth105/1/12
+                                                Eth105/1/13, Eth105/1/14
+                                                Eth105/1/15, Eth105/1/16
+                                                Eth105/1/17, Eth105/1/18
+                                                Eth105/1/19, Eth105/1/20
+                                                Eth105/1/21, Eth105/1/22
+                                                Eth105/1/23, Eth105/1/24
+                                                Eth105/1/25, Eth105/1/26
+                                                Eth105/1/27, Eth105/1/28
+                                                Eth105/1/29, Eth105/1/30
+                                                Eth105/1/31, Eth105/1/32
+                                                Eth105/1/34, Eth105/1/35
+                                                Eth105/1/37, Eth105/1/38
+                                                Eth105/1/39, Eth105/1/40
+                                                Eth105/1/41, Eth105/1/42
+                                                Eth106/1/10, Eth106/1/11
+                                                Eth106/1/12, Eth106/1/13
+                                                Eth106/1/14, Eth106/1/15
+                                                Eth106/1/16, Eth106/1/17
+                                                Eth106/1/18, Eth106/1/19
+                                                Eth106/1/20, Eth106/1/21
+                                                Eth106/1/22, Eth106/1/23
+                                                Eth106/1/24, Eth106/1/26
+                                                Eth106/1/39, Eth106/1/40
+                                                Eth106/1/41, Eth106/1/42
+                                                Eth106/1/43, Eth106/1/44
+                                                Eth106/1/45, Eth106/1/46
+                                                Eth106/1/47, Eth106/1/48
+                                                Eth123/1/9, Eth123/1/10
+                                                Eth123/1/11, Eth123/1/25
+                                                Eth123/1/26, Eth123/1/27
+                                                Eth123/1/28, Eth123/1/29
+                                                Eth123/1/30, Eth123/1/31
+                                                Eth123/1/32, Eth123/1/33
+                                                Eth123/1/34
+511  DATA-DDEI-SANDBOX                active    Po10, Po4000, Eth1/1, Eth1/2
+                                                Eth1/3, Eth2/1, Eth2/2, Eth2/3
+                                                Eth106/1/28, Eth106/1/30
+                                                Eth106/1/32, Eth106/1/34
+                                                Eth106/1/36, Eth106/1/38
+531  DATA-HB-ANY                      active    Po10, Po4000, Eth1/1, Eth1/2
+                                                Eth1/3, Eth2/1, Eth2/2, Eth2/3
+                                                Eth123/1/12, Eth123/1/35
+600  DATA-MGMT                        active    Po10, Po4000, Eth1/1, Eth1/2
+                                                Eth1/3, Eth2/1, Eth2/2, Eth2/3
+                                                Eth106/1/25
+601  DATA-BIS-HQ                      active    Po10, Po314, Po315, Po4000
+                                                Eth1/1, Eth1/2, Eth1/3, Eth2/1
+                                                Eth2/2, Eth2/3, Eth102/1/2
+                                                Eth102/1/3, Eth102/1/23
+                                                Eth102/1/41, Eth102/1/42
+603  DATA-PLC                         active    Po10, Po310, Po4000, Eth1/1
+                                                Eth1/2, Eth1/3, Eth2/1, Eth2/2
+                                                Eth2/3, Eth102/1/21, Eth102/1/31
+                                                Eth105/1/2, Eth105/1/3
+                                                Eth105/1/4, Eth105/1/5
+                                                Eth105/1/48
+608  ~DATA-CONSOLE                    active    Po10, Po69, Po70, Po71, Po72
+                                                Po73, Po74, Po75, Po76, Po77
+                                                Po301, Po302, Po303, Po304
+                                                Po305, Po306, Po307, Po308
+                                                Po309, Po310, Po311, Po312
+                                                Po4000, Eth1/1, Eth1/2, Eth1/3
+                                                Eth1/31, Eth1/32, Eth2/1, Eth2/2
+                                                Eth2/3, Eth102/1/4, Eth102/1/22
+                                                Eth102/1/24, Eth102/1/32
+                                                Eth102/1/33, Eth102/1/34
+                                                Eth102/1/35, Eth102/1/36
+                                                Eth102/1/39, Eth105/1/7
+                                                Eth105/1/8, Eth105/1/33
+                                                Eth105/1/36, Eth105/1/43
+                                                Eth105/1/44, Eth105/1/45
+                                                Eth105/1/46, Eth105/1/47
+                                                Eth105/1/48, Eth106/1/2
+                                                Eth106/1/3, Eth106/1/4
+                                                Eth106/1/5, Eth106/1/6
+                                                Eth106/1/7, Eth123/1/1
+                                                Eth123/1/2, Eth123/1/3
+                                                Eth123/1/4, Eth123/1/5
+                                                Eth123/1/6, Eth123/1/7
+                                                Eth123/1/8, Eth123/1/13
+                                                Eth123/1/14, Eth123/1/15
+                                                Eth123/1/16, Eth123/1/17
+                                                Eth123/1/18, Eth123/1/19
+                                                Eth123/1/20, Eth123/1/21
+                                                Eth123/1/22, Eth123/1/23
+                                                Eth123/1/24, Eth123/1/36
+                                                Eth123/1/46
+634  DATA-CONSOLE2                    active    Po10, Po77, Po78, Po79, Po301
+                                                Po302, Po303, Po304, Po305
+                                                Po306, Po307, Po308, Po309
+                                                Po310, Po313, Po4000, Eth1/1
+                                                Eth1/2, Eth1/3, Eth1/29, Eth1/30
+                                                Eth2/1, Eth2/2, Eth2/3
+                                                Eth102/1/1, Eth102/1/4
+                                                Eth105/1/7, Eth105/1/8
+                                                Eth105/1/33, Eth105/1/36
+                                                Eth105/1/43, Eth105/1/44
+                                                Eth105/1/45, Eth105/1/46
+                                                Eth105/1/47, Eth105/1/48
+                                                Eth106/1/1, Eth106/1/8
+                                                Eth106/1/9, Eth123/1/45
+645  DATA-KT                          active    Po10, Po4000, Eth1/1, Eth1/2
+                                                Eth1/3, Eth2/1, Eth2/2, Eth2/3
+                                                Eth102/1/25, Eth102/1/26
+                                                Eth102/1/27, Eth102/1/28
+                                                Eth102/1/29, Eth102/1/30
+                                                Eth102/1/45, Eth102/1/46
+                                                Eth102/1/47, Eth102/1/48
+648  DATA-IBM-HMC1                    active    Po10, Po4000, Eth1/1, Eth1/2
+                                                Eth1/3, Eth2/1, Eth2/2, Eth2/3
+649  DATA-IBM-HMC2                    active    Po10, Po4000, Eth1/1, Eth1/2
+                                                Eth1/3, Eth2/1, Eth2/2, Eth2/3
+                                                Eth123/1/37, Eth123/1/38
+                                                Eth123/1/39, Eth123/1/40
+                                                Eth123/1/41, Eth123/1/42
+                                                Eth123/1/43, Eth123/1/44
+                                                Eth123/1/47, Eth123/1/48
+693  DATA-DMZ-LOCAL                   active    Po10, Po4000, Eth1/1, Eth1/2
+                                                Eth1/3, Eth2/1, Eth2/2, Eth2/3
+                                                Eth106/1/27, Eth106/1/29
+                                                Eth106/1/31, Eth106/1/33
+                                                Eth106/1/35, Eth106/1/37
+4093 VPC-PEER-KEEPALIVE               active    Po4001, Eth1/4, Eth2/4
+
+VLAN Type  Vlan-mode
+---- ----- ----------
+1    enet  CE     
+511  enet  CE     
+531  enet  CE     
+600  enet  CE     
+601  enet  CE     
+603  enet  CE     
+608  enet  CE     
+634  enet  CE     
+645  enet  CE     
+648  enet  CE     
+649  enet  CE     
+693  enet  CE     
+4093 enet  CE     
+Primary  Secondary  Type             Ports
+-------  ---------  ---------------  -------------------------------------------
+
+
+

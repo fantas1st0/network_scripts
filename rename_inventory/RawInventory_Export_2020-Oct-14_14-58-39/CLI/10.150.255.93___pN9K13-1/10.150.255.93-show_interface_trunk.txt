@@ -1,0 +1,124 @@
+
+
+--------------------------------------------------------------------------------
+Port          Native  Status        Port
+              Vlan                  Channel
+--------------------------------------------------------------------------------
+Eth1/16       1       trunking      --
+Eth1/17       1       trunking      --
+Eth1/24       1       trnk-bndl     Po1001
+Eth1/39       1       trnk-bndl     Po308
+Eth1/40       1       trnk-bndl     Po308
+Eth1/41       1       trnk-bndl     Po309
+Eth1/42       1       trnk-bndl     Po309
+Eth1/48       1       trnk-bndl     Po1001
+Eth1/51       1       trnk-bndl     Po7
+Eth1/52       1       trnk-bndl     Po7
+Eth1/53       1       trnk-bndl     Po1000
+Eth1/54       1       trnk-bndl     Po1000
+Po7           1       trunking      --
+Po308         1       trunking      --
+Po309         1       trunking      --
+Po1000        1       trunking      --
+Po1001        1       trunking      --
+
+--------------------------------------------------------------------------------
+Port          Vlans Allowed on Trunk
+--------------------------------------------------------------------------------
+Eth1/16       3801,3852-3853,3926
+Eth1/17       3801,3852-3853,3926
+Eth1/24       2806
+Eth1/39       3126,3155,3779,3781
+Eth1/40       3126,3155,3779,3781
+Eth1/41       3126,3155,3779,3781
+Eth1/42       3126,3155,3779,3781
+Eth1/48       2806
+Eth1/51       1-4094
+Eth1/52       1-4094
+Eth1/53       1-2805,2807-3967
+Eth1/54       1-2805,2807-3967
+Po7           1-4094
+Po308         3126,3155,3779,3781
+Po309         3126,3155,3779,3781
+Po1000        1-2805,2807-3967
+Po1001        2806
+
+--------------------------------------------------------------------------------
+Port          Vlans Err-disabled on Trunk
+--------------------------------------------------------------------------------
+Eth1/16       none
+Eth1/17       none
+Eth1/24       none
+Eth1/39       none
+Eth1/40       none
+Eth1/41       none
+Eth1/42       none
+Eth1/48       none
+Eth1/51       2806
+Eth1/52       2806
+Eth1/53       none
+Eth1/54       none
+Po7           2806
+Po308         none
+Po309         none
+Po1000        none
+Po1001        none
+
+--------------------------------------------------------------------------------
+Port          STP Forwarding
+--------------------------------------------------------------------------------
+Eth1/16       3801,3852-3853,3926
+Eth1/17       3801,3852-3853,3926
+Eth1/24       none
+Eth1/39       none
+Eth1/40       none
+Eth1/41       none
+Eth1/42       none
+Eth1/48       none
+Eth1/51       none
+Eth1/52       none
+Eth1/53       none
+Eth1/54       none
+Po7           1,2901,2951,3126,3155,3779,3781,3792,3799,3801,3807-3808,3852-3854,3926
+Po308         3126,3155,3779,3781
+Po309         3126,3155,3779,3781
+Po1000        1,2901,2951,3126,3155,3779,3781,3792,3799,3801,3807-3808,3852-3854,3926
+Po1001        2806
+
+--------------------------------------------------------------------------------
+Port          Vlans in spanning tree forwarding state and not pruned
+--------------------------------------------------------------------------------
+Eth1/16       Feature VTP is not enabled
+3801,3852-3853,3926
+Eth1/17       Feature VTP is not enabled
+3801,3852-3853,3926
+Eth1/24       Feature VTP is not enabled
+none
+Eth1/39       Feature VTP is not enabled
+none
+Eth1/40       Feature VTP is not enabled
+none
+Eth1/41       Feature VTP is not enabled
+none
+Eth1/42       Feature VTP is not enabled
+none
+Eth1/48       Feature VTP is not enabled
+none
+Eth1/51       Feature VTP is not enabled
+none
+Eth1/52       Feature VTP is not enabled
+none
+Eth1/53       Feature VTP is not enabled
+none
+Eth1/54       Feature VTP is not enabled
+none
+Po7           Feature VTP is not enabled
+1,2901,2951,3126,3155,3779,3781,3792,3799,3801,3807-3808,3852-3854,3926
+Po308         Feature VTP is not enabled
+3126,3155,3779,3781
+Po309         Feature VTP is not enabled
+3126,3155,3779,3781
+Po1000        Feature VTP is not enabled
+1,2901,2951,3126,3155,3779,3781,3792,3799,3801,3807-3808,3852-3854,3926
+Po1001        Feature VTP is not enabled
+2806

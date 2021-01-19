@@ -1,0 +1,49 @@
+
+Fan:
+---------------------------------------------------------------------------
+Fan             Model                Hw     Direction       Status
+---------------------------------------------------------------------------
+Fan1(sys_fan1)  NXA-FAN-30CFM-F      --     back-to-front   Ok 
+Fan2(sys_fan2)  NXA-FAN-30CFM-F      --     back-to-front   Ok 
+Fan3(sys_fan3)  NXA-FAN-30CFM-F      --     back-to-front   Ok 
+Fan_in_PS1      --                   --     back-to-front   Ok
+Fan_in_PS2      --                   --     back-to-front   Ok
+Fan Zone Speed: Zone 1: 0x80
+Fan Air Filter : NotSupported
+
+
+Power Supply:
+Voltage: 12 Volts
+Power                      Actual             Actual        Total
+Supply    Model            Output             Input      Capacity       Status
+                           (Watts )           (Watts )     (Watts )
+-------  ----------  ---------------  ------  ----------  --------------------
+1        NXA-PAC-350W-PE        66 W               79 W       350 W      Ok
+2        NXA-PAC-350W-PE        59 W               73 W       350 W      Ok
+
+
+Power Usage Summary:
+--------------------
+Power Supply redundancy mode (configured)                PS-Redundant
+Power Supply redundancy mode (operational)               PS-Redundant
+
+Total Power Capacity (based on configured mode)             350.00 W
+Total Grid-A (first half of PS slots) Power Capacity        350.00 W
+Total Grid-B (second half of PS slots) Power Capacity       350.00 W
+Total Power of all Inputs (cumulative)                      700.00 W
+Total Power Output (actual draw)                            125.00 W
+Total Power Input (actual draw)                             152.00 W
+Total Power Allocated (budget)                                N/A   
+Total Power Available for additional modules                  N/A   
+
+
+
+Temperature:
+--------------------------------------------------------------------
+Module   Sensor        MajorThresh   MinorThres   CurTemp     Status
+                       (Celsius)     (Celsius)    (Celsius)         
+--------------------------------------------------------------------
+1        FRONT           80              70          31         Ok             
+1        BACK            70              42          22         Ok             
+1        CPU             90              80          31         Ok             
+1        Homewood        110             90          39         Ok             

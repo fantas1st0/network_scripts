@@ -1,0 +1,3578 @@
+
+
+!Command: show running-config
+!Time: Fri Oct  2 00:23:35 2020
+
+version 7.2(2)D1(2)
+feature-set fex
+hostname t-N7K1
+
+feature telnet
+feature vrrp
+feature tacacs+
+cfs eth distribute
+feature ospf
+feature eigrp
+feature interface-vlan
+feature hsrp
+feature lacp
+feature dhcp
+feature vpc
+feature lldp
+feature bfd
+feature sla sender
+feature sla responder
+
+username xxxxxxx password 5 xxxxxxx role vdc-admin
+no password strength-check
+
+banner motd ^
+
+Tower Nexus 7010  1-st of 2. Main switching VDC (not base).
+
+
+^
+
+ssh key  xxxxxxxx  2048 
+no ip domain-lookup
+ip host vSpectrum01  10.132.128.21
+tacacs-server host 10.128.128.11 key 7  xxxxxxxx  
+tacacs-server host 10.164.140.150 key 7  xxxxxxxx  
+aaa group server tacacs+ MSK-TAC 
+    server 10.128.128.11 
+    server 10.164.140.150 
+    use-vrf VTB-Core
+    source-interface Vlan3500
+crypto key param rsa label t7K1-t-N7K1 modulus 2048 
+system jumbomtu 2000
+object-group ip address Solardwinds
+  10 host 10.144.128.110 
+  20 host 10.132.128.110 
+object-group ip address Spectrum
+  10 host 10.132.128.21 
+  20 host 10.132.128.20 
+  30 10.132.128.0/24 
+  40 10.164.147.0/24 
+ip access-list 111
+  10 permit ip 10.64.0.111/32 any 
+fex 101
+  pinning max-links 1
+  debounce time 0
+  description FEX0101
+fex 103
+  pinning max-links 1
+  debounce time 0
+  description FEX0103
+fex 105
+  pinning max-links 1
+  debounce time 0
+  description FEX0105
+fex 107
+  pinning max-links 1
+  debounce time 0
+  description ManagementFex
+fex 109
+  pinning max-links 1
+  debounce time 0
+  description FEX0109
+fex 111
+  pinning max-links 1
+  debounce time 0
+  description FEX0111
+fex 113
+  pinning max-links 1
+  debounce time 0
+  description FEX0113
+snmp-server user xxxxxxxx vdc-admin auth md5 xxxxxxxx priv xxxxxxxx  localizedkey
+snmp-server host 10.150.128.100 traps version 2c xxxxxxxx 
+snmp-server host 10.150.128.100 use-vrf management
+rmon event 1 log trap public description FATAL(1) owner PMON@FATAL
+rmon event 2 log trap public description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 log trap public description ERROR(3) owner PMON@ERROR
+rmon event 4 log trap public description WARNING(4) owner PMON@WARNING
+rmon event 5 log trap public description INFORMATION(5) owner PMON@INFO
+snmp-server enable traps cfs state-change-notif
+snmp-server enable traps cfs merge-failure
+snmp-server enable traps hsrp state-change
+snmp-server enable traps feature-control FeatureOpStatusChange
+snmp-server enable traps sysmgr cseFailSwCoreNotifyExtended
+snmp-server enable traps config ccmCLIRunningConfigChanged
+snmp-server enable traps link cisco-xcvr-mon-status-chg
+snmp-server enable traps vtp notifs
+snmp-server enable traps vtp vlancreate
+snmp-server enable traps vtp vlandelete
+snmp-server enable traps bridge newroot
+snmp-server enable traps bridge topologychange
+snmp-server enable traps stpx inconsistency
+snmp-server enable traps stpx root-inconsistency
+snmp-server enable traps stpx loop-inconsistency
+snmp-server enable traps feature-control ciscoFeatOpStatusChange
+snmp-server enable traps vtp notifs
+snmp-server context vtb-core vrf VTB-Core
+snmp-server context management vrf management
+snmp-server context GROUPVTB vrf GROUPVTB
+snmp-server context VTB-DEV vrf VTB-DEV
+snmp-server context VTB-RSRV vrf VTB-RSRV
+snmp-server context VTB-USERS vrf VTB-USERS
+snmp-server context VipInet vrf VipInet
+snmp-server context nInet-SRV vrf nInet-SRV
+snmp-server community xxxxxxxx group vdc-operator
+snmp-server community xxxxxxxx group vdc-admin
+snmp-server mib community-map xxxxxxxx  context vtb-core
+snmp-server community xxxxxxxx use-acl snmp-managers
+snmp-server community xxxxxxxx use-ipv4acl 111
+ntp distribute
+ntp source-interface  mgmt0
+aaa authentication login default group MSK-TAC 
+aaa accounting default group MSK-TAC 
+
+vlan 1,1171-1176,1178-1180,1440,2099,2352,2630,3157,3207,3329-3344,3428-3430,3500,3505,3510,3515,3520,3564-3565,3579-3580,3599,3850,3865,3950,3965
+vlan 1171
+  name 10.164.152.0_22
+vlan 1172
+  name 10.164.156.0_24
+vlan 1173
+  name 10.164.157.0_24
+vlan 1174
+  name 10.164.158.0_25
+vlan 1175
+  name 10.164.158.128_25
+vlan 1176
+  name 10.144.146.0_24
+vlan 1178
+  name 10.164.161.0_24
+vlan 1179
+  name 10.164.162.0_24
+vlan 1180
+  name 10.164.163.0_24
+vlan 1440
+  name Net_MNG_10.164.160.X
+vlan 2099
+  name 10.164.144.0
+vlan 2352
+  name VipInet_N7K1-N7K2
+vlan 2630
+  name VTB-USERS_N7K1-N7K2
+vlan 3157
+  name VDI-SRV3
+vlan 3207
+  name L2_10.132.207.0_24
+vlan 3329
+  name VDI-14
+vlan 3330
+  name VDI-15
+vlan 3331
+  name VDI-16
+vlan 3332
+  name VDI-17
+vlan 3333
+  name VDI-18
+vlan 3334
+  name VDI-19
+vlan 3335
+  name VDI-20
+vlan 3336
+  name VDI-21
+vlan 3337
+  name VDI-22
+vlan 3338
+  name VDI-23
+vlan 3339
+  name VDI-24
+vlan 3340
+  name VDI-25
+vlan 3341
+  name VDI-26
+vlan 3342
+  name VDI-27
+vlan 3343
+  name VDI-28
+vlan 3344
+  name VDI-29
+vlan 3428
+  name VDI_VipInet
+vlan 3429
+  name vdi_vipinet_vmk1
+vlan 3430
+  name vdi_vipinet_arm
+vlan 3500
+  name lnk-7k-7k-VTB-Core
+vlan 3505
+  name link_7k-7k-rsrv
+vlan 3510
+  name link_7k-7k-nInet-SRV
+vlan 3520
+  name link_7k-7k-GROUPVTB
+vlan 3564
+  name 10.164.164.0_LB
+vlan 3565
+  name nInet-SRV-LB
+vlan 3579
+  name OTV_Site_vlan
+vlan 3580
+  name inbound-MNG-5k
+vlan 3599
+  name test_vlan
+vlan 3850
+  name cloud_3850
+vlan 3865
+  name Cloud_3865
+vlan 3950
+  name cloud_3950
+vlan 3965
+  name Cloud_3965
+
+spanning-tree vlan 2099,3329-3344,3500-3599,3850,3950 priority 4096
+route-map nInet-tLB-STATIC permit 10
+  set metric-type internal
+  set origin igp 
+service dhcp
+ip dhcp relay
+ipv6 dhcp relay
+vrf context GROUPVTB
+  address-family ipv4 unicast
+vrf context VTB-Core
+  address-family ipv4 unicast
+vrf context VTB-DEV
+  address-family ipv4 unicast
+vrf context VTB-RSRV
+  address-family ipv4 unicast
+vrf context VTB-USERS
+  address-family ipv4 unicast
+vrf context VipInet
+  address-family ipv4 unicast
+vrf context management
+  ip route 10.0.0.0/8 10.164.247.33
+vrf context nInet-SRV
+  address-family ipv4 unicast
+vpc domain 72
+  role priority 100
+  system-priority 100
+  peer-keepalive destination 10.164.247.218 source 10.164.247.217 vrf default
+  peer-gateway
+
+
+interface mgmt0
+  vrf member management
+  ip address 10.164.247.59/27
+
+interface Vlan1
+  no ip redirects
+  no ipv6 redirects
+
+interface Vlan1171
+  vrf member VTB-Core
+  ip address 10.164.152.2/22
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 1171 
+    preempt 
+    priority 200
+    ip 10.164.152.1
+  no shutdown
+
+interface Vlan1172
+  vrf member VTB-Core
+  ip address 10.164.156.2/24
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 1172 
+    preempt 
+    priority 200
+    ip 10.164.156.1
+  no shutdown
+
+interface Vlan1173
+  vrf member VTB-Core
+  ip address 10.164.157.2/24
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 1173 
+    preempt delay minimum 60 
+    priority 200
+    ip 10.164.157.1
+  no shutdown
+
+interface Vlan1174
+  vrf member VTB-Core
+  ip address 10.164.158.2/25
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 1174 
+    preempt 
+    priority 200
+    ip 10.164.158.1
+  no shutdown
+
+interface Vlan1175
+  vrf member VTB-Core
+  ip address 10.164.158.130/25
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 1175 
+    preempt 
+    priority 200
+    ip 10.164.158.129
+  no shutdown
+
+interface Vlan1176
+  vrf member VTB-DEV
+  ip address 10.144.146.2/24
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 1176 
+    preempt 
+    priority 200
+    ip 10.144.146.1
+  no shutdown
+
+interface Vlan1178
+  vrf member VTB-Core
+  ip address 10.164.161.2/24
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 1178 
+    preempt 
+    priority 200
+    ip 10.164.161.1
+  no shutdown
+
+interface Vlan1179
+  vrf member VTB-Core
+  ip address 10.164.162.2/24
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 1179 
+    preempt 
+    priority 200
+    ip 10.164.162.1
+  no shutdown
+
+interface Vlan1180
+  vrf member VTB-Core
+  ip address 10.164.163.2/24
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 1180 
+    preempt 
+    priority 200
+    ip 10.164.163.1
+  no shutdown
+
+interface Vlan1440
+  vrf member VTB-Core
+  ip address 10.164.160.2/24
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 1440 
+    preempt 
+    priority 200
+    ip 10.164.160.1
+  no shutdown
+
+interface Vlan2352
+  vrf member VipInet
+  no ip redirects
+  ip address 172.16.161.25/30
+  no ipv6 redirects
+  ip router eigrp DC-02
+  description t7k1-t7k2 VipInet link for ip routing
+  no shutdown
+  no autostate
+
+interface Vlan2630
+  vrf member VTB-USERS
+  no ip redirects
+  ip address 10.164.247.121/30
+  no ipv6 redirects
+  ip router eigrp DC-02
+  description t7k1-t7k2 VTB-USERS link for ip routing
+  no shutdown
+  no autostate
+
+interface Vlan3329
+  vrf member VTB-USERS
+  no ip redirects
+  ip address 10.133.64.6/22
+  no ipv6 redirects
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 3329 
+    priority 150
+    ip 10.133.64.1
+  ip dhcp relay address 10.134.6.216 
+  ip dhcp relay address 10.151.7.67 
+  no shutdown
+
+interface Vlan3330
+  vrf member VTB-USERS
+  no ip redirects
+  ip address 10.133.68.6/22
+  no ipv6 redirects
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 3330 
+    priority 150
+    ip 10.133.68.1
+  ip dhcp relay address 10.134.6.216 
+  ip dhcp relay address 10.151.7.67 
+  no shutdown
+
+interface Vlan3331
+  vrf member VTB-USERS
+  no ip redirects
+  ip address 10.133.72.4/22
+  no ipv6 redirects
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 3331 
+    priority 150
+    ip 10.133.72.1
+  ip dhcp relay address 10.134.6.216 
+  ip dhcp relay address 10.151.7.67 
+  no shutdown
+
+interface Vlan3332
+  vrf member VTB-USERS
+  no ip redirects
+  ip address 10.133.76.4/22
+  no ipv6 redirects
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 3332 
+    priority 150
+    ip 10.133.76.1
+  ip dhcp relay address 10.134.6.216 
+  ip dhcp relay address 10.151.7.67 
+  no shutdown
+
+interface Vlan3333
+  vrf member VTB-USERS
+  no ip redirects
+  ip address 10.133.80.2/22
+  no ipv6 redirects
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 3333 
+    priority 150
+    ip 10.133.80.1
+  ip dhcp relay address 10.134.6.216 
+  ip dhcp relay address 10.151.7.67 
+  no shutdown
+
+interface Vlan3334
+  vrf member VTB-USERS
+  no ip redirects
+  ip address 10.133.84.2/22
+  no ipv6 redirects
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 3334 
+    priority 150
+    ip 10.133.84.1
+  ip dhcp relay address 10.134.6.216 
+  ip dhcp relay address 10.151.7.67 
+  no shutdown
+
+interface Vlan3335
+  vrf member VTB-USERS
+  no ip redirects
+  ip address 10.133.88.2/22
+  no ipv6 redirects
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 3335 
+    priority 150
+    ip 10.133.88.1
+  ip dhcp relay address 10.134.6.216 
+  ip dhcp relay address 10.151.7.67 
+  no shutdown
+
+interface Vlan3336
+  vrf member VTB-USERS
+  no ip redirects
+  ip address 10.133.92.2/22
+  no ipv6 redirects
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 3336 
+    priority 150
+    ip 10.133.92.1
+  ip dhcp relay address 10.134.6.216 
+  ip dhcp relay address 10.151.7.67 
+  no shutdown
+
+interface Vlan3337
+  vrf member VTB-USERS
+  no ip redirects
+  ip address 10.133.96.2/22
+  no ipv6 redirects
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 3337 
+    priority 150
+    ip 10.133.96.1
+  ip dhcp relay address 10.134.6.216 
+  ip dhcp relay address 10.151.7.67 
+  no shutdown
+
+interface Vlan3338
+  vrf member VTB-USERS
+  no ip redirects
+  ip address 10.133.100.2/22
+  no ipv6 redirects
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 3338 
+    priority 150
+    ip 10.133.100.1
+  ip dhcp relay address 10.134.6.216 
+  ip dhcp relay address 10.151.7.67 
+  no shutdown
+
+interface Vlan3339
+  vrf member VTB-USERS
+  no ip redirects
+  ip address 10.133.104.2/22
+  no ipv6 redirects
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 3339 
+    priority 150
+    ip 10.133.104.1
+  ip dhcp relay address 10.134.6.216 
+  ip dhcp relay address 10.151.7.67 
+  no shutdown
+
+interface Vlan3340
+  vrf member VTB-USERS
+  no ip redirects
+  ip address 10.133.108.2/22
+  no ipv6 redirects
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 3340 
+    priority 150
+    ip 10.133.108.1
+  ip dhcp relay address 10.134.6.216 
+  ip dhcp relay address 10.151.7.67 
+  no shutdown
+
+interface Vlan3341
+  vrf member VTB-USERS
+  no ip redirects
+  ip address 10.133.112.6/22
+  no ipv6 redirects
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 3341 
+    priority 150
+    ip 10.133.112.1
+  ip dhcp relay address 10.134.6.216 
+  ip dhcp relay address 10.151.7.67 
+  no shutdown
+
+interface Vlan3342
+  vrf member VTB-USERS
+  no ip redirects
+  ip address 10.133.116.6/22
+  no ipv6 redirects
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 3342 
+    priority 150
+    ip 10.133.116.1
+  ip dhcp relay address 10.134.6.216 
+  ip dhcp relay address 10.151.7.67 
+  no shutdown
+
+interface Vlan3343
+  vrf member VTB-USERS
+  no ip redirects
+  ip address 10.133.120.6/22
+  no ipv6 redirects
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 3343 
+    priority 150
+    ip 10.133.120.1
+  ip dhcp relay address 10.134.6.216 
+  ip dhcp relay address 10.151.7.67 
+  no shutdown
+
+interface Vlan3344
+  vrf member VTB-USERS
+  no ip redirects
+  ip address 10.133.124.6/22
+  no ipv6 redirects
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 3344 
+    priority 150
+    ip 10.133.124.1
+  ip dhcp relay address 10.134.6.216 
+  ip dhcp relay address 10.151.7.67 
+  no shutdown
+
+interface Vlan3428
+  vrf member VipInet
+  no ip redirects
+  ip address 172.16.99.198/26
+  no ipv6 redirects
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 3428 
+    priority 150
+    ip 172.16.99.193
+  no shutdown
+
+interface Vlan3429
+  vrf member VipInet
+  no ip redirects
+  ip address 172.16.99.6/26
+  no ipv6 redirects
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 3429 
+    priority 150
+    ip 172.16.99.1
+  no shutdown
+
+interface Vlan3430
+  vrf member VipInet
+  no ip redirects
+  ip address 172.16.100.6/23
+  no ipv6 redirects
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 3430 
+    priority 150
+    ip 172.16.100.1
+  ip dhcp relay address 172.16.99.204 
+  ip dhcp relay address 172.16.99.214 
+  no shutdown
+
+interface Vlan3500
+  vrf member VTB-Core
+  no ip redirects
+  ip address 10.164.247.97/29
+  no ipv6 redirects
+  ip router eigrp DC-02
+  description 7k-7k VTB-Core link for ip routing
+  no shutdown
+  no autostate
+
+interface Vlan3505
+  vrf member VTB-RSRV
+  no ip redirects
+  ip address 10.0.248.65/30
+  no ipv6 redirects
+  ip router eigrp DC-02
+  description 7k-7k VTB-RSRV link for ip routing
+  no shutdown
+  no autostate
+
+interface Vlan3510
+  vrf member nInet-SRV
+  no ip redirects
+  ip address 172.16.231.65/30
+  no ipv6 redirects
+  ip router eigrp DC-02
+  description 7k-7k nInet-SRV link for ip routing
+  no shutdown
+  no autostate
+
+interface Vlan3515
+  vrf member VTB-DEV
+  no ip redirects
+  ip address 10.144.251.1/30
+  no ipv6 redirects
+  ip router eigrp DC-02
+  description 7k-7k VTB-DEV link for ip routing
+  no shutdown
+  no autostate
+
+interface Vlan3520
+  vrf member GROUPVTB
+  no ip redirects
+  ip address 10.193.255.145/30
+  no ipv6 redirects
+  ip router eigrp DC-02
+  description 7k-7k GROUPVTB link for ip routing
+  no shutdown
+  no autostate
+
+interface Vlan3564
+  vrf member VTB-Core
+  ip address 10.164.164.2/24
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 3564 
+    ip 10.164.164.1
+  no shutdown
+
+interface Vlan3565
+  vrf member nInet-SRV
+  ip address 172.16.230.66/26
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp 3565 
+    ip 172.16.230.65
+  no shutdown
+
+interface Vlan3580
+  vrf member VTB-Core
+  ip address 10.164.247.66/27
+  ip router eigrp DC-02
+  ip passive-interface eigrp DC-02
+  hsrp version 2
+  hsrp delay reload 60 
+  hsrp 3580 
+    ip 10.164.247.65
+  no shutdown
+  mtu 2000
+
+interface port-channel1
+
+interface port-channel4
+  description to TF4-Po70
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1178,2099,3850,3950
+  vpc 4
+
+interface port-channel31
+  description to OTV box uplink
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3157,3341-3344,3428-3430,3579,3850
+  switchport trunk allowed vlan add 3865,3950,3965
+  mtu 2000
+
+interface port-channel33
+  description F5-1
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1178,2099,3564-3565
+  vpc 33
+
+interface port-channel34
+  description F5-2
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1178,2099,3564-3565
+  vpc 34
+
+interface port-channel53
+  shutdown
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1178,1440,3529-3530,3580
+  mtu 2000
+  vpc 53
+
+interface port-channel101
+  description [FEX] fex-101
+  switchport
+  switchport mode fex-fabric
+  fex associate 101
+
+interface port-channel103
+  description [FEX] fex-103
+  switchport
+  switchport mode fex-fabric
+  fex associate 103
+
+interface port-channel105
+  description [FEX] fex-105
+  switchport
+  switchport mode fex-fabric
+  fex associate 105
+
+interface port-channel107
+  description [FEX] fex-107
+  switchport
+  switchport mode fex-fabric
+  fex associate 107
+
+interface port-channel109
+  description [FEX] fex-109
+  switchport
+  switchport mode fex-fabric
+  fex associate 109
+
+interface port-channel111
+  description [FEX] fex-111
+  switchport
+  switchport mode fex-fabric
+  fex associate 111
+
+interface port-channel113
+  description [FEX] fex-113
+  switchport
+  switchport mode fex-fabric
+  fex associate 113
+
+interface port-channel201
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  vpc 201
+
+interface port-channel202
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  no lacp suspend-individual
+  vpc 202
+
+interface port-channel203
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  no lacp suspend-individual
+  vpc 203
+
+interface port-channel204
+  description mskxd7esx23
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  vpc 204
+
+interface port-channel205
+  description mskxd7esx24
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  vpc 205
+
+interface port-channel206
+  description mskxd7esx25
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  vpc 206
+
+interface port-channel207
+  description mskxd7esx26
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  vpc 207
+
+interface port-channel208
+  description mskxd7esx24
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  vpc 208
+
+interface port-channel209
+  description mskxd7esx28
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  vpc 209
+
+interface port-channel210
+  description mskxd7esx29
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  vpc 210
+
+interface port-channel211
+  description mskxd7esx30
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  vpc 211
+
+interface port-channel212
+  description mskxd7esx31
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  vpc 212
+
+interface port-channel213
+  description mskxd7esx32
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  vpc 213
+
+interface port-channel214
+  description mskxd7esx33
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  vpc 214
+
+interface port-channel215
+  description mskxd4esx01
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3329-3330
+  speed 10000
+  vpc 215
+
+interface port-channel216
+  description mskxd4esx02
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3329-3330
+  speed 10000
+  vpc 216
+
+interface port-channel217
+  description mskxd4esx03
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3329-3330
+  speed 10000
+  vpc 217
+
+interface port-channel218
+  description mskxd4esx04
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3329-3330
+  speed 10000
+  vpc 218
+
+interface port-channel219
+  description mskxd4esx05
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3329-3330
+  speed 10000
+  vpc 219
+
+interface port-channel220
+  description mskxd4esx06
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3329-3330
+  speed 10000
+  vpc 220
+
+interface port-channel221
+  description mskxd4esx07
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3329-3330
+  speed 10000
+  vpc 221
+
+interface port-channel222
+  description mskxd4esx08
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3329-3330
+  speed 10000
+  vpc 222
+
+interface port-channel223
+  description mskxd4esx09
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3329-3330
+  speed 10000
+  vpc 223
+
+interface port-channel224
+  description mskxd4esx10
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3329-3330
+  speed 10000
+  vpc 224
+
+interface port-channel225
+  description mskxd4esx11
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3329-3330
+  speed 10000
+  vpc 225
+
+interface port-channel226
+  description mskxd4esx12
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3329-3330
+  speed 10000
+  vpc 226
+
+interface port-channel227
+  description mskxd5esx01
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3333-3334
+  speed 10000
+  vpc 227
+
+interface port-channel228
+  description mskxd5esx02
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3333-3334
+  speed 10000
+  vpc 228
+
+interface port-channel229
+  description mskxd5esx03
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3333-3334
+  speed 10000
+  vpc 229
+
+interface port-channel230
+  description mskxd5esx04
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3333-3334
+  speed 10000
+  vpc 230
+
+interface port-channel231
+  description mskxd5esx05
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3333-3334
+  speed 10000
+  vpc 231
+
+interface port-channel232
+  description mskxd5esx06
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3333-3334
+  speed 10000
+  vpc 232
+
+interface port-channel233
+  description mskxd5esx07
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3333-3334
+  speed 10000
+  vpc 233
+
+interface port-channel234
+  description mskxd5esx08
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3333-3334
+  speed 10000
+  vpc 234
+
+interface port-channel235
+  description mskxd5esx09
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3333-3334
+  speed 10000
+  vpc 235
+
+interface port-channel236
+  description mskxd5esx10
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3333-3334
+  speed 10000
+  vpc 236
+
+interface port-channel237
+  description mskxd5esx11
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3333-3334
+  speed 10000
+  vpc 237
+
+interface port-channel238
+  description mskxd5esx12
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3333-3334
+  speed 10000
+  vpc 238
+
+interface port-channel239
+  description mskxd6esx01
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3337-3338
+  speed 10000
+  vpc 239
+
+interface port-channel240
+  description mskxd6esx02
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3337-3338
+  speed 10000
+  vpc 240
+
+interface port-channel241
+  description mskxd6esx03
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3337-3338
+  speed 10000
+  vpc 241
+
+interface port-channel242
+  description mskxd6esx04
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3337-3338
+  speed 10000
+  vpc 242
+
+interface port-channel243
+  description mskxd6esx05
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3337-3338
+  speed 10000
+  vpc 243
+
+interface port-channel244
+  description mskxd6esx06
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3337-3338
+  speed 10000
+  vpc 244
+
+interface port-channel245
+  description mskxd6esx07
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3337-3338
+  speed 10000
+  vpc 245
+
+interface port-channel246
+  description mskxd6esx08
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3337-3338
+  speed 10000
+  vpc 246
+
+interface port-channel247
+  description mskxd6esx09
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3337-3338
+  speed 10000
+  vpc 247
+
+interface port-channel248
+  description mskxd6esx10
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3337-3338
+  speed 10000
+  vpc 248
+
+interface port-channel249
+  description mskxd6esx11
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3337-3338
+  speed 10000
+  vpc 249
+
+interface port-channel250
+  description mskxd6esx12
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3337-3338
+  speed 10000
+  vpc 250
+
+interface port-channel251
+  description mskxd4esx13
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3331-3332
+  vpc 251
+
+interface port-channel252
+  description mskxd4esx14
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3331-3332
+  vpc 252
+
+interface port-channel253
+  description mskxd4esx15
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3331-3332
+  vpc 253
+
+interface port-channel254
+  description mskxd4esx16
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3331-3332
+  vpc 254
+
+interface port-channel255
+  description mskxd4esx17
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3331-3332
+  vpc 255
+
+interface port-channel256
+  description mskxd4esx18
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3331-3332
+  vpc 256
+
+interface port-channel257
+  description mskxd4esx19
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3331-3332
+  vpc 257
+
+interface port-channel258
+  description mskxd4esx20
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3331-3332
+  vpc 258
+
+interface port-channel259
+  description mskxd4esx21
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3331-3332
+  vpc 259
+
+interface port-channel260
+  description mskxd4esx22
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3331-3332
+  vpc 260
+
+interface port-channel261
+  description mskxd4esx23
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3331-3332
+  no lacp suspend-individual
+  vpc 261
+
+interface port-channel262
+  description mskxd4esx24
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3331-3332
+  no lacp suspend-individual
+  vpc 262
+
+interface port-channel263
+  description mskxd5esx13
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3335-3336
+  vpc 263
+
+interface port-channel264
+  description mskxd5esx14
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3335-3336
+  vpc 264
+
+interface port-channel265
+  description mskxd5esx15
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3335-3336
+  vpc 265
+
+interface port-channel266
+  description mskxd5esx16
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3335-3336
+  vpc 266
+
+interface port-channel267
+  description mskxd5esx17
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3335-3336
+  vpc 267
+
+interface port-channel268
+  description mskxd5esx18
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3335-3336
+  vpc 268
+
+interface port-channel269
+  description mskxd5esx19
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3335-3336
+  vpc 269
+
+interface port-channel270
+  description mskxd5esx20
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3335-3336
+  vpc 270
+
+interface port-channel271
+  description mskxd5esx21
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3335-3336
+  vpc 271
+
+interface port-channel272
+  description mskxd5esx22
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3335-3336
+  vpc 272
+
+interface port-channel273
+  description mskxd5esx23
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3335-3336
+  vpc 273
+
+interface port-channel274
+  description mskxd5esx24
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3335-3336
+  vpc 274
+
+interface port-channel275
+  description mskxd6esx13
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3339-3340
+  vpc 275
+
+interface port-channel276
+  description mskxd6esx14
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3339-3340
+  vpc 276
+
+interface port-channel277
+  description mskxd6esx15
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3339-3340
+  vpc 277
+
+interface port-channel278
+  description mskxd6esx16
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3339-3340
+  vpc 278
+
+interface port-channel279
+  description mskxd6esx17
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3339-3340
+  vpc 279
+
+interface port-channel280
+  description mskxd6esx18
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3339-3340
+  vpc 280
+
+interface port-channel281
+  description mskxd6esx19
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3339-3340
+  vpc 281
+
+interface port-channel282
+  description mskxd6esx20
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3339-3340
+  vpc 282
+
+interface port-channel283
+  description mskxd6esx21
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3339-3340
+  vpc 283
+
+interface port-channel284
+  description mskxd6esx22
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3339-3340
+  vpc 284
+
+interface port-channel285
+  description mskxd6esx23
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3339-3340
+  vpc 285
+
+interface port-channel286
+  description mskxd6esx24
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3339-3340
+  vpc 286
+
+interface port-channel287
+  description mskxd7esx34
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3343-3344
+  vpc 287
+
+interface port-channel288
+  description mskxd7esx35
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3343-3344
+  vpc 288
+
+interface port-channel289
+  description mskxd7esx36
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3343-3344
+  vpc 289
+
+interface port-channel290
+  description mskxd7esx37
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3343-3344
+  vpc 290
+
+interface port-channel291
+  description mskxd7esx38
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3343-3344
+  vpc 291
+
+interface port-channel292
+  description mskxd7esx39
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3343-3344
+  vpc 292
+
+interface port-channel293
+  description mskxd7esx40
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3343-3344
+  vpc 293
+
+interface port-channel294
+  description mskxd7esx41
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3343-3344
+  vpc 294
+
+interface port-channel295
+  description mskxd7esx42
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3343-3344
+  vpc 295
+
+interface port-channel296
+  description mskxd7esx43
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3343-3344
+  vpc 296
+
+interface port-channel297
+  description mskxd7esx44
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3343-3344
+  vpc 297
+
+interface port-channel298
+  description mskxdmesx31
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3428-3430
+  vpc 298
+
+interface port-channel299
+  description mskxdmesx32
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3428-3430
+  vpc 299
+
+interface port-channel300
+  description mskxdmesx33
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3428-3430
+  vpc 300
+
+interface port-channel1000
+  description --- VPC peer-link 1/48, 2/48 ---
+  switchport
+  switchport mode trunk
+  spanning-tree port type network
+  vpc peer-link
+
+interface port-channel1001
+  description --- Keepalive-link vrf default 1/44, 2/44 ---
+  ip address 10.164.247.217/29
+
+interface Ethernet1/1
+  description [FEX] MNG-fex-107
+  switchport
+  switchport mode fex-fabric
+  fex associate 107
+  channel-group 107
+  no shutdown
+
+interface Ethernet1/2
+  description [FEX] MNG-fex-107
+  switchport
+  switchport mode fex-fabric
+  fex associate 107
+  channel-group 107
+  no shutdown
+
+interface Ethernet1/3
+  description [FEX] fex-105
+  switchport
+  switchport mode fex-fabric
+  fex associate 105
+  channel-group 105
+  no shutdown
+
+interface Ethernet1/4
+  description [FEX] fex-105
+  switchport
+  switchport mode fex-fabric
+  fex associate 105
+  channel-group 105
+  no shutdown
+
+interface Ethernet1/5
+  description [FEX] fex-103
+  switchport
+  switchport mode fex-fabric
+  fex associate 103
+  channel-group 103
+  no shutdown
+
+interface Ethernet1/6
+  description [FEX] fex-103
+  switchport
+  switchport mode fex-fabric
+  fex associate 103
+  channel-group 103
+  no shutdown
+
+interface Ethernet1/7
+  description [FEX] fex-101
+  switchport
+  switchport mode fex-fabric
+  fex associate 101
+  channel-group 101
+  no shutdown
+
+interface Ethernet1/8
+  description [FEX] fex-101
+  switchport
+  switchport mode fex-fabric
+  fex associate 101
+  channel-group 101
+  no shutdown
+
+interface Ethernet1/9
+
+interface Ethernet1/10
+
+interface Ethernet1/11
+
+interface Ethernet1/12
+
+interface Ethernet1/13
+
+interface Ethernet1/14
+
+interface Ethernet1/15
+
+interface Ethernet1/16
+
+interface Ethernet1/17
+  description [FEX] fex-109
+  switchport
+  switchport mode fex-fabric
+  fex associate 109
+  channel-group 109
+  no shutdown
+
+interface Ethernet1/18
+  description [FEX] fex-109
+  switchport
+  switchport mode fex-fabric
+  fex associate 109
+  channel-group 109
+  no shutdown
+
+interface Ethernet1/19
+  description [FEX] fex-111
+  switchport
+  switchport mode fex-fabric
+  fex associate 111
+  channel-group 111
+  no shutdown
+
+interface Ethernet1/20
+  description [FEX] fex-111
+  switchport
+  switchport mode fex-fabric
+  fex associate 111
+  channel-group 111
+  no shutdown
+
+interface Ethernet1/21
+  description [FEX] fex-113
+  switchport
+  switchport mode fex-fabric
+  fex associate 113
+  channel-group 113
+  no shutdown
+
+interface Ethernet1/22
+  description [FEX] fex-113
+  switchport
+  switchport mode fex-fabric
+  fex associate 113
+  channel-group 113
+  no shutdown
+
+interface Ethernet1/23
+
+interface Ethernet1/24
+
+interface Ethernet1/25
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1178,2099,3564-3565
+  channel-group 33 mode active
+  no shutdown
+
+interface Ethernet1/26
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1178,2099,3564-3565
+  channel-group 33 mode active
+  no shutdown
+
+interface Ethernet1/27
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1178,2099,3564-3565
+  channel-group 34 mode active
+  no shutdown
+
+interface Ethernet1/28
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1178,2099,3564-3565
+  channel-group 34 mode active
+  no shutdown
+
+interface Ethernet1/29
+
+interface Ethernet1/30
+
+interface Ethernet1/31
+  no shutdown
+
+interface Ethernet1/32
+
+interface Ethernet1/33
+
+interface Ethernet1/34
+
+interface Ethernet1/35
+
+interface Ethernet1/36
+
+interface Ethernet1/37
+
+interface Ethernet1/38
+
+interface Ethernet1/39
+
+interface Ethernet1/40
+
+interface Ethernet1/41
+
+interface Ethernet1/42
+
+interface Ethernet1/43
+
+interface Ethernet1/44
+  description --- VPC keepalive member 1/44 - 1/44 ---
+  channel-group 1001 mode active
+  no shutdown
+
+interface Ethernet1/45
+
+interface Ethernet1/46
+
+interface Ethernet1/47
+  description link tCore1 2/1
+  no shutdown
+
+interface Ethernet1/47.2353
+  encapsulation dot1q 2353
+  vrf member VipInet
+  ip address 172.16.161.30/30
+  ip router eigrp DC-02
+  no shutdown
+
+interface Ethernet1/47.2631
+  encapsulation dot1q 2631
+  vrf member VTB-USERS
+  ip address 10.164.247.126/30
+  ip router eigrp DC-02
+  no shutdown
+
+interface Ethernet1/47.3501
+  encapsulation dot1q 3501
+  vrf member VTB-Core
+  ip address 10.164.247.105/30
+  ip router eigrp DC-02
+  no shutdown
+
+interface Ethernet1/47.3506
+  encapsulation dot1q 3506
+  vrf member VTB-RSRV
+  ip address 10.0.248.69/30
+  ip router eigrp DC-02
+  no shutdown
+
+interface Ethernet1/47.3511
+  encapsulation dot1q 3511
+  vrf member nInet-SRV
+  ip address 172.16.231.69/30
+  ip router eigrp DC-02
+  no shutdown
+
+interface Ethernet1/47.3516
+  encapsulation dot1q 3516
+  vrf member VTB-DEV
+  ip address 10.144.251.5/30
+  ip router eigrp DC-02
+  no shutdown
+
+interface Ethernet1/47.3521
+  encapsulation dot1q 3521
+  vrf member GROUPVTB
+  ip address 10.193.255.149/30
+  ip router eigrp DC-02
+  no shutdown
+
+interface Ethernet1/48
+  description --- Peer-Link 1/48 - 1/48 ---
+  switchport
+  switchport mode trunk
+  channel-group 1000 mode active
+  no shutdown
+
+interface Ethernet2/1
+
+interface Ethernet2/2
+
+interface Ethernet2/3
+  description [FEX] fex-105
+  switchport
+  switchport mode fex-fabric
+  fex associate 105
+  channel-group 105
+  no shutdown
+
+interface Ethernet2/4
+  description [FEX] fex-105
+  switchport
+  switchport mode fex-fabric
+  fex associate 105
+  channel-group 105
+  no shutdown
+
+interface Ethernet2/5
+  description [FEX] fex-103
+  switchport
+  switchport mode fex-fabric
+  fex associate 103
+  channel-group 103
+  no shutdown
+
+interface Ethernet2/6
+  description [FEX] fex-103
+  switchport
+  switchport mode fex-fabric
+  fex associate 103
+  channel-group 103
+  no shutdown
+
+interface Ethernet2/7
+  description [FEX] fex-101
+  switchport
+  switchport mode fex-fabric
+  fex associate 101
+  channel-group 101
+  no shutdown
+
+interface Ethernet2/8
+  description [FEX] fex-101
+  switchport
+  switchport mode fex-fabric
+  fex associate 101
+  channel-group 101
+  no shutdown
+
+interface Ethernet2/17
+  description [FEX] fex-109
+  switchport
+  switchport mode fex-fabric
+  fex associate 109
+  channel-group 109
+  no shutdown
+
+interface Ethernet2/18
+  description [FEX] fex-109
+  switchport
+  switchport mode fex-fabric
+  fex associate 109
+  channel-group 109
+  no shutdown
+
+interface Ethernet2/19
+  description [FEX] fex-111
+  switchport
+  switchport mode fex-fabric
+  fex associate 111
+  channel-group 111
+  no shutdown
+
+interface Ethernet2/20
+  description [FEX] fex-111
+  switchport
+  switchport mode fex-fabric
+  fex associate 111
+  channel-group 111
+  no shutdown
+
+interface Ethernet2/21
+  description [FEX] fex-113
+  switchport
+  switchport mode fex-fabric
+  fex associate 113
+  channel-group 113
+  no shutdown
+
+interface Ethernet2/22
+  description [FEX] fex-113
+  switchport
+  switchport mode fex-fabric
+  fex associate 113
+  channel-group 113
+  no shutdown
+
+interface Ethernet2/23
+
+interface Ethernet2/24
+
+interface Ethernet2/25
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1178,2099,3564-3565
+  channel-group 33 mode active
+  no shutdown
+
+interface Ethernet2/26
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1178,2099,3564-3565
+  channel-group 33 mode active
+  no shutdown
+
+interface Ethernet2/27
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1178,2099,3564-3565
+  channel-group 34 mode active
+  no shutdown
+
+interface Ethernet2/28
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1178,2099,3564-3565
+  channel-group 34 mode active
+  no shutdown
+
+interface Ethernet2/29
+
+interface Ethernet2/30
+
+interface Ethernet2/31
+  description to TF4 2/1
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1178,2099,3850,3950
+  channel-group 4 mode active
+  no shutdown
+
+interface Ethernet2/32
+  no shutdown
+
+interface Ethernet2/33
+  no shutdown
+
+interface Ethernet2/34
+  no shutdown
+
+interface Ethernet2/35
+
+interface Ethernet2/36
+
+interface Ethernet2/36.3525
+
+interface Ethernet2/37
+
+interface Ethernet2/38
+
+interface Ethernet2/39
+
+interface Ethernet2/40
+
+interface Ethernet2/41
+
+interface Ethernet2/42
+
+interface Ethernet2/43
+
+interface Ethernet2/44
+  description --- VPC keepalive member 2/44 - 2/44 ---
+  channel-group 1001 mode active
+  no shutdown
+
+interface Ethernet2/45
+
+interface Ethernet2/46
+
+interface Ethernet2/47
+  description tCore-2 Te2/1
+  no shutdown
+
+interface Ethernet2/47.2355
+  encapsulation dot1q 2355
+  vrf member VipInet
+  ip address 172.16.161.38/30
+  ip router eigrp DC-02
+  no shutdown
+
+interface Ethernet2/47.2633
+  encapsulation dot1q 2633
+  vrf member VTB-USERS
+  ip address 10.164.247.134/30
+  ip router eigrp DC-02
+  no shutdown
+
+interface Ethernet2/47.3502
+  encapsulation dot1q 3502
+  vrf member VTB-Core
+  ip address 10.164.247.109/30
+  ip router eigrp DC-02
+  no shutdown
+
+interface Ethernet2/47.3507
+  encapsulation dot1q 3507
+  vrf member VTB-RSRV
+  ip address 10.0.248.73/30
+  ip router eigrp DC-02
+  no shutdown
+
+interface Ethernet2/47.3512
+  encapsulation dot1q 3512
+  vrf member nInet-SRV
+  ip address 172.16.231.73/30
+  ip router eigrp DC-02
+  no shutdown
+
+interface Ethernet2/47.3517
+  encapsulation dot1q 3517
+  vrf member VTB-DEV
+  ip address 10.144.251.9/30
+  ip router eigrp DC-02
+  no shutdown
+
+interface Ethernet2/47.3522
+  encapsulation dot1q 3522
+  vrf member GROUPVTB
+  ip address 10.193.255.153/30
+  ip router eigrp DC-02
+  no shutdown
+
+interface Ethernet2/48
+  description --- Peer-Link 2/48 - 2/48 ---
+  switchport
+  switchport mode trunk
+  channel-group 1000 mode active
+  no shutdown
+
+interface Ethernet3/9
+
+interface Ethernet3/10
+
+interface Ethernet3/11
+
+interface Ethernet3/12
+
+interface Ethernet3/13
+
+interface Ethernet3/14
+
+interface Ethernet3/15
+
+interface Ethernet3/16
+  description to OTV (tN77k1-OTV eth 3/8)
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3157,3341-3344,3428-3430,3579,3850
+  switchport trunk allowed vlan add 3865,3950,3965
+  mtu 2000
+  channel-group 31 mode active
+  no shutdown
+
+interface Ethernet101/1/1
+
+interface Ethernet101/1/2
+
+interface Ethernet101/1/3
+  description F5 MGMT
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/4
+  description DWDM MGMT
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/5
+  description Nice_Server_ilo
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/6
+  description Brocade 6520-0
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/7
+  description mskxdmesx34_ilo
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/8
+  description mskxdmesx45_ilo
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/9
+  description mskxd7esx24_ilo
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/10
+  description mskxd7esx26_ilo
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/11
+  description mskxd7esx28_ilo
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/12
+  description mskxd7esx30_ilo
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/13
+  description mskxd7esx32_ilo
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/14
+  description mskxd4esx02_ilo
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/15
+  description mskxd4esx04_ilo
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/16
+  description mskxd4esx06_ilo
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/17
+  description mskxd4esx08_ilo
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/18
+  description mskxd4esx10_ilo
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/19
+  description mskxd4esx12_ilo
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/20
+  description mskxd5esx02_ipmi
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/21
+  description mskxd5esx04_ipmi
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/22
+  description mskxd5esx06_ipmi
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/23
+  description mskxd5esx08_ipmi
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/24
+  description mskxd5esx10_ipmi
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/25
+  description mskxd5esx12_ipmi
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/26
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/27
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/28
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/29
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/30
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/31
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet101/1/32
+
+interface Ethernet103/1/1
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet103/1/2
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet103/1/3
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet103/1/4
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet103/1/5
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet103/1/6
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet103/1/7
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet103/1/8
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet103/1/9
+
+interface Ethernet103/1/10
+
+interface Ethernet103/1/11
+
+interface Ethernet103/1/12
+
+interface Ethernet103/1/13
+
+interface Ethernet103/1/14
+
+interface Ethernet103/1/15
+
+interface Ethernet103/1/16
+
+interface Ethernet103/1/17
+
+interface Ethernet103/1/18
+
+interface Ethernet103/1/19
+
+interface Ethernet103/1/20
+
+interface Ethernet103/1/21
+
+interface Ethernet103/1/22
+
+interface Ethernet103/1/23
+
+interface Ethernet103/1/24
+
+interface Ethernet103/1/25
+
+interface Ethernet103/1/26
+
+interface Ethernet103/1/27
+
+interface Ethernet103/1/28
+
+interface Ethernet103/1/29
+
+interface Ethernet103/1/30
+
+interface Ethernet103/1/31
+
+interface Ethernet103/1/32
+
+interface Ethernet103/1/33
+
+interface Ethernet103/1/34
+
+interface Ethernet103/1/35
+
+interface Ethernet103/1/36
+
+interface Ethernet103/1/37
+
+interface Ethernet103/1/38
+
+interface Ethernet103/1/39
+
+interface Ethernet103/1/40
+
+interface Ethernet103/1/41
+
+interface Ethernet103/1/42
+
+interface Ethernet103/1/43
+
+interface Ethernet103/1/44
+
+interface Ethernet103/1/45
+
+interface Ethernet103/1/46
+
+interface Ethernet103/1/47
+
+interface Ethernet103/1/48
+
+interface Ethernet105/1/1
+
+interface Ethernet105/1/2
+
+interface Ethernet105/1/3
+  description mskxdmesx34
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  channel-group 201 mode active
+  no shutdown
+
+interface Ethernet105/1/4
+  description mskxdmesx45
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  channel-group 202 mode active
+  no shutdown
+
+interface Ethernet105/1/5
+  description mskxd4esx24
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3331-3332
+  channel-group 262 mode active
+  no shutdown
+
+interface Ethernet105/1/6
+  description mskxdmesx46
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  channel-group 203 mode active
+  no shutdown
+
+interface Ethernet105/1/7
+  description mskxd7esx23
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  channel-group 204 mode active
+  no shutdown
+
+interface Ethernet105/1/8
+  description mskxd7esx24
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  channel-group 205 mode active
+  no shutdown
+
+interface Ethernet105/1/9
+  description mskxd7esx25
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  channel-group 206 mode active
+  no shutdown
+
+interface Ethernet105/1/10
+  description mskxd7esx26
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  channel-group 207 mode active
+  no shutdown
+
+interface Ethernet105/1/11
+  description mskxd7esx27
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  channel-group 208 mode active
+  no shutdown
+
+interface Ethernet105/1/12
+  description mskxd7esx28
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  channel-group 209 mode active
+  no shutdown
+
+interface Ethernet105/1/13
+  description mskxd7esx29
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  channel-group 210 mode active
+  no shutdown
+
+interface Ethernet105/1/14
+  description mskxd7esx30
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  channel-group 211 mode active
+  no shutdown
+
+interface Ethernet105/1/15
+  description mskxd7esx31
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  channel-group 212 mode active
+  no shutdown
+
+interface Ethernet105/1/16
+  description mskxd7esx32
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  channel-group 213 mode active
+  no shutdown
+
+interface Ethernet105/1/17
+  description mskxd7esx33
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3341-3344
+  speed 10000
+  channel-group 214 mode active
+  no shutdown
+
+interface Ethernet105/1/18
+  description mskxd5esx01
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3333-3334
+  speed 10000
+  channel-group 227 mode active
+  no shutdown
+
+interface Ethernet105/1/19
+  description mskxd5esx02
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3333-3334
+  speed 10000
+  channel-group 228 mode active
+  no shutdown
+
+interface Ethernet105/1/20
+  description mskxd5esx03
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3333-3334
+  speed 10000
+  channel-group 229 mode active
+  no shutdown
+
+interface Ethernet105/1/21
+  description mskxd5esx04
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3333-3334
+  speed 10000
+  channel-group 230 mode active
+  no shutdown
+
+interface Ethernet105/1/22
+  description mskxd5esx05
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3333-3334
+  speed 10000
+  channel-group 231 mode active
+  no shutdown
+
+interface Ethernet105/1/23
+  description mskxd5esx06
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3333-3334
+  speed 10000
+  channel-group 232 mode active
+  no shutdown
+
+interface Ethernet105/1/24
+  description mskxd5esx07
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3333-3334
+  speed 10000
+  channel-group 233 mode active
+  no shutdown
+
+interface Ethernet105/1/25
+  description mskxd5esx08
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3333-3334
+  speed 10000
+  channel-group 234 mode active
+  no shutdown
+
+interface Ethernet105/1/26
+  description mskxd5esx09
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3333-3334
+  speed 10000
+  channel-group 235 mode active
+  no shutdown
+
+interface Ethernet105/1/27
+  description mskxd5esx10
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3333-3334
+  speed 10000
+  channel-group 236 mode active
+  no shutdown
+
+interface Ethernet105/1/28
+  description mskxd5esx11
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3333-3334
+  speed 10000
+  channel-group 237 mode active
+  no shutdown
+
+interface Ethernet105/1/29
+  description mskxd5esx12
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3333-3334
+  speed 10000
+  channel-group 238 mode active
+  no shutdown
+
+interface Ethernet105/1/30
+  description mskxd4esx21
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3331-3332
+  channel-group 259 mode active
+  no shutdown
+
+interface Ethernet105/1/31
+  description mskxd4esx22
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3331-3332
+  channel-group 260 mode active
+  no shutdown
+
+interface Ethernet105/1/32
+  description mskxd4esx23
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3331-3332
+  no shutdown
+
+interface Ethernet107/1/1
+  description Brocade_mgmt
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/2
+  description Brocade_mgmt
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/3
+  description Brocade_mgmt
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/4
+  description Brocade_mgmt
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/5
+  description Brocade_mgmt
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/6
+  description Brocade_mgmt
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/7
+  description Brocade_mgmt
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/8
+  description Brocade_mgmt
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/9
+  description Brocade_mgmt
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/10
+  description Brocade_mgmt
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/11
+  description Brocade_mgmt
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/12
+  description Brocade_mgmt
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/13
+  description mskxd6esx01_ipmi
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/14
+  description mskxd6esx02_ipmi
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/15
+  description mskxd6esx03_ipmi
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/16
+  description mskxd6esx04_ipmi
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/17
+  description mskxd6esx05_ipmi
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/18
+  description mskxd6esx06_ipmi
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/19
+  description mskxd6esx07_ipmi
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/20
+  description mskxd6esx08_ipmi
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/21
+  description mskxd6esx09_ipmi
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/22
+  description mskxd6esx10_ipmi
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/23
+  description mskxd6esx11_ipmi
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/24
+  description mskxd6esx12_ipmi
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/25
+  description mskxdmesx31
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/26
+  description mskxdmesx32
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/27
+  description mskxdmesx33
+  switchport
+  switchport access vlan 1178
+  no shutdown
+
+interface Ethernet107/1/28
+
+interface Ethernet107/1/29
+
+interface Ethernet107/1/30
+
+interface Ethernet107/1/31
+
+interface Ethernet107/1/32
+
+interface Ethernet107/1/33
+
+interface Ethernet107/1/34
+
+interface Ethernet107/1/35
+
+interface Ethernet107/1/36
+
+interface Ethernet107/1/37
+
+interface Ethernet107/1/38
+
+interface Ethernet107/1/39
+
+interface Ethernet107/1/40
+
+interface Ethernet107/1/41
+
+interface Ethernet107/1/42
+
+interface Ethernet107/1/43
+
+interface Ethernet107/1/44
+
+interface Ethernet107/1/45
+
+interface Ethernet107/1/46
+
+interface Ethernet107/1/47
+
+interface Ethernet107/1/48
+
+interface Ethernet109/1/1
+  description mskxd4esx01
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3329-3330
+  speed 10000
+  channel-group 215 mode active
+  no shutdown
+
+interface Ethernet109/1/2
+  description mskxd4esx02
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3329-3330
+  speed 10000
+  channel-group 216 mode active
+  no shutdown
+
+interface Ethernet109/1/3
+  description mskxd4esx03
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3329-3330
+  speed 10000
+  channel-group 217 mode active
+  no shutdown
+
+interface Ethernet109/1/4
+  description mskxd4esx04
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3329-3330
+  speed 10000
+  channel-group 218 mode active
+  no shutdown
+
+interface Ethernet109/1/5
+  description mskxd4esx05
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3329-3330
+  speed 10000
+  channel-group 219 mode active
+  no shutdown
+
+interface Ethernet109/1/6
+  description mskxd4esx06
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3329-3330
+  speed 10000
+  channel-group 220 mode active
+  no shutdown
+
+interface Ethernet109/1/7
+  description mskxd4esx07
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3329-3330
+  speed 10000
+  channel-group 221 mode active
+  no shutdown
+
+interface Ethernet109/1/8
+  description mskxd4esx08
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3329-3330
+  speed 10000
+  channel-group 222 mode active
+  no shutdown
+
+interface Ethernet109/1/9
+  description mskxd4esx09
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3329-3330
+  speed 10000
+  channel-group 223 mode active
+  no shutdown
+
+interface Ethernet109/1/10
+  description mskxd4esx10
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3329-3330
+  speed 10000
+  channel-group 224 mode active
+  no shutdown
+
+interface Ethernet109/1/11
+  description mskxd4esx11
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3329-3330
+  speed 10000
+  channel-group 225 mode active
+  no shutdown
+
+interface Ethernet109/1/12
+  description mskxd4esx12
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3329-3330
+  speed 10000
+  channel-group 226 mode active
+  no shutdown
+
+interface Ethernet109/1/13
+  description mskxd6esx01
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3337-3338
+  speed 10000
+  channel-group 239 mode active
+  no shutdown
+
+interface Ethernet109/1/14
+  description mskxd6esx02
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3337-3338
+  speed 10000
+  channel-group 240 mode active
+  no shutdown
+
+interface Ethernet109/1/15
+  description mskxd6esx03
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3337-3338
+  speed 10000
+  channel-group 241 mode active
+  no shutdown
+
+interface Ethernet109/1/16
+  description mskxd6esx04
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3337-3338
+  speed 10000
+  channel-group 242 mode active
+  no shutdown
+
+interface Ethernet109/1/17
+  description mskxd6esx05
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3337-3338
+  speed 10000
+  channel-group 243 mode active
+  no shutdown
+
+interface Ethernet109/1/18
+  description mskxd6esx06
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3337-3338
+  speed 10000
+  channel-group 244 mode active
+  no shutdown
+
+interface Ethernet109/1/19
+  description mskxd6esx07
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3337-3338
+  speed 10000
+  channel-group 245 mode active
+  no shutdown
+
+interface Ethernet109/1/20
+  description mskxd6esx08
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3337-3338
+  speed 10000
+  channel-group 246 mode active
+  no shutdown
+
+interface Ethernet109/1/21
+  description mskxd6esx09
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3337-3338
+  speed 10000
+  channel-group 247 mode active
+  no shutdown
+
+interface Ethernet109/1/22
+  description mskxd6esx10
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3337-3338
+  speed 10000
+  channel-group 248 mode active
+  no shutdown
+
+interface Ethernet109/1/23
+  description mskxd6esx11
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3337-3338
+  speed 10000
+  channel-group 249 mode active
+  no shutdown
+
+interface Ethernet109/1/24
+  description mskxd6esx12
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3337-3338
+  speed 10000
+  channel-group 250 mode active
+  no shutdown
+
+interface Ethernet109/1/25
+  description mskxd4esx13
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3331-3332
+  channel-group 251 mode active
+  no shutdown
+
+interface Ethernet109/1/26
+  description mskxd4esx14
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3331-3332
+  channel-group 252 mode active
+  no shutdown
+
+interface Ethernet109/1/27
+  description mskxd4esx15
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3331-3332
+  channel-group 253 mode active
+  no shutdown
+
+interface Ethernet109/1/28
+  description mskxd4esx16
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3331-3332
+  channel-group 254 mode active
+  no shutdown
+
+interface Ethernet109/1/29
+  description mskxd4esx17
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3331-3332
+  channel-group 255 mode active
+  no shutdown
+
+interface Ethernet109/1/30
+  description mskxd4esx18
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3331-3332
+  channel-group 256 mode active
+  no shutdown
+
+interface Ethernet109/1/31
+  description mskxd4esx19
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3331-3332
+  channel-group 257 mode active
+  no shutdown
+
+interface Ethernet109/1/32
+  description mskxd4esx20
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3331-3332
+  channel-group 258 mode active
+  no shutdown
+
+interface Ethernet111/1/1
+  description mskxd5esx13
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3335-3336
+  channel-group 263 mode active
+  no shutdown
+
+interface Ethernet111/1/2
+  description mskxd5esx14
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3335-3336
+  channel-group 264 mode active
+  no shutdown
+
+interface Ethernet111/1/3
+  description mskxd5esx15
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3335-3336
+  channel-group 265 mode active
+  no shutdown
+
+interface Ethernet111/1/4
+  description mskxd5esx16
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3335-3336
+  channel-group 266 mode active
+  no shutdown
+
+interface Ethernet111/1/5
+  description mskxd5esx17
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3335-3336
+  channel-group 267 mode active
+  no shutdown
+
+interface Ethernet111/1/6
+  description mskxd5esx18
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3335-3336
+  channel-group 268 mode active
+  no shutdown
+
+interface Ethernet111/1/7
+  description mskxd5esx19
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3335-3336
+  channel-group 269 mode active
+  no shutdown
+
+interface Ethernet111/1/8
+  description mskxd5esx20
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3335-3336
+  channel-group 270 mode active
+  no shutdown
+
+interface Ethernet111/1/9
+  description mskxd5esx21
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3335-3336
+  channel-group 271 mode active
+  no shutdown
+
+interface Ethernet111/1/10
+  description mskxd5esx22
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3335-3336
+  channel-group 272 mode active
+  no shutdown
+
+interface Ethernet111/1/11
+  description mskxd5esx23
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3335-3336
+  channel-group 273 mode active
+  no shutdown
+
+interface Ethernet111/1/12
+  description mskxd5esx24
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3335-3336
+  channel-group 274 mode active
+  no shutdown
+
+interface Ethernet111/1/13
+  description mskxd6esx13
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3339-3340
+  channel-group 275 mode active
+  no shutdown
+
+interface Ethernet111/1/14
+  description mskxd6esx14
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3339-3340
+  channel-group 276 mode active
+  no shutdown
+
+interface Ethernet111/1/15
+  description mskxd6esx15
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3339-3340
+  channel-group 277 mode active
+  no shutdown
+
+interface Ethernet111/1/16
+  description mskxd6esx16
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3339-3340
+  channel-group 278 mode active
+  no shutdown
+
+interface Ethernet111/1/17
+  description mskxd6esx17
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3339-3340
+  channel-group 279 mode active
+  no shutdown
+
+interface Ethernet111/1/18
+  description mskxd6esx18
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3339-3340
+  channel-group 280 mode active
+  no shutdown
+
+interface Ethernet111/1/19
+  description mskxd6esx19
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3339-3340
+  channel-group 281 mode active
+  no shutdown
+
+interface Ethernet111/1/20
+  description mskxd6esx20
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3339-3340
+  channel-group 282 mode active
+  no shutdown
+
+interface Ethernet111/1/21
+  description mskxd6esx21
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3339-3340
+  channel-group 283 mode active
+  no shutdown
+
+interface Ethernet111/1/22
+  description mskxd6esx22
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3339-3340
+  channel-group 284 mode active
+  no shutdown
+
+interface Ethernet111/1/23
+  description mskxd6esx23
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3339-3340
+  channel-group 285 mode active
+  no shutdown
+
+interface Ethernet111/1/24
+  description mskxd6esx24
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3339-3340
+  channel-group 286 mode active
+  no shutdown
+
+interface Ethernet111/1/25
+  description mskxd7esx34
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3343-3344
+  channel-group 287 mode active
+  no shutdown
+
+interface Ethernet111/1/26
+  description mskxd7esx35
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3343-3344
+  channel-group 288 mode active
+  no shutdown
+
+interface Ethernet111/1/27
+  description mskxd7esx36
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3343-3344
+  channel-group 289 mode active
+  no shutdown
+
+interface Ethernet111/1/28
+  description mskxd7esx37
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3343-3344
+  channel-group 290 mode active
+  no shutdown
+
+interface Ethernet111/1/29
+  description mskxd7esx38
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3343-3344
+  channel-group 291 mode active
+  no shutdown
+
+interface Ethernet111/1/30
+  description mskxd7esx39
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3343-3344
+  channel-group 292 mode active
+  no shutdown
+
+interface Ethernet111/1/31
+  description mskxd7esx40
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3343-3344
+  channel-group 293 mode active
+  no shutdown
+
+interface Ethernet111/1/32
+  description mskxd7esx41
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3343-3344
+  channel-group 294 mode active
+  no shutdown
+
+interface Ethernet113/1/1
+  description mskxd7esx42
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3343-3344
+  channel-group 295 mode active
+  no shutdown
+
+interface Ethernet113/1/2
+  description mskxd7esx43
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3343-3344
+  channel-group 296 mode active
+  no shutdown
+
+interface Ethernet113/1/3
+  description mskxd7esx44
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1179-1180,3157,3343-3344
+  channel-group 297 mode active
+  no shutdown
+
+interface Ethernet113/1/4
+  description mskxdmesx31
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3428-3430
+  channel-group 298 mode active
+  no shutdown
+
+interface Ethernet113/1/5
+  description mskxdmesx32
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3428-3430
+  channel-group 299 mode active
+  no shutdown
+
+interface Ethernet113/1/6
+  description mskxdmesx33
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3428-3430
+  channel-group 300 mode active
+  no shutdown
+
+interface Ethernet113/1/7
+
+interface Ethernet113/1/8
+
+interface Ethernet113/1/9
+
+interface Ethernet113/1/10
+
+interface Ethernet113/1/11
+
+interface Ethernet113/1/12
+
+interface Ethernet113/1/13
+
+interface Ethernet113/1/14
+
+interface Ethernet113/1/15
+
+interface Ethernet113/1/16
+
+interface Ethernet113/1/17
+
+interface Ethernet113/1/18
+
+interface Ethernet113/1/19
+
+interface Ethernet113/1/20
+
+interface Ethernet113/1/21
+
+interface Ethernet113/1/22
+
+interface Ethernet113/1/23
+
+interface Ethernet113/1/24
+
+interface Ethernet113/1/25
+
+interface Ethernet113/1/26
+
+interface Ethernet113/1/27
+
+interface Ethernet113/1/28
+
+interface Ethernet113/1/29
+
+interface Ethernet113/1/30
+
+interface Ethernet113/1/31
+
+interface Ethernet113/1/32
+logging logfile syslog 6
+logging timestamp microseconds
+logging monitor 7
+logging history 7
+logging history size 500
+cli alias name wr copy runn start
+line vty
+router eigrp DC-02
+  vrf GROUPVTB
+    autonomous-system 10
+    maximum-paths 2
+    address-family ipv4 unicast
+  vrf VTB-Core
+    autonomous-system 10
+    maximum-paths 2
+    address-family ipv4 unicast
+  vrf VTB-DEV
+    autonomous-system 10
+    maximum-paths 2
+    address-family ipv4 unicast
+  vrf VTB-RSRV
+    autonomous-system 10
+    maximum-paths 2
+    address-family ipv4 unicast
+  vrf VTB-USERS
+    autonomous-system 10
+    maximum-paths 2
+    address-family ipv4 unicast
+  vrf VipInet
+    autonomous-system 10
+    maximum-paths 2
+    address-family ipv4 unicast
+  vrf nInet-SRV
+    autonomous-system 10
+    redistribute static route-map nInet-tLB-STATIC
+    maximum-paths 2
+    address-family ipv4 unicast
+router ospf LBalance
+  vrf nInet-tLB
+    redistribute static route-map nInet-tLB-STATIC
+
+

@@ -1,0 +1,165 @@
+
+
+VLAN0001
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    36865
+             Address     547f.ee04.8e3c
+             This bridge is the root
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    36865  (priority 36864 sys-id-ext 1)
+             Address     547f.ee04.8e3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po1000           Desg FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN2806
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    39670
+             Address     547f.ee04.8e3c
+             This bridge is the root
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    39670  (priority 36864 sys-id-ext 2806)
+             Address     547f.ee04.8e3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po1001           Desg FWD 1         128.5096 P2p 
+
+
+VLAN2913
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    35681
+             Address     00de.fb1a.5242
+             Cost        2
+             Port        4102 (port-channel7)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    39777  (priority 36864 sys-id-ext 2913)
+             Address     547f.ee04.8e3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po700            Desg FWD 1         128.4795 (vPC) P2p 
+Po701            Desg FWD 1         128.4796 (vPC) P2p 
+Po702            Desg FWD 1         128.4797 (vPC) P2p 
+Po703            Desg FWD 1         128.4798 (vPC) P2p 
+Po704            Desg FWD 1         128.4799 (vPC) P2p 
+Po705            Desg FWD 1         128.4800 (vPC) P2p 
+Po706            Desg FWD 1         128.4801 (vPC) P2p 
+Po707            Desg FWD 1         128.4802 (vPC) P2p 
+Po708            Desg FWD 1         128.4803 (vPC) P2p 
+Po709            Desg FWD 1         128.4804 (vPC) P2p 
+Po710            Desg FWD 1         128.4805 (vPC) P2p 
+Po711            Desg FWD 1         128.4806 (vPC) P2p 
+Po712            Desg FWD 1         128.4807 (vPC) P2p 
+Po713            Desg FWD 1         128.4808 (vPC) P2p 
+Po714            Desg FWD 1         128.4809 (vPC) P2p 
+Po715            Desg FWD 1         128.4810 (vPC) P2p 
+Po716            Desg FWD 1         128.4811 (vPC) P2p 
+Po717            Desg FWD 1         128.4812 (vPC) P2p 
+Po718            Desg FWD 1         128.4813 (vPC) P2p 
+Po719            Desg FWD 1         128.4814 (vPC) P2p 
+Po1000           Desg FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN2914
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    35682
+             Address     00de.fb1a.5242
+             Cost        2
+             Port        4102 (port-channel7)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    39778  (priority 36864 sys-id-ext 2914)
+             Address     547f.ee04.8e3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po700            Desg FWD 1         128.4795 (vPC) P2p 
+Po701            Desg FWD 1         128.4796 (vPC) P2p 
+Po702            Desg FWD 1         128.4797 (vPC) P2p 
+Po703            Desg FWD 1         128.4798 (vPC) P2p 
+Po704            Desg FWD 1         128.4799 (vPC) P2p 
+Po705            Desg FWD 1         128.4800 (vPC) P2p 
+Po706            Desg FWD 1         128.4801 (vPC) P2p 
+Po707            Desg FWD 1         128.4802 (vPC) P2p 
+Po708            Desg FWD 1         128.4803 (vPC) P2p 
+Po709            Desg FWD 1         128.4804 (vPC) P2p 
+Po710            Desg FWD 1         128.4805 (vPC) P2p 
+Po711            Desg FWD 1         128.4806 (vPC) P2p 
+Po712            Desg FWD 1         128.4807 (vPC) P2p 
+Po713            Desg FWD 1         128.4808 (vPC) P2p 
+Po714            Desg FWD 1         128.4809 (vPC) P2p 
+Po715            Desg FWD 1         128.4810 (vPC) P2p 
+Po716            Desg FWD 1         128.4811 (vPC) P2p 
+Po717            Desg FWD 1         128.4812 (vPC) P2p 
+Po718            Desg FWD 1         128.4813 (vPC) P2p 
+Po719            Desg FWD 1         128.4814 (vPC) P2p 
+Po1000           Desg FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN3533
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    36301
+             Address     00de.fb1a.5242
+             Cost        2
+             Port        4102 (port-channel7)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40397  (priority 36864 sys-id-ext 3533)
+             Address     547f.ee04.8e3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po600            Desg FWD 1         128.4695 (vPC) P2p 
+Po601            Desg FWD 1         128.4696 (vPC) P2p 
+Po602            Desg FWD 1         128.4697 (vPC) P2p 
+Po603            Desg FWD 1         128.4698 (vPC) P2p 
+Po604            Desg FWD 1         128.4699 (vPC) P2p 
+Po605            Desg FWD 1         128.4700 (vPC) P2p 
+Po606            Desg FWD 1         128.4701 (vPC) P2p 
+Po607            Desg FWD 1         128.4702 (vPC) P2p 
+Po608            Desg FWD 1         128.4703 (vPC) P2p 
+Po609            Desg FWD 1         128.4704 (vPC) P2p 
+Po610            Desg FWD 1         128.4705 (vPC) P2p 
+Po611            Desg FWD 1         128.4706 (vPC) P2p 
+Po612            Desg FWD 1         128.4707 (vPC) P2p 
+Po613            Desg FWD 1         128.4708 (vPC) P2p 
+Po614            Desg FWD 1         128.4709 (vPC) P2p 
+Po615            Desg FWD 1         128.4710 (vPC) P2p 
+Po616            Desg FWD 1         128.4711 (vPC) P2p 
+Po617            Desg FWD 1         128.4712 (vPC) P2p 
+Po618            Desg FWD 1         128.4713 (vPC) P2p 
+Po619            Desg FWD 1         128.4714 (vPC) P2p 
+Po1000           Desg FWD 1         128.5095 (vPC peer-link) P2p 
+
+
+VLAN3799
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    7895
+             Address     00de.fb1a.5c42
+             Cost        1
+             Port        4102 (port-channel7)
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    40663  (priority 36864 sys-id-ext 3799)
+             Address     547f.ee04.8e3c
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po7              Root FWD 1         128.4102 (vPC) P2p 
+Po1000           Desg FWD 1         128.5095 (vPC peer-link) P2p 
+

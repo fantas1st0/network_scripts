@@ -1,0 +1,114 @@
+
+
+--------------------------------------------------------------------------------
+Port          Name               Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------
+Eth1/1        TRUNK vsphere-786: connected trunk     full    10G     10Gbase-SR 
+Eth1/2        TRUNK vsphere-784: connected trunk     full    10G     10Gbase-SR 
+Eth1/3        TRUNK vsphere-782. connected trunk     full    10G     10Gbase-SR 
+Eth1/4        TRUNK vsphere-780. connected trunk     full    10G     10Gbase-SR 
+Eth1/5        TRUNK vsphere-776. connected trunk     full    10G     10Gbase-SR 
+Eth1/6        TRUNK vsphere-774. connected trunk     full    10G     10Gbase-SR 
+Eth1/7        TRUNK vsphere-778. connected trunk     full    10G     10Gbase-SR 
+Eth1/8        TRUNK vsphere-772: connected trunk     full    10G     10Gbase-SR 
+Eth1/9        TRUNK vsphere-770: connected trunk     full    10G     10Gbase-SR 
+Eth1/10       TRUNK vsphere-768: connected trunk     full    10G     10Gbase-SR 
+Eth1/11       TRUNK vsphere-1022 connected trunk     full    10G     10Gbase-SR 
+Eth1/12       TRUNK vsphere-3002 connected trunk     full    10G     10Gbase-SR 
+Eth1/13       TRUNK vsphere-3004 connected trunk     full    10G     10Gbase-SR 
+Eth1/14       TRUNK vm-test-412. connected trunk     full    10G     10Gbase-SR 
+Eth1/15       TRUNK vm-test-414. connected trunk     full    10G     10Gbase-SR 
+Eth1/16       TRUNK vm-test-415. connected trunk     full    10G     10Gbase-SR 
+Eth1/17       TRUNK vm-test-350: connected trunk     full    10G     10Gbase-SR 
+Eth1/18       TRUNK vm-test-351: connected trunk     full    10G     10Gbase-SR 
+Eth1/19       TRUNK vm-test-353: connected trunk     full    10G     10Gbase-SR 
+Eth1/20       --                 disabled  1         full    10G     10Gbase-SR 
+Eth1/21       --                 disabled  1         full    10G     10Gbase-SR 
+Eth1/22       --                 disabled  1         full    10G     10Gbase-SR 
+Eth1/23       TRUNK vsphere-3006 connected trunk     full    10G     10Gbase-SR 
+Eth1/24       TRUNK vsphere-783. connected trunk     full    10G     10Gbase-SR 
+Eth1/25       TRUNK vsphere-781. connected trunk     full    10G     10Gbase-SR 
+Eth1/26       TRUNK vsphere-779. connected trunk     full    10G     10Gbase-SR 
+Eth1/27       TRUNK vsphere-777. connected trunk     full    10G     10Gbase-SR 
+Eth1/28       TRUNK vsphere-775. connected trunk     full    10G     10Gbase-SR 
+Eth1/29       TRUNK vsphere-787: connected trunk     full    10G     10Gbase-SR 
+Eth1/30       TRUNK vsphere-785: connected trunk     full    10G     10Gbase-SR 
+Eth1/31       TRUNK vsphere-773: connected trunk     full    10G     10Gbase-SR 
+Eth1/32       TRUNK vsphere-771: connected trunk     full    10G     10Gbase-SR 
+Eth1/33       TRUNK vsphere-769: connected trunk     full    10G     10Gbase-SR 
+Eth1/34       TRUNK vsphere-1021 connected trunk     full    10G     10Gbase-SR 
+Eth1/35       TRUNK vsphere-1023 connected trunk     full    10G     10Gbase-SR 
+Eth1/36       TRUNK vsphere-3001 connected trunk     full    10G     10Gbase-SR 
+Eth1/37       TRUNK vsphere-3003 connected trunk     full    10G     10Gbase-SR 
+Eth1/38       TRUNK vm-test-411. connected trunk     full    10G     10Gbase-SR 
+Eth1/39       TRUNK vm-test-413. connected trunk     full    10G     10Gbase-SR 
+Eth1/40       TRUNK vm-test-416. connected trunk     full    10G     10Gbase-SR 
+Eth1/41       TRUNK vsphere-3005 connected trunk     full    10G     10Gbase-SR 
+Eth1/42       TRUNK vm-test-352: connected trunk     full    10G     10Gbase-SR 
+Eth1/43       TRUNK vm-test-349: connected trunk     full    10G     10Gbase-SR 
+Eth1/44       TRUNK vm-test-348: connected trunk     full    10G     10Gbase-SR 
+Eth1/45       TRUNK vm-test-347: connected trunk     full    10G     10Gbase-SR 
+Eth1/46       TRUNK vm-test-346: connected trunk     full    10G     10Gbase-SR 
+Eth1/47       [PC] peer-keepaliv connected trunk     full    10G     10Gbase-SR 
+Eth1/48       [PC] peer-keepaliv connected trunk     full    10G     10Gbase-SR 
+Eth2/1        [FEX] fex-151      connected 1         full    40G     QSFP-40G-SR
+Eth2/2        [FEX] fex-151      connected 1         full    40G     QSFP-40G-SR
+Eth2/3        [PC] peer-link     connected trunk     full    40G     QSFP-40G-SR
+Eth2/4        [PC] peer-link     connected trunk     full    40G     QSFP-40G-SR
+Eth2/5        [PC] sw-dp4-data-1 connected trunk     full    40G     QSFP-40G-SR
+Eth2/6        [PC] sw-dp4-data-1 connected trunk     full    40G     QSFP-40G-SR
+Po10          [VPC][TRUNK] sw-dp connected trunk     full    a-40G   --         
+Po151         [FEX] fex-151      connected 1         full    a-40G   --         
+Po4000        [TRUNK] peer-link  connected trunk     full    a-40G   --         
+Po4001        [TRUNK] peer-keepa connected trunk     full    a-10G   --         
+mgmt0         --                 connected routed    full    a-1000  --         
+Vlan608       mgmt               connected routed    auto    auto    --
+Vlan4093      [L3] peer-keepaliv connected routed    auto    auto    --
+Eth151/1/1    TRUNK vsphere-786: connected trunk     full    10G     10Gbase-SR 
+Eth151/1/2    TRUNK vsphere-784: connected trunk     full    10G     10Gbase-SR 
+Eth151/1/3    TRUNK vsphere-782. connected trunk     full    10G     10Gbase-SR 
+Eth151/1/4    TRUNK vsphere-780. connected trunk     full    10G     10Gbase-SR 
+Eth151/1/5    TRUNK vsphere-776. connected trunk     full    10G     10Gbase-SR 
+Eth151/1/6    TRUNK vsphere-774. connected trunk     full    10G     10Gbase-SR 
+Eth151/1/7    TRUNK vsphere-778. connected trunk     full    10G     10Gbase-SR 
+Eth151/1/8    TRUNK vsphere-772: connected trunk     full    10G     10Gbase-SR 
+Eth151/1/9    TRUNK vsphere-770: connected trunk     full    10G     10Gbase-SR 
+Eth151/1/10   TRUNK vsphere-768: connected trunk     full    10G     10Gbase-SR 
+Eth151/1/11   TRUNK vsphere-1022 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/12   TRUNK vsphere-3002 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/13   TRUNK vsphere-3004 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/14   TRUNK vm-test-412. connected trunk     full    10G     10Gbase-SR 
+Eth151/1/15   TRUNK vm-test-414. connected trunk     full    10G     10Gbase-SR 
+Eth151/1/16   TRUNK vm-test-415. connected trunk     full    10G     10Gbase-SR 
+Eth151/1/17   TRUNK vm-test-350: connected trunk     full    10G     10Gbase-SR 
+Eth151/1/18   TRUNK vm-test-351: connected trunk     full    10G     10Gbase-SR 
+Eth151/1/19   TRUNK vm-test-353: connected trunk     full    10G     10Gbase-SR 
+Eth151/1/20   --                 disabled  1         full    10G     10Gbase-SR 
+Eth151/1/21   --                 disabled  1         full    10G     10Gbase-SR 
+Eth151/1/22   --                 disabled  1         full    10G     10Gbase-SR 
+Eth151/1/23   TRUNK vsphere-3006 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/24   TRUNK vsphere-783. connected trunk     full    10G     10Gbase-SR 
+Eth151/1/25   TRUNK vsphere-781. connected trunk     full    10G     10Gbase-SR 
+Eth151/1/26   TRUNK vsphere-779. connected trunk     full    10G     10Gbase-SR 
+Eth151/1/27   TRUNK vsphere-777. connected trunk     full    10G     10Gbase-SR 
+Eth151/1/28   TRUNK vsphere-775. connected trunk     full    10G     10Gbase-SR 
+Eth151/1/29   TRUNK vsphere-787: connected trunk     full    10G     10Gbase-SR 
+Eth151/1/30   TRUNK vsphere-785: connected trunk     full    10G     10Gbase-SR 
+Eth151/1/31   TRUNK vsphere-773: connected trunk     full    10G     10Gbase-SR 
+Eth151/1/32   TRUNK vsphere-771: connected trunk     full    10G     10Gbase-SR 
+Eth151/1/33   TRUNK vsphere-769: connected trunk     full    10G     10Gbase-SR 
+Eth151/1/34   TRUNK vsphere-1021 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/35   TRUNK vsphere-1023 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/36   TRUNK vsphere-3001 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/37   TRUNK vsphere-3003 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/38   TRUNK vm-test-411. connected trunk     full    10G     10Gbase-SR 
+Eth151/1/39   TRUNK vm-test-413. connected trunk     full    10G     10Gbase-SR 
+Eth151/1/40   TRUNK vm-test-416. connected trunk     full    10G     10Gbase-SR 
+Eth151/1/41   TRUNK vsphere-3005 connected trunk     full    10G     10Gbase-SR 
+Eth151/1/42   TRUNK vm-test-352: connected trunk     full    10G     10Gbase-SR 
+Eth151/1/43   TRUNK vm-test-349: connected trunk     full    10G     10Gbase-SR 
+Eth151/1/44   TRUNK vm-test-348: connected trunk     full    10G     10Gbase-SR 
+Eth151/1/45   TRUNK vm-test-347: connected trunk     full    10G     10Gbase-SR 
+Eth151/1/46   TRUNK vm-test-346: connected trunk     full    10G     10Gbase-SR 
+Eth151/1/47   --                 disabled  1         full    10G     10Gbase-SR 
+Eth151/1/48   --                 disabled  1         full    10G     10Gbase-SR 
