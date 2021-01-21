@@ -1,0 +1,106 @@
+
+sys contact: 
+sys location: 
+
+1963416 SNMP packets input
+	0 Bad SNMP versions
+	257 Unknown community name
+	0 Illegal operation for community name supplied
+	0 Encoding errors
+	36454883 Number of requested variables
+	0 Number of altered variables
+	1888911 Get-request PDUs
+	58429 Get-next PDUs
+	0 Set-request PDUs
+	0 No such name PDU
+	0 Bad value PDU
+	0 Read Only PDU
+	0 General errors
+	0 Get Responses
+	0 Unknown Context name
+1968635 SNMP packets output
+	5476 Trap PDU
+	23 Too big errors (Maximum packet size 1500)
+	0 No such name errors
+        0 Bad values errors
+	0 General errors
+	0 Get Requests
+	0 Get Next Requests
+	0 Set Requests
+	1963159 Get Responses
+	0 Silent drops
+
+Max packetsize: 1500
+
+
+        
+...skipping 1 line
+
+
+______________________________________________________________
+		  SNMP USERS 
+______________________________________________________________
+
+User                Auth  Priv(enforce) Groups              acl_filter          
+____                ____  _____________ ______              __________          
+xxxxxxxx                 md5     des(no)       network-admin       
+______________________________________________________________
+ NOTIFICATION TARGET USERS (configured  for sending V3 Inform) 
+______________________________________________________________
+
+User                          Auth  Priv          
+____                          ____  ____          
+
+
+SNMP Tcp Authentication Flag : Enabled.
+
+
+SNMP protocol : Enabled
+
+
+        No previous regular expression--------------------------------------------------------------------
+Context                          [Protocol instance, VRF, Topology,]
+                                 [vlan, MST]
+--------------------------------------------------------------------
+1                                ,
+                                ,
+                                ,
+                                ,
+                                 1,
+                                 
+-------------------------------------------------------------------
+2                                ,
+                                ,
+                                ,
+                                ,
+                                 2,
+                                 
+-------------------------------------------------------------------
+3                                ,
+                                ,
+                                ,
+                                ,
+                                 3,
+                                 
+-------------------------------------------------------------------
+vlan-1                                ,
+                                ,
+                                ,
+                                ,
+                                 1,
+                                 
+-------------------------------------------------------------------
+vlan-2                                ,
+                                ,
+                                ,
+                                ,
+                                 2,
+                                 
+-------------------------------------------------------------------
+vlan-3                                ,
+                                ,
+                                ,
+                                ,
+                                 3,
+                                 
+-------------------------------------------------------------------
